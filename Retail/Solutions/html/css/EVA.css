@@ -1,0 +1,8 @@
+/* EVA styles */
+
+.evaTitle {font-size: 1em;font-weight: bold;font-family: arial; background-color: #E6E6E6}
+.evaContextSelector {font-size: 0.8em;font-weight: normal;font-family: arial}
+.evaContextName {font-size: 0.8em;font-weight: normal;font-family: arial}
+.evaContextValue {font-size: 0.8em;font-weight: normal;font-family: arial}
+.evaAttributeLabel {font-size: 0.8em;font-weight: normal;font-family: arial}
+.evaAttributeAnswer {font-size: 0.8em;font-weight: normal;font-family: arial}

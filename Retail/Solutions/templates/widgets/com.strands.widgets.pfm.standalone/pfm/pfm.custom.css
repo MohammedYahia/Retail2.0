@@ -1,0 +1,256 @@
+.sf-base {
+	font-family: TC-regular,Helvetica,Arial,Verdana,sans-serif;
+}
+.sf-base .sf-amount,.sf-base .sf-amount *,.sf-base .sf-number,.sf-base .sf-number * {
+    font-family: TC-Regular;
+}
+
+.sf-base input[type=text],.sf-base input[type=password],.sf-base input[type=datetime],.sf-base input[type=datetime-local],.sf-base input[type=date],.sf-base input[type=month],.sf-base input[type=time],.sf-base input[type=week],.sf-base input[type=number],.sf-base input[type=email],.sf-base input[type=url],.sf-base input[type=search],.sf-base input[type=tel],.sf-base input[type=color],.sf-base textarea {
+	font-family: TC-Regular;
+}
+.sf-base .sf-calendar-year-view .sf-calendar-cell-mark>span {
+    font-family: TC-regular;
+}
+
+.sf-base .sf-transactions-calendar .sf-transactions-calendar-year-item-view {
+	font-family: TC-regular;
+}
+
+.sf-base .sf-widget {
+	margin:auto;
+}
+
+.sf-base .sf-calendar .sf-calendar-title {
+	font-family: TC-regular;
+    color: #316da2;
+    font-size: 1.2em;
+    padding: 0.5em 0 1em;
+}
+
+.sf-intro-message {
+	float:none !important;
+	text-align:center;
+}
+
+.sf-base .sf-analysis-donutchart .sf-donutchart .sf-chart-subtitle {
+	font-family:Arial;
+}
+
+.sf-base .sf-datagrid td.sf-numeric {
+	font-family:Arial;
+}
+
+.sf-base .sf-widget.sf-analysis-overview-widget .sf-charts-placeholder .sf-accessible-chart-controls {
+    padding-top: 1em;
+}
+
+.sf-base .sf-button {
+	background-color: #0c4374;
+}
+
+.sf-button.sf-active {
+	    background-color: #0c4374;
+}
+
+.sf-base .sf-widget .sf-widget-footer {
+	text-align:center;
+    clear: both;
+    margin-top: 2em;
+    margin-bottom: 0em;
+}
+
+.ext-count-bubble {
+	background-color: #0c4374;
+    padding: 7px 4px;
+    border-radius: 180px;
+	color:#fff;
+}
+
+.ext-count-bubble-small {
+    background-color: #0c4374;
+    padding: 5px 3px;
+    border-radius: 180px;
+    color: #fff;
+    font-size: 12px;
+}
+.ext-pfm-heading-center{
+    padding: 12px;
+}
+
+.sf-base .sf-savings-goals-content .sf-goal-info .sf-goal-status-message {
+    bottom: -11px;
+}
+
+.sf-base .sf-button {
+	font-family:Arial;
+}
+
+.sf-base .sf-button:hover {
+    color: #fff;
+    background-color: #316da2;
+}
+
+*[id*='overview-widget'] .sf-widget-content-placeholder {
+	padding:0 !important;
+}
+
+*[id*='overview-widget'] .sf-base .sf-savings-overview-content .sf-goal-bar {
+    margin-top: 2em;
+}
+
+*[id*='overview-widget'] .sf-base .sf-savings-overview-content .sf-progressbar .sf-progressbar-bar .sf-bar-box .sf-bar-title {
+    top: -1.2em;
+}
+
+*[id*='overview-widget'] .sf-base .sf-widget .sf-widget-footer {
+    margin-top: 1em;
+}
+*[id*='overview-widget'] .sf-base .sf-widget .sf-widget-content-placeholder {
+	min-height:50px;
+}
+
+*[id*='overview-widget'] h2 {
+    padding: 0.5rem 0 0 0;
+}
+
+.sf-base .sf-widget.sf-calendar-overview-widget .sf-calendar-month-view .sf-calendar-cell-content {
+    z-index: 29;
+}
+
+.sf-base .sf-widget.sf-calendar-overview-widget .sf-calendar-month-view .sf-calendar-cell-mark {
+    z-index: 29;
+}
+
+.sf-popup-title{
+	color:#316da2;
+}
+
+.sf-button-delete{
+	background-color: #C0392B !important;
+}
+.sf-button-delete:hover{
+	background-color: #ab2f22 !important;
+}
+
+.sf-base abbr, .sf-base address, .sf-base article, .sf-base aside, .sf-base audio, .sf-base b, .sf-base blockquote, .sf-base body, .sf-base canvas, .sf-base caption, .sf-base cite, .sf-base code, .sf-base dd, .sf-base del, .sf-base details, .sf-base dfn, .sf-base div, .sf-base dl, .sf-base dt, .sf-base em, .sf-base fieldset, .sf-base figcaption, .sf-base figure, .sf-base footer, .sf-base form, .sf-base h1, .sf-base h2, .sf-base h3, .sf-base h4, .sf-base h5, .sf-base h6, .sf-base header, .sf-base hgroup, .sf-base html, .sf-base i, .sf-base iframe, .sf-base img, .sf-base ins, .sf-base kbd, .sf-base label, .sf-base legend, .sf-base li, .sf-base mark, .sf-base menu, .sf-base nav, .sf-base object, .sf-base ol, .sf-base p, .sf-base pre, .sf-base q, .sf-base samp, .sf-base section, .sf-base small, .sf-base span, .sf-base strong, .sf-base sub, .sf-base summary, .sf-base sup, .sf-base table, .sf-base tbody, .sf-base td, .sf-base tfoot, .sf-base th, .sf-base thead, .sf-base time, .sf-base tr, .sf-base ul, .sf-base var, .sf-base video {
+    font-size: 98%;
+}
+
+.sf-base h2 {
+    color: #316da2;
+    font-size: 1.4em;
+}
+
+.sf-base .sf-mode-filter .sf-button.sf-active:hover, .sf-base .sf-mode-filter .sf-button:active:hover {
+    background-color: #316da2 !important;
+    color: #fff;
+}
+
+div .sf-base .sf-button.sf-popup-cancel {
+    font-family:Arial;
+	background: #f4f4f4!important;
+    color: #666!important;
+    display: inline-block;
+    float: none;
+}
+div .sf-base .sf-button.sf-popup-cancel:hover{
+    background: #cbcbcb!important;
+    color: #4d4d4d!important;
+}
+
+.sf-base .sf-popup-mask.sf-mask {
+    background-color: #efefef;
+    z-index: 1000;
+}
+
+#sf-split-module-placeholder .sf-dialog {
+    background-color: #fff;
+    border: 1px solid #e4e4e4;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 0 1em #333;
+    -moz-box-shadow: 0 0 1em #333;
+    box-shadow: none;
+    height: auto;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    z-index: 1000;
+}
+
+#sf-split-module-placeholder .sf-mask{
+	display:none !important;
+}
+
+.sf-transaction-original-opts {
+    display: block;
+}
+
+.sf-transaction-original-opts .sf-transaction-original-description,
+.sf-transaction-original-opts .sf-transaction-real-name {
+   display: inline-block;
+}
+
+@media (max-width: 800px) {
+    .sf-base .sf-transactions-split-form-placeholder .sf-button-controls .sf-button:last-child,
+    .sf-base .sf-transactions-split-form-placeholder .sf-button-controls .sf-button {
+        width: 100%!important;
+        margin: 0;
+        height: auto!important;
+    }
+    .sf-base .sf-transactions-split-form-placeholder .sf-button-controls .sf-button + .sf-button {
+        margin-top: 6px!important;
+    }
+    .sf-base .sf-budget-transactions-placeholder {
+        width: 100%;
+    }
+    .sf-base .sf-transaction-tags.sf-panel-section,
+    .sf-base .sf-transaction-tags.sf-panel-section .sf-tag-input {
+        float: none;
+    }
+    .sf-base .sf-transaction-tags.sf-panel-section .sf-form-field  {
+        width: 70%!important;
+        float: left;
+        padding-right: 10px;
+    }
+    .sf-base .sf-transaction-tags.sf-panel-section .sf-button-add.sf-add-tag {
+        width: 30%!important; 
+        padding: .5em 1.2em!important;
+    }
+    .sf-base .sf-textfield-append .sf-add-on, .sf-base .sf-textfield-prepend .sf-add-on,
+    .sf-base input[type=text] {
+        height: 2.7em;
+        line-height: 2.7em;
+    }
+}
+@media (max-width: 500px) {
+    .sf-base .sf-button-controls .sf-button-delete span {
+        display: block;
+    }       
+}
+
+/*Success message for Categorise, Split, Manage Rules*/
+
+.tc-tab-pane {
+    position: relative;
+    min-height: 100px;
+}
+.ext-categorized-success.hide,
+.ext-split-success.hide,
+.ext-manage-success.hide {
+    display: none;
+}
+.ext-categorized-success,
+.ext-split-success,
+.ext-manage-success {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

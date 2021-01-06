@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="UTF-8"?><Project AllowEditFromSolution="Y" CheckedInChangeSetsSinceGetLatest="" CmsFlag="N" Connect="version 6.2.1__8" HybridFlag="N" ImportsClassType="com.acquire.intelligentforms.entities.mapping.ImportRecordRoot" ImportsName="Import Records Root" Name="CallBack" ParentId="8927083" ProjectExtension=".ifp" ProjectFolder="C:/Work/RTCWksp/AcctAggTCIB/TCIB2.0/Source/Edge_18/Components/Common/Process/CallBack" ProjectType="Y" StatefulComponent="N" eid="959C0AC42934A8099197626"><![CDATA[
+  ]]>
+  <Types Name="Types Root" eid="959C0AC42934A8099197628"><![CDATA[
+    ]]>
+    <Lists Name="Lists" eid="959C0AC42934A8099197776"/>
+    <DataTypes Name="Data Types" eid="959C0AC42934A8099197777"><![CDATA[
+      ]]>
+      <DataType Name="Text" eid="959C0AC42934A8099197778"/>
+      <DataType Name="Number" Type="Number" eid="959C0AC42934A8099197779"/>
+      <DataType Name="Decimal" Type="Decimal" eid="959C0AC42934A8099197780"/>
+      <DataType Name="Date" Type="Date" eid="959C0AC42934A8099197781"/>
+      <DataType Name="File" Type="File" eid="959C0AC42934A8099197782"/>
+      <CustomType MaxFieldLength="60" MinFieldLength="0" Name="Email" RegularExpression="^([a-zA-Z0-9_\.\-]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" Type="Text" ValidationType="Regular Expression" eid="959C0AC42934A8099197783"/>
+    </DataTypes>
+    <Structures Name="Data Structures" eid="959C0AC42934A8099197784"/>
+  </Types>
+  <Dictionary Name="959C0AC42934A809 DataDictionary 1" eid="959C0AC42934A8099197629"><![CDATA[
+    ]]>
+    <PropertyGroup Name="Data Store Root" eid="959C0AC42934A8099197631">
+      <Property BaseType="com.acquire.intelligentforms.entities.Property" Name="TokenIssuer" eid="959C0AC42934A8099199641"/>
+      <Property BaseType="com.acquire.intelligentforms.entities.Property" Name="audienceValue" eid="959C0AC42934A8099199642"/>
+      <Property BaseType="com.acquire.intelligentforms.entities.Property" Name="subjectValue" eid="959C0AC42934A8099199643"/>
+      <Property BaseType="com.acquire.intelligentforms.entities.Property" Name="expiryTime" eid="959C0AC42934A8099199644"/>
+      <Property BaseType="com.acquire.intelligentforms.entities.Property" Name="claimDetails" eid="959C0AC42934A8099199645"/>
+      <Property BaseType="com.acquire.intelligentforms.entities.Property" Name="headerAlgorithmValue" eid="959C0AC42934A8099199646"/>
+      <Property BaseType="com.acquire.intelligentforms.entities.Property" Name="JwtValue" eid="959C0AC42934A8099199647"/>
+      <Property BaseType="com.acquire.intelligentforms.entities.Property" Name="uniqueKey" ShowJSONMapping="N" eid="959C0AC42934A8099199648"/>
+      <Property BaseType="com.acquire.intelligentforms.entities.Property" Name="saltEdge-callback_URL" eid="959C0AC42934A8099199649"/>
+      <Property BaseType="com.acquire.intelligentforms.entities.Property" Name="CallBackUrl" ShowJSONMapping="N" eid="959C0AC42934A8099199650"/>
+      <Property BaseType="com.acquire.intelligentforms.entities.Property" Name="responseDetails" eid="959C0AC42934A8099199651"/>
+      <Property BaseType="com.acquire.intelligentforms.entities.Property" Name="ReceivedSaltEdgeURL" eid="959C0AC42934A8099199652"/>
+      <Property Name="keyAlgorithm" eid="42F7708982FC1A8D91373"/>
+      <Property Name="JWTValueSaltEdge" eid="42F7708982FC1A8D91433"/>
+      <Property Name="uniqueId" eid="42F7708982FC1A8D91490"/>
+      <PropertyGroup LinkToStructure="N" Name="WorkingElements" eid="959C0AC42934A8099198244">
+        <Property Name="Action" eid="959C0AC42934A8099198246"/>
+      </PropertyGroup>
+      <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" Name="saltedge" ShowJSONMapping="N" eid="959C0AC42934A8099200086">
+        <PropertyGroup JSONCollectionKind="Object" JSONName="data" Name="data" ShowJSONMapping="true" eid="959C0AC42934A8099200087"><![CDATA[
+          ]]>
+          <Property JSONName="country_code" Name="country_code" ShowJSONMapping="true" eid="959C0AC42934A8099200088"/>
+          <Property JSONName="return_login_id" Name="return_login_id" ShowJSONMapping="true" eid="959C0AC42934A8099200089"/>
+          <Property JSONName="return_to" Name="return_to" ShowJSONMapping="true" eid="959C0AC42934A8099200090"/>
+          <Property JSONName="provider_code" Name="provider_code" ShowJSONMapping="true" eid="959C0AC42934A8099200091"/>
+          <Property JSONName="customer_id" Name="customer_id" ShowJSONMapping="true" Type="Number" eid="959C0AC42934A8099200092"/>
+          <Property Name="login_id" ShowJSONMapping="N" eid="959C0AC42934A8099200093"/>
+          <Property Name="attempt_id" ShowJSONMapping="N" eid="959C0AC42934A8099200094"/>
+          <Property Name="token" ShowJSONMapping="N" eid="959C0AC42934A8099200095"/>
+          <Property Name="expires_at" ShowJSONMapping="N" eid="959C0AC42934A8099200096"/>
+          <Property Name="redirect_url" ShowJSONMapping="N" eid="959C0AC42934A8099200097"/>
+          <PropertyGroup JSONCollectionKind="Object" JSONName="custom_fields" NOT_FINALIZED="true" Name="custom_fields" ShowJSONMapping="true" eid="959C0AC42934A8099200098"><![CDATA[
+            ]]>
+            <PropertyGroup FixedSize="N" JSONCollectionKind="Array" JSONName="emails" MaxInstances="0" NOT_FINALIZED="true" Name="emails" ShowJSONMapping="true" eid="959C0AC42934A8099200099"><![CDATA[
+              ]]>
+              <Property JSONName="value" NOT_FINALIZED="true" Name="value" ShowJSONMapping="true" eid="959C0AC42934A8099200100"/>
+            </PropertyGroup>
+            <PropertyGroup FixedSize="N" JSONCollectionKind="Array" JSONName="names" MaxInstances="0" NOT_FINALIZED="true" Name="names" ShowJSONMapping="true" eid="959C0AC42934A8099200101"><![CDATA[
+              ]]>
+              <Property JSONName="value" NOT_FINALIZED="true" Name="value" ShowJSONMapping="true" eid="959C0AC42934A8099200102"/>
+            </PropertyGroup>
+          </PropertyGroup>
+          <PropertyGroup FixedSize="N" JSONCollectionKind="Array" JSONName="fetch_scopes" MaxInstances="0" Name="fetch_scopes" ShowJSONMapping="true" eid="959C0AC42934A8099200103"><![CDATA[
+            ]]>
+            <Property JSONName="value" Name="value" ShowJSONMapping="true" eid="959C0AC42934A8099200104"/>
+          </PropertyGroup>
+        </PropertyGroup>
+      </PropertyGroup>
+      <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" Name="saltedge-Response" ShowJSONMapping="N" eid="959C0AC42934A8099200105">
+        <PropertyGroup JSONCollectionKind="Object" JSONName="data" Name="data" ShowJSONMapping="true" eid="959C0AC42934A8099200106"><![CDATA[
+          ]]>
+          <Property JSONName="login_id" Name="login_id" ShowJSONMapping="true" Type="Number" eid="959C0AC42934A8099200107"/>
+          <Property JSONName="expires_at" Name="expires_at" ShowJSONMapping="true" eid="959C0AC42934A8099200108"/>
+          <Property JSONName="attempt_id" Name="attempt_id" ShowJSONMapping="true" Type="Number" eid="959C0AC42934A8099200109"/>
+          <Property JSONName="redirect_url" Name="redirect_url" ShowJSONMapping="true" eid="959C0AC42934A8099200110"/>
+          <Property JSONName="token" Name="token" ShowJSONMapping="true" eid="959C0AC42934A8099200111"/>
+        </PropertyGroup>
+      </PropertyGroup>
+      <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" Name="createMessages" eid="959C0AC42934A8099200112">
+        <PropertyGroup Name="Request" eid="959C0AC42934A8099200113"><![CDATA[
+          ]]>
+          <PropertyGroup JSONCollectionKind="Object" JSONName="payload" Name="payload" ShowJSONMapping="Y" eid="959C0AC42934A8099200114"><![CDATA[
+            ]]>
+            <PropertyGroup JSONCollectionKind="Object" JSONName="header" Name="header" ShowJSONMapping="Y" eid="959C0AC42934A8099200115"><![CDATA[
+              ]]>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="override" Name="override" ShowJSONMapping="Y" eid="959C0AC42934A8099200116"><![CDATA[
+                ]]>
+                <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="overrideDetails" MaxInstances="0" Name="overrideDetails" ShowJSONMapping="Y" eid="959C0AC42934A8099200117"><![CDATA[
+                  ]]>
+                  <Property JSONName="id" Name="id" ShowJSONMapping="Y" eid="959C0AC42934A8099200118"/>
+                  <Property JSONName="description" Name="description" ShowJSONMapping="Y" eid="959C0AC42934A8099200119"/>
+                  <Property JSONName="responseCode" Name="responseCode" ShowJSONMapping="Y" eid="959C0AC42934A8099200120"/>
+                </PropertyGroup>
+              </PropertyGroup>
+            </PropertyGroup>
+            <PropertyGroup JSONCollectionKind="Object" JSONName="body" Name="body" ShowJSONMapping="Y" eid="959C0AC42934A8099200121"><![CDATA[
+              ]]>
+              <Property JSONName="Subject" Name="Subject" ShowJSONMapping="Y" eid="959C0AC42934A8099200122"/>
+              <Property JSONName="Message" Name="Message" ShowJSONMapping="Y" eid="959C0AC42934A8099200123"/>
+              <Property JSONName="parentMessageId" Name="parentMessageId" ShowJSONMapping="Y" eid="959C0AC42934A8099200124"/>
+              <Property JSONName="fromCustomer" Name="fromCustomer" ShowJSONMapping="Y" eid="959C0AC42934A8099200125"/>
+              <Property JSONName="toStatus" Name="toStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200126"/>
+              <Property JSONName="toDao" Name="toDao" ShowJSONMapping="Y" eid="959C0AC42934A8099200127"/>
+              <Property JSONName="uploadId" Name="uploadId" ShowJSONMapping="Y" eid="959C0AC42934A8099200128"/>
+              <Property JSONName="fileUpload" Name="fileUpload" ShowJSONMapping="Y" eid="959C0AC42934A8099200129"/>
+            </PropertyGroup>
+          </PropertyGroup>
+          <PropertyGroup Name="Query" eid="959C0AC42934A8099200130"><![CDATA[
+            ]]>
+            <Property JSONName="validate_only" Name="validateOnly" ShowJSONMapping="Y" Type="boolean List" eid="959C0AC42934A8099200131"/>
+          </PropertyGroup>
+        </PropertyGroup>
+        <PropertyGroup Name="Response" eid="959C0AC42934A8099200132"><![CDATA[
+          ]]>
+          <PropertyGroup JSONCollectionKind="Object" JSONName="createMessagesResponse" Name="createMessagesResponse" ShowJSONMapping="Y" eid="959C0AC42934A8099200133"><![CDATA[
+            ]]>
+            <PropertyGroup JSONCollectionKind="Object" JSONName="header" Name="header" ShowJSONMapping="Y" eid="959C0AC42934A8099200134"><![CDATA[
+              ]]>
+              <Property JSONName="id" Name="id" ShowJSONMapping="Y" eid="959C0AC42934A8099200135"/>
+              <Property JSONName="status" Name="status" ShowJSONMapping="Y" eid="959C0AC42934A8099200136"/>
+              <Property JSONName="transactionStatus" Name="transactionStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200137"/>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="audit" Name="audit" ShowJSONMapping="Y" eid="959C0AC42934A8099200138"><![CDATA[
+                ]]>
+                <Property JSONName="T24_time" Name="T24Time" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200139"/>
+                <Property JSONName="parse_time" Name="parseTime" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200140"/>
+              </PropertyGroup>
+            </PropertyGroup>
+            <PropertyGroup JSONCollectionKind="Object" JSONName="body" Name="body" ShowJSONMapping="Y" eid="959C0AC42934A8099200141"><![CDATA[
+              ]]>
+              <Property JSONName="testSubject" Name="testSubject" ShowJSONMapping="Y" eid="959C0AC42934A8099200142"/>
+              <Property JSONName="testMessage" Name="testMessage" ShowJSONMapping="Y" eid="959C0AC42934A8099200143"/>
+              <Property JSONName="parentMessageId" Name="parentMessageId" ShowJSONMapping="Y" eid="959C0AC42934A8099200144"/>
+              <Property JSONName="fromCustomer" Name="fromCustomer" ShowJSONMapping="Y" eid="959C0AC42934A8099200145"/>
+              <Property JSONName="toStatus" Name="toStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200146"/>
+              <Property JSONName="toDao" Name="toDao" ShowJSONMapping="Y" eid="959C0AC42934A8099200147"/>
+              <Property JSONName="uploadId" Name="uploadId" ShowJSONMapping="Y" eid="959C0AC42934A8099200148"/>
+              <Property JSONName="fileUpload" Name="fileUpload" ShowJSONMapping="Y" eid="959C0AC42934A8099200149"/>
+            </PropertyGroup>
+          </PropertyGroup>
+          <PropertyGroup JSONCollectionKind="Object" JSONName="createMessagesErrorResponse" Name="createMessagesErrorResponse" ShowJSONMapping="Y" eid="959C0AC42934A8099200150"><![CDATA[
+            ]]>
+            <PropertyGroup JSONCollectionKind="Object" JSONName="header" Name="header" ShowJSONMapping="Y" eid="959C0AC42934A8099200151"><![CDATA[
+              ]]>
+              <Property JSONName="id" Name="id" ShowJSONMapping="Y" eid="959C0AC42934A8099200152"/>
+              <Property JSONName="status" Name="status" ShowJSONMapping="Y" eid="959C0AC42934A8099200153"/>
+              <Property JSONName="transactionStatus" Name="transactionStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200154"/>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="audit" Name="audit" ShowJSONMapping="Y" eid="959C0AC42934A8099200155"><![CDATA[
+                ]]>
+                <Property JSONName="T24_time" Name="T24Time" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200156"/>
+                <Property JSONName="parse_time" Name="parseTime" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200157"/>
+              </PropertyGroup>
+            </PropertyGroup>
+            <PropertyGroup JSONCollectionKind="Object" JSONName="error" Name="error" ShowJSONMapping="Y" eid="959C0AC42934A8099200158"><![CDATA[
+              ]]>
+              <Property JSONName="type" Name="type" ShowJSONMapping="Y" eid="959C0AC42934A8099200159"/>
+              <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="errorDetails" MaxInstances="0" Name="errorDetails" ShowJSONMapping="Y" eid="959C0AC42934A8099200160"><![CDATA[
+                ]]>
+                <Property JSONName="fieldName" Name="fieldName" ShowJSONMapping="Y" eid="959C0AC42934A8099200161"/>
+                <Property JSONName="code" Name="code" ShowJSONMapping="Y" eid="959C0AC42934A8099200162"/>
+                <Property JSONName="message" Name="message" ShowJSONMapping="Y" eid="959C0AC42934A8099200163"/>
+              </PropertyGroup>
+            </PropertyGroup>
+            <PropertyGroup JSONCollectionKind="Object" JSONName="override" Name="override" ShowJSONMapping="Y" eid="959C0AC42934A8099200164"><![CDATA[
+              ]]>
+              <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="overrideDetails" MaxInstances="0" Name="overrideDetails" ShowJSONMapping="Y" eid="959C0AC42934A8099200165"><![CDATA[
+                ]]>
+                <Property JSONName="id" Name="id" ShowJSONMapping="Y" eid="959C0AC42934A8099200166"/>
+                <Property JSONName="description" Name="description" ShowJSONMapping="Y" eid="959C0AC42934A8099200167"/>
+              </PropertyGroup>
+            </PropertyGroup>
+          </PropertyGroup>
+        </PropertyGroup>
+      </PropertyGroup>
+      <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" Name="openBanking" eid="959C0AC42934A8099200168">
+        <PropertyGroup Name="openBankingCustomersconnectionsByConnectionId" eid="959C0AC42934A8099200169"><![CDATA[
+          ]]>
+          <PropertyGroup Name="getOpenBankingConnection" eid="959C0AC42934A8099200170"><![CDATA[
+            ]]>
+            <PropertyGroup Name="Request" eid="959C0AC42934A8099200171"><![CDATA[
+              ]]>
+              <Property JSONName="connectionId" Name="connectionId" ShowJSONMapping="Y" eid="959C0AC42934A8099200172"/>
+              <PropertyGroup Name="Query" eid="959C0AC42934A8099200173"><![CDATA[
+                ]]>
+                <Property JSONName="credentials" Name="credentials" ShowJSONMapping="Y" eid="959C0AC42934A8099200174"/>
+                <Property JSONName="companyId" Name="companyId" ShowJSONMapping="Y" eid="959C0AC42934A8099200175"/>
+              </PropertyGroup>
+            </PropertyGroup>
+            <PropertyGroup JSONCollectionKind="Object" JSONName="getOpenBankingConnectionResponse" Name="getOpenBankingConnectionResponse" ShowJSONMapping="Y" eid="959C0AC42934A8099200176"><![CDATA[
+              ]]>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="header" Name="header" ShowJSONMapping="Y" eid="959C0AC42934A8099200177"><![CDATA[
+                ]]>
+                <Property JSONName="id" Name="id" ShowJSONMapping="Y" eid="959C0AC42934A8099200178"/>
+                <Property JSONName="status" Name="status" ShowJSONMapping="Y" eid="959C0AC42934A8099200179"/>
+                <Property JSONName="transactionStatus" Name="transactionStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200180"/>
+                <PropertyGroup JSONCollectionKind="Object" JSONName="audit" Name="audit" ShowJSONMapping="Y" eid="959C0AC42934A8099200181"><![CDATA[
+                  ]]>
+                  <Property JSONName="T24_time" Name="T24Time" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200182"/>
+                  <Property JSONName="versionNumber" Name="versionNumber" ShowJSONMapping="Y" eid="959C0AC42934A8099200183"/>
+                  <Property JSONName="parse_time" Name="parseTime" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200184"/>
+                </PropertyGroup>
+              </PropertyGroup>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="body" Name="body" ShowJSONMapping="Y" eid="959C0AC42934A8099200185"><![CDATA[
+                ]]>
+                <Property JSONName="customerId" Name="customerId" ShowJSONMapping="Y" eid="959C0AC42934A8099200186"/>
+                <Property JSONName="bankId" Name="bankId" ShowJSONMapping="Y" eid="959C0AC42934A8099200187"/>
+                <Property JSONName="bankName" Name="bankName" ShowJSONMapping="Y" eid="959C0AC42934A8099200188"/>
+                <Property JSONName="countryId" Name="countryId" ShowJSONMapping="Y" eid="959C0AC42934A8099200189"/>
+                <Property JSONName="obcpId" Name="obcpId" ShowJSONMapping="Y" eid="959C0AC42934A8099200190"/>
+                <Property JSONName="obcpConnectionId" Name="obcpConnectionId" ShowJSONMapping="Y" eid="959C0AC42934A8099200191"/>
+                <Property JSONName="obcpBankId" Name="obcpBankId" ShowJSONMapping="Y" eid="959C0AC42934A8099200192"/>
+                <Property JSONName="obcpCustomerId" Name="obcpCustomerId" ShowJSONMapping="Y" eid="959C0AC42934A8099200193"/>
+                <Property JSONName="connectionStatus" Name="connectionStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200194"/>
+                <Property JSONName="subStatus" Name="subStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200195"/>
+                <Property JSONName="currentState" Name="currentState" ShowJSONMapping="Y" eid="959C0AC42934A8099200196"/>
+                <Property JSONName="latestToken" Name="latestToken" ShowJSONMapping="Y" eid="959C0AC42934A8099200197"/>
+                <Property JSONName="latestRedirectUrl" Name="latestRedirectUrl" ShowJSONMapping="Y" eid="959C0AC42934A8099200198"/>
+                <Property JSONName="obcpToken" Name="obcpToken" ShowJSONMapping="Y" eid="959C0AC42934A8099200199"/>
+                <Property JSONName="obcpRedirectUrl" Name="obcpRedirectUrl" ShowJSONMapping="Y" eid="959C0AC42934A8099200200"/>
+                <Property JSONName="consentPeriodDays" Name="consentPeriodDays" ShowJSONMapping="Y" eid="959C0AC42934A8099200201"/>
+                <Property JSONName="consentGiven" Name="consentGiven" ShowJSONMapping="Y" eid="959C0AC42934A8099200202"/>
+                <Property JSONName="consentExpires" Name="consentExpires" ShowJSONMapping="Y" eid="959C0AC42934A8099200203"/>
+                <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="consentTypes" MaxInstances="0" Name="consentTypes" ShowJSONMapping="Y" eid="959C0AC42934A8099200204"><![CDATA[
+                  ]]>
+                  <Property JSONName="consentType" Name="consentType" ShowJSONMapping="Y" eid="959C0AC42934A8099200205"/>
+                </PropertyGroup>
+                <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="obcp" MaxInstances="0" Name="obcp" ShowJSONMapping="Y" eid="959C0AC42934A8099200206"><![CDATA[
+                  ]]>
+                  <Property JSONName="arrangementId" Name="arrangementId" ShowJSONMapping="Y" eid="959C0AC42934A8099200207"/>
+                  <Property JSONName="obcpAccountId" Name="obcpAccountId" ShowJSONMapping="Y" eid="959C0AC42934A8099200208"/>
+                  <Property JSONName="consentId" Name="consentId" ShowJSONMapping="Y" eid="959C0AC42934A8099200209"/>
+                  <Property JSONName="obcpStatus" Name="obcpStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200210"/>
+                  <Property JSONName="channelId" Name="channelId" ShowJSONMapping="Y" eid="959C0AC42934A8099200211"/>
+                  <Property JSONName="termsAccepted" Name="termsAccepted" ShowJSONMapping="Y" eid="959C0AC42934A8099200212"/>
+                </PropertyGroup>
+              </PropertyGroup>
+            </PropertyGroup>
+            <PropertyGroup JSONCollectionKind="Object" JSONName="getOpenBankingConnectionErrorResponse" Name="getOpenBankingConnectionErrorResponse" ShowJSONMapping="Y" eid="959C0AC42934A8099200213"><![CDATA[
+              ]]>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="header" Name="header" ShowJSONMapping="Y" eid="959C0AC42934A8099200214"><![CDATA[
+                ]]>
+                <PropertyGroup JSONCollectionKind="Object" JSONName="audit" Name="audit" ShowJSONMapping="Y" eid="959C0AC42934A8099200215"><![CDATA[
+                  ]]>
+                  <Property JSONName="T24_time" Name="T24Time" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200216"/>
+                  <Property JSONName="versionNumber" Name="versionNumber" ShowJSONMapping="Y" eid="959C0AC42934A8099200217"/>
+                  <Property JSONName="parse_time" Name="parseTime" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200218"/>
+                </PropertyGroup>
+              </PropertyGroup>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="error" Name="error" ShowJSONMapping="Y" eid="959C0AC42934A8099200219"><![CDATA[
+                ]]>
+                <Property JSONName="type" Name="type" ShowJSONMapping="Y" eid="959C0AC42934A8099200220"/>
+                <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="errorDetails" MaxInstances="0" Name="errorDetails" ShowJSONMapping="Y" eid="959C0AC42934A8099200221"><![CDATA[
+                  ]]>
+                  <Property JSONName="fieldName" Name="fieldName" ShowJSONMapping="Y" eid="959C0AC42934A8099200222"/>
+                  <Property JSONName="code" Name="code" ShowJSONMapping="Y" eid="959C0AC42934A8099200223"/>
+                  <Property JSONName="message" Name="message" ShowJSONMapping="Y" eid="959C0AC42934A8099200224"/>
+                </PropertyGroup>
+              </PropertyGroup>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="override" Name="override" ShowJSONMapping="Y" eid="959C0AC42934A8099200225"><![CDATA[
+                ]]>
+                <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="overrideDetails" MaxInstances="0" Name="overrideDetails" ShowJSONMapping="Y" eid="959C0AC42934A8099200226"><![CDATA[
+                  ]]>
+                  <Property JSONName="id" Name="id" ShowJSONMapping="Y" eid="959C0AC42934A8099200227"/>
+                  <Property JSONName="description" Name="description" ShowJSONMapping="Y" eid="959C0AC42934A8099200228"/>
+                </PropertyGroup>
+              </PropertyGroup>
+            </PropertyGroup>
+          </PropertyGroup>
+          <PropertyGroup Name="removeOpenBankingConnection" eid="959C0AC42934A8099200229"><![CDATA[
+            ]]>
+            <PropertyGroup Name="Request" eid="959C0AC42934A8099200230"><![CDATA[
+              ]]>
+              <Property JSONName="connectionId" Name="connectionId" ShowJSONMapping="Y" eid="959C0AC42934A8099200231"/>
+              <PropertyGroup Name="Body" eid="959C0AC42934A8099200232"><![CDATA[
+                ]]>
+                <PropertyGroup JSONCollectionKind="Object" JSONName="payload" Name="payload" ShowJSONMapping="Y" eid="959C0AC42934A8099200233"><![CDATA[
+                  ]]>
+                  <PropertyGroup JSONCollectionKind="Object" JSONName="header" Name="header" ShowJSONMapping="Y" eid="959C0AC42934A8099200234"><![CDATA[
+                    ]]>
+                    <PropertyGroup JSONCollectionKind="Object" JSONName="override" Name="override" ShowJSONMapping="Y" eid="959C0AC42934A8099200235"><![CDATA[
+                      ]]>
+                      <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="overrideDetails" MaxInstances="0" Name="overrideDetails" ShowJSONMapping="Y" eid="959C0AC42934A8099200236"><![CDATA[
+                        ]]>
+                        <Property JSONName="id" Name="id" ShowJSONMapping="Y" eid="959C0AC42934A8099200237"/>
+                        <Property JSONName="description" Name="description" ShowJSONMapping="Y" eid="959C0AC42934A8099200238"/>
+                        <Property JSONName="responseCode" Name="responseCode" ShowJSONMapping="Y" eid="959C0AC42934A8099200239"/>
+                      </PropertyGroup>
+                    </PropertyGroup>
+                    <PropertyGroup JSONCollectionKind="Object" JSONName="audit" Name="audit" ShowJSONMapping="Y" eid="959C0AC42934A8099200240"><![CDATA[
+                      ]]>
+                      <Property JSONName="versionNumber" Name="versionNumber" ShowJSONMapping="Y" eid="959C0AC42934A8099200241"/>
+                    </PropertyGroup>
+                  </PropertyGroup>
+                  <PropertyGroup JSONCollectionKind="Object" JSONName="body" Name="body" ShowJSONMapping="Y" eid="959C0AC42934A8099200242"><![CDATA[
+                    ]]>
+                    <Property JSONName="customerId" Name="customerId" ShowJSONMapping="Y" eid="959C0AC42934A8099200243"/>
+                    <Property JSONName="bankId" Name="bankId" ShowJSONMapping="Y" eid="959C0AC42934A8099200244"/>
+                    <Property JSONName="bankName" Name="bankName" ShowJSONMapping="Y" eid="959C0AC42934A8099200245"/>
+                    <Property JSONName="countryId" Name="countryId" ShowJSONMapping="Y" eid="959C0AC42934A8099200246"/>
+                    <Property JSONName="obcpId" Name="obcpId" ShowJSONMapping="Y" eid="959C0AC42934A8099200247"/>
+                    <Property JSONName="obcpConnectionId" Name="obcpConnectionId" ShowJSONMapping="Y" eid="959C0AC42934A8099200248"/>
+                    <Property JSONName="obcpBankId" Name="obcpBankId" ShowJSONMapping="Y" eid="959C0AC42934A8099200249"/>
+                    <Property JSONName="obcpCustomerId" Name="obcpCustomerId" ShowJSONMapping="Y" eid="959C0AC42934A8099200250"/>
+                    <Property JSONName="connectionStatus" Name="connectionStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200251"/>
+                    <Property JSONName="subStatus" Name="subStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200252"/>
+                    <Property JSONName="currentState" Name="currentState" ShowJSONMapping="Y" eid="959C0AC42934A8099200253"/>
+                    <Property JSONName="latestToken" Name="latestToken" ShowJSONMapping="Y" eid="959C0AC42934A8099200254"/>
+                    <Property JSONName="latestRedirectUrl" Name="latestRedirectUrl" ShowJSONMapping="Y" eid="959C0AC42934A8099200255"/>
+                    <Property JSONName="obcpToken" Name="obcpToken" ShowJSONMapping="Y" eid="959C0AC42934A8099200256"/>
+                    <Property JSONName="obcpRedirectUrl" Name="obcpRedirectUrl" ShowJSONMapping="Y" eid="959C0AC42934A8099200257"/>
+                    <Property JSONName="consentPeriodDays" Name="consentPeriodDays" ShowJSONMapping="Y" eid="959C0AC42934A8099200258"/>
+                    <Property JSONName="consentGiven" Name="consentGiven" ShowJSONMapping="Y" eid="959C0AC42934A8099200259"/>
+                    <Property JSONName="consentExpires" Name="consentExpires" ShowJSONMapping="Y" eid="959C0AC42934A8099200260"/>
+                    <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="consentTypes" MaxInstances="0" Name="consentTypes" ShowJSONMapping="Y" eid="959C0AC42934A8099200261"><![CDATA[
+                      ]]>
+                      <Property JSONName="consentType" Name="consentType" ShowJSONMapping="Y" eid="959C0AC42934A8099200262"/>
+                    </PropertyGroup>
+                    <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="obcp" MaxInstances="0" Name="obcp" ShowJSONMapping="Y" eid="959C0AC42934A8099200263"><![CDATA[
+                      ]]>
+                      <Property JSONName="arrangementId" Name="arrangementId" ShowJSONMapping="Y" eid="959C0AC42934A8099200264"/>
+                      <Property JSONName="obcpAccountId" Name="obcpAccountId" ShowJSONMapping="Y" eid="959C0AC42934A8099200265"/>
+                      <Property JSONName="consentId" Name="consentId" ShowJSONMapping="Y" eid="959C0AC42934A8099200266"/>
+                      <Property JSONName="obcpStatus" Name="obcpStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200267"/>
+                      <Property JSONName="channelId" Name="channelId" ShowJSONMapping="Y" eid="959C0AC42934A8099200268"/>
+                      <Property JSONName="termsAccepted" Name="termsAccepted" ShowJSONMapping="Y" eid="959C0AC42934A8099200269"/>
+                    </PropertyGroup>
+                  </PropertyGroup>
+                </PropertyGroup>
+              </PropertyGroup>
+              <PropertyGroup Name="Query" eid="959C0AC42934A8099200270"><![CDATA[
+                ]]>
+                <Property JSONName="validate_only" Name="validateOnly" ShowJSONMapping="Y" Type="boolean List" eid="959C0AC42934A8099200271"/>
+                <Property JSONName="credentials" Name="credentials" ShowJSONMapping="Y" eid="959C0AC42934A8099200272"/>
+                <Property JSONName="companyId" Name="companyId" ShowJSONMapping="Y" eid="959C0AC42934A8099200273"/>
+              </PropertyGroup>
+            </PropertyGroup>
+            <PropertyGroup JSONCollectionKind="Object" JSONName="getOpenBankingConnectionResponse" Name="getOpenBankingConnectionResponse" ShowJSONMapping="Y" eid="959C0AC42934A8099200274"><![CDATA[
+              ]]>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="header" Name="header" ShowJSONMapping="Y" eid="959C0AC42934A8099200275"><![CDATA[
+                ]]>
+                <Property JSONName="id" Name="id" ShowJSONMapping="Y" eid="959C0AC42934A8099200276"/>
+                <Property JSONName="status" Name="status" ShowJSONMapping="Y" eid="959C0AC42934A8099200277"/>
+                <Property JSONName="transactionStatus" Name="transactionStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200278"/>
+                <PropertyGroup JSONCollectionKind="Object" JSONName="audit" Name="audit" ShowJSONMapping="Y" eid="959C0AC42934A8099200279"><![CDATA[
+                  ]]>
+                  <Property JSONName="T24_time" Name="T24Time" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200280"/>
+                  <Property JSONName="versionNumber" Name="versionNumber" ShowJSONMapping="Y" eid="959C0AC42934A8099200281"/>
+                  <Property JSONName="parse_time" Name="parseTime" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200282"/>
+                </PropertyGroup>
+              </PropertyGroup>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="body" Name="body" ShowJSONMapping="Y" eid="959C0AC42934A8099200283"><![CDATA[
+                ]]>
+                <Property JSONName="customerId" Name="customerId" ShowJSONMapping="Y" eid="959C0AC42934A8099200284"/>
+                <Property JSONName="bankId" Name="bankId" ShowJSONMapping="Y" eid="959C0AC42934A8099200285"/>
+                <Property JSONName="bankName" Name="bankName" ShowJSONMapping="Y" eid="959C0AC42934A8099200286"/>
+                <Property JSONName="countryId" Name="countryId" ShowJSONMapping="Y" eid="959C0AC42934A8099200287"/>
+                <Property JSONName="obcpId" Name="obcpId" ShowJSONMapping="Y" eid="959C0AC42934A8099200288"/>
+                <Property JSONName="obcpConnectionId" Name="obcpConnectionId" ShowJSONMapping="Y" eid="959C0AC42934A8099200289"/>
+                <Property JSONName="obcpBankId" Name="obcpBankId" ShowJSONMapping="Y" eid="959C0AC42934A8099200290"/>
+                <Property JSONName="obcpCustomerId" Name="obcpCustomerId" ShowJSONMapping="Y" eid="959C0AC42934A8099200291"/>
+                <Property JSONName="connectionStatus" Name="connectionStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200292"/>
+                <Property JSONName="subStatus" Name="subStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200293"/>
+                <Property JSONName="currentState" Name="currentState" ShowJSONMapping="Y" eid="959C0AC42934A8099200294"/>
+                <Property JSONName="latestToken" Name="latestToken" ShowJSONMapping="Y" eid="959C0AC42934A8099200295"/>
+                <Property JSONName="latestRedirectUrl" Name="latestRedirectUrl" ShowJSONMapping="Y" eid="959C0AC42934A8099200296"/>
+                <Property JSONName="obcpToken" Name="obcpToken" ShowJSONMapping="Y" eid="959C0AC42934A8099200297"/>
+                <Property JSONName="obcpRedirectUrl" Name="obcpRedirectUrl" ShowJSONMapping="Y" eid="959C0AC42934A8099200298"/>
+                <Property JSONName="consentPeriodDays" Name="consentPeriodDays" ShowJSONMapping="Y" eid="959C0AC42934A8099200299"/>
+                <Property JSONName="consentGiven" Name="consentGiven" ShowJSONMapping="Y" eid="959C0AC42934A8099200300"/>
+                <Property JSONName="consentExpires" Name="consentExpires" ShowJSONMapping="Y" eid="959C0AC42934A8099200301"/>
+                <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="consentTypes" MaxInstances="0" Name="consentTypes" ShowJSONMapping="Y" eid="959C0AC42934A8099200302"><![CDATA[
+                  ]]>
+                  <Property JSONName="consentType" Name="consentType" ShowJSONMapping="Y" eid="959C0AC42934A8099200303"/>
+                </PropertyGroup>
+                <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="obcp" MaxInstances="0" Name="obcp" ShowJSONMapping="Y" eid="959C0AC42934A8099200304"><![CDATA[
+                  ]]>
+                  <Property JSONName="arrangementId" Name="arrangementId" ShowJSONMapping="Y" eid="959C0AC42934A8099200305"/>
+                  <Property JSONName="obcpAccountId" Name="obcpAccountId" ShowJSONMapping="Y" eid="959C0AC42934A8099200306"/>
+                  <Property JSONName="consentId" Name="consentId" ShowJSONMapping="Y" eid="959C0AC42934A8099200307"/>
+                  <Property JSONName="obcpStatus" Name="obcpStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200308"/>
+                  <Property JSONName="channelId" Name="channelId" ShowJSONMapping="Y" eid="959C0AC42934A8099200309"/>
+                  <Property JSONName="termsAccepted" Name="termsAccepted" ShowJSONMapping="Y" eid="959C0AC42934A8099200310"/>
+                </PropertyGroup>
+              </PropertyGroup>
+            </PropertyGroup>
+            <PropertyGroup JSONCollectionKind="Object" JSONName="getOpenBankingConnectionErrorResponse" Name="getOpenBankingConnectionErrorResponse" ShowJSONMapping="Y" eid="959C0AC42934A8099200311"><![CDATA[
+              ]]>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="header" Name="header" ShowJSONMapping="Y" eid="959C0AC42934A8099200312"><![CDATA[
+                ]]>
+                <PropertyGroup JSONCollectionKind="Object" JSONName="audit" Name="audit" ShowJSONMapping="Y" eid="959C0AC42934A8099200313"><![CDATA[
+                  ]]>
+                  <Property JSONName="T24_time" Name="T24Time" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200314"/>
+                  <Property JSONName="versionNumber" Name="versionNumber" ShowJSONMapping="Y" eid="959C0AC42934A8099200315"/>
+                  <Property JSONName="parse_time" Name="parseTime" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200316"/>
+                </PropertyGroup>
+              </PropertyGroup>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="error" Name="error" ShowJSONMapping="Y" eid="959C0AC42934A8099200317"><![CDATA[
+                ]]>
+                <Property JSONName="type" Name="type" ShowJSONMapping="Y" eid="959C0AC42934A8099200318"/>
+                <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="errorDetails" MaxInstances="0" Name="errorDetails" ShowJSONMapping="Y" eid="959C0AC42934A8099200319"><![CDATA[
+                  ]]>
+                  <Property JSONName="fieldName" Name="fieldName" ShowJSONMapping="Y" eid="959C0AC42934A8099200320"/>
+                  <Property JSONName="code" Name="code" ShowJSONMapping="Y" eid="959C0AC42934A8099200321"/>
+                  <Property JSONName="message" Name="message" ShowJSONMapping="Y" eid="959C0AC42934A8099200322"/>
+                </PropertyGroup>
+              </PropertyGroup>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="override" Name="override" ShowJSONMapping="Y" eid="959C0AC42934A8099200323"><![CDATA[
+                ]]>
+                <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="overrideDetails" MaxInstances="0" Name="overrideDetails" ShowJSONMapping="Y" eid="959C0AC42934A8099200324"><![CDATA[
+                  ]]>
+                  <Property JSONName="id" Name="id" ShowJSONMapping="Y" eid="959C0AC42934A8099200325"/>
+                  <Property JSONName="description" Name="description" ShowJSONMapping="Y" eid="959C0AC42934A8099200326"/>
+                </PropertyGroup>
+              </PropertyGroup>
+            </PropertyGroup>
+          </PropertyGroup>
+          <PropertyGroup Name="createOpenBankingConnection" eid="959C0AC42934A8099200327"><![CDATA[
+            ]]>
+            <PropertyGroup Name="Request" eid="959C0AC42934A8099200328"><![CDATA[
+              ]]>
+              <Property JSONName="connectionId" Name="connectionId" ShowJSONMapping="Y" eid="959C0AC42934A8099200329"/>
+              <PropertyGroup Name="Body" eid="959C0AC42934A8099200330"><![CDATA[
+                ]]>
+                <PropertyGroup JSONCollectionKind="Object" JSONName="payload" Name="payload" ShowJSONMapping="Y" eid="959C0AC42934A8099200331"><![CDATA[
+                  ]]>
+                  <PropertyGroup JSONCollectionKind="Object" JSONName="header" Name="header" ShowJSONMapping="Y" eid="959C0AC42934A8099200332"><![CDATA[
+                    ]]>
+                    <PropertyGroup JSONCollectionKind="Object" JSONName="override" Name="override" ShowJSONMapping="Y" eid="959C0AC42934A8099200333"><![CDATA[
+                      ]]>
+                      <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="overrideDetails" MaxInstances="0" Name="overrideDetails" ShowJSONMapping="Y" eid="959C0AC42934A8099200334"><![CDATA[
+                        ]]>
+                        <Property JSONName="id" Name="id" ShowJSONMapping="Y" eid="959C0AC42934A8099200335"/>
+                        <Property JSONName="description" Name="description" ShowJSONMapping="Y" eid="959C0AC42934A8099200336"/>
+                        <Property JSONName="responseCode" Name="responseCode" ShowJSONMapping="Y" eid="959C0AC42934A8099200337"/>
+                      </PropertyGroup>
+                    </PropertyGroup>
+                    <PropertyGroup JSONCollectionKind="Object" JSONName="audit" Name="audit" ShowJSONMapping="Y" eid="959C0AC42934A8099200338"><![CDATA[
+                      ]]>
+                      <Property JSONName="versionNumber" Name="versionNumber" ShowJSONMapping="Y" eid="959C0AC42934A8099200339"/>
+                    </PropertyGroup>
+                  </PropertyGroup>
+                  <PropertyGroup JSONCollectionKind="Object" JSONName="body" Name="body" ShowJSONMapping="Y" eid="959C0AC42934A8099200340"><![CDATA[
+                    ]]>
+                    <Property JSONName="customerId" Name="customerId" ShowJSONMapping="Y" eid="959C0AC42934A8099200341"/>
+                    <Property JSONName="bankId" Name="bankId" ShowJSONMapping="Y" eid="959C0AC42934A8099200342"/>
+                    <Property JSONName="bankName" Name="bankName" ShowJSONMapping="Y" eid="959C0AC42934A8099200343"/>
+                    <Property JSONName="countryId" Name="countryId" ShowJSONMapping="Y" eid="959C0AC42934A8099200344"/>
+                    <Property JSONName="obcpId" Name="obcpId" ShowJSONMapping="Y" eid="959C0AC42934A8099200345"/>
+                    <Property JSONName="obcpConnectionId" Name="obcpConnectionId" ShowJSONMapping="Y" eid="959C0AC42934A8099200346"/>
+                    <Property JSONName="obcpBankId" Name="obcpBankId" ShowJSONMapping="Y" eid="959C0AC42934A8099200347"/>
+                    <Property JSONName="obcpCustomerId" Name="obcpCustomerId" ShowJSONMapping="Y" eid="959C0AC42934A8099200348"/>
+                    <Property JSONName="connectionStatus" Name="connectionStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200349"/>
+                    <Property JSONName="subStatus" Name="subStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200350"/>
+                    <Property JSONName="currentState" Name="currentState" ShowJSONMapping="Y" eid="959C0AC42934A8099200351"/>
+                    <Property JSONName="latestToken" Name="latestToken" ShowJSONMapping="Y" eid="959C0AC42934A8099200352"/>
+                    <Property JSONName="latestRedirectUrl" Name="latestRedirectUrl" ShowJSONMapping="Y" eid="959C0AC42934A8099200353"/>
+                    <Property JSONName="obcpToken" Name="obcpToken" ShowJSONMapping="Y" eid="959C0AC42934A8099200354"/>
+                    <Property JSONName="obcpRedirectUrl" Name="obcpRedirectUrl" ShowJSONMapping="Y" eid="959C0AC42934A8099200355"/>
+                    <Property JSONName="consentPeriodDays" Name="consentPeriodDays" ShowJSONMapping="Y" eid="959C0AC42934A8099200356"/>
+                    <Property JSONName="consentGiven" Name="consentGiven" ShowJSONMapping="Y" eid="959C0AC42934A8099200357"/>
+                    <Property JSONName="consentExpires" Name="consentExpires" ShowJSONMapping="Y" eid="959C0AC42934A8099200358"/>
+                    <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="consentTypes" MaxInstances="0" Name="consentTypes" ShowJSONMapping="Y" eid="959C0AC42934A8099200359"><![CDATA[
+                      ]]>
+                      <Property JSONName="consentType" Name="consentType" ShowJSONMapping="Y" eid="959C0AC42934A8099200360"/>
+                    </PropertyGroup>
+                    <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="obcp" MaxInstances="0" Name="obcp" ShowJSONMapping="Y" eid="959C0AC42934A8099200361"><![CDATA[
+                      ]]>
+                      <Property JSONName="arrangementId" Name="arrangementId" ShowJSONMapping="Y" eid="959C0AC42934A8099200362"/>
+                      <Property JSONName="obcpAccountId" Name="obcpAccountId" ShowJSONMapping="Y" eid="959C0AC42934A8099200363"/>
+                      <Property JSONName="consentId" Name="consentId" ShowJSONMapping="Y" eid="959C0AC42934A8099200364"/>
+                      <Property JSONName="obcpStatus" Name="obcpStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200365"/>
+                      <Property JSONName="channelId" Name="channelId" ShowJSONMapping="Y" eid="959C0AC42934A8099200366"/>
+                      <Property JSONName="termsAccepted" Name="termsAccepted" ShowJSONMapping="Y" eid="959C0AC42934A8099200367"/>
+                    </PropertyGroup>
+                  </PropertyGroup>
+                </PropertyGroup>
+              </PropertyGroup>
+              <PropertyGroup Name="Query" eid="959C0AC42934A8099200368"><![CDATA[
+                ]]>
+                <Property JSONName="validate_only" Name="validateOnly" ShowJSONMapping="Y" Type="boolean List" eid="959C0AC42934A8099200369"/>
+                <Property JSONName="credentials" Name="credentials" ShowJSONMapping="Y" eid="959C0AC42934A8099200370"/>
+                <Property JSONName="companyId" Name="companyId" ShowJSONMapping="Y" eid="959C0AC42934A8099200371"/>
+              </PropertyGroup>
+            </PropertyGroup>
+            <PropertyGroup JSONCollectionKind="Object" JSONName="reconnectOpenBankingConnectionResponse" Name="reconnectOpenBankingConnectionResponse" ShowJSONMapping="Y" eid="959C0AC42934A8099200372"><![CDATA[
+              ]]>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="header" Name="header" ShowJSONMapping="Y" eid="959C0AC42934A8099200373"><![CDATA[
+                ]]>
+                <Property JSONName="id" Name="id" ShowJSONMapping="Y" eid="959C0AC42934A8099200374"/>
+                <Property JSONName="status" Name="status" ShowJSONMapping="Y" eid="959C0AC42934A8099200375"/>
+                <Property JSONName="transactionStatus" Name="transactionStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200376"/>
+                <PropertyGroup JSONCollectionKind="Object" JSONName="audit" Name="audit" ShowJSONMapping="Y" eid="959C0AC42934A8099200377"><![CDATA[
+                  ]]>
+                  <Property JSONName="T24_time" Name="T24Time" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200378"/>
+                  <Property JSONName="versionNumber" Name="versionNumber" ShowJSONMapping="Y" eid="959C0AC42934A8099200379"/>
+                  <Property JSONName="parse_time" Name="parseTime" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200380"/>
+                </PropertyGroup>
+              </PropertyGroup>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="body" Name="body" ShowJSONMapping="Y" eid="959C0AC42934A8099200381"><![CDATA[
+                ]]>
+                <Property JSONName="customerId" Name="customerId" ShowJSONMapping="Y" eid="959C0AC42934A8099200382"/>
+                <Property JSONName="bankId" Name="bankId" ShowJSONMapping="Y" eid="959C0AC42934A8099200383"/>
+                <Property JSONName="bankName" Name="bankName" ShowJSONMapping="Y" eid="959C0AC42934A8099200384"/>
+                <Property JSONName="countryId" Name="countryId" ShowJSONMapping="Y" eid="959C0AC42934A8099200385"/>
+                <Property JSONName="obcpId" Name="obcpId" ShowJSONMapping="Y" eid="959C0AC42934A8099200386"/>
+                <Property JSONName="obcpConnectionId" Name="obcpConnectionId" ShowJSONMapping="Y" eid="959C0AC42934A8099200387"/>
+                <Property JSONName="obcpBankId" Name="obcpBankId" ShowJSONMapping="Y" eid="959C0AC42934A8099200388"/>
+                <Property JSONName="obcpCustomerId" Name="obcpCustomerId" ShowJSONMapping="Y" eid="959C0AC42934A8099200389"/>
+                <Property JSONName="connectionStatus" Name="connectionStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200390"/>
+                <Property JSONName="subStatus" Name="subStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200391"/>
+                <Property JSONName="currentState" Name="currentState" ShowJSONMapping="Y" eid="959C0AC42934A8099200392"/>
+                <Property JSONName="latestToken" Name="latestToken" ShowJSONMapping="Y" eid="959C0AC42934A8099200393"/>
+                <Property JSONName="latestRedirectUrl" Name="latestRedirectUrl" ShowJSONMapping="Y" eid="959C0AC42934A8099200394"/>
+                <Property JSONName="obcpToken" Name="obcpToken" ShowJSONMapping="Y" eid="959C0AC42934A8099200395"/>
+                <Property JSONName="obcpRedirectUrl" Name="obcpRedirectUrl" ShowJSONMapping="Y" eid="959C0AC42934A8099200396"/>
+                <Property JSONName="consentPeriodDays" Name="consentPeriodDays" ShowJSONMapping="Y" eid="959C0AC42934A8099200397"/>
+                <Property JSONName="consentGiven" Name="consentGiven" ShowJSONMapping="Y" eid="959C0AC42934A8099200398"/>
+                <Property JSONName="consentExpires" Name="consentExpires" ShowJSONMapping="Y" eid="959C0AC42934A8099200399"/>
+                <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="consentTypes" MaxInstances="0" Name="consentTypes" ShowJSONMapping="Y" eid="959C0AC42934A8099200400"><![CDATA[
+                  ]]>
+                  <Property JSONName="consentType" Name="consentType" ShowJSONMapping="Y" eid="959C0AC42934A8099200401"/>
+                </PropertyGroup>
+                <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="obcp" MaxInstances="0" Name="obcp" ShowJSONMapping="Y" eid="959C0AC42934A8099200402"><![CDATA[
+                  ]]>
+                  <Property JSONName="arrangementId" Name="arrangementId" ShowJSONMapping="Y" eid="959C0AC42934A8099200403"/>
+                  <Property JSONName="obcpAccountId" Name="obcpAccountId" ShowJSONMapping="Y" eid="959C0AC42934A8099200404"/>
+                  <Property JSONName="consentId" Name="consentId" ShowJSONMapping="Y" eid="959C0AC42934A8099200405"/>
+                  <Property JSONName="obcpStatus" Name="obcpStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200406"/>
+                  <Property JSONName="channelId" Name="channelId" ShowJSONMapping="Y" eid="959C0AC42934A8099200407"/>
+                  <Property JSONName="termsAccepted" Name="termsAccepted" ShowJSONMapping="Y" eid="959C0AC42934A8099200408"/>
+                </PropertyGroup>
+              </PropertyGroup>
+            </PropertyGroup>
+            <PropertyGroup JSONCollectionKind="Object" JSONName="getOpenBankingConnectionErrorResponse" Name="getOpenBankingConnectionErrorResponse" ShowJSONMapping="Y" eid="959C0AC42934A8099200409"><![CDATA[
+              ]]>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="header" Name="header" ShowJSONMapping="Y" eid="959C0AC42934A8099200410"><![CDATA[
+                ]]>
+                <PropertyGroup JSONCollectionKind="Object" JSONName="audit" Name="audit" ShowJSONMapping="Y" eid="959C0AC42934A8099200411"><![CDATA[
+                  ]]>
+                  <Property JSONName="T24_time" Name="T24Time" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200412"/>
+                  <Property JSONName="versionNumber" Name="versionNumber" ShowJSONMapping="Y" eid="959C0AC42934A8099200413"/>
+                  <Property JSONName="parse_time" Name="parseTime" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200414"/>
+                </PropertyGroup>
+              </PropertyGroup>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="error" Name="error" ShowJSONMapping="Y" eid="959C0AC42934A8099200415"><![CDATA[
+                ]]>
+                <Property JSONName="type" Name="type" ShowJSONMapping="Y" eid="959C0AC42934A8099200416"/>
+                <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="errorDetails" MaxInstances="0" Name="errorDetails" ShowJSONMapping="Y" eid="959C0AC42934A8099200417"><![CDATA[
+                  ]]>
+                  <Property JSONName="fieldName" Name="fieldName" ShowJSONMapping="Y" eid="959C0AC42934A8099200418"/>
+                  <Property JSONName="code" Name="code" ShowJSONMapping="Y" eid="959C0AC42934A8099200419"/>
+                  <Property JSONName="message" Name="message" ShowJSONMapping="Y" eid="959C0AC42934A8099200420"/>
+                </PropertyGroup>
+              </PropertyGroup>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="override" Name="override" ShowJSONMapping="Y" eid="959C0AC42934A8099200421"><![CDATA[
+                ]]>
+                <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="overrideDetails" MaxInstances="0" Name="overrideDetails" ShowJSONMapping="Y" eid="959C0AC42934A8099200422"><![CDATA[
+                  ]]>
+                  <Property JSONName="id" Name="id" ShowJSONMapping="Y" eid="959C0AC42934A8099200423"/>
+                  <Property JSONName="description" Name="description" ShowJSONMapping="Y" eid="959C0AC42934A8099200424"/>
+                </PropertyGroup>
+              </PropertyGroup>
+            </PropertyGroup>
+          </PropertyGroup>
+        </PropertyGroup>
+      </PropertyGroup>
+      <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" Name="party" eid="959C0AC42934A8099200425">
+        <PropertyGroup Name="createMessages" eid="959C0AC42934A8099200426"><![CDATA[
+          ]]>
+          <PropertyGroup Name="Request" eid="959C0AC42934A8099200427"><![CDATA[
+            ]]>
+            <PropertyGroup Name="Body" eid="959C0AC42934A8099200428"><![CDATA[
+              ]]>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="payload" Name="payload" ShowJSONMapping="Y" eid="959C0AC42934A8099200429"><![CDATA[
+                ]]>
+                <PropertyGroup JSONCollectionKind="Object" JSONName="header" Name="header" ShowJSONMapping="Y" eid="959C0AC42934A8099200430"><![CDATA[
+                  ]]>
+                  <PropertyGroup JSONCollectionKind="Object" JSONName="override" Name="override" ShowJSONMapping="Y" eid="959C0AC42934A8099200431"><![CDATA[
+                    ]]>
+                    <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="overrideDetails" MaxInstances="0" Name="overrideDetails" ShowJSONMapping="Y" eid="959C0AC42934A8099200432"><![CDATA[
+                      ]]>
+                      <Property JSONName="id" Name="id" ShowJSONMapping="Y" eid="959C0AC42934A8099200433"/>
+                      <Property JSONName="description" Name="description" ShowJSONMapping="Y" eid="959C0AC42934A8099200434"/>
+                      <Property JSONName="responseCode" Name="responseCode" ShowJSONMapping="Y" eid="959C0AC42934A8099200435"/>
+                    </PropertyGroup>
+                  </PropertyGroup>
+                </PropertyGroup>
+                <PropertyGroup JSONCollectionKind="Object" JSONName="body" Name="body" ShowJSONMapping="Y" eid="959C0AC42934A8099200436"><![CDATA[
+                  ]]>
+                  <Property JSONName="testSubject" Name="Subject" ShowJSONMapping="Y" eid="959C0AC42934A8099200437"/>
+                  <Property JSONName="testMessage" Name="Message" ShowJSONMapping="Y" eid="959C0AC42934A8099200438"/>
+                  <Property JSONName="parentMessageId" Name="parentMessageId" ShowJSONMapping="Y" eid="959C0AC42934A8099200439"/>
+                  <Property JSONName="fromCustomer" Name="fromCustomer" ShowJSONMapping="Y" eid="959C0AC42934A8099200440"/>
+                  <Property JSONName="toStatus" Name="toStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200441"/>
+                  <Property JSONName="toDao" Name="toDao" ShowJSONMapping="Y" eid="959C0AC42934A8099200442"/>
+                  <Property JSONName="uploadId" Name="uploadId" ShowJSONMapping="Y" eid="959C0AC42934A8099200443"/>
+                  <Property JSONName="fileUpload" Name="fileUpload" ShowJSONMapping="Y" eid="959C0AC42934A8099200444"/>
+                </PropertyGroup>
+              </PropertyGroup>
+            </PropertyGroup>
+            <PropertyGroup Name="Query" eid="959C0AC42934A8099200445"><![CDATA[
+              ]]>
+              <Property JSONName="validate_only" Name="validateOnly" ShowJSONMapping="Y" Type="boolean List" eid="959C0AC42934A8099200446"/>
+            </PropertyGroup>
+          </PropertyGroup>
+          <PropertyGroup Name="Response" eid="959C0AC42934A8099200447"><![CDATA[
+            ]]>
+            <PropertyGroup JSONCollectionKind="Object" JSONName="createMessagesResponse" Name="createMessagesResponse" ShowJSONMapping="Y" eid="959C0AC42934A8099200448"><![CDATA[
+              ]]>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="header" Name="header" ShowJSONMapping="Y" eid="959C0AC42934A8099200449"><![CDATA[
+                ]]>
+                <Property JSONName="id" Name="id" ShowJSONMapping="Y" eid="959C0AC42934A8099200450"/>
+                <Property JSONName="status" Name="status" ShowJSONMapping="Y" eid="959C0AC42934A8099200451"/>
+                <Property JSONName="transactionStatus" Name="transactionStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200452"/>
+                <PropertyGroup JSONCollectionKind="Object" JSONName="audit" Name="audit" ShowJSONMapping="Y" eid="959C0AC42934A8099200453"><![CDATA[
+                  ]]>
+                  <Property JSONName="T24_time" Name="T24Time" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200454"/>
+                  <Property JSONName="parse_time" Name="parseTime" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200455"/>
+                </PropertyGroup>
+              </PropertyGroup>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="body" Name="body" ShowJSONMapping="Y" eid="959C0AC42934A8099200456"><![CDATA[
+                ]]>
+                <Property JSONName="testSubject" Name="Subject" ShowJSONMapping="Y" eid="959C0AC42934A8099200457"/>
+                <Property JSONName="testMessage" Name="Message" ShowJSONMapping="Y" eid="959C0AC42934A8099200458"/>
+                <Property JSONName="parentMessageId" Name="parentMessageId" ShowJSONMapping="Y" eid="959C0AC42934A8099200459"/>
+                <Property JSONName="fromCustomer" Name="fromCustomer" ShowJSONMapping="Y" eid="959C0AC42934A8099200460"/>
+                <Property JSONName="toStatus" Name="toStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200461"/>
+                <Property JSONName="toDao" Name="toDao" ShowJSONMapping="Y" eid="959C0AC42934A8099200462"/>
+                <Property JSONName="uploadId" Name="uploadId" ShowJSONMapping="Y" eid="959C0AC42934A8099200463"/>
+                <Property JSONName="fileUpload" Name="fileUpload" ShowJSONMapping="Y" eid="959C0AC42934A8099200464"/>
+              </PropertyGroup>
+            </PropertyGroup>
+            <PropertyGroup JSONCollectionKind="Object" JSONName="createMessagesErrorResponse" Name="createMessagesErrorResponse" ShowJSONMapping="Y" eid="959C0AC42934A8099200465"><![CDATA[
+              ]]>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="header" Name="header" ShowJSONMapping="Y" eid="959C0AC42934A8099200466"><![CDATA[
+                ]]>
+                <Property JSONName="id" Name="id" ShowJSONMapping="Y" eid="959C0AC42934A8099200467"/>
+                <Property JSONName="status" Name="status" ShowJSONMapping="Y" eid="959C0AC42934A8099200468"/>
+                <Property JSONName="transactionStatus" Name="transactionStatus" ShowJSONMapping="Y" eid="959C0AC42934A8099200469"/>
+                <PropertyGroup JSONCollectionKind="Object" JSONName="audit" Name="audit" ShowJSONMapping="Y" eid="959C0AC42934A8099200470"><![CDATA[
+                  ]]>
+                  <Property JSONName="T24_time" Name="T24Time" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200471"/>
+                  <Property JSONName="parse_time" Name="parseTime" ShowJSONMapping="Y" Type="int32" eid="959C0AC42934A8099200472"/>
+                </PropertyGroup>
+              </PropertyGroup>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="error" Name="error" ShowJSONMapping="Y" eid="959C0AC42934A8099200473"><![CDATA[
+                ]]>
+                <Property JSONName="type" Name="type" ShowJSONMapping="Y" eid="959C0AC42934A8099200474"/>
+                <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="errorDetails" MaxInstances="0" Name="errorDetails" ShowJSONMapping="Y" eid="959C0AC42934A8099200475"><![CDATA[
+                  ]]>
+                  <Property JSONName="fieldName" Name="fieldName" ShowJSONMapping="Y" eid="959C0AC42934A8099200476"/>
+                  <Property JSONName="code" Name="code" ShowJSONMapping="Y" eid="959C0AC42934A8099200477"/>
+                  <Property JSONName="message" Name="message" ShowJSONMapping="Y" eid="959C0AC42934A8099200478"/>
+                </PropertyGroup>
+              </PropertyGroup>
+              <PropertyGroup JSONCollectionKind="Object" JSONName="override" Name="override" ShowJSONMapping="Y" eid="959C0AC42934A8099200479"><![CDATA[
+                ]]>
+                <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="overrideDetails" MaxInstances="0" Name="overrideDetails" ShowJSONMapping="Y" eid="959C0AC42934A8099200480"><![CDATA[
+                  ]]>
+                  <Property JSONName="id" Name="id" ShowJSONMapping="Y" eid="959C0AC42934A8099200481"/>
+                  <Property JSONName="description" Name="description" ShowJSONMapping="Y" eid="959C0AC42934A8099200482"/>
+                </PropertyGroup>
+              </PropertyGroup>
+            </PropertyGroup>
+          </PropertyGroup>
+        </PropertyGroup>
+      </PropertyGroup>
+      <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" Name="Callback-Json" eid="959C0AC42934A8099200483">
+        <Property JSONName="toStatus" Name="toStatus" ShowJSONMapping="true" eid="959C0AC42934A8099200484"/>
+        <Property JSONName="schemaLocation" Name="schemaLocation" ShowJSONMapping="true" eid="959C0AC42934A8099200485"/>
+        <Property JSONName="subject" Name="subject" ShowJSONMapping="true" eid="959C0AC42934A8099200486"/>
+        <Property JSONName="parentMessageId" Name="parentMessageId" ShowJSONMapping="true" eid="959C0AC42934A8099200487"/>
+        <Property JSONName="eventtype" Name="eventtype" ShowJSONMapping="true" eid="959C0AC42934A8099200488"/>
+        <Property JSONName="fromCustomer" Name="fromCustomer" ShowJSONMapping="true" Type="Number" eid="959C0AC42934A8099200489"/>
+        <PropertyGroup JSONCollectionKind="Object" JSONName="messageList" Name="messageList" ShowJSONMapping="true" eid="959C0AC42934A8099200490"><![CDATA[
+          ]]>
+          <PropertyGroup JSONCollectionKind="Object" JSONName="message" Name="message" ShowJSONMapping="true" eid="959C0AC42934A8099200491"><![CDATA[
+            ]]>
+            <Property Name="DataItem 85" ShowJSONMapping="true" eid="959C0AC42934A8099200492"/>
+            <Property JSONName="index" Name="index" ShowJSONMapping="true" Type="Number" eid="959C0AC42934A8099200493"/>
+          </PropertyGroup>
+        </PropertyGroup>
+        <PropertyGroup JSONCollectionKind="Object" JSONName="eventCommon" Name="eventCommon" ShowJSONMapping="true" eid="959C0AC42934A8099200494"><![CDATA[
+          ]]>
+          <Property JSONName="eventId" Name="eventId" ShowJSONMapping="true" eid="959C0AC42934A8099200495"/>
+          <Property JSONName="companyId" Name="companyId" ShowJSONMapping="true" eid="959C0AC42934A8099200496"/>
+          <Property JSONName="application" Name="application" ShowJSONMapping="true" eid="959C0AC42934A8099200497"/>
+          <Property JSONName="creationTime" Name="creationTime" ShowJSONMapping="true" eid="959C0AC42934A8099200498"/>
+          <Property JSONName="today" Name="today" ShowJSONMapping="true" eid="959C0AC42934A8099200499"/>
+          <Property JSONName="operator" Name="operator" ShowJSONMapping="true" eid="959C0AC42934A8099200500"/>
+          <Property JSONName="transactionStage" Name="transactionStage" ShowJSONMapping="true" eid="959C0AC42934A8099200501"/>
+        </PropertyGroup>
+      </PropertyGroup>
+      <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" Name="ErrorHandling" eid="959C0AC42934A8099200502">
+        <Property Name="ErrorMessage" eid="959C0AC42934A8099200503"/>
+        <Property Name="ErrorCode" eid="959C0AC42934A8099200504"/>
+      </PropertyGroup>
+      <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" JSONCollectionKind="Object" JSONName="__array" Name="PA-Connection" ShowJSONMapping="true" eid="959C0AC42934A8099200505">
+        <Property JSONName="schemaLocation" Name="schemaLocation" ShowJSONMapping="true" eid="959C0AC42934A8099200506"/>
+        <Property JSONName="eventRequestKeys" Name="eventRequestKeys" ShowJSONMapping="true" eid="959C0AC42934A8099200507"/>
+        <Property JSONName="eventtype" Name="eventtype" ShowJSONMapping="true" eid="959C0AC42934A8099200508"/>
+        <Property JSONName="obcpRedirectUrl" Name="obcpRedirectUrl" ShowJSONMapping="true" eid="959C0AC42934A8099200509"/>
+        <Property JSONName="expiryperiod" Name="expiryperiod" ShowJSONMapping="true" Type="Number" eid="959C0AC42934A8099200510"/>
+        <PropertyGroup JSONCollectionKind="Object" JSONName="eventCommon" Name="eventCommon" ShowJSONMapping="true" eid="959C0AC42934A8099200511"><![CDATA[
+          ]]>
+          <Property JSONName="eventId" Name="eventId" ShowJSONMapping="true" eid="959C0AC42934A8099200512"/>
+          <Property JSONName="companyId" Name="companyId" ShowJSONMapping="true" eid="959C0AC42934A8099200513"/>
+          <Property JSONName="application" Name="application" ShowJSONMapping="true" eid="959C0AC42934A8099200514"/>
+          <Property JSONName="creationTime" Name="creationTime" ShowJSONMapping="true" eid="959C0AC42934A8099200515"/>
+          <Property JSONName="today" Name="today" ShowJSONMapping="true" eid="959C0AC42934A8099200516"/>
+          <Property JSONName="operator" Name="operator" ShowJSONMapping="true" eid="959C0AC42934A8099200517"/>
+          <Property JSONName="transactionStage" Name="transactionStage" ShowJSONMapping="true" eid="959C0AC42934A8099200518"/>
+        </PropertyGroup>
+      </PropertyGroup>
+      <PropertyGroup LinkToStructure="N" Name="PaymentOrder" eid="11CA42EB89323A0A944447">
+        <Property BaseType="com.acquire.intelligentforms.entities.Property" JSONName="internalStatus" Name="internalStatus" ShowJSONMapping="true" eid="11CA42EB89323A0A944706"/>
+        <Property BaseType="com.acquire.intelligentforms.entities.Property" JSONName="schemaLocation" Name="schemaLocation" ShowJSONMapping="true" eid="11CA42EB89323A0A944708"/>
+        <Property BaseType="com.acquire.intelligentforms.entities.Property" JSONName="eventRequestKeys" Name="eventRequestKeys" ShowJSONMapping="true" eid="11CA42EB89323A0A944710"/>
+        <Property BaseType="com.acquire.intelligentforms.entities.Property" JSONName="expiryPeriod" Name="expiryPeriod" ShowJSONMapping="true" Type="Number" eid="11CA42EB89323A0A944712"/>
+        <Property BaseType="com.acquire.intelligentforms.entities.Property" JSONName="eventtype" Name="eventtype" ShowJSONMapping="true" eid="11CA42EB89323A0A944714"/>
+        <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" JSONCollectionKind="Object" JSONName="contextNameGroup" Name="contextNameGroup" ShowJSONMapping="true" eid="11CA42EB89323A0A944727">
+          <Property JSONName="contextName" Name="contextName" ShowJSONMapping="true" eid="11CA42EB89323A0A944728"/>
+          <Property JSONName="index" Name="index" ShowJSONMapping="true" Type="Number" eid="11CA42EB89323A0A944729"/>
+          <PropertyGroup JSONCollectionKind="Object" JSONName="contextValueList" Name="contextValueList" ShowJSONMapping="true" eid="11CA42EB89323A0A944730">
+            <PropertyGroup JSONCollectionKind="Object" JSONName="contextValue" Name="contextValue" ShowJSONMapping="true" eid="11CA42EB89323A0A944731">
+              <Property Name="DataItem 8" ShowJSONMapping="true" eid="11CA42EB89323A0A944732"/>
+              <Property JSONName="index" Name="index" ShowJSONMapping="true" Type="Number" eid="11CA42EB89323A0A944733"/>
+            </PropertyGroup>
+          </PropertyGroup>
+        </PropertyGroup>
+        <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" JSONCollectionKind="Object" JSONName="eventCommon" Name="eventCommon" ShowJSONMapping="true" eid="11CA42EB89323A0A944742">
+          <Property JSONName="eventId" Name="eventId" ShowJSONMapping="true" eid="11CA42EB89323A0A944743"/>
+          <Property JSONName="companyId" Name="companyId" ShowJSONMapping="true" eid="11CA42EB89323A0A944744"/>
+          <Property JSONName="application" Name="application" ShowJSONMapping="true" eid="11CA42EB89323A0A944745"/>
+          <Property JSONName="creationTime" Name="creationTime" ShowJSONMapping="true" eid="11CA42EB89323A0A944746"/>
+          <Property JSONName="today" Name="today" ShowJSONMapping="true" eid="11CA42EB89323A0A944747"/>
+          <Property JSONName="operator" Name="operator" ShowJSONMapping="true" eid="11CA42EB89323A0A944748"/>
+          <Property JSONName="transactionStage" Name="transactionStage" ShowJSONMapping="true" eid="11CA42EB89323A0A944749"/>
+        </PropertyGroup>
+        <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" JSONCollectionKind="Object" JSONName="internalOrderDetailsList" Name="internalOrderDetailsList" ShowJSONMapping="true" eid="11CA42EB89323A0A944754">
+          <PropertyGroup JSONCollectionKind="Object" JSONName="internalOrderDetails" Name="internalOrderDetails" ShowJSONMapping="true" eid="11CA42EB89323A0A944755">
+            <Property Name="DataItem 17" ShowJSONMapping="true" eid="11CA42EB89323A0A944756"/>
+            <Property JSONName="index" Name="index" ShowJSONMapping="true" Type="Number" eid="11CA42EB89323A0A944757"/>
+          </PropertyGroup>
+        </PropertyGroup>
+        <PropertyGroup JSONCollectionKind="Object" JSONName="Infinity" Name="Infinity" ShowJSONMapping="true" eid="C1567F3EA3061ACF606408">
+          <Property JSONName="xmlns:tns" Name="xmlns:tns" ShowJSONMapping="true" eid="C1567F3EA3061ACF606409"/>
+          <Property JSONName="xmlns:ns0" Name="xmlns:ns0" ShowJSONMapping="true" eid="C1567F3EA3061ACF606410"/>
+          <Property JSONName="eventRequestKeys" Name="eventRequestKeys" ShowJSONMapping="true" eid="C1567F3EA3061ACF606411"/>
+          <Property JSONName="xsi:schemaLocation" Name="xsi:schemaLocation" ShowJSONMapping="true" eid="C1567F3EA3061ACF606412"/>
+          <Property JSONName="expiryPeriod" Name="expiryPeriod" ShowJSONMapping="true" Type="Number" eid="C1567F3EA3061ACF606413"/>
+          <Property JSONName="xmlns:xsi" Name="xmlns:xsi" ShowJSONMapping="true" eid="C1567F3EA3061ACF606414"/>
+          <Property JSONName="eventtype" Name="eventtype" ShowJSONMapping="true" eid="C1567F3EA3061ACF606415"/>
+          <Property JSONName="internalStatus" Name="internalStatus" ShowJSONMapping="true" eid="C1567F3EA3061ACF1025948"/>
+          <PropertyGroup FixedSize="N" JSONCollectionKind="ObjectArray" JSONName="contextNameGroup" MaxInstances="0" Name="contextNameGroup" ShowJSONMapping="true" eid="C1567F3EA3061ACF606416">
+            <Property JSONName="contextName" Name="contextName" ShowJSONMapping="true" eid="C1567F3EA3061ACF606417"/>
+            <Property JSONName="index" Name="index" ShowJSONMapping="true" Type="Number" eid="C1567F3EA3061ACF606418"/>
+            <PropertyGroup JSONCollectionKind="Object" JSONName="contextValueList" Name="contextValueList" ShowJSONMapping="true" eid="C1567F3EA3061ACF606419">
+              <PropertyGroup JSONCollectionKind="Object" JSONName="contextValue" Name="contextValue" ShowJSONMapping="true" eid="C1567F3EA3061ACF606420">
+                <Property JSONName="index" Name="index" ShowJSONMapping="true" Type="Number" eid="C1567F3EA3061ACF606421"/>
+                <Property JSONName="content" Name="content" ShowJSONMapping="true" eid="C1567F3EA3061ACF606422"/>
+              </PropertyGroup>
+            </PropertyGroup>
+          </PropertyGroup>
+          <PropertyGroup JSONCollectionKind="Object" JSONName="eventCommon" Name="eventCommon" ShowJSONMapping="true" eid="C1567F3EA3061ACF606423">
+            <Property JSONName="eventId" Name="eventId" ShowJSONMapping="true" eid="C1567F3EA3061ACF606424"/>
+            <Property JSONName="companyId" Name="companyId" ShowJSONMapping="true" eid="C1567F3EA3061ACF606425"/>
+            <Property JSONName="application" Name="application" ShowJSONMapping="true" eid="C1567F3EA3061ACF606426"/>
+            <Property JSONName="creationTime" Name="creationTime" ShowJSONMapping="true" eid="C1567F3EA3061ACF606427"/>
+            <Property JSONName="today" Name="today" ShowJSONMapping="true" eid="C1567F3EA3061ACF606428"/>
+            <Property JSONName="operator" Name="operator" ShowJSONMapping="true" eid="C1567F3EA3061ACF606429"/>
+            <Property JSONName="transactionStage" Name="transactionStage" ShowJSONMapping="true" eid="C1567F3EA3061ACF606430"/>
+          </PropertyGroup>
+          <PropertyGroup JSONCollectionKind="Object" JSONName="internalOrderDetailsList" Name="internalOrderDetailsList" ShowJSONMapping="true" eid="C1567F3EA3061ACF1025949">
+            <PropertyGroup JSONCollectionKind="Object" JSONName="internalOrderDetails" Name="internalOrderDetails" ShowJSONMapping="true" eid="C1567F3EA3061ACF1025950">
+              <Property JSONName="index" Name="index" ShowJSONMapping="true" Type="Number" eid="C1567F3EA3061ACF1025951"/>
+              <Property JSONName="content" Name="content" ShowJSONMapping="true" eid="C1567F3EA3061ACF1025952"/>
+            </PropertyGroup>
+          </PropertyGroup>
+        </PropertyGroup>
+      </PropertyGroup>
+      <PropertyGroup LinkToStructure="N" Name="PaymentsFlow" eid="11CA42EB89323A0A946131">
+        <Property Name="redirectURL" eid="11CA42EB89323A0A946182"/>
+        <PropertyGroup LinkToStructure="N" Name="Errors" eid="11CA42EB89323A0A946133">
+          <Property Name="Message" eid="11CA42EB89323A0A946156"/>
+        </PropertyGroup>
+      </PropertyGroup>
+    </PropertyGroup>
+  </Dictionary>
+  <DataMapping Name="Integration Root" eid="959C0AC42934A8099197635"><![CDATA[
+    ]]>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.DebugLogDataSource" FileName="logs/Debug.log" FileRotation="New log file at file size limit" Name="Connect DebugLog" NewPerSize="512" eid="959C0AC42934A8099197788"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SyserrLogDataSource" FileName="logs/Syserr.log" FileRotation="New log file each session" Name="Connect SyserrLog" NewPerSize="512" eid="959C0AC42934A8099197789"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SysoutLogDataSource" FileName="logs/Sysout.log" FileRotation="New log file each session" Name="Connect SysoutLog" NewPerSize="512" eid="959C0AC42934A8099197790"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SecurityLogDataSource" FileName="logs/Security.log" FileRotation="New log file at file size limit" Name="Connect SecurityLog" NewPerSize="512" eid="959C0AC42934A8099197791"/>
+    <DataSource BaseType="com.acquire.intelligentforms.entities.json.JSONDataSource" ClassType="com.acquire.intelligentforms.entities.json.JSONDataSource" ConnectionAttempts="5" ConnectionTimeout="1000" EndPointURL="https://www.saltedge.com/api/v4/" Engine="JSON Engine" HTTPHeaderNames="Accept,App-id,Secret,Content-Type" HTTPHeaderValues="application/json,3mwjXv7QnqZZ4VN1E1Wa-j0pKFlDZa8lS6k8amYgvaU,TOZSE6X7kC1QtvTSFb13VY4EJFeCMyz8aW4R73Oa6Q4,application/json" Name="SaltEdge" SecurityType="No Security" SocketTimeout="1000" UseSecurityCertificate="N" eid="959C0AC42934A8099200827"/>
+  </DataMapping>
+  <Rules Name="Rules Root" eid="959C0AC42934A8099197633"><![CDATA[
+    ]]>
+    <Rule Name="Container for generating JWT Token" RuleClassName="com.acquire.intelligentforms.rules.ContainerRule" RuleDisabled="N" eid="959C0AC42934A8099199628">
+      <Rule Name="Container - Create the JWT" RuleClassName="com.acquire.intelligentforms.rules.ContainerRule" RuleDisabled="N" RuleType="True" eid="959C0AC42934A8099200547">
+        <Rule BreakPointEnabled="Y" FromGlobalVariable="JWT_TOKEN_ISSUER" FromType="Global Variable" FromValue="UXP-TCxB_Product" Name="Set Value issuer" PropertyName="TokenIssuer" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200548"/>
+        <Rule FromGlobalVariable="JWT_AUDIENCE_VALUE" FromType="Global Variable" FromValue="Callback Token for TCxB" Name="Set Value Audience" PropertyName="audienceValue" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200549"/>
+        <Rule FromGlobalVariable="JWT_SUBJECT_VALUE" FromType="Global Variable" FromValue="IRIS_CallBackToken" Name="Set Value Subject" PropertyName="subjectValue" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200550"/>
+        <Rule FromGlobalVariable="JWT_EXPIRY_TIME" FromType="Global Variable" FromValue="3" Name="Set Value - Expiry time" PropertyName="expiryTime" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200551"/>
+        <Rule FromValue="RSA" Name="Set Value for key algorithm" PropertyName="keyAlgorithm" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="42F7708982FC1A8D91382"/>
+        <Rule Name="UUID Generator" OutputDataItem="uniqueId" RuleClassName="com.edgeipk.custom.rules.UUIDGeneratorRule" RuleDisabled="N" RuleType="True" eid="42F7708982FC1A8D91497"/>
+        <Rule FromValue="uniqueId=$$uniqueId$|ReceiverClaimName=EventEngine" Name="Set Value claim details" PropertyName="claimDetails" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200552"/>
+        <Rule FromValue="RS256" Name="Set Value header algorithm value" PropertyName="headerAlgorithmValue" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200553"/>
+        <Rule AudienceValue="$$audienceValue$" ClaimDetails="claimDetails" DoCreateSignedToken="Y" DoCustomCertificateSignature="N" ErrorHandlingType="Pass Up" ExpiryTime="$$expiryTime$" HeaderAlgorithmValue="headerAlgorithmValue" IssuerValue="$$TokenIssuer$" JsonWebToken="JwtValue" KeyAlgorithmValue="$$keyAlgorithm$" Name="Generate JSON Web Token - iris event engine" RuleClassName="com.temenos.connect.custom.rules.GenerateJsonWebToken" RuleClassType="Custom" RuleDisabled="N" RuleType="True" SubjectValue="$$subjectValue$" eid="959C0AC42934A8099200554"/>
+        <Rule Expression="$$WorkingElements[1].Action$ == 'TokenGenPayments'" Name="Evaluation to check for payments flow" RuleClassName="com.acquire.intelligentforms.rules.EvaluateRule" RuleDisabled="N" RuleType="True" eid="53FBBFA7AC403EFA512074">
+          <Rule FromValue="uniqueId=$$uniqueId$|ReceiverClaimName=SaltEdge|$$!JWT_RES_TEMPLATE_CLAIM_NAME$=successPayments.html" Name="Set Value claim details - saltedge - Payments" PropertyName="claimDetails" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="53FBBFA7AC403EFA512079"/>
+          <Rule FromValue="uniqueId=$$uniqueId$|ReceiverClaimName=SaltEdge|$$!JWT_RES_TEMPLATE_CLAIM_NAME$=successAccAgg.html" Name="Set Value claim details - saltedge-AccAgg" PropertyName="claimDetails" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="False" Trim="N" eid="42F7708982FC1A8D91442"/>
+        </Rule>
+        <Rule AudienceValue="$$audienceValue$" ClaimDetails="claimDetails" DoCreateSignedToken="Y" DoCustomCertificateSignature="N" ErrorHandlingType="Pass Up" ExpiryTime="$$expiryTime$" HeaderAlgorithmValue="headerAlgorithmValue" IssuerValue="$$TokenIssuer$" JsonWebToken="JWTValueSaltEdge" KeyAlgorithmValue="$$keyAlgorithm$" Name="Generate JSON Web Token - For salt edge" RuleClassName="com.temenos.connect.custom.rules.GenerateJsonWebToken" RuleClassType="Custom" RuleDisabled="N" RuleType="True" SubjectValue="$$subjectValue$" eid="42F7708982FC1A8D91431"/>
+        <Rule FromPropertyName="JwtValue" FromType="Data Item" FromValue="$$SYSTIMENANOS$" Name="Set Value - uniqueKey" PropertyName="uniqueKey" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200557"/>
+      </Rule>
+      <Rule Name="Container - Form the calback URLs" RuleClassName="com.acquire.intelligentforms.rules.ContainerRule" RuleDisabled="N" RuleType="True" eid="959C0AC42934A8099200558">
+        <Rule FromValue="$$!UXP_CALLBACK_URL$$$CONTEXTPATH$/ClientAppServlet?uniqueJwt=$$JWTValueSaltEdge$" Name="Set Value - call back URL" PropertyName="saltEdge-callback_URL" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200559"/>
+        <Rule FromValue="$$!UXP_IRIS-CALLBACK_URL$$$CONTEXTPATH$/ClientAppServlet?uniqueJwt=$$JwtValue$" Name="Set Value - call back URL - reteriving the URL" PropertyName="CallBackUrl" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200560"/>
+      </Rule>
+      <Rule BreakPointEnabled="Y" Name="Container - Process the container of saltedge API" RuleClassName="com.acquire.intelligentforms.rules.ContainerRule" RuleDisabled="Y" RuleType="True" eid="959C0AC42934A8099200561">
+        <Rule Name="Container - input parameters" RuleClassName="com.acquire.intelligentforms.rules.ContainerRule" RuleDisabled="N" RuleType="True" eid="959C0AC42934A8099200562"><![CDATA[
+          ]]>
+          <Rule FromValue="XF" Name="Set Value - country code" PropertyName="saltedge[1].data[1].country_code" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200563"/>
+          <Rule BreakPoint="X" FromValue="fakebank_oauth_xf" Name="Set Value - provider code" PropertyName="saltedge[1].data[1].provider_code" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200564"/>
+          <Rule FromValue="3079402" Name="Set Value - customer id" PropertyName="saltedge[1].data[1].customer_id" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200565"/>
+          <Rule FromValue="accounts" Name="Set Value - fetch codes" PropertyName="saltedge[1].data[1].fetch_scopes[1].value" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200566"/>
+          <Rule FromValue="transactions" Name="Set Value - fetch codes - 2" PropertyName="saltedge[1].data[1].fetch_scopes[2].value" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200567"/>
+          <Rule FromValue="$$saltEdge-callback_URL$" Name="Set Value - return URL" PropertyName="saltedge[1].data[1].return_to" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200568"/>
+          <Rule FromValue="arunjoshi@temenos.com" Name="Set Value - customer fields" PropertyName="saltedge[1].data[1].custom_fields[1].emails[1].value" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200569"/>
+          <Rule FromValue="Arunjoshi" Name="Set Value - customer fields - name" PropertyName="saltedge[1].data[1].custom_fields[1].names[1].value" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200570"/>
+        </Rule>
+        <Rule BreakPoint="X" ErrorHandlingType="Goto Error Phase" HTTPMethod="POST" Input="saltedge[1]" Name="JSON Integration" Output="saltedge-Response[1]" ResourcePath="/oauth_providers/create" RuleClassName="com.acquire.intelligentforms.rules.JSONIntegrationRule" RuleDisabled="N" RuleType="True" SourceName="SaltEdge" eid="959C0AC42934A8099200571"/>
+        <Rule FromPropertyName="saltedge-Response[1].data[1].token" FromType="Data Item" FromVariableName="$$saltedge-Response[1].data[1].token$" Name="Set Value - redirect URL into message content" PropertyName="createMessages[1].Request[1].payload[1].body[1].Subject" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200572"/>
+        <Rule FromPropertyName="saltedge-Response[1].data[1].token" FromValue="test" FromVariableName="$$saltedge-Response[1].data[1].token$" Name="Set Value - redirect URL into message content - Copy" PropertyName="createMessages[1].Request[1].payload[1].body[1].Subject" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="Y" RuleType="True" Trim="N" eid="959C0AC42934A8099200573"/>
+        <Rule FromPropertyName="saltedge-Response[1].data[1].redirect_url" FromType="Data Item" FromVariableName="$$saltedge-Response[1].data[1].token$" Name="Set Value - redirect URL into Redirect URL" PropertyName="openBanking[1].openBankingCustomersconnectionsByConnectionId[1].createOpenBankingConnection[1].Request[1].Body[1].payload[1].body[1].obcpRedirectUrl" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="959C0AC42934A8099200574"/>
+        <EVANote Name="959C0AC42934A809 EVANote 1" NoteType="959C0AC42934A8099197785" NoteTypeName="ToDo" eid="959C0AC42934A8099200577"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    <p style="margin-bottom:0px;margin-top:0px;">
+      to remove as this has to be done by events
+    </p>
+
+  </body>
+
+</html>
+
+]]></EVANote>
+      </Rule>
+    </Rule>
+    <Rule Name="Container to retrieve redirection URL" RuleClassName="com.acquire.intelligentforms.rules.ContainerRule" RuleDisabled="N" eid="959C0AC42934A8099200626">
+      <Rule Expression="$$WorkingElements[1].Action$ == 'Payments'" Name="Evaluation - Check for payments" RuleClassName="com.acquire.intelligentforms.rules.EvaluateRule" RuleDisabled="N" RuleType="True" eid="11CA42EB89323A0A944031">
+        <Rule Name="Read callback response from Servletcontext - payments" ResponseFieldName="obcpRedirectUrl" RetryCount="$$!CALLBACK_RETRY$" RuleClassName="com.temenos.connect.custom.rules.ReadCallBackResponse" RuleClassType="Custom" RuleDisabled="N" RuleType="True" SleepTime="$$!WAIT_TIME$" eid="11CA42EB89323A0A944385" isEntireResponseNeeded="Y" responseValue="responseDetails" uniqueKey="uniqueKey"/>
+        <Rule Expression="$$responseDetails$ != ''" Name="Evaluation - check the response received from servlet context" RuleClassName="com.acquire.intelligentforms.rules.EvaluateRule" RuleDisabled="N" RuleType="True" eid="959C0AC42934A8099200632">
+          <Rule ConversionEngine="JSON Engine" Name="JSON Conversion" OperationType="JSON Object to Data Group" PropertyGroupName="PaymentOrder[1].Infinity[1]" RuleClassName="com.acquire.intelligentforms.rules.JSONConversionRule" RuleDisabled="N" RuleType="True" TextPropertyName="responseDetails" eid="959C0AC42934A8099200633"/>
+          <Rule Expression="$$PaymentOrder[1].Infinity[1].internalStatus$ == 'ERROR'" Name="Evalution rules - Error Check" RuleClassName="com.acquire.intelligentforms.rules.EvaluateRule" RuleDisabled="N" RuleType="True" eid="11CA42EB89323A0A944779">
+            <Rule FromValue="$$PaymentOrder[1].Infinity[1].internalOrderDetailsList[1].internalOrderDetails[1].content$" Name="Set Value - error message" PropertyName="PaymentsFlow[1].Errors[1].Message" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="11CA42EB89323A0A946210"/>
+            <Rule DataGroupName="PaymentOrder[1].Infinity[1].contextNameGroup[C]" EndInstance="$$PaymentOrder[1].Infinity[1].contextNameGroup[C].lastInstance()$" IgnoreChildRuleResults="N" Name="Repeat - Context value" OutputWarning="N" RepeatType="DATA_GROUP" RuleClassName="com.acquire.intelligentforms.rules.RepeatRule" RuleDisabled="N" RuleType="False" SaveCounter="N" StopRepeat="N" eid="0FA6DA55305D8148705328">
+              <Rule Expression="$$PaymentOrder[1].Infinity[1].contextNameGroup[C].contextName$ == 'obcpReturnUrl'" Name="Evaluation - if context value is obcpreturnurl" RuleClassName="com.acquire.intelligentforms.rules.EvaluateRule" RuleDisabled="N" RuleType="True" eid="0FA6DA55305D8148705332">
+                <Rule FromPropertyName="PaymentOrder[1].Infinity[1].contextNameGroup[C].contextValueList[1].contextValue[1].content" FromType="Data Item" Name="Set Value - redirect URL" PropertyName="ReceivedSaltEdgeURL" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" eid="11CA42EB89323A0A946236"/>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+        <Rule Name="Read callback response from Servletcontext" ResponseFieldName="obcpRedirectUrl" RetryCount="$$!CALLBACK_RETRY$" RuleClassName="com.temenos.connect.custom.rules.ReadCallBackResponse" RuleClassType="Custom" RuleDisabled="N" RuleType="False" SleepTime="$$!WAIT_TIME$" eid="959C0AC42934A8099200631" responseValue="ReceivedSaltEdgeURL" uniqueKey="uniqueKey"/>
+      </Rule>
+    </Rule>
+  </Rules>
+  <Products Name="Processes Root" eid="959C0AC42934A8099197637"><![CDATA[
+    ]]>
+    <Product Callback0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_0_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" Callback0_0_ExportedProperty="uniqueKey" Callback0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |uniqueKey" Callback0_0_LinkedEntityBaseType="com.acquire.intelligentforms.entities.Property" Callback0_0_LinkedEntityName="uniqueKey" Callback0_0_LinkedEntityShowJSONMapping="N" Callback0_0_OriginalEntityEID="959C0AC42934A8099199648" Callback0_0_OriginalEntityName="uniqueKey" Callback0_0_PropertyKey="uniqueKey" Callback0_0_PubIn="Y" Callback0_0_PubOut="Y" Callback0_1_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_1_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" Callback0_1_ExportedProperty="saltEdge-callback_URL" Callback0_1_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |saltEdge-callback_URL" Callback0_1_LinkedEntityBaseType="com.acquire.intelligentforms.entities.Property" Callback0_1_LinkedEntityName="saltEdge-callback_URL" Callback0_1_OriginalEntityEID="959C0AC42934A8099199649" Callback0_1_OriginalEntityName="saltEdge-callback_URL" Callback0_1_PropertyKey="saltEdge-callback_URL" Callback0_1_PubOut="Y" Callback0_2_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_2_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" Callback0_2_ExportedProperty="CallBackUrl" Callback0_2_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |CallBackUrl" Callback0_2_LinkedEntityBaseType="com.acquire.intelligentforms.entities.Property" Callback0_2_LinkedEntityName="CallBackUrl" Callback0_2_LinkedEntityShowJSONMapping="N" Callback0_2_OriginalEntityEID="959C0AC42934A8099199650" Callback0_2_OriginalEntityName="CallBackUrl" Callback0_2_PropertyKey="CallBackUrl" Callback0_2_PubOut="Y" Callback0_3_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_3_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" Callback0_3_ExportedProperty="ReceivedSaltEdgeURL" Callback0_3_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |ReceivedSaltEdgeURL" Callback0_3_LinkedEntityBaseType="com.acquire.intelligentforms.entities.Property" Callback0_3_LinkedEntityName="ReceivedSaltEdgeURL" Callback0_3_OriginalEntityEID="959C0AC42934A8099199652" Callback0_3_OriginalEntityName="ReceivedSaltEdgeURL" Callback0_3_PropertyKey="ReceivedSaltEdgeURL" Callback0_3_PubOut="Y" Callback0_4_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_4_0_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" Callback0_4_0_ExportedProperty="WorkingElements[1].Action" Callback0_4_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |WorkingElements[1].Action" Callback0_4_0_LinkedEntityName="Action" Callback0_4_0_OriginalEntityEID="959C0AC42934A8099198246" Callback0_4_0_OriginalEntityName="Action" Callback0_4_0_PropertyKey="WorkingElements[C].Action" Callback0_4_0_PubIn="Y" Callback0_4_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_4_ExportedPropertyGroup="WorkingElements[1]" Callback0_4_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |WorkingElements" Callback0_4_LinkedEntityLinkToStructure="N" Callback0_4_LinkedEntityName="WorkingElements" Callback0_4_NumChildren="1" Callback0_4_OriginalEntityEID="959C0AC42934A8099198244" Callback0_4_OriginalEntityName="WorkingElements" Callback0_4_PropertyKey="WorkingElements" Callback0_4_PubIn="Y" Callback0_5_0_0_0_0_0_0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_5_0_0_0_0_0_0_0_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" Callback0_5_0_0_0_0_0_0_0_ExportedProperty="openBanking[1].openBankingCustomersconnectionsByConnectionId[1].createOpenBankingConnection[1].Request[1].Body[1].payload[1].body[1].obcpRedirectUrl" Callback0_5_0_0_0_0_0_0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |openBanking[1].openBankingCustomersconnectionsByConnectionId[1].createOpenBankingConnection[1].Request[1].Body[1].payload[1].body[1].obcpRedirectUrl" Callback0_5_0_0_0_0_0_0_0_LinkedEntityJSONName="obcpRedirectUrl" Callback0_5_0_0_0_0_0_0_0_LinkedEntityName="obcpRedirectUrl" Callback0_5_0_0_0_0_0_0_0_LinkedEntityShowJSONMapping="Y" Callback0_5_0_0_0_0_0_0_0_OriginalEntityEID="959C0AC42934A8099200355" Callback0_5_0_0_0_0_0_0_0_OriginalEntityName="obcpRedirectUrl" Callback0_5_0_0_0_0_0_0_0_PropertyKey="openBanking[C].openBankingCustomersconnectionsByConnectionId[C].createOpenBankingConnection[C].Request[C].Body[C].payload[C].body[C].obcpRedirectUrl" Callback0_5_0_0_0_0_0_0_0_PubOut="Y" Callback0_5_0_0_0_0_0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_5_0_0_0_0_0_0_ExportedPropertyGroup="openBanking[1].openBankingCustomersconnectionsByConnectionId[1].createOpenBankingConnection[1].Request[1].Body[1].payload[1].body[1]" Callback0_5_0_0_0_0_0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |openBanking[1].openBankingCustomersconnectionsByConnectionId[1].createOpenBankingConnection[1].Request[1].Body[1].payload[1].body" Callback0_5_0_0_0_0_0_0_LinkedEntityJSONCollectionKind="Object" Callback0_5_0_0_0_0_0_0_LinkedEntityJSONName="body" Callback0_5_0_0_0_0_0_0_LinkedEntityName="body" Callback0_5_0_0_0_0_0_0_LinkedEntityShowJSONMapping="Y" Callback0_5_0_0_0_0_0_0_NumChildren="1" Callback0_5_0_0_0_0_0_0_OriginalEntityEID="959C0AC42934A8099200340" Callback0_5_0_0_0_0_0_0_OriginalEntityName="body" Callback0_5_0_0_0_0_0_0_PropertyKey="openBanking[C].openBankingCustomersconnectionsByConnectionId[C].createOpenBankingConnection[C].Request[C].Body[C].payload[C].body" Callback0_5_0_0_0_0_0_0_PubOut="Y" Callback0_5_0_0_0_0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_5_0_0_0_0_0_ExportedPropertyGroup="openBanking[1].openBankingCustomersconnectionsByConnectionId[1].createOpenBankingConnection[1].Request[1].Body[1].payload[1]" Callback0_5_0_0_0_0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |openBanking[1].openBankingCustomersconnectionsByConnectionId[1].createOpenBankingConnection[1].Request[1].Body[1].payload" Callback0_5_0_0_0_0_0_LinkedEntityJSONCollectionKind="Object" Callback0_5_0_0_0_0_0_LinkedEntityJSONName="payload" Callback0_5_0_0_0_0_0_LinkedEntityName="payload" Callback0_5_0_0_0_0_0_LinkedEntityShowJSONMapping="Y" Callback0_5_0_0_0_0_0_NumChildren="1" Callback0_5_0_0_0_0_0_OriginalEntityEID="959C0AC42934A8099200331" Callback0_5_0_0_0_0_0_OriginalEntityName="payload" Callback0_5_0_0_0_0_0_PropertyKey="openBanking[C].openBankingCustomersconnectionsByConnectionId[C].createOpenBankingConnection[C].Request[C].Body[C].payload" Callback0_5_0_0_0_0_0_PubOut="Y" Callback0_5_0_0_0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_5_0_0_0_0_ExportedPropertyGroup="openBanking[1].openBankingCustomersconnectionsByConnectionId[1].createOpenBankingConnection[1].Request[1].Body[1]" Callback0_5_0_0_0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |openBanking[1].openBankingCustomersconnectionsByConnectionId[1].createOpenBankingConnection[1].Request[1].Body" Callback0_5_0_0_0_0_LinkedEntityName="Body" Callback0_5_0_0_0_0_NumChildren="1" Callback0_5_0_0_0_0_OriginalEntityEID="959C0AC42934A8099200330" Callback0_5_0_0_0_0_OriginalEntityName="Body" Callback0_5_0_0_0_0_PropertyKey="openBanking[C].openBankingCustomersconnectionsByConnectionId[C].createOpenBankingConnection[C].Request[C].Body" Callback0_5_0_0_0_0_PubOut="Y" Callback0_5_0_0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_5_0_0_0_ExportedPropertyGroup="openBanking[1].openBankingCustomersconnectionsByConnectionId[1].createOpenBankingConnection[1].Request[1]" Callback0_5_0_0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |openBanking[1].openBankingCustomersconnectionsByConnectionId[1].createOpenBankingConnection[1].Request" Callback0_5_0_0_0_LinkedEntityName="Request" Callback0_5_0_0_0_NumChildren="1" Callback0_5_0_0_0_OriginalEntityEID="959C0AC42934A8099200328" Callback0_5_0_0_0_OriginalEntityName="Request" Callback0_5_0_0_0_PropertyKey="openBanking[C].openBankingCustomersconnectionsByConnectionId[C].createOpenBankingConnection[C].Request" Callback0_5_0_0_0_PubOut="Y" Callback0_5_0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_5_0_0_ExportedPropertyGroup="openBanking[1].openBankingCustomersconnectionsByConnectionId[1].createOpenBankingConnection[1]" Callback0_5_0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |openBanking[1].openBankingCustomersconnectionsByConnectionId[1].createOpenBankingConnection" Callback0_5_0_0_LinkedEntityName="createOpenBankingConnection" Callback0_5_0_0_NumChildren="1" Callback0_5_0_0_OriginalEntityEID="959C0AC42934A8099200327" Callback0_5_0_0_OriginalEntityName="createOpenBankingConnection" Callback0_5_0_0_PropertyKey="openBanking[C].openBankingCustomersconnectionsByConnectionId[C].createOpenBankingConnection" Callback0_5_0_0_PubOut="Y" Callback0_5_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_5_0_ExportedPropertyGroup="openBanking[1].openBankingCustomersconnectionsByConnectionId[1]" Callback0_5_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |openBanking[1].openBankingCustomersconnectionsByConnectionId" Callback0_5_0_LinkedEntityName="openBankingCustomersconnectionsByConnectionId" Callback0_5_0_NumChildren="1" Callback0_5_0_OriginalEntityEID="959C0AC42934A8099200169" Callback0_5_0_OriginalEntityName="openBankingCustomersconnectionsByConnectionId" Callback0_5_0_PropertyKey="openBanking[C].openBankingCustomersconnectionsByConnectionId" Callback0_5_0_PubOut="Y" Callback0_5_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_5_ExportedPropertyGroup="openBanking[1]" Callback0_5_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |openBanking" Callback0_5_LinkedEntityBaseType="com.acquire.intelligentforms.entities.PropertyGroup" Callback0_5_LinkedEntityName="openBanking" Callback0_5_NumChildren="1" Callback0_5_OriginalEntityEID="959C0AC42934A8099200168" Callback0_5_OriginalEntityName="openBanking" Callback0_5_PropertyKey="openBanking" Callback0_5_PubOut="Y" Callback0_6_0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_6_0_0_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" Callback0_6_0_0_ExportedProperty="PaymentsFlow[1].Errors[1].Message" Callback0_6_0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |PaymentsFlow[1].Errors[1].Message" Callback0_6_0_0_LinkedEntityName="Message" Callback0_6_0_0_OriginalEntityEID="11CA42EB89323A0A946156" Callback0_6_0_0_OriginalEntityName="Message" Callback0_6_0_0_PropertyKey="PaymentsFlow[C].Errors[C].Message" Callback0_6_0_0_PubOut="True" Callback0_6_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_6_0_ExportedPropertyGroup="PaymentsFlow[1].Errors[1]" Callback0_6_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |PaymentsFlow[1].Errors" Callback0_6_0_LinkedEntityLinkToStructure="N" Callback0_6_0_LinkedEntityName="Errors" Callback0_6_0_NumChildren="1" Callback0_6_0_OriginalEntityEID="11CA42EB89323A0A946133" Callback0_6_0_OriginalEntityName="Errors" Callback0_6_0_PropertyKey="PaymentsFlow[C].Errors" Callback0_6_0_PubOut="True" Callback0_6_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_6_ExportedPropertyGroup="PaymentsFlow[1]" Callback0_6_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |PaymentsFlow" Callback0_6_LinkedEntityLinkToStructure="N" Callback0_6_LinkedEntityName="PaymentsFlow" Callback0_6_NumChildren="1" Callback0_6_OriginalEntityEID="11CA42EB89323A0A946131" Callback0_6_OriginalEntityName="PaymentsFlow" Callback0_6_PropertyKey="PaymentsFlow" Callback0_6_PubOut="True" Callback0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Callback0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.DictionaryRoot| |Data Store Root" Callback0_LinkedEntityName="Data Store Root" Callback0_NumChildren="7" Callback0_OriginalEntityEID="959C0AC42934A8099197631" Callback0_OriginalEntityName="Data Store Root" Callback0_PubIn="Y" Callback0_PubOut="Y" CallbackClassType="com.acquire.intelligentforms.entities.component.Component" CallbackComponentComment="" CallbackNumChildren="1" CallbackProjectName="CallBack" CallbackRulesOnly="Y" InitialPhase="Callback.Initialise" Name="Callback" PublishAsComponent="Y" RulesOnly="Y" eid="959C0AC42934A8099198197">
+      <Phase Name="Initialise" ProcessRulesOnly="Y" eid="959C0AC42934A8099198237"><![CDATA[
+        ]]>
+        <Rule Expression="$$WorkingElements[1].Action$ == 'TokenGen' OR $$WorkingElements[1].Action$ == 'TokenGenPayments'" Name="Evaluation for JWT token generation and TCIB call back url" RuleClassName="com.acquire.intelligentforms.rules.EvaluateRule" RuleDisabled="N" RuleType="PostPhase" eid="959C0AC42934A8099198253">
+          <Rule ClassType="com.acquire.intelligentforms.rules.ContainerRule" LinkReference="959C0AC42934A8099199628" Name="Link to Container for generating JWT Token" RuleType="True" eid="959C0AC42934A8099200674"/>
+          <Rule ClassType="com.acquire.intelligentforms.rules.ContainerRule" LinkReference="959C0AC42934A8099200626" Name="Link to Container to retrieve redirection URL" RuleType="False" eid="959C0AC42934A8099200687"/>
+        </Rule>
+      </Phase>
+    </Product>
+  </Products>
+  <PresentationTypes Name="Presentation Types Root" eid="959C0AC42934A8099197639"/>
+  <EVANotes Name="Notes Root" eid="959C0AC42934A8099197641"><![CDATA[
+    ]]>
+    <EVANoteDefinition Name="ToDo" NoteName="ToDo" StatusRequired="Y" eid="959C0AC42934A8099197785"/>
+    <EVANoteDefinition Name="Specification" NoteName="Specification" StatusRequired="N" eid="959C0AC42934A8099197786"/>
+    <EVANoteDefinition Name="Comment" NoteName="Comment" StatusRequired="N" eid="959C0AC42934A8099197787"/>
+  </EVANotes>
+  <LanguageMapDefinitionsRoot Name="Languages Root" eid="959C0AC42934A8099197643"/>
+  <CordovaPluginsRoot Name="CordovaPlugins Root" eid="959C0AC42934A8099197647"/>
+</Project>

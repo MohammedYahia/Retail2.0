@@ -1,0 +1,38 @@
+<script>
+if (typeof window.twttr ==="undefined") {
+window.twttr = (function (d, s, id) {
+  var t, js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id; js.src= "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+  return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+}(document, "script", "twitter-wjs"));}
+
+window.com                                      = window.com || {};
+window.com.temenos                              = window.com.temenos || {};
+window.com.temenos.widgets                      = window.com.temenos.widgets || {};
+window.com.temenos.widgets.social               = window.com.temenos.widgets.social || {};
+window.com.temenos.widgets.social.twitter       = window.com.temenos.widgets.social.twitter || {};
+
+window.com.temenos.widgets.social.twitter = (function() {
+    var tw_api = {};
+    var _refresh = false;
+
+    tw_api.setRefresh = function(state) {
+        _refresh = state;
+    }
+
+    tw_api.getRefresh = function() {
+        return  _refresh;
+    }
+
+    return tw_api;
+})();
+
+com.temenos.widgets.social.twitter.postProcessResponses = function() {
+    if ( com.temenos.widgets.social.twitter.getRefresh() ) {
+        twttr.widgets.load();
+        com.temenos.widgets.social.twitter.setRefresh(false);
+    }
+}
+</script>

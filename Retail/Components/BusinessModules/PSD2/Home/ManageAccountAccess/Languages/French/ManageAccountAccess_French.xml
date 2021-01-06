@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?><LanguageMap presentations="ManageAccountAccess" project="ManageAccountAccess" sourcelanguage="en-GB" targetlanguage="fr" updated="23/12/19 23:26" version="1">
+  <Comment/>
+  <ProcessEntities>
+    <Container class="com.acquire.intelligentforms.entities.Product" displayString="ManageAccountAccess" eid="893A5ECEFA37F60B1120" type="Process">
+      <Container class="com.acquire.intelligentforms.entities.Phase" displayString="Consents" eid="392C97CD37304900720291" type="Phase">
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="My Consent given to other applications" eid="392C97CD373049002269578" path="ManageAccountAccess.Consents.My Consent given to other applications" type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002269579:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="392C97CD373049002269578:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002269579:ManageAccountAccess" mappingType="OVERRIDE" original="My Consent given to other applications" specifiedBy="392C97CD373049002269578:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002269579:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="392C97CD373049002269578:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002269579:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="392C97CD373049002269578:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Control third party app's access to your banking information." eid="392C97CD373049002269582" path="ManageAccountAccess.Consents.Control third party app's access to your banking information." type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002269583:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="392C97CD373049002269582:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002269583:ManageAccountAccess" mappingType="OVERRIDE" original="Control third party app's access to your banking information." specifiedBy="392C97CD373049002269582:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002269583:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="392C97CD373049002269582:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002269583:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="392C97CD373049002269582:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormTable" displayString="Consents" eid="392C97CD373049002269639" path="ManageAccountAccess.Consents.Consents" type="Table">
+          <ProcessEntityAttr default="" name="MandMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="392C97CD373049002269640:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="392C97CD373049002269639:Table" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="NoRecordsMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="392C97CD373049002269640:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="392C97CD373049002269639:Table" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="TableSummary" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="392C97CD373049002269640:ManageAccountAccess" mappingType="OVERRIDE" original="Consents" specifiedBy="392C97CD373049002269639:Table" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntity class="com.acquire.intelligentforms.entities.Question" displayString="TppReference" eid="392C97CD373049002270040" path="ManageAccountAccess.Consents.Consents.TppReference" type="Question">
+            <ProcessEntityAttr default="" name="AnswerPostfix" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002270041:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="392C97CD373049002270040:Question" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="AnswerPrefix" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002270041:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="392C97CD373049002270040:Question" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002270041:ManageAccountAccess" mappingType="OVERRIDE" original="TppReference" specifiedBy="392C97CD373049002270040:Question" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002270041:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="392C97CD373049002270040:Question" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002270041:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="392C97CD373049002270040:Question" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="InvalidMaxLengthMessage" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002270041:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="392C97CD373049002270040:Question" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="InvalidMinLengthMessage" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002270041:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="392C97CD373049002270040:Question" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="MandMessage" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002270041:ManageAccountAccess" mappingType="OVERRIDE" original="Please enter the $$ITEM.DISPLAY_TEXT()$" specifiedBy="392C97CD373049002270041:Rich Presentation Question" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="QuestionListDefault" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002270041:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="392C97CD373049002270040:Question" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="ValidationMessage" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="392C97CD373049002270041:ManageAccountAccess" mappingType="OVERRIDE" original="Please enter a valid $$ITEM.DISPLAY_TEXT()$" specifiedBy="392C97CD373049002270041:Rich Presentation Question" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+          <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Expires on $$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].ValidUntil$ &lt;i style=&quot;color:#ff7f00&quot;&gt; ($$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].DaysLeft$ days left)&lt;/i&gt;" eid="E0AA6E775E7684BF593534" path="ManageAccountAccess.Consents.Consents.Expires on $$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].ValidUntil$ &lt;i style=&quot;color:#ff7f00&quot;&gt; ($$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].DaysLeft$ days left)&lt;/i&gt;" type="Heading">
+            <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="E0AA6E775E7684BF593535:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="E0AA6E775E7684BF593534:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="E0AA6E775E7684BF593535:ManageAccountAccess" mappingType="OVERRIDE" original="Expires on $$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].ValidUntil$ &lt;i style=&quot;color:#ff7f00&quot;&gt; ($$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].DaysLeft$ days left)&lt;/i&gt;" specifiedBy="E0AA6E775E7684BF593534:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="E0AA6E775E7684BF593535:ManageAccountAccess" mappingType="OVERRIDE" original="To protect your data, we put a time limit on how long the applications are accessing your data. You need to regularly check with your other application when to renew this." specifiedBy="E0AA6E775E7684BF593535:Rich Presentation Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="E0AA6E775E7684BF593535:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="E0AA6E775E7684BF593534:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+          <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Expired on $$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].ValidUntil$" eid="298D1CAA80F69094622250" path="ManageAccountAccess.Consents.Consents.Expired on $$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].ValidUntil$" type="Heading">
+            <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="298D1CAA80F69094622251:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094622250:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="298D1CAA80F69094622251:ManageAccountAccess" mappingType="OVERRIDE" original="Expired on $$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].ValidUntil$" specifiedBy="298D1CAA80F69094622250:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="298D1CAA80F69094622251:ManageAccountAccess" mappingType="OVERRIDE" original="To protect your data, we put a time limit on how long the applications are accessing your data. You need to regularly check with your other application when to renew this." specifiedBy="298D1CAA80F69094622251:Rich Presentation Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="298D1CAA80F69094622251:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094622250:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+          <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Expired on $$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].ValidUntil$" eid="298D1CAA80F69094622380" path="ManageAccountAccess.Consents.Consents.Expired on $$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].ValidUntil$" type="Heading">
+            <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="298D1CAA80F69094622381:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094622380:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="298D1CAA80F69094622381:ManageAccountAccess" mappingType="OVERRIDE" original="Expired on $$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].ValidUntil$" specifiedBy="298D1CAA80F69094622380:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="298D1CAA80F69094622381:ManageAccountAccess" mappingType="OVERRIDE" original="To protect your data, we put a time limit on how long the applications are accessing your data. You need to regularly check with your other application when to renew this." specifiedBy="298D1CAA80F69094622381:Rich Presentation Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="298D1CAA80F69094622381:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094622380:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+          <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Expires on $$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].ValidUntil$" eid="298D1CAA80F69094622396" path="ManageAccountAccess.Consents.Consents.Expires on $$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].ValidUntil$" type="Heading">
+            <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="298D1CAA80F69094622397:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094622396:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="298D1CAA80F69094622397:ManageAccountAccess" mappingType="OVERRIDE" original="Expires on $$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].ValidUntil$" specifiedBy="298D1CAA80F69094622396:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="298D1CAA80F69094622397:ManageAccountAccess" mappingType="OVERRIDE" original="To protect your data, we put a time limit on how long the applications are accessing your data. You need to regularly check with your other application when to renew this." specifiedBy="298D1CAA80F69094622397:Rich Presentation Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="298D1CAA80F69094622397:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094622396:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+          <ProcessEntity class="com.acquire.intelligentforms.entities.FormTable" displayString="Middle" eid="72F168C1A17008A0339431" path="ManageAccountAccess.Consents.Consents.Middle" type="Table">
+            <ProcessEntityAttr default="" name="MandMessage" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="72F168C1A17008A0339434:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0339431:Table" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="NoRecordsMessage" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="72F168C1A17008A0339434:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0339431:Table" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="SelectorLabel" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="72F168C1A17008A0339434:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0339431:Table" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="TableSummary" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="72F168C1A17008A0339434:ManageAccountAccess" mappingType="OVERRIDE" original="Middle" specifiedBy="72F168C1A17008A0339431:Table" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Icon" eid="72F168C1A17008A0340218" path="ManageAccountAccess.Consents.Consents.Middle.Icon" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="72F168C1A17008A0340219:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0340218:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="72F168C1A17008A0340219:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0340218:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="72F168C1A17008A0340219:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0340218:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="72F168C1A17008A0340219:ManageAccountAccess" mappingType="OVERRIDE" original="Icon" specifiedBy="72F168C1A17008A0340218:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="72F168C1A17008A0340219:ManageAccountAccess" mappingType="OVERRIDE" original="Icon" specifiedBy="72F168C1A17008A0340218:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.Question" displayString="ShortName" eid="72F168C1A17008A0340015" path="ManageAccountAccess.Consents.Consents.Middle.ShortName" type="Question">
+              <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="72F168C1A17008A0340016:ManageAccountAccess" mappingType="OVERRIDE" original="ShortName" specifiedBy="72F168C1A17008A0340015:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="72F168C1A17008A0340016:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0340015:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="72F168C1A17008A0340016:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0340015:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="MandMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="72F168C1A17008A0340016:ManageAccountAccess" mappingType="OVERRIDE" original="Please enter the $$ITEM.DISPLAY_TEXT()$" specifiedBy="72F168C1A17008A0340016:Rich Presentation Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="QuestionListDefault" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="72F168C1A17008A0340016:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0340015:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.Question" displayString="AccountId" eid="72F168C1A17008A0339441" path="ManageAccountAccess.Consents.Consents.Middle.AccountId" type="Question">
+              <ProcessEntityAttr default="" name="AnswerPostfix" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="72F168C1A17008A0339442:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0339441:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="AnswerPrefix" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="72F168C1A17008A0339442:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0339441:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="72F168C1A17008A0339442:ManageAccountAccess" mappingType="OVERRIDE" original="AccountId" specifiedBy="72F168C1A17008A0339441:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="72F168C1A17008A0339442:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0339441:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="72F168C1A17008A0339442:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0339441:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="InvalidMaxLengthMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="72F168C1A17008A0339442:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0339441:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="InvalidMinLengthMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="72F168C1A17008A0339442:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0339441:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="MandMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="72F168C1A17008A0339442:ManageAccountAccess" mappingType="OVERRIDE" original="Please enter the $$ITEM.DISPLAY_TEXT()$" specifiedBy="72F168C1A17008A0339442:Rich Presentation Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="QuestionListDefault" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="72F168C1A17008A0339442:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0339441:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ValidationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="72F168C1A17008A0339442:ManageAccountAccess" mappingType="OVERRIDE" original="Please enter a valid $$ITEM.DISPLAY_TEXT()$" specifiedBy="72F168C1A17008A0339442:Rich Presentation Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Expand" eid="72F168C1A17008A0340307" path="ManageAccountAccess.Consents.Consents.Middle.Expand" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="72F168C1A17008A0340308:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0340307:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="72F168C1A17008A0340308:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0340307:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="72F168C1A17008A0340308:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0340307:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="72F168C1A17008A0340308:ManageAccountAccess" mappingType="OVERRIDE" original="Expand" specifiedBy="72F168C1A17008A0340307:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="COLLAPSE" eid="72F168C1A17008A0340311" path="ManageAccountAccess.Consents.Consents.Middle.COLLAPSE" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="72F168C1A17008A0340312:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0340311:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="72F168C1A17008A0340312:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0340311:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="72F168C1A17008A0340312:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="72F168C1A17008A0340311:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="72F168C1A17008A0340312:ManageAccountAccess" mappingType="OVERRIDE" original="COLLAPSE" specifiedBy="72F168C1A17008A0340311:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormTable" displayString="ConsentTypes" eid="E0AA6E775E7684BF897354" path="ManageAccountAccess.Consents.Consents.Middle.ConsentTypes" type="Table">
+              <ProcessEntityAttr default="" name="MandMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="E0AA6E775E7684BF897355:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="E0AA6E775E7684BF897354:Table" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="NoRecordsMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="E0AA6E775E7684BF897355:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="E0AA6E775E7684BF897354:Table" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="SelectorLabel" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="E0AA6E775E7684BF897355:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="E0AA6E775E7684BF897354:Table" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="TableSummary" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="E0AA6E775E7684BF897355:ManageAccountAccess" mappingType="OVERRIDE" original="ConsentTypes" specifiedBy="E0AA6E775E7684BF897354:Table" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="$$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].AccountId[C].AccConsentType[C].AccConsentTypeTitle$" eid="E0AA6E775E7684BF897391" path="ManageAccountAccess.Consents.Consents.Middle.ConsentTypes.$$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].AccountId[C].AccConsentType[C].AccConsentTypeTitle$" type="Heading">
+                <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                  <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="E0AA6E775E7684BF897393:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="E0AA6E775E7684BF897391:Heading" state="NEW" status="NEW" value=""/>
+                </ProcessEntityAttr>
+                <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+                  <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="E0AA6E775E7684BF897393:ManageAccountAccess" mappingType="OVERRIDE" original="$$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].AccountId[C].AccConsentType[C].AccConsentTypeTitle$" specifiedBy="E0AA6E775E7684BF897391:Heading" state="NEW" status="NEW" value=""/>
+                </ProcessEntityAttr>
+                <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                  <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="E0AA6E775E7684BF897393:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="E0AA6E775E7684BF897391:Heading" state="NEW" status="NEW" value=""/>
+                </ProcessEntityAttr>
+                <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                  <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="E0AA6E775E7684BF897393:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="E0AA6E775E7684BF897391:Heading" state="NEW" status="NEW" value=""/>
+                </ProcessEntityAttr>
+              </ProcessEntity>
+              <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="$$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].AccountId[C].AccConsentType[C].AccConsentTypeDescription$" eid="E0AA6E775E7684BF897396" path="ManageAccountAccess.Consents.Consents.Middle.ConsentTypes.$$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].AccountId[C].AccConsentType[C].AccConsentTypeDescription$" type="Heading">
+                <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                  <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="E0AA6E775E7684BF897397:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="E0AA6E775E7684BF897396:Heading" state="NEW" status="NEW" value=""/>
+                </ProcessEntityAttr>
+                <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+                  <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="E0AA6E775E7684BF897397:ManageAccountAccess" mappingType="OVERRIDE" original="$$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].AccountId[C].AccConsentType[C].AccConsentTypeDescription$" specifiedBy="E0AA6E775E7684BF897396:Heading" state="NEW" status="NEW" value=""/>
+                </ProcessEntityAttr>
+                <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                  <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="E0AA6E775E7684BF897397:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="E0AA6E775E7684BF897396:Heading" state="NEW" status="NEW" value=""/>
+                </ProcessEntityAttr>
+                <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                  <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="E0AA6E775E7684BF897397:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="E0AA6E775E7684BF897396:Heading" state="NEW" status="NEW" value=""/>
+                </ProcessEntityAttr>
+              </ProcessEntity>
+            </ProcessEntity>
+          </ProcessEntity>
+          <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="REVOKE ACCESS" eid="298D1CAA80F69094622678" path="ManageAccountAccess.Consents.Consents.REVOKE ACCESS" type="Button">
+            <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="298D1CAA80F69094622679:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094622678:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="298D1CAA80F69094622679:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094622678:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="298D1CAA80F69094622679:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094622678:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="298D1CAA80F69094622679:ManageAccountAccess" mappingType="OVERRIDE" original="REVOKE ACCESS" specifiedBy="298D1CAA80F69094622678:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="298D1CAA80F69094622679:ManageAccountAccess" mappingType="OVERRIDE" original="REVOKE ACCESS" specifiedBy="298D1CAA80F69094622678:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+        </ProcessEntity>
+        <Container class="com.acquire.intelligentforms.entities.ItemGroup" displayString="RevokeAccess" eid="298D1CAA80F69094746136" type="Item Group">
+          <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Are you sure you want to stop $$WorkingElements[1].TPP$ from accessing your account? You will still need to remove consent you have given in $$WorkingElements[1].TPP$." eid="298D1CAA80F69094746165" path="ManageAccountAccess.Consents.RevokeAccess.Are you sure you want to stop $$WorkingElements[1].TPP$ from accessing your account? You will still need to remove consent you have given in $$WorkingElements[1].TPP$." type="Heading">
+            <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="298D1CAA80F69094746166:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094746165:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="298D1CAA80F69094746166:ManageAccountAccess" mappingType="OVERRIDE" original="Are you sure you want to stop $$WorkingElements[1].TPP$ from accessing your account? You will still need to remove consent you have given in $$WorkingElements[1].TPP$." specifiedBy="298D1CAA80F69094746165:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="298D1CAA80F69094746166:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094746165:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="298D1CAA80F69094746166:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094746165:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+          <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="CONTINUE" eid="298D1CAA80F69094746178" path="ManageAccountAccess.Consents.RevokeAccess.CONTINUE" type="Button">
+            <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="298D1CAA80F69094746179:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094746178:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="298D1CAA80F69094746179:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094746178:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="298D1CAA80F69094746179:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094746178:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="298D1CAA80F69094746179:ManageAccountAccess" mappingType="OVERRIDE" original="CONTINUE" specifiedBy="298D1CAA80F69094746178:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="298D1CAA80F69094746179:ManageAccountAccess" mappingType="OVERRIDE" original="CONTINUE" specifiedBy="298D1CAA80F69094746178:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+          <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="CANCEL" eid="298D1CAA80F69094746183" path="ManageAccountAccess.Consents.RevokeAccess.CANCEL" type="Button">
+            <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="298D1CAA80F69094746184:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094746183:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="298D1CAA80F69094746184:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094746183:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="298D1CAA80F69094746184:ManageAccountAccess" mappingType="PLACEHOLDER" original="" specifiedBy="298D1CAA80F69094746183:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="298D1CAA80F69094746184:ManageAccountAccess" mappingType="OVERRIDE" original="CANCEL" specifiedBy="298D1CAA80F69094746183:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="298D1CAA80F69094746184:ManageAccountAccess" mappingType="OVERRIDE" original="CANCEL" specifiedBy="298D1CAA80F69094746183:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+        </Container>
+      </Container>
+    </Container>
+  </ProcessEntities>
+  <Designs/>
+  <PresentationOnlyObjects>
+    <PresentationType class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationType" displayString="ManageAccountAccess" eid="5DEAA1040BDEB6321166" path="ManageAccountAccess" type="Rich Presentation Type">
+      <Attribute mappingType="OVERRIDE" name="BackButtonText" original="Back" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DateFormat" original="DD/MM/YYYY" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DecimalSymbol" original="." state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DigitGroupSymbol" original="," state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="EditTheme" original="N" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ForwardButtonText" original="Continue" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="HelpIconHint" original="Help" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaMessage" original="Please re-enter using letters" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaNumericMessage" original="Please re-enter using letters and numbers" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDateMessage" original="Please enter a valid date in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDaysInMonthMessage" original="There are not that many days in the specified month" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDecimalMessage" original="Please enter a valid decimal number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidLeapYearMessage" original="The specified year is not a leap year" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxDateMessage" original="The latest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxFileSizeMessage" original="The maximum file size allowed is $$QUESTION_CONSTRAINT$k" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxLengthMessage" original="The maximum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxValueMessage" original="The maximum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinDateMessage" original="The earliest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinLengthMessage" original="The minimum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinValueMessage" original="The minimum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidNumMessage" original="Please enter a valid number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidTimeMessage" original="Please enter a valid time in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidUploadTypeMessage" original="The valid file types you are allowed to upload are: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="LayoutDirection" original="ltr" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandMessage" original="Please answer all the required questions marked with a $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandOptImgAltVal" original="This field is mandatory" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandOptImgVal" original="mandatory_image.gif" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandOptTxtVal" original="*" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="QuestionListDefault" original="- Please Select" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ValidationMessage" original="Please enter a valid value" state="NEW" status="NEW" value=""/>
+      <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationProduct" displayString="ManageAccountAccess" eid="5DEAA1040BDEB6321173" type="Rich Presentation Process">
+        <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" displayString="Consents" eid="392C97CD37304900720294" type="Rich Presentation Phase">
+          <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="responsive-row [Section]" eid="392C97CD37304900720295" type="Rich Presentation Section">
+            <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" displayString="single-full-width-col [Column]" eid="392C97CD37304900720296" type="Rich Presentation Column">
+              <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="card [Section]" eid="392C97CD37304900720297" type="Rich Presentation Section">
+                <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="card content [Section]" eid="392C97CD37304900720304" type="Rich Presentation Section">
+                  <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section" eid="392C97CD373049002269170" type="Rich Presentation Section">
+                    <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTabPane" displayString="Tab Pane From Third Parties" eid="392C97CD373049002269207" path="ManageAccountAccess.ManageAccountAccess.Consents.Section.Column.Section.Section.Section.Tab Pane From Third Parties" type="Rich Presentation Tab Pane">
+                      <Attribute mappingType="PLACEHOLDER" name="HintText" original="" state="NEW" status="NEW" value=""/>
+                      <Attribute mappingType="OVERRIDE" name="TabName" original="From Third Parties" state="NEW" status="NEW" value=""/>
+                    </PresentationObject>
+                  </Container>
+                  <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section" eid="392C97CD373049002269509" type="Rich Presentation Section">
+                    <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" displayString="Column" eid="392C97CD373049002269527" type="Rich Presentation Column">
+                      <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationText" displayString="Image" eid="392C97CD373049002269537" path="ManageAccountAccess.ManageAccountAccess.Consents.Section.Column.Section.Section.Section.Column.Image" type="Image">
+                        <Attribute mappingType="OVERRIDE" name="IMG_ALT_TEXT" original="Image" state="NEW" status="NEW" value=""/>
+                        <Attribute mappingType="PLACEHOLDER" name="IMG_TITLE" original="" state="NEW" status="NEW" value=""/>
+                        <Attribute mappingType="PLACEHOLDER" name="Text" original="" state="NEW" status="NEW" value=""/>
+                      </PresentationObject>
+                    </Container>
+                  </Container>
+                  <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section" eid="392C97CD373049002269616" type="Rich Presentation Section">
+                    <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" displayString="Column" eid="392C97CD373049002269633" type="Rich Presentation Column">
+                      <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationText" displayString="Text" eid="298D1CAA80F69094622260" path="ManageAccountAccess.ManageAccountAccess.Consents.Section.Column.Section.Section.Section.Column.Text" type="Rich Presentation Text">
+                        <Attribute mappingType="OVERRIDE" name="Text" original="&lt;i&gt;No records to display.&lt;/i&gt;" state="NEW" status="NEW" value=""/>
+                      </PresentationObject>
+                      <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" displayString="Consents" eid="392C97CD373049002269640" type="Rich Presentation Table">
+                        <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section" eid="392C97CD373049002269690" type="Rich Presentation Section">
+                          <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" displayString="Column" eid="392C97CD373049002269724" type="Rich Presentation Column">
+                            <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" displayString="Column" eid="392C97CD373049002270074" type="Rich Presentation Column">
+                              <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationText" displayString="Image" eid="392C97CD373049002269984" path="ManageAccountAccess.ManageAccountAccess.Consents.Section.Column.Section.Section.Section.Column.Consents.Section.Column.Column.Image" type="Image">
+                                <Attribute mappingType="OVERRIDE" name="IMG_ALT_TEXT" original="Image" state="NEW" status="NEW" value=""/>
+                                <Attribute mappingType="PLACEHOLDER" name="IMG_TITLE" original="" state="NEW" status="NEW" value=""/>
+                                <Attribute mappingType="PLACEHOLDER" name="Text" original="" state="NEW" status="NEW" value=""/>
+                              </PresentationObject>
+                              <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationText" displayString="Image" eid="298D1CAA80F69094622299" path="ManageAccountAccess.ManageAccountAccess.Consents.Section.Column.Section.Section.Section.Column.Consents.Section.Column.Column.Image" type="Image">
+                                <Attribute mappingType="OVERRIDE" name="IMG_ALT_TEXT" original="Image" state="NEW" status="NEW" value=""/>
+                                <Attribute mappingType="PLACEHOLDER" name="IMG_TITLE" original="" state="NEW" status="NEW" value=""/>
+                                <Attribute mappingType="PLACEHOLDER" name="Text" original="" state="NEW" status="NEW" value=""/>
+                              </PresentationObject>
+                            </Container>
+                          </Container>
+                          <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" displayString="Column" eid="E0AA6E775E7684BF593389" type="Rich Presentation Column">
+                            <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" displayString="Column" eid="E0AA6E775E7684BF593506" type="Rich Presentation Column">
+                              <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationText" displayString="Image" eid="E0AA6E775E7684BF593394" path="ManageAccountAccess.ManageAccountAccess.Consents.Section.Column.Section.Section.Section.Column.Consents.Section.Column.Column.Image" type="Image">
+                                <Attribute mappingType="OVERRIDE" name="IMG_ALT_TEXT" original="Cal" state="NEW" status="NEW" value=""/>
+                                <Attribute mappingType="PLACEHOLDER" name="IMG_TITLE" original="" state="NEW" status="NEW" value=""/>
+                                <Attribute mappingType="PLACEHOLDER" name="Text" original="" state="NEW" status="NEW" value=""/>
+                              </PresentationObject>
+                            </Container>
+                          </Container>
+                          <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section" eid="298D1CAA80F69094622407" type="Rich Presentation Section">
+                            <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationText" displayString="Text" eid="298D1CAA80F69094622424" path="ManageAccountAccess.ManageAccountAccess.Consents.Section.Column.Section.Section.Section.Column.Consents.Section.Section.Text" type="Rich Presentation Text">
+                              <Attribute mappingType="OVERRIDE" name="Text" original="&lt;div &gt;&lt;img src=&quot;images/warning.png&quot; alt=&quot;image&quot; width=&quot;35px&quot; height=&quot;17px&quot;/&gt;&lt;span style=&quot;padding-top:10px;color:#ff7f00&quot;&gt;  We are currently restricting $$enqTcNofGetConsentInfos[1].Results[1].enqTcNofGetConsentInfo[C].TppReference$ from accessing all of our customers accounts.&lt;/div&gt;" state="NEW" status="NEW" value=""/>
+                            </PresentationObject>
+                          </Container>
+                          <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" displayString="Middle" eid="72F168C1A17008A0339434" type="Rich Presentation Table">
+                            <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section" eid="392C97CD373049002269707" type="Rich Presentation Section">
+                              <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section" eid="72F168C1A17008A0609791" type="Rich Presentation Section">
+                                <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" displayString="Column" eid="72F168C1A17008A0609823" type="Rich Presentation Column">
+                                  <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" displayString="Column" eid="6DE33C6C5366B50A342400" type="Rich Presentation Column">
+                                    <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationText" displayString="Text" eid="6DE33C6C5366B50A341644" path="ManageAccountAccess.ManageAccountAccess.Consents.Section.Column.Section.Section.Section.Column.Consents.Section.Middle.Section.Section.Column.Column.Text" type="Rich Presentation Text">
+                                      <Attribute mappingType="OVERRIDE" name="Text" original="You have given access to the following information:" state="NEW" status="NEW" value=""/>
+                                    </PresentationObject>
+                                  </Container>
+                                </Container>
+                              </Container>
+                            </Container>
+                          </Container>
+                        </Container>
+                      </Container>
+                    </Container>
+                  </Container>
+                </Container>
+              </Container>
+            </Container>
+          </Container>
+          <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationItemGroup" displayString="RevokeAccess" eid="298D1CAA80F69094746137" type="Rich Presentation Item Group">
+            <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section" eid="298D1CAA80F69094746210" path="ManageAccountAccess.ManageAccountAccess.Consents.RevokeAccess.Section" type="Rich Presentation Section">
+              <Attribute mappingType="OVERRIDE" name="TITLE" original="Revoke Access" state="NEW" status="NEW" value=""/>
+            </PresentationObject>
+          </Container>
+        </Container>
+      </Container>
+    </PresentationType>
+  </PresentationOnlyObjects>
+  <Rules>
+    <MasterRules/>
+  </Rules>
+  <Component/>
+  <Lists/>
+</LanguageMap>

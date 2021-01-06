@@ -1,0 +1,18 @@
+<link rel='stylesheet' href='./templates/widgets/com.temenos.theme/perfectScrollbar/css/perfect-scrollbar.css' />
+<script src='./templates/widgets/com.temenos.theme/perfectScrollbar/js/perfect-scrollbar.jquery.js'></script>
+
+<style>
+  #container {
+    position: relative;
+    height: 100%; /* Or whatever you want (eg. 400px) */
+  }
+  .ps-scrollbar-y-rail, .ps-scrollbar-y { z-index: 2000 }
+.tc-popup .ps-container.ps-active-y > .ps-scrollbar-y-rail {
+		right: -2px !important;
+  }
+
+  .tc-popup .tc-menu-scroll-container {
+  	height: auto;
+  	max-height: 80vh;
+  }
+</style>

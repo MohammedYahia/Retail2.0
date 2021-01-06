@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<!-- DOCTYPE CHANNEL SYSTEM "../dtd/channel.dtd" -->
+
+<!-- GLOBUS Connector communications channels definitions -->
+<!-- I&A Department 2002 -->
+
+<CHANNELS>
+	<CHANNEL>
+		<NAME>FileUploadDownloadChannel</NAME>
+		<TIMEOUT>120</TIMEOUT>
+		<ADAPTER>
+			<TYPE>tcp</TYPE>
+			<PORT>10003</PORT>
+			<SUPPLIER>
+				<INITIATOR>
+					<HOSTNAME>127.0.0.1</HOSTNAME>
+				</INITIATOR>
+			</SUPPLIER>
+			<CONSUMER>
+				<MAX_SESSION>5</MAX_SESSION>
+				<ACCEPTOR>
+					<BACKLOG>30</BACKLOG>
+				</ACCEPTOR>
+			</CONSUMER>
+		</ADAPTER>
+	</CHANNEL>
+
+	
+
+
+	
+
+	
+
+</CHANNELS>

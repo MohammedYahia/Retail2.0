@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Account Aggregation screen</title>
+  <link rel="stylesheet" href="./html/css/Auth.css">
+  <link rel="icon" href="./images/favicon.ico">
+  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+ 
+</head>
+<body>
+  <section class="container">
+    <div class="login">
+      <img src="./images/success.png" width="30%"/>
+      <form id="Response" action="Response" method="post" autocomplete="off">        
+        
+		<p class="submit"></p>		
+		<p class="about-links">We have started loading your accounts and balances.</p>
+		<p class="about-links">Please check the message box for further information.</p>
+		<P></p>
+		<P></p>
+		<P></p>
+      </form>
+	  
+	 <button href="#" id="close-window">Close</button> 
+    </div>
+  </section>
+    
+ <script type="text/javascript">
+	document.getElementById("close-window").addEventListener("click", function(){ 
+       if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+			location.href="/window/close"; 
+			}else{
+			window.close();
+			}
+   });
+  
+</script>
+</body>
+</html>
+
+

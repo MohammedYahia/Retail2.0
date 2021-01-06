@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><DataSetRoot DSAttrsNewLine="N" DSOmitXMLDecl="N" DSPrettyPrint="Y" DS_UID="31">
+  <!--Deposit Overview-->
+  <DepositOverview AcctNo="83801" Arrangment="AA16113FMJ93" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositOverview[A]" DS_UID="15" EarlyRedemptionFee="100.00" InterestRate="0.6214%" ProductId="DEPOSIT.3Y" StartDate="20160422" TaxRate="10%" TaxType="Withholding Tax" TermAmount="100000.00" TermCancelPeriod="7D" TotalPay="1701.08" WidthdrawalFee="Activity Amount">
+    <PaymentTypeDescription DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositOverview[C].PaymentTypeDescription" DS_UID="0" PaymentTypeDescription="Interest"/>
+    <PaymentTypeDescription DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositOverview[C].PaymentTypeDescription" DS_UID="1" PaymentTypeDescription="Deposit Funding"/>
+    <PropertyDescription DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositOverview[C].PropertyDescription" DS_UID="2" PropertyDescription="Deposit Interest"/>
+    <PropertyDescription DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositOverview[C].PropertyDescription" DS_UID="3" PropertyDescription="Account"/>
+    <PayoutAccount DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositOverview[C].PayoutAccount" DS_UID="4" PayoutAccount="78387"/>
+    <PayoutAccount DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositOverview[C].PayoutAccount" DS_UID="5" PayoutAccount="78387"/>
+    <SdRelative DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositOverview[C].SdRelative" DS_UID="6" SdRelative="on the Renewal Date"/>
+    <PayinSettlement DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositOverview[C].PayinSettlement" DS_UID="7" PayinSettlement="NO"/>
+    <PayoutSettlement DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositOverview[C].PayoutSettlement" DS_UID="8" PayoutSettlement="YES"/>
+    <PayoutSettlement DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositOverview[C].PayoutSettlement" DS_UID="9" PayoutSettlement="YES"/>
+    <PaymentMethod DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositOverview[C].PaymentMethod" DS_UID="10" PaymentMethod="Payment"/>
+    <PaymentMethod DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositOverview[C].PaymentMethod" DS_UID="11" PaymentMethod="Payment"/>
+    <PaymentValue DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositOverview[C].PaymentValue" DS_UID="12" PaymentValue="100%"/>
+    <ChargeType ChargeType="Flat Amount" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositOverview[C].ChargeType" DS_UID="13"/>
+    <ChargeType ChargeType="Calculated" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositOverview[C].ChargeType" DS_UID="14"/>
+  </DepositOverview>
+</DataSetRoot>

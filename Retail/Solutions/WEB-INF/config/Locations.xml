@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Locations.xsd">
+ <location>
+  <name>ATM BCR Doamnei</name>
+  <type>ATM</type>
+  <latitude>44.433052</latitude>
+  <Longitude>26.101525</Longitude>
+  <Address>Strada Doamnei 14-16</Address>
+  <Area>Center</Area>
+  <City>Bucuresti</City>
+  <District>Bucuresti</District>
+  <State></State>
+  <Country>Romania</Country>
+  <PostalCode>30056</PostalCode>
+  <Language>RO</Language>
+  <Message>Bine ati venit!</Message>
+  <Phone>0040734591394</Phone>
+  <Email>office@bcr.ro</Email>
+  <facility>
+   <name>Supports VISA</name>
+   <description>Supports VISA cards</description>
+  </facility>
+  <facility>
+   <name>Supports MASTERCARD</name>
+   <description>Supports MASTERCARD cards</description>
+  </facility>
+  <facility>
+   <name>Wheelchair ramp</name>
+   <description>Has a wheelchair ramp</description>
+  </facility>
+  <facility>
+   <name>Supports MASTERCARD</name>
+   <description>Supports MASTERCARD cards</description>
+  </facility>
+  <facility>
+   <name>Guards</name>
+   <description>Has a guard</description>
+  </facility>
+  <facility>
+   <name>Guards</name>
+   <description>The location has video surveillance</description>
+  </facility>
+  <facility>
+   <name>Blind</name>
+   <description>The location has facilities for the blind</description>
+  </facility>
+  <schedule>
+   <dayofweek>1</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>2</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>3</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>4</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>5</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>6</dayofweek>
+   <closed>N</closed>
+   <starttime1>09:00:00</starttime1>
+   <endtime1>14:00:00</endtime1>
+  </schedule>
+  <schedule>
+   <dayofweek>7</dayofweek>
+   <closed>Y</closed>
+  </schedule>
+ </location>
+ <location>
+  <name>Branch BCR Alba Iulia</name>
+  <type>BRANCH</type>
+  <latitude>44.22</latitude>
+  <Longitude>26.15</Longitude>
+  <Address>Strada Doamnei 14-16</Address>
+  <Area>Center</Area>
+  <City>Bucuresti</City>
+  <District>Bucuresti</District>
+  <State></State>
+  <Country>Romania</Country>
+  <PostalCode>30056</PostalCode>
+  <Language>RO</Language>
+  <Message>Bine ati venit!</Message>
+  <Phone>0040734591394</Phone>
+  <Email>office@bcr.ro</Email>
+  <facility>
+   <name>Supports VISA</name>
+   <description>Supports VISA cards</description>
+  </facility>
+  <facility>
+   <name>Supports MASTERCARD</name>
+   <description>Supports MASTERCARD cards</description>
+  </facility>
+  <facility>
+   <name>Wheelchair ramp</name>
+   <description>Has a wheelchair ramp</description>
+  </facility>
+  <facility>
+   <name>Supports MASTERCARD</name>
+   <description>Supports MASTERCARD cards</description>
+  </facility>
+  <facility>
+   <name>Guards</name>
+   <description>Has a guard</description>
+  </facility>
+  <facility>
+   <name>Guards</name>
+   <description>The location has video surveillance</description>
+  </facility>
+  <facility>
+   <name>Blind</name>
+   <description>The location has facilities for the blind</description>
+  </facility>
+  <schedule>
+   <dayofweek>1</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>2</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>3</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>4</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>5</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>6</dayofweek>
+   <closed>N</closed>
+   <starttime1>09:00:00</starttime1>
+   <endtime1>14:00:00</endtime1>
+  </schedule>
+  <schedule>
+   <dayofweek>7</dayofweek>
+   <closed>Y</closed>
+  </schedule>
+ </location>
+ <location>
+  <name>ATM services</name>
+  <type>ATM</type>
+  <latitude>51.5033630</latitude>
+  <Longitude>-0.1276250</Longitude>
+  <Address>London</Address>
+  <Area>Center</Area>
+  <City>London</City>
+  <District>London</District>
+  <State></State>
+  <Country>UK</Country>
+  <PostalCode>TW168RF</PostalCode>
+  <Language>UK</Language>
+  <Message>Hello</Message>
+  <Phone>0044734591394</Phone>
+  <Email>office@bcr.com</Email>
+  <facility>
+   <name>Supports VISA</name>
+   <description>Supports VISA cards</description>
+  </facility>
+  <facility>
+   <name>Supports MASTERCARD</name>
+   <description>Supports MASTERCARD cards</description>
+  </facility>
+  <facility>
+   <name>Wheelchair ramp</name>
+   <description>Has a wheelchair ramp</description>
+  </facility>
+  <facility>
+   <name>Supports MASTERCARD</name>
+   <description>Supports MASTERCARD cards</description>
+  </facility>
+  <facility>
+   <name>Guards</name>
+   <description>Has a guard</description>
+  </facility>
+  <facility>
+   <name>Guards</name>
+   <description>The location has video surveillance</description>
+  </facility>
+  <facility>
+   <name>Blind</name>
+   <description>The location has facilities for the blind</description>
+  </facility>
+  <schedule>
+   <dayofweek>1</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>2</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>3</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>4</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>5</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>6</dayofweek>
+   <closed>N</closed>
+   <starttime1>09:00:00</starttime1>
+   <endtime1>14:00:00</endtime1>
+  </schedule>
+  <schedule>
+   <dayofweek>7</dayofweek>
+   <closed>Y</closed>
+  </schedule>
+ </location>
+ <location>
+  <name>Branch Paris</name>
+  <type>BRANCH</type>
+  <latitude>48.884597</latitude>
+  <Longitude>2.297116</Longitude>
+  <Address>Square Albert Besnard, 75017 Paris</Address>
+  <Area>Center</Area>
+  <City>Paris</City>
+  <District>Ille de France</District>
+  <State></State>
+  <Country>France</Country>
+  <PostalCode>75017</PostalCode>
+  <Language>FR</Language>
+  <Message>Bien venue!</Message>
+  <Phone>0040734591394</Phone>
+  <Email>office@bcr.ro</Email>
+  <facility>
+   <name>Supports VISA</name>
+   <description>Supports VISA cards</description>
+  </facility>
+  <facility>
+   <name>Supports MASTERCARD</name>
+   <description>Supports MASTERCARD cards</description>
+  </facility>
+  <facility>
+   <name>Wheelchair ramp</name>
+   <description>Has a wheelchair ramp</description>
+  </facility>
+  <facility>
+   <name>Supports MASTERCARD</name>
+   <description>Supports MASTERCARD cards</description>
+  </facility>
+  <facility>
+   <name>Guards</name>
+   <description>Has a guard</description>
+  </facility>
+  <facility>
+   <name>Guards</name>
+   <description>The location has video surveillance</description>
+  </facility>
+  <facility>
+   <name>Blind</name>
+   <description>The location has facilities for the blind</description>
+  </facility>
+  <schedule>
+   <dayofweek>1</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>2</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>3</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>4</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>5</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>6</dayofweek>
+   <closed>N</closed>
+   <starttime1>09:00:00</starttime1>
+   <endtime1>14:00:00</endtime1>
+  </schedule>
+  <schedule>
+   <dayofweek>7</dayofweek>
+   <closed>Y</closed>
+  </schedule>
+ </location>
+ <location>
+  <name>ATM Paris</name>
+  <type>ATM</type>
+  <latitude>48.884093</latitude>
+  <Longitude>2.295907</Longitude>
+  <Address>Square Albert Besnard, 75017 Paris</Address>
+  <Area>Center</Area>
+  <City>Paris</City>
+  <District>Ille de France</District>
+  <State></State>
+  <Country>France</Country>
+  <PostalCode>75017</PostalCode>
+  <Language>FR</Language>
+  <Message>Bien venue!</Message>
+  <Phone>0040734591394</Phone>
+  <Email>office@bcr.ro</Email>
+  <facility>
+   <name>Supports VISA</name>
+   <description>Supports VISA cards</description>
+  </facility>
+  <facility>
+   <name>Supports MASTERCARD</name>
+   <description>Supports MASTERCARD cards</description>
+  </facility>
+  <facility>
+   <name>Wheelchair ramp</name>
+   <description>Has a wheelchair ramp</description>
+  </facility>
+  <facility>
+   <name>Supports MASTERCARD</name>
+   <description>Supports MASTERCARD cards</description>
+  </facility>
+  <facility>
+   <name>Guards</name>
+   <description>Has a guard</description>
+  </facility>
+  <facility>
+   <name>Guards</name>
+   <description>The location has video surveillance</description>
+  </facility>
+  <facility>
+   <name>Blind</name>
+   <description>The location has facilities for the blind</description>
+  </facility>
+  <schedule>
+   <dayofweek>1</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>2</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>3</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>4</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>5</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>6</dayofweek>
+   <closed>N</closed>
+   <starttime1>09:00:00</starttime1>
+   <endtime1>14:00:00</endtime1>
+  </schedule>
+  <schedule>
+   <dayofweek>7</dayofweek>
+   <closed>Y</closed>
+  </schedule>
+ </location>
+ <location>
+  <name>Dorothy Street Branch</name>
+  <type>BRANCH</type>
+  <latitude>51.449324</latitude>
+  <Longitude>-0.971742</Longitude>
+  <Address>Dorothy Street</Address>
+  <Area>Reading</Area>
+  <City>Reading</City>
+  <District>Berkshire</District>
+  <State></State>
+  <Country>UK</Country>
+  <PostalCode>RD124GH</PostalCode>
+  <Language>UK</Language>
+  <Message>Hello from the branch</Message>
+  <Phone>0044734591394</Phone>
+  <Email>office@bcr.com</Email>
+  <facility>
+   <name>Supports VISA</name>
+   <description>Supports VISA cards</description>
+  </facility>
+  <facility>
+   <name>Supports MASTERCARD</name>
+   <description>Supports MASTERCARD cards</description>
+  </facility>
+  <facility>
+   <name>Wheelchair ramp</name>
+   <description>Has a wheelchair ramp</description>
+  </facility>
+  <facility>
+   <name>Supports MASTERCARD</name>
+   <description>Supports MASTERCARD cards</description>
+  </facility>
+  <facility>
+   <name>Guards</name>
+   <description>Has a guard</description>
+  </facility>
+  <facility>
+   <name>Guards</name>
+   <description>The location has video surveillance</description>
+  </facility>
+  <facility>
+   <name>Blind</name>
+   <description>The location has facilities for the blind</description>
+  </facility>
+  <schedule>
+   <dayofweek>1</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>2</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>3</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>4</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>5</dayofweek>
+   <closed>N</closed>
+   <starttime1>08:00:00</starttime1>
+   <endtime1>12:00:00</endtime1>
+   <starttime2>13:00:00</starttime2>
+   <endtime2>17:00:00</endtime2>
+  </schedule>
+  <schedule>
+   <dayofweek>6</dayofweek>
+   <closed>N</closed>
+   <starttime1>09:00:00</starttime1>
+   <endtime1>14:00:00</endtime1>
+  </schedule>
+  <schedule>
+   <dayofweek>7</dayofweek>
+   <closed>Y</closed>
+  </schedule>
+ </location>
+</locations>
+

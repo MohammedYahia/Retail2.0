@@ -1,0 +1,10 @@
+<!-- $Revision: 1.2 $ -->
+$%IF ITEM.IS_READONLY() == "true" && ITEM.READONLYSTYLE() != "Disabled Answer"$
+$$ITEM.EC_GENERATE()$
+$%ELSE$
+$%SCRIPT$
+var newType = $%IF BROWSER_FEATURES == "" || BROWSER_FEATURES.inputtypes.time == "Y"$"type=\"time\""$%ELSE$""$%ENDIF$
+$%INCLUDE widgets/html5/inputtype.wgt$$%ENDINCLUDE$
+genHTML5Input(newType, "", false);
+$%ENDSCRIPT$
+$%ENDIF$

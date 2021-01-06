@@ -1,0 +1,8 @@
+<div class="fb-comments" 
+$%IF ITEM.href != ""$ data-href="$$ITEM.href$"
+$%ENDIF$$%IF ITEM.num_posts != ""$ data-numposts="$$ITEM.num_posts$"
+$%ENDIF$$%IF ITEM.colorscheme != ""$ data-colorscheme="$$ITEM.colorscheme$"
+$%ENDIF$$%IF ITEM.order_by != ""$ data-order-by="$$ITEM.order_by$"
+$%ENDIF$$%IF ITEM.width != ""$ data-width="$$ITEM.width$"$%ENDIF$></div>
+
+$%INCLUDE widgets/com.temenos.widgets.social.facebook/inc_fbRegisterWidget.wgt$$%ENDINCLUDE$

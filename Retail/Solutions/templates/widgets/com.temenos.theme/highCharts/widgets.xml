@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><widgets>
+	<widget icon="HighCharts.png" name="tw-HighChart" type="Chart" >
+		<!-- uses HighCharts v3.0.9 -->
+		<template type="header" value="highCharts-header.wgt"/>
+		<template type="source" value="HighCharts.wgt"/>
+		<customValue>
+			<customItem file="defaultChartColors.properties" name="Set custom colors" type="COLOR_FILE"/>
+			<customItem add="false" name="KeyPosition" value="Top"/>
+			<customItem add="false" name="KeyPosition" value="Bottom"/>
+			<customItem name="KeyPosition" value="Center"/>
+			<customItem add="true" name="ChartType" value="Spline Chart"/>
+			<customItem add="true" name="ChartType" value="Area Chart"/>
+			<customItem add="true" name="ChartType" value="AreaSpline Chart"/>
+		</customValue>
+		<custom>
+<!-- KEY/LEGEND LAYOUT -->
+			<item includeInDesign="false" mand="false" name="HIGHCHART_LEGEND" prompt="HighChart Key" tab="Chart Key" type="com.acquire.util.ui.Legend" typeValue="4|N" usage="17" />
+			<item includeInDesign="false" name="L_TITLE" prompt="Title" tab="Chart Key" type="javax.swing.JTextField" help="Key Title. Can also use HTML for style and alignment." usage="15"/>
+			<item includeInDesign="false"  mand="false" name="LAYOUT_POSITION" prompt="Key Layout" tab="Chart Key" type="javax.swing.JComboBox" typeValue="Vertical|Horizontal" help="The way the items name will be displayed."/>
+			<item includeInDesign="false" name="KEYVERTICALALIGN" prompt="Vertical Align" tab="Chart Key" type="javax.swing.JComboBox" typeValue="Top|Middle|Bottom" help="The vertical alignment of the legend box."/>
+			<item includeInDesign="false" mand="false" name="L_FORMAT" prompt="Label Format" tab="Chart Key" type="javax.swing.JTextField" help="A format string for each legend label. Available variables relates to properties on the series, or the point in case of pies. Defaults to {name}."/>
+
+<!-- GRIDLINES -->
+			<item includeInDesign="false" name="GRIDLINES" tab="Axis" type="com.acquire.util.ui.Legend" typeValue="2|N" usage="17" />
+			<item includeInDesign="false" name="SHOW_X_AXIS_GRID_LINES" prompt="Show X-Axis Grid Lines" tab="Axis" type="javax.swing.JCheckBox" help="Show x-axis grid lines."/>
+			<item includeInDesign="false" name="SHOW_Y_AXIS_GRID_LINES" prompt="Show Y-Axis Grid Lines" tab="Axis" type="javax.swing.JCheckBox" help="Show y-axis grid lines"/>
+
+<!-- AXIS -->
+
+
+			<item includeInDesign="false" name="AXIS" prompt="Axis" tab="Axis" type="com.acquire.util.ui.Legend" typeValue="10|N" usage="17" />
+			<item includeInDesign="false" name="XAXIS" prompt="X Axis" tab="Axis" type="com.acquire.util.ui.Legend" typeValue="3|N" usage="17" />
+			<item includeInDesign="false" name="SHOW_X_LABELS" prompt="Show X-Axis Labels" tab="Axis" type="javax.swing.JCheckBox" help="Show labels on x-axis."/>
+			<item includeInDesign="false" defaultValue="" name="X_AXIS_SUFFIX" prompt="X Axis Suffix" tab="Axis" help="Label suffix on x-axis. Available when formatter option is checked."/>
+			<item includeInDesign="false" defaultValue="" name="X_AXIS_TICKINTERVAL" prompt="X Axis Tick Interval" tab="Axis" help="The interval of the tick marks in axis units."/>
+			<item includeInDesign="false" name="YAXIS" prompt="Y Axis" tab="Axis" type="com.acquire.util.ui.Legend" typeValue="4|N" usage="17" />
+			<item includeInDesign="false" name="SHOW_Y_LABELS" prompt="Show Y-Axis Labels" tab="Axis" type="javax.swing.JCheckBox" help="Show labels on y-axis."/>
+			<item includeInDesign="false" name="Y_ROTATION" prompt="Y Label Rotation" tab="Axis" help="Rotates label on y-axis." typeValue="NUMERIC|2"/>
+			<item includeInDesign="false" name="Y_AXIS_SUFFIX" prompt="Y Axis Suffix" tab="Axis" help="Label suffix on y-axis. Available when formatter option is checked."/>
+			<item includeInDesign="false" defaultValue="" name="Y_AXIS_TICKINTERVAL" prompt="Y Axis Tick Interval" tab="Axis" help="The interval of the tick marks in axis units."/>
+
+			
+<!-- TOOLTIPS -->
+			<item includeInDesign="false" name="TOOLTIP" prompt="Tooltips" tab="Labels/Tooltips" type="com.acquire.util.ui.Legend" typeValue="17|N" usage="17" />
+			<item includeInDesign="false" name="TT_CROSSHAIRS" prompt="Crosshairs" tab="Labels/Tooltips" type="javax.swing.JCheckBox" help="Display crosshairs to connect the points with their corresponding axis values."/>
+			<item includeInDesign="false" name="TT_SHARED" prompt="Shared" tab="Labels/Tooltips" type="javax.swing.JCheckBox" help="Shows tooltips for all data - selecting this removes formatter."/>
+
+			<item help="Text that will appear as tooltip header. For a complex usage of tooltip header see Highcharts Official Web Site." includeInDesign="false" name="TT_HEADERFORMAT" prompt="Tooltip Header" tab="Labels/Tooltips" type="javax.swing.JTextField"  usage="15"/>
+			<item defaultValue="" includeInDesign="false" name="TOOLTIP_PERC_TITLE" prompt="Tooltip Value Title (%)" tab="Labels/Tooltips" type="javax.swing.JTextField" help="The text shown before percentage value"  usage="15"/>
+			<item defaultValue="" includeInDesign="false" name="TOOLTIP_VAL_TITLE" prompt="Tooltip Value Title (Actual)" tab="Labels/Tooltips" type="javax.swing.JTextField" help="The text shown before actual value"  usage="15"/>
+			<item defaultValue="" includeInDesign="false" name="TOOLTIP_PREFIX_VALUE" prompt="Tooltip Value Prefix" tab="Labels/Tooltips" type="javax.swing.JTextField" help="A string to prepend to each series' y value."  usage="15"/>
+			<item layout="0" defaultValue="" includeInDesign="false" name="TOOLTIP_SUFFIX_VALUE" prompt="Tooltip Value Suffix" tab="Labels/Tooltips" type="javax.swing.JTextField" help="A string to append to each series' y value. " usage="15"/>
+
+
+<!-- CUSTOM TOOLTIPS -->
+			<item includeInDesign="false" name="TOOLTIP_CUSTOM" prompt="Custom Tooltips" tab="Labels/Tooltips" type="com.acquire.util.ui.Legend" typeValue="6|N" usage="17" />
+			<item defaultValue="" includeInDesign="false" name="TOOLTIP_CUSTOM1_TITLE" prompt="Tooltip Title (Custom1)" tab="Labels/Tooltips" type="javax.swing.JTextField" help="The text shown before actual value" usage="15"/>
+			<item defaultValue="" includeInDesign="false" name="TOOLTIP_CUSTOM1_VALUE" prompt="Tooltip Value (Custom1)" tab="Labels/Tooltips" type="com.acquire.intelligentforms.ide.dialogs.RichTextField" help="The text shown before actual value" usage="15"/>
+			<item defaultValue="" includeInDesign="false" name="TOOLTIP_CUSTOM2_TITLE" prompt="Tooltip Title (Custom2)" tab="Labels/Tooltips" type="javax.swing.JTextField" help="The text shown before actual value" usage="15"/>
+			<item defaultValue="" includeInDesign="false" name="TOOLTIP_CUSTOM2_VALUE" prompt="Tooltip Value (Custom2)" tab="Labels/Tooltips" type="com.acquire.intelligentforms.ide.dialogs.RichTextField" help="The text shown before actual value" usage="15"/>
+			<item defaultValue="" includeInDesign="false" name="TOOLTIP_CUSTOM3_TITLE" prompt="Tooltip Title (Custom3)" tab="Labels/Tooltips" type="javax.swing.JTextField" help="The text shown before actual value" usage="15"/>
+			<item defaultValue="" includeInDesign="false" name="TOOLTIP_CUSTOM3_VALUE" prompt="Tooltip Value (Custom3)" tab="Labels/Tooltips" type="com.acquire.intelligentforms.ide.dialogs.RichTextField" help="The text shown before actual value" usage="15"/>
+			<item help="Text that will appear as tooltip footer. For a complex usage of tooltip footer see Highcharts Official Web Site." includeInDesign="false" name="TT_FOOTERFORMAT" prompt="Tooltip Footer" tab="Labels/Tooltips" type="javax.swing.JTextField" usage="15"/>
+
+<!-- DATALABELS -->
+			<item includeInDesign="false" name="DATALABELS" prompt="Data Labels" tab="Labels/Tooltips" type="com.acquire.util.ui.Legend" typeValue="3|N" usage="17" />
+			<item includeInDesign="false" name="ENABLE_DATALABELS" prompt="Show Data Labels" tab="Labels/Tooltips" type="javax.swing.JCheckBox" help="Data Labels"/>
+			<item includeInDesign="false" name="DL_FORMAT" prompt="Format({y} value)" tab="Labels/Tooltips" type="javax.swing.JTextField" help="A format string for the data label." usage="15"/>
+			<item includeInDesign="false" name="DL_OVERLAY" prompt="Allow Data Labels to Overlap" tab="Labels/Tooltips" type="javax.swing.JCheckBox" help="Data Labels Overlap - ensures all are displayed"/>
+
+<!-- MISC -->
+			<item includeInDesign="false" name="DATA_FORMATTING" prompt="Data Formatting" tab="Specifics" type="com.acquire.util.ui.Legend" typeValue="3|N" usage="17" />
+				<item includeInDesign="false" name="NUMERICSYMBOLS" prompt="Numeric Symbols" tab="Specifics" help="Numeric symbols" />
+
+			<item includeInDesign="false" name="PREVIOUS_ID" prompt="ID Of Previous Chart If Grouping With Previous" tab="Specifics" type="javax.swing.JTextField" help="ID of the previous chart which we want to group with this one."/>
+			
+			<item includeInDesign="false" name="DONUTSIZE" prompt="Donut Size (%)" tab="Specifics" help="Percentage for hole in donut"/>
+
+
+			<item includeInDesign="false" name="NODATA" prompt="No Data" tab="Specifics" type="com.acquire.util.ui.Legend" typeValue="1|N" usage="17" />
+				<item includeInDesign="false" defaultValue="No data to display" mappable="true" name="NODATA_MESSAGE" prompt="No Data Message" tab="Specifics" help="Message to be displayed when data is missing."  usage="15"/>
+
+
+			<item includeInDesign="false"  mand="false" name="TITLE_ALIGNMENT" prompt="Title Alignment" tab="Title" type="javax.swing.JComboBox" typeValue="left|center|right" help="Alignment of title (and subtitle)."/>
+			<item includeInDesign="false"  mand="false" name="TITLE_FLOAT" prompt="Title Floating" tab="Title" type="javax.swing.JCheckBox" help="Shows title on top of chart..."/>
+			<item applicableCondition="TITLE_FLOAT=='Y'" includeInDesign="false"  mand="false" name="TITLE_X" prompt="Title X Offset" tab="Title"/>
+			<item applicableCondition="TITLE_FLOAT=='Y'" includeInDesign="false"  mand="false" name="TITLE_Y" prompt="Title Y Offset" tab="Title"/>
+
+			<item applicableCondition="TITLE_FLOAT=='Y'" includeInDesign="false"  mand="false" name="SUB_TITLE_X" prompt="Sub Title X Offset" tab="Title"/>
+			<item applicableCondition="TITLE_FLOAT=='Y'" includeInDesign="false"  mand="false" name="SUB_TITLE_Y" prompt="Sub Title Y Offset" tab="Title"/>
+
+
+<!-- DRILLDOWN -->
+			<item includeInDesign="false" name="l1" type="javax.swing.JLabel" prompt="Make sure you have selected 'Interactive Chart' in Chart Options tab." tab="Drilldown" usage="17"  />
+			<item name="ACTION_SERIES_ID" prompt="ID for series name" tab="Drilldown" includeInDesign="false" />
+			<item name="ACTION_NAME_ID" prompt="ID for point name" tab="Drilldown" includeInDesign="false" />
+			<item name="ACTION_INDEX_ID" prompt="ID for point index" tab="Drilldown" includeInDesign="false" />
+			<item name="ACTION_VALUE_ID" prompt="ID for point value" tab="Drilldown" includeInDesign="false" />
+			<item name="ACTION_BUTTON_ID" prompt="ID of button to trigger" tab="Drilldown" includeInDesign="false" />
+
+
+			<!--item dialogHandler="com.acquire.intelligentforms.ide.presentationeditor.dialoghandlers.html.widgets.highcharts.ChartDialogHandler" includeInDesign="false" name="EXPORTING" prompt="Export Chart" tab="Specifics" type="javax.swing.JCheckBox" help="In order for this to work, the user will need access to export.highcharts.com - it is possible that firewalls may prevent this."/>
+			<item includeInDesign="false" name="EXPORTING_MESSAGE" prompt="In order for this to work, the user will need access to export.highcharts.com - it is possible that firewalls may prevent this." tab="Specifics" type="javax.swing.JLabel" />
+			
+			<item name="DATA_FORMATTING" prompt="Data Formatting" tab="Specifics" type="com.acquire.util.ui.Legend" typeValue="7|N"/>
+			<item name="DECIMALPOINT" prompt="Decimal Point" tab="Specifics" help="Decimal point."/>
+			<item name="THOUSANDSSEP" prompt="Thousands Separator" tab="Specifics" help="Thousands separator."/>
+			<item name="NODATA" prompt="No Data" tab="Specifics" type="com.acquire.util.ui.Legend" typeValue="4|N"/>
+
+			<item name="MISC" prompt="Selection" tab="Specifics" type="com.acquire.util.ui.Legend" typeValue="3|N"/>
+			<item name="SELECTION_COLOR" prompt="Selection Colour" tab="Specifics" type="com.acquire.util.ui.StyleSheetColorChooser" help="The colour of the marker when a point is selected."/>
+			<item name="ALLOW_POINT_SELECT" prompt="Allow Selection" tab="Specifics" type="javax.swing.JCheckBox" help="Allow this series points to be selected by clicking on the markers, bars or pie slices."/>
+			<item layout="1" name="S_CURSOR" prompt="Cursor" tab="Specifics" type="javax.swing.JCheckBox" help="You can set the cursor to pointer if you have click events attached to the series, to signal to the user that the points and lines can be clicked."/>
+
+			<item name="STACKING" prompt="Stacking" tab="Line/Bar/Pie" type="javax.swing.JCheckBox" help="Whether to stack the values of each series on top of each other."/>
+			<item name="NEGATIVE_COLOR" prompt="Negative Colour" tab="Line/Bar/Pie" type="com.acquire.util.ui.StyleSheetColorChooser" help="The colour for the parts of the graph or points that are below the threshold."/>
+			<item help="Switch display between column chart and pie chart" name="TOGGLE_BTN" prompt="Switch Display Between Column Chart And Pie Chart" tab="Line/Bar/Pie" type="javax.swing.JCheckBox"/>
+				
+			<item name="BARS" prompt="Bar Parameters" tab="Line/Bar/Pie" type="com.acquire.util.ui.Legend" typeValue="5|N"/>
+			<item name="BAR_BORDER_COLOR" prompt="Bar Border Colour" tab="Line/Bar/Pie" type="com.acquire.util.ui.StyleSheetColorChooser" help="Bars/Columns border colour."/>
+			<item name="BAR_BORDER_WIDTH" prompt="Bar Border Width (px)" tab="Line/Bar/Pie" typeValue="NUMERIC|2" help="Bars/Columns border width."/>
+			<item layout="1" name="BAR_BORDER_RADIUS" prompt="Bar Border Radius (px)" tab="Line/Bar/Pie" typeValue="NUMERIC|2" help="The corner radius of the border surrounding each column or bar."/>
+			<item name="POINT_PADDING" prompt="Bar Spacing" help="Padding between each column or bar, in x axis units 0...1; invalid if Bar Width is specified" tab="Line/Bar/Pie" typeValue="DECIMAL"/>
+			<item name="POINT_WIDTH" layout="1" prompt="Bar Width (px)" tab="Line/Bar/Pie" typeValue="NUMERIC|3" help="A pixel value specifying a fixed width for each column or bar."/>
+
+			<item name="PIES" prompt="Pies Parameters" tab="Line/Bar/Pie" type="com.acquire.util.ui.Legend" typeValue="2|N"/>
+			<item name="SLICED_OFFSET" prompt="Selected Slice Offset" tab="Line/Bar/Pie" typeValue="NUMERIC|2" help="If a point is sliced, moved out from the center, specify how many pixel will be moved."/>
+			<item defaultValue="#000000" layout="1" name="CONNECTOR_COLOR" prompt="Connector Colour" tab="Line/Bar/Pie" type="com.acquire.util.ui.StyleSheetColorChooser" help="The colour of the line connecting the data label to the pie slice."/-->
+		</custom>
+	</widget>
+</widgets>

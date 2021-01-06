@@ -1,0 +1,28 @@
+<!-- $Revision: 1.4 $ -->
+$%SCRIPT$
+var ecCode = "$$ITEM.EC_GENERATE().ESCAPEFORJS()$";
+$%COMMENT$
+// If the structural element type (address, section, header, etc) is not set (yet), leave this alone, or else it will garble the presentation in the live designer.
+// If the structural element is set, strip off the beginning <div and end div>, if this doesn't start with a div then just surround it with the structural element
+// Special test for the details element wuch causes trouble in IE/Firefox so if browser features are being bought test if its compatible otherwise leave as div
+$%ENDCOMMENT$
+$%IF ITEM.StructuralType == "details"$
+	$%IF BROWSER_FEATURES == "" || BROWSER_FEATURES.details == "Y"$
+		var structuralType = "$$ITEM.StructuralType$";
+	$%ELSE$ 
+		var structuralType = "";
+	$%ENDIF$
+$%ELSE$
+	var structuralType = "$$ITEM.StructuralType$";
+$%ENDIF$
+if (structuralType) {
+	var innerContent = "";
+	if ( ecCode.indexOf("<div ") == 0 ) {
+	  innerContent = ecCode.substring(4, ecCode.length - 4);
+	} else {
+	  innerContent = ">" + ecCode + "</";
+	}
+	ecCode = "<$$ITEM.StructuralType$" + innerContent + "$$ITEM.StructuralType$>"; 
+}
+ecCode;
+$%ENDSCRIPT$

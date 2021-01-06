@@ -1,0 +1,114 @@
+.instrumentContainer {
+  background-color: #fff !important;
+  padding: 0 0px 0 4px !important;
+  border: 1px solid #ddd !important;
+}
+.autocompleteResults {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  position: absolute;
+  padding: 5px;
+  z-index: 1;
+  display: none;
+  width: auto;
+}
+
+.autocompleteResults .instrument {
+  border-bottom: 1px solid #ccc;
+  display: table-cell;
+}
+
+.autocompleteResults div.recommended0, .autocompleteResults div.recommended1 {
+  display: table-cell;
+  border-bottom: 1px solid #ccc;
+  vertical-align: middle;
+}
+
+.autocompleteResults .instrumentWrapper {
+  display: table-row;
+}
+
+.autocompleteResults div.recommended1::after {
+  content: "\101";
+  font-family: T-Fonticons;
+  font-size: 1rem;
+  color: #444;
+}
+
+.autocompleteResults .instrumentWrapper:hover {background-color: #e2ebf3; cursor: pointer}
+.autocompleteResults .instrumentWrapper.selected {background-color: #e2ebf3;}
+
+.autocompleteResults .denom {
+  font-weight: bold;
+}
+
+.autocompleteResults .category {
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.autocompleteResults .secuprof {
+  font-style: italic;
+}
+
+.autocompleteResults .managerCode {
+  font-weight: bold;
+}
+
+.autocompleteResults .managerDenom {
+  color: #bbb;
+}
+
+.autocompleteResults .managerName {
+  font-style: italic;
+}
+
+.selectedinstrument {
+  background-color: #ddd;
+  border-radius: 2px;
+  cursor: default;
+  padding: 0 3px;
+  margin: 0 3px;
+  word-wrap: normal;
+  white-space: pre-wrap;
+  line-height: 20px;
+}
+.selectedinstrument > span {
+  display: inline-block;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+  vertical-align: text-top;
+}
+.selectedinstrument i.tc-icon {
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 4px;
+  vertical-align: text-top;
+}
+
+.selectedinstruments {
+  width: auto !important;
+  line-height: 25px;
+}
+
+
+.filterItem {
+  float: right !important;
+  background-color: #e8e8e8;
+  border-radius: 6px;
+  float: right !important;
+  padding-left: 10px;
+  width: 87%;
+}
+.filterItem:hover {
+  background-color: #dddddd;
+}
+
+.filterItem label[for] {
+  cursor: pointer;
+  display: block;
+  line-height: 32px;
+}

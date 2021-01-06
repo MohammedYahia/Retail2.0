@@ -1,0 +1,14 @@
+<!-- $Revision: 1.1 $ -->
+
+$%IF ITEM.button_body == "Y" $$$ITEM.EC_GENERATE()$$%ENDIF$ 
+$%IF ITEM.NotApplicableAppearance != "Disable" && ITEM.NotApplicableAppearance != "Hide" || ITEM.HideField != "Y" $
+ <script type = "text/javascript" charset="utf-8">
+ function backbutton_$$ITEM.ID()$_callback() {
+   $$ITEM.NAVIGATION()$
+}
+function $$ITEM.ID()$onDeviceReady() {
+     document.addEventListener("backbutton", backbutton_$$ITEM.ID()$_callback, false);
+}
+ document.addEventListener("deviceready", $$ITEM.ID()$onDeviceReady, false);
+</script>
+$%ENDIF$

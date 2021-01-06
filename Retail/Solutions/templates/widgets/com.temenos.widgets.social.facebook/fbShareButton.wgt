@@ -1,0 +1,19 @@
+<style>
+#$$ITEM.ID()$ .fb-share-button span, 
+#$$ITEM.ID()$ .fb-share-button iframe {
+$%IF ITEM.layout == "box_count"$ width: 58px !important; height: 61px !important;$%ENDIF$
+$%IF ITEM.layout == "button_count"$ width: 98px !important; height: 20px !important;$%ENDIF$
+$%IF ITEM.layout == "button"$ width: 58px !important; height: 20px !important;$%ENDIF$
+$%IF ITEM.layout == "link"$ width: 110px !important; height: 13px !important;$%ENDIF$
+$%IF ITEM.layout == "icon_link"$ width: 52px !important; height: 13px !important;$%ENDIF$
+$%IF ITEM.layout == "icon"$ width: 15px !important; height: 17px !important;$%ENDIF$
+$%IF ITEM.width != ""$ width: $$ITEM.width$px !important;$%ENDIF$
+
+}
+</style>
+<div class="fb-share-button" 
+$%IF ITEM.href != ""$ data-href="$$ITEM.href$"
+$%ENDIF$$%IF ITEM.layout != ""$ data-layout="$$ITEM.layout$"
+$%ENDIF$$%IF ITEM.width != ""$ data-width="$$ITEM.width$"
+$%ENDIF$></div>
+$%INCLUDE widgets/com.temenos.widgets.social.facebook/inc_fbRegisterWidget.wgt$$%ENDINCLUDE$

@@ -1,0 +1,121 @@
+/* Force children inside container */
+.menu_container,
+[role="menu"] {
+    position: relative;
+}
+
+/* Get rid of the margin, padding and bullets in the unordered lists */
+.default-menu, .default-menu ul {padding:0; margin:0; list-style-type: none;}
+
+/* Set up the link size, color and borders */
+.default-menu a, .default-menu a:visited {display:block; height:30px; line-height:24px; text-decoration:none; text-indent:5px; border:1px solid #000; border-width:1px 1px 1px 1px;}
+
+/* Set up the list items */
+.default-menu li {position: relative; float:left;}
+
+/* For Non-IE browsers and IE7 */
+.default-menu li:hover {position:relative;border-bottom: 1px;z-index:1;}
+/* Make the hovered list color persist */
+.default-menu li:hover > a { }
+/* Set up the sublevel lists with a position absolute for flyouts and overrun padding. The transparent gif is for IE to work */
+.default-menu li ul {display:none;}
+/* For Non-IE and IE7 make the sublevels visible on list hover. This is all it needs */
+/* .default-menu li:hover > ul {display:block; position:absolute; top:-10px; padding:10px 30px 30px 30px; } */
+.default-menu li:hover > ul {display:block; position:absolute; }
+
+/* get rid of the table */
+.default-menu table {position:absolute; top:0; left:0;}
+
+/* For IE5.5 and IE6 give the hovered links a position relative and a change of background and foreground color. This is needed to trigger IE to show the sub levels */
+* html .default-menu li a:hover {position:relative; }
+
+.default-menu li :hover > a {padding-top: 0px;}
+.default-menu li > a {padding-top: 0px;}
+
+/* For accessibility of the top level menu when tabbing */
+.default-menu li a:active, .default-menu li a:focus {}
+
+/* This lot is for IE5.5 and IE6 ONLY and is necessary to make the sublevels appear */
+
+/* change the drop down levels from display:none; to visibility:hidden; */
+* html .default-menu li ul {visibility:hidden; display:block; position:absolute;}
+
+/* keep the third level+ hidden when you hover on first level link */
+.default-menu li a:hover ul ul{
+visibility:hidden;
+}
+/* keep the fourth level+ hidden when you hover on second level link */
+.default-menu li a:hover ul a:hover ul ul{
+visibility:hidden;
+}
+/* keep the fifth level hidden when you hover on third level link */
+.default-menu li a:hover ul a:hover ul a:hover ul ul{
+visibility:hidden;
+}
+/* keep the sixth level hidden when you hover on fourth level link */
+.default-menu li a:hover ul a:hover ul a:hover ul a:hover ul ul {
+visibility:hidden;
+}
+
+/* make the second level visible when hover on first level link and position it */
+.default-menu li a:hover ul {
+visibility:visible;
+}
+
+/* make the third level visible when you hover over second level link and position it and all further levels */
+.default-menu li a:hover ul a:hover ul{
+visibility:visible;
+}
+/* make the fourth level visible when you hover over third level link */
+.default-menu li a:hover ul a:hover ul a:hover ul {
+visibility:visible;
+}
+/* make the fifth level visible when you hover over fourth level link */
+.default-menu li a:hover ul a:hover ul a:hover ul a:hover ul {
+visibility:visible;
+}
+/* make the sixth level visible when you hover over fifth level link */
+.default-menu li a:hover ul a:hover ul a:hover ul a:hover ul a:hover ul {
+visibility:visible;
+}
+/* If you can see the pattern in the above IE5.5 and IE6 style then you can add as many sub levels as you like */
+
+
+
+#EDGE_CONNECT_PROCESS ul.menuhoriz li{
+    background-color: #003e75;
+    color: white;
+
+}
+#EDGE_CONNECT_PROCESS ul.menuhoriz li a{
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+}
+#EDGE_CONNECT_PROCESS ul.menuhoriz ul>li {
+	background-color: #003e75;
+}
+
+/* Arrow indicator for items that have popout */
+.menu_container .has-popout > a::after{
+    content: "\0023F5";
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
+.menuhoriz [id^="MNU_"] > li.has-popout > a::after{
+    content: "\0023F7";
+    top: -3px;
+}
+.menuvert .default-menu > li{
+    float: none;
+}
+a[aria-expanded="true"] + ul{
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+.menuhoriz>li>ul{
+    left: 0 !important;
+    top: auto !important;
+}

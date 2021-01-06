@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+  <widget name="tw-PerfectScrollSection" type="Section">
+		<template type="header" value="perfectScroll-header.wgt"/>
+		<template type="source" value="perfectScroll.wgt"/>
+	</widget>
+</widgets>

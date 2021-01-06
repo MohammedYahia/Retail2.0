@@ -1,0 +1,6 @@
+$$ITEM.EC_GENERATE()$
+
+<script>
+$("#$$ITEM.ID()$").attr("placeholder", "$$ITEM.PLACEHOLDER$");
+$("#$$ITEM.ID()$").attr("rows", "5");
+</script>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><DataSetRoot DSAttrsNewLine="N" DSOmitXMLDecl="N" DSPrettyPrint="Y" DS_UID="2">
+  <!---->
+<EligibleProducts CatAvailableDate="20120614" Currency="USD|EUR|GBP|SGD|CHF" CurrencyDescription="US Dollar|Euro|Pound Sterling|Singapore Dollars|Swiss Franc" DS_REF_DATAGROUP_ATTRIBUTE_NAME="EligibleProducts[C]" DS_UID="1" InterestDetails="DEPOSITINT" Product="DEPOSIT.SHORT" ProductGroup="DEPOSITS" ProductGroupDescription="Term Deposits" ProductLine="DEPOSITS" ProductLineDescription="Deposits">
+    <Description DS_REF_DATAGROUP_ATTRIBUTE_NAME="EligibleProducts[C].Description" DS_UID="0" ProductDescription="Short Term Deposit"/>
+  </EligibleProducts>
+</DataSetRoot>

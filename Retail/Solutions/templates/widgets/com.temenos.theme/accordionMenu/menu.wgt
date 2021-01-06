@@ -1,0 +1,25 @@
+<div id="MENU_$$ITEM.ID()$" class="tc-accordion-menu tetris_navPart $$ITEM.STYLES().MenuStyle$ menu_container">
+	<ul>
+    	$$FORMCONTENT$
+    </ul>
+</div>
+<style type="text/css">
+.tc-accordion-menu a:only-child:after {
+	content: "$$ITEM.POPOUT_ICON$";
+}
+
+</style>
+<script type="text/javascript" charset="utf-8">
+//<![CDATA[
+$(function(){
+	AccordionMenu.create({
+		id:		"MENU_$$ITEM.ID()$",
+		restoreState:   "$$ITEM.RESTORE_MENU_STATE$",
+		multiExpanding: "$$ITEM.MULTI_EXPANDING$",
+		dividersInd:    "$$ITEM.DIVIDERS$",
+		greyout:	"$$ITEM.GREYOUT$"
+	});
+})
+	//]]>			
+</script>
+

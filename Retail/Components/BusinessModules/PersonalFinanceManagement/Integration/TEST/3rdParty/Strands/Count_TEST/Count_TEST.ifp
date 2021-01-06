@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><Project AllowEditFromSolution="Y" CheckedInChangeSetsSinceGetLatest="" CmsFlag="N" Connect="version 6.1.2__1" HybridFlag="N" ImportsClassType="com.acquire.intelligentforms.entities.mapping.ImportRecordRoot" ImportsName="Import Records Root" Name="Count_TEST" ParentId="8837074" ProjectExtension=".ifp" ProjectFolder="D:/Local/PFM/TCIB/Components/BusinessModules/PersonalFinanceManagement/Integration/IRIS/3rdParty/Strands/Count" ProjectType="Y" StatefulComponent="N" eid="1CAC09E363AB326A48520"><![CDATA[
+  ]]>
+  <Types Name="Types Root" eid="1CAC09E363AB326A48522"><![CDATA[
+    ]]>
+    <Lists Name="Lists" eid="1CAC09E363AB326A48666"/>
+    <DataTypes Name="Data Types" eid="1CAC09E363AB326A48667"><![CDATA[
+      ]]>
+      <DataType Name="Text" eid="1CAC09E363AB326A48668"/>
+      <DataType Name="Number" Type="Number" eid="1CAC09E363AB326A48669"/>
+      <DataType Name="Decimal" Type="Decimal" eid="1CAC09E363AB326A48670"/>
+      <DataType Name="Date" Type="Date" eid="1CAC09E363AB326A48671"/>
+      <DataType Name="File" Type="File" eid="1CAC09E363AB326A48672"/>
+      <CustomType MaxFieldLength="60" MinFieldLength="0" Name="Email" RegularExpression="^([a-zA-Z0-9_\.\-]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" Type="Text" ValidationType="Regular Expression" eid="1CAC09E363AB326A48673"/>
+    </DataTypes>
+    <Structures Name="Data Structures" eid="1CAC09E363AB326A48674"/>
+  </Types>
+  <Dictionary Name="1CAC09E363AB326A DataDictionary 1" eid="1CAC09E363AB326A48523"><![CDATA[
+    ]]>
+    <PropertyGroup Name="Data Store Root" eid="1CAC09E363AB326A48525"><![CDATA[
+      ]]>
+      <PropertyGroup LinkToStructure="N" Name="Count" eid="1CAC09E363AB326A49073"><![CDATA[
+        ]]>
+        <Property JSONName="result" Name="result" ShowJSONMapping="true" Type="Number" eid="1CAC09E363AB326A70758"/>
+        <PropertyGroup JSONCollectionKind="Object" JSONName="error" Name="error" ShowJSONMapping="true" eid="1CAC09E363AB326A70759"/>
+      </PropertyGroup>
+      <PropertyGroup LinkToStructure="N" Name="Filter" eid="1CAC09E363AB326A71173"><![CDATA[
+        ]]>
+        <Property Name="FilterString" eid="1CAC09E363AB326A71175"/>
+      </PropertyGroup>
+    </PropertyGroup>
+  </Dictionary>
+  <DataMapping Name="Integration Root" eid="1CAC09E363AB326A48529"><![CDATA[
+    ]]>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.DebugLogDataSource" FileName="logs/Debug.log" FileRotation="New log file at file size limit" Name="Connect DebugLog" NewPerSize="512" eid="1CAC09E363AB326A48678"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SyserrLogDataSource" FileName="logs/Syserr.log" FileRotation="New log file each session" Name="Connect SyserrLog" NewPerSize="512" eid="1CAC09E363AB326A48679"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SysoutLogDataSource" FileName="logs/Sysout.log" FileRotation="New log file each session" Name="Connect SysoutLog" NewPerSize="512" eid="1CAC09E363AB326A48680"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SecurityLogDataSource" FileName="logs/Security.log" FileRotation="New log file at file size limit" Name="Connect SecurityLog" NewPerSize="512" eid="1CAC09E363AB326A48681"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.json.JSONDataSource" ConnectionAttempts="5" ConnectionTimeout="1000" EndPointURL="$$!PFM_URL$/alerts/count.action$$Filter[1].FilterString$" Engine="JSON Engine" HTTPHeaderNames="HTTP_STRANDS_USER" HTTPHeaderValues="testUserMS1" Name="Count" Password="$$!PFM_API_PASSWORD$" SecurityType="Basic Authentication" SocketTimeout="1000" UseSecurityCertificate="N" UserName="$$!PFM_API_USER_NAME$" eid="1CAC09E363AB326A49070"/>
+  </DataMapping>
+  <Rules Name="Rules Root" eid="1CAC09E363AB326A48527"><![CDATA[
+    ]]>
+    <Rule BreakPointEnabled="Y" Name="Container - get count value" RuleClassName="com.acquire.intelligentforms.rules.ContainerRule" RuleDisabled="N" eid="1CAC09E363AB326A70829"><![CDATA[
+      ]]>
+      <Rule ErrorHandlingType="Pass Up" HTTPMethod="GET" Name="JSON Integration - Count" Output="Count[1]" RuleClassName="com.acquire.intelligentforms.rules.JSONIntegrationRule" RuleDisabled="N" RuleType="True" SourceName="Count" eid="1CAC09E363AB326A70840"/>
+    </Rule>
+  </Rules>
+  <Products Name="Processes Root" eid="1CAC09E363AB326A48531"><![CDATA[
+    ]]>
+    <Product Componentcomment="This component is a JSON integration component used to retrieve the count value from strands.&#10;&#10;Input parameters:&#10;Filter value {e.g., typeValue}&#10;&#10;Output parameters:&#10;Count number" Count0_0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Count0_0_0_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.NumberType|Number" Count0_0_0_ExportedProperty="Count[1].result" Count0_0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |Count[1].result" Count0_0_0_LinkedEntityJSONName="result" Count0_0_0_LinkedEntityName="result" Count0_0_0_LinkedEntityShowJSONMapping="true" Count0_0_0_LinkedEntityType="Number" Count0_0_0_OriginalEntityEID="1CAC09E363AB326A70758" Count0_0_0_OriginalEntityName="result" Count0_0_0_PropertyKey="Count[1].result" Count0_0_0_PubOut="Y" Count0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Count0_0_DGInst="1" Count0_0_ExportedPropertyGroup="Count[1]" Count0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |Count" Count0_0_LinkedEntityLinkToStructure="N" Count0_0_LinkedEntityName="Count" Count0_0_NumChildren="1" Count0_0_OriginalEntityEID="1CAC09E363AB326A49073" Count0_0_OriginalEntityName="Count" Count0_0_PropertyKey="Count" Count0_0_PubOut="Y" Count0_1_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Count0_1_0_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" Count0_1_0_ExportedProperty="Filter[1].FilterString" Count0_1_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |Filter[1].FilterString" Count0_1_0_LinkedEntityName="FilterString" Count0_1_0_OriginalEntityEID="1CAC09E363AB326A71175" Count0_1_0_OriginalEntityName="FilterString" Count0_1_0_PropertyKey="Filter[C].FilterString" Count0_1_0_PubIn="Y" Count0_1_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Count0_1_ExportedPropertyGroup="Filter[1]" Count0_1_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |Filter" Count0_1_LinkedEntityLinkToStructure="N" Count0_1_LinkedEntityName="Filter" Count0_1_NumChildren="1" Count0_1_OriginalEntityEID="1CAC09E363AB326A71173" Count0_1_OriginalEntityName="Filter" Count0_1_PropertyKey="Filter" Count0_1_PubIn="Y" Count0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Count0_DGInst="1" Count0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.DictionaryRoot| |Data Store Root" Count0_LinkedEntityName="Data Store Root" Count0_NumChildren="2" Count0_OriginalEntityEID="1CAC09E363AB326A48525" Count0_OriginalEntityName="Data Store Root" Count0_PubIn="Y" Count0_PubOut="Y" CountClassType="com.acquire.intelligentforms.entities.component.Component" CountComponentComment="This component is a JSON integration component used to retrieve the count value from strands.&#10;&#10;Input parameters:&#10;Filter value {e.g., typeValue}&#10;&#10;Output parameters:&#10;Count number" CountNumChildren="1" CountProjectName="Count" CountRulesOnly="Y" ErrorPhase="Count.Error" InitialPhase="Count.Home" Name="Count" PublishAsComponent="Y" RulesOnly="Y" eid="1CAC09E363AB326A70815"><![CDATA[
+      ]]>
+      <Phase Name="Home" ProcessRulesOnly="Y" eid="1CAC09E363AB326A70818"><![CDATA[
+        ]]>
+        <Rule ClassType="com.acquire.intelligentforms.rules.ContainerRule" LinkReference="1CAC09E363AB326A70829" Name="Link to Container - get count value" RuleType="PostPhase" eid="1CAC09E363AB326A71096"/>
+      </Phase>
+      <Phase Name="Error" ProcessRulesOnly="Y" eid="1CAC09E363AB326A71140"/>
+      <EVANote Name="A06D2FAA69599311 EVANote 2" NoteType="1CAC09E363AB326A48676" NoteTypeName="Specification" eid="A06D2FAA69599311736"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    This component is a JSON integration component used to retrieve the count 
+    value from strands.    
+<br />    
+<br />Input parameters:    
+<br />Filter value {e.g., typeValue}    
+<br />    
+<br />Output parameters:    
+<br />Count number
+  </body>
+
+</html>
+
+]]></EVANote>
+    </Product>
+  </Products>
+  <PresentationTypes Name="Presentation Types Root" eid="1CAC09E363AB326A48533"/>
+  <EVANotes Name="Notes Root" eid="1CAC09E363AB326A48535"><![CDATA[
+    ]]>
+    <EVANoteDefinition Name="ToDo" NoteName="ToDo" StatusRequired="Y" eid="1CAC09E363AB326A48675"/>
+    <EVANoteDefinition Name="Specification" NoteName="Specification" StatusRequired="N" eid="1CAC09E363AB326A48676"/>
+    <EVANoteDefinition Name="Comment" NoteName="Comment" StatusRequired="N" eid="1CAC09E363AB326A48677"/>
+  </EVANotes>
+  <LanguageMapDefinitionsRoot Name="Languages Root" eid="1CAC09E363AB326A48537"/>
+  <CordovaPluginsRoot Name="CordovaPlugins Root" eid="1CAC09E363AB326A48541"/>
+</Project>

@@ -1,0 +1,90 @@
+$%IF ITEM.GroupWithPrevious != "Y"$
+<link type="text/css" href="./templates/widgets/com.wsc.theme/highCharts/css/highcharts.css" rel="stylesheet" />
+<script src="./templates/widgets/com.wsc.theme/highCharts/js/highcharts.js"></script>
+<script src="./templates/widgets/com.wsc.theme/highCharts/js/highcharts-3d.js"></script>
+<script src="./templates/widgets/com.wsc.theme/highCharts/js/highcharts-nodata.js"></script>
+$%ENDIF$
+$%IF ITEM.ChartType == "Bullet Graph"$
+<script src="./templates/widgets/com.wsc.theme/highCharts/js/bullet.js"></script>
+$%ENDIF$
+$%IF ITEM.ChartType == "Errorbar Chart" || ITEM.ChartType == "Bubble Chart"$
+<script src="./templates/widgets/com.wsc.theme/highCharts/js/highcharts-more.js"></script>
+$%ENDIF$
+$%IF ITEM.TableID != ""$
+<script src="./templates/widgets/com.wsc.theme/highCharts/js/data.js"></script>
+<script src="./templates/widgets/com.wsc.theme/highCharts/js/drilldown.js"></script>
+$%ENDIF$
+<style>
+.highcharts-legend-item text,
+.highcharts-data-label text {
+	color: #333;
+}
+.highcharts-legend-item.highcharts-bullet-series.highcharts-color-1.highcharts-series-1.highcharts-legend-item-hidden .highcharts-point {
+  color: #e74c3c;stroke: #e74c3c !important;fill: #e74c3c !important;
+}
+.highcharts-legend-item.highcharts-bullet-series.highcharts-color-2.highcharts-series-2.highcharts-legend-item-hidden .highcharts-point {
+  color: #D7D7D7;stroke: #D7D7D7 !important;fill: #D7D7D7 !important;
+}
+.highcharts-legend-item-hidden * {
+  color: #333;stroke: #333 !important;fill: #333 !important;
+}
+.highcharts-series.highcharts-series-0.highcharts-bullet-series.highcharts-color-0.highcharts-tracker {
+  fill-opacity: 1 !important;
+  opacity: 1 !important;
+}
+.highcharts-yaxis .highcharts-axis-line{stroke-width:1px}
+.highcharts-3d-top,.highcharts-3d-side{fill-opacity:.7}
+.highcharts-title{font: 16px Roboto Light, Arial, Helvetica, sans-serif; font-weight: normal; fill: #666;}
+.highcharts-legend-item.highcharts-pie-series tspan{font: 12px Roboto, sans-serif; font-weight: normal;}
+.highcharts-color-0{fill:#3498db;stroke:#2980b9;color:#2980b9}
+.highcharts-color-1{fill:#e74c3c;stroke:#c0392b;color:#c0392b}
+.highcharts-color-2{fill:#34495e;stroke:#f39c12;color:#f39c12}
+.highcharts-color-3{fill:#95a5a6;stroke:#27ae60;color:#27ae60}
+.highcharts-color-4{fill:#1abc9c;stroke:#8e44ad;color:#8e44ad}
+.highcharts-color-5{fill:#f1c40f;stroke:#7f8c8d;color:#7f8c8d}
+.highcharts-color-6{fill:#e67e22;stroke:#d35400;color:#d35400}
+.highcharts-color-7{fill:#9b59b6;stroke:#16a085;color:#16a085}
+.highcharts-color-8{fill:#2ecc71;stroke:#2c3e50;color:#2c3e50}
+.highcharts-color-9{fill:#bdc3c7;stroke:#3498db;color:#3498db}
+.highcharts-color-10{fill:#c0392b;stroke:#e74c3c;color:#e74c3c}
+.highcharts-color-11{fill:#2980b9;stroke:#f1c40f;color:#f1c40f}
+.highcharts-color-12{fill:#f39c12;stroke:#2ecc71;color:#2ecc71}
+.highcharts-color-13{fill:#16a085;stroke:#9b59b6;color:#9b59b6}
+.highcharts-color-14{fill:#95a5a6;stroke:#95a5a6;color:#95a5a6}
+.highcharts-color-15{fill:#e67e22;stroke:#e67e22;color:#e67e22}
+.highcharts-area{fill-opacity:.4}
+.bulletGraph .highcharts-color-0{fill:#34495E;stroke:#34495E;color:#34495E}
+.bulletGraph .highcharts-bullet-target {color: #e74c3c !important;stroke: #e74c3c;fill: #e74c3c;}
+.bulletGraph .highcharts-legend-item.highcharts-bullet-series.highcharts-color-1.highcharts-series-1.highcharts-legend-item-hidden .highcharts-point {
+  color: #e74c3c;stroke: #e74c3c !important;fill: #e74c3c !important;
+}
+.bulletGraph .highcharts-legend-item.highcharts-bullet-series.highcharts-color-2.highcharts-series-2.highcharts-legend-item-hidden .highcharts-point {
+  color: #D7D7D7;stroke: #D7D7D7 !important;fill: #D7D7D7 !important;
+}
+.bulletGraph .highcharts-legend-item-hidden * {
+  color: #333;stroke: #333 !important;fill: #333 !important;
+}
+.bulletGraph .highcharts-series.highcharts-series-0.highcharts-bullet-series.highcharts-color-0.highcharts-tracker {
+  fill-opacity: 1 !important;
+  opacity: 1 !important;
+}
+.bulletGraph .highcharts-yaxis .highcharts-axis-line {stroke: #fff;}
+</style>
+<script type="text/javascript">
+$(function() {
+	$(window).resize();
+})
+
+Hi.addHook('beforeChangeTab',  function(tabId, ns) {
+	var tabPaneName = buildCompID(ns, "Pane", tabId);
+	$("#" + tabPaneName + " .tc-chart").each(function(i,o) {
+		var chartId = $(o).attr("id");
+		if ( $("#" + chartId).highcharts() ) {
+			$("#" + chartId).highcharts().destroy()
+		}
+	})
+
+	return true;
+});
+
+</script>

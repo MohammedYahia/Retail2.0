@@ -1,0 +1,50 @@
+a {color:inherit;text-decoration:inherit;}
+input, select, textarea, button {font:inherit;color:inherit;}
+*[disabled] {background-color: #EBEBEB} 
+div.hr {border-top:1px solid gray; padding:0px;}
+.GlobalFont {font-size:11pt;font-family:Arial, Verdana, Geneva, Helvetica, sans-serif;}
+.Color1 {color:#636363;}
+.Color2 {color:#7F679B;}
+.Color3 {color:White;}
+.ErrorColor {color:#FF0034;}
+.BgColor1 {background-color:#F7F7F7;}
+.BgColor2 {background-color:#EBEBEB;}
+.BgColor3 {background-color:#BEAFD0;}
+.ErrorBgColor {background-color:#FFE8E8;}
+.VVLargeFont {font-size:2em;font-style:normal;}
+.VLargeFont {font-size:1.5em;font-style:normal;}
+.LargeFont {font-size:1.2em;}
+.MediumFont {font-size:1em;}
+.SmallFont {font-size:0.9em;}
+.VSmallFont {font-size:0.8em;}
+.VVSmallFont {font-size:0.6em;}
+.Underline {text-decoration:underline;}
+.Bold {font-weight:bold;}
+.Italic {font-style:italic;}
+.NotDisplayed {display:none;}
+.VShortAnswer {width:7em;}
+.ShortAnswer {width:9em;}
+.LongAnswer {width:17em;}
+.VLongAnswer {width:27em;}
+.CenteredLayout {margin-left:auto;margin-right:auto;}
+.TextAlignCenter {text-align:center;}
+.VAlignCenter {vertical-align:middle;}
+.NoDecoration {text-decoration:none;}
+.DivAdjustment {margin-top:0.4em;}
+.ProgressStep {padding:4px;width:10em;}
+.TrailStep {padding:4px;}
+.TablePadding {padding-top:6px;padding-bottom:6px;}
+.TableNavigator {text-align:center;}
+.TablePaging {text-align:right;}
+.StandardTabUnselected {width:10em;height:1.8em;border-top:solid 0.1em #919B9C;border-left:solid 0.1em #919B9C;border-right:solid 0.1em #919B9C;text-align:center;padding:4px;z-index:0;}
+.StandardTabSelected {width:10em;height:1.8em;border-top:solid 0.1em #919B9C;border-right:solid 0.1em #919B9C;border-left:solid 0.1em #919B9C;text-align:center;padding:4px;}
+.StandardTabPane {display:none;border-top:solid 0.1em #919B9C;border-right:solid 0.1em #919B9C;border-left:solid 0.1em #919B9C;border-bottom:solid 0.1em #919B9C;width:99%;padding:4px;}
+.autoCompleteListDefault {background-color:window;color:graytext;text-align:left;border:0.1em solid gray;padding:0.12em 1em 0.12em 0.12em;width:300px;}
+html > body *.autoCompleteListDefault {width:auto;}
+.autoCompleteItemDefault, *.autoCompleteListDefault div:hover {color:highlighttext;background-color:highlight;}
+.LeftAlignedImage {background-repeat:no-repeat;background-position:left center;background-color:Transparent;overflow:visible;padding-left:20px;padding-right:0px;border:0px;}
+.RightAlignedImage {background-repeat:no-repeat;background-position:right center;background-color:Transparent;overflow:visible;padding-left:0px;padding-right:20px;border:0px;}
+.BackArrow {background-image:url(../../images/BackArrow.gif);}
+.ForwardArrow {background-image:url(../../images/ForwardArrow.gif);}
+.ActionArrow {background-image:url(../../images/ActionArrow.gif);}
+.BrowserWindow {}

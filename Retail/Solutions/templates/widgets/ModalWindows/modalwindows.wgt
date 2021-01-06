@@ -1,0 +1,47 @@
+$%IF ITEM.Native == "Y"$
+<style>
+.modal-footer {
+margin-top: 0px;
+padding: 0px 0px 0px 0px;
+text-align: right;
+border-top: none;
+}
+.modal-content { background-color: rgba(255, 255, 255, 0.95);}
+.modal-header {text-align:center;}
+</style>
+$%ENDIF$
+<div class="modal fade" id="$$ITEM.ID()$" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        $%IF ITEM.Native != "Y"$<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>$%ENDIF$
+        <h4 class="$$ITEM.TitleClass$" id="myModalLabel">$$ITEM.Title$</h4>
+		$%IF ITEM.Native == "Y" && ITEM.Body != ""$<h5>$$ITEM.Body$</h5>$%ENDIF$
+      </div>
+      $%IF ITEM.Native != "Y"$<div class="modal-body">
+        $$ITEM.Body$
+      </div>
+	  $%ENDIF$
+      <div class="modal-footer">
+        $$ITEM.EC_GENERATE()$
+      </div>
+    </div>
+  </div>
+</div>
+
+$%IF ITEM.Native == "Y"$
+<script>
+function centerModal() {
+    $(this).css('display', 'block');
+    var $dialog = $(this).find(".modal-dialog");
+    var offset = ($(window).height() - $dialog.height()) / 2;
+    // Center modal vertically in window
+    $dialog.css("margin-top", offset);
+}
+
+$('.modal').on('show.bs.modal', centerModal);
+$(window).on("resize", function () {
+    $('.modal:visible').each(centerModal);
+});
+</script>
+$%ENDIF$

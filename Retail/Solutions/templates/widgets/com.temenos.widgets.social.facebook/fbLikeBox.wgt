@@ -1,0 +1,12 @@
+<div class="fb-like-box" 
+$%IF ITEM.colorscheme != ""$ data-colorscheme="$$ITEM.colorscheme$"
+$%ENDIF$$%IF ITEM.show_faces != "Y"$ data-show-faces="false"
+$%ENDIF$$%IF ITEM.force_wall == "Y"$ data-force-wall="true"
+$%ENDIF$$%IF ITEM.header != "Y"$ data-header="false"
+$%ENDIF$$%IF ITEM.show_border != "Y"$ data-show-border="false"
+$%ENDIF$$%IF ITEM.stream == "Y"$ data-stream="true"
+$%ENDIF$$%IF ITEM.href != ""$ data-href="$$ITEM.href$"
+$%ENDIF$$%IF ITEM.height != ""$ data-height="$$ITEM.height$"
+$%ENDIF$$%IF ITEM.width != ""$ data-width="$$ITEM.width$"$%ENDIF$></div>
+
+$%INCLUDE widgets/com.temenos.widgets.social.facebook/inc_fbRegisterWidget.wgt$$%ENDINCLUDE$

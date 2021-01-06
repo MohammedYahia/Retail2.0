@@ -1,0 +1,174 @@
+<!-- $Revision: 1.16.10.2 $ -->
+$%IF ITEM.IS_READONLY() == true && ITEM.READONLYSTYLE() == Text$
+	<span  id="$$ITEM.ID()$" style="$$ITEM.INLINE_STYLES().AnswerControlStyle$ $$ITEM.INLINE_STYLES().SpecificAnswerControlStyle$"  class="$$ITEM.STYLES().AnswerControlStyle$ $$ITEM.STYLES().SpecificAnswerControlStyle$">$$ITEM.DATAITEM().VALUE()$</span>
+$%ELSE$
+	$%IF ITEM.IS_SPLITDATE() == "true"$
+        $%COMMENT$
+		<!--input  type="text" id="$$ITEM.ID()$.$$ITEM.DATEPARTS[0]$" 
+				$%IF ITEM.IS_READONLY() == true$disabled="disabled"$%ENDIF$
+				name="$$ITEM.DATAITEM()$.$$ITEM.DATEPARTS[0]$()" size="$$ITEM.FieldSize$" value="$$ITEM.DATAITEM().VALUE()$" 
+				style="$$ITEM.INLINE_STYLES().AnswerControlStyle$ $$ITEM.INLINE_STYLES().SpecificAnswerControlStyle$"
+				class="$$ITEM.STYLES.AnswerControlStyle $$ITEM.STYLES().SpecificAnswerControlStyle$"
+				onchange="$$ITEM.VALIDATION()$"/>
+        <input  type="text" id="$$ITEM.ID()$.$$ITEM.DATEPARTS[1]$" 
+				$%IF ITEM.IS_READONLY() == true$disabled="disabled"$%ENDIF$
+				name="$$ITEM.DATAITEM()$.$$ITEM.DATEPARTS[1]$()" size="$$ITEM.FieldSize$" value="$$ITEM.DATAITEM().VALUE()$" 
+				style="$$ITEM.INLINE_STYLES().AnswerControlStyle$ $$ITEM.INLINE_STYLES().SpecificAnswerControlStyle$"
+				class="$$ITEM.STYLES.AnswerControlStyle $$ITEM.STYLES().SpecificAnswerControlStyle$"
+				onchange="$$ITEM.VALIDATION()$"/>
+        <input  type="text" id="$$ITEM.ID()$.$$ITEM.DATEPARTS[2]$" 
+				$%IF ITEM.IS_READONLY() == true$disabled="disabled"$%ENDIF$
+				name="$$ITEM.DATAITEM()$.$$ITEM.DATEPARTS[2]$()" size="$$ITEM.FieldSize$" value="$$ITEM.DATAITEM().VALUE()$" 
+				style="$$ITEM.INLINE_STYLES().AnswerControlStyle$ $$ITEM.INLINE_STYLES().SpecificAnswerControlStyle$"
+				class="$$ITEM.STYLES.AnswerControlStyle $$ITEM.STYLES().SpecificAnswerControlStyle$"
+				onchange="$$ITEM.VALIDATION()$"/-->				
+		$%ENDCOMMENT$
+		$$ITEM.EC_GENERATE()$
+	$%ELSE$
+		<input  type="text" 
+				id="$$ITEM.ID()$" 
+				$%IF ITEM.IS_READONLY() == true || ITEM.IS_HIDDEN() == true$disabled="disabled"$%ENDIF$
+				name="$$ITEM.DATAITEM()$" 
+				size="$$ITEM.FieldSize$"
+				value="$$ITEM.DATAITEM().DISPLAY_VALUE()$" 
+				style="$$ITEM.INLINE_STYLES().AnswerControlStyle$ $$ITEM.INLINE_STYLES().SpecificAnswerControlStyle$"
+				class="$$ITEM.STYLES().AnswerControlStyle$ $$ITEM.STYLES().SpecificAnswerControlStyle$"
+				onchange="$$ITEM.VALIDATION()$"/>
+	$%ENDIF$
+	
+	<style type="text/css">
+
+		$%IF ITEM.BAR_COLOR == ""$
+			$%SET var_bar_color = transparent$ $%ENDSET$
+		$%ELSE$
+			$%SET var_bar_color := ITEM.BAR_COLOR$ $%ENDSET$
+		$%ENDIF$
+
+		#WRAP_$$ITEM.ID()$ {
+			position: absolute;
+		}
+		$%IF !__EC_IS_DESIGNER == 'Y'$
+		.ui-datepicker-trigger {
+			position: relative;
+			z-index:1;
+		}
+		$%ENDIF$
+		#WRAP_$$ITEM.ID()$ .ui-datepicker {
+			padding: 1px;
+            left: 0 !important;
+            top: auto !important;
+			position: relative !important;
+			$%IF ITEM.BAR_COLOR != ""$
+				border: 1px solid $$ITEM.BAR_COLOR$;	
+			$%ENDIF$
+		}
+		
+		#WRAP_$$ITEM.ID()$ .ui-widget {
+			font-family: inherit;
+		}
+		
+		#WRAP_$$ITEM.ID()$ .ui-widget select {
+			font-family: inherit;
+		}
+			
+		#WRAP_$$ITEM.ID()$ .ui-datepicker.ui-widget-content  .ui-datepicker-calendar {
+			$%IF ITEM.BAR_COLOR != ""$
+				border: 2px solid $$ITEM.BAR_COLOR$;
+			$%ENDIF$
+		}
+		
+		#WRAP_$$ITEM.ID()$ .ui-datepicker.ui-widget-content  .ui-datepicker-header {
+			$%IF ITEM.BAR_COLOR != ""$
+				background-color: $$ITEM.BAR_COLOR$; 
+				border: none; 
+				background-image: none; 
+			$%ENDIF$
+		}
+
+		#WRAP_$$ITEM.ID()$ .ui-datepicker.ui-widget-content  .ui-state-disabled>span {
+			$%IF ITEM.INVALID_COLOR != ""$
+				background-color: $$ITEM.INVALID_COLOR$;
+				background-image: none;
+			$%ENDIF$
+		}
+			
+		#WRAP_$$ITEM.ID()$ .ui-datepicker.ui-widget-content .ui-state-default {
+			$%IF ITEM.VALID_COLOR != ""$
+				background-color: $$ITEM.VALID_COLOR$;
+				background-image: none;
+			$%ENDIF$
+		}
+		
+		#WRAP_$$ITEM.ID()$ .ui-datepicker.ui-widget-content .ui-state-active {
+			$%IF ITEM.SELECTED_COLOR != ""$
+				background-color: $$ITEM.SELECTED_COLOR$;
+			$%ENDIF$
+		}
+		
+		#WRAP_$$ITEM.ID()$ .ui-datepicker table{
+			margin: 0px;
+		}
+
+	</style>
+
+
+	<script type="text/javascript">
+		$(function() {
+            $%COMMENT$ hide old picker $%ENDCOMMENT$
+			var pickerId = getPickerID( "$$NAMESPACE$", "$$ITEM.ID()$", "$$ITEM.RuntimeId$");
+			$("#"+pickerId+", #FloatCalendarDiv").css("display", "none");
+			var startdate = "$$ITEM.STARTDATE$";
+			var startdate = startdate.replace(/&#x2F;/gi,'/');
+			console.log(startdate);
+            $( "#$$ITEM.ID()$" ).datepicker({	
+				dateFormat: "$$ITEM.DATEFORMAT()$".replace("yyyy", "yy"),
+				$%IF ITEM.MINVALUE() != ""$minDate: "$$ITEM.DISPLAY_MINVALUE()$", $%ENDIF$
+				$%IF ITEM.MAXVALUE() != ""$maxDate: "$$ITEM.DISPLAY_MAXVALUE()$", $%ENDIF$
+				changeMonth: true,
+				changeYear: true,
+				minDate: startdate, 
+				maxDate: "$$ITEM.ENDDATE$", 
+				showAnim: "slideDown",
+				$%IF ITEM.CAL_IMAGE != ""$
+					buttonImage: '$$ITEM.CAL_IMAGE$',
+					showOn: "button",
+					buttonImageOnly: true,
+					buttonText: "$$ITEM.HintText$",
+				$%ENDIF$
+				$%IF ITEM.DATAITEM().VALUE() != ""$defaultDate: "$$ITEM.DATAITEM().DISPLAY_VALUE()$",$%ENDIF$
+				numberOfMonths: $$ITEM.MONTHS_TO_SHOW$,
+				beforeShow: function(input, inst) {  
+					$(this).attr("readonly", "readonly");
+					if (!inst.dpDiv.parent().hasClass("calendar-base")){ 
+						inst.dpDiv.unwrap();
+						inst.dpDiv.wrap("<div id='WRAP_$$ITEM.ID()$'></div>");
+						$("#WRAP_$$ITEM.ID()$").appendTo( $(this).parent() );
+						if( $("#WRAP_$$ITEM.ID()$").length == 0 ){
+							inst.dpDiv.parent().appendTo( $(this).parent() );
+						}
+					} 
+				},
+				onClose: function(dateText, inst, event) {
+					$(this).removeAttr("readonly");
+					$$ITEM.QLR()$
+				}									
+			});
+			$( "#$$ITEM.ID()$" ).focusout(function() {
+			if ($( "#$$ITEM.ID()$" ).val()=='') {
+						$( "#$$ITEM.ID()$" ).datepicker( "setDate", startdate );
+						}
+			});
+			$%IF ITEM.IS_READONLY() == true$
+				$( "#$$ITEM.ID()$" ).datepicker('disable');
+			$%ENDIF$
+	        $%IF ITEM.LOCALE != ""$
+	            $( "#$$ITEM.ID()$" ).datepicker("option", $.datepicker.regional['$$ITEM.LOCALE$']);
+	        $%ELSE$
+	            $%IF LANGUAGE_MAP_CODE != ""$
+	            	$( "#$$ITEM.ID()$" ).datepicker("option", $.datepicker.regional['$$LANGUAGE_MAP_CODE$']);
+	            $%ENDIF$
+	        $%ENDIF$
+		});
+
+	</script>
+$%ENDIF$

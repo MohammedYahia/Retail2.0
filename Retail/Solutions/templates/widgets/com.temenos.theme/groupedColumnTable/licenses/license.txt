@@ -1,0 +1,4 @@
+This uses jquery treetable 
+
+This plugin is released under both the MIT and the GPLv2 license by Ludo van den Boom.
+

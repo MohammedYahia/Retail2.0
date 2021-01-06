@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?><LanguageMap presentations="PendingCheques" project="PendingCheques" sourcelanguage="en-GB" targetlanguage="fr" updated="26/03/18 11:45" version="1">
+  <Comment/>
+  <ProcessEntities>
+    <ProcessEntity class="com.acquire.intelligentforms.entities.Product" displayString="PendingCheques" eid="5E7CF8BA1EDFEAF31090" path="PendingCheques" type="Process">
+      <Note author="EVA-Note"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    UI&#160;Component to handle pedning stop cheques
+  </body>
+
+</html>
+
+]]></Note>
+      <ProcessEntityAttr default="" name="HelpIconHint" original="" state="NEW">
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="4269664B1E841579950863:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" forPresObjects="ACC24D6E2F31479C224311:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="4269664B1E841579966595:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="4269664B1E841579950907:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" forPresObjects="5E7CF8BA1EDFEAF336736:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="4269664B1E841579967755:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="4269664B1E841579967732:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="ACC24D6E2F31479C224317:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="ACC24D6E2F31479C224318:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="ACC24D6E2F31479C224315:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="ACC24D6E2F31479C224316:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="4269664B1E841579972107:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="ACC24D6E2F31479C224314:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="4269664B1E841579955343:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="4269664B1E841579972102:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="4269664B1E841579966629:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="4269664B1E841579957540:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="4269664B1E841579953145:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="4269664B1E841579954239:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="4269664B1E841579955325:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="4269664B1E841579953127:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="4269664B1E841579951988:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="4269664B1E841579967750:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="4269664B1E841579966634:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" forPresObjects="5E7CF8BA1EDFEAF336723:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationProduct" forPresObjects="5E7CF8BA1EDFEAF336722:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="4269664B1E841579968853:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="ACC24D6E2F31479C224324:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="ACC24D6E2F31479C224325:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="4269664B1E841579954244:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF31090:Process" state="NEW" status="NEW" value=""/>
+      </ProcessEntityAttr>
+      <Container class="com.acquire.intelligentforms.entities.Phase" displayString="StopChequeList" eid="5E7CF8BA1EDFEAF31104" type="Phase">
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Manage Cheques" eid="5E7CF8BA1EDFEAF32561" path="PendingCheques.StopChequeList.Manage Cheques" type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336724:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32561:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336724:PendingCheques" mappingType="OVERRIDE" original="Manage Cheques" specifiedBy="5E7CF8BA1EDFEAF32561:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336724:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32561:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336724:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32561:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Show Options" eid="4269664B1E841579956444" path="PendingCheques.StopChequeList.Show Options" type="Button">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="4269664B1E841579956445:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="4269664B1E841579956444:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="4269664B1E841579956445:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="4269664B1E841579956444:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="4269664B1E841579956445:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="4269664B1E841579956444:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="4269664B1E841579956445:PendingCheques" mappingType="OVERRIDE" original="Show Options" specifiedBy="4269664B1E841579956444:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <Container class="com.acquire.intelligentforms.entities.ItemGroup" displayString="Download Buttons" eid="5E7CF8BA1EDFEAF36327" type="Item Group">
+          <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Print" eid="5E7CF8BA1EDFEAF36328" path="PendingCheques.StopChequeList.Download Buttons.Print" type="Button">
+            <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336726:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF36328:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336726:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF36328:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336726:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF36328:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336726:PendingCheques" mappingType="OVERRIDE" original="Print" specifiedBy="5E7CF8BA1EDFEAF36328:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+          <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Download PDF" eid="5E7CF8BA1EDFEAF36370" path="PendingCheques.StopChequeList.Download Buttons.Download PDF" type="Button">
+            <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336727:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF36370:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336727:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF36370:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336727:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF36370:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336727:PendingCheques" mappingType="OVERRIDE" original="Download PDF" specifiedBy="5E7CF8BA1EDFEAF36370:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+          <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Download CSV" eid="5E7CF8BA1EDFEAF36412" path="PendingCheques.StopChequeList.Download Buttons.Download CSV" type="Button">
+            <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336728:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF36412:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336728:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF36412:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336728:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF36412:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336728:PendingCheques" mappingType="OVERRIDE" original="Download CSV" specifiedBy="5E7CF8BA1EDFEAF36412:Button" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+        </Container>
+        <Container class="com.acquire.intelligentforms.entities.ItemGroup" displayString="Cheques" eid="5E7CF8BA1EDFEAF36461" type="Item Group">
+          <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="There are no records to display" eid="5E7CF8BA1EDFEAF36460" path="PendingCheques.StopChequeList.Cheques.There are no records to display" type="Heading">
+            <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336730:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF36460:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336730:PendingCheques" mappingType="OVERRIDE" original="There are no records to display" specifiedBy="5E7CF8BA1EDFEAF36460:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336730:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF36460:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336730:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF36460:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+          <ProcessEntity class="com.acquire.intelligentforms.entities.FormTable" displayString="PendingStopCheques" eid="5E7CF8BA1EDFEAF32558" path="PendingCheques.StopChequeList.Cheques.PendingStopCheques" type="Table">
+            <ProcessEntityAttr default="" name="MandMessage" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="5E7CF8BA1EDFEAF336731:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32558:Table" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="NavigationBackText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="5E7CF8BA1EDFEAF336731:PendingCheques" mappingType="OVERRIDE" original="&lt;" specifiedBy="5E7CF8BA1EDFEAF336731:Rich Presentation Table" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="NavigationForwardText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="5E7CF8BA1EDFEAF336731:PendingCheques" mappingType="OVERRIDE" original="&gt;" specifiedBy="5E7CF8BA1EDFEAF336731:Rich Presentation Table" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="NavigationInformationMessage" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="5E7CF8BA1EDFEAF336731:PendingCheques" mappingType="OVERRIDE" original="Page $$TABLE_CURRENT_PAGE$ of $$TABLE_LAST_PAGE$&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;" specifiedBy="5E7CF8BA1EDFEAF336731:Rich Presentation Table" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="NoRecordsMessage" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="5E7CF8BA1EDFEAF336731:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32558:Table" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="TableSummary" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="5E7CF8BA1EDFEAF336731:PendingCheques" mappingType="OVERRIDE" original="PendingStopCheques" specifiedBy="5E7CF8BA1EDFEAF32558:Table" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Responsive Icon" eid="4269664B1E841579963050" path="PendingCheques.StopChequeList.Cheques.PendingStopCheques.Responsive Icon" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="4269664B1E841579963051:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="4269664B1E841579963050:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="4269664B1E841579963051:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="4269664B1E841579963050:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="4269664B1E841579963051:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="4269664B1E841579963050:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="4269664B1E841579963051:PendingCheques" mappingType="OVERRIDE" original="Responsive Icon" specifiedBy="4269664B1E841579963050:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.Question" displayString="Account Number" eid="ACC24D6E2F31479C2754500" path="PendingCheques.StopChequeList.Cheques.PendingStopCheques.Account Number" type="Question">
+              <ProcessEntityAttr default="" name="AnswerPostfix" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C2754501:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="ACC24D6E2F31479C2754500:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="AnswerPrefix" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C2754501:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="ACC24D6E2F31479C2754500:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C2754501:PendingCheques" mappingType="OVERRIDE" original="Account Number" specifiedBy="ACC24D6E2F31479C2754500:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C2754501:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="ACC24D6E2F31479C2754500:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C2754501:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="ACC24D6E2F31479C2754500:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="InvalidMaxLengthMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C2754501:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="ACC24D6E2F31479C2754500:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="InvalidMinLengthMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C2754501:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="ACC24D6E2F31479C2754500:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="MandMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C2754501:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="ACC24D6E2F31479C2754500:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="QuestionListDefault" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C2754501:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="ACC24D6E2F31479C2754500:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ValidationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C2754501:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="ACC24D6E2F31479C2754500:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.Question" displayString="Payment Stop Reason" eid="ACC24D6E2F31479C302405" path="PendingCheques.StopChequeList.Cheques.PendingStopCheques.Payment Stop Reason" type="Question">
+              <ProcessEntityAttr default="" name="AnswerPostfix" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C302406:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="ACC24D6E2F31479C302405:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="AnswerPrefix" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C302406:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="ACC24D6E2F31479C302405:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C302406:PendingCheques" mappingType="OVERRIDE" original="Payment Stop Reason" specifiedBy="ACC24D6E2F31479C302405:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C302406:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="ACC24D6E2F31479C302405:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C302406:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="ACC24D6E2F31479C302405:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="MandMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C302406:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="ACC24D6E2F31479C302405:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="QuestionListDefault" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C302406:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="ACC24D6E2F31479C302405:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ValidationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACC24D6E2F31479C302406:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="ACC24D6E2F31479C302405:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.Question" displayString="First Cheque No" eid="5E7CF8BA1EDFEAF32553" path="PendingCheques.StopChequeList.Cheques.PendingStopCheques.First Cheque No" type="Question">
+              <ProcessEntityAttr default="" name="AnswerPostfix" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336733:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32553:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="AnswerPrefix" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336733:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32553:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336733:PendingCheques" mappingType="OVERRIDE" original="First Cheque No" specifiedBy="5E7CF8BA1EDFEAF32553:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336733:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32553:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336733:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32553:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="InvalidMaxLengthMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336733:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32553:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="InvalidMinLengthMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336733:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32553:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="MandMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336733:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32553:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="QuestionListDefault" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336733:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32553:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ValidationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336733:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32553:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.Question" displayString="Last Cheque No" eid="5E7CF8BA1EDFEAF32557" path="PendingCheques.StopChequeList.Cheques.PendingStopCheques.Last Cheque No" type="Question">
+              <ProcessEntityAttr default="" name="AnswerPostfix" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336734:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32557:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="AnswerPrefix" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336734:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32557:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336734:PendingCheques" mappingType="OVERRIDE" original="Last Cheque No" specifiedBy="5E7CF8BA1EDFEAF32557:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336734:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32557:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336734:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32557:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="InvalidMaxLengthMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336734:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32557:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="InvalidMinLengthMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336734:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32557:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="MandMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336734:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32557:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="QuestionListDefault" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336734:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32557:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ValidationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336734:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF32557:Question" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Stop a cheque" eid="5E7CF8BA1EDFEAF36772" path="PendingCheques.StopChequeList.Cheques.PendingStopCheques.Stop a cheque" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336735:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF36772:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336735:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF36772:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336735:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF36772:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336735:PendingCheques" mappingType="OVERRIDE" original="Stop a cheque" specifiedBy="5E7CF8BA1EDFEAF36772:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+          </ProcessEntity>
+        </Container>
+      </Container>
+      <Container class="com.acquire.intelligentforms.entities.Phase" displayString="StopCheques-ViewAndAuthorise" eid="5E7CF8BA1EDFEAF36456" type="Phase">
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Stop Cheque Payment" eid="5E7CF8BA1EDFEAF37563" path="PendingCheques.StopCheques-ViewAndAuthorise.Stop Cheque Payment" type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336739:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37563:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336739:PendingCheques" mappingType="OVERRIDE" original="Stop Cheque Payment" specifiedBy="5E7CF8BA1EDFEAF37563:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336739:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37563:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336739:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37563:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Question" displayString="Cheque Number" eid="5E7CF8BA1EDFEAF37564" path="PendingCheques.StopCheques-ViewAndAuthorise.Cheque Number" type="Question">
+          <ProcessEntityAttr default="" name="AnswerPostfix" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336740:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37564:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="AnswerPrefix" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336740:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37564:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336740:PendingCheques" mappingType="OVERRIDE" original="Cheque Number" specifiedBy="5E7CF8BA1EDFEAF37564:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336740:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37564:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336740:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37564:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="InvalidMaxValueMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336740:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37564:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="InvalidMinValueMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336740:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37564:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="InvalidNumMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336740:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37564:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="MandMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336740:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37564:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="QuestionListDefault" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336740:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37564:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ValidationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336740:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37564:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Question" displayString="From Cheque Number" eid="5E7CF8BA1EDFEAF37565" path="PendingCheques.StopCheques-ViewAndAuthorise.From Cheque Number" type="Question">
+          <ProcessEntityAttr default="" name="AnswerPostfix" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336741:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37565:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="AnswerPrefix" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336741:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37565:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336741:PendingCheques" mappingType="OVERRIDE" original="From Cheque Number" specifiedBy="5E7CF8BA1EDFEAF37565:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336741:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37565:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336741:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37565:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="InvalidMaxValueMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336741:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37565:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="InvalidMinValueMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336741:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37565:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="InvalidNumMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336741:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37565:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="MandMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336741:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37565:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="QuestionListDefault" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336741:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37565:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ValidationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336741:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37565:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Question" displayString="To Cheque Number" eid="5E7CF8BA1EDFEAF37566" path="PendingCheques.StopCheques-ViewAndAuthorise.To Cheque Number" type="Question">
+          <ProcessEntityAttr default="" name="AnswerPostfix" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336742:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37566:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="AnswerPrefix" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336742:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37566:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336742:PendingCheques" mappingType="OVERRIDE" original="To Cheque Number" specifiedBy="5E7CF8BA1EDFEAF37566:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336742:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37566:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336742:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37566:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="InvalidMaxValueMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336742:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37566:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="InvalidMinValueMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336742:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37566:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="InvalidNumMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336742:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37566:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="MandMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336742:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37566:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="QuestionListDefault" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336742:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37566:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ValidationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336742:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37566:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Question" displayString="Reason for stop" eid="5E7CF8BA1EDFEAF37567" path="PendingCheques.StopCheques-ViewAndAuthorise.Reason for stop" type="Question">
+          <ProcessEntityAttr default="" name="AnswerPostfix" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336743:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37567:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="AnswerPrefix" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336743:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37567:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336743:PendingCheques" mappingType="OVERRIDE" original="Reason for stop" specifiedBy="5E7CF8BA1EDFEAF37567:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336743:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37567:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336743:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37567:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="MandMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336743:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37567:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="QuestionListDefault" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336743:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37567:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ValidationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336743:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37567:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Cancel" eid="5E7CF8BA1EDFEAF37568" path="PendingCheques.StopCheques-ViewAndAuthorise.Cancel" type="Button">
+          <ProcessEntityAttr default="" name="ButtonText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336744:PendingCheques" mappingType="OVERRIDE" original="Cancel" specifiedBy="5E7CF8BA1EDFEAF37568:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336744:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37568:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336744:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37568:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336744:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37568:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336744:PendingCheques" mappingType="OVERRIDE" original="Cancel" specifiedBy="5E7CF8BA1EDFEAF37568:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Confirm" eid="5E7CF8BA1EDFEAF37573" path="PendingCheques.StopCheques-ViewAndAuthorise.Confirm" type="Button">
+          <ProcessEntityAttr default="" name="ButtonText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336745:PendingCheques" mappingType="OVERRIDE" original="Confirm" specifiedBy="5E7CF8BA1EDFEAF37573:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336745:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37573:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336745:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37573:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336745:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37573:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336745:PendingCheques" mappingType="OVERRIDE" original="Confirm" specifiedBy="5E7CF8BA1EDFEAF37573:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+      </Container>
+      <Container class="com.acquire.intelligentforms.entities.Phase" displayString="StopCheque-Review" eid="ACC24D6E2F31479C224308" type="Phase">
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Cheque stopped successfully" eid="5E7CF8BA1EDFEAF37783" path="PendingCheques.StopCheque-Review.Cheque stopped successfully" type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336747:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37783:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336747:PendingCheques" mappingType="OVERRIDE" original="Cheque stopped successfully" specifiedBy="5E7CF8BA1EDFEAF37783:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336747:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37783:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="5E7CF8BA1EDFEAF336747:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37783:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Back to unauthorised stop cheques" eid="5E7CF8BA1EDFEAF37784" path="PendingCheques.StopCheque-Review.Back to unauthorised stop cheques" type="Button">
+          <ProcessEntityAttr default="" name="ButtonText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336748:PendingCheques" mappingType="OVERRIDE" original="Back to unauthorised stop cheques" specifiedBy="5E7CF8BA1EDFEAF37784:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336748:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37784:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336748:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37784:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336748:PendingCheques" mappingType="PLACEHOLDER" original="" specifiedBy="5E7CF8BA1EDFEAF37784:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="5E7CF8BA1EDFEAF336748:PendingCheques" mappingType="OVERRIDE" original="Back to unauthorised stop cheques" specifiedBy="5E7CF8BA1EDFEAF37784:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+      </Container>
+    </ProcessEntity>
+  </ProcessEntities>
+  <Designs/>
+  <PresentationOnlyObjects>
+    <PresentationType class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationType" displayString="PendingCheques" eid="5E7CF8BA1EDFEAF336716" path="PendingCheques" type="Rich Presentation Type">
+      <Attribute mappingType="OVERRIDE" name="BackButtonText" original="Back" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DateFormat" original="DD/MM/YYYY" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DecimalSymbol" original="." state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DigitGroupSymbol" original="," state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="EditTheme" original="N" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ForwardButtonText" original="Continue" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="HelpIconHint" original="Help" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaMessage" original="Please re-enter using letters" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaNumericMessage" original="Please re-enter using letters and numbers" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDateMessage" original="Please enter a valid date in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDaysInMonthMessage" original="There are not that many days in the specified month" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDecimalMessage" original="Please enter a valid decimal number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidLeapYearMessage" original="The specified year is not a leap year" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxDateMessage" original="The latest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxFileSizeMessage" original="The maximum file size allowed is $$QUESTION_CONSTRAINT$k" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxLengthMessage" original="The maximum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxValueMessage" original="The maximum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinDateMessage" original="The earliest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinLengthMessage" original="The minimum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinValueMessage" original="The minimum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidNumMessage" original="Please enter a valid number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidTimeMessage" original="Please enter a valid time in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidUploadTypeMessage" original="The valid file types you are allowed to upload are: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="LayoutDirection" original="ltr" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandMessage" original="Please answer all the required questions marked with a $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandOptImgAltVal" original="This field is mandatory" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandOptImgVal" original="mandatory_image.gif" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandOptTxtVal" original="*" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="QuestionListDefault" original="- Please Select" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ValidationMessage" original="Please enter a valid value" state="NEW" status="NEW" value=""/>
+    </PresentationType>
+  </PresentationOnlyObjects>
+  <Rules>
+    <MasterRules/>
+  </Rules>
+  <Component/>
+  <Lists>
+    <List eid="5E7CF8BA1EDFEAF37383" listName="YesNo" reset="True">
+      <ListItem eid="5E7CF8BA1EDFEAF37384" group="" groupState="NEW" key="Y" original="Yes" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="5E7CF8BA1EDFEAF37385" group="" groupState="NEW" key="N" original="No" originalGroup="" remove="" state="NEW" value=""/>
+    </List>
+    <List eid="5E7CF8BA1EDFEAF360158" listName="ChequeOptions" reset="True">
+      <ListItem eid="5E7CF8BA1EDFEAF360159" group="" groupState="NEW" key="1" original="Single cheque" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="5E7CF8BA1EDFEAF360160" group="" groupState="NEW" key="2" original="Range of cheques" originalGroup="" remove="" state="NEW" value=""/>
+    </List>
+    <List eid="5E7CF8BA1EDFEAF360166" listName="PaymentStopType" reset="True">
+      <Note author="EVA-Note"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    The keys for this List come from T24, and may not be edited.
+  </body>
+
+</html>
+
+]]></Note>
+      <ListItem eid="5E7CF8BA1EDFEAF360168" group="" groupState="NEW" key="1" original="Cheques Lost" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="5E7CF8BA1EDFEAF360169" group="" groupState="NEW" key="2" original="Cheques Destroyed" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="5E7CF8BA1EDFEAF360170" group="" groupState="NEW" key="3" original="Cheques Stolen" originalGroup="" remove="" state="NEW" value=""/>
+    </List>
+    <List eid="5E7CF8BA1EDFEAF360183" listName="InputRecordOptions" reset="True">
+      <ListItem eid="5E7CF8BA1EDFEAF360184" group="" groupState="NEW" key="Input" original="Input" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="5E7CF8BA1EDFEAF360185" group="" groupState="NEW" key="Confirm" original="Confirm" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="5E7CF8BA1EDFEAF360186" group="" groupState="NEW" key="Review" original="Review" originalGroup="" remove="" state="NEW" value=""/>
+    </List>
+  </Lists>
+</LanguageMap>

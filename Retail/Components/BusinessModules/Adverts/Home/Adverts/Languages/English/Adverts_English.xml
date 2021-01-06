@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?><LanguageMap presentations="Adverts" project="Adverts" sourcelanguage="en-GB" targetlanguage="en-GB" updated="02/08/17 14:39" version="1">
+  <Comment>Language map for adverts component</Comment>
+  <ProcessEntities>
+    <Container class="com.acquire.intelligentforms.entities.Product" displayString="InterestialPage" eid="C28E1EBE631B26BA11727" type="Process">
+      <Container class="com.acquire.intelligentforms.entities.Phase" displayString="InterestedOpportunity" eid="C28E1EBE631B26BA70829" type="Phase">
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Offer for you" eid="27ACAFE990D42E1A67340" path="InterestialPage.InterestedOpportunity.Offer for you" type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="27ACAFE990D42E1A67341:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="27ACAFE990D42E1A67340:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="27ACAFE990D42E1A67341:Adverts" mappingType="OVERRIDE" original="Offer for you" specifiedBy="27ACAFE990D42E1A67340:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="27ACAFE990D42E1A67341:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="27ACAFE990D42E1A67340:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="27ACAFE990D42E1A67341:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="27ACAFE990D42E1A67340:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="$$OpportunityDetails[C].OpprDesc$" eid="6EBCFBEF03669BC8113533" path="InterestialPage.InterestedOpportunity.$$OpportunityDetails[C].OpprDesc$" type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="6EBCFBEF03669BC8113809:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="6EBCFBEF03669BC8113533:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="6EBCFBEF03669BC8113809:Adverts" mappingType="OVERRIDE" original="$$OpportunityDetails[C].OpprDesc$" specifiedBy="6EBCFBEF03669BC8113533:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="6EBCFBEF03669BC8113809:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="6EBCFBEF03669BC8113533:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="6EBCFBEF03669BC8113809:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="6EBCFBEF03669BC8113533:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="No opportunities available for the customer" eid="70AE277E6FD5EB6B116488" path="InterestialPage.InterestedOpportunity.No opportunities available for the customer" type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="70AE277E6FD5EB6B116489:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="70AE277E6FD5EB6B116488:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="70AE277E6FD5EB6B116489:Adverts" mappingType="OVERRIDE" original="No opportunities available for the customer" specifiedBy="70AE277E6FD5EB6B116488:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="70AE277E6FD5EB6B116489:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="70AE277E6FD5EB6B116488:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="70AE277E6FD5EB6B116489:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="70AE277E6FD5EB6B116488:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Find out more" eid="A36A7CFA6F98DFDC146920" path="InterestialPage.InterestedOpportunity.Find out more" type="Button">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="A36A7CFA6F98DFDC146922:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="A36A7CFA6F98DFDC146920:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="A36A7CFA6F98DFDC146922:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="A36A7CFA6F98DFDC146920:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="A36A7CFA6F98DFDC146922:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="A36A7CFA6F98DFDC146920:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="A36A7CFA6F98DFDC146922:Adverts" mappingType="OVERRIDE" original="Find out more" specifiedBy="A36A7CFA6F98DFDC146920:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="A36A7CFA6F98DFDC146922:Adverts" mappingType="OVERRIDE" original="Find out more" specifiedBy="A36A7CFA6F98DFDC146920:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Skip" eid="C28E1EBE631B26BA99363" path="InterestialPage.InterestedOpportunity.Skip" type="Button">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="C28E1EBE631B26BA99364:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="C28E1EBE631B26BA99363:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="C28E1EBE631B26BA99364:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="C28E1EBE631B26BA99363:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="C28E1EBE631B26BA99364:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="C28E1EBE631B26BA99363:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="C28E1EBE631B26BA99364:Adverts" mappingType="OVERRIDE" original="Skip" specifiedBy="C28E1EBE631B26BA99363:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="C28E1EBE631B26BA99364:Adverts" mappingType="OVERRIDE" original="Skip" specifiedBy="C28E1EBE631B26BA99363:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+      </Container>
+    </Container>
+    <Container class="com.acquire.intelligentforms.entities.Product" displayString="CustomerOpportunities" eid="C28E1EBE631B26BA11730" type="Process">
+      <Container class="com.acquire.intelligentforms.entities.Phase" displayString="Opportunities" eid="C28E1EBE631B26BA88838" type="Phase">
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="These are products you may be interested in." eid="9FB2DBD6C2A76DAA251701" path="CustomerOpportunities.Opportunities.These are products you may be interested in." type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="9FB2DBD6C2A76DAA251702:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="9FB2DBD6C2A76DAA251701:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="9FB2DBD6C2A76DAA251702:Adverts" mappingType="OVERRIDE" original="These are products you may be interested in." specifiedBy="9FB2DBD6C2A76DAA251701:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="9FB2DBD6C2A76DAA251702:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="9FB2DBD6C2A76DAA251701:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="9FB2DBD6C2A76DAA251702:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="9FB2DBD6C2A76DAA251701:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="These are no products listed for you." eid="9FB2DBD6C2A76DAA242838" path="CustomerOpportunities.Opportunities.These are no products listed for you." type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="9FB2DBD6C2A76DAA242839:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="9FB2DBD6C2A76DAA242838:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="9FB2DBD6C2A76DAA242839:Adverts" mappingType="OVERRIDE" original="These are no products listed for you." specifiedBy="9FB2DBD6C2A76DAA242838:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="9FB2DBD6C2A76DAA242839:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="9FB2DBD6C2A76DAA242838:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="9FB2DBD6C2A76DAA242839:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="9FB2DBD6C2A76DAA242838:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Show me more" eid="70AE277E6FD5EB6B174437" path="CustomerOpportunities.Opportunities.Show me more" type="Button">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="70AE277E6FD5EB6B174439:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="70AE277E6FD5EB6B174437:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="70AE277E6FD5EB6B174439:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="70AE277E6FD5EB6B174437:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="70AE277E6FD5EB6B174439:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="70AE277E6FD5EB6B174437:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="70AE277E6FD5EB6B174439:Adverts" mappingType="OVERRIDE" original="$$OpportunityDetails[1].OpprDesc$" specifiedBy="70AE277E6FD5EB6B174439:Rich Presentation Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="70AE277E6FD5EB6B174439:Adverts" mappingType="OVERRIDE" original="Show me more" specifiedBy="70AE277E6FD5EB6B174437:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Show me more" eid="27ACAFE990D42E1A226742" path="CustomerOpportunities.Opportunities.Show me more" type="Button">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="27ACAFE990D42E1A226744:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="27ACAFE990D42E1A226742:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="27ACAFE990D42E1A226744:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="27ACAFE990D42E1A226742:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="27ACAFE990D42E1A226744:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="27ACAFE990D42E1A226742:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="27ACAFE990D42E1A226744:Adverts" mappingType="OVERRIDE" original="$$OpportunityDetails[2].OpprDesc$" specifiedBy="27ACAFE990D42E1A226744:Rich Presentation Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="27ACAFE990D42E1A226744:Adverts" mappingType="OVERRIDE" original="Show me more" specifiedBy="27ACAFE990D42E1A226742:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Show me more" eid="E9F015AFF6F6091051969" path="CustomerOpportunities.Opportunities.Show me more" type="Button">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="E9F015AFF6F6091051971:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="E9F015AFF6F6091051969:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="E9F015AFF6F6091051971:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="E9F015AFF6F6091051969:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="E9F015AFF6F6091051971:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="E9F015AFF6F6091051969:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="E9F015AFF6F6091051971:Adverts" mappingType="OVERRIDE" original="$$OpportunityDetails[3].OpprDesc$" specifiedBy="E9F015AFF6F6091051971:Rich Presentation Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="E9F015AFF6F6091051971:Adverts" mappingType="OVERRIDE" original="Show me more" specifiedBy="E9F015AFF6F6091051969:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+      </Container>
+    </Container>
+    <Container class="com.acquire.intelligentforms.entities.Product" displayString="OpportunityDetails" eid="C28E1EBE631B26BA11733" type="Process">
+      <Container class="com.acquire.intelligentforms.entities.Phase" displayString="OpportunityDetails" eid="A36A7CFA6F98DFDC99024" type="Phase">
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Offers" eid="2967C1F5D0D33F92352832" path="OpportunityDetails.OpportunityDetails.Offers" type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="2967C1F5D0D33F92352833:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="2967C1F5D0D33F92352832:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="2967C1F5D0D33F92352833:Adverts" mappingType="OVERRIDE" original="Offers" specifiedBy="2967C1F5D0D33F92352832:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="2967C1F5D0D33F92352833:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="2967C1F5D0D33F92352832:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="2967C1F5D0D33F92352833:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="2967C1F5D0D33F92352832:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Question" displayString="OpprDefDesc" eid="A36A7CFA6F98DFDC141736" path="OpportunityDetails.OpportunityDetails.OpprDefDesc" type="Question">
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="A36A7CFA6F98DFDC141737:Adverts" mappingType="OVERRIDE" original="OpprDefDesc" specifiedBy="A36A7CFA6F98DFDC141736:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="A36A7CFA6F98DFDC141737:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="A36A7CFA6F98DFDC141736:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="A36A7CFA6F98DFDC141737:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="A36A7CFA6F98DFDC141736:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="MandMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="A36A7CFA6F98DFDC141737:Adverts" mappingType="OVERRIDE" original="Please enter the $$ITEM.DISPLAY_TEXT()$" specifiedBy="A36A7CFA6F98DFDC141737:Rich Presentation Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="QuestionListDefault" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="A36A7CFA6F98DFDC141737:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="A36A7CFA6F98DFDC141736:Question" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Apply now" eid="C28E1EBE631B26BA99358" path="OpportunityDetails.OpportunityDetails.Apply now" type="Button">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="C28E1EBE631B26BA99359:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="C28E1EBE631B26BA99358:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="C28E1EBE631B26BA99359:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="C28E1EBE631B26BA99358:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="C28E1EBE631B26BA99359:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="C28E1EBE631B26BA99358:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="C28E1EBE631B26BA99359:Adverts" mappingType="OVERRIDE" original="Apply now" specifiedBy="C28E1EBE631B26BA99358:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="C28E1EBE631B26BA99359:Adverts" mappingType="OVERRIDE" original="Apply now" specifiedBy="C28E1EBE631B26BA99358:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Not Interested, Remove offer" eid="A36A7CFA6F98DFDC149508" path="OpportunityDetails.OpportunityDetails.Not Interested, Remove offer" type="Button">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="A36A7CFA6F98DFDC149514:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="A36A7CFA6F98DFDC149508:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="A36A7CFA6F98DFDC149514:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="A36A7CFA6F98DFDC149508:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="A36A7CFA6F98DFDC149514:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="A36A7CFA6F98DFDC149508:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="A36A7CFA6F98DFDC149514:Adverts" mappingType="OVERRIDE" original="Not Interested, Remove offer" specifiedBy="A36A7CFA6F98DFDC149508:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="A36A7CFA6F98DFDC149514:Adverts" mappingType="OVERRIDE" original="Not Interested, Remove offer" specifiedBy="A36A7CFA6F98DFDC149508:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Keep offer, Goto home page" eid="A36A7CFA6F98DFDC152101" path="OpportunityDetails.OpportunityDetails.Keep offer, Goto home page" type="Button">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="A36A7CFA6F98DFDC152107:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="A36A7CFA6F98DFDC152101:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="A36A7CFA6F98DFDC152107:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="A36A7CFA6F98DFDC152101:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="A36A7CFA6F98DFDC152107:Adverts" mappingType="PLACEHOLDER" original="" specifiedBy="A36A7CFA6F98DFDC152101:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="A36A7CFA6F98DFDC152107:Adverts" mappingType="OVERRIDE" original="Keep offer, Goto home page" specifiedBy="A36A7CFA6F98DFDC152101:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="A36A7CFA6F98DFDC152107:Adverts" mappingType="OVERRIDE" original="Keep offer, Goto home page" specifiedBy="A36A7CFA6F98DFDC152101:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+      </Container>
+    </Container>
+  </ProcessEntities>
+  <Designs/>
+  <PresentationOnlyObjects>
+    <PresentationType class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationType" displayString="Adverts" eid="C28E1EBE631B26BA29302" path="Adverts" type="Rich Presentation Type">
+      <Attribute mappingType="OVERRIDE" name="BackButtonText" original="Back" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DateFormat" original="DD/MM/YYYY" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DecimalSymbol" original="." state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DigitGroupSymbol" original="," state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="EditTheme" original="N" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ForwardButtonText" original="Continue" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="HelpIconHint" original="Help" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaMessage" original="Please re-enter using letters" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaNumericMessage" original="Please re-enter using letters and numbers" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDateMessage" original="Please enter a valid date in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDaysInMonthMessage" original="There are not that many days in the specified month" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDecimalMessage" original="Please enter a valid decimal number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidLeapYearMessage" original="The specified year is not a leap year" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxDateMessage" original="The latest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxFileSizeMessage" original="The maximum file size allowed is $$QUESTION_CONSTRAINT$k" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxLengthMessage" original="The maximum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxValueMessage" original="The maximum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinDateMessage" original="The earliest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinLengthMessage" original="The minimum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinValueMessage" original="The minimum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidNumMessage" original="Please enter a valid number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidTimeMessage" original="Please enter a valid time in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidUploadTypeMessage" original="The valid file types you are allowed to upload are: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="LayoutDirection" original="ltr" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandMessage" original="Please answer all the required questions marked with a $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="QuestionListDefault" original="- Please Select" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ValidationMessage" original="Please enter a valid value" state="NEW" status="NEW" value=""/>
+      <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationProduct" displayString="InterestialPage" eid="C28E1EBE631B26BA29307" type="Rich Presentation Process">
+        <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" displayString="InterestedOpportunity" eid="C28E1EBE631B26BA70832" type="Rich Presentation Phase">
+          <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section (using td-responsive-row)" eid="6EBCFBEF03669BC8113477" type="Rich Presentation Section">
+            <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" displayString="Column (using td-col-full)" eid="6EBCFBEF03669BC8113478" type="Rich Presentation Column">
+              <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section (using td-card)" eid="6EBCFBEF03669BC8113479" type="Rich Presentation Section">
+                <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section (using td-card-body)" eid="6EBCFBEF03669BC8113484" type="Rich Presentation Section">
+                  <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationText" displayString="Image" eid="1986BF8732488F8F25561" path="Adverts.InterestialPage.InterestedOpportunity.Section.Column.Section.Section.Image" type="Image">
+                    <Attribute mappingType="OVERRIDE" name="IMG_ALT_TEXT" original="Photo" state="NEW" status="NEW" value=""/>
+                    <Attribute mappingType="PLACEHOLDER" name="IMG_TITLE" original="" state="NEW" status="NEW" value=""/>
+                    <Attribute mappingType="PLACEHOLDER" name="Text" original="" state="NEW" status="NEW" value=""/>
+                  </PresentationObject>
+                </Container>
+              </Container>
+            </Container>
+          </Container>
+        </Container>
+      </Container>
+      <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationProduct" displayString="CustomerOpportunities" eid="C28E1EBE631B26BA29309" type="Rich Presentation Process">
+        <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" displayString="Opportunities" eid="C28E1EBE631B26BA88841" type="Rich Presentation Phase">
+          <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="responsive-row [Section] (using td-responsive-row)" eid="9FB2DBD6C2A76DAA236962" type="Rich Presentation Section">
+            <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" displayString="single-full-width-col [Column] (using td-col-full-centered)" eid="9FB2DBD6C2A76DAA236963" type="Rich Presentation Column">
+              <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="card [Section] (using td-card)" eid="9FB2DBD6C2A76DAA236964" type="Rich Presentation Section">
+                <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="card content [Section] (using td-card-body)" eid="9FB2DBD6C2A76DAA236975" type="Rich Presentation Section">
+                  <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationText" displayString="Image" eid="9FB2DBD6C2A76DAA220203" path="Adverts.CustomerOpportunities.Opportunities.Section.Column.Section.Section.Image" type="Image">
+                    <Attribute mappingType="OVERRIDE" name="IMG_ALT_TEXT" original="tc-card ext-advert-image" state="NEW" status="NEW" value=""/>
+                    <Attribute mappingType="PLACEHOLDER" name="IMG_TITLE" original="" state="NEW" status="NEW" value=""/>
+                    <Attribute mappingType="PLACEHOLDER" name="Text" original="" state="NEW" status="NEW" value=""/>
+                  </PresentationObject>
+                  <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationText" displayString="Image" eid="9FB2DBD6C2A76DAA220207" path="Adverts.CustomerOpportunities.Opportunities.Section.Column.Section.Section.Image" type="Image">
+                    <Attribute mappingType="OVERRIDE" name="IMG_ALT_TEXT" original="Photo" state="NEW" status="NEW" value=""/>
+                    <Attribute mappingType="PLACEHOLDER" name="IMG_TITLE" original="" state="NEW" status="NEW" value=""/>
+                    <Attribute mappingType="PLACEHOLDER" name="Text" original="" state="NEW" status="NEW" value=""/>
+                  </PresentationObject>
+                  <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationText" displayString="Image" eid="9FB2DBD6C2A76DAA220211" path="Adverts.CustomerOpportunities.Opportunities.Section.Column.Section.Section.Image" type="Image">
+                    <Attribute mappingType="OVERRIDE" name="IMG_ALT_TEXT" original="Photo" state="NEW" status="NEW" value=""/>
+                    <Attribute mappingType="PLACEHOLDER" name="IMG_TITLE" original="" state="NEW" status="NEW" value=""/>
+                    <Attribute mappingType="PLACEHOLDER" name="Text" original="" state="NEW" status="NEW" value=""/>
+                  </PresentationObject>
+                </Container>
+              </Container>
+            </Container>
+          </Container>
+        </Container>
+      </Container>
+      <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationProduct" displayString="OpportunityDetails" eid="C28E1EBE631B26BA29311" type="Rich Presentation Process">
+        <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" displayString="OpportunityDetails" eid="A36A7CFA6F98DFDC99027" type="Rich Presentation Phase">
+          <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section (using td-responsive-row)" eid="2967C1F5D0D33F92352710" type="Rich Presentation Section">
+            <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" displayString="Column (using td-col-full)" eid="2967C1F5D0D33F92352731" type="Rich Presentation Column">
+              <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section (using td-card)" eid="2967C1F5D0D33F92352736" type="Rich Presentation Section">
+                <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section (using td-card-body)" eid="2967C1F5D0D33F92352768" type="Rich Presentation Section">
+                  <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" displayString="Column (using td-col-3-8-3-3-4 (full xs, sm, 25% md, lg, xl))" eid="AFF3D3E3B1B326C6217486" type="Rich Presentation Column">
+                    <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationText" displayString="Image" eid="BC5972514BB38C3677634" path="Adverts.OpportunityDetails.OpportunityDetails.Section.Column.Section.Section.Column.Image" type="Image">
+                      <Attribute mappingType="OVERRIDE" name="IMG_ALT_TEXT" original="Photo" state="NEW" status="NEW" value=""/>
+                      <Attribute mappingType="PLACEHOLDER" name="IMG_TITLE" original="" state="NEW" status="NEW" value=""/>
+                      <Attribute mappingType="PLACEHOLDER" name="Text" original="" state="NEW" status="NEW" value=""/>
+                    </PresentationObject>
+                  </Container>
+                  <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" displayString="Column (using td-col-3-8-8-8-12 (full xs, sm,  75% md, lg, xl))" eid="AFF3D3E3B1B326C6217491" type="Rich Presentation Column">
+                    <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationText" displayString="Text from file $$!ADVERTS_CONTENT_PATH$$$SelectedOpportunity[1].OpprProduct$.html" eid="70AE277E6FD5EB6B187336" path="Adverts.OpportunityDetails.OpportunityDetails.Section.Column.Section.Section.Column.Text from file $$!ADVERTS_CONTENT_PATH$$$SelectedOpportunity[1].OpprProduct$.html" type="Rich Presentation Text">
+                      <Attribute mappingType="OVERRIDE" name="Text" original="$$SelectedOpportunity[1].OpprProduct$.html" state="NEW" status="NEW" value=""/>
+                    </PresentationObject>
+                  </Container>
+                </Container>
+              </Container>
+            </Container>
+          </Container>
+        </Container>
+      </Container>
+    </PresentationType>
+  </PresentationOnlyObjects>
+  <Rules>
+    <MasterRules/>
+  </Rules>
+  <Lists>
+    <List eid="A36A7CFA6F98DFDC207933" listName="YesNo" reset="True">
+      <ListItem eid="A36A7CFA6F98DFDC207934" group="" groupState="NEW" key="Y" original="Yes" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="A36A7CFA6F98DFDC207935" group="" groupState="NEW" key="N" original="No" originalGroup="" remove="" state="NEW" value=""/>
+    </List>
+  </Lists>
+</LanguageMap>

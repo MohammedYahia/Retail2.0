@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><DataSetRoot DSAttrsNewLine="N" DSOmitXMLDecl="N" DSPrettyPrint="Y" DS_UID="1">
+  <!---->
+  <ComposeMessage DS_REF_DATAGROUP_ATTRIBUTE_NAME="ComposeMessage[1]" DS_UID="-1" FromCustomer="Rolf Gerling" Id="SM1607745093" MessageId="SM1607745093" ParentMessageId="SM1607745093" Subject="Latest Price of Short Sterling Future" ToDao="Derivatives Front Office Dealer">
+    <Message DS_REF_DATAGROUP_ATTRIBUTE_NAME="ComposeMessage[1].Message[1]" DS_UID="0" Message="Please SMS the latest price of Short Sterling Future" subValuePosition="1" valuePosition="1"/>
+  </ComposeMessage>
+</DataSetRoot>

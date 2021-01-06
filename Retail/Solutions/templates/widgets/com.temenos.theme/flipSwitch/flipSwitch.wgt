@@ -1,0 +1,54 @@
+
+<style type="text/css">
+$%IF ITEM.IS_READONLY() != 'FALSE'$
+.onoffswitch-disabled:before {
+			background-color: #a0a0a0;
+		}
+$%ENDIF$
+$%FOREACH LISTITEM IN DATAITEM$
+	$%IF ITEM.DATAITEM().LISTITEM().CHILD_INDEX() == 0$
+		.onoffswitch-inner:before {
+		    content: "$$ITEM.DATAITEM().LISTITEM().VALUE()$";
+		}
+	$%ENDIF$
+	$%IF ITEM.DATAITEM().LISTITEM().CHILD_INDEX() == 1$
+		.onoffswitch-inner:after {
+		    content: "$$ITEM.DATAITEM().LISTITEM().VALUE()$";
+		}
+	$%ENDIF$
+$%ENDFOREACH$
+
+</style>
+
+<div class="onoffswitch $$ITEM.STYLES.SpecificAnswerControlStyle$" id="container_$$ITEM.ID()$" style="$$ITEM.INLINE_STYLES().SpecificAnswerControlStyle$">
+$%FOREACH LISTITEM IN DATAITEM$
+	$%IF ITEM.DATAITEM().LISTITEM().CHILD_INDEX() == 0$
+    <input type="checkbox" name="$$ITEM.DATAITEM()$" class="onoffswitch-checkbox" id="$$ITEM.ID()$" value="$$ITEM.DATAITEM().LISTITEM().KEY()$" $%IF ##ITEM.DATAITEM().VALUE()# == '##ITEM.DATAITEM().LISTITEM().KEY()#'$checked="checked"$%ENDIF$>
+	$%ENDIF$
+$%ENDFOREACH$
+    <div class="onoffswitch-label" id="$$ITEM.ID()$-label" >
+        <span class="onoffswitch-inner $%IF ITEM.IS_READONLY() != 'false'$onoffswitch-disabled$%ENDIF$"></span>
+        <span class="onoffswitch-switch"></span>
+    </div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  //<![CDATA[
+$(function() {
+	$("#$$ITEM.ID()$-label").on("click", function(e) {
+		$("#$$ITEM.ID()$").click();
+	})
+	FlipSwitch.init({
+		id: "$$ITEM.ID()$",
+		onClass:  "$$ITEM.onClass$",
+		offClass: "$$ITEM.offClass$",
+		onJS:  function() { $%IF ITEM.onJS != ""$ $$ITEM.onJS$() $%ENDIF$ },
+		offJS: function() { $%IF ITEM.offJS != ""$ $$ITEM.offJS$() $%ENDIF$ },
+		qlr: function(event) { $$ITEM.QLR()$ },
+		checkHidden: function() {  $$ITEM.CHECKHIDDEN()$ }
+	})
+
+
+});
+  //]]>
+</script>

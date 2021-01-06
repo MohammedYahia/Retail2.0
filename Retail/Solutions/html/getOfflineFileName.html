@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!--
+ * $RCSfile: getOfflineFileName.html,v $
+ * $Author: pete $
+ * $Revision: 1.7 $
+ * $Date: 2013/06/26 13:50:17 $
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Save File</title>
+	<script type="text/javascript" src="./js/connect_offline.js"></script>
+</head>
+<body>
+	<form onsubmit="return false;" action="">
+		<div>
+		<br />
+		<br />
+			<table cellpadding="5">
+				<tr>
+					<td colspan="2">Please enter file name...</td>
+				</tr>
+				<tr>
+					<td><input type="text" name="fileTextField" onkeypress="checkReturn()" /></td>
+					<td><input type="button" value="Save" onclick="setFileName(this.form.fileTextField)" /></td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</body>
+</html>

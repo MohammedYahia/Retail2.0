@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><widgets>
+  <widget callback="false" displayString="Cordova Back Button" icon="images/cordova_16.png" name="com.temenos.widgets.hybrid.events.backbutton" type="Button">
+    <template type="source" value="backButton.wgt"/>
+    <custom>
+      <item help="Generate body of the button" includeInDesign="true" layout="-1" mand="false" name="button_body" prompt="Generate body of the button " type="com.acquire.util.FocusCheckbox" usage="7"/>
+    </custom>
+  </widget>
+</widgets>

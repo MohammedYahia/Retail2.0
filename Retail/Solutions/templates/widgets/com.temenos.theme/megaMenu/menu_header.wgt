@@ -1,0 +1,186 @@
+<link  href="./templates/widgets/com.temenos.theme/accordionMenu/css/accordionMenu.css" rel="stylesheet" />
+<link  href="./templates/widgets/com.temenos.theme/megaMenu/css/style.css"  rel="stylesheet"  />
+<script src="./templates/widgets/com.temenos.theme/accordionMenu/js/accordionMenu.js" type="text/javascript"></script>
+<script src="./templates/widgets/com.temenos.theme/megaMenu/js/main.js"     type="text/javascript"></script>
+
+<style type="text/css">
+.mega-root {
+	position: absolute;
+}
+.tc-accordion-menu a:only-child:after {
+	content: "$$ITEM.POPOUT_ICON$";
+}
+.tc-accordion-menu li.old-go-back {
+	display: none;
+}
+
+body{font-size: 1rem;}
+a {color: inherit;}
+.cd-primary-nav {
+	padding: 0 !important;
+	position: relative;
+	margin:0px;
+    white-space: nowrap;
+}
+
+.tc-megamenu-container {
+	position: absolute; 
+	z-index: 20;
+}
+
+.tc-megamenu-container .activeMenuItem {
+	font-weight: normal;
+	text-decoration: underline;
+	background: rgba(0,0,0,0.2);
+}
+
+.tc-megamenu-container .tc-menu-icon {
+    display: block;
+    width: 2rem;
+    float: left;
+
+    position: absolute;
+    top: 50%;
+	left: 18px;
+    transform: translateY(-50%);
+
+}
+
+.cd-primary-nav .cd-secondary-nav {
+	width: 100vw;
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.cd-primary-nav .cd-secondary-nav .icon-padding {
+	padding-left: 3.4rem;
+}
+@media (max-width: 567px) {
+	.tc-box-on .cd-primary-nav .cd-secondary-nav {
+		width: 100%;
+	}
+}
+@media (min-width: 568px) and (max-width: 767px) {
+	.tc-box-on .cd-primary-nav .cd-secondary-nav {
+		width: 568px;
+	}
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+	.tc-box-on .cd-primary-nav .cd-secondary-nav {
+		width: 768px;
+	}
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+	.tc-box-on .cd-primary-nav .cd-secondary-nav {
+		width: 1024px;
+	}
+}
+@media (min-width: 1280px) {
+	.tc-box-on .cd-primary-nav .cd-secondary-nav {
+		width: 1280px;
+	}
+}
+
+.cd-primary-nav  .tc-truncated-item {
+	display: block;
+    max-width: 100%;
+    float: left;
+    padding-left: 2.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cd-primary-nav > li > a {
+	height: 60px;
+	line-height: 56px;
+}
+.cd-primary-nav > li {
+	list-style: none;
+	margin-left: 0;
+	vertical-align: top;
+}
+.cd-primary-nav .cd-secondary-nav a { 
+	height: auto;font-size: 1rem;  
+	padding-left: 1rem;
+	min-width: 250px;
+}
+.cd-primary-nav .cd-secondary-nav { left: 0px; box-shadow: 0 10px 9px -1px rgba(0,0,0,0.1);}
+.tc-mega-menu-light .cd-primary-nav .cd-secondary-nav { left: 0px; box-shadow: 0 10px 9px -1px rgba(0,0,0,0.1);}
+
+.cd-primary-nav .cd-secondary-nav > .tc-mm-leaf { 
+	xfloat: none;
+	height: auto;
+	font-size: 1rem;
+	color: #fff;
+ }
+ .cd-primary-nav .cd-secondary-nav > .tc-mm-leaf a {
+ }
+
+.cd-primary-nav .cd-secondary-nav, .cd-primary-nav .cd-nav-gallery, .cd-primary-nav .cd-nav-icons {
+	top: 60px;
+	padding: 0 0 2rem;
+    text-align: left;
+}
+
+.cd-primary-nav > li > a {
+	opacity: 0.9;
+	transition: all 0.3s;
+	display: inline-flex;
+	align-items: center;
+}
+
+.cd-primary-nav > li > a:hover {
+	background-color:#3977ac;
+	opacity: 1;
+	box-shadow: none;
+}
+
+.cd-primary-nav .cd-secondary-nav ul {
+	padding-left: 0px;
+}
+
+.cd-primary-nav .cd-secondary-nav .tc-mm-leaf,
+.cd-primary-nav .cd-secondary-nav .has-children {
+	display: block;
+	max-width: 400px;
+}
+
+.cd-primary-nav .cd-secondary-nav > li {
+	line-height: normal;
+    min-width: 250px;
+
+    /* check
+    max-width: 300px; */
+    height: auto;
+    margin-top: 30px ;
+}
+
+.cd-secondary-nav .tc-menu-icon>span {
+	top: 16px;
+}
+.cd-secondary-nav .icon-padding>.tc-truncated-item {
+	padding-left: 0;
+}
+.cd-primary-nav .cd-secondary-nav .tc-menu-icon {
+	top: 0.4rem;
+	line-height: normal;
+}
+
+.cd-primary-nav .cd-secondary-nav > li > a:hover {
+	background: rgba(0,0,0,0.2);
+}
+
+
+.goback-padding {
+	padding-left: 10px;
+}
+.moves-out>.goback-padding {
+	padding-left: 0px;
+}
+.cd-primary-nav .cd-secondary-nav a:hover
+{
+	background-color: rgba(0,0,0,0.3);
+}
+
+</style>
+

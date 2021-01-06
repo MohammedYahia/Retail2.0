@@ -1,0 +1,31 @@
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '$$ITEM.app_id$',
+    cookie     : true,  // enable cookies to allow the server to access 
+    xfbml      : true,  // parse social plugins on this page
+    status     : true,    // check login status
+    version    : 'v2.1' // use version 2.0
+  });
+  $%IF ITEM.autologin == "Y"$checkLoginState(fbDataStoreGroup);$%ENDIF$
+  }  
+
+  window.com                                      = window.com || {};
+  window.com.temenos                              = window.com.temenos || {};
+  window.com.temenos.widgets                      = window.com.temenos.widgets || {};
+  window.com.temenos.widgets.social               = window.com.temenos.widgets.social || {};
+  window.com.temenos.widgets.social.facebook      = window.com.temenos.widgets.social.facebook || {};
+
+  window.com.temenos.widgets.social.facebook.postProcessResponses = function(ns, ajaxCaller, result) {
+    try {
+        FB.XFBML.parse();
+    } catch (e) {
+    }
+  }
+</script>

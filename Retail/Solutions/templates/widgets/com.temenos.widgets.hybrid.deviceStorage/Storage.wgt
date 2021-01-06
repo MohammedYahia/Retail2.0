@@ -1,0 +1,49 @@
+$$ITEM.EC_GENERATE()$    
+$%IF ITEM.itemkey != ""$            
+<script type = "text/javascript" charset="utf-8">
+
+//FUNCTIE APELATA
+function $$ITEM.ID()$onDeviceReady() {
+var storage = window.edge.widgets.cordova.Storage; //INITIALIZEAZA STORAGE
+var storageType=$%IF ITEM.storageType == "PERMANENT"$0$%ELSE$1$%ENDIF$; //SE UITA CE FEL DE STORAGE SE FOLOSESTE
+storage.setSource(storageType);//SETEAZA STORAGE TYPE
+var current_value = storage.getItem("$$ITEM.itemkey$"); //PREIA VALOAREA DIN STORAGE
+var input_value = "$$ITEM.DATAITEM().DISPLAY_VALUE()$"; //PREIA VALOAREA DIN INPUT
+if (current_value!=input_value && input_value!="") storage.setItem("$$ITEM.itemkey$",input_value); //DACA VALOARE STORAGE NU ARE VALOARE INPUT SI DACA INPUT NU E GOL SETEAZA STORAGE CU VALOARE INPUT
+if (input_value==="") document.getElementById("$$ITEM.ID()$").value=current_value;
+if (input_value==="") input_value=current_value; // DACA INPUT VALUE E GOL IA VALOARE STORAGE SI O PUNE IN INPUT
+if (input_value==="Y") document.getElementById("$$ITEM.input$").checked = true; //DACA VALOARE INPUT E YES FACE BUTONUL VERDE
+$( window ).load(function() {
+ if (input_value==="Y") document.getElementById("$$ITEM.input$").checked = true;
+ });
+}
+
+
+
+//LISTENER
+ document.addEventListener("deviceready", $$ITEM.ID()$onDeviceReady, false);
+
+//SE UITA CAND SE DA CLICK PE UN BUTON SI SCHIMBA VALOAREA DIN INPUT
+ $('#$$ITEM.listener$').on('click', function(){
+    if ( $('#$$ITEM.listener$ :input').is(':checked') ) {
+        $('#$$ITEM.ID()$').val("Y");
+		var storage = window.edge.widgets.cordova.Storage; //INITIALIZEAZA STORAGE
+		var storageType=$%IF ITEM.storageType == "PERMANENT"$0$%ELSE$1$%ENDIF$; //SE UITA CE FEL DE STORAGE SE FOLOSESTE
+		storage.setSource(storageType);//SETEAZA STORAGE TYPE
+		storage.setItem("$$ITEM.itemkey$","Y");
+    } 
+    else {
+        $('#$$ITEM.ID()$').val("N");
+		var storage = window.edge.widgets.cordova.Storage; //INITIALIZEAZA STORAGE
+		var storageType=$%IF ITEM.storageType == "PERMANENT"$0$%ELSE$1$%ENDIF$; //SE UITA CE FEL DE STORAGE SE FOLOSESTE
+		storage.setSource(storageType);//SETEAZA STORAGE TYPE
+		storage.setItem("$$ITEM.itemkey$","N");
+    }
+});
+
+$(function(){
+$$ITEM.ID()$onDeviceReady();
+});
+ 
+</script>
+$%ENDIF$

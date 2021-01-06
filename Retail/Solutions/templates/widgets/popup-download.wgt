@@ -1,0 +1,50 @@
+<style>
+.ui-dialog{
+	border-radius: 25px;
+}
+</style>
+<script type="text/javascript" charset="UTF-8">
+
+$(document).ready(function() {
+	/*$.fn.bootstrapBtn = $.fn.button.noConflict();*/
+	$(jq("$$ITEM.ID()$")).dialog({
+		$%IF ITEM.TITLE != ""$ title: "$$ITEM.TITLE$",$%ENDIF$
+		$%IF ITEM.MODAL = "Y"$ modal: true,$%ENDIF$
+		$%IF ITEM.WIDTH != ""$ width: $$ITEM.WIDTH$,$%ENDIF$
+		$%IF ITEM.HEIGHT != ""$ height: $$ITEM.HEIGHT$,$%ENDIF$
+		position:{ my: "center top", at: "center top", of:".$$ITEM.buttonid$"},
+		resizable: true,  
+		autoOpen: false,
+		closeOnEscape: true, 
+		draggable: true,
+		dialogClass: "dialogCustom",
+		appendTo: ".$$ITEM.buttonid$"
+	});
+	$("body").on('click',".$$ITEM.buttonid$",function(){
+		$(jq("$$ITEM.ID()$")).dialog("open");
+	});
+	
+	$("#$$ITEM.ID()$").on('click','.datatablecurrency',function(){
+		var rowVal = $(this);
+		var selectedtext = rowVal[0].innerText;
+		if(selectedtext != "") {
+			var cur1 = selectedtext.substr(0,3);
+			var cur2 = selectedtext.substr(3,3);
+			$(".$$ITEM.targetclass1$").val(selectedtext);
+			$(".$$ITEM.targetclass1$").focus();
+			$(".currencybought").val(cur1);
+			$("#"+$(".currencybought").attr('id')+"_ERRORMESSAGE").hide();
+			$(".currencysold").val(cur2);
+			$(jq("$$ITEM.ID()$")).dialog("close");
+		}
+	});
+	$( jq("$$ITEM.ID()$") ).parent().animate({"top": "+=100px"}, 900);
+	$( jq("$$ITEM.ID()$") ).parent().appendTo($("form:first"));
+});
+</script>
+
+<div id="$$ITEM.ID()$" style="border-radius: 20px;">
+	$$FORMCONTENT$
+	<input id="$$ITEM.ID()$_flag" type="hidden" name="$$COMPONENT_ID_PREFIX$_V_$$ITEM.PARENT().GroupName$" value="Y">
+</div>
+

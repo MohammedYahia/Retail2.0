@@ -1,0 +1,66 @@
+<script src="./templates/widgets/com.temenos.theme/carousel/js/swiper.min.js" type="text/javascript"></script>
+<link href="./templates/widgets/com.temenos.theme/carousel/css/swiper.min.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.swiper-container {
+    display: block;
+}
+
+$%IF ITEM.SHOW_PAGINATION == "Y" || ITEM.SHOW_NAV_BUTTONS == "Y"$
+.swiper-container {
+    padding-bottom: 50px;
+}
+$%ENDIF$
+
+.swiper-button-next, .swiper-button-prev {
+	top: 96%;
+}
+
+.tc-card .swiper-button-next, .tc-card .swiper-button-prev {
+	top: 88%;
+}
+.swiper-pagination-bullet-active {
+	background: #003e75;
+}
+
+
+
+.tc-carousel-next, .tc-carousel-prev {
+	background-image: none;
+	position: absolute;
+	bottom: 0px;
+	left: -8px;
+}
+.tc-carousel-next {
+	left: auto;
+	right: -8px;
+}
+
+
+.tc-card .tc-carousel-next, .tc-card .tc-carousel-prev {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+
+}
+.tc-card .tc-carousel-next {
+	left: auto;
+	right: 4px;
+}
+.swiper-pagination:focus {
+	box-shadow: none;
+}
+.swiper-pagination-bullet {
+    width: 0.73rem;
+    height: 0.73rem;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0 0.5rem;
+}
+
+@media (max-width: 567px) {
+	.swiper-container {
+		xoverflow: visible;
+	}
+}
+</style>

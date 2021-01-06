@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+	<widget name="tw-StyleSection" type="Section" >
+		<template type="source" value="style-section.wgt"/>
+		<custom>
+			<item name="EXTRA_STYLES" prompt="Extra Styles" type="com.acquire.intelligentforms.ide.dialogs.RichTextField" includeInDesign="false"/>
+			<item name="EXTRA_INLINE_STYLES" prompt="Extra Inline Styles (no {} required)" type="com.acquire.intelligentforms.ide.dialogs.RichTextField" includeInDesign="false"/>
+
+            <item name="BG_IMG" prompt="Path To Image" help="This needs to be accessible by the web browser at runtime, so &#10;consider using $$LIBRARY_CONTEXTPATH$ for component-only images" type="javax.swing.JFileChooser|MULTI_RICH_VALUES" typeValue="Image Choose|FILES_ONLY|*|Image File|Open|Project dir" includeInDesign="false"/>
+
+			<item name="RunAnimation"   prompt="Run Animation"  type="com.acquire.util.FocusCheckbox"  tab="Animation Settings" />
+			<item applicableCondition="RunAnimation=='Y'" name="Duration" 		prompt="Animation Duration  (s)"  	tab="Animation Settings" />
+			<item applicableCondition="RunAnimation=='Y'" name="InitialOpacity" prompt="Initial Opacity (0-1)"  tab="Animation Settings" />
+			<item applicableCondition="RunAnimation=='Y'" name="InitialScale"   prompt="Initial Scale (0-1)"    tab="Animation Settings" />
+			<item applicableCondition="RunAnimation=='Y'" name="InitialXOffset" prompt="Initial X Offset (specify units)"  tab="Animation Settings" />
+			<item applicableCondition="RunAnimation=='Y'" name="InitialYOffset" prompt="Initial Y Offset (specify units)"  tab="Animation Settings" />
+
+            <item applicableCondition="RunAnimation=='Y'" name="Perspective"      prompt="Perspective (specify units)" hint="Value set on parent of card" tab="Animation Settings" />
+			<item applicableCondition="RunAnimation=='Y'" name="InitialXRotation" prompt="Initial X Rotation (deg)"  tab="Animation Settings" />
+			<item applicableCondition="RunAnimation=='Y'" name="InitialYRotation" prompt="Initial Y Rotation (deg)"  tab="Animation Settings" />			
+		</custom>
+	</widget>
+</widgets>

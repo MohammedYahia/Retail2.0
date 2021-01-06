@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><LanguageMap presentations="Cards" project="Cards" sourcelanguage="en-GB" targetlanguage="en-GB" updated="02/08/17 15:33" version="1">
+  <Comment>Language maps for cards</Comment>
+  <ProcessEntities>
+    <Container class="com.acquire.intelligentforms.entities.Product" displayString="Cards" eid="341BF6D14C90E7B682120" type="Process">
+      <Container class="com.acquire.intelligentforms.entities.Phase" displayString="Cards" eid="341BF6D14C90E7B682126" type="Phase">
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Current Cards" eid="587C614DA23570FF6296" path="Cards.Cards.Current Cards" type="Button">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="587C614DA23570FF6297:Cards" mappingType="PLACEHOLDER" original="" specifiedBy="587C614DA23570FF6296:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="587C614DA23570FF6297:Cards" mappingType="PLACEHOLDER" original="" specifiedBy="587C614DA23570FF6296:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="587C614DA23570FF6297:Cards" mappingType="PLACEHOLDER" original="" specifiedBy="587C614DA23570FF6296:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="587C614DA23570FF6297:Cards" mappingType="OVERRIDE" original="Current Cards" specifiedBy="587C614DA23570FF6296:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="587C614DA23570FF6297:Cards" mappingType="OVERRIDE" original="Current Cards" specifiedBy="587C614DA23570FF6296:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Old Cards" eid="587C614DA23570FF6302" path="Cards.Cards.Old Cards" type="Button">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="587C614DA23570FF6303:Cards" mappingType="PLACEHOLDER" original="" specifiedBy="587C614DA23570FF6302:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="587C614DA23570FF6303:Cards" mappingType="PLACEHOLDER" original="" specifiedBy="587C614DA23570FF6302:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="587C614DA23570FF6303:Cards" mappingType="PLACEHOLDER" original="" specifiedBy="587C614DA23570FF6302:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="587C614DA23570FF6303:Cards" mappingType="OVERRIDE" original="Old Cards" specifiedBy="587C614DA23570FF6302:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="587C614DA23570FF6303:Cards" mappingType="OVERRIDE" original="Old Cards" specifiedBy="587C614DA23570FF6302:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <Container class="com.acquire.intelligentforms.entities.ItemGroup" displayString="CurrentCards" eid="587C614DA23570FF7088" type="Item Group">
+          <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="There are no records to display" eid="840100FA8B5215F6393887" path="Cards.Cards.CurrentCards.There are no records to display" type="Heading">
+            <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="840100FA8B5215F6393888:Cards" mappingType="PLACEHOLDER" original="" specifiedBy="840100FA8B5215F6393887:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="840100FA8B5215F6393888:Cards" mappingType="OVERRIDE" original="There are no records to display" specifiedBy="840100FA8B5215F6393887:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="840100FA8B5215F6393888:Cards" mappingType="PLACEHOLDER" original="" specifiedBy="840100FA8B5215F6393887:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="840100FA8B5215F6393888:Cards" mappingType="PLACEHOLDER" original="" specifiedBy="840100FA8B5215F6393887:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+          <ProcessEntity class="com.acquire.intelligentforms.entities.FormTable" displayString="CurrentCards" eid="92F22F46D6176B5E255279" path="Cards.Cards.CurrentCards.CurrentCards" type="Table">
+            <ProcessEntityAttr default="" name="TableSummary" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="92F22F46D6176B5E255280:Cards" mappingType="OVERRIDE" original="CurrentCards" specifiedBy="92F22F46D6176B5E255279:Table" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+        </Container>
+        <Container class="com.acquire.intelligentforms.entities.ItemGroup" displayString="OldCards" eid="587C614DA23570FF7367" type="Item Group">
+          <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="There are no records to display" eid="840100FA8B5215F6394955" path="Cards.Cards.OldCards.There are no records to display" type="Heading">
+            <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="840100FA8B5215F6394956:Cards" mappingType="PLACEHOLDER" original="" specifiedBy="840100FA8B5215F6394955:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="840100FA8B5215F6394956:Cards" mappingType="OVERRIDE" original="There are no records to display" specifiedBy="840100FA8B5215F6394955:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="840100FA8B5215F6394956:Cards" mappingType="PLACEHOLDER" original="" specifiedBy="840100FA8B5215F6394955:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="840100FA8B5215F6394956:Cards" mappingType="PLACEHOLDER" original="" specifiedBy="840100FA8B5215F6394955:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+          <ProcessEntity class="com.acquire.intelligentforms.entities.FormTable" displayString="OldCards" eid="92F22F46D6176B5E253180" path="Cards.Cards.OldCards.OldCards" type="Table">
+            <ProcessEntityAttr default="" name="TableSummary" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTable" forPresObjects="92F22F46D6176B5E253181:Cards" mappingType="OVERRIDE" original="OldCards" specifiedBy="92F22F46D6176B5E253180:Table" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+        </Container>
+      </Container>
+    </Container>
+  </ProcessEntities>
+  <Designs/>
+  <PresentationOnlyObjects>
+    <PresentationType class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationType" displayString="Cards" eid="341BF6D14C90E7B682138" path="Cards" type="Rich Presentation Type">
+      <Attribute mappingType="OVERRIDE" name="BackButtonText" original="Back" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DateFormat" original="DD/MM/YYYY" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DecimalSymbol" original="." state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DigitGroupSymbol" original="," state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="EditTheme" original="N" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ForwardButtonText" original="Continue" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="HelpIconHint" original="Help" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaMessage" original="Please re-enter using letters" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaNumericMessage" original="Please re-enter using letters and numbers" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDateMessage" original="Please enter a valid date in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDaysInMonthMessage" original="There are not that many days in the specified month" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDecimalMessage" original="Please enter a valid decimal number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidLeapYearMessage" original="The specified year is not a leap year" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxDateMessage" original="The latest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxFileSizeMessage" original="The maximum file size allowed is $$QUESTION_CONSTRAINT$k" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxLengthMessage" original="The maximum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxValueMessage" original="The maximum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinDateMessage" original="The earliest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinLengthMessage" original="The minimum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinValueMessage" original="The minimum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidNumMessage" original="Please enter a valid number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidTimeMessage" original="Please enter a valid time in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidUploadTypeMessage" original="The valid file types you are allowed to upload are: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="LayoutDirection" original="ltr" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandMessage" original="Please answer all the required questions marked with a $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="QuestionListDefault" original="- Please Select" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ValidationMessage" original="Please enter a valid value" state="NEW" status="NEW" value=""/>
+      <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationProduct" displayString="Cards" eid="341BF6D14C90E7B682145" type="Rich Presentation Process">
+        <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" displayString="Cards" eid="341BF6D14C90E7B682147" type="Rich Presentation Phase">
+          <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section (using td-card-body)" eid="5284F4BB55769B96784061" type="Rich Presentation Section">
+            <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section (using td-tab-container)" eid="840100FA8B5215F6400632" type="Rich Presentation Section">
+              <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTabPane" displayString="Tab Pane Current cards" eid="840100FA8B5215F6401562" path="Cards.Cards.Cards.Section.Section.Tab Pane Current cards" type="Rich Presentation Tab Pane">
+                <Attribute mappingType="PLACEHOLDER" name="HintText" original="" state="NEW" status="NEW" value=""/>
+                <Attribute mappingType="OVERRIDE" name="TabName" original="Current cards" state="NEW" status="NEW" value=""/>
+              </PresentationObject>
+              <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTabPane" displayString="Tab Pane Old cards" eid="840100FA8B5215F6402484" path="Cards.Cards.Cards.Section.Section.Tab Pane Old cards" type="Rich Presentation Tab Pane">
+                <Attribute mappingType="PLACEHOLDER" name="HintText" original="" state="NEW" status="NEW" value=""/>
+                <Attribute mappingType="OVERRIDE" name="TabName" original="Old cards" state="NEW" status="NEW" value=""/>
+              </PresentationObject>
+            </Container>
+          </Container>
+        </Container>
+      </Container>
+    </PresentationType>
+  </PresentationOnlyObjects>
+  <Rules>
+    <MasterRules/>
+  </Rules>
+  <Lists>
+    <List eid="587C614DA23570FF4388" listName="CardType" reset="True">
+      <ListItem eid="587C614DA23570FF4389" group="" groupState="NEW" key="CurrentCards" original="CurrentCards" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="587C614DA23570FF4390" group="" groupState="NEW" key="OldCards" original="OldCards" originalGroup="" remove="" state="NEW" value=""/>
+    </List>
+  </Lists>
+</LanguageMap>

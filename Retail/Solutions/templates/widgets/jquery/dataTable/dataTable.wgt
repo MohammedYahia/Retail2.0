@@ -1,0 +1,156 @@
+<!-- $Revision: 1.8 $ -->
+$$ITEM.EC_GENERATE()$
+
+<style type="text/css">
+	#$$ITEM.ID()$_wrapper table.dataTable tr.odd td{
+		background-color: $$ITEM.OddRowsStyle.background-color$;
+	}
+	
+	#$$ITEM.ID()$_wrapper table.dataTable tr.odd td.sorting_1{
+		background-color: $$ITEM.OddRowsStyle.background-color$;
+		xopacity: 0.5;
+		font-weight: bold
+	}
+
+	#$$ITEM.ID()$_wrapper table.dataTable tr.even td{
+		background-color: $$ITEM.EvenRowsStyle.background-color$;
+	}
+	#$$ITEM.ID()$_wrapper table.dataTable tr.even td.sorting_1{
+		background-color: $$ITEM.EvenRowsStyle.background-color$;
+		font-weight: bold;
+		xopacity: 0.5;
+	}
+	
+	#$$ITEM.ID()$_wrapper.dataTables_wrapper .ui-toolbar{
+		padding: 10px;
+		background-color: #c2d5dc;
+	}
+	
+	#$$ITEM.ID()$_wrapper .dataTables_filter {
+		float: none;
+	}
+	
+	#$$ITEM.ID()$_wrapper .dataTables_paginate{
+		float: none;
+	}
+	
+	#$$ITEM.ID()$_wrapper .ui-corner-br{
+		border-bottom-right-radius: 11px;
+	}
+	
+	#$$ITEM.ID()$_wrapper .ui-corner-bl{
+		border-bottom-left-radius: 11px;
+	}
+	
+	#$$ITEM.ID()$_wrapper .ui-corner-tr{
+		border-top-right-radius: 11px;
+	}
+	
+	#$$ITEM.ID()$_wrapper .ui-corner-tl{
+		border-top-left-radius: 11px;
+	}
+	
+	#$$ITEM.ID()$_wrapper .ui-widget-header{
+		border: 1px solid #aaaaaa;
+		background-image: none;
+	}
+	
+	#$$ITEM.ID()$_wrapper .ui-button{
+		padding: 2px 6px;
+	}
+
+}
+</style>
+
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+	if ($$ITEM.NUMBER_OF_ROWS()$ == 0) {
+		$('#$$ITEM.ID()$ tr').last().remove();
+	}
+	$('#$$ITEM.ID()$').find('thead th a').attr('onclick', '');
+	
+	try {
+		var oTable = $('#$$ITEM.ID()$').dataTable({
+				"bDestroy":true,
+				"bJQueryUI": true,
+				"sPaginationType": "full_numbers",
+				"bPaginate":	$%IF ITEM.PAGE_SIZE == "0"$false$%ELSE$true$%ENDIF$,
+				$%IF ITEM.PAGE_SIZE != "0"$"iDisplayLength": $$ITEM.PAGE_SIZE$, $%ENDIF$
+				"bLengthChange": true,
+				$%IF ITEM.PAGE_SIZE != "0" && ITEM.PAGE_MENU != ""$"aLengthMenu": [$$ITEM.PAGE_MENU$],$%ENDIF$
+				"bFilter":	$%IF ITEM.SHOW_FILTER == "Y"$true$%ELSE$false$%ENDIF$,
+				"bSort":	$%IF ITEM.SHOW_SORT == "Y"$true$%ELSE$false$%ENDIF$,
+                "aoColumns": [$%FOREACH TABLE_CHILD IN TABLE$
+                                $%IF TABLE_CHILD.TYPE() == "Question"$
+                                    $%IF TABLE_CHILD.DATAITEM().TYPE() == "Date"$
+                                        {"sType":"date-euro"}
+                                    $%ELSE$
+                                        $%IF TABLE_CHILD.DATAITEM().TYPE() == "Number" ||  TABLE_CHILD.DATAITEM().TYPE() == "Decimal"$
+                                            {"sType":"num-html"}
+                                        $%ELSE$
+                                            {"sType":"txt-html"}
+                                        $%ENDIF$
+                                    $%ENDIF$
+                                $%ELSE$
+                                    {"sType":"txt-html"}
+                                $%ENDIF$
+                                $%IF TABLE_CHILD.IS_LAST() != "Y"$,$%ENDIF$
+                              $%ENDFOREACH$
+                              $%IF TABLE.HAS_SELECTOR() == "Y"$,null$%ENDIF$
+                              ],
+				"bInfo":	$%IF ITEM.SHOW_INFO == "Y"$true$%ELSE$false$%ENDIF$,
+				"bAutoWidth":	$%IF ITEM.ColumnSizing == "No layout"$true$%ELSE$false$%ENDIF$, 
+				"bStateSave":	$%IF ITEM.SAVE_STATE == "Y"$true$%ELSE$false$%ENDIF$,
+				"oLanguage": {
+					"sSearch":		$%IF ITEM.SEARCH_TEXT != ""$		"$$ITEM.SEARCH_TEXT$"$%ELSE$"Search"$%ENDIF$,
+					"sLengthMenu":		$%IF ITEM.PAGE_SIZE_TEXT != ""$		"$$ITEM.PAGE_SIZE_TEXT$"$%ELSE$"Display _MENU_ records per page"$%ENDIF$,
+					"sZeroRecords":		$%IF ITEM.ZERO_RECORDS_TEXT != ""$	"$$ITEM.ZERO_RECORDS_TEXT$"$%ELSE$"Nothing found - sorry"$%ENDIF$,
+					"sInfo":		$%IF ITEM.INFO_TEXT != ""$		"$$ITEM.INFO_TEXT$"$%ELSE$"Showing _START_ to _END_ of _TOTAL_ records"$%ENDIF$,
+					"sInfoEmpty":		$%IF ITEM.INFO_EMPTY_TEXT != ""$	"$$ITEM.INFO_EMPTY_TEXT$"$%ELSE$"Showing 0 to 0 of 0 records"$%ENDIF$,
+					"sInfoFiltered":	$%IF ITEM.INFO_FILTERED_TEXT != ""$	"$$ITEM.INFO_FILTERED_TEXT$"$%ELSE$"(filtered from _MAX_ total records)"$%ENDIF$,
+					"sEmptyTable":	$%IF ITEM.NoRecordsMessage != ""$	"$$ITEM.NoRecordsMessage$"$%ELSE$"No data available in table"$%ENDIF$,
+					"sLoadingRecords":	$%IF ITEM.LOADING_RECORDS_TEXT != ""$	"$$ITEM.LOADING_RECORDS_TEXT$"$%ELSE$"Loading..."$%ENDIF$,
+					"sProcessing":	$%IF ITEM.PROCESSING_TEXT != ""$	"$$ITEM.PROCESSING_TEXT$"$%ELSE$"Processing..."$%ENDIF$,
+$%COMMENT // not supported					sInfoPostFix : "",$
+$%COMMENT // not supported					sInfoThousands : ",",$
+$%COMMENT // not supported					sUrl : "",$
+					"oAria" : {
+						"sSortAscending":	$%IF ITEM.ARIA_SORT_ASCENDING_TEXT != ""$	"$$ITEM.ARIA_SORT_ASCENDING_TEXT$"$%ELSE$": activate to sort column ascending"$%ENDIF$,
+						"sSortDescending":	$%IF ITEM.ARIA_SORT_DESCENDING_TEXT != ""$	"$$ITEM.ARIA_SORT_DESCENDING_TEXT$"$%ELSE$": activate to sort column descending"$%ENDIF$
+					},
+					"oPaginate" : {
+						"sFirst":	$%IF ITEM.PAGINATE_FIRST_TEXT != ""$	"$$ITEM.PAGINATE_FIRST_TEXT$"$%ELSE$"First"$%ENDIF$,
+						"sLast":	$%IF ITEM.PAGINATE_LAST_TEXT != ""$	"$$ITEM.PAGINATE_LAST_TEXT$"$%ELSE$"Last"$%ENDIF$,
+						"sNext":	$%IF ITEM.PAGINATE_NEXT_TEXT != ""$	"$$ITEM.PAGINATE_NEXT_TEXT$"$%ELSE$"Next"$%ENDIF$,
+						"sPrevious":	$%IF ITEM.PAGINATE_PREVIOUS_TEXT != ""$	"$$ITEM.PAGINATE_PREVIOUS_TEXT$"$%ELSE$"Previous"$%ENDIF$
+					},
+				},
+				"asStripClasses": ["$$ITEM.STYLES().OddRowsStyle$", "$$ITEM.STYLES().EvenRowsStyle$"],
+                "fnCookieCallback": function (sName, oData, sExpires, sPath) {
+                    return sName + "="+JSON.stringify(oData)+"; path=" + sPath;
+                },
+				"fnDrawCallback": function(){
+					$('#$$ITEM.ID()$ td').bind('mouseenter', function () { $(this).parent().children().each(function(){$(this).addClass('$$ITEM.STYLES().RollOverStyle$'); }); });
+					$('#$$ITEM.ID()$ td').bind('mouseleave', function () { $(this).parent().children().each(function(){$(this).removeClass('$$ITEM.STYLES().RollOverStyle$'); }); });
+				}
+			});
+
+        $%COMMENT$ Move sort icons into sibling div, to prevent wrapping. $%ENDCOMMENT$
+        $(".DataTables_sort_icon").each(function() {
+            $(this).css("float", "right").appendTo( $(this).prev() );
+        });
+
+		$%IF ITEM.SelectedRowStyle != ""$
+			$("#$$ITEM.ID()$  tbody tr").live("click", function(event){
+				$("td.$$ITEM.SelectedRowStyle$", oTable.fnGetNodes()).removeClass('$$ITEM.SelectedRowStyle$');
+				$(event.target).parent().find("td").addClass('$$ITEM.SelectedRowStyle$');
+			});
+			if ("$$ITEM.DATAITEM().VALUE()$" != "") {
+				$("#$$ITEM.ID()$_row_$$ITEM.DATAITEM().VALUE()$").find("td").addClass('$$ITEM.SelectedRowStyle$');
+			}
+		$%ENDIF$
+	}
+	catch(e){}
+} );
+
+</script>

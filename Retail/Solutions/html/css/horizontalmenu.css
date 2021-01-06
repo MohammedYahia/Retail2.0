@@ -1,0 +1,78 @@
+.menu_container {}
+
+/* Get rid of the margin, padding and bullets in the unordered lists */
+.menuhoriz, .menuhoriz ul {padding:0; margin:0; list-style-type: none;}
+
+/* Set up the link size, color and borders */
+.menuhoriz a, .menuhoriz a:visited {display:block; height:25px; line-height:24px; text-decoration:none; text-indent:5px; bbborder:1px solid #000; bbborder-width:1px 1px 1px 1px;}
+
+/* Set up the sub level borders */
+.mmmenuhoriz li a.enclose, .mmmenuhoriz li a.enclose:visited {border-width:1px;}
+
+/* Set up the list items */
+.menuhoriz li {float:left;}
+
+/* For Non-IE browsers and IE7 */
+.menuhoriz li:hover {position:relative;bbborder-bottom: 1px;z-index:1;}
+/* Make the hovered list color persist */
+.menuhoriz li:hover > a { }
+/* Set up the sublevel lists with a position absolute for flyouts and overrun padding. The transparent gif is for IE to work */
+.menuhoriz li ul {display:none;}
+/* For Non-IE and IE7 make the sublevels visible on list hover. This is all it needs */
+.menuhoriz li:hover > ul {display:block; position:absolute; top:-10px; padding:10px 30px 30px 30px; }
+
+/* get rid of the table */
+.menuhoriz table {position:absolute; top:0; left:0;}
+
+/* For IE5.5 and IE6 give the hovered links a position relative and a change of background and foreground color. This is needed to trigger IE to show the sub levels */
+* html .menuhoriz li a:hover {position:relative; }
+
+.menuhoriz li :hover > a {padding-top: 0px;}
+
+/* For accessibility of the top level menu when tabbing */
+.menuhoriz li a:active, .menuhoriz li a:focus {}
+
+/* This lot is for IE5.5 and IE6 ONLY and is necessary to make the sublevels appear */
+
+/* change the drop down levels from display:none; to visibility:hidden; */
+* html .menuhoriz li ul {visibility:hidden; display:block; position:absolute; top:-1px; left:80px; padding:10px 30px 30px 30px;}
+
+/* keep the third level+ hidden when you hover on first level link */
+.menuhoriz li a:hover ul ul{
+visibility:hidden;
+}
+/* keep the fourth level+ hidden when you hover on second level link */
+.menuhoriz li a:hover ul a:hover ul ul{
+visibility:hidden;
+}
+/* keep the fifth level hidden when you hover on third level link */
+.menuhoriz li a:hover ul a:hover ul a:hover ul ul{
+visibility:hidden;
+}
+/* keep the sixth level hidden when you hover on fourth level link */
+.menuhoriz li a:hover ul a:hover ul a:hover ul a:hover ul ul {
+visibility:hidden;
+}
+
+/* make the second level visible when hover on first level link and position it */
+.menuhoriz li a:hover ul {
+visibility:visible; left:-30px; lef\t:-31px;
+}
+
+/* make the third level visible when you hover over second level link and position it and all further levels */
+.menuhoriz li a:hover ul a:hover ul{ 
+visibility:visible; top:-10px;
+}
+/* make the fourth level visible when you hover over third level link */
+.menuhoriz li a:hover ul a:hover ul a:hover ul { 
+visibility:visible;
+}
+/* make the fifth level visible when you hover over fourth level link */
+.menuhoriz li a:hover ul a:hover ul a:hover ul a:hover ul { 
+visibility:visible;
+}
+/* make the sixth level visible when you hover over fifth level link */
+.menuhoriz li a:hover ul a:hover ul a:hover ul a:hover ul a:hover ul { 
+visibility:visible;
+}
+/* If you can see the pattern in the above IE5.5 and IE6 style then you can add as many sub levels as you like */

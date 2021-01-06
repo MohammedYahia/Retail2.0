@@ -1,0 +1,19 @@
+<style>
+#$$ITEM.ID()$ .fb-like span, 
+#$$ITEM.ID()$ .fb-like iframe {
+min-height: 20px !important;
+min-width: 100px !important;
+}
+</style>
+<div class="fb-like" 
+$%IF ITEM.href != ""$ data-href="$$ITEM.href$"
+$%ENDIF$$%IF ITEM.layout != ""$ data-layout="$$ITEM.layout$"
+$%ENDIF$$%IF ITEM.width != ""$ data-width="$$ITEM.width$"
+$%ENDIF$$%IF ITEM.action != ""$ data-action="$$ITEM.action$"
+$%ENDIF$$%IF ITEM.show_faces == "Y"$ data-show-faces="true"$%ELSE$ data-show-faces="false"
+$%ENDIF$$%IF ITEM.share == "Y"$ data-share="true"
+$%ENDIF$$%IF ITEM.kid_directed_site == "Y"$ data-kid-directed-site="true"
+$%ENDIF$$%IF ITEM.colorscheme != ""$ data-colorscheme="$$ITEM.colorscheme$"
+$%ENDIF$$%IF ITEM.ref != ""$ data-ref="$$ITEM.ref$"$%ENDIF$></div>
+
+$%INCLUDE widgets/com.temenos.widgets.social.facebook/inc_fbRegisterWidget.wgt$$%ENDINCLUDE$

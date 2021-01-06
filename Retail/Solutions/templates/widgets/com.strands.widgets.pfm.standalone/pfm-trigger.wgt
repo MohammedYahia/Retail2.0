@@ -1,0 +1,143 @@
+<link rel="stylesheet" href="./templates/widgets/com.strands.widgets.pfm.standalone/pfm/pfm.min.css" type="text/css">
+<link rel="stylesheet" href="./templates/widgets/com.strands.widgets.pfm.standalone/pfm/pfm.custom.css" type="text/css">
+<script src="./templates/widgets/com.strands.widgets.pfm.standalone/pfm/pfm.min.js"></script>
+
+<script>
+		require.config({ baseUrl: ("templates/widgets/com.strands.widgets.pfm.standalone/") });
+		require(["pfm/pfm",
+		"jQuery",
+		"pfm/modules/rules-standalone/rules-standalone-module",
+		"pfm/modules/transactions-split-standalone/transactions-split-standalone-module",
+		"pfm/modules/transactions-category-editor-standalone/transactions-category-editor-standalone-module"], function (pfm, $, ruleModule, splitModule, categorizeModule, ) {
+			//Temenos will have to remove this hardcoded user
+			pfm.setHttpHeader("HTTP_STRANDS_USER", "$$ITEM.PFM_USERID$");
+			//Temenos will have to remove the following line
+			pfm.config.environment.contextPath = "$$ITEM.PFM_URL$";
+
+			pfm.show("details", "sf-details-placeholder",{});
+				
+			//Remove these hardcoded operation Id and operation account type
+			var catChangeEvents = ["category:change", "category:remove", "category:add"];
+            $('.ext-categorized-success').addClass("hide");
+            $('.ext-split-success').addClass("hide");
+            $('.ext-manage-success').addClass("hide");
+            
+			 $("div[id*='_$$ITEM.ListenerRule$']").click(function (event) {
+				
+				$(".sf-rules-module-placeholder").show();
+
+				pfm.showCustom(ruleModule, "sf-rules-module-placeholder", {	
+				});
+				var hideRuleContainer = function() {
+						pfm.closeCustom(splitModule);
+						$("#sf-rules-module-placeholder").css("visibility", "hidden");
+                        $('.ext-manage-success').removeClass("hide");
+					},
+					unsubscribeRuleEvents = function() {
+						pfm.unsubscribeAll("backToTransaction");		
+					};
+				pfm.subscribeAll("backToTransaction", function(data){
+					hideRuleContainer();
+					unsubscribeRuleEvents();
+					//Temenos will have to update their transactions after split creation/removal
+				});
+				
+			}); 
+			
+			$("div[id*='_$$ITEM.ListenerSplit$']").click(function (event) {
+				var operationId = "$$ITEM.TransactionId$",
+					opAccType =  "$$ITEM.AccType$",
+					opAccId = "$$ITEM.AccId$"
+
+				$("#sf-split-module-placeholder").show();
+
+				pfm.showCustom(splitModule, "sf-split-module-placeholder", {
+					transactionId: operationId,
+					transactionAccType: opAccType,
+					transactionAccId: opAccId
+				});
+				
+				//Enable the Description field
+				$("input[id*='sf-transaction-title-view']").removeAttr("disabled");
+				var hideSplitContainer = function() {
+						pfm.closeCustom(splitModule);
+						$("#sf-split-module-placeholder").css("visibility", "hidden");
+                        $('.ext-split-success').removeClass("hide");
+					},
+					unsubscribeSplitEvents = function() {
+						pfm.unsubscribeAll("transactionSplitCompleted");
+						pfm.unsubscribeAll("cancelSplitEdition");
+						pfm.unsubscribeAll("splitModuleOpened");
+						pfm.unsubscribeAll("category:change");
+						pfm.unsubscribeAll("category:remove");
+						pfm.unsubscribeAll("category:add");
+					};
+				
+				pfm.subscribeAll("transactionSplitCompleted", function(data){
+					hideSplitContainer();
+					unsubscribeSplitEvents();
+					//Temenos will have to update their transactions after split creation/removal
+				});
+				pfm.subscribeAll("cancelSplitEdition", function(data){
+					hideSplitContainer();
+					unsubscribeSplitEvents();
+				});
+				pfm.subscribeAll("splitModuleOpened", function(data){
+					pfm.subscribeAllEvents(catChangeEvents, function(data){
+						//Temenos will have to refresh categories again
+					});
+				});
+			}); 
+			
+			//Temenos will bind their categorize click event to the button of their choice, using the following hanlder:
+			$("div[id*='_$$ITEM.ListenerCategorize$']").click(function (event) {
+
+				var operationId = "$$ITEM.TransactionId$",
+					opAccType =  "$$ITEM.AccType$",
+					opAccId = "$$ITEM.AccId$"
+
+				$("#sf-categorize-module-placeholder").show();
+				
+				var hideCategorySelector = function() {
+						pfm.closeCustom(categorizeModule);
+						$("#sf-categorize-module-placeholder").css("visibility", "hidden");
+                        $('.ext-categorized-success').removeClass("hide");
+					},
+					unsubscribeCategorizeEvents = function() {
+						pfm.unsubscribeAll("closeCategorySelectorModule");
+						pfm.unsubscribeAll("categorySelectorPopupOpened");
+						pfm.unsubscribeAll("transaction:change");
+						pfm.unsubscribeAll("category:change");
+						pfm.unsubscribeAll("category:remove");
+						pfm.unsubscribeAll("category:add");
+					};
+				$("#sf-categorize-module-placeholder").show();
+				pfm.showCustom(categorizeModule, "sf-categorize-module-placeholder", {
+				transactionId: operationId,
+					transactionAccType: opAccType,
+                    transactionAccId: opAccId
+				});
+				
+				
+				
+				pfm.subscribeAll("closeCategorySelectorModule", function(data){
+					hideCategorySelector();
+					unsubscribeCategorizeEvents();
+				});
+
+				pfm.subscribeAll("categorySelectorPopupOpened", function(data){
+					pfm.subscribeAllEvents(catChangeEvents, function(data){
+						//Temenos will have to refresh categories again
+					});
+				});
+
+				pfm.subscribeAll("transaction:change", function(data){
+					hideCategorySelector();
+					unsubscribeCategorizeEvents();
+					//Temenos will have to refresh trasnactions again
+					pfm.publishAll("transactions:datagrid:change");
+				});
+			});
+			});
+</script>
+<div id="sf-details-placeholder" style=""></div>

@@ -1,0 +1,773 @@
+<!-- $Revision$ -->
+
+<style>
+#$$ITEM.ID()$ .highcharts-xaxis-grid .highcharts-grid-line {
+	stroke-width: $%IF ITEM.SHOW_X_AXIS_GRID_LINES == "Y"$1$%ELSE$0$%ENDIF$;
+}
+#$$ITEM.ID()$ .highcharts-yaxis-grid .highcharts-grid-line {
+	stroke-width: $%IF ITEM.SHOW_Y_AXIS_GRID_LINES == "Y"$1$%ELSE$0$%ENDIF$;
+}
+
+$%IF ITEM.Height == ""$
+#$$ITEM.ID()$ {
+	min-height: 400px;
+}
+$%ENDIF$
+</style>
+
+$%IF ITEM.GroupWithPrevious != "Y"$
+	$%IF ITEM.TOGGLE_BTN == "Y"$
+		$%IF ITEM.ChartType == "Pie Chart" || ITEM.ChartType == "Column Chart" || ITEM.ChartType == "Bar Chart"$
+			<div style="height: 20px; width: auto; float: right;">
+			$%IF ITEM.ChartType == "Pie Chart"$ 
+				<img id="btn_$$ITEM.ID()$" src="./templates/widgets/com.temenos.theme/highCharts/bTUbRex.png" height="100%"/>
+			$%ELSE$ 
+				<img id="btn_$$ITEM.ID()$" src="./templates/widgets/com.temenos.theme/highCharts/1iJIqWz.png" height="100%"/>
+			$%ENDIF$
+			</div>
+			<div style="clear:right;"> </div>
+		$%ENDIF$
+	$%ENDIF$
+	$%IF ITEM.TOGGLE_BTN == 'Y' && ITEM.Width == null$
+	<div id="$$ITEM.ID()$" class="tc-chart" style="width: 600px; height: $$ITEM.Height.escapeforjs()$px; margin: 0 auto"></div>
+	$%ELSE$
+	<div id="$$ITEM.ID()$" class="tc-chart" style="width: $$ITEM.Width.escapeforjs()$px; height: $$ITEM.Height.escapeforjs()$px; margin: 0 auto"></div>
+	$%ENDIF$
+
+$%ELSE$
+	<span id="$$ITEM.ID()$" class="tc-chart tc-grouped-chart"></span>
+$%ENDIF$
+
+<script type="text/javascript">
+$%IF ITEM.InteractiveChart == "Y"$
+	$(function() {
+	var elem = getForm("").elements["$$:ITEM.NavDataItem$"];
+	if (elem == null) {
+		 $('<div style="display: none;"><input type="text" name="$$:ITEM.NavDataItem$"/></div>').appendTo(getForm(""));
+	}
+	});
+$%ENDIF$
+var pieState = '$$ITEM.ChartType$'.indexOf('Pie') >=0;
+var chart;
+var negativeValues = false;
+var toggleChartType = "$$ITEM.ChartType$" != "Pie Chart" ? "$$ITEM.ChartType$".substring(0, "$$ITEM.ChartType$".indexOf(' ')).toLowerCase() : "column";
+$(function () {
+        Highcharts.setOptions( {
+            lang : {
+					decimalPoint: "$$PRESENTATIONTYPE.DECIMALSYMBOL$", 
+					thousandsSep: "$$PRESENTATIONTYPE.DIGITGROUPSYMBOL$",
+					numericSymbols: [$$ITEM.NUMERICSYMBOLS$],
+					noData: "$$ITEM.NODATA_MESSAGE.escapeforjs()$",
+			},
+			noData: {
+				style: {    
+					fontWeight: '$$ITEM.NODATA_FONT_WEIGHT$'.toLowerCase(),     
+					$%IF ITEM.NODATA_FONT_SIZE != ""$fontSize: '$$ITEM.NODATA_FONT_SIZE$px', $%ENDIF$
+					color: "$$ITEM.NODATA_FONT_COLOR.escapeforjs()$"    
+				}
+			}
+        });
+     	
+     	$%IF ITEM.GroupWithPrevious == "Y"$
+     		groupChartWithPrevious$$ITEM.ID()$()
+     	$%ELSE$
+     		addSeparateChart$$ITEM.ID()$();
+     	$%ENDIF$
+			
+
+});
+
+$%IF ITEM.GroupWithPrevious == "Y"$
+        function groupChartWithPrevious$$ITEM.ID()$() {
+
+            var chart = $("#$$ITEM.PREVIOUS_ID.escapeforjs()$").highcharts();
+            if (chart)
+            {
+            //if dual axis, add second axis...
+            $%IF ITEM.DualAxisInd == "Y"$
+                chart.addAxis({
+                                id: "axis_$$ITEM.PREVIOUS_ID.escapeforjs()$",
+                                title: {
+                                    text: "$$ITEM.YAxisLabel_Right.escapeforjs()$",
+                                },
+                                labels: {
+                                },
+                                opposite: true
+                            });
+            $%ENDIF$
+
+            $%IF ITEM.YSeriesName1 != ""$
+            chart.addSeries({
+                name: "$$ITEM.YSeriesName1.escapeforjs()$",
+            	$%IF ITEM.DualAxisInd == "Y"$
+               		yAxis: "axis_$$ITEM.PREVIOUS_ID.escapeforjs()$",
+            	$%ENDIF$
+                type: ('$$ITEM.ChartType$'.indexOf('Column Chart')  >= 0 ) ? 'column' : '$$ITEM.ChartType$'.substring(0, '$$ITEM.ChartType$'.indexOf(' ')).toLowerCase(),
+                data: [$%FOR ##:ITEM.XAxis#$  
+                                $%IF ITEM.ChartType == "Pie Chart" $
+                                    {name: "$$ITEM.XAxis.escapeforjs()$", y: $$ITEM.YAxis1$, sliced: $%IF ITEM.HighlightDataItem :== !INTERPRETER_INSTANCE$true$%ELSE$false$%ENDIF$},
+                                $%ELSE$
+                                    $%IF ITEM.ChartType == "Line Chart" || ITEM.ChartType == "Spline Chart"$
+                                        {y: $$ITEM.YAxis1$ },
+                                    $%ELSE$
+                                        {y: $$ITEM.YAxis1$ },
+                                    $%ENDIF$
+                                $%ENDIF$
+                       $%ENDFOR$],
+            });
+            $%ENDIF$
+            $%IF ITEM.YSeriesName2 != ""$ 
+            chart.addSeries({
+                name: "$$ITEM.YSeriesName2.escapeforjs()$",
+            	$%IF ITEM.DualAxisInd == "Y"$
+               		yAxis: "axis_$$ITEM.PREVIOUS_ID.escapeforjs()$",
+            	$%ENDIF$
+                type: ('$$ITEM.ChartType$'.indexOf('Column Chart')  >= 0 ) ? 'column' : '$$ITEM.ChartType$'.substring(0, '$$ITEM.ChartType$'.indexOf(' ')).toLowerCase(),
+                data: [$%FOR ##:ITEM.XAxis#$  
+                                $%IF ITEM.ChartType == "Pie Chart" $
+                                    {name: "$$ITEM.XAxis.escapeforjs()$", y: $$ITEM.YAxis2$, sliced: $%IF ITEM.HighlightDataItem :== !INTERPRETER_INSTANCE$true$%ELSE$false$%ENDIF$},
+                                $%ELSE$
+                                    $%IF ITEM.ChartType == "Line Chart" || ITEM.ChartType == "Spline Chart"$
+                                        {y: $$ITEM.YAxis2$ },
+                                    $%ELSE$
+                                        {y: $$ITEM.YAxis2$ },
+                                    $%ENDIF$
+                                $%ENDIF$
+                       $%ENDFOR$],
+            });
+            $%ENDIF$
+
+            $%IF ITEM.YSeriesName3 != ""$ 
+            chart.addSeries({
+                name: "$$ITEM.YSeriesName3.escapeforjs()$",
+            	$%IF ITEM.DualAxisInd == "Y"$
+               		yAxis: "axis_$$ITEM.PREVIOUS_ID.escapeforjs()$",
+            	$%ENDIF$
+                type: ('$$ITEM.ChartType$'.indexOf('Column Chart')  >= 0 ) ? 'column' : '$$ITEM.ChartType$'.substring(0, '$$ITEM.ChartType$'.indexOf(' ')).toLowerCase(),
+                data: [$%FOR ##:ITEM.XAxis#$  
+                                $%IF ITEM.ChartType == "Pie Chart" $
+                                    {name: "$$ITEM.XAxis.escapeforjs()$", y: $$ITEM.YAxis3$, sliced: $%IF ITEM.HighlightDataItem :== !INTERPRETER_INSTANCE$true$%ELSE$false$%ENDIF$},
+                                $%ELSE$
+                                    $%IF ITEM.ChartType == "Line Chart" || ITEM.ChartType == "Spline Chart"$
+                                        {y: $$ITEM.YAxis3$ },
+                                    $%ELSE$
+                                        {y: $$ITEM.YAxis3$ },
+                                    $%ENDIF$
+                                $%ENDIF$
+                       $%ENDFOR$],
+            });
+            $%ENDIF$
+        }
+        else
+        {
+        	addSeparateChart$$ITEM.ID()$();
+        }        
+	
+}
+$%ENDIF$	
+
+function addSeparateChart$$ITEM.ID()$()
+{
+	var chartElem = $('#$$ITEM.ID()$');
+	if (chartElem.length == 0)
+	{
+		//insert the missing chart div
+		var chartContainer = $('#p1_$$ITEM.ID()$');
+		chartContainer.prepend('<div id="$$ITEM.ID()$" style="$%IF ITEM.Width != ""$width: $$ITEM.Width.escapeforjs()$px;$%ENDIF$  $%IF ITEM.Height != ""$height: $$ITEM.Height.escapeforjs()$px; $%ENDIF$ margin: 0 auto"></div>');
+	}
+			$('#$$ITEM.ID()$').highcharts({
+		        navigation: {
+		            buttonOptions: {
+		                enabled: '$$ITEM.EXPORTING$' == "Y" ? true: false
+		            }
+		        },
+				chart: {
+					colorCount: 16,
+					type: ('$$ITEM.ChartType$'.indexOf('Column Chart')  >= 0 ) ? 'column' : '$$ITEM.ChartType$'.substring(0, '$$ITEM.ChartType$'.indexOf(' ')).toLowerCase(),
+					$%IF ITEM.ThreeDim == "Y"$
+					options3d: {
+			            enabled: true,
+			            alpha: 15,
+			            beta: 15,
+			            depth: 50,
+			            viewDistance: 25	
+			        },
+			        $%ENDIF$
+					$%IF ITEM.INVERTED == 'Y'$
+						inverted: true,
+					$%ENDIF$
+				},
+				plotOptions: {
+
+                	$%IF ITEM.ChartType == "Line Chart" || ITEM.ChartType == "Spline Chart"$
+					line: {
+						dataLabels: {
+							enabled: $%IF ITEM.ENABLE_DATALABELS == 'Y'$true$%ELSE$false$%ENDIF$,
+						},
+						$%IF ITEM.InteractiveChart == "Y"$
+							enableMouseTracking: true
+						$%ENDIF$
+					},				
+					$%ENDIF$
+                	$%IF ITEM.ChartType == "Pie Chart"$
+	                pie: {	
+	                	depth: 45,
+	                    dataLabels: {
+	                        color: "$$ITEM.CHART_FONT_COLOR.escapeforjs()$",
+							connectorColor: "$$ITEM.CONNECTOR_COLOR.escapeforjs()$",
+							enabled: $%IF ITEM.ENABLE_DATALABELS == 'Y'$true$%ELSE$false$%ENDIF$,
+							formatter: function() {
+	                                return '<b>'+ this.point.name +'</b>: ' + 
+                                                Highcharts.numberFormat(this.y, 2) + 
+                                                ' (' + Highcharts.numberFormat((this.percentage).toFixed(2), 2) +' %)';
+	                        }
+	                    },
+						showInLegend: $%IF ITEM.DisplayKey == 'Y'$true$%ELSE$false$%ENDIF$,
+						slicedOffset: '$$ITEM.SLICED_OFFSET$' == "" ? '10' : '$$ITEM.SLICED_OFFSET$',
+	                },
+	                $%ENDIF$
+	                column: {
+	                	depth: 45
+	                },
+	                series: {
+	                	negativeColor: true,
+						allowPointSelect: $%IF ITEM.ALLOW_POINT_SELECT == 'Y'$true$%ELSE$false$%ENDIF$,
+						events: {
+		                    legendItemClick: function(event) {
+		                        Highcharts.setOptions({lang: {decimalPoint: this.chart.options.lang.decimalPoint,
+					                                          thousandsSep: this.chart.options.lang.thousandsSep,
+					                                          numericSymbols: this.chart.options.lang.numericSymbols,
+					                                          noData: this.chart.options.lang.noData
+		                                          		}
+		                        });  
+		                        return true;
+		                    }
+		                },
+                  		states: {
+
+                        	select: {
+                            	color: "$$ITEM.SELECTION_COLOR.escapeforjs()$"
+                        	}
+                    	},
+                    	$%IF ITEM.DONUTSIZE != ""$
+                    		innerSize: '$$ITEM.DONUTSIZE$' + '%',
+                    	$%ENDIF$
+						$%IF ITEM.InteractiveChart == "Y"$
+	                    point: {
+                            events: {
+                                click: function() {
+                                	$("#$$COMPONENT_ID_PREFIX$$$ITEM.ACTION_SERIES_ID$").val(this.series.name)    
+						            $("#$$COMPONENT_ID_PREFIX$$$ITEM.ACTION_NAME_ID$").val(this.name || this.category)    
+						            $("#$$COMPONENT_ID_PREFIX$$$ITEM.ACTION_INDEX_ID$").val(this.x)    
+						            $("#$$COMPONENT_ID_PREFIX$$$ITEM.ACTION_VALUE_ID$").val(this.y)    
+						            setTimeout(function() {
+						            	$("#$$COMPONENT_ID_PREFIX$$$ITEM.ACTION_BUTTON_ID$").click()
+						            }, 200) 
+								}
+                            }
+	                    },
+    	                $%ENDIF$
+	                    
+	                    $%IF ITEM.ChartType != "Pie Chart"$							
+							stacking: ('$$ITEM.ChartType$'== 'Stacked Column Chart') ? 'normal' : null,						
+						$%ENDIF$
+	                    
+
+						$%IF ITEM.S_CURSOR == 'Y'$
+							cursor: 'pointer',
+						$%ENDIF$
+						dataLabels: {							
+							enabled: $%IF ITEM.ENABLE_DATALABELS == 'Y'$ true $%ELSE$ false $%ENDIF$,	
+							allowOverlap: $%IF ITEM.DL_OVERLAY == 'Y'$ true $%ELSE$ false $%ENDIF$,						
+							$%IF ITEM.DL_FORMAT != ""$
+								format: "$$ITEM.DL_FORMAT.escapeforjs()$",
+							$%ENDIF$
+							formatter: function() {
+                          		return  Highcharts.numberFormat(this.y, "$$PRESENTATIONTYPE.DECIMALSYMBOL$" == "" ? 0 : 2, "$$PRESENTATIONTYPE.DECIMALSYMBOL$", "$$PRESENTATIONTYPE.DIGITGROUPSYMBOL$");
+                     		}
+						},
+					}
+				},
+				credits: {
+					enabled: false
+				},
+				title: {
+					text: "$$ITEM.Title.escapeforjs()$",
+					$%IF ITEM.TITLE_FLOAT == "Y"$ floating: true, $%ENDIF$
+					$%IF ITEM.TITLE_ALIGNMENT != ""$ align: '$$ITEM.TITLE_ALIGNMENT$', $%ENDIF$
+					$%IF ITEM.TITLE_X != ""$ x: $$ITEM.TITLE_X$, $%ENDIF$
+					$%IF ITEM.TITLE_Y != ""$ y: $$ITEM.TITLE_Y$, $%ENDIF$
+				},
+				subtitle: {
+	                text: "$$ITEM.SubTitle.escapeforjs()$",
+	                $%IF ITEM.TITLE_FLOAT == "Y"$ floating: true, $%ENDIF$
+					$%IF ITEM.TITLE_ALIGNMENT != ""$ align: '$$ITEM.TITLE_ALIGNMENT$', $%ENDIF$
+					$%IF ITEM.SUB_TITLE_X != ""$ x: $$ITEM.SUB_TITLE_X$, $%ENDIF$
+					$%IF ITEM.SUB_TITLE_Y != ""$ y: $$ITEM.SUB_TITLE_Y$, $%ENDIF$
+	            },
+			$%IF ITEM.ChartType != "Pie Chart"$
+				xAxis: {
+					title: {
+						text: "$$ITEM.XAxisLabel.escapeforjs()$",
+						
+					},
+					$%IF ITEM.X_AXIS_TICKINTERVAL != ""$
+						tickInterval: $$ITEM.X_AXIS_TICKINTERVAL.escapeforjs()$,
+					$%ENDIF$
+					categories: [$%FOR ##:ITEM.XAxis#$ 
+									'$$ITEM.XAxis$',
+								 $%ENDFOR$
+								],
+					labels: {
+						enabled: $%IF ITEM.SHOW_X_LABELS == "Y"$true$%ELSE$false$%ENDIF$,
+						formatter: function () {
+    	                    return this.value + " $$ITEM.X_AXIS_SUFFIX.escapeforjs()$";
+        	            },
+						
+        	            $%IF ITEM.XAxisMarkerRotation != ""$rotation: -$$ITEM.XAxisMarkerRotation$, $%ENDIF$
+					}
+				},
+
+				yAxis: {                  	
+					title: {
+						text: "$$ITEM.YAxisLabel.escapeforjs()$",
+					},
+					labels: {
+						enabled: $%IF ITEM.SHOW_Y_LABELS == "Y"$true$%ELSE$false$%ENDIF$,
+						
+						$%IF ITEM.NUMERICSYMBOLS == ""$
+						formatter: function () {
+							return Highcharts.numberFormat(this.value, "$$PRESENTATIONTYPE.DECIMALSYMBOL$" == "" ? 0 : 2, "$$PRESENTATIONTYPE.DECIMALSYMBOL$", "$$PRESENTATIONTYPE.DIGITGROUPSYMBOL$") + " $$ITEM.Y_AXIS_SUFFIX.escapeforjs()$";
+                     	},
+                     	$%ENDIF$
+						$%IF ITEM.Y_ROTATION != ""$rotation: -$$ITEM.Y_ROTATION$, $%ENDIF$
+					},
+					plotLines: [{
+						value: 0,
+						width: 1,
+						color: '#808080'
+					}],
+					$%IF ITEM.Y_AXIS_TICKINTERVAL != ""$
+					tickInterval: $$ITEM.Y_AXIS_TICKINTERVAL.escapeforjs()$,
+					$%ENDIF$
+				},
+			$%ENDIF$
+
+				tooltip: {
+					enabled: $%IF ITEM.ShowHint == "Y"$true$%ELSE$false$%ENDIF$,
+	                shared:  $%IF ITEM.TT_SHARED == "Y"$true$%ELSE$false$%ENDIF$,
+					$%IF ITEM.TT_CROSSHAIRS == 'Y'$
+						crosshairs : [true, true],
+					$%ENDIF$
+						useHTML: true,
+					$%IF ITEM.TT_SHARED != "Y"$
+						formatter: function() {
+							var key = this.x
+	        	            if (!this.x) {
+	            	            key = this.key;
+	                	    }
+
+	                	    var ttContent = "";
+							ttContent += $%IF ITEM.TT_HEADERFORMAT != ""$ "<b>" + "$$ITEM.TT_HEADERFORMAT.escapeforjs()$" +"</b><br/>" $%ELSE$ "" $%ENDIF$;
+	                	    ttContent += "<b>" + this.series.name + ": " + key + "</b>";
+
+	                	    if (this.percentage) {
+		                	    $%IF ITEM.TOOLTIP_PERC_TITLE != ""$  
+		                	    	ttContent += ("<br/>$$ITEM.TOOLTIP_PERC_TITLE$: <b>" + Highcharts.numberFormat((this.percentage).toFixed(2), 2, "$$PRESENTATIONTYPE.DECIMALSYMBOL$", "$$PRESENTATIONTYPE.DIGITGROUPSYMBOL$") +' %</b>');
+		                	    $%ENDIF$
+	                	    }
+	                	    $%IF ITEM.TOOLTIP_VAL_TITLE != ""$  
+	                	    	ttContent += ("<br/>$$ITEM.TOOLTIP_VAL_TITLE$: <b>$$ITEM.TOOLTIP_PREFIX_VALUE.escapeforjs()$" + Highcharts.numberFormat(this.y, "$$PRESENTATIONTYPE.DECIMALSYMBOL$" == "" ? 0 : 2, "$$PRESENTATIONTYPE.DECIMALSYMBOL$", "$$PRESENTATIONTYPE.DIGITGROUPSYMBOL$") + "  $$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>");
+	                	    $%ENDIF$
+
+	                	    $%IF ITEM.TOOLTIP_CUSTOM1_TITLE != ""$ttContent += ("<br/>$$ITEM.TOOLTIP_CUSTOM1_TITLE$: <b>" + this.point.TOOLTIP_CUSTOM1_VALUE + "</b>"); $%ENDIF$
+	                	    $%IF ITEM.TOOLTIP_CUSTOM2_TITLE != ""$ttContent += ("<br/>$$ITEM.TOOLTIP_CUSTOM2_TITLE$: <b>" + this.point.TOOLTIP_CUSTOM2_VALUE + "</b>"); $%ENDIF$
+	                	    $%IF ITEM.TOOLTIP_CUSTOM3_TITLE != ""$ttContent += ("<br/>$$ITEM.TOOLTIP_CUSTOM3_TITLE$: <b>" + this.point.TOOLTIP_CUSTOM3_VALUE + "</b>"); $%ENDIF$
+
+	                	    ttContent += "<br/><small>" + "$$ITEM.TT_FOOTERFORMAT.escapeforjs()$" + "</small>";
+	                	    return ttContent;
+
+	                 	},
+	                $%ENDIF$
+				},
+				legend: {					
+					enabled: $%IF ITEM.DisplayKey != 'Y'$ false $%ELSE$ true $%ENDIF$,									
+					$%IF ITEM.KeyPosition != ""$
+					align: '$$ITEM.KeyPosition$'.toLowerCase(),					
+					$%ENDIF$
+					
+					layout: '$$ITEM.LAYOUT_POSITION$' == "" ? 'horizontal': '$$ITEM.LAYOUT_POSITION$'.toLowerCase(),
+					verticalAlign: '$$ITEM.KEYVERTICALALIGN$' == "" ? 'bottom': '$$ITEM.KEYVERTICALALIGN$'.toLowerCase(),
+					$%IF ITEM.KEYVERTICALALIGN == "Top"$
+						y: 25,
+					$%ENDIF$
+					$%IF ITEM.KeyWidth != ""$
+						width: $$ITEM.KeyWidth$,
+					$%ENDIF$
+					itemStyle: {
+	                    color: '$$ITEM.CHART_FONT_COLOR$'
+	                },
+					$%IF ITEM.L_TITLE != ""$
+					title: {
+						text: "$$ITEM.L_TITLE.escapeforjs()$",	
+						},
+					$%ENDIF$	
+					$%IF ITEM.L_FORMAT != ""$			
+						labelFormat: "$$ITEM.L_FORMAT.escapeforjs()$",
+					$%ENDIF$	
+					symbolRadius: 2
+
+				},
+
+			    responsive: {
+			        rules: [{
+			            condition: {
+			                maxWidth: 500
+			            },
+			            chartOptions: {
+			                legend: {
+			                    align: 'center',
+			                    verticalAlign: 'bottom',
+			                    layout: 'horizontal'
+			                },
+			                xAxis: {
+			                    labels: {
+			                        formatter: function () {
+			                            return this.value.charAt(0);
+			                        }
+			                    }
+			                },
+			                yAxis: {
+			                    labels: {
+			                        align: 'left',
+			                         x: -2,
+			                         y: 0
+			                    },
+			                    title: {
+			                    	text: ''
+			                    }
+			                }
+			            }
+			        }]
+			    },
+
+	            labels: {
+	              style: {
+	                 color: '$$ITEM.CHART_FONT_COLOR$'
+	              }
+	            },
+
+				series: [
+				$%IF ITEM.ChartType == "Pie Chart"$	
+	                $%IF ITEM.YSeriesName1 != ""${
+	                    name: '$$ITEM.YSeriesName1$',
+	                    allowPointSelect: true,
+	                    data: [$%IF ITEM.YAxis1 != null AND ITEM.XAxis != null$
+		                       $%FOR ##:ITEM.XAxis#$  {
+	                                name: "$$ITEM.XAxis.escapeforjs()$", 
+	                                y: $$ITEM.YAxis1$, 
+	                                sliced: $%IF ITEM.HighlightDataItem :== !INTERPRETER_INSTANCE$true$%ELSE$false$%ENDIF$,
+                    				$%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+	                           },
+	                           $%ENDFOR$
+	                           $%ENDIF$
+	                    ],
+						showInLegend: $%IF ITEM.DisplayKey == 'Y'$true$%ELSE$false$%ENDIF$,
+	                    }
+	                $%ENDIF$
+				$%ELSE$
+					$%IF ITEM.YSeriesName1 != "" AND ITEM.YAxis1 != ""$ {
+						name: "$$ITEM.YSeriesName1.escapeforjs()$",					
+						data: [$%IF ITEM.YAxis1.firstFreeInstance() != null AND ITEM.XAxis != null$
+							   $%FOR ##:ITEM.XAxis#$
+									{y: $$ITEM.YAxis1$,
+                    				$%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+									},
+							   $%ENDFOR$
+						  	   $%ENDIF$
+						],
+					}
+					$%ENDIF$
+	                $%IF ITEM.YSeriesName2 != "" AND ITEM.YAxis2 != ""$,{
+	                    name: "$$ITEM.YSeriesName2.escapeforjs()$",
+	                    data: [$%IF ITEM.YAxis2.firstFreeInstance() != null AND ITEM.XAxis != null$
+                           	   $%FOR ##:ITEM.XAxis#$ 
+	                                {y: $$ITEM.YAxis2$ ,
+                    				$%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+	                                },
+	    					   $%ENDFOR$
+		                       $%ENDIF$
+	                           ],
+	                }
+	                $%ENDIF$
+	                $%IF ITEM.YSeriesName3 != "" AND ITEM.YAxis3 != ""$,{
+	                    name: "$$ITEM.YSeriesName3.escapeforjs()$",
+	                    data: [$%IF ITEM.YAxis3.firstFreeInstance() != null AND ITEM.XAxis != null$
+	                           $%FOR ##:ITEM.XAxis#$ 
+	                               {y: $$ITEM.YAxis3$ ,
+                    				$%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+	                                },
+								$%ENDFOR$
+	                           $%ENDIF$
+	                           ],
+	                }
+	                $%ENDIF$
+					$%IF ITEM.YSeriesName4 != "" AND ITEM.YAxis4 != ""$,{
+						name: "$$ITEM.YSeriesName4.escapeforjs()$",
+						data: [$%IF ITEM.YAxis4.firstFreeInstance() != null AND ITEM.XAxis != null$
+						       $%FOR ##:ITEM.XAxis#$ 
+								   {y: $$ITEM.YAxis4$,
+                    				$%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+	                                },
+							   $%ENDFOR$
+							   $%ENDIF$
+							   ],
+					}
+					$%ENDIF$
+					$%IF ITEM.YSeriesName5 != "" AND ITEM.YAxis5 != ""$,{
+	                    name: "$$ITEM.YSeriesName5.escapeforjs()$",
+	                    data: [$%IF ITEM.YAxis5.firstFreeInstance() != null AND ITEM.XAxis != null$
+	                           $%FOR ##:ITEM.XAxis#$ 
+	                               {y: $$ITEM.YAxis5$,
+                    				$%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+	                                },
+							   $%ENDFOR$
+	                           $%ENDIF$
+	                           ],
+	                }
+	                $%ENDIF$
+					$%IF ITEM.YSeriesName6 != "" AND ITEM.YAxis6 != ""$,{
+	                    name: "$$ITEM.YSeriesName6.escapeforjs()$",
+	                    data: [$%IF ITEM.YAxis6.firstFreeInstance() != null AND ITEM.XAxis != null$
+	                           $%FOR ##:ITEM.XAxis#$ 
+	                               {y: $$ITEM.YAxis6$,
+                    				$%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+	                                },
+							   $%ENDFOR$
+	                           $%ENDIF$
+	                           ],
+	                }
+	                $%ENDIF$
+	                $%IF ITEM.YSeriesName7 != "" AND ITEM.YAxis7 != ""$,{
+	                    name: "$$ITEM.YSeriesName7.escapeforjs()$",
+	                    data: [$%IF ITEM.YAxis7.firstFreeInstance() != null AND ITEM.XAxis != null$
+	                           $%FOR ##:ITEM.XAxis#$ 
+	                               {y: $$ITEM.YAxis7$,
+                    				$%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+	                                },
+							   $%ENDFOR$
+	                           $%ENDIF$
+	                           ],
+	                }
+	                $%ENDIF$
+	                $%IF ITEM.YSeriesName8 != "" AND ITEM.YAxis8 != ""$,{
+	                    name: "$$ITEM.YSeriesName8.escapeforjs()$",
+	                    data: [$%IF ITEM.YAxis8.firstFreeInstance() != null AND ITEM.XAxis != null$
+	                           $%FOR ##:ITEM.XAxis#$ 
+	                               {y: $$ITEM.YAxis8$,
+                    				$%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+	                                },
+							   $%ENDFOR$
+	                           $%ENDIF$
+	                           ],
+	                }
+	                $%ENDIF$
+	                $%IF ITEM.YSeriesName9 != "" AND ITEM.YAxis9 != ""$,{
+	                    name: "$$ITEM.YSeriesName9.escapeforjs()$",
+	                    data: [$%IF ITEM.YAxis9.firstFreeInstance() != null AND ITEM.XAxis != null$
+	                           $%FOR ##:ITEM.XAxis#$ 
+	                               {y: $$ITEM.YAxis9$,
+                    				$%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+	                                },
+							   $%ENDFOR$
+	                           $%ENDIF$
+	                           ],
+	                }
+	                $%ENDIF$
+	                $%IF ITEM.YSeriesName10 != "" AND ITEM.YAxis10 != ""$,{
+	                    name: "$$ITEM.YSeriesName10.escapeforjs()$",
+	                    data: [$%IF ITEM.YAxis10.firstFreeInstance() != null AND ITEM.XAxis != null$
+	                           $%FOR ##:ITEM.XAxis#$ 
+	                               {y: $$ITEM.YAxis10$,
+                    				$%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+                    				$%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+	                                },
+							   $%ENDFOR$
+	                           $%ENDIF$
+	                           ],
+	                }
+	                $%ENDIF$
+				$%ENDIF$
+		   ],
+		},
+		
+		
+		
+		// Enable user to toggle pie chart as bar chart and back
+		function(chart){
+		// If contains negative values and Chart type is Pie , chart will be converted to column 
+			$%FOR ##:ITEM.XAxis#$  
+				$%IF ITEM.YAxis1 < 0 $
+					$%IF ITEM.ChartType == "Pie Chart"$
+						 chart.series[0].update({
+                			type: "column"
+ 						})
+ 
+					$%ENDIF$
+					negativeValues = true;
+					$%BREAK$$%ENDBREAK$	
+				$%ENDIF$
+			$%ENDFOR$		
+			if (!negativeValues) {
+				$('#btn_$$ITEM.ID()$').click(function(){
+				    if(!pieState) {
+						seriesLength = chart.series.length;
+						for( i=1 ; i < seriesLength ; i++ ) {
+							chart.series[i].hide();
+						}
+					} else {
+						seriesLength = chart.series.length;
+						for( i=1 ; i < seriesLength ; i++ ) {
+							chart.series[i].show();
+						}
+					}
+				$.each(chart.series,function(i,serie){
+						serie.update({					
+							type: pieState ? toggleChartType : 'pie',
+							
+			            });
+					});	
+				if (pieState)
+				{
+				 	$.each(chart.xAxis,function(i,xAxis){
+							xAxis.update({	
+								categories: [$%FOR ##:ITEM.XAxis#$ 
+									"$$ITEM.XAxis$",
+								$%ENDFOR$
+											],
+								title: {
+									text: '',
+									},
+									labels: {
+										style: {
+											color: '$$ITEM.CHART_FONT_COLOR$',
+										}
+									}
+								}); 
+						});
+					$.each(chart.yAxis,function(i,yAxis){
+					yAxis.update({	
+						labels: {
+							enabled: $%IF ITEM.SHOW_Y_LABELS == "Y"$true$%ELSE$false$%ENDIF$,
+							style: {
+								color: '$$ITEM.CHART_FONT_COLOR$',
+							},
+						},
+						title: {
+							text: "$$ITEM.YAxisLabel.escapeforjs()$",
+							style: {
+								color: '$$ITEM.CHART_FONT_COLOR$',
+							}
+						}
+						}); 
+					});
+				}
+				else
+				{
+					$.each(chart.yAxis,function(i,yAxis){
+						yAxis.update({	
+							labels: {
+								enabled: $%IF ITEM.SHOW_Y_LABELS == "Y"$true$%ELSE$false$%ENDIF$,
+								style: {
+									color: '$$ITEM.CHART_FONT_COLOR$',
+								},
+							},
+							title: {
+								text: '',
+								}
+							}); 
+						});
+				}
+				// Switch the image of toggle button
+					if (pieState)
+						$('#btn_$$ITEM.ID()$').attr('src', './templates/widgets/com.temenos.widgets.charts.highcharts/1iJIqWz.png');
+					else
+						$('#btn_$$ITEM.ID()$').attr('src', './templates/widgets/com.temenos.widgets.charts.highcharts/bTUbRex.png');
+					
+					chart.redraw();
+				    pieState = !pieState;
+		        });
+	        }
+	        else {
+	        	$('#btn_$$ITEM.ID()$').attr('style', "display:none");
+	        }
+					
+		}
+	);	
+};
+$%COMMENT$ Rescale Highcharts when resize browser $%ENDCOMMENT$
+
+$( window ).resize(function() {
+	$$ITEM.ID()$_resize();
+});
+
+Hi.addHook("postProcessResponses", function() {
+	$$ITEM.ID()$_resize();
+	if ( $('#$$ITEM.ID()$').highcharts() != null )
+		$('#$$ITEM.ID()$').highcharts().reflow();
+})
+
+$%COMMENT$ We need parent dimensions - Highcharts could be in a Column or Section with a certain size (px or %), in this case the chart needs to be smaller then parent container and not bigger then maximum size set for it  $%ENDCOMMENT$
+function $$ITEM.ID()$_resize(){
+	var parentWidth = $("#$$ITEM.ID()$").closest(".tc-card-body, .tc-tab-container").width();
+	var parentHeight = $("#$$ITEM.ID()$").parent().parent().parent().parent().height();
+	var maxWidth  = '$$ITEM.Width.escapeforjs()$'  != "" ? '$$ITEM.Width.escapeforjs()$'  : parentWidth;
+	var maxHeight = '$$ITEM.Height.escapeforjs()$' != "" ? '$$ITEM.Height.escapeforjs()$' : parentHeight;
+	if(parentWidth != 0)
+	{
+		if (parentWidth < $("#$$ITEM.ID()$").width())
+	  		$("#$$ITEM.ID()$").css("width",parentWidth + "px");
+		else if(parentWidth > maxWidth)
+			$("#$$ITEM.ID()$").css("width",maxWidth + "px");
+		else 
+			$("#$$ITEM.ID()$").css("width",parentWidth + "px");
+	}
+	else
+		if($(window).width() < $("#$$ITEM.ID()$").width() || $("#$$ITEM.ID()$").width() == 0)
+			$("#$$ITEM.ID()$").css("width",$(window).width() + "px");
+	
+	/*if(parentHeight != 0)
+	{
+		if (parentHeight < $("#$$ITEM.ID()$").height())
+	   		$("#$$ITEM.ID()$").css("height",parentHeight + "px");
+		else if(parentHeight > maxHeight)
+			$("#$$ITEM.ID()$").css("height",maxHeight + "px");
+	   else 
+			$("#$$ITEM.ID()$").css("height",parentHeight + "px");
+	}
+	else if($(window).height() < $("#$$ITEM.ID()$").height() || $("#$$ITEM.ID()$").height() == 0)
+			$("#$$ITEM.ID()$").css("height",$(window).height() + "px");
+		*/
+}
+</script>

@@ -1,0 +1,28 @@
+<!-- $Revision: 1.5 $ -->
+
+    <script src="./templates/widgets/com.temenos.theme/jquery-ui/js/i18n/jquery-ui-i18n.min.js"></script>
+$%IF ITEM.LOCALE != ""$
+    <script src="./templates/widgets/com.temenos.theme/jquery-ui/js/i18n/jquery.ui.datepicker-$$ITEM.LOCALE$.min.js"></script>
+$%ELSE$
+	$%IF LANGUAGE_MAP_CODE != ""$
+		<script src="./templates/widgets/com.temenos.theme/jquery-ui/js/i18n/jquery.ui.datepicker-$$LANGUAGE_MAP_CODE$.min.js"></script>
+	$%ELSE$
+		<script src="./templates/widgets/com.temenos.theme/jquery-ui/js/i18n/jquery.ui.datepicker-en-GB.min.js"></script>
+	$%ENDIF$
+$%ENDIF$
+	<script type="text/javascript" charset="utf-8">
+	  //<![CDATA[
+	    function getPickerID( p_ns, p_fullID, p_runTimeID ){
+			var compID = getCompID(p_ns, p_fullID);
+    	    if ( compID == null ) {
+    	    	if  (compID != "" ) {
+    	    		compID = "";
+    	    	}
+    	    }
+		    var rind = p_fullID.lastIndexOf("_R");
+			var rowPart = "";
+			if ( rind > 0 ) rowPart = p_fullID.substring(rind);
+			return p_ns + compID + p_runTimeID + "_picker" + rowPart;
+		}
+	//]]>
+	</script>  

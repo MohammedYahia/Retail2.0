@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><DeploymentDescriptor AllowDataSets="N" Connect="version 5.4.1__12" Name="Statements" ProjectFileName="Statements.ifp" eid="A340DE0C5B5A060340315">
+  <WebServices Name="Web Services Root" eid="A340DE0C5B5A060340586"/>
+  <VersioningInfo Name="Versioning Info" eid="A340DE0C5B5A060340804"/>
+  <Portlets Name="Portlets Root" eid="A340DE0C5B5A060340589"/>
+  <Parameters Name="Variables Root" eid="A340DE0C5B5A060340588">
+    <RunTimeParameters Name="Runtime Variables" eid="A340DE0C5B5A060340602">
+      <RunTimeParameter Mode="Live" Name="Mode" eid="A340DE0C5B5A060340603"/>
+      <RunTimeParameter Name="Session Timeout" eid="A340DE0C5B5A060340604"/>
+      <RunTimeParameter DebugLevel="Level 1 (Critical Errors)" Name="Debug Level" eid="A340DE0C5B5A060340605"/>
+      <RunTimeParameter Name="Cryptokey File" eid="A340DE0C5B5A060340606"/>
+      <RunTimeParameter Name="Security" Security="Y" eid="A340DE0C5B5A060340607"/>
+      <RunTimeParameter Name="SubSession" SubSession="N" eid="A340DE0C5B5A060340608"/>
+      <RunTimeParameter Name="Compress HTML Responses" eid="A340DE0C5B5A060340609"/>
+    </RunTimeParameters>
+    <GlobalParameters Name="Global Variables" eid="A340DE0C5B5A060340610">
+      <GlobalParameter GlobalParameterValue="http://localhost:8180/" Name="AUTOFORM_DM_URL" eid="A340DE0C5B5A060340824"/>
+      <GlobalParameter GlobalParameterValue="5" Name="AUTOFORM_DM_RETRIES" eid="A340DE0C5B5A060340825"/>
+      <GlobalParameter GlobalParameterValue="5" Name="AUTOFORM_DM_WAIT_TIME" eid="A340DE0C5B5A060340826"/>
+      <GlobalParameter Name="AUTOFORM_DM_ENCRYPTION_CONFIG" eid="AFF53B2C693358383015"/>
+      <GlobalParameter GlobalParameterValue="5" Name="NO_OF_STATEMENTS" eid="1DE0576A2031CED4584"/>
+      <GlobalParameter GlobalParameterValue="http://gva2flare.temenosgroup.com/R18ID/R18ID.htm#../Subsystems/R18RFOUG/Content/ChannelsUG/stream2/TechnicalInformation/QuickSetup.htm#Account" Name="EFS_ConfSetupURL" eid="FF7AACA747BC4BE357784"/>
+    </GlobalParameters>
+  </Parameters>
+  <DirectoryStructure Name="Directory Structure Root" eid="A340DE0C5B5A060340585">
+    <Directory DefaultDir="Y" Directory="./templates" Name="Templates dir" eid="A340DE0C5B5A060340594"/>
+    <Directory DefaultDir="Y" Directory="./html" Name="HTML dir" eid="A340DE0C5B5A060340595"/>
+    <Directory DefaultDir="Y" Directory="./html/js" Name="JavaScript dir" eid="A340DE0C5B5A060340596"/>
+    <Directory DefaultDir="Y" Directory="./html/css" Name="Stylesheet dir" eid="A340DE0C5B5A060340597"/>
+    <Directory DefaultDir="Y" Directory="./html/templates" Name="HTML Templates dir" eid="A340DE0C5B5A060340598"/>
+    <Directory DefaultDir="Y" Directory="./images" Name="Images dir" eid="A340DE0C5B5A060340599"/>
+    <Directory DefaultDir="Y" Directory="./dictionary" Name="Dictionary dir" eid="A340DE0C5B5A060340600"/>
+    <Directory DefaultDir="Y" Directory="./DataSets" Name="Data Sets dir" eid="A340DE0C5B5A060340601"/>
+  </DirectoryStructure>
+  <ComponentRoot Name="ComponentRoot" eid="A340DE0C5B5A060340590"/>
+  <Profiles Name="Profiles Root" eid="A340DE0C5B5A060340591">
+    <IOSProfiles Name="iOS Profiles" eid="A340DE0C5B5A060340611"/>
+    <AndroidProfiles Name="Android Profiles" eid="A340DE0C5B5A060340612"/>
+    <WindowsProfiles Name="Windows Phone 8 Profiles" eid="A340DE0C5B5A060340613"/>
+    <WindowsUniversalProfiles Name="Windows Profiles" eid="A340DE0C5B5A060340614"/>
+  </Profiles>
+  <Messages Name="Messages Root" eid="A340DE0C5B5A060340592">
+    <Message MESSAGE_NAME="ok" Name="ok" VALUE="OK" eid="A340DE0C5B5A060340615"/>
+    <Message MESSAGE_NAME="not_now" Name="not_now" VALUE="Not Now" eid="A340DE0C5B5A060340616"/>
+    <Message MESSAGE_NAME="user_settings" Name="user_settings" VALUE="Settings" eid="A340DE0C5B5A060340617"/>
+    <Message MESSAGE_NAME="check_updates" Name="check_updates" VALUE="Check for updates" eid="A340DE0C5B5A060340618"/>
+    <Message MESSAGE_NAME="developer_settings" Name="developer_settings" VALUE="Developer settings" eid="A340DE0C5B5A060340619"/>
+    <Message MESSAGE_NAME="title_activity_app_pereferences" Name="title_activity_app_pereferences" VALUE="Settings" eid="A340DE0C5B5A060340620"/>
+    <Message MESSAGE_NAME="internet_connection_needed_title" Name="internet_connection_needed_title" VALUE="No Connectivity" eid="A340DE0C5B5A060340621"/>
+    <Message MESSAGE_NAME="internet_connection_needed" Name="internet_connection_needed" VALUE="Please verify you have cellular network or WiFi connection" eid="A340DE0C5B5A060340622"/>
+    <Message MESSAGE_NAME="error_accessing_server_title" Name="error_accessing_server_title" VALUE="Error communicating with the server" eid="A340DE0C5B5A060340623"/>
+    <Message MESSAGE_NAME="error_accessing_server_description" Name="error_accessing_server_description" VALUE="The server cannot be reached" eid="A340DE0C5B5A060340624"/>
+    <Message MESSAGE_NAME="invalid_ssl_cert" Name="invalid_ssl_cert" VALUE="The SSL certificate is invalid. The server cannot be trusted." eid="A340DE0C5B5A060340625"/>
+    <Message MESSAGE_NAME="invalid_ssl_cert_development" Name="invalid_ssl_cert_development" VALUE="The SSL certificate is invalid. This is allowed only in development mode." eid="A340DE0C5B5A060340626"/>
+    <Message MESSAGE_NAME="lang_preference_dialog_title" Name="lang_preference_dialog_title" VALUE="Preferred language" eid="A340DE0C5B5A060340627"/>
+    <Message MESSAGE_NAME="lang_preference_title" Name="lang_preference_title" VALUE="Language settings" eid="A340DE0C5B5A060340628"/>
+    <Message MESSAGE_NAME="lang_preference_summary" Name="lang_preference_summary" VALUE="Select your preferred language" eid="A340DE0C5B5A060340629"/>
+    <Message MESSAGE_NAME="change_confirm_reload" Name="change_confirm_reload" VALUE="For applying your settings, the application has to be reloaded. Reload the application now?" eid="A340DE0C5B5A060340630"/>
+    <Message MESSAGE_NAME="settings_update_title" Name="settings_update_title" VALUE="Settings update" eid="A340DE0C5B5A060340631"/>
+    <Message MESSAGE_NAME="update_download_updates_now" Name="update_download_updates_now" VALUE="Updates are available. Download updates now?" eid="A340DE0C5B5A060340632"/>
+    <Message MESSAGE_NAME="update_result_uptodate" Name="update_result_uptodate" VALUE="The application is uptodate." eid="A340DE0C5B5A060340633"/>
+    <Message MESSAGE_NAME="update_result_error" Name="update_result_error" VALUE="The update site rejected the query." eid="A340DE0C5B5A060340634"/>
+    <Message MESSAGE_NAME="update_result_processing_error" Name="update_result_processing_error" VALUE="Error encountered during update." eid="A340DE0C5B5A060340635"/>
+    <Message MESSAGE_NAME="update_result_unknown_error" Name="update_result_unknown_error" VALUE="Error reading the update status from the update site." eid="A340DE0C5B5A060340636"/>
+    <Message MESSAGE_NAME="downloading_file_title" Name="downloading_file_title" VALUE="Downloading updates..." eid="A340DE0C5B5A060340637"/>
+    <Message MESSAGE_NAME="downloading_file_starting" Name="downloading_file_starting" VALUE="Starting..." eid="A340DE0C5B5A060340638"/>
+    <Message MESSAGE_NAME="downloading_file_progress" Name="downloading_file_progress" VALUE="Downloading file  %1$d of %2$d." eid="A340DE0C5B5A060340639"/>
+    <Message MESSAGE_NAME="downloading_updates_error" Name="downloading_updates_error" VALUE="Failed to download the updates." eid="A340DE0C5B5A060340640"/>
+    <Message MESSAGE_NAME="downloading_updates_success" Name="downloading_updates_success" VALUE="The updates were downloaded successfully." eid="A340DE0C5B5A060340641"/>
+    <Message MESSAGE_NAME="update_through_googleplay_confirmation" Name="update_through_googleplay_confirmation" VALUE="You need to update the application through google play. Download the updated application now?" eid="A340DE0C5B5A060340642"/>
+    <Message MESSAGE_NAME="update_through_windows_store_confirmation" Name="update_through_windows_store_confirmation" VALUE="You need to update the application through Windows Phone Store. Download the updated application now?" eid="A340DE0C5B5A060340643"/>
+    <Message MESSAGE_NAME="store_updatetitle" Name="store_updatetitle" VALUE="AppStore update" eid="A340DE0C5B5A060340644"/>
+    <Message MESSAGE_NAME="update_result_major_update" Name="update_result_major_update" VALUE="Updates are available for this application. Connect to iTunes now?" eid="A340DE0C5B5A060340645"/>
+    <Message MESSAGE_NAME="alert_title" Name="alert_title" VALUE="Alert" eid="A340DE0C5B5A060340646"/>
+    <Message MESSAGE_NAME="loading_wait" Name="loading_wait" VALUE="Loading, please wait..." eid="A340DE0C5B5A060340647"/>
+    <Message MESSAGE_NAME="save" Name="save" VALUE="Save" eid="A340DE0C5B5A060340648"/>
+    <Message MESSAGE_NAME="use_device_language" Name="use_device_language" VALUE="Use device language" eid="A340DE0C5B5A060340649"/>
+    <Message MESSAGE_NAME="all_pages" Name="all_pages" VALUE="All pages" eid="A340DE0C5B5A060340650"/>
+    <Message MESSAGE_NAME="filesave_success" Name="filesave_success" VALUE="File saved successfully" eid="A340DE0C5B5A060340651"/>
+    <Message MESSAGE_NAME="one_page" Name="one_page" VALUE="One page" eid="A340DE0C5B5A060340652"/>
+    <Message MESSAGE_NAME="pdf_documents" Name="pdf_documents" VALUE="PDF Documents" eid="A340DE0C5B5A060340653"/>
+    <Message MESSAGE_NAME="print" Name="print" VALUE="Print" eid="A340DE0C5B5A060340654"/>
+    <Message MESSAGE_NAME="reports" Name="reports" VALUE="Reports" eid="A340DE0C5B5A060340655"/>
+    <Message MESSAGE_NAME="app_name" Name="app_name" VALUE="App name - not used required by Cordova" eid="A340DE0C5B5A060340656"/>
+  </Messages>
+  <HybridLanguages Name="HybridLanguages Root" eid="A340DE0C5B5A060340593"/>
+  <DataMapping/>
+</DeploymentDescriptor>

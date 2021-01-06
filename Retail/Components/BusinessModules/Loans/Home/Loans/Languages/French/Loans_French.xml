@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?><LanguageMap presentations="Loans" project="Loans" sourcelanguage="en-GB" targetlanguage="en-GB" updated="02/08/17 14:46" version="1">
+  <Comment/>
+  <ProcessEntities>
+    <Container class="com.acquire.intelligentforms.entities.Product" displayString="Loans" eid="CD1BA3DAF51150ED605" type="Process">
+      <Note author="EVA-Note"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    <p style="margin-bottom:0px;margin-top:0px;">
+      This home component of &#160;loan business module allows to perform different 
+      actions for a selected loan.
+    </p>
+
+    <p style="margin-bottom:0px;margin-top:0px;">
+&#160;      
+    </p>
+
+    <p style="margin-bottom:0px;margin-top:0px;">
+      Input parameters: Selected loan details, Customer accouts, Today and 
+      next working day dates
+    </p>
+
+    <p style="margin-bottom:0px;margin-top:0px;">
+      Output parameters: Loan operations
+    </p>
+
+  </body>
+
+</html>
+
+]]></Note>
+      <Container class="com.acquire.intelligentforms.entities.Phase" displayString="LoanDetails" eid="0D93F6218E0177E45853" type="Phase">
+        <Note author="EVA-Note"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    <p style="margin-top:0px;margin-bottom:0px;">
+      This component is to group various functionalities of &#160;Loans business 
+      component in a tabbed manner to meet the Retail design requirements.
+    </p>
+
+    <p style="margin-top:0px;margin-bottom:0px;">
+&#160;      
+    </p>
+
+    <p style="margin-top:0px;margin-bottom:0px;">
+      Components attached: Loan Overview, Transactions List, Payment schedule 
+      and Pay Overdue.
+    </p>
+
+  </body>
+
+</html>
+
+]]></Note>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Transactions" eid="0D93F6218E0177E415158" path="Loans.LoanDetails.Transactions" type="Button">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="0D93F6218E0177E415159:Loans" mappingType="PLACEHOLDER" original="" specifiedBy="0D93F6218E0177E415158:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="0D93F6218E0177E415159:Loans" mappingType="PLACEHOLDER" original="" specifiedBy="0D93F6218E0177E415158:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="0D93F6218E0177E415159:Loans" mappingType="PLACEHOLDER" original="" specifiedBy="0D93F6218E0177E415158:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="0D93F6218E0177E415159:Loans" mappingType="OVERRIDE" original="Transactions" specifiedBy="0D93F6218E0177E415158:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="0D93F6218E0177E415159:Loans" mappingType="OVERRIDE" original="Transactions" specifiedBy="0D93F6218E0177E415158:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Schedule" eid="0D93F6218E0177E415163" path="Loans.LoanDetails.Schedule" type="Button">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="0D93F6218E0177E415164:Loans" mappingType="PLACEHOLDER" original="" specifiedBy="0D93F6218E0177E415163:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="0D93F6218E0177E415164:Loans" mappingType="PLACEHOLDER" original="" specifiedBy="0D93F6218E0177E415163:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="0D93F6218E0177E415164:Loans" mappingType="PLACEHOLDER" original="" specifiedBy="0D93F6218E0177E415163:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="0D93F6218E0177E415164:Loans" mappingType="OVERRIDE" original="Schedule" specifiedBy="0D93F6218E0177E415163:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="0D93F6218E0177E415164:Loans" mappingType="OVERRIDE" original="Schedule" specifiedBy="0D93F6218E0177E415163:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="PayOverdue" eid="0D93F6218E0177E415168" path="Loans.LoanDetails.PayOverdue" type="Button">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="0D93F6218E0177E415169:Loans" mappingType="PLACEHOLDER" original="" specifiedBy="0D93F6218E0177E415168:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="0D93F6218E0177E415169:Loans" mappingType="PLACEHOLDER" original="" specifiedBy="0D93F6218E0177E415168:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="0D93F6218E0177E415169:Loans" mappingType="PLACEHOLDER" original="" specifiedBy="0D93F6218E0177E415168:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="0D93F6218E0177E415169:Loans" mappingType="OVERRIDE" original="PayOverdue" specifiedBy="0D93F6218E0177E415168:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="0D93F6218E0177E415169:Loans" mappingType="OVERRIDE" original="PayOverdue" specifiedBy="0D93F6218E0177E415168:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+      </Container>
+    </Container>
+  </ProcessEntities>
+  <Designs/>
+  <PresentationOnlyObjects>
+    <PresentationType class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationType" displayString="Loans" eid="CD1BA3DAF51150ED1688" path="Loans" type="Rich Presentation Type">
+      <Attribute mappingType="OVERRIDE" name="BackButtonText" original="Back" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DateFormat" original="DD/MM/YYYY" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DecimalSymbol" original="." state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DigitGroupSymbol" original="," state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="EditTheme" original="N" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ForwardButtonText" original="Continue" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="HelpIconHint" original="Help" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaMessage" original="Please re-enter using letters" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaNumericMessage" original="Please re-enter using letters and numbers" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDateMessage" original="Please enter a valid date in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDaysInMonthMessage" original="There are not that many days in the specified month" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDecimalMessage" original="Please enter a valid decimal number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidLeapYearMessage" original="The specified year is not a leap year" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxDateMessage" original="The latest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxFileSizeMessage" original="The maximum file size allowed is $$QUESTION_CONSTRAINT$k" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxLengthMessage" original="The maximum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxValueMessage" original="The maximum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinDateMessage" original="The earliest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinLengthMessage" original="The minimum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinValueMessage" original="The minimum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidNumMessage" original="Please enter a valid number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidTimeMessage" original="Please enter a valid time in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidUploadTypeMessage" original="The valid file types you are allowed to upload are: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="LayoutDirection" original="ltr" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandMessage" original="Please answer all the required questions marked with a $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="QuestionListDefault" original="- Please Select" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ValidationMessage" original="Please enter a valid value" state="NEW" status="NEW" value=""/>
+      <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationProduct" displayString="Loans" eid="CD1BA3DAF51150ED1695" type="Rich Presentation Process">
+        <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" displayString="LoanDetails" eid="0D93F6218E0177E45856" type="Rich Presentation Phase">
+          <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section (using td-responsive-row)" eid="C1F553AF78F2748F665968" type="Rich Presentation Section">
+            <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" displayString="Column (using td-col-full)" eid="C1F553AF78F2748F665983" type="Rich Presentation Column">
+              <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section (using td-card)" eid="7F37BCD24078011F227358" type="Rich Presentation Section">
+                <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="tc-tab-section [Section]" eid="C1F553AF78F2748F581378" type="Rich Presentation Section">
+                  <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTabPane" displayString="Tab Pane Transactions" eid="C1F553AF78F2748F581393" path="Loans.Loans.LoanDetails.Section.Column.Section.Section.Tab Pane Transactions" type="Rich Presentation Tab Pane">
+                    <Attribute mappingType="PLACEHOLDER" name="HintText" original="" state="NEW" status="NEW" value=""/>
+                    <Attribute mappingType="OVERRIDE" name="TabName" original="Transactions" state="NEW" status="NEW" value=""/>
+                  </PresentationObject>
+                  <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTabPane" displayString="Tab Pane Schedule" eid="C1F553AF78F2748F581400" path="Loans.Loans.LoanDetails.Section.Column.Section.Section.Tab Pane Schedule" type="Rich Presentation Tab Pane">
+                    <Attribute mappingType="PLACEHOLDER" name="HintText" original="" state="NEW" status="NEW" value=""/>
+                    <Attribute mappingType="OVERRIDE" name="TabName" original="Schedule" state="NEW" status="NEW" value=""/>
+                  </PresentationObject>
+                  <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTabPane" displayString="Tab Pane Pay Overdue" eid="C1F553AF78F2748F581403" path="Loans.Loans.LoanDetails.Section.Column.Section.Section.Tab Pane Pay Overdue" type="Rich Presentation Tab Pane">
+                    <Attribute mappingType="PLACEHOLDER" name="HintText" original="" state="NEW" status="NEW" value=""/>
+                    <Attribute mappingType="OVERRIDE" name="TabName" original="Pay Overdue" state="NEW" status="NEW" value=""/>
+                  </PresentationObject>
+                </Container>
+              </Container>
+            </Container>
+          </Container>
+        </Container>
+      </Container>
+    </PresentationType>
+  </PresentationOnlyObjects>
+  <Rules>
+    <MasterRules/>
+  </Rules>
+  <Lists>
+    <List eid="CD1BA3DAF51150ED1361" listName="YesNo" reset="True">
+      <ListItem eid="CD1BA3DAF51150ED1362" group="" groupState="NEW" key="Y" original="Yes" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="CD1BA3DAF51150ED1363" group="" groupState="NEW" key="N" original="No" originalGroup="" remove="" state="NEW" value=""/>
+    </List>
+    <List eid="BCD8C5C21EC823B4162353" listName="TierType" reset="True">
+      <ListItem eid="BCD8C5C21EC823B4162354" group="" groupState="NEW" key="SINGLE" original="Single" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="BCD8C5C21EC823B4162355" group="" groupState="NEW" key="BAND" original="Tier Bands" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="BCD8C5C21EC823B4162356" group="" groupState="NEW" key="LEVEL" original="Tier Levels" originalGroup="" remove="" state="NEW" value=""/>
+    </List>
+  </Lists>
+</LanguageMap>

@@ -1,0 +1,124 @@
+<!-- $Revision: 1.0 $ -->
+
+<script type="text/javascript" charset="utf-8">
+
+window.com=window.com||{};
+window.com.temenos=window.com.temenos||{};
+window.com.temenos.widgets=window.com.temenos.widgets||{};
+window.com.temenos.widgets.hybrid=window.com.temenos.widgets.hybrid||{};
+window.com.temenos.widgets.hybrid.accelerometer=window.com.temenos.widgets.hybrid.accelerometer||{};
+
+window.com.temenos.widgets.hybrid.accelerometer.detectGestures = (function () {
+    var accelerometer = {watchId :null,started:false},        
+        options = { frequency: $$ITEM.Frequency$ },
+        previousAcceleration = { x: null, y: null, z: null };
+    var debug_mode=true;
+    // Start watching the accelerometer for a shake gesture
+    accelerometer.startWatch = function () {
+        
+        accelerometer.watchId = navigator.accelerometer.watchAcceleration(getAccelerationSnapshot, handleError, options);
+        accelerometer.started=true;
+    };
+    
+   /* accelerometer.postProcessResponses = function(ns, ajaxCaller, result) {
+
+    };*/
+    
+    // Stop watching the accelerometer for a shake gesture
+    accelerometer.stopWatch = function () {
+        if (accelerometer.watchId !== null) {
+            navigator.accelerometer.clearWatch(accelerometer.watchId);
+            accelerometer.watchId = null;
+        }
+         accelerometer.started=false;
+    };
+    
+ accelerometer.triggerEvent=function (eventName) {
+    if(document.createEvent) {
+        var event = document.createEvent('Event');
+        event.initEvent(eventName, true, true);
+        document.dispatchEvent(event);
+    } else {
+        document.documentElement[eventName]++;
+    }
+}
+    accelerometer.addEvent= function (eventName, callback) {
+    if(document.addEventListener) {
+        document.addEventListener(eventName, callback, false);
+    } else {    
+        document.documentElement.attachEvent('onpropertychange', function (e) {
+            if(e.propertyName  == eventName) {
+                callback();
+            }            
+        });
+    }
+}
+
+    accelerometer.removeEvent = function (eventName, callback) {
+    if (document.removeEventListener) {
+      document.removeEventListener(eventName, callback, false);
+    } else {
+      document.documentElement.detachEvent('onpropertychange', callback);
+    }
+    }
+    
+    
+    // Gets the current acceleration snapshot from the last accelerometer watch
+    function getAccelerationSnapshot() {
+        navigator.accelerometer.getCurrentAcceleration(assessCurrentAcceleration, handleError);
+    }
+    
+    // Assess the current acceleration parameters to determine a shake
+    function assessCurrentAcceleration(acceleration) {
+        var accelerationChange = {};
+        if (previousAcceleration.x !== null) {
+            accelerationChange.x = Math.abs(previousAcceleration.x - acceleration.x);
+            accelerationChange.y = Math.abs(previousAcceleration.y - acceleration.y);
+            accelerationChange.z = Math.abs(previousAcceleration.z - acceleration.z);
+        }
+
+
+        if (acceleration.z < -9 && localStorage.getItem("facedown") == "Y"){
+            
+            accelerometer.triggerEvent('faceDownDetected');
+           
+            accelerometer.stopWatch();
+            setTimeout(accelerometer.startWatch, 1000);
+            previousAcceleration = { 
+                x: null, 
+                y: null, 
+                z: null
+            }
+         } else if ((accelerationChange.x + accelerationChange.y + accelerationChange.z > 30) && localStorage.getItem("shake") == "Y") {
+            // Shake detected
+            /*if (typeof (shakeCallBack) === "function") {
+                shakeCallBack();
+            }*/
+           accelerometer.triggerEvent('shakeDetected');
+           
+            accelerometer.stopWatch();
+            setTimeout(accelerometer.startWatch, 1000);
+            previousAcceleration = { 
+                x: null, 
+                y: null, 
+                z: null
+            }
+        }
+            else {
+            previousAcceleration = {
+                x: acceleration.x,
+                y: acceleration.y,
+                z: acceleration.z
+            }
+        }
+    }
+ 
+    // Handle errors here
+    function handleError(e) {
+       if (debug_mode){ console.log(e);}
+    }
+    
+    return accelerometer;
+})();   
+   
+</script>

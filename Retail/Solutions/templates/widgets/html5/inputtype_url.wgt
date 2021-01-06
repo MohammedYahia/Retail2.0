@@ -1,0 +1,6 @@
+<!-- $Revision: 1.2 $ -->
+$%SCRIPT$
+var newType = $%IF BROWSER_FEATURES == "" || BROWSER_FEATURES.inputtypes.url == "Y"$"type=\"url\""$%ELSE$""$%ENDIF$
+$%INCLUDE widgets/html5/inputtype.wgt$$%ENDINCLUDE$
+genHTML5Input(newType, "", false);
+$%ENDSCRIPT$

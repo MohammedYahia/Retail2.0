@@ -1,0 +1,6 @@
+<!-- $Revision: 1.3 $ -->
+$%SCRIPT$
+var newType = $%IF BROWSER_FEATURES == "" || BROWSER_FEATURES.inputtypes.date == "Y"$"type=\"date\""$%ELSE$""$%ENDIF$
+$%INCLUDE widgets/html5/inputtype.wgt$$%ENDINCLUDE$
+genHTML5Input(newType, "", true);
+$%ENDSCRIPT$

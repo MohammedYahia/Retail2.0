@@ -1,0 +1,141 @@
+$%IF ITEM.IS_READONLY() == true && ITEM.READONLYSTYLE() == Text$
+	<span  id="$$ITEM.ID()$" style="$$ITEM.INLINE_STYLES().AnswerControlStyle$ $$ITEM.INLINE_STYLES().SpecificAnswerControlStyle$"  class="$$ITEM.STYLES().AnswerControlStyle$ $$ITEM.STYLES().SpecificAnswerControlStyle$">
+		$%SCRIPT$
+		var tmp = "$$ITEM.DATAITEM().DISPLAY_VALUE()$";
+		var tmpParts = tmp.split("T");
+		var id = "$$ITEM.ID()$";
+		if ( id.indexOf(".DATE") >= 0 ) {
+			tmpParts[0] + " " + tmpParts[1];
+		} 
+		else if   ( id.indexOf(".TIME") >= 0 ) {
+		}
+		else {
+			tmpParts[tmpParts.length - 1];
+		}
+		$%ENDSCRIPT$
+	</span>
+$%ELSE$
+	$%IF (##ITEM.ID()#).indexOf(".DATE") > -1$
+	$%COMMENT$ DATE TIME PICKER $%ENDCOMMENT$
+<input  type="text" 
+			id="$$ITEM.ID()$" 
+		$%IF ITEM.IS_READONLY() == true || ITEM.IS_HIDDEN() == true$disabled="disabled"$%ENDIF$
+		name="$$ITEM.DATAITEM()$.DATE()" 
+		size="$$ITEM.FieldSize$"
+		value="$$ITEM.DATAITEM().DISPLAY_VALUE()$" 
+		style="$$ITEM.INLINE_STYLES().AnswerControlStyle$ $$ITEM.INLINE_STYLES().SpecificAnswerControlStyle$; 
+			$%IF ITEM.IS_READONLY() == true$ 
+				margin-right: 0.1rem; 
+			$%ELSE$
+				margin-right: 1rem; 
+			$%ENDIF$
+			margin-bottom: 5px"
+		class="$$ITEM.STYLES().AnswerControlStyle$ $$ITEM.STYLES().SpecificAnswerControlStyle$ tc-datetime"
+		onchange="$$ITEM.VALIDATION()$"/>
+
+<input  type="text" 
+		id="$$ITEM.ID()$_alt"  
+        name="$$ITEM.DATAITEM()$.TIME()" 
+		$%IF ITEM.IS_READONLY() == true || ITEM.IS_HIDDEN() == true$disabled="disabled"$%ENDIF$
+		size="$$ITEM.FieldSize$"
+		style="$$ITEM.INLINE_STYLES().AnswerControlStyle$ $$ITEM.INLINE_STYLES().SpecificAnswerControlStyle$"
+		class="$$ITEM.STYLES().AnswerControlStyle$ $$ITEM.STYLES().SpecificAnswerControlStyle$"
+        />
+
+<script type="text/javascript">
+$(function() {
+		var dateId = "$$ITEM.ID()$";
+		var timeId = dateId.replace("DATE", "TIME")
+		$("[id='$$ITEM.ID()$_alt']").attr("id", timeId);
+
+		$("img[src*='cal.gif']").hide();
+
+	var parts = "$$ITEM.DATAITEM().DISPLAY_VALUE()$".split("T");
+		$("[id='" + dateId + "']").val(parts[0])
+		$("[id='" + timeId + "']").val(parts[1])
+
+	$("[id='$$ITEM.ID()$']").datetimepicker({
+		altField: $("[id='" + timeId + "']"),
+		        timeFormat: "HH:mm:ss",
+				dateFormat: "$$ITEM.DATEFORMAT()$".replace("yyyy", "yy"),
+				$%IF ITEM.MINVALUE() != ""$minDate: "$$ITEM.DISPLAY_MINVALUE()$", $%ENDIF$
+				$%IF ITEM.MAXVALUE() != ""$maxDate: "$$ITEM.DISPLAY_MAXVALUE()$", $%ENDIF$
+				changeMonth: true,
+				changeYear: true,
+				showAnim: "slideDown",
+				$%IF ITEM.CAL_IMAGE != "" && ITEM.IS_READONLY() != true$
+					buttonImage: '$$ITEM.CAL_IMAGE$',
+					showOn: "button",
+					buttonImageOnly: true,
+					buttonText: "$$ITEM.HintText$",
+				$%ENDIF$
+				numberOfMonths: 1,
+				beforeShow: function(input, inst) {  
+					$(this).attr("readonly", "readonly");
+					if (!inst.dpDiv.parent().hasClass("calendar-base")){ 
+						inst.dpDiv.unwrap();
+						inst.dpDiv.wrap("<div id='WRAP_$$ITEM.RTID()$'></div>");
+						$("#WRAP_$$ITEM.RTID()$").appendTo( $("#EDGE_CONNECT_PROCESS") )
+									 .css({
+										"left": $(input).offset().left ,
+										"top":  $(input).offset().top + $(input).outerHeight() 
+									 });
+						if( $("#WRAP_$$ITEM.RTID()$").length == 0 ){
+							inst.dpDiv.parent().appendTo( $(this).parent() );
+						}
+					} 
+				},
+				onClose: function(dateText, inst, event) {
+					$(this).removeAttr("readonly");
+					$$ITEM.QLR()$
+				}								
+	});
+});
+</script>
+	$%ELSE$
+		$%COMMENT$  Time only - id does have .TIME on end $%ENDCOMMENT$
+		
+		$%IF (##ITEM.ID()#).indexOf(".TIME") < 0$
+
+			<input type="hidden" 
+					id="$$ITEM.ID()$"
+				   name="$$ITEM.DATAITEM()$.TIME()"  />
+			<input  type="text" 
+					id="$$ITEM.ID()$.TIME"  
+					$%IF ITEM.IS_READONLY() == true || ITEM.IS_HIDDEN() == true$disabled="disabled"$%ENDIF$
+					size="$$ITEM.FieldSize$"
+					value="$$ITEM.DATAITEM().DISPLAY_VALUE()$" 
+					style="$$ITEM.INLINE_STYLES().AnswerControlStyle$ $$ITEM.INLINE_STYLES().SpecificAnswerControlStyle$"
+					class="$$ITEM.STYLES().AnswerControlStyle$ $$ITEM.STYLES().SpecificAnswerControlStyle$"
+	        />
+			<script type="text/javascript">
+				$(function() {
+					$("[id='$$ITEM.ID()$.TIME']").timepicker({
+							timeFormat: "HH:mm:ss",
+							beforeShow: function(input, inst) {  
+								$(this).attr("readonly", "readonly");
+								if (!inst.dpDiv.parent().hasClass("calendar-base")){ 
+									inst.dpDiv.unwrap();
+									inst.dpDiv.wrap("<div id='WRAP_$$ITEM.RTID()$'></div>");
+									$("#WRAP_$$ITEM.RTID()$").appendTo( $("#EDGE_CONNECT_PROCESS") )
+												 .css({
+													"left": $(input).offset().left ,
+													"top":  $(input).offset().top + $(input).outerHeight() 
+												 });
+									if( $("#WRAP_$$ITEM.RTID()$").length == 0 ){
+										inst.dpDiv.parent().appendTo( $(this).parent() );
+									}
+								} 
+							},
+							onClose: function(dateText, inst, event) {
+								$(this).removeAttr("readonly");
+								$("#$$ITEM.ID()$").val(dateText)
+								$$ITEM.QLR()$
+							}							
+					});
+				})
+			</script>	        
+	    $%ENDIF$
+	$%ENDIF$
+$%ENDIF$
+

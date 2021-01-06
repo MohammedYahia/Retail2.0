@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><widgets>
+  <widget name="PFM" type="Item:">
+    <template type="source" value="pfm.wgt"/>
+    <template type="header" value="pfm-header.wgt"/>
+    <custom>
+      <item includeInDesign="Always" layout="-1" mand="true" name="WIDGET" help="Select widget type" type="javax.swing.JComboBox" typeValue="alerts|analysis|balance|balance-overview|budget|budget-overview|networth|networth-overview|community|details|details-overview|expenses-overview|financial-calendar|calendar-overview|income-overview|savings|savings-overview|spending-plan|top-expenses|dashboard" usage="7"/>
+	  <item includeInDesign="Always" layout="-1" mand="false" name="HIDE_HEADER" help="Hide Header" type="javax.swing.JComboBox" typeValue="yes|no" usage="7"/>
+	  <item includeInDesign="Always" layout="-1" mand="false" name="HIDE_INTRO" help="Hide Intro Message" type="javax.swing.JComboBox" typeValue="yes|no" usage="7"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="COLOR" help="Select widget color" type="com.acquire.util.ui.StyleSheetColorChooser" typeValue="standard" usage="7"/>
+	  <item includeInDesign="Always" layout="-1" mand="true" name="IRIS_USER_NAME" help="External User name" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property" usage="7"/>
+	  <item includeInDesign="Always" layout="-1" mand="false" name="WIDGET_CONFIG" help="Config parameters" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property" usage="7"/>
+	  <item includeInDesign="Always" layout="-1" mand="false" name="NAVIGATION" help="Widget Navigation" type="com.acquire.intelligentforms.ide.dialogs.RichTextField" usage="7"/>
+	  <item includeInDesign="Always" layout="-1" mand="true" name="API_USERNAME" help="Generic PFM Api User name" type="com.acquire.intelligentforms.ide.dialogs.RichTextField" usage="7"/>
+	  <item includeInDesign="Always" layout="-1" mand="true" name="API_PASSWORD" help="Generic PFM Api Password" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property" usage="7"/>
+	  <item includeInDesign="Always" layout="-1" mand="true" name="PFM_URL" help="PFM Interaction URL" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property" usage="7"/>
+    </custom>
+  </widget>
+    <widget name="PFMCategoryIcon" type="Button">
+    <template type="source" value="pfm-category-icon.wgt"/>
+    <custom>
+      <item includeInDesign="true" layout="-1" mand="false" name="IconDynamicID" type="com.acquire.intelligentforms.ide.dialogs.RichTextField|MULTI_RICH_VALUES" usage="7"/>
+      <item includeInDesign="true" layout="-1" mand="false" name="Color" type="javax.swing.JTextField" usage="7"/>
+    </custom>
+  </widget>
+</widgets>

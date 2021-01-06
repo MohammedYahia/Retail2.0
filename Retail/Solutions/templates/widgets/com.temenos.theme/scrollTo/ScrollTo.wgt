@@ -1,0 +1,129 @@
+$%IF ITEM.ShowScrollTop == "Y"$
+<div class="tc-scroll-to-top">
+   <a href="#" class="tc-subheader-icon tc-icon-font-size icon-chevron-up " title="Scroll To Top" tabindex="-1">
+      <span style="top:0">Scroll to top</span>
+   </a>   
+</div>
+$%ENDIF$
+$%IF ITEM.ShowScrollBottom == "Y"$
+<div class="tc-scroll-to-bottom">
+   <a href="#" class="tc-subheader-icon tc-icon-font-size icon-chevron-down " title="Scroll To Bottom" tabindex="-1">
+      <span style="top:0">Scroll to bottom</span>
+   </a>   
+</div>
+$%ENDIF$
+
+<style type="text/css">
+   .tc-scroll-to-top, .tc-scroll-to-bottom {
+       position: fixed;
+       right: 4px;
+       bottom: 100px;
+       width: 38px;
+        height: 38px;
+       transition: all 0.3s;
+       z-index: 1070;
+       opacity: 0;
+       pointer-events: none;
+       transition: opacity 0.3s;
+       display: flex;
+        align-items: center;
+       justify-content: center;
+       display: none;
+       border: 2px solid #ddd;
+       border-radius: 50%;
+       overflow: hidden;
+   }
+   .tc-scroll-to-bottom { 
+      bottom: 50px; 
+   }
+   .tc-scroll-to-top:hover, .tc-scroll-to-bottom:hover {
+	   cursor: pointer;
+   }
+   .tc-scroll-to-top a, .tc-scroll-to-bottom a {
+      color: #FFF;
+      min-width: 0;
+   }
+
+   .tc-show-scroll {
+      opacity: 1;
+      pointer-events: all;
+      display: block;
+   }
+   .tc-scroll-to-top>.tc-subheader-icon>span::before,
+   .tc-scroll-to-bottom>.tc-subheader-icon>span::before {
+      height: 40px;
+      line-height: 36px;
+   }
+
+   .tc-scroll-to-bottom>.tc-subheader-icon>span::before {
+      top: 1px;
+      position: relative;
+   }
+</style>
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var isScrolling = false;
+  $(".tc-scroll-to-top").on("click", function(e) {
+    if ("TT_Module" in window) {
+      $(".qtip").remove();
+      TT_Module.destroyToolTip( $(this) );
+    }
+    isScrolling = true;
+    e.preventDefault();
+    e.stopPropagation();
+
+    UtilModule.scrollIt(
+        0,
+        600,
+        'easeOutQuad',
+        function() {
+          isScrolling = false;
+          showButtons()
+        }
+      );    
+    return false;
+  });
+
+  $(".tc-scroll-to-bottom").on("click", function(e) {
+    if ("TT_Module" in window) {
+      $(".qtip").remove();
+      TT_Module.destroyToolTip( $(this) );
+    }
+
+
+    isScrolling = true;
+    e.preventDefault();
+    e.stopPropagation();
+
+    UtilModule.scrollIt(
+        $(document).height()-$(window).height(),
+        600,
+        'easeOutQuad',
+        function() {
+          isScrolling = false;
+          showButtons()
+        }
+      );    
+    return false;
+  });
+
+
+  $(document).on("scroll",showButtons);  	
+
+function showButtons() {
+    if (isScrolling)
+        return;
+     var $scrollTo = $(".tc-scroll-to-top, .tc-scroll-to-bottom");
+     var scrollAmt = $(document).scrollTop();
+     if (scrollAmt > $$ITEM.ShowAfterOffset$) {
+        $scrollTo.addClass("tc-show-scroll");
+     } else {
+        $scrollTo.removeClass("tc-show-scroll");
+     }
+}
+
+//]]>			
+</script>   

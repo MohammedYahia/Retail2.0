@@ -1,0 +1,10 @@
+<style>
+h3:focus { box-shadow: none }
+
+.tc-tmp-footer-fixed {
+	position: fixed !important;
+	bottom: 0px !important;
+	top: auto !important;
+	width: 100% !important;
+}
+</style>

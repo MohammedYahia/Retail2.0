@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><DataSetRoot DSAttrsNewLine="N" DSOmitXMLDecl="N" DSPrettyPrint="Y" DS_UID="5">
+  <!---->
+<enqTcExternalUserPreferences DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcExternalUserPreferencess[1].Results[1].enqTcExternalUserPreferences[C]" DS_UID="4" ExtUserPreferenceId="ROLFGERLINGTC*AA16092FLCQW*FAVOURITES" FavouriteGroup="YES" GroupDescription="Favourites" GroupName="Favourites" GroupPosition="" Id="">
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcExternalUserPreferencess[1].Results[1].enqTcExternalUserPreferences[C].Links" DS_UID="0" href="enqTcExternalUserPreferencess('ROLFGERLINGTC*AA16092FLCQW*FAVOURITES')" rel="self" title="enqTcExternalUserPreferences"/>
+    <ServiceName DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcExternalUserPreferencess[1].Results[1].enqTcExternalUserPreferences[C].ServiceName" DS_UID="1" ServiceName="PersonalFinanceManagement"/>
+    <BalCustomer DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcExternalUserPreferencess[1].Results[1].enqTcExternalUserPreferences[C].BalCustomer" DS_UID="3">
+      <BalProductLine BalProductLine="DEPOSITS" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcExternalUserPreferencess[1].Results[1].enqTcExternalUserPreferences[C].BalCustomer[C].BalProductLine" DS_UID="2"/>
+    </BalCustomer>
+  </enqTcExternalUserPreferences>
+</DataSetRoot>

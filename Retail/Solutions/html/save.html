@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!--
+ * $RCSfile: save.html,v $
+ * $Author: europe\aheath $
+ * $Revision: 1.11 $
+ * $Date: 2015/07/14 13:09:49 $
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Temenos</title>
+<style type="text/css">
+	a img {border:0}
+	a {text-decoration: none}
+</style>
+
+</head>
+<body style="border: 0px; margin: 0px; background: url(../images/offline_toolbarBg.png) repeat-x; overflow: hidden;  height: 40px;">
+	<form id="form2" style="border: 0px; margin: 0px;" action="">
+		<p style="border: 0px; margin: 0px;padding: 5px; ">
+			<a href="#"  onclick="if (parent.frames['main'].document.forms.length > 0)parent.frames['main'].saveOfflineForm();">
+				<img alt="save" src="../images/offline_save.png" />
+			</a>
+
+			<a href="#" onclick='parent.APP_FORM=null;parent.frames["main"].saveOfflineForm();'>
+				<img alt="save as" src="../images/offline_saveas.png" />
+			</a>
+
+			<a href="#" onclick='parent.frames["main"].showSavedAppForms(form2);'>
+				<img alt="open" src="../images/offline_open.png" />
+			</a>
+
+			<select name='APPLICATIONS' style="visibility: hidden; position: relative; top: -10px">
+				<option value=""></option>
+			</select>
+
+			<a href="#" style="visibility: hidden" id="AppSelect" onclick='parent.frames["main"].loadForm(form2);'>
+				<img alt="select" src="../images/offline_select.png" />
+			</a>
+		</p>
+	</form>
+</body>
+
+</html>

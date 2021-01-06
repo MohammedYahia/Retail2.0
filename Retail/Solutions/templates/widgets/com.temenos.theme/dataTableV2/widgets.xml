@@ -1,0 +1,46 @@
+<widgets>
+    <widget dialogHandler="com.acquire.intelligentforms.ide.presentationeditor.dialoghandlers.html.widgets.jquery.JqueryDataTableDialogHandler" icon="images/widget_grid.gif" name="tw-Data Grid V2" type="Table">
+        <template type="header" value="dataTableV2-header.wgt"/>
+        <template type="source" value="dataTableV2.wgt"/>
+        <custom>
+            <item help="Identify table as being responsive" name="RESPONSIVE_IND" prompt="Responsive" tab="Data Table Options" type="javax.swing.JCheckBox" />
+
+			<item includeInDesign="false" mand="false" name="RESPONSIVE_LEGEND" prompt="Responsive Settings" tab="Data Table Options" type="com.acquire.util.ui.Legend" typeValue="4|N" usage="17" />
+			<item name="l2" type="javax.swing.JLabel" prompt="Set up column priorties - zero-based comma separated lists.  Note - column 0 is defaulted to priority 1 (always shown), as this holds the icon to expand/collapse the hidden values.  Items which are grouped with previous should not be counted as a column." includeInDesign="false" usage="17" />
+            <item name="RESP_PRIORITY_1" prompt="Priority 1 columms" tab="Data Table Options" includeInDesign="false" />
+            <item name="RESP_PRIORITY_2" prompt="Priority 2 columms" tab="Data Table Options" includeInDesign="false" />
+            <item name="RESP_PRIORITY_3" prompt="Priority 3 columms" tab="Data Table Options" includeInDesign="false" />
+
+            <item defaultValue="0" dialogHandler="com.acquire.intelligentforms.ide.presentationeditor.dialoghandlers.html.widgets.jquery.JqueryDataTableDialogHandler" mand="true" name="PAGE_SIZE" prompt="Results Per Page (Use 0 To Show All)"
+                tab="Data Table Options" typeValue="NUMERIC|4"/>
+            <item applicableCondition="PAGE_SIZE>0" help="The paging options to display in a dropdown menu, this should be used in combination with the 'Results per page' field" name="PAGE_MENU" prompt="Paging Options" tab="Data Table Options"/>
+            <item name="SHOW_FILTER" prompt="Show Filter" tab="Data Table Options" type="javax.swing.JCheckBox"/>
+            <item name="SHOW_SORT" prompt="Show Sorting" tab="Data Table Options" type="javax.swing.JCheckBox"  includeInDesign="false"/>
+            <item name="SHOW_INFO" prompt="Show Footer Info" tab="Data Table Options" type="javax.swing.JCheckBox"/>
+            <item name="SAVE_STATE" prompt="Save State" tab="Data Table Options" type="javax.swing.JCheckBox"/>
+            <item defaultValue="Filter" mappable="true" name="SEARCH_TEXT" prompt="Search Filter Label" tab="Data Table Text"/>
+            <item defaultValue="_MENU_ records per page" mappable="true" name="PAGE_SIZE_TEXT" prompt="Records Per Page Text" tab="Data Table Text"/>
+            <item defaultValue="No records found" mappable="true" name="ZERO_RECORDS_TEXT" prompt="Zero Records Text" tab="Data Table Text"/>
+            <item defaultValue="Showing _START_ to _END_ of _TOTAL_" mappable="true" name="INFO_TEXT" prompt="Information Text" tab="Data Table Text"/>
+            <item defaultValue="Showing 0 to 0 of 0 records" mappable="true" name="INFO_EMPTY_TEXT" prompt="Information Empty Text" tab="Data Table Text"/>
+            <item defaultValue="(filtered from _MAX_ total records)" mappable="true" name="INFO_FILTERED_TEXT" prompt="Information Filtered Text" tab="Data Table Text"/>
+            <item name="Pagination" prompt="Pagination Buttons" tab="Data Table Text" type="com.acquire.util.ui.Legend" typeValue="4|N" usage="17" />
+            <item defaultValue="First" mappable="true" name="PAGINATE_FIRST_TEXT" prompt="First Text" tab="Data Table Text"/>
+            <item defaultValue="Last" mappable="true" name="PAGINATE_LAST_TEXT" prompt="Last Text" tab="Data Table Text"/>
+            <item defaultValue="Next" mappable="true" name="PAGINATE_NEXT_TEXT" prompt="Next Text" tab="Data Table Text"/>
+            <item defaultValue="Previous" mappable="true" name="PAGINATE_PREVIOUS_TEXT" prompt="Previous Text" tab="Data Table Text"/>
+            <item name="Sorting" prompt="Sorting ARIA labels" tab="Data Table Text" type="com.acquire.util.ui.Legend" typeValue="2|N" usage="17" />
+            <item defaultValue=": activate to sort column ascending" mappable="true" name="ARIA_SORT_ASCENDING_TEXT" prompt="Sort Ascending Text" tab="Data Table Text"/>
+            <item defaultValue=": activate to sort column descending" mappable="true" name="ARIA_SORT_DESCENDING_TEXT" prompt="Sort Descending Text" tab="Data Table Text"/>
+            <item defaultValue="Loading..." mappable="true" name="LOADING_RECORDS_TEXT" prompt="Loading Records Text" tab="Data Table Text"/>
+            <item defaultValue="Processing..." mappable="true" name="PROCESSING_TEXT" prompt="Processing Text" tab="Data Table Text"/>
+
+			<item name="GROUP_COL" prompt="Grouping Column" tab="Data Table Options" includeInDesign="false" />
+			<item name="GROUP_FIRST_CHAR_ONLY" prompt="First Character Only" tab="Data Table Options" type="javax.swing.JCheckBox" includeInDesign="false" />
+			<item name="KEEP_GROUPED_COL" prompt="Keep Grouped Column" tab="Data Table Options" type="javax.swing.JCheckBox" includeInDesign="false" />
+			<item name="COL_SORT_DIR" prompt="Sort Direction" tab="Data Table Options" type="javax.swing.JComboBox" typeValue="asc|desc" defaultValue="asc"  includeInDesign="false"/>
+		
+		</custom>
+    </widget>
+
+</widgets>

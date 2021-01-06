@@ -1,0 +1,7 @@
+<div class="fb-post" 
+$%IF ITEM.href != ""$ data-href="$$ITEM.href$"
+$%ENDIF$$%IF ITEM.width != ""$ data-width="$$ITEM.width$"
+$%ENDIF$>
+</div>
+
+$%INCLUDE widgets/com.temenos.widgets.social.facebook/inc_fbRegisterWidget.wgt$$%ENDINCLUDE$

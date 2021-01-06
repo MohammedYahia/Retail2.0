@@ -1,0 +1,12 @@
+<link rel="stylesheet" type="text/css" href="./templates/widgets/com.temenos.theme/treeView/css/treeView.css" />
+
+<script type="text/javascript" src="./templates/widgets/com.temenos.theme/treeView/js/jsPlumb-2.1.7-min.js"></script>
+<script type="text/javascript" src="./templates/widgets/com.temenos.theme/treeView/js/jquery.panzoom.min.js"></script>
+<script type="text/javascript" src="./templates/widgets/com.temenos.theme/treeView/js/treeBuilder.js"></script>
+
+<script type="text/javascript">
+
+function getContentDocument() {
+	return document;
+}
+</script>

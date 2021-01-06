@@ -1,0 +1,79 @@
+<script type="text/javascript">
+	var servletSessionInactivityIntervalSeconds = $$SessionTimeout$;
+	var sessionTimeoutWarningPeriodSeconds = $$!SESSION_TIMOUT_WARNING_INTERVAL_SECONDS$;
+	var safetyMarginSeconds = $$!SESSION_TIMOUT_SAFETY_MARGIN_SECONDS$;
+	
+	var nominalSessionExpireyOffsetSeconds = servletSessionInactivityIntervalSeconds - safetyMarginSeconds;
+	var intervalBeforeSessionTimeoutWarningMillis = 1000 * (nominalSessionExpireyOffsetSeconds - sessionTimeoutWarningPeriodSeconds);
+	var sessionWarningTimeout = window.setTimeout(showSessionTimeoutWarningDg, intervalBeforeSessionTimeoutWarningMillis);
+	
+	var warningSecondsRemaining = sessionTimeoutWarningPeriodSeconds;
+	
+//	$( jq("$$ITEM.ID()$") ).dialog({
+//		$%IF ITEM.TITLE != ""$title: "$$ITEM.TITLE$",$%ENDIF$
+//		$%IF ITEM.WIDTH != ""$width: $$ITEM.WIDTH$,$%ENDIF$
+//		$%IF ITEM.HEIGHT != ""$height: $$ITEM.HEIGHT$,$%ENDIF$
+//		zIndex: 3000,
+//		resizable: false, 
+//		modal: true,
+//		position: 'center',
+//		closeOnEscape: true,
+//		draggable: false,
+//		dialogClass: "session-timeout-container",
+//		close: function(event, ui) { 
+//			document.getElementById("$$ITEM.ID()$_flag").value = "N";
+//		}
+//	});
+	
+	function setCountdownUpdateTimer() {
+		var countdownSecondsElem = document.getElementById('$$ITEM.COUNTDOWN_SECONDS_SPAN_ID$');
+
+		if (countdownSecondsElem != null)
+			countdownSecondsElem.innerHTML = '' + warningSecondsRemaining;
+
+		window.setTimeout((--warningSecondsRemaining > 0) ? setCountdownUpdateTimer : doRedirectToLoginPage, 1000);
+	}
+
+	function showSessionTimeoutWarningDg() {
+		setCountdownUpdateTimer();		
+	var dlg = $( jq("$$ITEM.ID()$") ).dialog({
+		$%IF ITEM.TITLE != ""$title: "$$ITEM.TITLE$",$%ENDIF$
+		$%IF ITEM.WIDTH != ""$width: $$ITEM.WIDTH$,$%ENDIF$
+		$%IF ITEM.HEIGHT != ""$height: $$ITEM.HEIGHT$,$%ENDIF$
+		zIndex: 3000,
+		resizable: false, 
+		modal: true,
+		position: 'center',
+		closeOnEscape: true,
+		draggable: false,
+		dialogClass: "session-timeout-container",
+		close: function(event, ui) { 
+			document.getElementById("$$ITEM.ID()$_flag").value = "N";
+		}
+	});
+			dlg.parent().appendTo($('form:first'));
+		//$( jq('$$ITEM.ID()$') ).parent().appendTo($('form:first'));
+	}
+	
+	function doRedirectToLoginPage() {
+		document.forms['sessionTimeoutForm'].submit();
+	}
+
+	// connect_ajax.js override
+	
+	function send(url, async, ajaxCaller, ns){
+		var dest = url.substring(0, url.indexOf("?"));
+		var params = url.substring(url.indexOf("?") + 1);
+		var result = makePOSTRequest(dest, async, params, ns, ajaxCaller);
+		
+		window.clearTimeout(sessionWarningTimeout);
+		sessionWarningTimeout = window.setTimeout(showSessionTimeoutWarningDg, intervalBeforeSessionTimeoutWarningMillis);
+		
+		return result;
+	}
+</script>
+
+<div id="$$ITEM.ID()$" style='display: none'>
+	$$FORMCONTENT$
+	<input id="$$ITEM.ID()$_flag" type="hidden" name="$$COMPONENT_ID_PREFIX$_V_$$ITEM.PARENT().GroupName$" value="N">
+</div>

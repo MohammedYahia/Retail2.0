@@ -1,0 +1,6 @@
+<!-- $Revision: 1.6 $ -->
+		<script type='text/javascript'>
+			if (typeof jQuery == 'undefined'){
+				document.write(unescape("%3Cscript src='./templates/widgets/jquery/js/jquery.min.js?$$SESSION_ID$' type='text/javascript'%3E%3C/script%3E"));
+			}
+		</script>

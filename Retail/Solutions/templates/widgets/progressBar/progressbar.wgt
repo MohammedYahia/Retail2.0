@@ -1,0 +1,99 @@
+<div class="progress">
+	<div id="barA" class="bar bar-success tc-confirmation-bg-color"></div>
+	<div id="barB" class="bar bar-danger tc-error-bg-color"></div>
+	<div id="barC" class="bar bar-warning ext-future-background-bar-color"></div>
+</div>
+
+<script>
+
+var a=$$ITEM.PaidCount$;
+var b=$$ITEM.DueCount$;
+var c=$$ITEM.FutureCount$;
+
+if(a || b || c <= 1) {
+
+    a += 7;
+    b += 7;
+    c += 7;
+
+}else{
+
+    a = a;
+    b = b;
+    c = c;
+}
+
+a= parseFloat(a);
+b= parseFloat(b);
+c= parseFloat(c);
+
+var textA = $$ITEM.PaidCount$;
+var textB = $$ITEM.DueCount$;
+var textC = $$ITEM.FutureCount$;
+
+
+$('#barA').html(textA);
+$('#barB').html(textB);
+$('#barC').html(textC);
+
+
+var totalAll= a+b+c;
+var totalAC= a+c;
+var totalAB= a+b;
+var totalBC= b+c;
+
+if(a == 7 && b!=7 && c!=7){
+
+    a=a*100/totalBC;
+    b=b*100/totalBC;
+    c=c*100/totalBC;
+
+} else if(b == 7 && a!=7 && c!=7) {
+
+    a=a*100/totalAC;
+    b=b*100/totalAC;
+    c=c*100/totalAC;
+
+} else if(c == 7 && a!=7 && b!=7) {
+
+    a=a*100/totalAB;
+    b=b*100/totalAB;
+    c=c*100/totalAB;
+
+} else {
+
+    a=a*100/totalAll;
+    b=b*100/totalAll;
+    c=c*100/totalAll;
+
+}
+
+
+if(textA == 0) {
+    $('#barA').attr('style', 'width:0');
+}else{
+	if(textB == 0 && textC == 0){
+		//Code added to show the bar correctly when Loan is repayed completely
+		var d=100;
+    $('#barA').attr('style', 'width:'+d+'%');
+	}else{
+    $('#barA').attr('style','width:'+a+'%');
+	}
+}
+
+if(textB == 0) {
+    $('#barB').attr('style', 'width:0');
+
+}else{
+    $('#barB').attr('style','width:'+b+'%');
+}
+
+if(textC == 0) {
+	$('#barC').attr('style', 'width:0');
+}
+else{
+    $('#barC').attr('style','width:'+c+'%');
+}
+
+
+</script>

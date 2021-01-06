@@ -1,0 +1,57 @@
+<style>
+.ui-dialog, .ui-widget-content{
+	padding: 0px;
+	background-color: #efeeee !important;
+	border-radius: 1px;
+	position: relative !important;
+}
+.ui-widget-header {
+	background-color: #578AB9 !important;
+}
+.ui-dialog .ui-dialog-titlebar-close span {
+	margin: -8px;
+}
+
+</style>
+<script type="text/javascript" charset="UTF-8">
+$.ui.dialog.prototype._focusTabbable = $.noop;
+$(document).ready(function() {
+	$(jq("$$ITEM.ID()$")).dialog({
+			$%IF ITEM.MODAL = "Y"$ modal: true,$%ENDIF$
+			$%IF ITEM.WIDTH != ""$ width: $$ITEM.WIDTH$,$%ENDIF$
+			$%IF ITEM.HEIGHT != ""$ height: $$ITEM.HEIGHT$,$%ENDIF$
+			position:{ my: "bottom+100%", at: "bottom bottom", of:".$$ITEM.buttonid$"},
+			autoOpen: false,
+			draggable: false,
+			resizable: false,
+			closeOnEscape: true, 
+			dialogClass: "dialogCustom",
+			appendTo: ".$$ITEM.buttonid$",
+			open: function( event, ui ) {
+				/*$('html, body').css({
+					'overflow': 'hidden',
+					'height': '100%'
+				});*/
+			},
+			close: function(event, ui){
+				/*$('html, body').css({
+					'overflow': 'auto',
+					'height': 'auto'
+				});*/
+			},
+			closeButton: true,
+			
+	});
+	$("body").on('click',".$$ITEM.buttonid$",function(){
+			   $(jq("$$ITEM.ID()$")).dialog('open');
+	});
+	$( jq("$$ITEM.ID()$") ).parent().animate({"top": "+=100px"}, 900);
+	$( jq("$$ITEM.ID()$") ).parent().appendTo($("form:first"));
+});
+</script>
+
+<div id="$$ITEM.ID()$" >
+	$$FORMCONTENT$
+	<input id="$$ITEM.ID()$_flag" type="hidden" name="$$COMPONENT_ID_PREFIX$_V_$$ITEM.PARENT().GroupName$" value="Y">
+</div>
+

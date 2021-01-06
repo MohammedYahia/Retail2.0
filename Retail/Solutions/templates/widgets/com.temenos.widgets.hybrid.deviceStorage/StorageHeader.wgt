@@ -1,0 +1,51 @@
+<script type = "text/javascript" charset="utf-8">
+window.edge = window.edge || {};
+window.edge.widgets = window.edge.widgets || {};
+window.edge.widgets = window.edge.widgets || {};
+window.edge.widgets.cordova = window.edge.widgets.cordova || {};
+
+window.edge.widgets.cordova.Storage = (function() {
+  
+    var storageType = {
+        PERMANENT : 0,
+        TEMPORARY : 1
+    }
+
+    var storage = {};
+    storage.source = {};
+
+    storage.setSource = function(sourceType) {
+        if (sourceType == storageType.PERMANENT) {
+            this.source = window.localStorage;
+        } else if (sourceType == storageType.TEMPORARY) {
+            this.source = window.sessionStorage;
+        }
+    }
+
+    storage.setItem = function(key, value) {
+        return this.source.setItem(key, value);
+    }
+    storage.getItem = function(key) {
+        return this.source.getItem(key);
+    }
+    storage.removeItem = function(key) {
+        return this.source.removeItem(key);
+    }
+    storage.clear = function() {
+        return this.source.clear();
+    }
+    storage.getKey = function(index) {
+        return this.source.key(0);
+    }
+
+    storage.addEventHandler = function(elem, eventType, handler) {
+        if (elem.addEventListener)
+            elem.addEventListener(eventType, handler, false);
+        else if (elem.attachEvent)
+            elem.attachEvent('on' + eventType, handler);
+    };
+
+    return storage;
+
+})();
+</script>

@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!--
+ * $RCSfile: index.html,v $
+ * $Author: EUROPE\sionescu $
+ * $Revision: 1.18 $
+ * $Date: 2014/06/02 11:11:58 $
+-->
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate"/>
+    <meta http-equiv="cache-control" content="post-check=0, pre-check=0, false"/>
+    <meta name="author" content="Temenos UXP" />
+    <title>Retail Internet Banking</title>
+    <link href="html/css/Default.css" rel="stylesheet" type="text/css"/>
+
+	<script type="text/javascript" src="./html/js/modernizr.js"></script>
+	<script type="text/javascript" src="./html/js/connect.js"></script>
+	<script type="text/javascript" src="./html/js-others/jquery.js"></script>
+	<script type="text/javascript" src="./html/js-others/jquery.cookie.js"></script>
+	<!-- Load the below scripts in order to avoid the session sharing between mutiple browser tabs/windows --> 
+	<script type="text/javascript" src="./html/js-others/T-Authenticator.js"></script>
+
+	<script type="text/javascript">
+
+		window.onload = function() {
+			fetchBrowserFeatures('form1');
+			var ss_compact = ($.cookie("compactMode") == "tc-compact") ? "Y" : "N";
+			var ss_box = ($.cookie("boxView") == "tc-box-on") ? "Y" : "N";
+			var ss_header = ($.cookie("lockHeader") == "tc-header-locked") ? "Y" : "N";
+			var ss_sidebar = ($.cookie("showSideBar") == "tc-show-sidebar") ? "Y" : "N";
+			$("#compact").val(ss_compact);
+			$("#box").val(ss_box);
+			$("#headerLock").val(ss_header);
+			$("#fontSize").val($.cookie("fontSize"));
+			$("#showSideBar").val(ss_sidebar);
+			//$("#footerLock"	).val(	$.cookie("lockFooter")  || "" );
+			document.forms['form1'].submit()
+		}
+
+	</script>
+	<style>
+		.ImageContainer {
+			display: inline-block;
+			overflow: hidden;
+			width: 400px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-80%);
+		}
+		.ImageContainer .imgBorder span {
+			position: absolute;
+			background: #0c4374;
+		}
+		.ImageContainer .imgBorder span:nth-child(1) {
+			width: 100%;
+			height: 4px;
+			top: 0;
+			left: -100%;
+			animation: animate1 2s linear infinite;
+		}
+		.ImageContainer .imgBorder span:nth-child(3) {
+			width: 100%;
+			height: 4px;
+			bottom: 0;
+			right: -100%;
+			animation: animate3 2s linear infinite;
+		}
+		.ImageContainer .imgBorder span:nth-child(2) {
+			width: 4px;
+			height: 100%;
+			right: 0;
+			top: -100%;
+			animation: animate2 2s linear infinite;
+		}
+		.ImageContainer .imgBorder span:nth-child(4) {
+			width: 4px;
+			height: 100%;
+			left: 0;
+			bottom: -100%;
+			animation: animate4 2s linear infinite;
+		}
+		@keyframes animate1 {
+			0%{left: -100%;}
+			20%{left: 0;}
+			40%{left: 100%;}
+			60%{left: 100%;}
+			80%{left: 100%;}
+			100%{left: 100%;}
+		}
+		@keyframes animate2 {
+			0%{top: -100%;}
+			20%{top: -100%;}
+			40%{top: 0;}
+			60%{top: 100%;}
+			80%{top: 100%;}
+			100%{top: 100%;}
+		}
+		@keyframes animate3 {
+			0%{right: -100%;}
+			20%{right: -100%;}
+			40%{right: -100%;}
+			60%{right: 0;}
+			80%{right: 100%;}
+			100%{right: 100%;}
+		}
+		@keyframes animate4 {
+			0%{bottom: -100%;}
+			20%{bottom: -100%;}
+			40%{bottom: -100%;}
+			60%{bottom: -100%;}
+			80%{bottom: 0;}
+			100%{bottom: 100%;}
+		}
+	</style>
+  </head>
+  <body style="margin:0;padding:0" class="LoadingScreen">
+	<div class="LoadingContainer">
+		<div class="ClientLogo" style="text-align: center;margin-top: 100px;">
+			<span class="ImageContainer">
+				<img src="images/Temenos/RGB-DESCRIPTOR-011.png" alt="Temenos Logo" style="width: 400px;">
+				<span class="imgBorder">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</span>
+		</div>
+		<div style="text-align:center">
+			<span class="LoadingText"><!--Loading--></span>
+			<!--<span class="LoadingImage" style="width: 100px;"><img src="images/loader.gif" alt="Loading animation" style="width: 25px;position: relative;top: -76px;left: 128px;"></span>-->
+		</div>
+	</div>
+	<form id="form1" method="post" action="servletcontroller">
+		<input type="hidden" name="AF_SESSION_UID" value="@AF_SESSION_UID@"/>
+        <input type="hidden" name="url" value="@URL@"/>
+        <input type="hidden" name="PRODUCT" value=""/>
+        <input type="hidden" name="PRESENTATION_TYPE" value=""/>
+        <input type="hidden" name="MODE" value="XX"/>
+        <input type="hidden" name="BROWSER_FEATURES" value=""/>
+		
+		<input id="compact"		type="hidden" name="ScreenState[1].compactMode" value=""/>
+        <input id="box"			type="hidden" name="ScreenState[1].boxMode" value=""/>
+        <input id="headerLock"	type="hidden" name="ScreenState[1].lockHeader" value=""/>
+        <input id="fontSize"	type="hidden" name="ScreenState[1].fontSize" value=""/>
+        <input id="showSideBar" type="hidden" name="ScreenState[1].showSidebar" value=""/>
+		<!--<input id="footerLock"	type="hidden" name="ScreenState[1].lockFooter" value=""/>-->
+		
+		
+	
+	</form>
+  </body>
+</html>

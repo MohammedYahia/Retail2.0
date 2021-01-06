@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+	<widget icon="images/twitter-16.png" jars="$$PROJECTHOME$/WEB-INF/lib/twitter-widget.jar"
+		name="Twitter Embedded Timelines Widget" type="Item:">
+		<template type="source" value="twitter_embedded_timelines.wgt" />
+		<custom>
+
+			<item help="Width" includeInDesign="true" layout="-1" mand="false"
+				name="width" prompt="Width" tab="Appearance" type="javax.swing.JTextField"
+				usage="7" />
+			<item help="Height" includeInDesign="true" layout="-1" mand="false"
+				name="height" prompt="Height" tab="Appearance" type="javax.swing.JTextField"
+				usage="7" />
+			<item help="Theme" includeInDesign="true" layout="-1" mand="false"
+				name="theme" prompt="Theme" tab="Appearance" type="javax.swing.JComboBox"
+				typeValue="dark|light" usage="7" />
+			<item help="Link Color" includeInDesign="true" layout="-1" mand="false"
+				name="link-color" prompt="Link Color" tab="Appearance"
+				type="com.acquire.util.ui.StyleSheetColorChooser" typeValue="standard"
+				usage="7" />
+
+			<item help="Border color" includeInDesign="true" layout="-1"
+				mand="false" name="border" prompt="Border color" tab="Appearance"
+				type="com.acquire.util.ui.StyleSheetColorChooser" typeValue="standard"
+				usage="7" />
+
+			<item help="General Settings" includeInDesign="false" mand="false"
+				name="settings-legend" prompt="General Settings" type="com.acquire.util.ui.Legend"
+				typeValue="7|N" />
+			<item
+				help="ID for your widget taken from twitter website ( https://twitter.com/settings/widgets )"
+				includeInDesign="true" layout="-1" mand="true" name="widgetID"
+				prompt="WidgetID" type="javax.swing.JTextField" usage="7" />
+			<item help="ISO 639-1 codes" includeInDesign="true" layout="-1"
+				mand="false" name="lang" prompt="Language" type="javax.swing.JTextField"
+				usage="7" />
+			<item
+				help="To fix the size of a timeline to a preset number of Tweets, value between 1 and 20 Tweets"
+				includeInDesign="true" layout="-1" mand="false" name="tweet-limit"
+				prompt="Tweet Limit" type="javax.swing.JTextField" usage="7" />
+			<item
+				help="As per the Tweet and follow buttons, you may provide a comma-separated list of user screen names as suggested followers to a user after they reply, Retweet, or favorite a Tweet in the timeline"
+				includeInDesign="true" layout="-1" mand="false" name="data-related"
+				prompt="Web Intent Related Users" type="javax.swing.JTextField"
+				usage="7" />
+			<item
+				help="ARIA is an accessibility system that aids people using assistive technology interacting with dynamic web content. More info here --&gt; http://www.w3.org/WAI/intro/aria.php"
+				includeInDesign="true" layout="-1" mand="false" name="aria-polite"
+				prompt="ARIA politeness" type="javax.swing.JComboBox" typeValue="polite|assertive"
+				usage="7" />
+			<item
+				help="Hypertext Reference for your widget ex : https://twitter.com/temenos "
+				includeInDesign="true" layout="-1" mand="false" name="href"
+				prompt="Widget Link Location ( HREF )" type="javax.swing.JTextField"
+				usage="7" />
+			<item help="Widget Link Label ex : Tweets by @Temenos"
+				includeInDesign="true" layout="-1" mand="false" name="anchor-text"
+				prompt="Widget Link Label ( anchor text )" type="javax.swing.JTextField"
+				usage="7" />
+			<item help="Timeline Selection" includeInDesign="false" mand="false"
+				name="timeline-legend" prompt="Timeline Selection" type="com.acquire.util.ui.Legend"
+				typeValue="15|N" />
+			<item defaultValue="Timeline widget settings"
+				dialogHandler="com.temenos.widgets.social.twitter.TwitterDialogHandler"
+				help="Timeline Source" includeInDesign="true" layout="-1" mand="true"
+				name="source_timeline" prompt="Timeline Source" type="javax.swing.ButtonGroup"
+				typeValue="Timeline widget settings|Users|Collections|Favorites|Lists"
+				usage="7" />
+			<item
+				dialogHandler="com.temenos.widgets.social.twitter.TwitterDialogHandler"
+				help="User Identifier" includeInDesign="true" layout="-1" mand="false"
+				name="user-identifier" prompt="User Identifier" type="javax.swing.ButtonGroup"
+				typeValue="Screen Name|User ID" usage="7" applicableCondition="source_timeline=='Users'" />
+			<item help="The screen name of your twitter account."
+				includeInDesign="true" layout="-1" mand="false" name="screen-name"
+				prompt="Screen Name" type="javax.swing.JTextField" usage="7" applicableCondition="user-identifier=='Screen Name'" />
+			<item
+				help="The integer representation of the unique identifier for your twitter User . ex : &quot;6253282&quot;"
+				includeInDesign="true" layout="-1" mand="false" name="user-id"
+				prompt="User ID" type="javax.swing.JTextField" usage="7" applicableCondition="user-identifier=='User ID'" />
+			<item help="Show Replies" includeInDesign="true" layout="-1"
+				mand="false" name="show-replies" prompt="Show Replies"
+				type="com.acquire.util.FocusCheckbox" usage="7"  applicableCondition="source_timeline=='Users'"/>
+			<item
+				help="Timeline id for your custom timeline that you want to render. Use only the integer portion of the custom timeline ID."
+				includeInDesign="true" layout="-1" mand="false" name="custom-timeline-id"
+				prompt="Custom Timeline ID" type="javax.swing.JTextField" usage="7" applicableCondition="source_timeline=='Collections'" />
+			<item
+				dialogHandler="com.temenos.widgets.social.twitter.TwitterDialogHandler"
+				help="Favorites Identifier" includeInDesign="true" layout="-1" mand="false"
+				name="favorites-identifier" prompt="Favorites Identifier" type="javax.swing.ButtonGroup"
+				typeValue="Favorites Screen Name|Favorites User ID" usage="7"  applicableCondition="source_timeline=='Favorites'" />
+			<item help="Favorites Screen Name" includeInDesign="true"
+				layout="-1" mand="false" name="favorites-screen-name" prompt="Favorites Screen Name"
+				type="javax.swing.JTextField" usage="7" applicableCondition="favorites-identifier=='Favorites Screen Name'" />
+			<item help="Favorites User ID" includeInDesign="true" layout="-1"
+				mand="false" name="favorites-user-id" prompt="Favorites User ID"
+				type="javax.swing.JTextField" usage="7" applicableCondition="favorites-identifier=='Favorites User ID'" />
+			<item
+				dialogHandler="com.temenos.widgets.social.twitter.TwitterDialogHandler"
+				help="List Owner" includeInDesign="true" layout="-1" mand="false"
+				name="list-owner" prompt="List Owner" type="javax.swing.ButtonGroup"
+				typeValue="List Owner Screen Name|List Owner ID" usage="7" applicableCondition="source_timeline=='Lists'"/>
+			<item help="List Owner Screen Name" includeInDesign="true"
+				layout="-1" mand="false" name="list-owner-screen-name" prompt="List Owner Screen Name"
+				type="javax.swing.JTextField" usage="7"  applicableCondition="list-owner=='List Owner Screen Name'"/>
+			<item help="List Owner ID" includeInDesign="true" layout="-1"
+				mand="false" name="list-owner-id" prompt="List Owner ID" type="javax.swing.JTextField"
+				usage="7"  applicableCondition="list-owner=='List Owner ID'"/>
+			<item
+				dialogHandler="com.temenos.widgets.social.twitter.TwitterDialogHandler"
+				help="List Identifier" includeInDesign="true" layout="-1" mand="false"
+				name="list-identifier" prompt="List Identifier" type="javax.swing.ButtonGroup"
+				typeValue="List ID|List Slug" usage="7" applicableCondition="source_timeline=='Lists'"/>
+			<item help="List ID" includeInDesign="true" layout="-1" mand="false"
+				name="list-id" prompt="List ID" type="javax.swing.JTextField" usage="7"  applicableCondition="list-identifier=='List ID'"/>
+			<item help="List Slug" includeInDesign="true" layout="-1" mand="false"
+				name="list-slug" prompt="List Slug" type="javax.swing.JTextField"
+				usage="7"  applicableCondition="list-identifier=='List Slug'"/>
+
+			<item help="Chrome Settings" includeInDesign="false" mand="false"
+				name="chrome-legend" prompt="Chrome Settings" tab="Appearance"
+				type="com.acquire.util.ui.Legend" typeValue="7|N" />
+			<item help="Hides the timeline header" includeInDesign="true"
+				layout="-1" mand="false" name="noheader" prompt="No Header" tab="Appearance"
+				type="com.acquire.util.FocusCheckbox" usage="7" />
+			<item help="Hides the timeline footer and Tweet box, if included."
+				includeInDesign="true" layout="-1" mand="false" name="nofooter"
+				prompt="No Footer" tab="Appearance" type="com.acquire.util.FocusCheckbox"
+				usage="7" />
+			<item
+				help="Removes all borders within the widget (between Tweets, cards, around the widget)."
+				includeInDesign="true" layout="-1" mand="false" name="noborders"
+				prompt="No Borders" tab="Appearance" type="com.acquire.util.FocusCheckbox"
+				usage="7" />
+			<item help="Crops and hides the main timeline scrollbar, if visible. "
+				includeInDesign="true" layout="-1" mand="false" name="noscrollbar"
+				prompt="No Scrollbar" tab="Appearance" type="com.acquire.util.FocusCheckbox"
+				usage="7" />
+			<item help="Removes the background color" includeInDesign="true"
+				layout="-1" mand="false" name="transparent" prompt="Transparent"
+				tab="Appearance" type="com.acquire.util.FocusCheckbox" usage="7" />
+		</custom>
+		<template type="header" value="twitter_header.wgt" />
+	</widget>
+	<widget icon="images/twitter-16.png" name="Twitter Embedded Tweets Widget"
+		type="Item:">
+		<template type="source" value="twitter_embedded_tweets.wgt" />
+		<template type="header" value="twitter_header.wgt" />
+		<custom>
+			<item help="ex https://twitter.com/BarackObama/status/266031293945503744/"
+				includeInDesign="true" layout="-1" mand="true" name="URL" prompt="Tweet URL"
+				type="javax.swing.JTextField" usage="7" />
+			<item help="Width" includeInDesign="true" layout="-1" mand="false"
+				name="width" prompt="Width" tab="Appearance" type="javax.swing.JTextField"
+				usage="7" />
+			<item help="Alignment" includeInDesign="true" layout="-1" mand="false"
+				name="align" prompt="Alignment" tab="Appearance" type="javax.swing.JComboBox"
+				typeValue="left|center|right" usage="7" />
+			<item help="Link color" includeInDesign="true" layout="-1" mand="false"
+				name="link-color" prompt="Link color" tab="Appearance"
+				type="com.acquire.util.ui.StyleSheetColorChooser" typeValue="standard"
+				usage="7" />
+			<item help="Theme" includeInDesign="true" layout="-1" mand="false"
+				name="theme" prompt="Theme" tab="Appearance" type="javax.swing.JComboBox"
+				typeValue="dark|light" usage="7" />
+			<item help="ISO 639-1 codes" includeInDesign="true" layout="-1"
+				mand="false" name="lang" prompt="Language" type="javax.swing.JTextField"
+				usage="7" />
+			<item
+				help="For example, if you are collecting Tweets from a conversation and don't want the thread attached to every Tweet, you can show or hide the conversation using this checkbox."
+				includeInDesign="true" layout="-1" mand="false" name="conversation"
+				prompt="Show Conversation" type="com.acquire.util.FocusCheckbox"
+				usage="7" />
+			<item help="more info --&gt; https://dev.twitter.com/docs/cards"
+				includeInDesign="true" layout="-1" mand="false" name="cards"
+				prompt="Show Twitter Cards" type="com.acquire.util.FocusCheckbox"
+				usage="7" />
+			<item help="Opt-out of tailoring Twitter" includeInDesign="true"
+				layout="-1" mand="false" name="dnt" prompt="Opt Out"
+				type="com.acquire.util.FocusCheckbox" usage="7" />
+		</custom>
+	</widget>
+	<widget icon="images/twitter-16.png" name="Twitter Tweet Button"
+		type="Item:">
+		<template type="source" value="twitter_tweet_button.wgt" />
+		<template type="header" value="twitter_header.wgt" />
+		<custom>
+			<item help="URL of the page to share" includeInDesign="true"
+				layout="-1" mand="false" name="data-url" prompt="URL to Tweet"
+				type="javax.swing.JTextField" usage="7" />
+			<item help="Screen name of the user to attribute the Tweet to"
+				includeInDesign="true" layout="-1" mand="false" name="data-via"
+				prompt="Via User" type="javax.swing.JTextField" usage="7" />
+			<item help="Default Tweet text" includeInDesign="true" layout="-1"
+				mand="false" name="data-text" prompt="Tweet text" type="com.acquire.intelligentforms.ide.dialogs.RichTextField|RICH_VALUES"
+				usage="7" />
+			<item help="Related accounts" includeInDesign="true" layout="-1"
+				mand="false" name="data-related" prompt="Recommended accounts" type="javax.swing.JTextField"
+				usage="7" />
+			<item help="Count box position" includeInDesign="true" layout="-1"
+				mand="false" name="data-count" prompt="Count box position" type="javax.swing.JComboBox"
+				typeValue="none|horizontal|vertical" usage="7" />
+			<item help="The language for the Tweet Button,ISO 639-1 codes"
+				includeInDesign="true" layout="-1" mand="false" name="data-lang"
+				prompt="Language" type="javax.swing.JTextField" usage="7" />
+			<item help="URL to which your shared URL resolves"
+				includeInDesign="true" layout="-1" mand="false" name="data-counturl"
+				prompt="URL to which your shared URL resolves" type="javax.swing.JTextField"
+				usage="7" />
+			<item help="Comma separated hashtags appended to tweet text"
+				includeInDesign="true" layout="-1" mand="false" name="data-hashtags"
+				prompt="Hashtags" type="javax.swing.JTextField" usage="7" />
+			<item help="The size of the rendered button" includeInDesign="true"
+				layout="-1" mand="false" name="data-size" prompt="Size"
+				type="javax.swing.JComboBox" typeValue="medium|large" usage="7" />
+			<item help="Opt-out of tailoring Twitter" includeInDesign="true"
+				layout="-1" mand="false" name="data-dnt" prompt="Opt Out"
+				type="com.acquire.util.FocusCheckbox" usage="7" />
+		</custom>
+	</widget>
+	<widget icon="images/twitter-16.png" name="Twitter Follow Button"
+		type="Item:">
+		<template type="source" value="twitter_follow_button.wgt" />
+		<template type="header" value="twitter_header.wgt" />
+		<custom>
+			<item help="User to follow ( Screen Name )" includeInDesign="true"
+				layout="-1" mand="true" name="user" prompt="User to follow ( Screen Name )"
+				type="javax.swing.JTextField" usage="7" />
+			<item help="The size of the rendered button" includeInDesign="true"
+				layout="-1" mand="false" name="data-size" prompt="Size"
+				type="javax.swing.JComboBox" typeValue="medium|large" usage="7" />
+			<item help="Alignment" includeInDesign="true" layout="-1" mand="false"
+				name="data-align" prompt="Alignment" type="javax.swing.JComboBox"
+				typeValue="right|left" usage="7" />
+			<item help="Width" includeInDesign="true" layout="-1" mand="false"
+				name="data-width" prompt="Width" type="javax.swing.JTextField"
+				usage="7" />
+			<item help="ISO 639-1 codes" includeInDesign="true" layout="-1"
+				mand="false" name="data-lang" prompt="Language" type="javax.swing.JTextField"
+				usage="7" />
+			<item help="Followers count display" includeInDesign="true"
+				layout="-1" mand="false" name="data-show-count" prompt="Followers count display"
+				type="com.acquire.util.FocusCheckbox" usage="7" />
+			<item help="Show Screen Name" includeInDesign="true" layout="-1"
+				mand="false" name="data-show-screen-name" prompt="Show Screen Name"
+				type="com.acquire.util.FocusCheckbox" usage="7" />
+			<item help="Opt-out of tailoring Twitter" includeInDesign="true"
+				layout="-1" mand="false" name="data-dnt" prompt="Opt Out"
+				type="com.acquire.util.FocusCheckbox" usage="7" />
+		</custom>
+	</widget>
+	<widget icon="images/twitter-16.png" name="Twitter HashTag Button"
+		type="Item:">
+		<template type="source" value="twitter_hashtag_button.wgt" />
+		<template type="header" value="twitter_header.wgt" />
+		<custom>
+		<item help="This text will appear also as hashtag on button if no comma or white space is added. Else will be displayed only inside the tweet."
+				includeInDesign="true" layout="-1" mand="false" name="hashtag-button"
+				prompt="Hashtags(#)" type="javax.swing.JTextField" usage="7" />
+			<item help="Default Tweet text" includeInDesign="true" layout="-1"
+				mand="false" name="data-text" prompt="Tweet text" type="javax.swing.JTextField"
+				usage="7" />
+			<item help="URL of the page to share" includeInDesign="true"
+				layout="-1" mand="false" name="data-url" prompt="URL"
+				type="javax.swing.JTextField" usage="7" />
+			<item help="Related accounts" includeInDesign="true" layout="-1"
+				mand="false" name="data-related" prompt="Recommend(@)" type="javax.swing.JTextField"
+				usage="7" />
+			<item help="Related accounts"
+				layout="-1" includeInDesign="true" mand="false" name="data-related-2"
+				prompt="Recommend(@)" type="javax.swing.JTextField" usage="7" />
+			<item help="The language for the Tweet Button,ISO 639-1 codes"
+				includeInDesign="true" layout="-1" mand="false" name="data-lang"
+				prompt="Language" type="javax.swing.JTextField" usage="7" />
+			<item help="The size of the rendered button" includeInDesign="true"
+				layout="-1" mand="false" name="data-size" prompt="Size"
+				type="javax.swing.JComboBox" typeValue="medium|large" usage="7" />
+			<item help="Opt-out of tailoring Twitter" includeInDesign="true"
+				layout="-1" mand="false" name="data-dnt" prompt="Opt Out"
+				type="com.acquire.util.FocusCheckbox" usage="7" />
+		</custom>
+	</widget>
+</widgets>

@@ -1,0 +1,41 @@
+<script>
+    $(document).ready(function(){    
+        $(".ext-view-options-row .tc-icon-position-before").click(function() {
+            var that = this;
+            var activeOptions = $(this).closest(".ext-cards-view").find(".ext-view-option-active");
+            activeOptions.removeClass("ext-view-option-active");
+
+            if($(this).hasClass("ext-table-view")) {
+                $(this).addClass("ext-view-option-active");
+                $(this).closest(".ext-view-options-section").find(".ext-table-with-view-options tr").css('height', '');
+                var tableView = $(this).closest(".ext-view-options-section").find(".ext-table-with-view-options");
+                tableView.removeClass("ext-table-with-view-options-active");
+            }  
+
+            if($(this).hasClass("ext-grid-view")) {
+                $(this).addClass("ext-view-option-active");
+                var gridView = $(this).closest(".ext-view-options-section").find(".ext-table-with-view-options");
+                gridView.addClass("ext-table-with-view-options-active");
+                setCardsHeight(that);
+            }
+            
+            function setCardsHeight(that) {
+                var cardsHeight = $(that).closest(".ext-view-options-section").find(".ext-table-with-view-options-active tr:not('.parent')");
+                cardsHeight.css('height', 'auto');
+                var maxHeight = 0;
+                cardsHeight.each(function(){
+                   maxHeight = $(this).height() > maxHeight ? $(this).height() : maxHeight;
+                });
+                cardsHeight.css('height', maxHeight);
+            }
+        }); 
+        
+        $(".set-font").click(function() {
+            $(".ext-view-option-active").click();
+        });
+        
+        window.addEventListener("resize", function(){
+            $(".ext-view-option-active").click();
+        });
+    })
+</script>

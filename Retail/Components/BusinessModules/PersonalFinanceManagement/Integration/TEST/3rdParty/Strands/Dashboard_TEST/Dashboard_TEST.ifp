@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><Project AllowEditFromSolution="Y" CheckedInChangeSetsSinceGetLatest="" CmsFlag="N" Connect="version 6.1.2__1" HybridFlag="N" ImportsClassType="com.acquire.intelligentforms.entities.mapping.ImportRecordRoot" ImportsName="Import Records Root" Name="Dashboard_TEST" ParentId="8837074" ProjectExtension=".ifp" ProjectFolder="D:/Temenos/Development/DEV/T24/eclipse/ProductDevWorkspace2/TCIB2.0/Source/Edge/Components/BusinessModules/PersonalFinanceManagement/Integration/IRIS/3rdParty/Strands/Dashboard_JSON" ProjectType="Y" StatefulComponent="N" eid="CBA5D4AE7B17D15B1082"><![CDATA[
+  ]]>
+  <Types Name="Types Root" eid="CBA5D4AE7B17D15B1084"><![CDATA[
+    ]]>
+    <Lists Name="Lists" eid="CBA5D4AE7B17D15B1228"/>
+    <DataTypes Name="Data Types" eid="CBA5D4AE7B17D15B1229"><![CDATA[
+      ]]>
+      <DataType Name="Text" eid="CBA5D4AE7B17D15B1230"/>
+      <DataType Name="Number" Type="Number" eid="CBA5D4AE7B17D15B1231"/>
+      <DataType Name="Decimal" Type="Decimal" eid="CBA5D4AE7B17D15B1232"/>
+      <DataType Name="Date" Type="Date" eid="CBA5D4AE7B17D15B1233"/>
+      <DataType Name="File" Type="File" eid="CBA5D4AE7B17D15B1234"/>
+      <CustomType MaxFieldLength="60" MinFieldLength="0" Name="Email" RegularExpression="^([a-zA-Z0-9_\.\-]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" Type="Text" ValidationType="Regular Expression" eid="CBA5D4AE7B17D15B1235"/>
+    </DataTypes>
+    <Structures Name="Data Structures" eid="CBA5D4AE7B17D15B1236"/>
+  </Types>
+  <Dictionary Name="CBA5D4AE7B17D15B DataDictionary 1" eid="CBA5D4AE7B17D15B1085"><![CDATA[
+    ]]>
+    <PropertyGroup Name="Data Store Root" eid="CBA5D4AE7B17D15B1087"><![CDATA[
+      ]]>
+      <PropertyGroup LinkToStructure="N" Name="Dashboard" eid="CBA5D4AE7B17D15B1567"><![CDATA[
+        ]]>
+        <PropertyGroup JSONCollectionKind="Object" JSONName="result" Name="result" ShowJSONMapping="true" eid="CBA5D4AE7B17D15B1740"><![CDATA[
+          ]]>
+          <Property JSONName="alerts" Name="alerts" ShowJSONMapping="true" Type="Number" eid="CBA5D4AE7B17D15B1741"/>
+          <Property JSONName="income" Name="income" ShowJSONMapping="true" Type="Decimal" eid="CBA5D4AE7B17D15B1742"/>
+          <Property JSONName="discretionary" Name="discretionary" ShowJSONMapping="true" Type="Decimal" eid="CBA5D4AE7B17D15B1743"/>
+          <Property JSONName="balance" Name="balance" ShowJSONMapping="true" Type="Decimal" eid="CBA5D4AE7B17D15B1744"/>
+          <Property JSONName="scheduled" Name="scheduled" ShowJSONMapping="true" Type="Decimal" eid="CBA5D4AE7B17D15B1745"/>
+          <Property JSONName="unreadTransactions" Name="unreadTransactions" ShowJSONMapping="true" Type="Number" eid="CBA5D4AE7B17D15B1746"/>
+          <PropertyGroup JSONCollectionKind="Object" JSONName="savings" Name="savings" ShowJSONMapping="true" eid="CBA5D4AE7B17D15B1747"><![CDATA[
+            ]]>
+            <Property JSONName="normal" Name="normal" ShowJSONMapping="true" Type="Number" eid="CBA5D4AE7B17D15B1748"/>
+            <Property JSONName="succeed" Name="succeed" ShowJSONMapping="true" Type="Number" eid="CBA5D4AE7B17D15B1749"/>
+            <Property JSONName="warning" Name="warning" ShowJSONMapping="true" Type="Number" eid="CBA5D4AE7B17D15B1750"/>
+            <Property JSONName="danger" Name="danger" ShowJSONMapping="true" Type="Number" eid="CBA5D4AE7B17D15B1751"/>
+          </PropertyGroup>
+          <PropertyGroup JSONCollectionKind="Object" JSONName="budget" Name="budget" ShowJSONMapping="true" eid="CBA5D4AE7B17D15B1752"><![CDATA[
+            ]]>
+            <Property JSONName="normal" Name="normal" ShowJSONMapping="true" Type="Number" eid="CBA5D4AE7B17D15B1753"/>
+            <Property JSONName="warning" Name="warning" ShowJSONMapping="true" Type="Number" eid="CBA5D4AE7B17D15B1754"/>
+            <Property JSONName="danger" Name="danger" ShowJSONMapping="true" Type="Number" eid="CBA5D4AE7B17D15B1755"/>
+          </PropertyGroup>
+        </PropertyGroup>
+        <PropertyGroup JSONCollectionKind="Object" JSONName="error" Name="error" ShowJSONMapping="true" eid="CBA5D4AE7B17D15B1756"/>
+      </PropertyGroup>
+      <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" Name="WorkingElements" eid="CBA5D4AE7B17D15B2968"><![CDATA[
+        ]]>
+        <Property Name="PFM_URL" eid="CBA5D4AE7B17D15B2969"/>
+      </PropertyGroup>
+      <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" Name="Filter" eid="CBA5D4AE7B17D15B2973"><![CDATA[
+        ]]>
+        <Property Name="FilterString" eid="CBA5D4AE7B17D15B2974"/>
+      </PropertyGroup>
+      <PropertyGroup LinkToStructure="N" Name="OutputParameters" eid="CBA5D4AE7B17D15B3082"><![CDATA[
+        ]]>
+        <Property Name="SavingsGoals" Type="Number" eid="CBA5D4AE7B17D15B3084"/>
+        <Property Name="Budget" Type="Number" eid="CBA5D4AE7B17D15B3092"/>
+        <Property Name="Plan" Type="Number" eid="CBA5D4AE7B17D15B3100"/>
+      </PropertyGroup>
+    </PropertyGroup>
+  </Dictionary>
+  <DataMapping Name="Integration Root" eid="CBA5D4AE7B17D15B1091"><![CDATA[
+    ]]>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.DebugLogDataSource" FileName="logs/Debug.log" FileRotation="New log file at file size limit" Name="Connect DebugLog" NewPerSize="512" eid="CBA5D4AE7B17D15B1240"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SyserrLogDataSource" FileName="logs/Syserr.log" FileRotation="New log file each session" Name="Connect SyserrLog" NewPerSize="512" eid="CBA5D4AE7B17D15B1241"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SysoutLogDataSource" FileName="logs/Sysout.log" FileRotation="New log file each session" Name="Connect SysoutLog" NewPerSize="512" eid="CBA5D4AE7B17D15B1242"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SecurityLogDataSource" FileName="logs/Security.log" FileRotation="New log file at file size limit" Name="Connect SecurityLog" NewPerSize="512" eid="CBA5D4AE7B17D15B1243"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.json.JSONDataSource" ConnectionAttempts="5" ConnectionTimeout="30000" EndPointURL="$$WorkingElements[1].PFM_URL$/dashboard/get.action" Engine="JSON Engine" HTTPHeaderNames="HTTP_STRANDS_USER" HTTPHeaderValues="$$!MAINSESSION.PFM_IRIS_USER_NAME$" Name="Dashboard" Password="$$!PFM_API_PASSWORD$" SecurityType="Basic Authentication" SocketTimeout="30000" UseSecurityCertificate="N" UserName="$$!PFM_API_USER_NAME$" eid="CBA5D4AE7B17D15B1565"/>
+  </DataMapping>
+  <Rules Name="Rules Root" eid="CBA5D4AE7B17D15B1089"><![CDATA[
+    ]]>
+    <Rule BaseType="com.acquire.intelligentforms.rules.ContainerRule" Name="Container - dasboard api" RuleClassName="com.acquire.intelligentforms.rules.ContainerRule" RuleDisabled="N" eid="CBA5D4AE7B17D15B2962"><![CDATA[
+      ]]>
+      <Rule FromGlobalVariable="PFM_URL" FromType="Global Variable" Name="Set Value - PFM URL" PropertyName="WorkingElements[1].PFM_URL" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" Type="Data Item" eid="CBA5D4AE7B17D15B2963"/>
+      <Rule ErrorHandlingType="Pass Up" HTTPMethod="GET" Name="JSON Integration - Dashboard Api" Output="Dashboard[1]" RuleClassName="com.acquire.intelligentforms.rules.JSONIntegrationRule" RuleDisabled="N" RuleType="True" SourceName="Dashboard" eid="CBA5D4AE7B17D15B2964"/>
+      <Rule Expression="$$Dashboard[1].result[1].savings[1].normal$ + $$Dashboard[1].result[1].savings[1].succeed$ + $$Dashboard[1].result[1].savings[1].warning$ + $$Dashboard[1].result[1].savings[1].danger$" Name="Expression for savings goal only" OutputProperty="OutputParameters[1].SavingsGoals" RuleClassName="com.acquire.intelligentforms.rules.ExpressionRule" RuleDisabled="N" RuleType="True" eid="CBA5D4AE7B17D15B3110"/>
+      <Rule Expression="$$Dashboard[1].result[1].budget[1].normal$ + $$Dashboard[1].result[1].budget[1].warning$ + $$Dashboard[1].result[1].budget[1].danger$" Name="Expression for budget only" OutputProperty="OutputParameters[1].Budget" RuleClassName="com.acquire.intelligentforms.rules.ExpressionRule" RuleDisabled="N" RuleType="True" eid="CBA5D4AE7B17D15B3466"/>
+      <Rule Expression="$$OutputParameters[1].SavingsGoals$ + $$OutputParameters[1].Budget$" Name="Expression for plan count" OutputProperty="OutputParameters[1].Plan" RuleClassName="com.acquire.intelligentforms.rules.ExpressionRule" RuleDisabled="N" RuleType="True" eid="CBA5D4AE7B17D15B3473"/>
+      <Rule FromPropertyName="Dashboard[1].result[1].savings[1].succeed" FromType="Data Item" Name="Set Value - Completed savings goal value" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" Type="Variable" VariableName="MAINSESSION.GOALS_COMPLETED" eid="0DA53C1018B9A95E2797271"/>
+      <Rule FromPropertyName="Dashboard[1].result[1].budget[1].danger" FromType="Data Item" Name="Set Value - Budgets in danger" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" Type="Variable" VariableName="MAINSESSION.BUDGET_DANGER" eid="0DA53C1018B9A95E2841013"/>
+    </Rule>
+  </Rules>
+  <Products Name="Processes Root" eid="CBA5D4AE7B17D15B1093"><![CDATA[
+    ]]>
+    <Product Componentcomment="This is an JSON Integration component used to retrieve the dashboard details of PFM&#10;&#10;Input parameters:&#10;NA&#10;&#10;Output parameters:&#10;SavingsGoals count&#10;Budget count&#10;Plan count&#10;&#10;Session Variables:&#10;MAINSESSION.GOALS_COMPLETED&#10;MAINSESSION.BUDGET_DANGER" Dashboard0_0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Dashboard0_0_0_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.NumberType|Number" Dashboard0_0_0_ExportedProperty="OutputParameters[1].SavingsGoals" Dashboard0_0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |OutputParameters[1].SavingsGoals" Dashboard0_0_0_LinkedEntityName="SavingsGoals" Dashboard0_0_0_LinkedEntityType="Number" Dashboard0_0_0_OriginalEntityEID="CBA5D4AE7B17D15B3084" Dashboard0_0_0_OriginalEntityName="SavingsGoals" Dashboard0_0_0_PropertyKey="OutputParameters[1].SavingsGoals" Dashboard0_0_0_PubOut="Y" Dashboard0_0_1_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Dashboard0_0_1_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.NumberType|Number" Dashboard0_0_1_ExportedProperty="OutputParameters[1].Budget" Dashboard0_0_1_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |OutputParameters[1].Budget" Dashboard0_0_1_LinkedEntityName="Budget" Dashboard0_0_1_LinkedEntityType="Number" Dashboard0_0_1_OriginalEntityEID="CBA5D4AE7B17D15B3092" Dashboard0_0_1_OriginalEntityName="Budget" Dashboard0_0_1_PropertyKey="OutputParameters[1].Budget" Dashboard0_0_1_PubOut="Y" Dashboard0_0_2_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Dashboard0_0_2_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.NumberType|Number" Dashboard0_0_2_ExportedProperty="OutputParameters[1].Plan" Dashboard0_0_2_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |OutputParameters[1].Plan" Dashboard0_0_2_LinkedEntityName="Plan" Dashboard0_0_2_LinkedEntityType="Number" Dashboard0_0_2_OriginalEntityEID="CBA5D4AE7B17D15B3100" Dashboard0_0_2_OriginalEntityName="Plan" Dashboard0_0_2_PropertyKey="OutputParameters[1].Plan" Dashboard0_0_2_PubOut="Y" Dashboard0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Dashboard0_0_DGInst="1" Dashboard0_0_ExportedPropertyGroup="OutputParameters[1]" Dashboard0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |OutputParameters" Dashboard0_0_LinkedEntityLinkToStructure="N" Dashboard0_0_LinkedEntityName="OutputParameters" Dashboard0_0_NumChildren="3" Dashboard0_0_OriginalEntityEID="CBA5D4AE7B17D15B3082" Dashboard0_0_OriginalEntityName="OutputParameters" Dashboard0_0_PropertyKey="OutputParameters" Dashboard0_0_PubOut="Y" Dashboard0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" Dashboard0_DGInst="1" Dashboard0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.DictionaryRoot| |Data Store Root" Dashboard0_LinkedEntityName="Data Store Root" Dashboard0_NumChildren="1" Dashboard0_OriginalEntityEID="CBA5D4AE7B17D15B1087" Dashboard0_OriginalEntityName="Data Store Root" Dashboard0_PubOut="Y" DashboardClassType="com.acquire.intelligentforms.entities.component.Component" DashboardComponentComment="This is an JSON Integration component used to retrieve the dashboard details of PFM&#10;&#10;Input parameters:&#10;NA&#10;&#10;Output parameters:&#10;SavingsGoals count&#10;Budget count&#10;Plan count&#10;&#10;Session Variables:&#10;MAINSESSION.GOALS_COMPLETED&#10;MAINSESSION.BUDGET_DANGER" DashboardNumChildren="1" DashboardProjectName="Dashboard_JSON" DashboardRulesOnly="Y" InitialPhase="Dashboard.Home" Name="Dashboard" PublishAsComponent="Y" RulesOnly="Y" eid="CBA5D4AE7B17D15B3478"><![CDATA[
+      ]]>
+      <Phase Name="Home" ProcessRulesOnly="Y" eid="CBA5D4AE7B17D15B3481"><![CDATA[
+        ]]>
+        <Rule ClassType="com.acquire.intelligentforms.rules.ContainerRule" LinkReference="CBA5D4AE7B17D15B2962" Name="Link to Container - dasboard api" RuleType="PostPhase" eid="CBA5D4AE7B17D15B3491"/>
+      </Phase>
+      <EVANote Name="CBA5D4AE7B17D15B EVANote 1" NoteType="CBA5D4AE7B17D15B1238" NoteTypeName="Specification" eid="CBA5D4AE7B17D15B3587"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    <p style="margin-bottom:0px;margin-top:0px;">
+      This is an JSON Integration component used to retrieve the dashboard 
+      details of PFM      
+<br />      
+<br />Input parameters:      
+<br />NA      
+<br />      
+<br />Output parameters:      
+<br />SavingsGoals count      
+<br />Budget count      
+<br />Plan count
+    </p>
+
+    <p style="margin-bottom:0px;margin-top:0px;">
+      &#160;
+    </p>
+
+    <p style="margin-bottom:0px;margin-top:0px;">
+      Session variables:
+    </p>
+
+    <p style="margin-bottom:0px;margin-top:0px;">
+      MAINSESSION.GOALS_COMPLETED
+    </p>
+
+    <p style="margin-bottom:0px;margin-top:0px;">
+      MAINSESSION.BUDGET_DANGER
+    </p>
+
+  </body>
+
+</html>
+
+]]></EVANote>
+    </Product>
+  </Products>
+  <PresentationTypes Name="Presentation Types Root" eid="CBA5D4AE7B17D15B1095"/>
+  <EVANotes Name="Note Root" eid="CBA5D4AE7B17D15B1097"><![CDATA[
+    ]]>
+    <EVANoteDefinition Name="ToDo" NoteName="ToDo" StatusRequired="Y" eid="CBA5D4AE7B17D15B1237"/>
+    <EVANoteDefinition Name="Specification" NoteName="Specification" StatusRequired="N" eid="CBA5D4AE7B17D15B1238"/>
+    <EVANoteDefinition Name="Comment" NoteName="Comment" StatusRequired="N" eid="CBA5D4AE7B17D15B1239"/>
+  </EVANotes>
+  <LanguageMapDefinitionsRoot Name="Languages Root" eid="CBA5D4AE7B17D15B1099"/>
+  <CordovaPluginsRoot Name="CordovaPlugins Root" eid="CBA5D4AE7B17D15B1103"/>
+</Project>

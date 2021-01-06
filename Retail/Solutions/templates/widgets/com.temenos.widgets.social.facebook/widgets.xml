@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?><widgets>
+  <widget callback="false" icon="images/facebook-icon.png" name="Facebook Share Button" type="Item:">
+    <template type="source" value="fbShareButton.wgt"/>
+    <template alwaysAddHeader="false" type="header" value="fbHeader.wgt"/>
+  <custom>
+      <item help="The absolute URL of the page that will be shared. Default value is current URL." includeInDesign="true" layout="-1" mand="false" name="href" prompt="URL to Share" type="javax.swing.JTextField" usage="7"/>
+      <item help="Selects one of the different layouts that are available for the button." includeInDesign="true" layout="-1" mand="false" name="layout" prompt="Layout" type="javax.swing.JComboBox" typeValue="box_count|button_count|button|link|icon_link|icon" usage="7"/>
+      <item help="The width of the button. The layout you choose affects whether the width value will have any effect." includeInDesign="true" layout="-1" mand="false" name="width" prompt="Width" type="javax.swing.JTextField" usage="7"/>
+	      <item help="the app ID which you use to initiate the [Facebook JavaScript SDK]. Example : 312440138865038 . This ID have to be same for all instances of the widgets within same Edge phase ." includeInDesign="true" layout="-1" mand="true" name="app_id" prompt="App ID" tab="Facebook SDK" type="javax.swing.JTextField" usage="7"/>
+    </custom>
+  </widget>
+<widget name="Facebook Like Button"  icon="images/facebook-icon.png"  type="Item:">
+    <template type="source" value="fbLikeButton.wgt"/>
+    <template type="header" value="fbHeader.wgt"/>
+    <custom>
+      <item help="The verb to display on the button. Can be either &quot;like&quot; or &quot;recommend&quot;" includeInDesign="true" layout="-1" mand="false" name="action" prompt="Action" type="javax.swing.JComboBox" typeValue="like|recommend" usage="7"/>
+      <item help="The color scheme used by the plugin for any text outside of the button itself. " includeInDesign="true" layout="-1" mand="false" name="colorscheme" prompt="Color Scheme" type="javax.swing.JComboBox" typeValue="light|dark" usage="7"/>
+      <item help="The absolute URL of the page that will be liked." includeInDesign="true" layout="-1" mand="false" name="href" prompt="URL to like" type="javax.swing.JTextField" usage="7"/>
+      <item help="If your web site or online service, or a portion of your service, is directed to children under 13 you must enable this" includeInDesign="true" layout="-1" mand="false" name="kid_directed_site" prompt="Kid directed site" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="Selects one of the different layouts that are available for the plugin." includeInDesign="true" layout="-1" mand="false" name="layout" prompt="Layout" type="javax.swing.JComboBox" typeValue="standard|box_count|button_count|button" usage="7"/>
+      <item help="A label for tracking referrals which must be less than 50 characters and can contain alphanumeric characters and some punctuation (currently +/=-.:_)" includeInDesign="true" layout="-1" mand="false" name="ref" prompt="Referrals" type="javax.swing.JTextField" usage="7"/>
+      <item help="Specifies whether to include a share button beside the Like button" includeInDesign="true" layout="-1" mand="false" name="share" prompt="Include a share button" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="Specifies whether to display profile photos below the button (standard layout only). You must not enable this on child-directed sites." includeInDesign="true" layout="-1" mand="false" name="show_faces" prompt="Show faces" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="The width of the plugin. The layout you choose affects the minimum and default widths you can use." includeInDesign="true" layout="-1" mand="false" name="width" prompt="Width" type="javax.swing.JTextField" usage="7"/>
+	      <item help="the app ID which you use to initiate the [Facebook JavaScript SDK]. Example : 312440138865038 . This ID have to be same for all instances of the widgets within same Edge phase ." includeInDesign="true" layout="-1" mand="true" name="app_id" prompt="App ID" tab="Facebook SDK" type="javax.swing.JTextField" usage="7"/>
+    </custom>
+  </widget>
+<widget callback="false" name="Facebook Send Button"  icon="images/facebook-icon.png" type="Item:">
+    <template type="source" value="fbSendButton.wgt"/>
+    <template type="header" value="fbHeader.wgt"/>
+    <custom>
+      <item help="The absolute URL of the page that will be sent." includeInDesign="true" layout="-1" mand="false" name="href" prompt="URL to send" type="javax.swing.JTextField" usage="7"/>
+      <item help="The color scheme used by the plugin. Can be &quot;light&quot; or &quot;dark&quot;." includeInDesign="true" layout="-1" mand="false" name="colorscheme" prompt="Color scheme" type="javax.swing.JComboBox" typeValue="light|dark" usage="7"/>
+      
+      <item help="If your web site or online service, or a portion of your service, is directed to children under 13 you must enable this" includeInDesign="true" layout="-1" mand="false" name="kid_directed_site" prompt="Kid directed site" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="A label for tracking referrals which must be less than 50 characters, and can contain alphanumeric characters and some punctuation (currently +/=-.:_). " includeInDesign="true" layout="-1" mand="false" name="ref" prompt="referrals" type="javax.swing.JTextField" usage="7"/>
+	      <item help="the app ID which you use to initiate the [Facebook JavaScript SDK]. Example : 312440138865038 . This ID have to be same for all instances of the widgets within same Edge phase ." includeInDesign="true" layout="-1" mand="true" name="app_id" prompt="App ID" tab="Facebook SDK" type="javax.swing.JTextField" usage="7"/>
+    </custom>
+  </widget>
+<widget name="Facebook Embedded Post" icon="images/facebook-icon.png" type="Item:">
+    <template type="source" value="fbEmbeddedPost.wgt"/>
+    <template type="header" value="fbHeader.wgt"/>
+    <custom>
+      <item includeInDesign="true" layout="-1" mand="true" name="href" prompt="URL to Post" type="javax.swing.JTextField" usage="7"/>
+      <item help="The pixel width of the post (between 350 and 750)" includeInDesign="true" layout="-1" mand="false" name="width" prompt="Width" type="javax.swing.JTextField" usage="7"/>
+	  <item help="the app ID which you use to initiate the [Facebook JavaScript SDK]. Example : 312440138865038 . This ID have to be same for all instances of the widgets within same Edge phase ." includeInDesign="true" layout="-1" mand="true" name="app_id" prompt="App ID" tab="Facebook SDK" type="javax.swing.JTextField" usage="7"/>
+    </custom>
+  </widget>
+<widget name="Facebook Follow Button" icon="images/facebook-icon.png" type="Item:">
+    <template type="source" value="fbFollowButton.wgt"/>
+    <template type="header" value="fbHeader.wgt"/>
+    <custom>
+      <item help="The Facebook.com profile URL of the user to follow." includeInDesign="true" layout="-1" mand="true" name="href" prompt="Facebook.com profile URL " type="javax.swing.JTextField" usage="7"/>
+      <item help="The color scheme used by the plugin. " includeInDesign="true" layout="-1" mand="false" name="colorscheme" prompt="Color Scheme" type="javax.swing.JComboBox" typeValue="light|dark" usage="7"/>
+      <item help="Selects one of the different layouts that are available for the plugin." includeInDesign="true" layout="-1" mand="false" name="layout" prompt="Layout" type="javax.swing.JComboBox" typeValue="standard|button_count|box_count" usage="7"/>
+      <item help="The width of the plugin. The layout you choose affects the minimum and default widths you can use" includeInDesign="true" layout="-1" mand="false" name="width" prompt="Width" type="javax.swing.JTextField" usage="7"/>
+      <item includeInDesign="true" layout="-1" mand="false" name="kid_directed_site" prompt="Kid Directed  Site" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="Specifies whether to display profile photos below the button (standard layout only). You must not enable this on child-directed sites." includeInDesign="true" layout="-1" mand="false" name="show_faces" prompt="Show Faces" type="com.acquire.util.FocusCheckbox" usage="7"/>
+	      <item help="the app ID which you use to initiate the [Facebook JavaScript SDK]. Example : 312440138865038 . This ID have to be same for all instances of the widgets within same Edge phase ." includeInDesign="true" layout="-1" mand="true" name="app_id" prompt="App ID" tab="Facebook SDK" type="javax.swing.JTextField" usage="7"/>
+    </custom>
+  </widget>
+<widget name="Facebook Comments" icon="images/facebook-icon.png" type="Item:">
+    <template type="source" value="fbComments.wgt"/>
+    <template type="header" value="fbHeader.wgt"/>
+    <custom>
+      <item help="The color scheme used by the plugin" includeInDesign="true" layout="-1" mand="false" name="colorscheme" prompt="Color Scheme" type="javax.swing.JComboBox" typeValue="light|dark" usage="7"/>
+      <item help="The absolute URL that comments posted in the plugin will be permanently associated with. Stories on Facebook about comments posted in the plugin will link to this URL.Default is Current URL." includeInDesign="true" layout="-1" mand="false" name="href" prompt="Comments URL" type="javax.swing.JTextField" usage="7"/>
+      <item help="The number of comments to show by default. The minimum value is 1.Default value is 10." includeInDesign="true" layout="-1" mand="false" name="num_posts" prompt="Num Posts" type="javax.swing.JTextField" usage="7"/>
+      <item help="The order to use when displaying comments ." includeInDesign="true" layout="-1" mand="false" name="order_by" prompt="Order By" type="javax.swing.JComboBox" typeValue="social|reverse_time|time" usage="7"/>
+      <item help="The width of the plugin. Either a pixel value or the literal 100% for fluid width. The mobile version of the Comments plugin ignores the width parameter, and instead has a fluid width of 100%." includeInDesign="true" layout="-1" mand="false" name="width" prompt="Width" type="javax.swing.JTextField" usage="7"/>
+	      <item help="the app ID which you use to initiate the [Facebook JavaScript SDK]. Example : 312440138865038 . This ID have to be same for all instances of the widgets within same Edge phase ." includeInDesign="true" layout="-1" mand="true" name="app_id" prompt="App ID" tab="Facebook SDK" type="javax.swing.JTextField" usage="7"/>
+    </custom>
+  </widget>
+<widget name="Facebook Activity Feed" icon="images/facebook-icon.png" type="Item:">
+    <template type="source" value="fbActivityFeed.wgt"/>
+    <template type="header" value="fbHeader.wgt"/>
+    <custom>
+      <item help="The domain for which to show activity.Default value is current domain." includeInDesign="true" layout="-1" mand="false" name="site" prompt="Site" type="javax.swing.JTextField" usage="7"/>
+      <item help="Allows you to filter which URLs are shown in the plugin. For example, if the site parameter is set to 'www.example.com' and the filter parameter was set to '/section1/section2' then only pages which matched 'http://www.example.com/section1/section2/*' would be included in the activity feed section of this plugin" includeInDesign="true" layout="-1" mand="false" name="filter" prompt="Filter" type="javax.swing.JTextField" usage="7"/>
+      <item help="A comma-separated list of Open Graph action types to show in the feed.Default value is any action type." includeInDesign="true" layout="-1" mand="false" name="action" prompt="Action types" type="javax.swing.JTextField" usage="7"/>
+      
+    <item help="Determines what happens when people click on the links in the feed." includeInDesign="true" layout="-1" mand="false" name="linktarget" prompt="Link target" type="javax.swing.JComboBox" typeValue="_blank|_parent|_top" usage="7"/>
+      <item help="Limit the created time of articles that are shown in the feed. Valid values are 1-180, which represents the age in days to limit to.Default value 0 - no limit." includeInDesign="true" layout="-1" mand="false" name="max_age" prompt="Max Age" type="javax.swing.JTextField" usage="7"/>
+      <item help="A label for tracking referrals which must be less than 50 characters and can contain alphanumeric characters and some punctuation (currently +/=-.:_)." includeInDesign="true" layout="-1" mand="false" name="ref" prompt="Referrals" type="javax.swing.JTextField" usage="7"/>
+      <item help="Specifies whether to always show recommendations (Articles liked by a high amount of people) in the bottom half of the feed." includeInDesign="true" layout="-1" mand="false" name="recommendations" prompt="Recommendations" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="Show the &quot;Recent Activity&quot; header above the feed" includeInDesign="true" layout="-1" mand="false" name="header" prompt="Header" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="Color Scheme" includeInDesign="true" layout="-1" mand="false" name="colorscheme" prompt="Color Scheme" type="javax.swing.JComboBox" typeValue="light|dark" usage="7"/>
+      <item help="The height of the plugin in pixels. Default vaule is 300 ." includeInDesign="true" layout="-1" mand="false" name="height" prompt="Height" type="javax.swing.JTextField" usage="7"/>
+      <item help="The width of the plugin in pixels.Default value is 300." includeInDesign="true" layout="-1" mand="false" name="width" prompt="Width" type="javax.swing.JTextField" usage="7"/>
+	  <item help="Display all actions associated with this app ID. " includeInDesign="true" layout="-1" mand="false" name="app_id" prompt="App ID" type="javax.swing.JTextField" usage="7"/>
+    </custom>
+  </widget>
+<widget name="Facebook Recommendations Feed" icon="images/facebook-icon.png" type="Item:">
+    <template type="source" value="fbRecommendations.wgt"/>
+    <template type="header" value="fbHeader.wgt"/>
+	  <custom>
+      <item help="The domain for which to show activity.Default value is current domain." includeInDesign="true" layout="-1" mand="false" name="site" prompt="Site" type="javax.swing.JTextField" usage="7"/>   
+      <item help="A comma-separated list of Open Graph action types to show in the feed.Default value is any action type." includeInDesign="true" layout="-1" mand="false" name="action" prompt="Action types" type="javax.swing.JTextField" usage="7"/>
+      
+    <item help="Determines what happens when people click on the links in the feed." includeInDesign="true" layout="-1" mand="false" name="linktarget" prompt="Link target" type="javax.swing.JComboBox" typeValue="_blank|_parent|_top" usage="7"/>
+      <item help="Limit the created time of articles that are shown in the feed. Valid values are 1-180, which represents the age in days to limit to.Default value 0 - no limit." includeInDesign="true" layout="-1" mand="false" name="max_age" prompt="Max Age" type="javax.swing.JTextField" usage="7"/>
+      <item help="A label for tracking referrals which must be less than 50 characters and can contain alphanumeric characters and some punctuation (currently +/=-.:_)." includeInDesign="true" layout="-1" mand="false" name="ref" prompt="Referrals" type="javax.swing.JTextField" usage="7"/>
+      <item help="Specifies whether to always show recommendations (Articles liked by a high amount of people) in the bottom half of the feed." includeInDesign="true" layout="-1" mand="false" name="recommendations" prompt="Recommendations" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="Show the &quot;Recent Activity&quot; header above the feed" includeInDesign="true" layout="-1" mand="false" name="header" prompt="Header" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="Color Scheme" includeInDesign="true" layout="-1" mand="false" name="colorscheme" prompt="Color Scheme" type="javax.swing.JComboBox" typeValue="light|dark" usage="7"/>
+      <item help="The height of the plugin in pixels. Default vaule is 300 ." includeInDesign="true" layout="-1" mand="false" name="height" prompt="Height" type="javax.swing.JTextField" usage="7"/>
+      <item help="The width of the plugin in pixels.Default value is 300." includeInDesign="true" layout="-1" mand="false" name="width" prompt="Width" type="javax.swing.JTextField" usage="7"/>
+	  <item help="Display all actions associated with this app ID. " includeInDesign="true" layout="-1" mand="false" name="app_id" prompt="App ID" type="javax.swing.JTextField" usage="7"/>
+    </custom>
+  </widget>
+<widget name="Facebook Like Box" icon="images/facebook-icon.png" type="Item:">
+    <template type="source" value="fbLikeBox.wgt"/>
+    <template type="header" value="fbHeader.wgt"/>
+    <custom>
+      <item help="The absolute URL of the Facebook Page that will be liked. This is a required setting." includeInDesign="true" layout="-1" mand="false" name="href" prompt="URL of the Facebook Page" type="javax.swing.JTextField" usage="7"/>
+      <item help="Color Scheme" includeInDesign="true" layout="-1" mand="false" name="colorscheme" prompt="Color Scheme" type="javax.swing.JComboBox" typeValue="light|dark" usage="7"/>
+      <item help="For &quot;place&quot; Pages (Pages that have a physical location that can be used with check-ins), this specifies whether the stream contains posts by the Page or just check-ins from friends." includeInDesign="true" layout="-1" mand="false" name="force_wall" prompt="Force Wall" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="Specifies whether to display the Facebook header at the top of the plugin." includeInDesign="true" layout="-1" mand="false" name="header" prompt="Header" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item includeInDesign="true" layout="-1" mand="false" name="show_border" prompt="Show Border" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="Specifies whether to display profile photos of people who like the page." includeInDesign="true" layout="-1" mand="false" name="show_faces" prompt="Show Faces" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="Specifies whether to display a stream of the latest posts by the Page." includeInDesign="true" layout="-1" mand="false" name="stream" prompt="Show Posts" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="The height of the plugin in pixels. The default height varies based on number of faces to display, and whether the stream is displayed. With stream set to true and 10 photos displayed (via show_faces) the default height is 556px. With stream and show_faces both false, the default height is 63px." includeInDesign="true" layout="-1" mand="false" name="height" prompt="Height" type="javax.swing.JTextField" usage="7"/>
+      <item help="The width of the plugin in pixels. Minimum is 292." includeInDesign="true" layout="-1" mand="false" name="width" prompt="Width" type="javax.swing.JTextField" usage="7"/>
+	      <item help="the app ID which you use to initiate the [Facebook JavaScript SDK]. Example : 312440138865038 . This ID have to be same for all instances of the widgets within same Edge phase ." includeInDesign="true" layout="-1" mand="true" name="app_id" prompt="App ID" tab="Facebook SDK" type="javax.swing.JTextField" usage="7"/>
+    </custom>
+  </widget>
+<widget name="Facebook Facepile" icon="images/facebook-icon.png" type="Item:">
+    <template type="source" value="fbFacepile.wgt"/>
+    <template type="header" value="fbHeader.wgt"/>
+    <custom>
+      <item help="Display photos of the people who have liked this absolute URL." includeInDesign="true" layout="-1" mand="false" name="href" prompt="URL" type="javax.swing.JTextField" usage="7"/>
+      <item help="An Open Graph action type, such as like or customapp:run. Default value is &quot;like&quot;" includeInDesign="true" layout="-1" mand="false" name="action" prompt="Action" type="javax.swing.JTextField" usage="7"/>
+      <item help="Color Scheme" includeInDesign="true" layout="-1" mand="false" name="colorscheme" prompt="Color Scheme" type="javax.swing.JComboBox" typeValue="light|dark" usage="7"/>
+      <item help="The maximum number of rows of faces to display. Note that if there are fewer faces to display than rows specified, the plugin will pick the next lowest number of rows.Default value is 1." includeInDesign="true" layout="-1" mand="false" name="max_rows" prompt="Maximum Rows of Photos" type="javax.swing.JTextField" usage="7"/>
+      <item help="Controls the size of the photos shown in the plugin. " includeInDesign="true" layout="-1" mand="false" name="size" prompt="Photo Size" type="javax.swing.JComboBox" typeValue="small|medium|large" usage="7"/>
+      <item help="Toggles the global count of actions on this URL" includeInDesign="true" layout="-1" mand="false" name="show_count" prompt=" Show Action Count" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="The width of the plugin in pixels, minimum of 200.Default value is 300." includeInDesign="true" layout="-1" mand="false" name="width" prompt="Width" type="javax.swing.JTextField" usage="7"/>
+	      <item help="the app ID which you use to initiate the [Facebook JavaScript SDK]. Example : 312440138865038 . Specify this if you want the plugin to display users who have connected to your site using Facebook Login with this api key." includeInDesign="true" layout="-1" mand="true" name="app_id" prompt="App ID" tab="Facebook SDK" type="javax.swing.JTextField" usage="7"/>
+    </custom>
+  </widget>
+
+<widget name="Facebook Login Button" icon="images/facebook-icon.png" type="Button">
+    <template type="source" value="fbLoginButton.wgt"/>
+    <template type="header" value="fbHeader.wgt"/>
+  <custom>
+      <item help="Data Group where to save user information after successful login" includeInDesign="true" layout="-1" mand="false" name="dataStoreGroup" prompt="Data Store Group" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Group Chooser|-1|true|false|com.acquire.intelligentforms.entities.PropertyGroup" usage="7"/>
+    <item help="Login automatically on Page Load without any user action." includeInDesign="true" layout="-1" mand="false" name="autologin" prompt="Auto Login" type="com.acquire.util.FocusCheckbox" usage="7"/>
+    <item help="If enabled, the button will change to a logout button when the user is logged in." includeInDesign="true" layout="-1" mand="false" name="auto-logout-link" prompt="Auto logout link" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="Picks one of the size options for the button." includeInDesign="true" layout="-1" mand="false" name="size" prompt="Size" type="javax.swing.JComboBox" typeValue="small|medium|large|xlarge" usage="7"/>
+         <item dialogHandler="com.temenos.widgets.social.facebook.FacebookDialogHandler" help="Determines whether a Facepile of logged-in friends is shown below the button. When this is enabled, a logged-in user will only see the Facepile, and no login or logout button." includeInDesign="true" layout="-1" mand="false" name="show-faces" prompt="Show faces" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="The maximum number of rows of profile photos in the Facepile when show_faces is enabled. The actual number of rows shown may be shorter if there aren't enough faces to fill the number you specify." includeInDesign="true" layout="-1" mand="false" name="max-rows" prompt="Maximum Rows of Photos" type="javax.swing.JTextField" usage="7" applicableCondition="show-faces=='Y'"/>
+    <item help="the app ID which you use to initiate the [Facebook JavaScript SDK]. Example : 312440138865038 . This ID have to be same for all instances of the widgets within same Edge phase ." includeInDesign="true" layout="-1" mand="true" name="app_id" prompt="App ID" tab="Facebook SDK" type="javax.swing.JTextField" usage="7"/>
+	  <item help="add Additional permissions( the wigets has by default public_profile permission )" includeInDesign="true" layout="-1" mand="false" name="permissions" prompt="Permissions" type="com.acquire.util.ui.Legend" typeValue="2|N" usage="7"/>
+      <item help="Access to a person's primary email address" includeInDesign="true" layout="-1" mand="false" name="email" prompt="Email" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="This permission lets you post to a person's Facebook Timeline." includeInDesign="true" layout="-1" mand="false" name="publish" prompt="Publish actions " type="com.acquire.util.FocusCheckbox" usage="7"/>
+    </custom>
+  </widget>
+<widget callback="false" name="Widget Facebook Publish Button" icon="images/facebook-icon.png" type="Button">
+    <template type="source" value="fbPublishButton.wgt"/>
+    <template type="header" value="fbHeader.wgt"/>
+	    <custom>
+	      <item help="the app ID which you use to initiate the [Facebook JavaScript SDK]. Example : 312440138865038 . This ID have to be same for all instances of the widgets within same Edge phase ." includeInDesign="true" layout="-1" mand="true" name="app_id" prompt="App ID" tab="Facebook SDK" type="javax.swing.JTextField" usage="7"/>
+		   <item help="The main body of the post, otherwise called the status message." includeInDesign="true" layout="-1" mand="false" name="message" prompt="Message" type="javax.swing.JTextField" usage="7"/>
+      <item help="Link Details" includeInDesign="true" layout="-1" mand="false" name="link_legend" prompt="Link" type="com.acquire.util.ui.Legend" typeValue="5|N" usage="7"/>
+      <item help="The URL of a link to attach to the post" includeInDesign="true" layout="-1" mand="false" name="link" prompt="URL " type="javax.swing.JTextField" usage="7"/>
+      <item help="Determines the preview image associated with the link." includeInDesign="true" layout="-1" mand="false" name="picture" prompt="Picture" type="javax.swing.JTextField" usage="7"/>
+      <item help="Overwrites the title of the link preview." includeInDesign="true" layout="-1" mand="false" name="name" prompt="Name" type="javax.swing.JTextField" usage="7"/>
+      <item help="Overwrites the caption under the title in the link preview." includeInDesign="true" layout="-1" mand="false" name="caption" prompt="Caption" type="javax.swing.JTextField" usage="7"/>
+      
+      
+      <item help="Overwrites the description in the link preview" includeInDesign="true" layout="-1" mand="false" name="description" prompt="Description" type="javax.swing.JTextField" usage="7"/>
+    
+    <item help="Action links are any other links shown below the feed story beside Like and Comment." includeInDesign="true" layout="-1" mand="false" name="actions_legend" prompt="The action links attached to the post" type="com.acquire.util.ui.Legend" typeValue="2|N" usage="7"/>
+      <item help="The name or label of the action link." includeInDesign="true" layout="-1" mand="false" name="action_name" prompt="Name" type="javax.swing.JTextField" usage="7"/>
+      <item help="The URL of the action link itself." includeInDesign="true" layout="-1" mand="false" name="action_url" prompt="URL" type="javax.swing.JTextField" usage="7"/>
+    <item help="Determines the privacy settings of the post ." includeInDesign="true" layout="-1" mand="false" name="privacy" prompt="Privacy" type="javax.swing.JComboBox" typeValue="EVERYONE|ALL_FRIENDS|FRIENDS_OF_FRIENDS|SELF" usage="7"/>
+    </custom>
+  </widget>
+</widgets>

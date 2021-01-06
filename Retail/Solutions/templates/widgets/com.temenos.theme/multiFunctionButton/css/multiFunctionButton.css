@@ -1,0 +1,35 @@
+
+/*.full-screen-on {
+	display: block;
+}
+.full-screen-off {
+	display: none;
+}
+
+.full-screen-on:-webkit-full-screen {
+  display: none;
+}
+.full-screen-off:-webkit-full-screen {
+	display: block;
+}
+:-moz-full-screen {
+  display: none;
+}
+
+:-ms-fullscreen {
+  display: none;
+}
+
+.full-screen-on:full-screen { 
+  display: none;
+}
+.full-screen-off:full-screen { 
+  display: block;
+}
+
+:fullscreen .full-screen-on { 
+  display: none;
+}	
+:fullscreen  .full-screen-off{ 
+  display: block;
+}	*/

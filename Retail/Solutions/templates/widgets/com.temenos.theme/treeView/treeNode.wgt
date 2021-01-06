@@ -1,0 +1,7 @@
+<div id="$$ITEM.ID()$" style="$$ITEM.INLINE_STYLES().SectionStyle$
+                              $%IF ITEM.IS_HIDDEN() == "true"$; display: none;$%ENDIF$	
+                              $%IF ITEM.nodeWidth != ""$width: $$ITEM.nodeWidth$$%ENDIF$
+					" 
+					class="node $$ITEM.STYLES().SectionStyle$" data-id="id_$$ITEM.id$" data-parent-id="$%IF ITEM.parentId != ""$id_$$ITEM.parentId$$%ENDIF$" data-layout="$$ITEM.layout$">
+      $$ITEM.EC_GENERATE()$
+</div>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+	<widget icon="images/tree-table-icon.png" displayName="Tree Table" name="tw-treetable" type="Table">
+		<template type="header" value="treetable-header.wgt" />
+		<template type="source" value="treetable.wgt" />
+		<custom>
+			<item name="id_dataitem"		  prompt="Data item for row id"    type="PropertyChooser" includeInDesign="false" />
+			<item name="parent_id_dataitem"   prompt="Data item for parent id" type="PropertyChooser" includeInDesign="false"/>
+			<item name="displevdef" prompt="Display n levels by default" includeInDesign="false"/>
+      		<item defaultValue="Collapse" layout="-1" mand="false" name="strCollapse" prompt="Collapse tootip" type="javax.swing.JTextField" usage="15" includeInDesign="false" />
+      		<item defaultValue="Expand" layout="-1" mand="false" name="strExpand" prompt="Expand tooltip" type="javax.swing.JTextField" usage="15" includeInDesign="false" />
+		</custom>
+	</widget>
+</widgets>

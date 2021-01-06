@@ -1,0 +1,19 @@
+$$ITEM.EC_GENERATE()$
+<script>
+	document.getElementById("$$ITEM.ID()$").click();
+	$%IF ITEM.Link != ""$
+		$%IF DEVICE_INFO.isHybrid == ""$
+			window.open("$$ITEM.Link$", "_blank"); 
+		$%ENDIF$
+		$%IF DEVICE_INFO.isHybrid == "Y"$
+          	document.addEventListener("deviceready", function(){
+                             var ref = window.open("$$ITEM.Link$", '_blank', 'location=yes');
+                             ref.addEventListener('loadstart', function(event) {        
+                                     if (event.url.match("window/close")) {
+                                           ref.close();
+                                     }
+                             });
+             })
+		$%ENDIF$
+	$%ENDIF$
+</script> 

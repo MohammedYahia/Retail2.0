@@ -1,0 +1,13 @@
+<img src="$$ITEM.IMAGE_PATH$" class="rotateDown" style="max-width: auto" alt="Toggle" id="$$ITEM.ID()$" class="$$ITEM.STYLES().ButtonStyle$" />
+<script type="text/javascript">
+		document.getElementById("$$ITEM.ID()$").onclick = function(event) { 
+			$( "#$$COMPONENT_ID_PREFIX$$$ITEM.SECTION_TO_TOGGLE$" ).slideToggle();
+			if($("#$$ITEM.ID()$").attr('class') == "rotateDown")  {
+				$("#$$ITEM.ID()$").removeClass("rotateDown");
+				$("#$$ITEM.ID()$").addClass("rotateRight");
+			}else{
+				$("#$$ITEM.ID()$").removeClass("rotateRight");
+				$("#$$ITEM.ID()$").addClass("rotateDown");	
+			}
+		};
+</script>

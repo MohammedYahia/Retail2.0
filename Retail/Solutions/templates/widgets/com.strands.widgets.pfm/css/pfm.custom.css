@@ -1,0 +1,972 @@
+.sf-base * {
+	font-family: TC-regular,Helvetica,Arial,Verdana,sans-serif !important;
+}
+.sf-base .sf-analysis-donutchart .sf-donutchart .sf-chart-subtitle,
+.sf-base .sf-datagrid td.sf-numeric {
+	font-family:Arial!important;
+}
+.sf-base abbr, .sf-base address, .sf-base article, .sf-base aside, .sf-base audio, .sf-base b, .sf-base blockquote, .sf-base body, .sf-base canvas, .sf-base caption, .sf-base cite, .sf-base code, .sf-base dd, .sf-base del, .sf-base details, .sf-base dfn, .sf-base div, .sf-base dl, .sf-base dt, .sf-base em, .sf-base fieldset, .sf-base figcaption, .sf-base figure, .sf-base footer, .sf-base form, .sf-base h1, .sf-base h2, .sf-base h3, .sf-base h4, .sf-base h5, .sf-base h6, .sf-base header, .sf-base hgroup, .sf-base html, .sf-base i, .sf-base iframe, .sf-base img, .sf-base ins, .sf-base kbd, .sf-base label, .sf-base legend, .sf-base li, .sf-base mark, .sf-base menu, .sf-base nav, .sf-base object, .sf-base ol, .sf-base p, .sf-base pre, .sf-base q, .sf-base samp, .sf-base section, .sf-base small, .sf-base span, .sf-base strong, .sf-base sub, .sf-base summary, .sf-base sup, .sf-base table, .sf-base tbody, .sf-base td, .sf-base tfoot, .sf-base th, .sf-base thead, .sf-base time, .sf-base tr, .sf-base ul, .sf-base var, .sf-base video {
+    font-size: 98%;
+}
+
+.sf-base h2 {
+    color: #316da2;
+    font-size: 16px;
+}
+
+.sf-base .sf-widget .sf-widget-header .sf-title {
+    padding: 1.5em;
+}
+.sf-base .sf-widget {
+	margin:auto;
+}
+input[value=":"],
+span[oldtitle="<b>:</b><br/>"] {
+    display: none;
+}
+.sf-intro-message {
+	float:none !important;
+	text-align:center;
+}
+.sf-base .sf-datagrid thead {
+    border: none!important;
+}
+.sf-base .sf-datagrid-body tbody tr {
+    height: 65px;
+}
+.sf-base .sf-transactions-details-accordion .sf-transactions-details-toggle {
+    top: 1em;
+}
+.sf-base .sf-accordion-item .sf-accordion-header button {
+    top: 1.5em;
+}
+.sf-base .sf-accordion-item .sf-accordion-body {
+    margin-top: 1em;
+}
+.sf-base .sf-savings-goals-content .sf-savings-goal {
+    z-index: 1;
+}
+.sf-base .sf-savings-goals-content .sf-goal-info .sf-category-color-container .sf-icon:before {
+    line-height: 1.6em;
+}
+.sf-base .sf-budget-content .sf-goal-info .sf-category-color-container .sf-icon {
+    line-height: 1.6em;
+}
+.sf-base .sf-budget-content .sf-goal-info .sf-category-color-container {
+    margin: 0 auto;
+    z-index: 1;
+}
+.sf-community-header-bar {
+    position: relative;
+}
+.sf-base .sf-community-module .sf-community-bar-information {
+    position: absolute;
+    bottom: 4px;
+    right: 10px;
+}
+.ext-count-bubble {
+	background-color: #0c4374;
+    padding: 4px;
+    min-width: 24px;
+    height: 24px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 12px;
+    line-height: 17px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+}
+
+div .ext-count-bubble-small {
+    background-color: #0c4374;
+    padding: 3px;
+    min-width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 10px;
+    line-height: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+}
+
+@media (max-width: 800px) {
+    div .ext-count-bubble-small {
+        line-height: 13px;
+    }   
+}
+
+/*Buttons*/
+div .sf-base .sf-accounts-filter .sf-account-grouping-buttons .sf-button {
+    margin-left: 0!important;  
+    display: inline-block;
+}
+.sf-base .sf-widget.sf-financial-calendar-widget .sf-financial-calendar-navigator .sf-button {
+    display: inline-block;
+    float: none;
+}
+div .sf-base .sf-mode-filter .sf-button + .sf-button, div .sf-base .sf-widget.sf-financial-calendar-widget .sf-financial-calendar-navigator .sf-button + .sf-button, div .sf-base .sf-transactions-details .sf-transactions-details-choices .sf-button + .sf-button {
+    margin-left: 6px;
+}
+.sf-base .sf-mode-filter .sf-button {
+    float: left;
+}
+div .sf-base .sf-button.sf-accordion-toggle-link:hover {
+    background: initial!important;
+}
+/*Grey buttons*/
+div .sf-base .sf-button.sf-button-back, div .sf-base .sf-button {
+    font-family:Arial;
+	background: #f4f4f4!important;
+    color: #666!important;
+    display: inline-block;
+    float: none;
+}
+div .sf-base .sf-button.sf-button-back:hover, div .sf-base .sf-button:hover{
+    background: #cbcbcb!important;
+    color: #4d4d4d!important;
+}
+
+/*Active buttons*/
+div .sf-base .sf-button.sf-button-details, div .sf-base .sf-button.sf-pattern-details-edit, div .sf-base .sf-button.sf-planning-edit-btn, div .sf-base .sf-button.sf-calendar-control-previous, div .sf-base .sf-button.sf-calendar-control-next, div .sf-base .sf-button.sf-button-add, div .sf-base .sf-button.sf-button-save, div .sf-base .sf-button.sf-button-see-details, div .sf-base .sf-button.sf-active {
+   background-color: #316da2!important;
+    color: #fff!important;
+    border: #1a456b!important;
+}
+div .sf-base .sf-button.sf-button-details:hover, div .sf-base .sf-button.sf-pattern-details-edit:hover, div .sf-base .sf-button.sf-planning-edit-btn:hover, div .sf-base .sf-button.sf-calendar-control-previous:hover, div .sf-base .sf-button.sf-calendar-control-next:hover, div .sf-base .sf-button.sf-button-add:hover, div .sf-base .sf-button.sf-button-save:hover, div .sf-base .sf-button.sf-button-see-details:hover, div .sf-base .sf-button.sf-active:hover {
+    color: #fff!important;
+    border: #1a456b!important;
+    background-color: #1a456b!important;
+}
+
+/*Red buttons*/
+div .sf-base .sf-button.sf-pattern-details-delete,
+div div .sf-base .sf-button.sf-button-delete {
+	background-color: #C0392B !important;
+    color: #fff!important;
+}
+div .sf-base .sf-button.sf-pattern-details-delete:hover,
+div .sf-base .sf-button.sf-button-delete:hover{
+	background-color: #ab2f22 !important;
+    color: #fff!important;
+}
+
+.sf-base .sf-widget .sf-widget-header .sf-header-info .sf-summary-placeholder {
+    padding: 0;
+}
+.sf-base .sf-budget-widget.sf-widget .sf-widget-header .sf-header-info .sf-summary-placeholder {
+    padding: 1em;
+}
+.sf-base .sf-savings-widget.sf-widget .sf-widget-header .sf-header-info .sf-summary-placeholder {
+    padding: 1em 1em 0;
+}
+.sf-base .sf-widget .sf-widget-header .sf-header-info .sf-balance-summary {
+    padding: 0 1em 1em;
+} 
+.sf-base .sf-transactions-details .sf-transactions-details-selector {
+    margin: 1em 0;
+}
+.sf-base .sf-widget .sf-widget-footer {
+	text-align:center;
+    clear: both;
+    margin-top: 2em;
+    margin-bottom: 0em;
+}
+.ext-pfm-heading-center{
+    padding: 12px;
+}
+.sf-base .sf-reform-timerange-slider .noUi-connect {
+   background: #316da2; 
+}
+.sf-base .sf-savings-goals-content .sf-goal-info .sf-goal-status-message {
+    bottom: -11px;
+}
+*[id*='overview-widget'] .sf-widget-content-placeholder {
+	padding:0 !important;
+}
+*[id*='overview-widget'] .sf-base .sf-savings-overview-content .sf-goal-bar {
+    margin-top: 2em;
+}
+*[id*='overview-widget'] .sf-base .sf-savings-overview-content .sf-progressbar .sf-progressbar-bar .sf-bar-box .sf-bar-title {
+    top: -1.2em;
+}
+*[id*='overview-widget'] .sf-base .sf-widget .sf-widget-footer {
+    margin-top: 1em;
+}
+*[id*='overview-widget'] .sf-base .sf-widget .sf-widget-content-placeholder {
+	min-height:50px;
+}
+*[id*='overview-widget'] h2 {
+    padding: 0.5rem 0 0 0;
+}
+.sf-popup-title{
+	color:#316da2;
+}
+.sf-base .sf-accounts-filter .sf-account-filter-select-account {
+    font-size: 12px;
+    line-height: 24px;
+    margin-bottom: 1em;
+}
+.sf-base .sf-analysis-content .sf-chart-selector {
+    margin-right: 0;
+}
+.sf-base .sf-analysis-content .sf-content-header,
+.sf-base .sf-widget.sf-community-widget .sf-mode-filter-placeholder {
+    border-bottom: 1px solid #e4e4e4;
+    padding: 0 0 1em; 
+    margin: 0;
+    width: 100%;
+}
+.sf-base .sf-widget.sf-community-widget .sf-mode-filter-placeholder {
+   margin: 0 0 1em; 
+}
+.sf-base .sf-widget.sf-community-widget .sf-mode-filter {
+    float: right;
+}
+.sf-base .sf-analysis-donutchart .sf-donutchart .sf-donutchart-box svg {
+    margin-right: 4em;
+}
+.sf-base .sf-analysis-donutchart .sf-donutchart .sf-donutchart-box {
+    text-align: left;
+}
+
+.sf-base .sf-analysis-content .sf-analysis-donutchart .sf-chart-legend .sf-icon:before {
+    padding-top: 4px;
+}
+
+.sf-base .sf-widget.sf-analysis-overview-widget .sf-charts-placeholder .sf-accessible-chart-controls {
+    padding-top: 1em;
+}
+.sf-base .sf-analysis-content .sf-breadcrumb-placeholder {
+    margin: 1em 1em 1em 0;
+}
+.sf-transaction-original-opts {
+    display: block;
+}
+.sf-transaction-original-opts .sf-transaction-original-description,
+.sf-transaction-original-opts .sf-transaction-real-name {
+   display: inline-block;
+}
+@media (max-width: 1279px) {
+    .sf-base .sf-analysis-donutchart .sf-donutchart .sf-donutchart-box {
+        text-align: center;
+    } 
+    .sf-base .sf-analysis-donutchart .sf-donutchart .sf-donutchart-box svg {
+        margin-right: 0;
+    }
+}
+
+.sf-base .sf-totalchart.sf-d3-chart .sf-chart-title {
+    font-size: 1.2em;
+    fill: #333;
+    font-weight: 700;
+}
+
+.sf-balance-overview-content > .sf-widget-footer {margin-top: 0em !important;}
+
+.sf-community-widget .sf-subtitle {
+    background: #fafafa;
+    box-sizing: border-box;
+    padding: 1em;
+    width: 100%;
+}
+
+.sf-community-widget .sf-subtitle .sf-timerange-filter-placeholder,
+.sf-community-widget .sf-subtitle .sf-accounts-filter-placeholder {
+    display: inline-block;
+    width: 23%;
+}
+
+.sf-community-widget .sf-subtitle .sf-timerange-filter-placeholder .sf-dropdown,
+.sf-community-widget .sf-subtitle .sf-accounts-filter-placeholder .sf-dropdown { 
+    border: 0;
+    box-shadow: none;
+    background: none;
+}
+
+.sf-community-widget .sf-subtitle .sf-timerange-filter-placeholder .sf-current,
+.sf-community-widget .sf-subtitle .sf-accounts-filter-placeholder .sf-current {
+    font-weight: 400;
+    text-transform: uppercase;
+    outline: 0;
+    color: #777;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: 0;
+    cursor: pointer;
+    float: left;
+    height: inherit;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 2.5em 0 .5em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.sf-community-widget .sf-subtitle .sf-timerange-filter-placeholder .sf-button-opener,
+.sf-community-widget .sf-subtitle .sf-accounts-filter-placeholder .sf-button-opener {
+    cursor: pointer;
+    display: inline-block;
+    height: 2.2em;
+    line-height: 2.2em;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 2.5em;
+}
+
+.sf-base .sf-transactions-details .sf-transactions-details-view {
+    clear: both;
+}
+
+.sf-base .sf-dropdown>.sf-current {
+    font-size: 12px;
+    line-height: 24px; 
+}
+
+.sf-base .sf-community-module {
+    margin-bottom: 0;
+}
+
+.sf-savings-goal-form-placeholder.sf-savings-form-mobile {
+    padding: 0 1em;
+}
+.sf-base .sf-popup.sf-savings-goal-form-popup fieldset {
+    width: 100%;
+}
+.sf-base .sf-budget-editor .sf-form-row-category {
+    float: left;
+    width: 40%!important;
+}
+.sf-base .sf-budget-editor .sf-form-row-category .sf-form-field,
+.sf-base .sf-budget-editor .sf-dropdown.sf-fixed-width,
+.sf-base .sf-budget-editor .sf-form-row-category .sf-form-cell {
+    width: 100%;
+}
+
+/*Calendar*/
+.tc-table-icon.icon-calendar > span {
+    top: -3px;
+}
+.sf-base .sf-transactions-calendar .sf-calendar-today .sf-transactions-calendar-year-item-view.sf-transactions-calendar-year-item-empty {
+    color: #fff;
+}
+
+.sf-financial-calendar-navigator {
+    overflow: hidden;
+}
+
+.sf-base .sf-calendar .sf-calendar-controls>.sf-calendar-nav {
+    margin-top: 10px;   
+}
+
+.sf-base .sf-button.sf-calendar-period-title .sf-button-text {
+    font-family:Arial!important;
+}
+.sf-base .sf-calendar .sf-calendar-controls .sf-button.sf-calendar-period-title {
+    background: none!important;
+}
+.sf-financial-calendar-navigator .sf-button-group,
+.sf-transactions-details-selector.sf-button-group,
+.sf-mode-filter-placeholder {
+    float: right!important;
+}
+.sf-base .sf-calendar .sf-calendar-controls>.sf-calendar-layouts {
+    float: none;
+    position: static;
+}
+.sf-base .sf-widget.sf-calendar-overview-widget .sf-calendar-month-view .sf-calendar-cell-content {
+    z-index: 29;
+}
+.sf-base .sf-widget.sf-calendar-overview-widget .sf-calendar-month-view .sf-calendar-cell-mark {
+    z-index: 29;
+}
+div .sf-base .sf-calendar-year-view .sf-calendar-year-month-name {
+    height: auto;
+    padding: 1em .5em; 
+}
+.sf-base .sf-calendar .sf-calendar-body {
+    overflow: hidden;
+}
+div .sf-base .sf-calendar .sf-calendar-controls .sf-button.sf-calendar-control-next, 
+div .sf-base .sf-calendar .sf-calendar-controls .sf-button.sf-calendar-control-previous {
+    padding: .4em .4em .3em; 
+    background: #316da2;
+    color: #fff;
+    cursor: pointer;
+}
+div .sf-base .sf-calendar .sf-calendar-controls .sf-button.sf-calendar-control-next:hover, 
+div .sf-base .sf-calendar .sf-calendar-controls .sf-button.sf-calendar-control-previous:hover {
+    background: #1a456b;
+}
+div .sf-base .sf-calendar .sf-calendar-controls .sf-button.sf-calendar-control-next .sf-button-text, 
+div .sf-base .sf-calendar .sf-calendar-controls .sf-button.sf-calendar-control-previous .sf-button-text {
+    font-size: 1.5em;
+}
+.sf-base .sf-widget.sf-calendar-overview-widget .sf-calendar-month-view .sf-calendar-past .sf-calendar-overview-item-date span.sf-calendar-overview-item-date-has-color, .sf-base .sf-transactions-calendar .sf-transactions-calendar-year-item-view {
+	color: #777;
+}
+
+.sf-base .sf-calendar .sf-calendar-title {
+    color: #316da2;
+    font-size: 1.2em;
+    padding: 0.5em 0 1em;
+}
+.sf-base .sf-calendar-month-view div.sf-calendar-cell, .sf-base .sf-calendar-month-view table.sf-calendar-cells td {
+    height: 13em;
+}
+#sf-financial-calendar-widget,
+div[id*="sf-financial-calendar-placeholder"].sf-base {
+    overflow: visible!important;
+}
+.sf-base .sf-transactions-calendar ul.sf-transactions-calendar-small-entries {
+    font-size: 12px;
+}
+.sf-base .sf-transactions-calendar div.sf-transactions-calendar-row-data .sf-amount {
+    font-size: 16px;
+}
+.sf-base .sf-transactions-calendar ul.sf-transactions-calendar-small-entries li {
+    position: relative;
+}
+.sf-base .sf-transactions-calendar ul.sf-transactions-calendar-small-entries>li>div.sf-transactions-calendar-small-entry-title {
+    width: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.sf-base .sf-transactions-calendar ul.sf-transactions-calendar-small-entries .sf-transactions-calendar-small-entry-amount {
+    width: 100%;
+    padding-left: 15px;
+}
+/*Plan*/
+.sf-base .sf-planning-equalizer .sf-planning-equalizer-months .sf-planning-equalizer-month p.sf-expenses,
+.sf-base .sf-planning-equalizer .sf-planning-equalizer-months .sf-planning-equalizer-month p.sf-income,
+.sf-base .sf-spending-plan-widget a {
+    color: #666;
+}
+.sf-base .sf-planning-equalizer .sf-planning-equalizer-go-next:hover, .sf-base .sf-planning-equalizer .sf-planning-equalizer-go-prev:hover {
+    color: #000;
+    font-weight: 800;
+}
+.ext-pfm-card-plan .sf-base.sf-widget-placeholder {
+    margin: 0 auto -10px;
+    width: auto;   
+}
+.ext-pfm-card-plan .sf-base.sf-widget-placeholder[id*="sf-spending-plan-placeholder"] {
+    margin: -1px -10px -10px;
+    padding-top: 1px;
+}
+.ext-pfm-card-plan .tc-card>.tc-card-body:first-child {
+    padding-top: 0;
+}
+.ext-pfm-card-budget .sf-base.sf-widget-placeholder {
+    padding-top: 1px;
+    margin-top: -1px;
+}
+/*Table with sort header*/
+.sf-base .sf-planning-details .sf-datagrid-vheader-wrapper,
+.sf-base .sf-transactions-details-view .sf-datagrid-vheader-wrapper {
+    background-color: initial!important;
+    height: auto;
+    border-right: 1px solid #e4e4e4;
+    border-left: 1px solid #e4e4e4;
+} 
+.sf-base .sf-planning-details .sf-datagrid-vheader-wrapper .sf-datagrid-vheader,
+.sf-base .sf-transactions-details-view .sf-datagrid-vheader-wrapper .sf-datagrid-vheader {
+    margin-top: 0;
+}
+.sf-base .sf-accessible-chart-content .sf-datagrid .sf-datagrid-body-wrapper thead th,
+.sf-base .sf-analysis-chart-accessible-view .sf-datagrid .sf-datagrid-body-wrapper thead th,
+.sf-base .sf-financial-calendar-payments .sf-datagrid .sf-datagrid-body-wrapper thead th,
+.sf-base .sf-accessible-chart-content .sf-datagrid .sf-datagrid-body-wrapper td,
+.sf-base .sf-analysis-chart-accessible-view .sf-datagrid .sf-datagrid-body-wrapper td,
+.sf-base .sf-financial-calendar-payments .sf-datagrid .sf-datagrid-body-wrapper td,
+div div .sf-base .sf-planning-details th,
+div div .sf-base .sf-planning-details td,
+div div .sf-base .sf-payees-grid th,
+div div .sf-base .sf-payees-grid td,
+div div .sf-base .sf-transactions-grid th,
+div div .sf-base .sf-transactions-grid td {
+    padding: 10px!important;
+    width: initial!important;
+    margin: 0!important;
+    text-align: center!important;
+}
+.sf-base .sf-accessible-chart-content .sf-datagrid .sf-datagrid-body-wrapper thead tr:hover, .sf-base .sf-analysis-chart-accessible-view .sf-datagrid .sf-datagrid-body-wrapper thead tr:hover {
+    background: #fff!important;
+}
+div div .sf-base .sf-planning-details .sf-accessible-header,
+div div .sf-base .sf-transactions-details-view .sf-accessible-header {
+    display: none;
+}
+.sf-base .sf-financial-calendar-payments .sf-datagrid .sf-datagrid-body-wrapper tr th:last-child,
+.sf-base .sf-financial-calendar-payments .sf-datagrid .sf-datagrid-body-wrapper tr td:last-child {
+    width: 100px!important;
+}
+.sf-base .sf-payees-grid .sf-icon,
+.sf-base .sf-transactions-grid .sf-icon {
+    margin: 0 auto;
+}
+.sf-base .sf-payees-grid td.sf-cat-col .sf-editor-trigger,
+.sf-base .sf-transactions-grid td.sf-cat-col .sf-editor-trigger {
+    display: block;
+    margin: 0;
+}
+.sf-base .sf-payees-grid td.sf-cat-col .sf-sub-cat-icon,
+.sf-base .sf-transactions-grid td.sf-cat-col .sf-sub-cat-icon {
+    float: none;
+}
+.sf-base .sf-datagrid thead th a {
+    text-transform: none;
+}
+
+@media (max-width: 800px) {    
+    .sf-planetchart .sf-chart-serie text {
+        -ms-transform: rotateZ(-30deg);
+        -webkit-transform: rotateZ(-30deg);
+        transform: rotateZ(-30deg);
+    }
+    /*Table with sort header*/
+    div div .sf-base .sf-payees-grid th,
+    div div .sf-base .sf-payees-grid td,
+    div div .sf-base .sf-transactions-grid th,
+    div div .sf-base .sf-transactions-grid td {
+        text-align: left!important;
+    } 
+    .sf-base .sf-payees-grid .sf-icon, .sf-base .sf-transactions-grid .sf-icon {
+        margin: 0;
+        text-align: left;
+    }
+    .sf-base .sf-transactions-grid .sf-not-computable-icon, 
+    .sf-base .sf-transactions-grid .sf-scissors-icon {
+        margin: 0;
+    }
+    .sf-base .sf-transactions-details-view .sf-datagrid-vheader-wrapper,
+    .sf-base .sf-accessible-chart-content .sf-datagrid .sf-datagrid-body-wrapper thead th,
+    .sf-base .sf-analysis-chart-accessible-view .sf-datagrid .sf-datagrid-body-wrapper thead th,
+    .sf-base .sf-financial-calendar-payments .sf-datagrid .sf-datagrid-body-wrapper thead th {
+        background-color: #fff!important;
+        height: auto; 
+        padding: 0;
+        text-align: left!important;
+        border-bottom: 0;
+    }
+    .sf-base .sf-transactions-details-view .sf-datagrid-vheader-wrapper .sf-datagrid-vheader {
+        margin-top: 0;
+    }
+    .sf-base .sf-financial-calendar-payments .sf-datagrid .sf-datagrid-body-wrapper td,
+    div div .sf-base .sf-planning-details td,
+    .sf-base .sf-accessible-chart-content .sf-datagrid .sf-datagrid-body-wrapper td,
+    .sf-base .sf-analysis-chart-accessible-view .sf-datagrid .sf-datagrid-body-wrapper td {
+        padding-left: 50%!important;
+    }
+    .sf-base .sf-financial-calendar-payments .sf-datagrid .sf-datagrid-body-wrapper td:before,
+    .sf-base .sf-planning-details td:before,
+    .sf-base .sf-accessible-chart-content .sf-datagrid .sf-datagrid-body-wrapper td:before,
+    .sf-base sf-analysis-chart-accessible-view .sf-datagrid .sf-datagrid-body-wrapper td:before {
+        width: 50%;
+        padding: 12px 10px;
+    }
+    div div div .sf-base .sf-datagrid th {
+        display: inline-block;
+        width: initial!important;
+    }
+    .sf-base .sf-financial-calendar-payments .sf-datagrid .sf-datagrid-body-wrapper tr th:last-child, .sf-base .sf-financial-calendar-payments .sf-datagrid .sf-datagrid-body-wrapper tr td:last-child {
+        width: auto!important;
+    }
+    .sf-base .sf-financial-calendar-payments .sf-datagrid .sf-datagrid-body-wrapper tr td:last-child,
+    div div .sf-base .sf-planning-details tr td:last-child {
+       margin-bottom: 10px!important; 
+    }
+    /*Table without sort header*/
+    .sf-base .sf-financial-calendar-payments .sf-datagrid .sf-datagrid-body-wrapper thead th {
+        display: none;
+    }
+}
+@media (max-width: 1280px) {
+    table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, 
+    table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+        top: 33%!important;
+    }
+}
+@media (max-width: 1023px) { 
+    .sf-base .sf-widget.sf-analysis-overview-widget .sf-charts-placeholder {
+        margin: 1em 0 3em;
+    }
+}
+@media (max-width: 1000px) {
+    .sf-base .sf-summary-box {
+        overflow: hidden;
+        border-top: 1px solid #e4e4e4;
+        border-bottom: none;
+    }
+    .sf-base .sf-widget .sf-widget-header .sf-header-info .sf-balance-summary {
+        padding: 0 1em;
+    }
+    .sf-base .sf-popup.sf-dialog.sf-opened {
+        width: 90%;
+        left: 5%;
+    }
+    .sf-base .sf-savings-goals-content .sf-goal-target-info .sf-goal-amount {
+        top: 0;
+    }
+    .sf-base .sf-savings-goals-content .sf-goal-target-info {
+        line-height: 114px;
+    }
+    .sf-base .sf-savings-goals-content .sf-goal-target-info-inner {
+        vertical-align: bottom;
+    }
+}
+@media (max-width: 800px) {
+    .sf-base .sf-pattern-details .sf-pattern-details-controls {
+        clear: both;
+        padding-top: 10px;
+    }
+    .sf-base .sf-button {
+        padding: .6em 1.2em!important;
+        font-size: 10px!important;
+    }  
+    .sf-base .sf-chart-selector .sf-button,
+    .sf-base .sf-accessible-chart-controls .sf-button {
+        padding: 0!important;
+        font-size: 12px!important;
+    }
+    div .sf-base .sf-calendar .sf-calendar-controls .sf-button.sf-calendar-control-next, div .sf-base .sf-calendar .sf-calendar-controls .sf-button.sf-calendar-control-previous {
+        padding: .4em .4em .3em!important;
+    }
+    .sf-base .sf-transactions-split-form-placeholder .sf-button-controls .sf-button:last-child,
+    .sf-base .sf-transactions-split-form-placeholder .sf-button-controls .sf-button {
+        width: 100%!important;
+        margin: 0;
+        height: auto!important;
+    }
+    .sf-base .sf-transactions-split-form-placeholder .sf-button-controls .sf-button:last-child,
+    .sf-button-group .sf-button + .sf-button:not(.sf-calendar-control-next),
+    .sf-mode-filter-placeholder .sf-button + .sf-button {
+        margin-top: 6px!important;
+    }
+    div .sf-base .sf-mode-filter .sf-button + .sf-button, div .sf-base .sf-widget.sf-financial-calendar-widget .sf-financial-calendar-navigator .sf-button + .sf-button, div .sf-base .sf-transactions-details .sf-transactions-details-choices .sf-button + .sf-button {
+        margin-left: 0;
+    }
+    .sf-base .sf-calendar .sf-calendar-controls .sf-button.sf-calendar-period-title {
+        padding: 0 1em!important;
+        margin: 4px!important;
+    }
+    .sf-base .sf-calendar .sf-calendar-controls>.sf-calendar-dates,
+    .sf-base .sf-calendar .sf-calendar-controls>.sf-calendar-nav {
+        position: static; 
+        padding-bottom: 1em;
+    }
+    .sf-base .sf-calendar .sf-calendar-controls {
+        padding-bottom: 1em;
+    }
+    .sf-base .sf-calendar .sf-calendar-controls>.sf-calendar-dates {
+        float: right;
+        margin-top: -32px;
+    }
+   
+    div .sf-base .sf-accounts-filter .sf-account-grouping-buttons .sf-button, .sf-base .sf-widget.sf-financial-calendar-widget .sf-financial-calendar-navigator .sf-button.sf-active, .sf-base .sf-widget.sf-financial-calendar-widget .sf-financial-calendar-navigator .sf-button.sf-active:focus, .sf-base .sf-widget.sf-financial-calendar-widget .sf-financial-calendar-navigator .sf-button:active, .sf-base .sf-widget.sf-financial-calendar-widget .sf-financial-calendar-navigator .sf-button:active:focus, .sf-base .sf-mode-filter .sf-button, .sf-base .sf-widget.sf-financial-calendar-widget .sf-financial-calendar-navigator .sf-button {
+        display: block;
+        width: 100%;
+    }
+    .sf-financial-calendar-navigator .sf-button-group, 
+    .sf-transactions-details-selector.sf-button-group, .sf-mode-filter-placeholder {
+        float: none!important;
+        display: block;
+    }
+    .sf-base .sf-accounts-filter.sf-accounts-filter-dropdown .sf-account-grouping-buttons.sf-button-group {
+        padding: 1em 1em 0;
+    }
+    .sf-base .sf-mode-filter {
+        margin: 0 0 1em;
+    }
+    .sf-base .sf-analysis-content .sf-content-header, .sf-base .sf-widget.sf-community-widget .sf-mode-filter-placeholder {
+        padding-bottom: 0;
+        overflow: hidden;
+    }
+    .sf-base .sf-accounts-filter .sf-account-grouping-buttons {
+        display: block;
+    }
+    .sf-base .sf-accounts-filter .sf-account-filter-buttons,
+    .sf-base .sf-accounts-filter .sf-account-filter-select-account {
+        display: block;
+        padding: 0;
+    }
+    .sf-base .sf-accounts-filter .sf-account-filter-buttons {
+        text-align: right;
+    }
+    .sf-base .sf-accounts-filter .sf-account-grouping-buttons {
+        padding: 1.5em 1em 0 1em;
+    }
+    .sf-base .sf-dropdown {
+        height: auto;
+        width: 100%;
+    }  
+    .sf-base .sf-accordion-item .sf-accordion-body {
+        margin-top: 2em;
+    }
+    .sf-base .sf-reform-select .sf-optionlist {
+        top: 25px!important;
+    }
+    .sf-base .sf-dropdown>.sf-dropdown-panel>.sf-dropdown-content {
+        min-width: 0;
+    }
+    .sf-community-widget .sf-subtitle .sf-accounts-filter-placeholder .sf-dropdown,
+    .sf-community-widget .sf-subtitle .sf-timerange-filter-placeholder, 
+    .sf-community-widget .sf-subtitle .sf-accounts-filter-placeholder {
+        display: block;
+        width: 100%;
+    }
+    .sf-base .sf-community-module .sf-community-header-filter {
+        width: 47%;
+    }
+    .sf-base .sf-widget .sf-widget-footer {
+        padding: 1em;
+    }
+    .sf-base .sf-planning-preview .sf-disposable-labels .sf-disposable-label.sf-disposable-label-disposable .sf-disposable-value,
+    .sf-base .sf-planning-preview .sf-disposable-labels .sf-disposable-label.sf-disposable-label-income .sf-disposable-value,
+    .sf-base .sf-planning-preview .sf-disposable-labels .sf-disposable-label.sf-disposable-label-discretionary .sf-disposable-value, .sf-base .sf-planning-preview .sf-disposable-labels .sf-disposable-label.sf-disposable-label-scheduled .sf-disposable-value {
+        margin: 0;
+    }
+    .sf-base .sf-spending-plan-widget .sf-icon-title {
+        display: block;
+        min-height: 11px;
+    }
+    .sf-base .sf-spending-plan-widget .sf-disposable-value {
+        text-align: center;
+    }
+    .sf-base .sf-widget.sf-spending-plan-widget .sf-spending-plan-budgets-placeholder, .sf-base .sf-widget.sf-spending-plan-widget .sf-spending-plan-details-placeholder, .sf-base .sf-planning-preview .sf-disposable-labels .sf-disposable-label .sf-disposable-value {
+        border-width: 1px;
+    }
+    .sf-base .sf-planning-preview .sf-disposable-labels .sf-disposable-value-title {
+        padding: 6px 8px 0;
+        font-size: 12px;
+        word-wrap: break-word;
+    }
+    .sf-base .sf-analysis-content .sf-chart-selector .sf-button.sf-analysis-chart-planetchart-icon {
+        display: inline-block;
+    }
+    .sf-base .sf-budget-transactions-placeholder {
+        width: 100%;
+    }
+    .sf-base .sf-transaction-tags.sf-panel-section,
+    .sf-base .sf-transaction-tags.sf-panel-section .sf-tag-input {
+        float: none;
+    }
+    .sf-base .sf-transaction-tags.sf-panel-section .sf-form-field  {
+        width: 70%!important;
+        float: left;
+        padding-right: 10px;
+    }
+    .sf-base .sf-transaction-tags.sf-panel-section .sf-button-add.sf-add-tag {
+        width: 30%!important; 
+        padding: .4em 1.2em!important;
+    }
+    .sf-base .sf-textfield-append .sf-add-on, .sf-base .sf-textfield-prepend .sf-add-on,
+    .sf-base input[type=text] {
+        height: 2.8em;
+        line-height: 2.8em;
+    }
+    .sf-base .sf-accessible-category-selector .sf-category-subcategory-item .sf-category-subcategory .sf-icon {
+        line-height: 1.8em;
+    }
+}
+@media (max-width: 767px) {
+    .sf-base h2 {
+        font-size: 14px;
+    }
+    .sf-base .sf-widget .sf-widget-header .sf-title {
+        padding: 1em;
+    }
+    .sf-base .sf-transactions-details-accordion .sf-transactions-details-toggle {
+        height: 4em;
+    }
+    .sf-base .sf-accordion-item .sf-accordion-header button {
+        top: .8em;
+    }
+    .ext-pfm-card-analysis .sf-base.sf-widget-placeholder {
+        margin: -15px -12px -10px;
+        width: auto;
+    }
+    
+    table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, 
+    table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+        top: 40%!important;
+    }
+    .sf-base .sf-budget-editor .sf-budget-editor-header .sf-form-row-goal {
+        float: none;
+        line-height: 40px;
+        max-width: 100%;
+        padding-right: 15px;
+    }
+    div .sf-base .sf-form-row.sf-form-row-category {
+        max-width: 100%;
+        width: 100%!important;
+        overflow: hidden;
+    }
+}
+@media (max-width: 600px) {
+    .sf-base .sf-calendar-year-view .sf-calendar-year-month {
+        width: 100%;
+        padding: 0;
+    }
+    .sf-base .sf-calendar.sf-calendar-day-mode .sf-calendar-controls .sf-button.sf-calendar-period-title {
+        width: 78%;
+    }
+    .sf-base .sf-calendar-year-view {
+        overflow: hidden;
+    }
+    
+    .sf-base .sf-calendar-month-mode:not(.sf-transactions-calendar-overview) .sf-calendar-month-view {
+        min-width: 470px;
+    }
+    .sf-base .sf-calendar .sf-calendar-body {
+        overflow-x: auto;
+    }
+    .sf-base .sf-calendar-month-view .sf-calendar-cells-box {
+        min-height: 336px
+    }
+    .sf-base .sf-calendar-month-view div.sf-calendar-cell .sf-calendar-cell-content {
+        min-height: 0;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        font-size: 12px;
+    }
+    .sf-base .sf-calendar-month-view table.sf-calendar-cells td.sf-calendar-cell-noperiod {
+        border: none;
+    }
+    .sf-base .sf-calendar-month-view div.sf-calendar-cell .sf-calendar-cell-mark {
+        position: relative;
+        text-align: right;
+        width: auto;
+    }
+    .sf-base .sf-calendar-month-view div.sf-calendar-cell .sf-calendar-cell-content .sf-transactions-calendar-month-cell {
+        width: auto;
+        height: 100%;
+        padding-top: 18px;
+    }
+    .sf-calendar-month-view div.sf-calendar-cell .sf-calendar-cell-content .sf-transactions-calendar-month-cell .sf-transactions-calendar-balance {
+        display: block!important;
+    }
+    .sf-base .sf-calendar-month-view div.sf-calendar-cell .sf-transactions-calendar-small-entries * {
+        display: block;
+        width: auto!important;
+        text-align: left;
+    }
+    .sf-base .sf-calendar-month-view div.sf-calendar-cell .sf-transactions-calendar-small-entries .sf-amount {
+        padding-left: 4px;
+    }
+}
+@media (max-width: 500px) {
+    table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, 
+    table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+        top: 33%!important;
+    }
+    .sf-base .sf-widget.sf-community-widget .sf-widget-header-placeholder .sf-accounts-filter-placeholder {
+        margin-top: 0;
+    }
+    .sf-base .sf-accounts-filter .sf-accounts-list li {
+        border-top: none;
+        padding: 0.5em;
+        min-height: 0
+    }
+    .sf-base .sf-calendar .sf-calendar-controls>.sf-calendar-layouts {
+        margin-bottom: 1em;
+    }
+    .sf-base .sf-accounts-filter .sf-accounts-list .sf-form-field {
+        position: static;
+        margin-bottom: 1em;
+    }
+    .sf-base .sf-accounts-filter .sf-accounts-list label {
+        padding-bottom: 0;
+        padding-left: 0;
+        width: auto;
+        position: static;
+        display: inline-block;
+    }
+    .sf-base .sf-widget.sf-financial-calendar-widget .sf-financial-calendar-content .sf-financial-calendar-navigator .sf-button-group .sf-button {
+        width: 100%;
+        font-size: 1em;
+    }
+    .sf-base .sf-calendar .sf-calendar-controls>.sf-calendar-dates {
+        margin-top: -49px;
+    }
+    .sf-base .sf-community-module .sf-community,
+    .sf-base .sf-community-module .sf-user {
+        float: none;
+        text-align: left;
+        width: 100%;
+    }
+    .sf-community-header-filter.sf-user {
+        margin-bottom: 20px;
+    }
+    .sf-base .sf-community-module .sf-community-user-data {
+        display: inline-block;
+        margin: 0 0 10px 4px;
+        min-height: 0;
+    }
+    .sf-base .sf-widget.sf-analysis-overview-widget .sf-charts-placeholder {
+        margin: 1em 1em 4em;
+    }
+    .sf-base .sf-planning-details .sf-datagrid-body-wrapper {
+        overflow: hidden;
+    }
+    .sf-base.sf-widget-placeholder.sf-device-mobile .sf-accessible-switch {
+        display: block!important;
+        padding: 0;
+    }
+    .sf-spending-plan-preview-placeholder {
+        clear: both;
+    }
+    .sf-base .sf-donutchart .sf-chart-legend-column {
+        padding-right: 0;
+        width: 50%;
+    }
+    .sf-base .sf-day-transactions-details .sf-calendar-transactions-details-list {
+        display: block;
+    }
+    .sf-base .sf-widget.sf-community-widget .sf-community-module .sf-button-controls .sf-button:before, .sf-base .sf-widget.sf-community-widget .sf-community-module .sf-community-bar-information {
+        display: block;
+        float: none;
+        position: static;
+    }   
+}
+@media (max-width: 440px) {
+    .sf-base .sf-chart.sf-planetchart .sf-chart-label,
+    .sf-base .sf-d3-chart .sf-chart-axis-horizontal text {
+        font-size: 8px!important;
+    }
+    .tc-fs-p2 {
+        font-size: 1rem;
+    }
+    .sf-base .sf-planning-equalizer .sf-planning-equalizer-months {
+       font-size: 10px!important; 
+    }
+    .sf-base .sf-planning-equalizer .sf-planning-equalizer-view {
+        padding: 0 20px;
+    }
+    .sf-base .sf-spending-plan-widget .sf-disposable-labels .sf-disposable-value-title {
+        padding: 6px 4px 0;
+        font-size: 9px;
+    }
+    .sf-base .sf-spending-plan-widget .sf-spending-plan-budgets-placeholder,
+    .sf-base .sf-spending-plan-widget .sf-spending-plan-details-placeholder {
+        margin: 0 -15px -15px; 
+    }
+    .sf-base .sf-spending-plan-widget .sf-disposable-labels-wrapper {
+        margin: 0 -15px;
+    }
+    .sf-base .sf-spending-plan-widget .sf-disposable-value {
+        height: 60px!important;
+    }
+}
+
+/* Add-on after PFM Upgrade to 0.1.3*/
+.sf-base .sf-widget.sf-analysis-overview-widget .sf-chart {
+    height: 340px !important;
+}

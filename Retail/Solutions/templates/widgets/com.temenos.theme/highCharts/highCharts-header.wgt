@@ -1,0 +1,40 @@
+<link type="text/css" href="./templates/widgets/com.temenos.theme/highCharts/css/highcharts.css" rel="stylesheet" />	
+<script src="./templates/widgets/com.temenos.theme/highCharts/js/highcharts.js"></script>
+<script src="./templates/widgets/com.temenos.theme/highCharts/js/highcharts-3d.js"></script>
+<script src="./templates/widgets/com.temenos.theme/highCharts/js/highcharts-nodata.js"></script>
+<style>
+.highcharts-legend-item text,
+.highcharts-data-label text {
+	color: #333;
+}
+</style>
+<script type="text/javascript">
+$(function() {
+	$(window).resize();
+})
+
+Hi.addHook('beforeChangeTab',  function(tabId, ns) {
+	var tabPaneName = buildCompID(ns, "Pane", tabId); 
+	$("#" + tabPaneName + " .tc-chart").each(function(i,o) {
+		var chartId = $(o).attr("id");
+		if ( $("#" + chartId).highcharts() ) {
+			$("#" + chartId).highcharts().destroy()
+		}
+	})
+
+	return true;
+});
+
+
+Hi.addHook("afterChangeTab", function(tabId, ns) {
+	var tabPaneName = buildCompID(ns, "Pane", tabId); 
+	$("#" + tabPaneName + " .tc-chart").each(function(i,o) {
+		var chartId = $(o).attr("id");
+		if ( window["groupChartWithPrevious" + chartId]) {
+			 window["groupChartWithPrevious" + chartId]();
+		} else {
+			window["addSeparateChart" + chartId]();
+		}
+	})
+})
+</script>

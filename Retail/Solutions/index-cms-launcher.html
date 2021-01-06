@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!--
+ * $RCSfile$
+ * $Author$
+ * $Revision$
+ * $Date$
+-->
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate"/>
+    <meta http-equiv="cache-control" content="post-check=0, pre-check=0, false"/>
+    <title>LiveCMS - index</title>
+  </head>
+  <body style="margin:0;padding:0" onload="document.forms['form1'].submit()">
+  <div class="LoadingContainer">
+      <div class="ClientLogo" style="text-align: center;margin-top: 100px;"><img src="images/Temenos/Temenos_Full_Logo_withAnd_RGB.png" alt="Temenos Logo" style="width: 400px;"></div>
+      <div style="text-align:center">
+          <span class="LoadingText"><!--Loading--></span>
+          <span class="LoadingImage" style="width: 100px;"><img src="images/Temenos/loader.gif" alt="Loading animation" style="width: 29px;position: relative;top: -79px;left: 122px;"></span>
+      </div>
+  </div>
+    <form id="form1" method="post" action="./LiveCMS">
+	  <div>
+        <input type="hidden" name="MODE" id="MODE" value="XX"/>
+	  </div>
+    </form>
+	<script type="text/javascript">
+		var qString = document.location.href.substring(document.location.href.indexOf("?") + 1);
+		document.getElementById("MODE").value = qString;
+	</script>
+  </body>
+</html>

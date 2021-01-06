@@ -1,0 +1,20 @@
+<!-- $Revision: 1.7 $ -->
+$%IF ITEM.IS_READONLY() == "true" && ITEM.READONLYSTYLE() != "Disabled Answer"$
+$$ITEM.EC_GENERATE()$
+$%ELSE$
+$%SCRIPT$
+var newType = $%IF BROWSER_FEATURES == "" || BROWSER_FEATURES.inputtypes.range == "Y"$"type=\"range\""$%ELSE$""$%ENDIF$;
+$%INCLUDE widgets/html5/inputtype.wgt$$%ENDINCLUDE$
+var additionalAttrs = "";
+$%IF ITEM.Step != ""$additionalAttrs += " step=\"$$ITEM.Step$\"";
+$%ELSE$$%IF ITEM.DATAITEM().TYPE() == "Decimal"$additionalAttrs += " step=\"any\"";$%ENDIF$
+$%ENDIF$
+var ecCode = genHTML5Input(newType, additionalAttrs, true);
+removeAttrs(ecCode, new Array("maxlength"));
+$%ENDSCRIPT$
+$%IF ITEM.MINVALUE() == "" || ITEM.MAXVALUE() == ""$
+$%LOG "Connect DebugLog" 3$
+Question: $$ITEM.RTID()$ (Data Item: $$ITEM.DATAITEM()$) - For this HTML5 range field to work properly it is recommended that you have a min and max value specified on your data item or question. 
+$%ENDLOG$
+$%ENDIF$
+$%ENDIF$

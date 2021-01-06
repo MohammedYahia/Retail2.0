@@ -1,0 +1,14 @@
+<!-- $Revision: 1.5 $ -->
+		<link type="text/css" href="./templates/widgets/jquery/jquery-ui/css/connect-widgets/jquery-ui-1.12.1.custom.css" rel="stylesheet" />	
+		<script type="text/javascript" src="./templates/widgets/jquery/jquery-ui/js/jquery-ui-1.12.1.custom.min.js"></script>
+		<script type="text/javascript" src="./templates/widgets/jquery/jquery-ui/js/jquery.ui.touch-punch.min.js"></script>
+		<style type="text/css">
+			.ui-widget-content {
+				background-image: none !important;
+			}
+			
+			.ui-state-default {
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+		</style>

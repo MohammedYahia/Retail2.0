@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><DataSetRoot DSAttrsNewLine="N" DSOmitXMLDecl="N" DSPrettyPrint="Y" DS_UID="12">
+  <!---->
+<enqTcChequeType DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeType[A]" DS_UID="3" Id="">
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeType[C].Links" DS_UID="0" href="" rel="" title=""/>
+    <Description DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeType[C].Description" DS_UID="1" Description=""/>
+    <Category Category="" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeType[C].Category" DS_UID="2"/>
+  </enqTcChequeType>
+<enqTcChequeType DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeType[A]" DS_UID="7" Id="CUR">
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeType[C].Links" DS_UID="4" href="enqTcChequeTypes('CUR')" rel="self" title="enqTcChequeType"/>
+    <Description DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeType[C].Description" DS_UID="5" Description="Current Account Premium"/>
+    <Category Category="" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeType[C].Category" DS_UID="6"/>
+  </enqTcChequeType>
+  <enqTcChequeType DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeType[A]" DS_UID="11" Id="CURR">
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeType[C].Links" DS_UID="8" href="enqTcChequeTypes('CURR')" rel="self" title="enqTcChequeType"/>
+    <Description DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeType[C].Description" DS_UID="9" Description="Current Accounts"/>
+    <Category Category="" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeType[C].Category" DS_UID="10"/>
+  </enqTcChequeType>
+</DataSetRoot>

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Temenos UXP With Notes </title>
+  <meta name="Description" content="Frameset for running EVA Notes" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="pragma" content="no-cache"/>
+  <meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate"/>
+  <meta http-equiv="cache-control" content="post-check=0, pre-check=0, false"/>
+  <script type="text/javascript">
+  //<![CDATA[
+	function resizeEditor()
+	{
+		var f = top.frames["NoteFrame"];
+		var frmContainer = f.document.getElementById("cke_contents_NoteEditor");
+		if (frmContainer != null)
+		{
+			var a = f.document.documentElement.clientHeight;
+			frmContainer.style.height = (a-126 < 100) ? "100px" : (a - 126)+"px";
+		}
+	}
+
+	function refreshFrame() {
+	    var origFrame = top.frames['ORIGFrame'];
+		origFrame.window.location.href = "index.html";
+	    origFrame.window.onresize = top.resizeEditor;
+		
+		
+	}
+  //]]>
+  </script>
+ </head>
+ <frameset rows="70%,30%" onload="refreshFrame();">
+	<frameset cols="300px,*">
+		<frame name="TreeFrame" id="TreeFrame" src="noteTree.html" scrolling="yes"/>
+		<frame name="ORIGFrame" id="ORIGFrame" scrolling="yes"/>
+	</frameset>
+	<frame name="NoteFrame" id="NoteFrame" src="note.html" scrolling="yes"/>
+ </frameset>
+</html>

@@ -1,0 +1,11 @@
+<div class="fb-facepile" 
+$%IF ITEM.colorscheme != ""$ data-colorscheme="$$ITEM.colorscheme$"
+$%ENDIF$$%IF ITEM.action != ""$ data-action="$$ITEM.action$"
+$%ENDIF$$%IF ITEM.app_id != ""$ data-app-id="$$ITEM.app_id$"
+$%ENDIF$$%IF ITEM.href != ""$ data-href="$$ITEM.href$"
+$%ENDIF$$%IF ITEM.max_rows != ""$ data-max-rows="$$ITEM.max_rows$"
+$%ENDIF$$%IF ITEM.size != ""$ data-size="$$ITEM.size$"
+$%ENDIF$$%IF ITEM.width != ""$ data-width="$$ITEM.width$"
+$%ENDIF$$%IF ITEM.show_count != "Y"$ data-show-count="false"$%ENDIF$></div>
+
+$%INCLUDE widgets/com.temenos.widgets.social.facebook/inc_fbRegisterWidget.wgt$$%ENDINCLUDE$

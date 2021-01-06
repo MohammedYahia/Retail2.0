@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><DataSetRoot DSAttrsNewLine="N" DSOmitXMLDecl="N" DSPrettyPrint="Y" DS_UID="0">
+  <!---->
+  <MessageList DS_REF_DATAGROUP_ATTRIBUTE_NAME="MessageList[1]" DS_UID="0" DateSent="30/04/2016" FromCustomer="Rolf Gerling" Id="SM1611399102" Message="Please send the required forms for the issuance of additional ATM Card." MsgId="SM1611399102" ParentMessageId="SM1611399102" Subject="Request for Addtional ATM Card" TimeSent="16:05:50" ToDao="26" ToDaoName="Retail Banking"/>
+  <MessageList DS_REF_DATAGROUP_ATTRIBUTE_NAME="MessageList[1]" DS_UID="-1" DateSent="26/05/2016" FromCustomer="Rolf Gerling" Id="SM1611347950" Message="Test Message" MsgId="SM1611347950" ParentMessageId="SM1611347950" Subject="Test" TimeSent="17:51:45" ToDao="26" ToDaoName="Retail Banking"/>
+</DataSetRoot>

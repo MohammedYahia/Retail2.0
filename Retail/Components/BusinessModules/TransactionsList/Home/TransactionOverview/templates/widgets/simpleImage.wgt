@@ -1,0 +1,14 @@
+<!-- $Revision: 1.4 $ -->
+<!-- widget file maintained by edgeConnect - DO NOT EDIT -->
+<img src="$$ITEM.IMG_SRC$"  alt="$$ITEM.IMG_ALT_TEXT$" id="img_$$ITEM.ID()$"
+	$%if ITEM.IMG_STYLE != ""$ style="$$ITEM.IMG_STYLE$" $%ENDIF$
+	$%if ITEM.IMG_CLASS != ""$ class="$$ITEM.IMG_CLASS$" $%ENDIF$
+	$%if ITEM.IMG_HEIGHT != ""$ height="$$ITEM.IMG_HEIGHT$" $%ENDIF$
+	$%if ITEM.IMG_WIDTH != ""$  width="$$ITEM.IMG_WIDTH$" $%ENDIF$
+	$%if ITEM.IMG_LONGDESC != ""$ longdesc="$$ITEM.IMG_LONGDESC$" $%ENDIF$
+	$%if ITEM.IMG_USEMAP != ""$ usemap="#$$ITEM.IMG_USEMAP$" $%ENDIF$
+	$%if ITEM.IMG_DIR != ""$ dir="$$ITEM.IMG_DIR$" $%ENDIF$
+	$%if ITEM.IMG_LANGUAGE != ""$ lang="$$ITEM.IMG_LANGUAGE$" $%ENDIF$
+	$%if ITEM.IMG_TITLE != ""$ title="$$ITEM.IMG_TITLE$" $%ENDIF$
+	$%if ITEM.IMG_XMLLANGAUGE != ""$ xml:lang="$$ITEM.IMG_XMLLANGAUGE$" $%ENDIF$
+	/>

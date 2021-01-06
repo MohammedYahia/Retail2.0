@@ -1,0 +1,1225 @@
+$$ITEM.EC_GENERATE()$
+<script>
+var wsc = {
+  res: function(){
+    var scrwidth   = window.innerWidth;
+    var reswidth   = $('.responsive-section').eq(0).width();
+    var resolution = reswidth<568?'xs':reswidth<768?'sm':reswidth<1024?'md':reswidth<1280?'lg':'xl';
+    return [scrwidth,reswidth,resolution];
+  }
+}
+</script>
+$%IF ITEM.colgroup == "Y"$
+<script>
+function addColGroup(tid){
+  var t = $('#$$ITEM.ID()$');                     // table object
+  var colgrp = $('<colgroup/>');
+  t.find('thead th').each(function(i,h){
+    var col = $('<col/>')
+      .attr('id', tid.split('__')[1]+'__'+$(h).attr('id').split('_p1_')[1])
+      .attr('class', $(h).is(':visible')?'show':'hide')
+      .attr('data-head', $(h).text())
+    colgrp.append(col);
+  })
+  t.prepend(colgrp);
+}
+addColGroup('$$ITEM.ID()$');
+</script>
+$%ENDIF$
+
+$%IF ITEM.footerSum == "Y"$
+<script type="text/javascript" charset="utf-8">
+$(function(){
+  var tid = '$$ITEM.ID()$',                       // table id
+      t = $('#$$ITEM.ID()$'),                     // table object
+      sumCols = [$$ITEM.sumCols$],                // array of columns to sum up.
+      totlab = '$$ITEM.label$' != '' ? '$$ITEM.label$' : 'Total';
+      thead = $(t).find('thead'),                 // table header
+      rows = $(t).find('tbody tr').length,        // number of table body rows
+      cols = $(thead).find('th').length,          // number of columns in table
+      tchanged = 0,                               // initialize number of changed targets
+      cchanged = false,                           // initialize index of column for changed target slider
+      csum = 0,                                   // initialize changed target sum
+      tsumtot =  t.find('td.ParentMarketSegmentWeight').eq(0).text();  // remember ParentMarketSegmentWeight
+  if(rows < 2) return;                            // if none or only 1 rows, no need to do the totals
+  $(t).find('tfoot').remove();
+  $(thead).after($('<tfoot/>').append($('<tr/>').addClass('totals')));        // Create table footer
+  var tfoot = $(t).find('tfoot tr');                                          // fill tds in footer row
+  for(var i=0; i<cols; i++){$(tfoot).append($('<td/>').addClass($(t).find('thead th').eq(i).attr('class')).removeClass('tetris_tableHeader'))}
+  if(!sumCols.length){for(var i=0; i<cols; i++){if($(tfoot).find('td').eq(i).hasClass('reverse-align')) sumCols.push(i+1)}}  // if no sumCols declared, fallback to array of all right aligned columns.
+  if($('td.FirstLevel').eq(0).text().trim() == 'Yes'){$('.PMStxt').addClass('tc-hidden')}else{$('.PMStxt').removeClass('tc-hidden')}
+  createSumFooter();
+  $('.PMStext').find('span').text($('td.ParentMarketSegment').eq(0).text())
+  return true;
+  function createSumFooter(){
+    for(var i=0; i<sumCols.length; i++){          // parse columns with numeric values to sum
+      var ColSum = 0, postfix = '';               // init Column Sum and postfix
+      $(t).find('tbody tr').each(function(j,r){   // parse tbody rows
+        var cell = $(r).find('td').eq(sumCols[i]-1);
+        if(cell.find('span.slider-marker').length){
+          cchanged = $(r).find('td.icon-ispinned1').index()>-1;   // did value change from target value
+          var sliderValue = parseFloat($(r).find('td span.slider-marker').text());
+          tchanged += (cchanged || sliderValue == 0) ? 1 : 0;
+          csum += cchanged ? sliderValue : 0;        // add value only if target value has been changed manually
+        }
+        var ctype = cell.find('span.tc-form-control').length ? 'text' : 'field';
+        if(ctype == 'field'){cell.find('input.tc-form-control').on('change',createSumFooter)}
+        ColSum += (ctype == 'text') ?
+          Number(RawNumber(parseFloat(cell.find('span.tc-form-control').text().trim().replace(/\,/g,'')))):
+          Number(RawNumber(cell.find('input.tc-form-control').val().trim()));
+        postfix = cell.find('span.tc-postfix-part').text().trim();
+      })
+      $(tfoot).find('td').eq(sumCols[i]-1).text(FormatNumber(ColSum.toFixed(2))+' '+postfix)
+    }
+    notifyGrowl();
+    $(tfoot).find('td').eq(0).append('<div><span class="tc-form-control tc-default-input tc-rounded-1">'+totlab+'</span></div>');
+	$%IF ITEM.TotalRowActionId != ""$
+	$('#$$ITEM.ID()$').find("tr.totals td:last").prev().append('<a href="javascript:void(0)" id = "$$ITEM.ID()$_TotalRowBtn" class="tc-icon tc-table-icon icon-chevron-right" style="padding-left: 3px;"><span></span></a>');
+	document.getElementById('$$ITEM.ID()$_TotalRowBtn').onclick = function(){ $('#$$COMPONENT_ID_PREFIX$$$ITEM.TotalRowActionId$').click();};
+	$%ENDIF$
+  }
+
+  function notifyGrowl(){
+    var tid = '$$ITEM.ID()$';
+    var edbtn = '$$COMPONENT_ID_PREFIX$$$ITEM.edbtn$';
+    if(csum > tsumtot){
+      var msg = '$$ITEM.highmessage$'.replace('~csum', csum).replace('~tsumtot', tsumtot)
+      $.growl.warning({
+        title: "Warning",
+    	  message: msg,
+    	  icon:  "warning",
+    	  fixed: true
+    	});
+    	$('#'+edbtn).attr('style', 'display: none !important');
+/*
+    }else if(csum < tsumtot){
+      var msg = '$$ITEM.lowmessage$'.replace('~csum', csum).replace('~tsumtot', tsumtot)
+      $.growl.warning({
+        title: "Warning",
+    	  message: msg,
+    	  icon:  "warning",
+    	  fixed: true
+    	});
+    	$('#'+edbtn).attr('style', 'display: none !important');
+*/
+    }else{
+      $('#'+edbtn).removeAttr('style');
+    }
+  }
+})
+</script>
+<style>
+#$$ITEM.ID()$ tfoot tr {height: 2rem;}
+#$$ITEM.ID()$ tfoot tr td {border-bottom:0 none;border-top:1px solid #c0c0c0}
+#$$ITEM.ID()$ tfoot tr td.reverse-align {padding-right:8px}
+#$$ITEM.ID()$ tbody tr td {border-bottom:0 none;}
+</style>
+$%ENDIF$
+
+$%IF ITEM.tableSum == "Y"$
+<script type="text/javascript" charset="utf-8">
+  var rowArray = [];                                                            // init array with row numbers
+  $('#$$ITEM.ID()$ tbody tr').each(function(i,r){                               // loop through table body rows
+    rowArray.push($(r).attr('id').split('_R').pop());                           // fill array with row number
+  });
+  var lastRow = $('#$$ITEM.ID()$ tbody tr').eq(0).attr('id').split('_R')[0] + '_R' + Math.max.apply(Math,rowArray);     // get row object with highest row number
+  $('#$$ITEM.ID()$ thead').after($('<tfoot/>').append($('#'+lastRow)));         // move last row from tbody to tfoot so that it is not affected by column sorting.
+</script>
+<style>
+#$$ITEM.ID()$ tfoot tr {font-weight: 700;}
+#$$ITEM.ID()$ tfoot tr td {border-bottom: 0 none; border-top: 1px solid #444;}
+</style>
+$%ENDIF$
+
+$%IF ITEM.leveragsFS == "Y"$
+<script>
+function leverageFS(tid){
+  var tid = tid || '$$ITEM.ID()$';
+  var t = $('#'+tid);
+  var fs = t.find('tbody td.tc-table-answer fieldset');
+  fs.each(function(i,o){
+    var divs = $(o).find('div');
+    divs.each(function(){
+      $(o).before($('<div/>').append($(this).find('span:visible')));
+    });
+    $(o).parent().addClass('gwp');
+    $(o).remove();
+  })
+}
+leverageFS('$$ITEM.ID()$');
+</script>
+<style>
+.tc-compact div.gwp span.tc-form-control {min-height: 1rem !important; padding: 0.1rem 0.2rem;}
+</style>
+$%ENDIF$
+
+$%IF ITEM.Grouping == "1"$
+<script>
+$(function(){                                               /* --- Handle row grouping and column joining --- */
+  if(("$$ITEM.ShowResp$" == "Y" || "$$ITEM.ShowRespAll$" == "Y") && wsc.res()[1] <= 1024) return false;
+  var t = $('#$$ITEM.ID()$');
+  if(t.hasClass('grouped')){t.find('tr.groupRow').remove()}
+  if(t.find('tbody tr').length < 2) return false;           // exit if only 1 row in tbody
+  var trows = t.find('thead tr');                           // get header row
+  var colshidden = trows.find('th.col-hidden').length;      // get number of hidden columns
+  var group = [$$ITEM.COLS_TO_GROUP$];                      // get array of columns to group [from,to],[from,to],... (1 based)
+  var colsum = [$$ITEM.COLS_TO_SUM$];                       // get columns to sum up in grouping rows (1 based) - Better add attribute wsc-groupsum to Answer field and leave empty 'Columns to sum'
+  if(!group.length) return false;
+  for(var i=0; i<group.length; i++){                        // add row header title
+    var title = trows.find('th').eq((group[i][1])).text().trim();
+    trows.find('th').eq((group[i][0])).append($('<div>').text(title));
+  };
+  var brows = $(t).find('tbody tr');                        // get table body rows
+  brows.addClass('subRow');
+//  if(group.length > 1)                /* ----- TODO : DEBUG if only 1 group item set ----- now failing, not grouping! ----- */
+  for(var i=0; i<group[1].length; i++){
+    brows.each(function(){$(this).find('td').eq(group[1][i]).addClass('grouplabel');})
+  }
+  var groupedby = [];
+  var groupdenom = [];
+  var groupedsum = [];
+  $(brows).eq(0).find('td.wsc-groupsum').each(function(i,c){groupedsum.push($(c).index())})
+  if(groupedsum.length) colsum = groupedsum;
+  $(brows).each(function(i,row){                            // collect groups identificator
+    var dataGroup = $(row).find('.instr-code').text().trim() || $(row).find('td').eq(group[0][1]-1).find('span').text().trim();
+    var denom = $(row).find('td').eq(group[0][1]).find('span').text().trim();
+    $(row).attr('data-group', dataGroup.replace('/','�').replace('.','_dot_'));
+    groupedby.push(dataGroup.replace('/','�').replace('.','_dot_'));
+    groupdenom.push(denom);
+  });
+  var groups = unique(groupedby);
+  var gdenom = unique(groupdenom);
+  for(var i=0; i<groups.length; i++){                                           // iterate over unique groups and create main group rows before subRows
+    var subRows  = $(t).find('tr.subRow[data-group='+groups[i]+']');            // get corresponding subRows
+    var firstSub = subRows.eq(0);                                               // get first corresponding subRow
+    var columns  = firstSub.find('td:visible');                                 // get visible columns in first subrow
+    var acolumns = firstSub.find('td');                                         // get all columns in first subrow
+    var groupRow = $('<tr>').addClass('groupRow').attr('data-maingroup', groups[i]);      // initialize groupRow
+    for(var c=0; c<acolumns.length; c++){                                       // setup blank cells with div element in groupRow
+      var refid = acolumns.eq(c).attr('headers').length ? acolumns.eq(c).attr('headers').split('_p1_')[1] : acolumns.eq(c).attr('id').split('_p4_')[1].split('_R')[0];
+      groupRow.append($('<td id="'+refid+'_G'+(i+1)+'" headers="'+acolumns.eq(c).attr('headers')+'" class="'+(acolumns.eq(c).hasClass('grouplabel') ? 'tc-hidden' : acolumns.eq(c).is(':visible') ? '' : 'tc-hidden')+'"/>').append($('<div/>')))
+    }
+    groupRow.find('td:first').addClass('grouplabel');
+    groupRow.find('td:first div')                                               // handle first cell in groupRow
+      .addClass('selectsub')
+      .append($('<i/>').addClass('group-icon tc-icon icon-chevron-right').append($('<span/>')))     // add group icon
+      .append($('<span>').addClass('tc-form-control').text(groups[i].replace('�','/').replace('_dot_','.')));
+    if(firstSub.find('a.mpef').length){
+      var spanmpef = groupRow.find('td:first div>span');
+      var row3 = $('#'+firstSub.attr('id'));
+      var btn3 = $(row3).find('a.mpef');
+      spanmpef.addClass('mpef')
+      spanmpef.attr('onclick', 'clickSub('+firstSub.attr('id')+', '+btn3.attr('id')+')')
+    }
+    groupRow.find("td:not('.tc-hidden')").eq(1).addClass('grouplabel');
+    groupRow.find("td:not('.tc-hidden')").eq(1).find('div')
+      .append($('<span>').addClass('tc-form-control').text(gdenom[i]));
+    if(colsum.length){
+      for(var a=0; a < 5; a++){
+        var tofixed = '$$ITEM.SUM_TOFIXED$' || 2;                               // get tofixed override (default = 2)
+        for(var s=0; s<colsum.length; s++){                                     // parse all columns to sum
+          var headerref = $(subRows[0]).find('td').eq(colsum[s]).attr('headers');
+          if($(subRows[0]).find('td').eq(colsum[s]).find('div').eq(a).find('span').length){
+            var subsum  = 0;                                                    // init sum number
+            var postfix = '';                                                   // init empty postfix
+            for(var j=0; j<subRows.length; j++){                                // parse all subRows
+              var subcell = $(subRows[j]).find('td').eq(colsum[s]).find('div').eq(a);   // get column cell
+              cellval = subcell.find('span.tc-form-control').text().trim();     // get form (numeric) part
+              postfix = subcell.find('span.tc-postfix-part').text().trim();     // get postfix part
+              subsum += parseFloat(RawNumber(cellval));                         // sum up cell value
+            }
+            groupRow.find('td[headers$='+headerref+']')
+              .removeClass('tc-hidden')
+              .addClass('reverse-align tc-table-answer').find('>div')
+              .append($('<div/>')
+                .append($('<span>').addClass('tc-form-control').text(FormatNumber(subsum.toFixed(tofixed))))
+                .append(postfix.length ? $('<span>').addClass('tc-postfix-part').text(postfix) : '')
+              )
+          }
+        }
+      }
+    }
+    firstSub.before(groupRow);                                                  // add new groupRow before first matching subRow
+  };
+  var subRows = $(t).find('tr.subRow');                                         // get subRows
+  for(var r=0; r<subRows.length; r++){                                          // parse subRows
+    for(var i=0; i<group.length; i++){                                          // parse grouping cells
+      $(subRows).eq(r).find('td').eq((group[i][0])-1).toggleClass('col-hidden'); // toggle hidden class    // TODO: review Logic
+      $(subRows).eq(r).find('td').eq((group[i][1])-1).toggleClass('col-hidden'); // toggle hidden class
+    };
+  };
+  $('.subRow').find('td:visible:first > div').css('paddingLeft', '15px');       // add identation to first cell of subrows
+  $('.subRow').css('display','none');                                           // hide subrows
+  $(t).addClass('grouped');                                                     // add class 'grouped' to table (in order not to parse twice)
+
+  $('.group-icon').on('click', function(){                                      // define action on group icon in grouped rows
+    $(this).toggleClass('icon-chevron-right').toggleClass('icon-chevron-down');
+    var row = $(this).closest('tr');
+    var toggleGroup = $(row).data('maingroup');
+    $(this).closest('tbody').find('tr[data-group="'+toggleGroup+'"]').toggle();
+  });
+});
+function clickSub(row3, btn3){
+  var visRow = true;
+  var visBtn = true;
+  if(!$(row3).is(':visible')){$(row3).show(); visRow = false;}
+  if(!$(btn3).is(':visible')){$(btn3).closest('td').show(); visBtn = false;}
+  $(btn3).click();
+  if(!visBtn) $(btn3).closest('td').hide();
+  if(!visRow) $(row3).hide();
+}
+function popupRowAction(o){
+	var rowNum = rowID.split('_R');
+	$('#$$COMPONENT_ID_PREFIX$$$ITEM.DetailButtonId$_R'+rowNum[1]).click()
+}
+</script>
+<style>
+.tc-table.grouped tr.groupRow {font-weight: 700;}
+.tc-table.grouped .selectsub {max-width: 250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.tc-table.grouped .selectsub .tc-form-control {padding-left:0.1rem;}
+.tc-table.grouped .group-icon.tc-icon {color:#7498BB;font-size: 1.5rem;vertical-align: middle;}
+.tc-table.grouped .groupRow .tc-postfix-part {padding-left: 5px;}
+div.selectsub span.tc-form-control.mpef {color: #003e75;cursor:pointer;text-decoration: underline;}
+</style>
+$%ENDIF$
+
+$%IF ITEM.MultiOrderActive == "Y"$
+<script type="text/javascript" charset="utf-8">
+var multiorder = ss.get('multiorder') ? JSON.parse(ss.get('multiorder')) : {};
+var mocont = '';
+var motp = -1;                // init variable table page
+var srv = srv || [];          // init array of visible subrows
+var t = $('#$$ITEM.ID()$');
+var multiOrders = {
+  "tid" : "$$ITEM.ID()$",
+  "btn" : "$$ITEM.MultiOrderButton$",
+  "txt" : "$$ITEM.phrase$",
+  "page": "$$ITEM.CurrentPage$"
+};
+//console.log('Applying Multiple Order widget for table #',multiOrders.tid);
+
+$(function(){
+  cbIcon(t);
+  if(srv.length) setTimeout("getsubrowvis()", 5);
+  stickySummary(multiOrders.tid);
+});
+function cbIcon(t){
+  var checkboxes = t.find('td input[type="checkbox"]:enabled');
+  if(!checkboxes.length) return;
+  var cbchecked = 0;
+  checkboxes.each(function(i,o){
+    if($(o).is(':checked')){
+      $(o).closest('.tc-form-control.tc-no-prop').addClass('active');
+      cbchecked++;
+    }
+    $(o).on('click', function(e){
+      $(o).parent().toggleClass('active');                                      // toggle active class for icon
+      var cidx = $(o).closest('td').index();                                    // get cell index
+      var cbinrow = $(o).closest('tr').find('input[type="checkbox"]:enabled');  // get all checkboxes in row
+      cbinrow.each(function(a,x){                                               // parse checkboxes in row
+        var xidx = $(x).closest('td').index();                                  // get cell index of now handled checkbox
+        if(xidx == cidx && $(x).is(':checked')){                                // if cell index matches selected checkbox
+          $(x).closest('.icon.cbr').addClass('active')                          // mark icon as active
+        }else{                                                                  // else
+          $(x).prop('checked', false);                                          // uncheck not clicked checkboxes in same row
+          $(x).parent().removeClass('active');                                  // and mark corresponding icon as not active
+        }
+      })
+      stickyVal(this, multiOrders.tid, 1);                                      // add/remove checkbox to stickyVal list
+      stickySummary(multiOrders.tid);                                           // initiate sticky Summary display on click
+      stickyNumberText();
+      setsubrowvis(t);
+    })
+  });
+  stickyVal('group', multiOrders.tid, 0);
+//  if(cbchecked)stickySummary(multiOrders.tid);
+}
+function stickyVal(o,tid,L){
+  var t = $('#'+tid);
+  if(o == 'group'){
+    if(!$('#stickySum').length){                                                                    // if stickySum does not exist yet: create it
+      $(t).parent().parent().css('position','relative').append($('<div id="stickySum" />'));        // add sticky Summary to DOM after table container
+      $('#stickySum').append($('<div class="spacerdiv" />').append($('<i />').append($('<i />')))); // add spacer div on left side to set left pointing caret
+      $('#stickySum').append($('<i class="tc-icon icon-transfer" />').append($('<span/>')));        // add icon to stickySum
+    }
+    stickyNumberText();
+  }else{
+    var imo_code = $(o).closest('tr').find('.imo-instr-code').text().trim(),
+        imo_ptf = $(o).closest('tr').find('span.imo-ptf').text().trim(),
+        imo_id = $(o).closest('tr').find('.imo-id').text().trim();
+    if($(o).is(':checked')){
+      if(checkMultiOrderText(stickyDisplayItemText(o))){
+        multiorder[imo_code+'__'+imo_ptf+'__'+imo_id] = {
+          'type': o.name.split('.').pop(),
+          'op': $(o).closest('table').find('thead th').eq($(o).closest('td').index()).text().trim(),
+          'text': stickyDisplayItemText(o),
+          'id': o.id+'__Page'+multiOrders.page
+        }
+      }
+    }else{
+      if(L!=0)
+      delete multiorder[imo_code+'__'+imo_ptf+'__'+imo_id];
+    }
+  }
+  ss.set('multiorder', JSON.stringify(multiorder));
+  if(Object.keys(multiorder).length) $('#stickySum').show();
+  else  $('#stickySum').hide();
+}
+function stickySummary(tid){
+  var mocont = ss.get('mocont');
+  var t = $('#'+tid);                                                           // get ancestor item (table or table-group)
+  var stickySum = $('#stickySum');                                              // get Summary display box element
+  stickyNumberText();                                                           // set stickySum text (n buy, n sell)
+  if(stickySum.length){
+    if(Object.keys(multiorder).length){
+      t.find('input[type=checkbox]:checked').each(function(i,o){
+        stickyVal(o, tid, 1)
+      });
+    }else if(t.find('input[type=checkbox]:checked').length == 0){
+      stickySum.hide();
+    }
+  }
+  var scrollTimer = null;
+  posSticky();                                              // keep stickySum in viewport
+  stickySum.on('click', function(){                         // make sticky Summary clickable
+    $(multiOrders.btn).trigger('click');
+  })
+  stickySum.hover(function(){
+    stickySum.find('.spacerdiv > i').show();
+    var detSum = $('div.detSum');
+    if(detSum.length) detSum.remove();
+    detSum = $('<div class="detSum"/>');
+    stickySum.append(detSum);
+    for(key in multiorder){
+      detSum.append($('<div />').text(multiorder[key].text))
+    }
+    detSum.append($('<div class="action"/>').append($(multiOrders.btn).clone()))
+  }, function(){
+    $('div.detSum').remove();
+    stickySum.find('.spacerdiv > i').hide();
+  })
+  $(window).scroll(function(){
+    if(scrollTimer){clearTimeout(scrollTimer)}              // clear any previous pending timer
+    scrollTimer = setTimeout(posSticky, 100);               // call posSticky function 100ms after last scroll event.
+  });
+  function posSticky(){                                     // position of stickySum in order to keep it in viewport next to table.
+    if ($('#stickySum .scont').length){                     // if stickySum exists
+      var wst = parseInt($(window).scrollTop());            // how many pixels did we scroll the page down from top
+      var ph = window.innerHeight;                          // get window height
+      var th = parseInt($('#stickySum').parent().find('.tc-table-wrapper > table').height());       // get table height
+      var ttop = parseInt($('#stickySum').parent().find('.tc-table-wrapper').offset().top);         // get offsetTop of table
+      if(wst > ttop-ph) wst = wst-ttop+200;                 // if table is way down on page
+      else if(wst > 200) wst = wst-200;                     // move stickySum away from scrollTo widget buttons
+      if(wst < 0) wst = 6;                                  // make stickySum start not higher than table start
+      if(wst > th) wst = th-76;                             // make stickySum end not deeper than table end
+      $('#stickySum').stop().animate({marginTop: (wst+16)+'px'}, 100);
+    }
+  }
+}
+function checkMultiOrderText(t){
+  for(key in multiorder){
+    if(multiorder[key].text == t) {
+      return false;
+    }
+  }
+  return true;
+}
+function stickyNumberText(){
+  var cbb = 0, cbs = 0, cbbop, cbsop;
+  for(key in multiorder){
+         if(multiorder[key].type == 'BUY')  {cbb++;  cbbop = multiorder[key].op;}
+    else if(multiorder[key].type == 'SELL') {cbs++ ; cbsop = multiorder[key].op;}
+  }
+  $('#stickySum .scont').remove();                                    // remove content area
+  if(cbb + cbs > 0)
+    $('#stickySum').append($('<div class="scont" />'));
+  if(cbb > 0)                                                         // handle buy items
+    $('#stickySum .scont').append($('<div />').text(cbb+' '+cbbop));
+  if(cbs > 0)                                                         // handle sell items
+    $('#stickySum .scont').append($('<div />').text(cbs+' '+cbsop));
+}
+function stickyDisplayItemText(o){
+  var keys = multiOrders.txt.split(' ');              // text to display (set in edge widget) (e.g.: "~nat .imo-qty .imo-instr on .imo-ptf")
+  var txt = '';
+  for(var k = 0; k < keys.length; k++){
+    if(keys[k].indexOf('~') == 0){                    // get text of items column heading
+      txt += ' ' + $(o).closest('table').find('thead th').eq($(o).closest('td').index()).text().trim();
+    }else if(keys[k].indexOf('.') == 0){              // get text of cell item with same className in items row
+      txt += ' ' + $(o).closest('tr').find(keys[k]).eq(0).text().trim();
+    }else if(keys[k].indexOf('#') == 0){              // get text of item with corresponding id on page
+      txt += ' ' + $(keys[k]).text().trim();
+    }else{                                            // get translated text element
+      txt += ' '+keys[k];
+    }
+  }
+  return txt.trim();
+}
+function setsubrowvis(t){                                   // get Array of visible subRows
+  srv = [];                                                 // reset array of visible subrows
+  motp = multiOrders.page;                                  // get multiple order table page
+  $(t).find('tr.subRow:visible').each(function(i,r){srv.push($(r).attr('id')+'__Page'+motp)})
+  srv = unique(srv);
+}
+function getsubrowvis(){                                    // show previously visible subRows
+  motp = multiOrders.page;                                  // get multiple order table page
+  var dataGroup = [];
+  for(var i=0; i<srv.length; i++){                          // parse visible subrows array
+    if(motp == srv[i].split('__Page')[1]){                  // check if row is on displayed page
+      var subRow = $('#'+srv[i].split('__Page')[0])         // get row id
+      subRow.show();
+      dataGroup.push(subRow.data('group'));
+    }
+  }
+  var dataGroups = unique(dataGroup);
+  for(var i=0; i<dataGroups.length; i++){
+    $(t).find('tr.groupRow[data-maingroup='+dataGroups[i]+'] td i.group-icon')
+      .toggleClass('icon-chevron-right')
+      .toggleClass('icon-chevron-down');
+  }
+}
+</script>
+<style>
+#stickySum {
+  background-color: #34495e;
+  border-radius: 0 0.5rem 0.5rem 0; /*0.3px*/
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  padding: 6px 0;
+  position: absolute;
+  right: -60px; /*-48px*/
+  top: 0;
+  text-align: center;
+  width: 60px;
+}
+table + #stickySum {
+  right: -60px;
+}
+#stickySum > i.tc-icon span {
+  color: #fff;
+  display: block;
+  font-size: 1.8rem;
+  padding: 2px;
+}
+#stickySum > div.scont {
+  color: #fff;
+  text-align: left;
+  margin: 2px 8px;
+  white-space: nowrap;
+}
+#stickySum > div.spacerdiv {
+  background-color: transparent;
+  position: absolute;
+  width: 10px;
+  right: 60px;
+  height: 100%;
+  top: 0;
+  z-index: 8;
+}
+
+#stickySum > div.spacerdiv > i {
+  display: none;
+  position: absolute;
+  top: 30%;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 12px solid #f0f0f0;
+  z-index: 1;
+}
+#stickySum > div.spacerdiv > i > i {
+  position: absolute;
+  top: -10px;
+  right: -12px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #34495e;
+}
+#stickyVal {display: none;}
+.detSum {
+  background-color: #e4e4e4;
+  border-radius: 0.2rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  font-size: 1rem;
+  min-height: 50px;
+  padding: 8px 20px 8px 10px;
+  position: absolute;
+  right: 65px;
+  top: 0;
+  text-align: left;
+  width: auto;
+  z-index:7;
+}
+.detSum > div {
+  white-space: nowrap;
+  padding: 2px 8px;
+}
+.detSum > div.action {
+  padding: 2px;
+  margin-top: 8px;
+  text-align: right;
+}
+.detSum > div.action a span {
+  font-size: 14px;
+  line-height: 24px;
+}
+.detSum > div.action .tc-icon span {margin: 1rem;}
+.detSum > div.action .tc-icon span:before {
+  font-size: 24px;
+  vertical-align: text-bottom;
+  margin-right: 1.5rem;
+  position: relative;
+  top: 4px;
+}
+</style>
+$%ENDIF$
+
+$%IF ITEM.TreeTableActive == "Y"$
+<script type="text/javascript" charset="utf-8">
+if($("#$$ITEM.ID()$").length){      // was: .is(':visible') // not OK for PTCC where table is on different tab
+$.getScript('./templates/widgets/com.wsc.theme/enhancedTable/js/jquery.treetable.js', function(){
+  var idInfo = [$%FOREACH TABLE_ROW IN TABLE$
+    {id: "$$ITEM.id_dataitem$", parentId: "$$ITEM.parent_id_dataitem$"},$%ENDFOREACH$
+  ]
+  var selectorBefore = false;
+  $("#$$ITEM.ID()$ > tbody > tr").each(function(i, o){
+    var rowId = idInfo[i].id;
+    $(o).attr("data-tt-id", rowId);
+    var parentId = idInfo[i].parentId;
+    if (parentId != "") {
+      $(o).attr("data-tt-parent-id", parentId);
+    }
+  });
+  //re-order rows...
+  $("#$$ITEM.ID()$ > tbody > tr").each(function(i, o){
+    var id = $(o).attr("data-tt-id");
+    var childRows = $(this).parent().find("[data-tt-parent-id='"+ id +"']")
+    childRows.insertAfter($(o));
+  });
+  $("#$$ITEM.ID()$").treetable({
+    expandable: true,
+    initialState: "collapsed",
+    stringCollapse:"$$ITEM.strCollapse$",
+    stringExpand: "$$ITEM.strExpand$",
+    expanderTemplate: "<i class='tc-no-prop tc-icon tc-table-icon icon-chevron-right'><span></span></i>",
+    onNodeExpand: function(e) {return false;},
+    onNodeCollapse: function(e) {return false;}
+  });
+  $%IF ITEM.displevdef != ''$
+  var arr = [].slice.call(document.getElementsByClassName("branch"));
+  for(var i = 0; i < arr.length; i++){
+    var rowClasses = arr[i].className;
+    var n = rowClasses.indexOf('level');
+    var level = rowClasses[n+5];
+    if (level < $$ITEM.displevdef$){$("#$$ITEM.ID()$").treetable("expandNode", $(arr[i]).attr('data-tt-id'))}
+  }
+  $%ENDIF$
+  if("$$ITEM.DATAITEM().VALUE()$" != ""){
+    try {$("#$$ITEM.ID()$").treetable("reveal","$$ITEM.DATAITEM().VALUE()$");}
+    catch (e){}
+  }
+  $('table.treetable > tbody > tr.branch').each(function(i,o){
+    if($(this).hasClass('expanded')){
+      $(this).find('.indenter i').toggleClass('icon-chevron-right').toggleClass('icon-chevron-down')
+    }
+  })
+  $('span.indenter').on('click', function(){
+    $(this).find('i').toggleClass('icon-chevron-right').toggleClass('icon-chevron-down')
+  })
+  $%IF ITEM.GridCalc == 'Y'$
+  function treeEdit(tid){
+    var t = $('#'+tid),                                                 // get treetable with enabled calculations
+        f = t.find('input.tc-form-control'),                            // get all input fields in table
+        fc = t.find('input.tc-form-control.calc');                      // get all input fields in table which calculation on parent rows enabled
+    f.each(function(i,o){                                               // initialize all editable input fields with no value to 0.00
+      if($(o).val()=='')$(o).val(parseInt(0).toFixed(2));
+    });
+    t.find('tr.branch input.calc').each(function(i,o){                  // find fields witch calculation enabled on grouping rows
+      $(o).addClass('tc-hidden')                                        // hide editing branch input fields in branch rows
+          .after($('<span class="gcres"/>').text($(o).val()));          // add span to show value of hidden field (after hidden field but before postfix span)
+    })
+    fc.on('focus', function(){                                          // select value of field witch calculation enabled on focus
+      $(this).select();
+    })
+    f.on('change', function(){                                          // do this on each editable input field in the treetable if value changed
+      if($(this).val()=='') $(this).val(parseInt(0).toFixed(2));        // reset value to zero if left empty
+      else $(this).val(parseFloat($(this).val()).toFixed(2));           // or set value to 2 decimals
+    })
+    fc.on('change', function(){                                         // do this on each editable input field witch calculation enabled in the treetable
+      treeSum($(this));
+    })
+  }
+  function treeSum(o){
+    $(o).val($(o).val()=='' ? parseInt(0).toFixed(2) :
+      Number($(o).val()) ? parseFloat($(o).val()).toFixed(2) :
+      parseInt(0).toFixed(2)
+    );
+    var cix = $(o).closest('td').index(),                               // cell index
+        tr  = $(o).closest('tr'),                                       // table row
+        rid = tr.data('tt-id'),                                         // table row data id
+        pid = tr.data('tt-parent-id'),                                  // table row parent data id
+        opid = $(tr).parent().find('tr[data-tt-id='+pid+']'),           // parent row
+        spid = $(tr).parent().find('tr[data-tt-parent-id='+pid+']'),    // sibling rows
+        stot = 0;                                                       // init sum sibling cells
+    $(spid).each(function(i,r){                                         // iterate over siblings
+      stot += parseFloat($(r).find('td').eq(cix).find('input').val());  // calc sum sibling cells
+    })
+    var parentfield = $(opid).find('td').eq(cix).find('input');         // get parent row field
+      parentfield.val(stot.toFixed(2));                                 // set parent input value
+      parentfield.closest('td').find('span.gcres').text(stot.toFixed(2));// align span with parent input value
+    if(!$(opid).hasClass('level0')){                                    // if not root row
+      treeSum($(opid).find('td').eq(cix).find('input'))                 // recursive calc sum for parent
+    }
+  }
+  treeEdit('$$ITEM.ID()$');
+  $%ENDIF$
+});
+}
+</script>
+<style>
+table.treetable td span.indenter {float:left;margin-right:-7px;}
+/*table.treetable td span.indenter + div {display:inline-block;}*/
+table.treetable tr.branch.level1 span.indenter {text-indent:1rem;padding-left:0 !important;}
+table.treetable tr.branch.level2 span.indenter {text-indent:2rem;padding-left:0 !important;}
+table.treetable tr.branch.level3 span.indenter {text-indent:3rem;padding-left:0 !important;}
+table.treetable tr.branch.level4 span.indenter {text-indent:4rem;padding-left:0 !important;}
+table.treetable tr.branch.level5 span.indenter {text-indent:5rem;padding-left:0 !important;}
+table.treetable tr.branch.level6 span.indenter {text-indent:6rem;padding-left:0 !important;}
+table.treetable tr.branch.level7 span.indenter {text-indent:7rem;padding-left:0 !important;}
+table.treetable tr.leaf.level1 td:first-child div {text-indent:1rem;}
+table.treetable tr.leaf.level2 td:first-child div {text-indent:2rem;}
+table.treetable tr.leaf.level3 td:first-child div {text-indent:3rem;}
+table.treetable tr.leaf.level4 td:first-child div {text-indent:4rem;}
+table.treetable tr.leaf.level5 td:first-child div {text-indent:5rem;}
+table.treetable tr.leaf.level6 td:first-child div {text-indent:6rem;}
+table.treetable tr.leaf.level7 td:first-child div {text-indent:7rem;}
+table.treetable tr.leaf.level8 td:first-child div {text-indent:8rem;}
+table.treetable tr.leaf.level1 td:first-child fieldset div:last-child {text-indent:0;}
+table.treetable tr.leaf.level2 td:first-child fieldset div:last-child {text-indent:0;}
+table.treetable tr.leaf.level3 td:first-child fieldset div:last-child {text-indent:0;}
+table.treetable tr.leaf.level4 td:first-child fieldset div:last-child {text-indent:0;}
+table.treetable tr.leaf.level5 td:first-child fieldset div:last-child {text-indent:0;}
+table.treetable tr.leaf.level6 td:first-child fieldset div:last-child {text-indent:0;}
+table.treetable tr.leaf.level7 td:first-child fieldset div:last-child {text-indent:0;}
+table.treetable tr.leaf.level8 td:first-child fieldset div:last-child {text-indent:0;}
+span.gcres {padding: 0 11px; font-weight: 700;}
+</style>
+$%ENDIF$
+
+$%IF ITEM.tblLegend == "Y"$
+<script type="text/javascript" charset="utf-8">
+  var tblLegend = {
+    tid : '$$ITEM.ID()$',
+    cid : '$$COMPONENT_ID_PREFIX$$$ITEM.ChartID$',
+    col : ['#3498db','#e74c3c','#34495e','#95a5a6','#1abc9c','#f1c40f','#e67e22','#9b59b6','#2ecc71','#bdc3c7','#c0392b','#2980b9','#f39c12','#16a085']
+//    col : $('#'+cid).highcharts().options.colors
+  }
+  $('#'+tblLegend.tid).addClass('ChartLegend');
+  $('html head #'+tblLegend.tid+'_hccolors').remove();
+  var HCTstylesheet = '<style id="'+tblLegend.tid+'_hccolors">';      // init HighChartsTable stylesheet string for table legend colors
+  HCTstylesheet += '\n#'+tblLegend.tid+' span.tdchartcolblock {margin-right: -5px; display: inline-block; height: 14px; width: 14px;}';
+  $('#'+tblLegend.tid+' tbody>tr').each(function(i,r){                // parse table body rows
+    $(r).addClass('R'+i);                                             // add className with RowIndex for CSS styling of prefix tdchartcolblock
+    var bgcolpos = i % tblLegend.col.length;                          // get color index for row
+    HCTstylesheet += '\n#'+tblLegend.tid+' tr.R'+i+' span.tdchartcolblock {background-color: '+tblLegend.col[bgcolpos]+';}';
+    HCTstylesheet += '\n#'+tblLegend.tid+' tr.R'+i+' div.ui-slider-range {background-color: '+tblLegend.col[bgcolpos]+' !important;}';
+  })
+  HCTstylesheet += '\n</style>';
+  $('head').append(HCTstylesheet);      // write the css string to the DOM
+
+function tblTooltip(){
+  $('#'+tblLegend.tid).find('tbody tr').each(function(i,o){           // add table row hover trigger chart tooltip
+    var chart = $('#'+tblLegend.cid).highcharts();
+    $(o).hover(function(e){
+       chart.tooltip.refresh(chart.series[0].data[$(this).index()]);
+    },function(){
+      chart.tooltip.hide();
+    });
+  })
+}
+$(document).ready(function(Event){
+  setTimeout(tblTooltip,100);
+});
+</script>
+<style>
+#$$ITEM.ID()$ .tc-header-row-style {background-color:transparent;height:2rem;}
+#$$ITEM.ID()$ tbody tr {height: 2rem !important;}
+#$$ITEM.ID()$ th, .#$$ITEM.ID()$ td {border:0 none;}
+</style>
+$%ENDIF$
+
+$%IF ITEM.ShowLarge == "Y"$
+<script>
+var respcols = [], selrow = false;
+function handleResponsive(tid){
+  var t = $('#'+tid);
+  if(t.find('tbody .tc-empty-message').length) return false;
+  respcols = [];
+  t.addClass('wsc-ShowMore');
+  t.find('thead th.col-hidden.col-showMore').each(function(i,c){respcols.push([$(c).index(), $(c).text()])})
+  if(respcols.length){
+    selrow = t.find('input[id*=Selector][checked=checked]').closest('tr')
+    if(!t.find('th.showMore').length){
+      t.find('thead tr th').last().before($('<th class="showMore"/>'));
+      t.find('tbody tr[id]').each(function(i,r){
+        $(r).find('td').last().before($('<td><div class="tc-icon tc-table-icon icon-chevron-down dtoggler"><span></span></div></td>'));
+      })
+    }
+    toggleMore(selrow);
+  }
+}
+function toggleMore(c){
+  var row = $(c).closest('tr');
+  $(c).closest('tbody').find('tr.showMore').remove();
+  $(c).closest('tbody').find('tr.exp').removeClass('exp');
+  $(c).closest('tbody').find('.dtoggler').removeClass('icon-chevron-up').addClass('icon-chevron-down');
+  var showMore = $('<tr class="showMore"/>').append($('<td colspan="'+row.find('td').length+'"/>').append($('<ul/>')))
+  for(var i=0; i<respcols.length; i++){
+    var resVal = $(row).find('td').eq((respcols[i][0])).text().trim();
+    $(showMore).find('ul').append($('<li/>')
+      .append($('<span/>').text(respcols[i][1]))
+      .append($('<span/>').text(resVal))
+    )
+  }
+  $(row).after(showMore);
+  $(c).find('.dtoggler').toggleClass('icon-chevron-down').toggleClass('icon-chevron-up')
+  $(c).addClass('exp');
+}
+$(document).ready(function(){setTimeout("handleResponsive('$$ITEM.ID()$')", 1)})
+</script>
+<style>
+.wsc-ShowMore tr.exp {font-weight: 700; background-color: #eee;}
+.wsc-ShowMore tr.showMore ul {list-style-type: none; margin: 0; padding: 0; line-height: 2rem; background-color:#eee;}
+.wsc-ShowMore tr.showMore ul li {display: inline;margin-right: 3rem;font-style: italic}
+.wsc-ShowMore tr.showMore ul li span:first-child {font-weight:700; margin-right:1rem}
+.wsc-ShowMore tr.showMore ul li span {display: inline-block; padding: 0.1rem 0.6rem;}
+</style>
+$%ENDIF$
+
+$%IF ITEM.ShowResp == "Y"$
+<script>
+var respcols_$$ITEM.ID()$ = [],                                                 // make Array global
+    responsive = $%IF ITEM.ShowResp == "Y"$true$%ELSE$false$%ENDIF$ && (wsc.res()[1] <= 1024);
+function handleResponsive_$$ITEM.ID()$(tid){
+  respcols_$$ITEM.ID()$ = [];                                                   // reinitialize empty Array for changed screen resolution
+  var t = $('#'+tid),
+      selrow = false,
+      tci = false;
+  t.find('.togglecell').remove();                                               // remove togglecells e.g. on orientation change
+  t.find('tr.showMore').remove();                                               // remove table info sections
+  if(t.find('tbody .tc-empty-message').length) return false;
+  t.addClass('wsc-ShowMore');
+  if(responsive){t.addClass('resp')}
+  t.find('thead th[class*=col-hidden].col-showMore').each(function(i,c){
+    respcols_$$ITEM.ID()$.push([$(c).index(), $(c).text(), $(c).hasClass('col-hidden-'+wsc.res()[2])]);
+    if($(c).hasClass('col-hidden-'+wsc.res()[2])) tci = true;
+  });
+  if(respcols_$$ITEM.ID()$.length && tci){
+    if(responsive){                                                             // show missing columns on small devices
+      t.find('thead th').first().before($('<th class="togglecell"></th>'));     // add header cell
+      t.find('tfoot td').first().before($('<td class="togglecell"></td>'));     // add footer cell
+      t.find('tbody tr[id]').each(function(i,r){                                // add chevron to expand view
+        $(r).find('td').first().before($('<td class="togglecell"><div class="tc-no-prop tc-icon tc-table-icon icon-chevron-down dtoggler" onclick="toggleMore_$$ITEM.ID()$(this)"><span></span></div></td>'));
+      });
+    }
+  }
+}
+function toggleMore_$$ITEM.ID()$(c){
+  var tid = $(c).closest('table').attr('id'),
+      row = $(c).closest('tr'),
+      isexp = $(row).hasClass('exp');
+  $(c).closest('tbody').find('tr.showMore').remove();
+  $(c).closest('tbody').find('.dtoggler').removeClass('icon-chevron-up').addClass('icon-chevron-down');
+  $(c).closest('tbody').find('tr.exp').removeClass('exp');
+  if(responsive && !isexp){
+    var respcols = eval('respcols_'+tid);
+    var showMore = $('<tr class="showMore"/>').append($('<td colspan="'+row.find('td').length+'"/>').append($('<ul/>')));
+    for(var i=0; i<respcols.length; i++){
+      if($(row).find('td').eq((respcols[i][0]+1)).hasClass('tc-hidden-'+wsc.res()[2])){
+        var resVal = $(row).find('td').eq((respcols[i][0]+1)).find('span').text().trim();
+        if(resVal != '')
+        $(showMore).find('ul').append($('<li/>')
+          .append($('<span/>').text(respcols[i][1]))
+          .append($('<span/>').text(resVal))
+        )
+      }
+    }
+    $(row).after(showMore);
+    $(row).find('.dtoggler').toggleClass('icon-chevron-down').toggleClass('icon-chevron-up');
+    $(row).addClass('exp');
+  }
+}
+$(document).ready(function(){setTimeout("handleResponsive_$$ITEM.ID()$('$$ITEM.ID()$')", 10)});
+$(window).resize(debounce(function(event){$('table.wsc-ShowMore').each(function(){handleResponsive_$$ITEM.ID()$($(this).attr('id'))})},100));
+$(window).on("orientationchange", function(event){console.info("This device is in " + event.orientation + " mode!" )});
+</script>
+<style>
+.wsc-ShowMore tr.exp {font-weight: 700; background-color: #eee;}
+.wsc-ShowMore tr.showMore {background-color:#eee;}
+.wsc-ShowMore tr.showMore ul {list-style-type: none; margin: 0 0 0 1rem; padding: 0; line-height: 2rem;}
+.wsc-ShowMore tr.showMore ul li {display: inline;margin-right: 0.4rem;font-style: italic}
+.wsc-ShowMore tr.showMore ul li span:first-child {font-weight:700; margin-right:0.2rem;}
+.wsc-ShowMore tr.showMore ul li span {display: inline-block; padding: 0.1rem 0 0.1rem 0.6rem;}
+.wsc-ShowMore.resp tr.showMore ul li {display: block;}
+.wsc-ShowMore.resp tr.showMore ul li span:first-child {min-width:45%; white-space: nowrap;}
+td.togglecell {max-width:1.4rem}
+td div.dtoggler span::before {border-radius: 50%; background-color: #3977ac; color: white;}
+</style>
+$%ENDIF$
+
+$%IF ITEM.ShowRespAll == "Y"$
+<script>
+var responsive = wsc.res()[1] <= 1024;
+function addResponsiveData(tid){
+  let t = $('#'+tid);
+  if(!responsive || t.find('tbody .tc-empty-message').length) return false;
+  t.addClass('wsc-ShowData');
+  if(wsc.res()[1] < 768){t.addClass('sm')}else if(wsc.res()[1] <= 1014){t.addClass('tablet')}
+  t.find('tr.child').remove();
+  t.find('tr.dummy').remove();
+  t.find('tbody').append($('<tr class="dummy main tc-hidden"/>'))
+  let vcols = t.find('tbody tr').eq(0).find('td:visible');
+  if(t.find('tbody tr').eq(0).find('td.tc-hidden-'+wsc.res()[2]).length == 0) t.removeClass('sm tablet');
+  t.find('tbody tr').addClass('main').each(function(a,r){
+    if(!$(r).hasClass('dummy'))
+    t.find('thead th').each(function(i,c){
+      if($(c).hasClass('col-hidden-'+wsc.res()[2])){
+        if($(c).text().trim() == 'th') return;
+        let celltext = $(c).find('br').length? $(c).find('span').eq(0).text().trim() : $(c).text().trim();
+        let cellval = [], val = $(r).find('td').eq(i).find('span').each(function(){cellval.push($(this).text().trim())});
+        let row = $('<tr class="child"/>')
+          .append('<td class="tc-table-question"><span>' + celltext + '</span></td>')
+          .append('<td class="tc-table-answer"><span>' + cellval.join(' ') + '</span></td>');
+        for(b=2;b<vcols.length;b++){row.append('<td/>')}
+        if(!$(r).next().hasClass('child')){
+          $(r).after(row);
+        }else{
+          let nr = $(r).next();
+          while($(nr).hasClass('child')){nr = $(nr).next()}
+          $(nr).before(row);
+        }
+      }
+    });
+  })
+}
+$(document).ready(function(){setTimeout("addResponsiveData('$$ITEM.ID()$')", 10)});
+$(window).resize(debounce(function(event){$('table.wsc-ShowData').each(function(){addResponsiveData($(this).attr('id'))})},100));
+</script>
+<style>
+.wsc-ShowData.sm thead {display:none;}
+.wsc-ShowData.sm tr.main td {background-color:#eee; border-top:1px solid #444; font-weight:700;}
+.wsc-ShowData.sm tr.child {height:2rem;}
+.wsc-ShowData.sm tr.child td.tc-table-question {white-space:nowrap;}
+.wsc-ShowData.sm tr.child td.tc-table-answer {text-align:right;}
+.wsc-ShowData.sm tr.child td {background-color:#f8f8f8; border-bottom:0 none;}
+.wsc-ShowData.sm tr.child td span {padding:0.6rem;padding-right:0;}
+/*.wsc-ShowData.sm tr.child-0 td:first-child {border-left: 3px solid #c00;}*/
+
+/*.wsc-ShowData.tablet thead {display:none;}*/
+.wsc-ShowData.tablet tr.main td {background-color:#eee; border-top:1px solid #444; font-weight:700;}
+.wsc-ShowData.tablet tr.child {height:2rem;}
+.wsc-ShowData.tablet tr.child td.tc-table-answer {text-align:right;}
+.wsc-ShowData.tablet tr.child td {background-color:#f8f8f8; border-bottom:0 none;}
+.wsc-ShowData.tablet tr.child td span {padding:0.6rem;padding-right:0;}
+</style>
+$%ENDIF$
+
+$%IF ITEM.colSel == "Y" && DEVICE_INFO.isHybrid == ""$ <!--  && !PMProfile != 'Y' -->
+<style>
+div.cm-Container-wrapper {position: absolute;}
+.colmunger {
+  font-size: 18px;
+  position: relative;
+  left: 98%;
+  top: 2px;
+  width: 1px;
+  height: 8px;
+  z-index: 1;
+}
+.colmunger.active {
+  color: #316da2;
+}
+div.cm-Container {
+  background-color: #e8e8e8;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  list-style-type: none;
+  min-width: 200px;
+  padding-left: 0;
+  position: absolute; /*relative;*/
+  z-index: 2;
+}
+div.cm-Container .header {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ccc;
+  cursor: all-scroll;
+  font-weight: 700;
+  padding: 0.4rem;
+}
+div.cm-Container .header .tc-icon {
+  cursor: pointer;
+  float: right;
+}
+div.cm-Container ul.cols {
+  list-style-type: none;
+  padding-left: 0;
+  max-height: 426px;
+  margin: 0;
+  min-width: 180px;
+  overflow-y: auto;
+}
+div.cm-Container li {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 0.2rem 20px 0.4rem 0;
+}
+div.cm-Container li:hover {
+  background-color: #f2f2f2;
+}
+div.cm-Container li i.tc-icon {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+  padding: 0 1px;
+}
+div.cm-Container li.cm-locked i.tc-icon {
+  background-color: #ddd;
+}
+div.cm-Container li i.tc-icon.icon-checkbox-cross span:before{
+  opacity:0;
+}
+div.cm-Container label {white-space: nowrap;}
+div.cm-Container .footer {
+  border-top:1px solid #ccc;
+  line-height: 1.6rem;
+  text-align: center;
+  white-space: nowrap;
+}
+div.cm-Container button {
+  background-color: transparent;
+  border: 0 none;
+  color: #0c4374;
+  cursor: pointer;
+  font-weight: 700;
+  margin: 1px;
+}
+div.cm-Container button:hover {
+  background-color: #f8f8f8;
+}
+div.cm-Container button[disabled] {
+  color: #aaa;
+  cursor: default;
+  font-weight: 500;
+}
+div.cm-Container button[disabled]:hover {
+  background-color: transparent;
+}
+table.grouped td[style].tc-hidden {
+  display: table-cell !important;
+}
+</style>
+<script>
+var cm = {
+  tid   : "$$ITEM.ID()$",
+  pQid  : "$$COMPONENT_ID_PREFIX$$$ITEM.cmPrefQId$",
+  pBid  : "$$COMPONENT_ID_PREFIX$$$ITEM.cmPrefBId$",
+  pDid  : "$$COMPONENT_ID_PREFIX$$$ITEM.cmPrefDId$",
+  pVid  : "$$ITEM.cmPrefViewId$",
+  Head  : "$$ITEM.cmHead$"  || "Column Selector",
+  B1    : "$$ITEM.cmB1$"    || "Default",
+  B1tt  : "$$ITEM.cmB1tt$"  || "Reset to default",
+  B2    : "$$ITEM.cmB2$"    || "Discard",
+  B2tt  : "$$ITEM.cmB2tt$"  || "Revert to last saved",
+  B3    : "$$ITEM.cmB3$"    || "Save",
+  B3tt  : "$$ITEM.cmB3tt$"  || "Save view",
+  sortable : $%IF ITEM.colMov == "Y" $true$%ELSE$false$%ENDIF$,
+//  sortable : '$$ITEM.Grouping$'=='1' ? false : $%IF ITEM.colMov == "Y" $true$%ELSE$false$%ENDIF$,
+  defaultCols : [],
+  savedCols : [],
+  setup : function(){
+    if(wsc.res()[1] <= 1024) return false;
+    if($('#'+cm.tid+' .tc-empty-message').length) return false;
+    $('#'+cm.tid+' thead tr th').each(function(i,hc){$(hc).attr('data-hc',i)});
+    cm.cmprep();
+    $('#'+cm.tid+'_cm').remove();
+    $('#'+cm.tid).parent().before($('<div id="'+cm.tid+'_cm" class="colmunger tc-hidden-xs tc-hidden-sm tc-icon icon-columns" onclick="cm.cmbuild(\''+cm.tid+'\')" title="'+cm.Head+'"><span></span></div>'));
+    if($('#'+cm.pQid).val().length){$('#'+cm.tid+'_cm').toggleClass('active')}
+  },
+  cmprep : function(){
+    var tcolsH  = cm.getTableColsInfo();
+    cm.defaultCols = cm.defaultCols.length ? cm.defaultCols : cm.getShortTableColsInfo('def');
+    var tcolsS = $('#'+cm.pQid).val();
+    if(cm.savedCols.length) tcolsS = cm.savedCols;
+    else if(!tcolsS.length) return false;
+    else tcolsS = tcolsS.split(',');
+    cm.savedCols = tcolsS;
+    for(var i=0; i<tcolsH.length; i++){           // To hide or display columns based on user preferences
+      $('#'+cm.tid).find('tr').each(function(j,r){
+        $(r).find('th:not(\'.col-hidden\'), td:not(\'.col-hidden\')').eq(i).css('display', ($.inArray(tcolsH[i][0], tcolsS)<0) ? 'none':'')
+      });
+    }
+    for(var i=0; i<tcolsS.length; i++){           // To rearrange the column positions based on preferences
+      for(var j=i;j<tcolsH.length;j++){
+        if(tcolsH[j][0] == tcolsS[i]){cm.moveColPos(i, j)}
+//        if(tcolsH[j][0] == tcolsS[i]){cm.moveColPos(tcolsS[i][0], tcolsH[j][0])}
+      }
+    }
+    var pVids=cm.pVid.split(',');
+    if(pVids[0] != '') cm.moveViewOrEditColPos(pVids);
+  },
+  cmbuild : function(){
+    $('#'+cm.pQid).val(cm.savedCols);
+    var tcolsH  = cm.getTableColsInfo();
+    var tcolsS = $('#'+cm.pQid).val();
+    if(tcolsS=='') tcolS = cm.getShortTableColsInfo(1);
+    else tcolsS = tcolsS.split(',');
+    $('.cm-Container-wrapper').remove();
+    var cmcont = $('<div class="cm-Container" id="'+cm.tid+'_cml"/>');
+    for(var i=0; i<tcolsH.length; i++){
+      cmcont.append(
+        $('<li data-ref="'+tcolsH[i][0]+'" class="cmitem_'+i+(!!tcolsH[i][5]?' cm-locked':'')+(!!tcolsH[i][7]?' tc-hidden':'')+'" data-ocol="'+!tcolsH[i][4]+'" onclick="cm.togglecol(this)"/>')
+          .css('display', tcolsH[i][1] == '' ? 'none' : '')
+          .append($('<i class="tc-icon icon-checkbox'+(tcolsH[i][2] ? '-tick':'-cross')+'"><span></span></i>'))
+          .append($('<label/>').text(tcolsH[i][1]))
+      )
+    }
+    cmcont.append($('<div class="footer"/>')
+      .append($('<button title="'+cm.B1tt+'"/>').text(cm.B1).on('click', function(){cm.resetTableColsInfo()}))
+      .append($('<button title="'+cm.B2tt+'"/>').text(cm.B2).on('click', function(){cm.discard()}))
+      .append($('<button title="'+cm.B3tt+'"/>').text(cm.B3).on('click', function(){cm.saveTableColsInfo()}))
+    );
+    cmcont.prepend($('<div class="header handle"/>').text(cm.Head).append($('<i class="tc-icon icon-cancel"><span></span></i>').on('click', function(){$('.cm-Container-wrapper').remove()})));
+    $('#'+cm.tid).before(cmcont);
+    cmcont.wrap($('<div class="cm-Container-wrapper"/>'));
+    $('#'+cm.tid+'_cml li').wrapAll($('<ul class="cols"/>'));
+
+    if(jQuery.ui){
+      $('#'+cm.tid+'_cml')                        // Allow Column Selector widget to be moved
+        .css({'top':'20px','left':$('#'+cm.tid).parent().width()-$('#'+cm.tid+'_cml').width()+'px'})
+        .draggable({handle: $('#'+cm.tid+'_cml .handle')});
+      if(cm.sortable){                            // Allow Column Selector widget to reorder columns
+        $('#'+cm.tid+'_cml .cols')
+          .sortable({
+            items: 'li:not(.cm-locked)',
+            forcePlaceholderSize: true
+          })
+          .bind('sortupdate', function(e, li){
+            var posorigin = $(li.item)[0].className.split('_')[1],
+                postarget = $(e.target).find('li.cmitem_'+posorigin).index();
+            cm.moveCol(postarget,posorigin);
+          });
+      }
+    }
+  },
+  getTableColsInfo : function(){                  // get columns array from actual positions state
+    var tcols = $('#'+cm.tid).find('thead th'), atcols = [];
+    tcols.each(function(i,c){
+      if(!($(c).hasClass('tc-hidden')||$(c).hasClass('wsc-exclude-cm'))){
+        atcols.push([
+          $(c).attr('id').split('_p1_')[1],       // 0 : column id
+          $(c).find('div').eq(0).text().trim(),   // 1 : header label
+          $(c).is(':visible'),                    // 2 : column visible
+          !!$(c).find('div').eq(1).text(),        // 3 : is grouped column
+          !!$(c).hasClass('wsc-col-cm-hidden'),   // 4 : is default hidden column
+          !!$(c).hasClass('wsc-col-cm-locked'),   // 5 : is locked column
+          $(c).index(),                           // 6 : header index
+          !!$(c).hasClass('col-hidden'),          // 7 : no display
+          $(c).attr('data-hc')                    // 8 : headercell real index
+        ])
+      }
+    });
+    return atcols;
+  },
+  getShortTableColsInfo : function(a){            // get columns array (ids only) from actual positions state
+    var tcols = $('#'+cm.tid).find('thead th'),   // get all table column headers
+        atcols = [];                              // init active table header array
+    tcols.each(function(i,c){                     // repeat over table headers and add id to array
+      if(a=='def'){                               // only default visible columns
+        if(!($(c).hasClass('wsc-col-cm-hidden')))
+          atcols.push($(c).attr('id').split('_p1_')[1])
+      }else if(a){                                // only visible columns
+        if($(c).is(':visible'))
+          atcols.push($(c).attr('id').split('_p1_')[1])
+      }else{                                      // all columns
+        atcols.push($(c).attr('id').split('_p1_')[1])
+      }
+    });
+    return atcols;
+  },
+  togglecol : function(cid){                      // toggle single column (show / hide)
+    if(!$(cid).hasClass('cm-locked')){            // exclude locked items
+      $(cid).find('i.tc-icon').toggleClass('icon-checkbox-tick icon-checkbox-cross');
+      var t = $(cid).closest('.tc-table-wrapper').find('.tc-table');
+//      var idx = $(cid).index();
+//      $(t).find('tr').each(function(j,r){$(r).find('th, td').eq(idx).toggle()});
+      var hid = $(cid).data('ref');
+//      $(t).find('tr').each(function(j,r){$(r).find('th[headers$='+hid+'], td[headers$='+hid+']').toggle()});
+      $(t).find('tr').each(function(j,r){$(r).find('th[id*='+hid+'], td[id*='+hid+']').toggle()});
+    }
+  },
+  moveCol : function(pt,po){                      // move single column,        pt = target, po = origin
+    if(po>pt) $('#'+cm.tid).find('tr').each(function(i,r){$(r).find('th, td').eq(pt).before($(r).find('th, td').eq(po))});
+    else      $('#'+cm.tid).find('tr').each(function(i,r){$(r).find('th, td').eq(pt).after($(r).find('th, td').eq(po))});
+    cm.cmbuild();
+  },
+  moveColPos : function(pt,po){                   // move column position
+    if(po>pt) $('#'+cm.tid).find('tr').each(function(i,r){$(r).find('th:not(\'.tc-hidden\') , td:not(\'.tc-hidden\')').eq(pt).before($(r).find('th:not(\'.tc-hidden\') , td:not(\'.tc-hidden\')').eq(po))});
+    else      $('#'+cm.tid).find('tr').each(function(i,r){$(r).find('th:not(\'.tc-hidden\') , td:not(\'.tc-hidden\')').eq(pt).after($(r).find('th:not(\'.tc-hidden\') , td:not(\'.tc-hidden\')').eq(po))});
+//    $(t).find('tr').each(function(i,r){$(r).find('th[headers$='+pt+'], td[headers$='+pt+']').before($(r).find('th[headers$='+po+'], td[headers$='+po+']'))});
+//    $(t).find('tr').each(function(i,r){$(r).find('th[id*='+pt+'], td[id*='+pt+']').before($(r).find('th[id*='+po+'], td[id*='+po+']'))});
+  },
+  moveViewOrEditColPos: function(pVids){
+    var tids='';
+    for(var i=0;i<pVids.length;i++){
+      tids += (( i!= 0) ? ',':'') + 'td[id*='+pVids[i]+'],th[id*='+pVids[i]+']';
+    }
+    $('#' + cm.tid).find('tr').each(function(i, r) {$(r).append($(r).find(tids))})
+  },
+  saveTableColsInfo : function(){                 // set saved columns array to edge question
+    cm.savedCols = cm.getShortTableColsInfo(true);
+    $('#'+cm.pQid).val(cm.savedCols);
+    $("#"+cm.pBid).click();
+    $('#'+cm.tid+'_cm').addClass('active');
+    $('.cm-Container-wrapper').remove();
+  },
+  resetTableColsInfo : function(){                // reset columns to default order and visibility
+    $('#'+cm.pQid).val('');
+    $('#'+cm.pBid).click();
+    $('a.tc-button.cm-reload').click();
+  },
+  discard : function(){                           // reset columns to default visibility
+    $('#'+cm.tid+'_cm').removeClass('active');
+    $("#"+cm.pDid).click();
+  }
+}
+$(document).ready(function(){setTimeout("cm.setup(cm.tid)", 1)})
+</script>
+$%ENDIF$
+
+$%IF ITEM.SelectAllActionButtonId != ""$
+<script>
+$(document).ready(function(){
+  $('#$$ITEM.ID()$').find('thead tr th.selectAllCB div')
+    .addClass('ecDIB tc-form-control tc-checkbox tc-checkbox-vert')
+    .attr('onclick','selectAllcb_$$ITEM.ID()$(this)')
+    .append($('<input/>').attr('type', 'checkbox').prop('checked', $('#$$COMPONENT_ID_PREFIX$$$ITEM.SelectAllQuestionId$').val()>0))
+    .append($('<label/>').css('margin-left','-1px'))
+})
+function selectAllcb_$$ITEM.ID()$(o){
+  var selectAllF = $('#$$COMPONENT_ID_PREFIX$$$ITEM.SelectAllQuestionId$');
+  selectAllF.val(selectAllF.val() == '1' ? '0' : '1');
+  if(selectAllF.val()>0) $(o).find('>i').removeClass('unchecked').addClass('checked');
+  else                   $(o).find('>i').removeClass('checked').addClass('unchecked');
+  let cbbtnsid = $(o).closest('th').attr('id').split('_p1_')[1]
+  const cbbtns = $('#$$ITEM.ID()$').find('a[id*='+cbbtnsid+']>span>i');
+  cbbtns.each(function(i,c){
+    if(selectAllF.val()>0) $(c).removeClass('unchecked').addClass('checked');
+    else                   $(c).removeClass('checked').addClass('unchecked');
+  })
+  $('#$$COMPONENT_ID_PREFIX$$$ITEM.SelectAllActionButtonId$').trigger('click');
+}
+</script>
+$%ENDIF$

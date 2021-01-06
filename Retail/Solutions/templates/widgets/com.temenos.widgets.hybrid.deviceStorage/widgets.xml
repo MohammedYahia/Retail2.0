@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><widgets>
+<widget name="Device Storage" type="Text">
+    <template type="header" value="StorageHeader.wgt"/>
+  <template type="source" value="Storage.wgt"/>
+  <custom>
+      <item help="item's key within the storage device associated with this question" includeInDesign="true" layout="-1" mand="false" name="itemkey" prompt="Item Key" type="javax.swing.JTextField" usage="7"/>
+	  <item help="Listener ID" includeInDesign="true" layout="-1" mand="false" name="listener" prompt="Listener" type="javax.swing.JTextField" usage="7"/>
+	  <item help="Input ID" includeInDesign="true" layout="-1" mand="false" name="input" prompt="Input" type="javax.swing.JTextField" usage="7"/>
+	  <item defaultValue="PERMANENT" help="For Storage of PERMANENT Type, the data are saved persistent in device memory . Storage of TEMPORARY Type  works the same way in every respect, except that all data is cleared each time the app closes." includeInDesign="true" layout="-1" mand="true" name="storageType" prompt="Storage Type" type="javax.swing.JComboBox" typeValue="PERMANENT|TEMPORARY" usage="7"/>
+      
+    </custom>
+  </widget>
+<widget name="Device Storage Button" type="Button">
+    <template type="source" value="StorageButton.wgt"/>
+    <template type="header" value="StorageHeader.wgt"/>
+    <custom>
+      <item defaultValue="PERMANENT" help="For Storage of PERMANENT Type, the data are saved persistent in device memory . Storage of TEMPORARY Type  works the same way in every respect, except that all data is cleared each time the app closes." includeInDesign="true" layout="-1" mand="true" name="storageType" prompt="Storage Type" type="javax.swing.JComboBox" typeValue="PERMANENT|TEMPORARY" usage="7"/>
+      <item help="Which storage function is called when the button is pressed." includeInDesign="true" layout="-1" mand="false" name="action" prompt="Button Action" type="javax.swing.JComboBox" typeValue="SET ITEM|GET ITEM|REMOVE ITEM|CLEAR" usage="7"/>
+      <item help="Item's key" includeInDesign="true" layout="-1" mand="false" name="itemkey" prompt="Item's Key" type="javax.swing.JTextField" usage="7"/>
+      <item help="Item's Value . This is applicable only for SET ITEM Action" includeInDesign="true" layout="-1" mand="false" name="itemvalue" prompt="Item's Value" type="javax.swing.JTextField" usage="7"/>
+    <item help="ID of Input  where to save storage value . This is applicable only for GET ITEM Action" includeInDesign="true" layout="-1" mand="false" name="inputID" prompt="inputID" type="javax.swing.JTextField" usage="7"/>
+    <item help="Auto click button when page is loaded." includeInDesign="true" layout="-1" mand="false" name="auto_click" prompt="Auto click" type="com.acquire.util.FocusCheckbox" usage="7"/>
+    </custom>
+  </widget>
+</widgets>

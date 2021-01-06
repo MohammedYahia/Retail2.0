@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><DataSetRoot DS_UID="48">
+  <verChequeIssue_Tc Authoriser="" Charges="" ChequeStatus="90" ChequeTypeNo="CURR.85243.0000002" ChqNoStart="150" DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1]" DS_UID="11" Id="" IssueDate="20180417" NumberIssued="50" SeriesId="CURR*GB*85243" StockReg="CHQ.GB0010001">
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="0" href="verChequeIssue_Tcs()/populate" rel="self" title="verChequeIssue_Tc_populate"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="1" href="verChequeIssue_Tcs()/metadata" rel="http://temenostech.temenos.com/rels/metadata" title="metadata"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="2" href="verChequeIssue_Tcs('CURR.85243.0000002')" rel="http://temenostech.temenos.com/rels/input" title="input deal"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="3" href="verChequeIssue_Tcs('CURR.85243.0000002')/validate" rel="http://temenostech.temenos.com/rels/validate" title="validate deal"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="4" href="verChequeIssue_Tcs('CURR.85243.0000002')/deliveryPreview" rel="http://temenostech.temenos.com/rels/deliveryPreview" title="delivery preview"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="5" href="verChequeIssue_Tcs()/copy" rel="http://temenostech.temenos.com/rels/copy" title="Copy deal"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="6" href="verChequeIssue_Tc/ContextEnquiries" rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/verChequeIssue_Tc" title="All Context Enquiries"/>
+    <DateTime DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].DateTime" DS_UID="7" DateTime="" subValuePosition="" valuePosition=""/>
+    <Inputter DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Inputter" DS_UID="8" Inputter="" subValuePosition="" valuePosition=""/>
+    <Override DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Override" DS_UID="9" Override="" subValuePosition="" valuePosition=""/>
+    <Notes DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Notes" DS_UID="10" Notes="Cheque book issued" subValuePosition="1" valuePosition="1"/>
+  </verChequeIssue_Tc>
+<verChequeIssue_Tc Authoriser="" Charges="" ChequeStatus="90" ChequeTypeNo="CURR.85243.0000002" ChqNoStart="150" DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1]" DS_UID="19" Id="" IssueDate="20180417" NumberIssued="50" SeriesId="CURR*GB*85243" StockReg="CHQ.GB0010001">
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="12" href="http://localhost:9089/Channels-iris/Channels.svc/errors" rel="self" title="ProcessErrors"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="13" href="http://localhost:9089/Channels-iris/Channels.svc/errors" rel="http://temenostech.temenos.com/rels/errors" title="errors"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="14" href="verChequeIssue_Tcs()/metadata" rel="http://temenostech.temenos.com/rels/metadata" title="metadata"/>
+    <DateTime DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].DateTime" DS_UID="15" DateTime="" subValuePosition="" valuePosition=""/>
+    <Inputter DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Inputter" DS_UID="16" Inputter="" subValuePosition="" valuePosition=""/>
+    <Override DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Override" DS_UID="17" Override="" subValuePosition="" valuePosition=""/>
+    <Notes DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Notes" DS_UID="18" Notes="Cheque book issued" subValuePosition="1" valuePosition="1"/>
+  </verChequeIssue_Tc>
+<verChequeIssue_Tc Authoriser="" Charges="" ChequeStatus="90" ChequeTypeNo="CURR.85243.0000002" ChqNoStart="150" DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1]" DS_UID="31" Id="" IssueDate="20180417" NumberIssued="50" SeriesId="CURR*GB*85243" StockReg="CHQ.GB0010001">
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="20" href="verChequeIssue_Tcs()/populate" rel="self" title="verChequeIssue_Tc_populate"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="21" href="verChequeIssue_Tcs()/metadata" rel="http://temenostech.temenos.com/rels/metadata" title="metadata"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="22" href="verChequeIssue_Tcs('CURR.85243.0000002')" rel="http://temenostech.temenos.com/rels/input" title="input deal"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="23" href="verChequeIssue_Tcs('CURR.85243.0000002')/validate" rel="http://temenostech.temenos.com/rels/validate" title="validate deal"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="24" href="verChequeIssue_Tcs('CURR.85243.0000002')/deliveryPreview" rel="http://temenostech.temenos.com/rels/deliveryPreview" title="delivery preview"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="25" href="verChequeIssue_Tcs()/copy" rel="http://temenostech.temenos.com/rels/copy" title="Copy deal"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="26" href="verChequeIssue_Tc/ContextEnquiries" rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/verChequeIssue_Tc" title="All Context Enquiries"/>
+    <DateTime DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].DateTime" DS_UID="27" DateTime="" subValuePosition="" valuePosition=""/>
+    <Inputter DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Inputter" DS_UID="28" Inputter="" subValuePosition="" valuePosition=""/>
+    <Override DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Override" DS_UID="29" Override="" subValuePosition="" valuePosition=""/>
+    <Notes DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Notes" DS_UID="30" Notes="Cheque book issued" subValuePosition="1" valuePosition="1"/>
+  </verChequeIssue_Tc>
+<verChequeIssue_Tc Authoriser="" Charges="" ChequeStatus="90" ChequeTypeNo="CURR.85243.0000002" ChqNoStart="150" DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1]" DS_UID="47" Id="" IssueDate="20180417" NumberIssued="50" SeriesId="CURR*GB*85243" StockReg="CHQ.GB0010001">
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="32" href="verChequeIssue_Tcs_Live('CURR.85243.0000002')" rel="self" title="verChequeIssue_Tc_Live"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="33" href="verChequeIssue_Tcs()/metadata" rel="http://temenostech.temenos.com/rels/metadata" title="metadata"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="34" href="http://localhost:9089/Channels-iris/Channels.svc/messages" rel="http://temenostech.temenos.com/rels/messages" title="Messages"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="35" href="verChequeIssue_Tcs('CURR.85243.0000002')" rel="http://temenostech.temenos.com/rels/input" title="input deal"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="36" href="verChequeIssue_Tcs('CURR.85243.0000002')/validate" rel="http://temenostech.temenos.com/rels/validate" title="validate deal"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="37" href="verChequeIssue_Tcs('CURR.85243.0000002')/reverse" rel="http://temenostech.temenos.com/rels/reverse" title="reverse deal"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="38" href="verChequeIssue_Tcs('CURR.85243.0000002')/review" rel="http://temenostech.temenos.com/rels/review" title="audit deal"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="39" href="verChequeIssue_Tcs('CURR.85243.0000002')/deliveryPreview" rel="http://temenostech.temenos.com/rels/deliveryPreview" title="delivery preview"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="40" href="verChequeIssue_Tcs()/copy" rel="http://temenostech.temenos.com/rels/copy" title="Copy deal"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="41" href="verChequeIssue_Tcs('CURR.85243.0000002')/paste" rel="http://temenostech.temenos.com/rels/paste" title="Paste deal"/>
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Links" DS_UID="42" href="verChequeIssue_Tc/ContextEnquiries" rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/verChequeIssue_Tc" title="All Context Enquiries"/>
+    <DateTime DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].DateTime" DS_UID="43" DateTime="" subValuePosition="" valuePosition=""/>
+    <Inputter DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Inputter" DS_UID="44" Inputter="" subValuePosition="" valuePosition=""/>
+    <Override DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Override" DS_UID="45" Override="" subValuePosition="" valuePosition=""/>
+    <Notes DS_REF_DATAGROUP_ATTRIBUTE_NAME="verChequeIssue_Tc[1].Notes" DS_UID="46" Notes="Cheque book issued" subValuePosition="1" valuePosition="1"/>
+  </verChequeIssue_Tc>
+</DataSetRoot>

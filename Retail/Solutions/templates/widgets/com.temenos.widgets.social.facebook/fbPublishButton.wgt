@@ -1,0 +1,39 @@
+$%SCRIPT$  
+  function GenerateButton(){  
+   var ecCode = "$$ITEM.EC_GENERATE().ESCAPEFORJS()$";
+   var navigation="$$ITEM.NAVIGATION()$";
+   var insertIndex = ecCode.indexOf(navigation);
+   var functionCall="return $$ITEM.ID()$onclick();"; 
+   ecCode = ecCode.substring(0, insertIndex) + functionCall + ecCode.substring(insertIndex+navigation.length);  
+   return ecCode 
+  };
+  GenerateButton();
+  $%ENDSCRIPT$
+ <script type = "text/javascript" charset="utf-8">
+ function $$ITEM.ID()$onclick() {
+FB.api(
+    "/me/feed",
+    "POST",
+    {
+     $%IF ITEM.message != ""$ "message": "$$ITEM.message$",$%ENDIF$
+     $%IF ITEM.caption != ""$ "caption": "$$ITEM.caption$",$%ENDIF$
+     $%IF ITEM.name != ""$ "name": "$$ITEM.name$",$%ENDIF$
+     $%IF ITEM.picture != ""$ "picture": "$$ITEM.picture$",$%ENDIF$
+     $%IF ITEM.link != ""$ "link": "$$ITEM.link$",$%ENDIF$
+     $%IF ITEM.description != ""$ "description": "$$ITEM.description$",$%ENDIF$    
+     $%IF ITEM.action_name != "" && ITEM.action_url != ""$ "actions": [{ name: '$$ITEM.action_name$', link: '$$ITEM.action_url$' }],$%ENDIF$   
+     $%IF ITEM.privacy != ""$ "privacy":{value:'$$ITEM.privacy$'}$%ENDIF$
+    },
+    function (response) {
+    console.log(response);
+      if (response && !response.error) {
+       $$ITEM.NAVIGATION()$
+      }
+      else {
+          if (response.error.message) alert(response.error.message);
+      }
+    }
+);
+
+}
+</script>

@@ -1,0 +1,19 @@
+$%IF ITEM.IS_HIDDEN() != "true"$
+<li class="$%IF ITEM.NUMBER_OF_CHILDREN() > 0$ has-children $%ENDIF$">
+	<a href="#">
+		<span class="tc-truncated-item ">
+			$%IF ITEM.DefaultIcon != ""$
+				<span class="tc-menu-icon icon-$$ITEM.DefaultIcon$"><span>$$ITEM.DefaultIcon$</span></span>
+			$%ENDIF$
+			$$ITEM.NavigationText$
+		</span>
+	</a>
+	<!-- $$ITEM.PARENT().TYPE()$ -->
+	<ul class="$%IF ITEM.PARENT().TYPE() == Menu$ cd-secondary-nav  $%ENDIF$ is-hidden" >
+	    $%IF ITEM.PARENT().TYPE() != Menu$
+	    	<li class="go-back"><a href="#0">$$ITEM.PARENT().NavigationText$</a></li>
+	    $%ENDIF$
+		$$FORMCONTENT$
+	</ul>
+</li>
+$%ENDIF$

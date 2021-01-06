@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><DataSetRoot DSAttrsNewLine="N" DSOmitXMLDecl="N" DSPrettyPrint="Y" DS_UID="1">
+  <!---->
+<UpcomingPaymentsList CreditAccount="20656" CreditAmount="150.00" CreditCcy="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="UpcomingPaymentsList[C]" DS_UID="0" DebitAccountNo="78131" DebitAmount="150.00" DebitCcy="USD" DebitValueDate="20160506" FromAcSortCode="601613" FromAcctName="Rolf Gerling" ReferenceNo="FT16097BXS8Q" ToAcSortCode="601613" ToAcctName="BANK OF NEW YORK" TransactionType="Account Transfer"/>
+</DataSetRoot>

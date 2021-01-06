@@ -1,0 +1,13 @@
+<div id="FloatPopupDiv" style="border: 2px solid #CCCCDD; background-color: #FFFFFF; height: 100%; width:100%;z-index: 200" >
+  <div id="toolbar" onmouseover="this.style.cursor = 'pointer'" style="height: 20px; width:100%;">
+	<div style="height: 19px;background: rgb(184, 184, 184) url(./images/toolBarGreyGradient.gif) repeat-x scroll 0% 0%; float: left; width: 100%" onmousedown="try {dragStart(event, 'FloatPopupDiv');} catch (e){}">
+		<div style="float: right; background-color:#ffffff; color: #b4b4b4; font-family: Arial; text-align: center; width: 30px" onclick="$$POPUPCANCEL$" >X<\/div>
+		<div style="clear: both"><\/div>
+	<\/div>
+  <\/div>
+  <div style="color: #4444BB; font-family: Arial; height:92%; width:100%;">
+	<iframe id="popupiframe" src="$$POPUPURL$" style="height:100%; width:100%; background-color: #FFFFFF; border: 0px">
+	  <p>Your browser does not support iframes.<\/p>
+	<\/iframe>
+  <\/div>
+<\/div>

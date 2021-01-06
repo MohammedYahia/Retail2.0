@@ -1,0 +1,46 @@
+<script>
+window.fbDataStoreGroup="$$:ITEM.dataStoreGroup$";
+function $$ITEM.ID()$_NAVIGATION(){
+    $$ITEM.NAVIGATION()$
+}
+
+function checkLoginState(fbDataStoreGroup) {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response,fbDataStoreGroup);
+    });
+}
+
+function statusChangeCallback(response,fbDataStoreGroup) {     
+    if (response.status === 'connected') { 
+        if (fbDataStoreGroup!="undefined"){  
+          FB.api('/me?fields=id,birthday,email,first_name,last_name,picture.type(large)', function(response) {
+             for (var prop in response) {  
+               elName=fbDataStoreGroup.toUpperCase()+"."+prop.toUpperCase();
+               if (document.getElementsByName(elName).length > 0)
+                	document.getElementsByName(elName)[0].value = prop=="picture"?response[prop].data.url:response[prop];
+             }
+             $$ITEM.ID()$_NAVIGATION();
+          });
+        }else {
+           $$ITEM.ID()$_NAVIGATION();   
+        }
+    } 
+    else if (response.status === 'not_authorized') {
+      document.getElementById('$$ITEM.ID()$_status').innerHTML = 'Please log into this app.';
+    } 
+    else {
+      document.getElementById('$$ITEM.ID()$_status').innerHTML = 'Please log into Facebook.';
+    }
+}
+</script>
+<fb:login-button scope="public_profile$%IF ITEM.email == "Y"$,email$%ENDIF$$%IF ITEM.publish == "Y"$,publish_actions$%ENDIF$"
+    $%IF ITEM.size != ""$ data-size="$$ITEM.size$"$%ENDIF$
+    $%IF ITEM.show-faces == "Y"$ data-show-faces="true"$%ENDIF$
+    $%IF ITEM.max-rows != ""$ data-max-rows="$$ITEM.max-rows$"$%ENDIF$
+    $%IF ITEM.auto-logout-link == "Y"$ data-auto-logout-link="true"$%ENDIF$
+    onlogin="checkLoginState(fbDataStoreGroup);">
+</fb:login-button>
+<div id="$$ITEM.ID()$_status">
+</div>
+
+$%INCLUDE widgets/com.temenos.widgets.social.facebook/inc_fbRegisterWidget.wgt$$%ENDINCLUDE$

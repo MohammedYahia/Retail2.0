@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>backgroundColor</key>
+	<string>#000000</string>
+	<key>alphaTransparency</key>
+	<real>0.5</real>
+	<key>height</key>
+	<integer>150</integer>
+	<key>width</key>
+	<integer>150</integer>
+	<key>spinnerType</key>
+	<string>0</string>
+	<key>textColor</key>
+	<string>#FFFFFF</string>
+	<key>textFontSize</key>
+	<integer>12</integer>
+</dict>
+</plist>

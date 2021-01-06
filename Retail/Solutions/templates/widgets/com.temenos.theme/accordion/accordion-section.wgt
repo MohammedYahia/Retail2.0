@@ -1,0 +1,124 @@
+<div id="$$ITEM.ID()$" style="$$ITEM.INLINE_STYLES().SectionStyle$ $%IF ITEM.IS_HIDDEN() == " true"$; display:
+ none;$%ENDIF$ " class=" tc-accordion $$ITEM.STYLES().SectionStyle$">
+	<input type="hidden" value="$$CONNECT_ACTIVE_TAB$" id="CAN_$$ITEM.ID()$" name="$$ITEM.COMPONENT_PREFIX()$CONNECT_ACTIVE_TAB" />
+	$$FORMCONTENT$
+</div>
+
+
+<script type="text/javascript" charset="utf-8">
+	//<![CDATA[
+	addWidget("ACCORDION_CONTAINER", "$$!NAMESPACE$", "$$ITEM.ID()$");
+
+	function beforeChangeTabACCORDION_CONTAINER$$ITEM.ID()$(ns, p_el) {
+
+		try {
+			var tabPaneName = buildCompID(ns, "Pane", p_el);
+			if (getTriggeredReason() != AJAX_RESPONSE_TRIGGER && $("#" + tabPaneName).is(".tc-accordion-pane")) {
+				var childIndex = $("#Wrapper_" + p_el).index() - 1;
+				$%IF ITEM.Mutli-Expanding != "Y" && ITEM.MAINTAIN_STATE == "Y"$
+				$("#$$ITEM.ID()$").accordion("option", "active", childIndex);
+				$%ENDIF$
+				return false;
+			}
+		} catch (e) {
+			throw new Error("Error in beforeChangeTabACCORDION_CONTAINER$$ITEM.ID()$(" + ns + ", " + p_el + ") cause: " + e.message);
+		}
+		return true;
+	}
+
+	function initACCORDION_CONTAINER$$ITEM.ID()$(ns) {
+		// add dummy spacing to accordions without icons if any of them have an icon 
+		var anyIcons = $("#$$ITEM.ID()$ .tc-accordion-icon:not(.tc-accordion-icon-state)").length > 0;
+		if (anyIcons) {
+			$("#$$ITEM.ID()$ h3.tc-accordion-header").each(function (i, o) {
+				if ($(o).find(".tc-accordion-icon:not(.tc-accordion-icon-state)").length == 0) {
+					$(o).find("a").before("<div style='display: inline-block; width: 2.2rem'></div>")
+				}
+			})
+		}
+
+		$%IF ITEM.Mutli-Expanding == "Y"$
+		//add the ui-active class to initially shown headers...
+		Hi.addHook("afterChangeTab", function () {
+			$(".tc-accordion-pane:visible").prev().addClass("ui-state-active ui-accordion-header-active")
+		})
+
+		$("#$$ITEM.ID()$ h3.tc-accordion-header").on("click", function (e) {
+			var $tcFooter = $(".tc-footer-container")
+			var top = parseInt($tcFooter.css("top"))
+			if (top > 10) {
+				$tcFooter.addClass("tc-tmp-footer-fixed")
+			}
+
+			$(this).next().slideToggle(400, "swing", function () {
+				if ($(this).is(":visible")) {
+					$(this).prev().addClass("ui-state-active ui-accordion-header-active")
+				} else {
+					$(this).prev().removeClass("ui-state-active ui-accordion-header-active")
+				}
+				var $tcFooter = $(".tc-footer-container")
+				$tcFooter.removeClass("tc-tmp-footer-fixed")
+				UtilModule.fixFooter();
+			});
+		})
+
+		$%IF ITEM.AutoExpand == "Y"$
+		$("#$$ITEM.ID()$ h3").first().addClass("ui-state-active ui-accordion-header-active")
+		$("#$$ITEM.ID()$ .tc-accordion-pane").first().css("display", "block")
+		$%ENDIF$
+
+		$%ELSE$
+		$("#$$ITEM.ID()$").accordion({
+			header: "h3.tc-accordion-header",
+			collapsible: true,
+			$%IF ITEM.AutoExpand != "Y"$ active: false, $%ENDIF$
+			heightStyle: "content",
+
+			beforeActivate: function (event, ui) {
+				//lock footer while animating...
+				var $tcFooter = $(".tc-footer-container")
+				var top = parseInt($tcFooter.css("top"))
+				if (top > 10) {
+					$tcFooter.addClass("tc-tmp-footer-fixed")
+				}
+			},
+
+			activate: function (event, ui) {
+				$("#CAN_$$ITEM.ID()$").val(ui.newHeader.find("a").attr('id'));
+				var acc_id = ui.newHeader.find("a").attr('id');
+				//var active_acc = sessionStorage.setItem('accordion_Act', acc_id);
+				var active_acc_name = sessionStorage.setItem('accordion_Act',ui.newHeader.find("a").text());
+				setFocusToFirst("$$!NAMESPACE$", null, ui.newPanel.attr('id'));
+				var $tcFooter = $(".tc-footer-container")
+				$tcFooter.removeClass("tc-tmp-footer-fixed")
+				UtilModule.fixFooter();
+			}
+
+		});
+
+		$%ENDIF$
+	}
+
+	$(function () {
+		initACCORDION_CONTAINER$$ITEM.ID()$()
+
+
+	})
+
+	if (sessionStorage.getItem('accordion_Act') != "") {
+		//$("#" + sessionStorage.getItem('accordion_Act')).parent().click();
+		var acc_name = sessionStorage.getItem('accordion_Act');
+		$("#$$ITEM.ID()$ h3.tc-accordion-header").each(function(){
+			if($(this).find("a").text() == acc_name) {
+				$(this).click();
+				$(this).next().find(".tc-info-tile").each(function(){
+					if($(this).parent().is(':visible')){
+						$(this).closest(".tc-accordion-pane").siblings().find(".tc-info-tile").parent().hide();
+					}
+				});
+			}
+			
+		});
+	}
+  //]]>
+</script>

@@ -1,0 +1,19 @@
+$%IF ITEM.IS_HIDDEN() != "true"$
+      <div class="swiper-slide $$ITEM.STYLES().SectionStyle$" 
+		style="
+                  $%IF ITEM.SectionLayout != "Auto"$width: 100%;$%ENDIF$
+                  $%IF ITEM.SectionLayout == "Specify in pixels (px)"$
+                        $%IF ITEM.MarginWidth != ""$margin-left: $$ITEM.MarginWidth$px;$%ENDIF$
+                        $%IF ITEM.SectionWidth != ""$width: $$ITEM.SectionWidth$px;$%ENDIF$
+                        $%IF ITEM.SectionHeight != ""$height: $$ITEM.SectionHeight$px;$%ENDIF$
+                  $%ENDIF$
+                  $%IF ITEM.SectionLayout == "Specify as percentage (%)"$
+                        $%IF ITEM.MarginWidth != ""$margin-left: $$ITEM.MarginWidth$%;$%ENDIF$
+                        $%IF ITEM.SectionWidth != ""$width: $$ITEM.SectionWidth$%;$%ENDIF$
+                        $%IF ITEM.SectionHeight != ""$height: $$ITEM.SectionHeight$%;$%ENDIF$
+                  $%ENDIF$
+                  $$ITEM.INLINE_STYLES().SectionStyle$
+      " >
+      	$$FORMCONTENT$
+      </div>
+$%ENDIF$    

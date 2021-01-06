@@ -1,0 +1,80 @@
+<div id="$$ITEM.ID()$_actions" style="display: none; align-items: center">
+      <a title="Refresh" href="#" id="$$ITEM.ID()$_reset" class="tc-icon tc-card-header-icon  tc-ripple-effect icon-refresh">
+              <span></span>
+      </a>
+      <a title="Change Orientation" href="#" id="$$ITEM.ID()$_dir" class="tc-icon tc-card-header-icon  tc-ripple-effect ">
+              <span></span>
+      </a>
+      <div title="Hybrid View" class="ecDIB  tc-form-control tc-half-answer-width tc-checkbox tc-checkbox-horiz" style="margin-top: 6px;">
+            <input type="checkbox" id="$$ITEM.ID()$_hybrid" value="Y" >
+            <label style="margin-left: 20px; margin-right: 0px;" for="$$ITEM.ID()$_hybrid">Hybrid</label>
+      </div>
+
+      <a title="Zoom Out" href="#" id="$$ITEM.ID()$_zoomOut" class="tc-icon tc-card-header-icon  tc-ripple-effect icon-circle-remove" >
+              <span></span>
+      </a>
+      <a title="Zoom In" href="#" id="$$ITEM.ID()$_zoomIn" class="tc-icon tc-card-header-icon icon-circle-add">
+              <span></span>
+      </a>
+      <div title="Search" id="$$ITEM.ID()$_treeFilter" style="position: relative; top:3px; margin-left: 1rem">
+              <input placeholder="Search..." type="text" class="filterinput tc-form-control tc-half-answer-width tc-default-input tc-rounded-1  " >
+              <span style="display: none" class="clearFilter ui-icon-close ui-icon"></span>
+              <span                       class="searchIcon  ui-icon-search ui-icon"></span>
+      </div>
+</div>
+
+
+<div id="$$ITEM.ID()$" style="position: relative; 
+                              $$ITEM.INLINE_STYLES().SectionStyle$
+                              $%IF ITEM.IS_HIDDEN() == "true"$; display: none;$%ENDIF$    
+                              $%IF ITEM.ContainerHeight != ""$height: $$ITEM.ContainerHeight$;$%ENDIF$
+                              " 
+                        class=" $$ITEM.STYLES().SectionStyle$"
+            >
+
+      <div id="$$ITEM.ID()$_treeContainer" style="position: relative">
+            $$ITEM.EC_GENERATE()$
+      </div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+//<![CDATA[
+$(function(){
+        //move buttons...
+        var $card = $("#$$ITEM.ID()$_reset").closest(".tc-card");
+        var $toolbar = $card.find(".tc-card-toolbar").first()
+        $toolbar.empty()
+            .append( $("#$$ITEM.ID()$_actions") )
+            .find("#$$ITEM.ID()$_actions").css("display", "inline-flex");
+              
+
+      function setup(fromAjax) {
+            "$$ITEM.dir$" == "ltr" ? $("#$$ITEM.ID()$_dir").addClass("icon-circle-down") :
+                                     $("#$$ITEM.ID()$_dir").addClass("icon-circle-right")
+
+            if ("$$ITEM.hybrid$" == "Y")
+                  $("#$$ITEM.ID()$_hybrid").attr("checked", "checked")
+
+            jsPlumb.ready(function () {
+                  TreeBuilder.create({
+                        id: "$$ITEM.ID()$",
+                        dir:  "$$ITEM.dir$",
+                        hybrid: "$$ITEM.hybrid$" == "Y",
+                        ajax: fromAjax, 
+                        spacing: "$$ITEM.spacing$",
+                        arrow: "$$ITEM.arrow$",
+                        momentum: true
+                  });                  
+            })
+      }
+      if (getTriggeredReason() == "")  {
+            setTimeout(function() {
+                  setup(false);
+            }, 100);
+      } else {
+            setup(true);
+      }
+})
+
+//]]>
+</script>

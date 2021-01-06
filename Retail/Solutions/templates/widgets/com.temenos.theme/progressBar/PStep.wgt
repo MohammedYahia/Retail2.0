@@ -1,0 +1,23 @@
+
+
+<span id="$$ITEM.ID()$"
+    $%IF ITEM.IS_HIDDEN() == "true"$ style="display: none" $%ENDIF$
+	
+	$%IF ITEM.PARENT().AllowBackNavigation != "N" && ITEM.VISITEDSTEP() == "true"$
+		onclick="$$ITEM.ONCLICK()$"
+	$%ENDIF$
+
+	$%IF ITEM.PARENT().AllowForwardNavigation == "Y" && ITEM.FUTURESTEP() == "true"$
+		onclick="$$ITEM.ONCLICK()$"
+	$%ENDIF$
+
+	class="$%IF ITEM.CURRENTSTEP() == "true"$ $$ITEM.PARENT().STYLES().CurrentStepStyle$ $%ENDIF$ 
+		   $%IF ITEM.VISITEDSTEP() == "true"$ $$ITEM.PARENT().STYLES().VisitedStepStyle$ $%ENDIF$
+		   $%IF ITEM.FUTURESTEP()  == "true"$ $$ITEM.PARENT().STYLES().FutureStepStyle$  $%ENDIF$"
+>
+			$%IF ITEM.DefaultIcon != ""$
+				<span class="tc-menu-icon icon-$$ITEM.DefaultIcon$"><span>$$ITEM.DefaultIcon$</span></span>
+			$%ENDIF$
+
+			$$ITEM.DISPLAY_TEXT()$
+</span>

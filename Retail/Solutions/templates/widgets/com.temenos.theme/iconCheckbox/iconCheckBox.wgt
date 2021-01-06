@@ -1,0 +1,43 @@
+<style type="text/css">
+#FS_$$ITEM.ID()$ input {
+    xdisplay: none;
+}
+#FS_$$ITEM.ID()$ input:checked + span {
+}
+#FS_$$ITEM.ID()$  input + span {
+    padding: 2px;
+    display: inline-block;
+}
+
+
+#FS_$$ITEM.ID()$ input:checked + span:after {
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+}
+</style>
+
+$$ITEM.EC_GENERATE()$
+
+<script type="text/javascript" charset="utf-8">
+//<![CDATA[
+$(function() {
+	var $fs = $("#$$ITEM.ID()$_0").closest("fieldset");
+	$fs.find("input:checked").parent().addClass("icon-$$ITEM.CheckedIcon$ tc-card-header-icon tc-checked")
+	$fs.find("input:not(:checked)").parent().addClass("icon-$$ITEM.UncheckedIcon$ tc-card-header-icon");
+
+	$fs.find("input").on("change", function(e) {
+		if ($(this).is(":checked")) {
+			$(this).parent()
+				.removeClass("icon-$$ITEM.UncheckedIcon$")
+				.addClass("icon-$$ITEM.CheckedIcon$ tc-checked")
+		} else {
+			$(this).parent()
+				.removeClass("icon-$$ITEM.CheckedIcon$ tc-checked")
+				.addClass("icon-$$ITEM.UncheckedIcon$")
+		}
+	});
+});
+  //]]>
+</script>

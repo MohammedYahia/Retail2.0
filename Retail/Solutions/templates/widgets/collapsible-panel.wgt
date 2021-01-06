@@ -1,0 +1,11 @@
+<div id="$$ITEM.ID()$" class="panel-collapse collapse">
+<div class="panel-body">$$FORMCONTENT$</div>
+</div>
+<script>
+$(document).ready(function(){
+  $("#$$ITEM.ID()$").hide();
+  $(".$$ITEM.buttonclass$").on("click", function(e){
+	  $("#$$ITEM.ID()$").toggle('slow');
+  });
+});
+</script>

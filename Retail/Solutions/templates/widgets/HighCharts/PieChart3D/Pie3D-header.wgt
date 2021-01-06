@@ -1,0 +1,65 @@
+<script src="./templates/widgets/HighCharts/js/highcharts.js"></script>
+<script src="./templates/widgets/HighCharts/js/highcharts-3d.js"></script>
+<script src="./templates/widgets/HighCharts/js/drilldown.js"></script>
+<script src="./templates/widgets/HighCharts/js/highcharts-more.js"></script>
+
+<script type="text/javascript">
+    /**
+     * HiCharts Combination Widgets
+     * @author ershad
+     */
+    Highcharts.theme = {
+        colors: [
+            {
+                linearGradient: [500, 0],
+                stops: [
+                    [0, 'rgb(247, 111, 111)'],
+                    [1, 'rgb(220, 54, 54)']
+                ]
+            },
+            {
+                linearGradient: [500, 0],
+                stops: [
+                    [0, 'rgb(120, 202, 248)'],
+                    [1, 'rgb(46, 150, 208)']
+                ]
+            },
+            {
+                linearGradient: [500, 0],
+                stops: [
+                    [0, 'rgb(136, 219, 5)'],
+                    [1, 'rgb(112, 180, 5)']
+                ]
+            },],
+        title: {
+            style: {color: '#324322',},
+        },
+        xAxis: [{
+            gridLineColor: '#dcdcdc',
+            gridLineWidth: 1,
+        }],
+        yAxis: [{ // Primary yAxis
+            gridLineColor: '#dcdcdc',
+            gridLineWidth: 1,
+        }],
+        tooltip: {
+            shared: true
+        },
+    };
+
+    // Apply the theme
+    var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
+
+    // Radialize the colors
+    Highcharts.getOptions().colors = $.map(Highcharts.getOptions().colors, function(color) {
+        return {
+            radialGradient: { cx: 0.5, cy: 0.3, r: 0.7 },
+            stops: [
+                [0, color],
+                [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+            ]
+        };
+    });
+
+
+</script>

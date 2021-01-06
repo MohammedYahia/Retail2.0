@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+	<widget name="WSC Autocomplete" type="Text">
+    <template type="header" value="inputAutoComplete-header.wgt"/>
+    <template type="source" value="inputAutoComplete.wgt"/>
+    <custom>
+      <item name="Data" prompt="Data" tab="General Settings" type="com.acquire.util.ui.Legend" typeValue="10|N"/>
+      <item help="Value field ID" mand="true" name="ValueQuestionID" prompt="Value Question ID" tab="General Settings" type="com.acquire.intelligentforms.ide.dialogs.RichTextField"/>
+      <item help="Key field ID" mand="false" name="KeyQuestionID" prompt="Key Question ID" tab="General Settings" type="com.acquire.intelligentforms.ide.dialogs.RichTextField"/>
+      <item help="Value field Dataitem" mand="true" name="ValueDataitem" prompt="Value field Dataitem" tab="General Settings" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property"/>
+      <item help="Apply button ID" mand="false" name="ApplyID" prompt="Apply button ID" tab="General Settings" type="com.acquire.intelligentforms.ide.dialogs.RichTextField"/>
+      <item includeInDesign="Always" layout="-1" mand="true" name="AutocompleteSuggestions" prompt="Datagroup used to store Autocomplete suggestions" tab="General Settings" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyGroupChooser" typeValue="Data Group Chooser|-1|true|true|com.acquire.intelligentforms.entities.PropertyGroup"/>
+      <item includeInDesign="Always" layout="-1" mand="true" name="AutocompleteSuggestionsNumber" prompt="Autocomplete suggestions number" tab="General Settings" type="javax.swing.JTextField"/>
+      <item defaultValue="Y" layout="-1" name="MultipleSelection" prompt="Multiple selection" tab="General Settings" type="javax.swing.JCheckBox"/>
+      <item defaultValue="item1" includeInDesign="Always" layout="-1" mand="true" name="MainItem" prompt="Item used to post data" tab="General Settings" type="javax.swing.JComboBox" typeValue="item1|item2|item3|item4"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="KeyItem" prompt="Item used to post key" tab="General Settings" type="javax.swing.JComboBox" typeValue="item1|item2|item3|item4"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="Recommended" prompt="Recommended dataitem" tab="General Settings" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property"/>
+      <item name="UI" prompt="UI" tab="General Settings" type="com.acquire.util.ui.Legend" typeValue="4|N"/>
+      <item defaultValue="700" layout="-1" name="Delay" prompt="Delay in milliseconds before launching autocomplete request" tab="General Settings" type="javax.swing.JTextField"/>
+      <item includeInDesign="Always" layout="-1" mand="true" name="GlobalCSSClass" prompt="Global CSS class" tab="General Settings" type="com.acquire.intelligentforms.ide.dialogs.RichTextField" typeValue="ALL_CHARS"/>
+      <item includeInDesign="Always" layout="-1" mand="true" defaultValue="No Results" name="noResLabel" prompt="No Results Label" tab="General Settings" type="javax.swing.JTextField" usage="15"/>
+      <item defaultValue="N" name="SearchIcon" prompt="Display Search icon" tab="Layer content" type="javax.swing.JCheckBox"/>
+      <item name="Item1" prompt="Item 1" tab="Layer content" type="com.acquire.util.ui.Legend" typeValue="5|N"/>
+      <item includeInDesign="Always" mand="true" name="Item1" prompt="1st item" tab="Layer content" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property"/>
+      <item defaultValue="N" name="HiddenItem1" prompt="Hidden" tab="Layer content" type="javax.swing.JCheckBox"/>
+      <item includeInDesign="Always" mand="false" name="LabelItem1" prompt="1st item label" tab="Layer content" type="javax.swing.JTextField" typeValue="ALL_CHARS" usage="15"/>
+      <item includeInDesign="Always" mand="false" name="CSSItem1" size="20" prompt="1st item CSS class" tab="Layer content" type="javax.swing.JTextField" typeValue="ALL_CHARS"/>
+      <item includeInDesign="Always" mand="false" name="MappedQuestionID1" prompt="Mapped Question ID" tab="Layer content" type="javax.swing.JTextField" typeValue="ALL_CHARS"/>
+      <item name="Item2" prompt="Item 2" tab="Layer content" type="com.acquire.util.ui.Legend" typeValue="5|N"/>
+      <item includeInDesign="Always" mand="false" name="Item2" prompt="2nd item" tab="Layer content" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property"/>
+      <item defaultValue="N" name="HiddenItem2" prompt="Hidden" tab="Layer content" type="javax.swing.JCheckBox"/>
+      <item includeInDesign="Always" mand="false" name="LabelItem2" prompt="2nd item label" tab="Layer content" type="javax.swing.JTextField" typeValue="ALL_CHARS" usage="15"/>
+      <item includeInDesign="Always" mand="false" name="CSSItem2" prompt="2nd item CSS class" tab="Layer content" type="javax.swing.JTextField" typeValue="ALL_CHARS"/>
+      <item includeInDesign="Always" mand="false" name="MappedQuestionID2" prompt="Mapped Question ID" tab="Layer content" type="javax.swing.JTextField" typeValue="ALL_CHARS"/>
+      <item name="Item3" prompt="Item 3" tab="Layer content" type="com.acquire.util.ui.Legend" typeValue="5|N"/>
+      <item includeInDesign="Always" mand="false" name="Item3" prompt="3rd item" tab="Layer content" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property"/>
+      <item defaultValue="N" name="HiddenItem3" prompt="Hidden" tab="Layer content" type="javax.swing.JCheckBox"/>
+      <item includeInDesign="Always" mand="false" name="LabelItem3" prompt="3rd item label" tab="Layer content" type="javax.swing.JTextField" typeValue="ALL_CHARS" usage="15"/>
+      <item includeInDesign="Always" mand="false" name="CSSItem3" prompt="3rd item CSS class" tab="Layer content" type="javax.swing.JTextField" typeValue="ALL_CHARS"/>
+      <item includeInDesign="Always" mand="false" name="MappedQuestionID3" prompt="Mapped Question ID" tab="Layer content" type="javax.swing.JTextField" typeValue="ALL_CHARS"/>
+      <item name="Item4" prompt="Item 4" tab="Layer content" type="com.acquire.util.ui.Legend" typeValue="5|N"/>
+      <item includeInDesign="Always" mand="false" name="Item4" prompt="4th item" tab="Layer content" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property"/>
+      <item defaultValue="N" name="HiddenItem4" prompt="Hidden" tab="Layer content" type="javax.swing.JCheckBox"/>
+      <item includeInDesign="Always" mand="false" name="LabelItem4" prompt="4th item label" tab="Layer content" type="javax.swing.JTextField" typeValue="ALL_CHARS" usage="15"/>
+      <item includeInDesign="Always" mand="false" name="CSSItem4" prompt="4th item CSS class" tab="Layer content" type="javax.swing.JTextField" typeValue="ALL_CHARS"/>
+      <item includeInDesign="Always" mand="false" name="MappedQuestionID4" prompt="Mapped Question ID" tab="Layer content" type="javax.swing.JTextField" typeValue="ALL_CHARS"/>
+      <item name="Item5" prompt="Item 5" tab="Layer content" type="com.acquire.util.ui.Legend" typeValue="5|N"/>
+      <item includeInDesign="Always" mand="false" name="Item5" prompt="5th item" tab="Layer content" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property"/>
+      <item defaultValue="N" name="HiddenItem5" prompt="Hidden" tab="Layer content" type="javax.swing.JCheckBox"/>
+      <item includeInDesign="Always" mand="false" name="LabelItem5" prompt="5th item label" tab="Layer content" type="javax.swing.JTextField" typeValue="ALL_CHARS" usage="15"/>
+      <item includeInDesign="Always" mand="false" name="CSSItem5" prompt="5th item CSS class" tab="Layer content" type="javax.swing.JTextField" typeValue="ALL_CHARS"/>
+      <item includeInDesign="Always" mand="false" name="MappedQuestionID5" prompt="Mapped Question ID" tab="Layer content" type="javax.swing.JTextField" typeValue="ALL_CHARS"/>
+    </custom>
+  </widget>
+</widgets>

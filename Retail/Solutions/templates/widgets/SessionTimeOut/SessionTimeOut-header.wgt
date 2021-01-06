@@ -1,0 +1,112 @@
+<script media="screen"  type="text/javascript">
+	function jq(myid) { 
+		return '#' + myid.replace(/(:|\.)/g,'\\$1');
+	}
+</script>
+
+<style type="text/css" media="screen">
+	/*.ui-icon {
+		width: 15px!important;
+		height: 15px!important;
+	}
+
+	.ui-widget-content {
+		background-image: none !important;
+		background-color: #F2F2F2 !important;				
+	}
+
+	.ui-corner-top, .ui-corner-bottom, .ui-corner-all {
+		border-radius: 3px;
+	}
+
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header  {
+		border: none;
+		$%COMMENT$ border-top: 1px solid #c1c1c1; $%ENDCOMMENT$
+		background: white;
+		color:#333;
+	}
+
+	.ui-state-default{
+		$%COMMENT$ overriding the style to use custom ones. $%ENDCOMMENT$
+		border: inherit;
+		background: inherit;
+	}
+
+	.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+		border: none;
+		$%COMMENT$ border-top: 1px solid #c1c1c1; $%ENDCOMMENT$
+		background: white;
+		color:#0983c4;
+	}
+
+	.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+		color: #333;
+	}
+
+	.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+		color:#0983c4;
+	}
+
+	.ui-accordion .ui-accordion-header a {
+		padding: 15px 10px 10px 40px;
+	}
+
+	.ui-state-default .ui-icon {
+		$%COMMENT$ background: url(./templates/widgets/jquery-ui/img/AccordClosed.png) no-repeat; $%ENDCOMMENT$
+	}
+
+	.ui-state-active .ui-icon{
+		$%COMMENT$ background: url(./templates/widgets/jquery-ui/img/AccordOpen.png) no-repeat; $%ENDCOMMENT$ 
+	}
+    
+	
+	.ui-accordion .ui-accordion-content{
+		margin-top: 0px;
+		margin-bottom: 0px;
+		border-bottom: 1px solid #c1c1c1;
+		top: 0px;
+		padding: 0px;
+	}
+
+	.ui-widget-content {
+		border: none;
+	}
+
+	.ui-accordion .ui-accordion-header {
+		margin-top: 0px;
+		margin-bottom: 0px;
+		border-top: none !important;
+		border-bottom: 1px solid #c1c1c1;
+	}
+
+	.HideAccordionButton {
+		width: 18px; 
+		height: 18px; 
+		background-image: url(./templates/widgets/jquery-ui/img/RemoveAccord.png); 
+		float: right
+	}
+
+	.ui-widget { font-family:inherit!important; font-size: inherit!important; }
+
+	.ui-widget-header { color: #222222; font-weight: bold; }
+
+	.ui-widget-header {  $%COMMENT$ background: none!important; border: none!important; $%ENDCOMMENT$ }
+
+	.ui-widget-content a { color:inherit;}
+
+	.ui-dialog-title{ margin:0!important;}
+
+	.ui-dialog-content{padding:0px!important;}
+	.ui-dialog-titlebar{border-bottom: 2px solid #DE1927!important; padding: 1.25em 22.5px!important;}
+	.ui-dialog-titlebar.ui-corner-all{border-radius:0px!important;}
+
+	.ui-widget-overlay { background: none repeat scroll 0 0 black !important; opacity: 0.50 !important}
+	*/
+
+	.dataTables_paginate .ui-button {
+		margin-right: 0.0 !important;
+		padding: 11px 15px;
+	}
+
+	/*.ui-buttonset{ margin-right:0!important;}*/
+</style>
