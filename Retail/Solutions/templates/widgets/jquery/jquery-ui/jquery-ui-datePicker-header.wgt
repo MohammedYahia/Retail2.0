@@ -1,0 +1,28 @@
+<!-- DatePicker $Revision: 1.6 $ -->
+
+$%IF ITEM.LOCALE != ""$
+    <script src="./templates/widgets/jquery/jquery-ui/js/i18n/datepicker-$$ITEM.LOCALE$.js"></script>
+$%ELSE$
+    $%IF LANGUAGE_MAP_CODE != ""$
+        <script src="./templates/widgets/jquery/jquery-ui/js/i18n/datepicker-$$LANGUAGE_MAP_CODE$.js"></script>
+    $%ELSE$
+        <script src="./templates/widgets/jquery/jquery-ui/js/i18n/datepicker-en-GB.js"></script>
+    $%ENDIF$
+$%ENDIF$
+    <script type="text/javascript">
+        function getPickerID( p_ns, p_fullID, p_runTimeID )
+        {
+            var compID = getCompID(p_ns, p_fullID);
+            if ( compID == null && compID != "" )
+            {
+                compID = "";
+            }
+            var rind = p_fullID.lastIndexOf("_R");
+            var rowPart = "";
+            if ( rind > 0 )
+            {
+                rowPart = p_fullID.substring(rind);
+            }
+            return p_ns + compID + p_runTimeID + "_picker" + rowPart;
+        }
+    </script>

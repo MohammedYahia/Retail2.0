@@ -1,0 +1,11 @@
+<a href="https://twitter.com/intent/tweet?button_hashtag=$$ITEM.hashtag-button$" 
+class="twitter-hashtag-button"
+$%IF ITEM.data-url != ""$ data-url="$$ITEM.data-url$"$%ENDIF$
+$%IF ITEM.data-lang != ""$ data-lang="$$ITEM.data-lang$"$%ENDIF$
+$%IF ITEM.data-text != ""$ data-text="$$ITEM.data-text$"$%ENDIF$
+$%IF ITEM.data-related != ""$ data-related="$$ITEM.data-related$ $%IF ITEM.data-related != ''$,$$ITEM.data-related$ $%ENDIF$"$%ENDIF$
+$%IF ITEM.data-size != ""$ data-size="$$ITEM.data-size$"$%ENDIF$
+$%IF ITEM.hashtag-button != ""$ data-hashtags="$$ITEM.hashtag-button$"$%ENDIF$
+$%IF ITEM.data-dnt == "Y"$ data-dnt="true"$%ENDIF$>Tweet $$ITEM.hashtag-button$</a>
+
+$%INCLUDE widgets/com.temenos.widgets.social.twitter/inc_twitterRegisterWidget.wgt$$%ENDINCLUDE$

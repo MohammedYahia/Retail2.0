@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><DataSetRoot DSAttrsNewLine="N" DSOmitXMLDecl="N" DSPrettyPrint="Y" DS_UID="2">
+  <!---->
+  <enqTcChequeRegisterSupplement ChequeNo="140180" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeRegisterSupplement[A]" DS_UID="0" Date="2016-04-23" Id="CURR.76341.140180" Status="STOPPED"/>
+  <enqTcChequeRegisterSupplement ChequeNo="140182" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeRegisterSupplement[A]" DS_UID="1" Date="2016-04-23" Id="CURR.76341.140182" Status="STOPPED"/>
+  <enqTcChequeRegisterSupplement ChequeNo="140183" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeRegisterSupplement[A]" DS_UID="2" Date="2016-04-23" Id="CURR.76341.140183" Status="STOPPED"/>
+  <enqTcChequeRegisterSupplement ChequeNo="140184" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeRegisterSupplement[A]" DS_UID="3" Date="2016-04-23" Id="CURR.76341.140184" Status="STOPPED"/>
+  <enqTcChequeRegisterSupplement ChequeNo="140185" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeRegisterSupplement[A]" DS_UID="4" Date="2016-05-27" Id="CURR.76341.5" Status="STOPPED"/>
+</DataSetRoot>

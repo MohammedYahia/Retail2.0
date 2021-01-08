@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+	<filter> 
+	<!-- this filter can be used to add HTTP response headers and specify HTTP methods that are valid for the requests -->
+		<description>
+            This filter adds http header parameters
+            
+            1. Http-Strict-Transport-Security
+                takes max-age in seconds. Curerently the vlaue is set for 1 year.
+                
+            2. X-FRAME-OPTIONS
+                XFRAMEOptionsValue can be set amongst the given below values.
+                DENY            -The page cannot be displayed in a frame, regardless of the site attempting to do so.
+                SAMEORIGIN      -The page can only be displayed in a frame on the same origin as the page itself.
+                ALLOW-FROM uri  -The page can only be displayed in a frame on the specified origin.
+            3. X-Content-Type-Options
+                'nosniff'
+            4. X-XSS-Protection
+                sets '1;mode=block' Enables XSS filtering. Rather than sanitizing the page, the browser will prevent rendering of the page if an attack is detected.
+            5. X-Permitted-CrossDomain-Policies
+                XPermittedCrossDomainValue takes the parameters as 'none' or other values suitable for the X-Permitted-CrossDomain-Policies. By default it is set as 'none'
+        </description>
+		<filter-name>SecurityFilter</filter-name>
+		<filter-class>com.temenos.connect.filter.HTTPHeaderFilter</filter-class>
+        <init-param>
+            <param-name>Strict-Transport-Security</param-name>
+            <param-value>max-age=31536000;includeSubDomains</param-value>
+        </init-param>
+		<init-param>
+			<param-name>X-FRAME-OPTIONS</param-name>
+			<param-value>DENY</param-value>
+        </init-param>
+		<init-param>
+			<param-name>X-Content-Type-Options</param-name>
+			<param-value>nosniff</param-value>
+        </init-param>
+		<init-param>
+			<param-name>X-XSS-Protection</param-name>
+			<param-value>1;mode=block</param-value>
+        </init-param>
+		<init-param>
+			<param-name>X-Permitted-CrossDomain-Policies</param-name>
+			<param-value>none</param-value>
+        </init-param>
+	</filter>
+	
+	<filter-mapping>
+	<filter-name>SecurityFilter</filter-name>
+	<!--presently Security filter is implemented for all the pages-->
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	
+<!-- Start  Filter required for OpenID Connect Authentication -->
+ <!-- 
+    <filter>
+        <filter-name>oidcAuthenticationFilter</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath:META-INF/spring-oidc-authenticator.xml
+        </param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+	
+	<filter>
+		<filter-name>AuthenticationFilter</filter-name>
+		<filter-class>com.temenos.technology.t24Security.AuthFilter</filter-class>
+		<init-param>
+			<param-name>PROPERTIES</param-name>
+			<param-value>SSOAPI.properties</param-value>
+		</init-param>
+	</filter>
+  
+    <filter-mapping>
+        <filter-name>oidcAuthenticationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>AuthenticationFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+-->
+<!-- End  Filter required for OpenID Connect Authentication   -->
+
+	<!-- Used for the CallBack in TCIB ***** Start here ****** -->
+    <!-- Set the servletcontroller - load-on-startup value as 1 before enabling this servlet entries -->
+	<!--
+	<servlet>
+		<servlet-name>ClientAppServlet</servlet-name>
+		<servlet-class>com.temenos.connect.servlet.ClientAppServlet</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	
+	-->	
+	<!-- Used for the CallBack in TCIB ****** End here ****** -->
+	<servlet>
+		<servlet-name>servletcontroller</servlet-name>
+		<servlet-class>com.acquire.intelligentforms.presentation.ServletController</servlet-class>
+		<init-param>
+			<param-name>USE_SCRIPT_FILTER_FOR_DICTIONARY</param-name>
+			<param-value>N</param-value>
+		</init-param>
+		<init-param>
+			  <param-name>SESSION_TEMP_DIR_ROOT</param-name>
+			  <param-value>temp/edge_SESSIONS</param-value>
+		</init-param>
+		<init-param>
+			<param-name>SCRIPT_FILTER_CHECKS</param-name>
+			<param-value>&lt;script|javascript|vbscript|location=|onmouseover=|http://|src=|&lt;iframe|&lt;svg|&lt;img|&lt;img</param-value>
+		</init-param>
+		<load-on-startup>1000</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>ajaxservletcontroller</servlet-name>
+		<servlet-class>com.acquire.intelligentforms.presentation.AjaxServletController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>helpservletcontroller</servlet-name>
+		<servlet-class>com.acquire.intelligentforms.presentation.HelpServletController</servlet-class>
+	</servlet>
+	<!-- Commenting the spell check feature as it is has security leakage 
+	<servlet>
+		<servlet-name>spellcheck_entry</servlet-name>
+		<servlet-class>com.acquire.intelligentforms.presentation.spellcheck_entry</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>spellcheck_results</servlet-name>
+		<servlet-class>com.acquire.intelligentforms.presentation.spellcheck_results</servlet-class>
+	</servlet>
+	-->
+	<servlet>
+		<servlet-name>chartservletcontroller</servlet-name>
+		<servlet-class>com.acquire.intelligentforms.presentation.ChartServletController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>portletservletcontroller</servlet-name>
+		<servlet-class>com.acquire.intelligentforms.presentation.PortletServletController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ServerFileRetrievalServlet</servlet-name>
+		<servlet-class>com.temenos.connect.servlet.ServerFileRetrievalServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>TCImageService</servlet-name>		
+        <servlet-class>com.temenos.connect.servlet.ImageProxyServlet</servlet-class>
+    </servlet>	
+	<servlet>
+    <servlet-name>mobileUpdateServlet</servlet-name>
+    <servlet-class>com.acquire.intelligentforms.MobileUpdateManagerServlet</servlet-class>
+  </servlet>
+    <servlet>
+		<servlet-name>DocumentDownloadServlet</servlet-name>
+		<servlet-class>com.efstech.temenos.download.DocumentDownloadServlet</servlet-class>
+	</servlet>
+  <servlet>
+        <servlet-name>dataservletcontroller</servlet-name>
+        <servlet-class>com.acquire.intelligentforms.presentation.json.servlets.DataStoreServletController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>viewservletcontroller</servlet-name>
+        <servlet-class>com.acquire.intelligentforms.presentation.json.servlets.ViewServletController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>jsonajaxservletcontroller</servlet-name>
+        <servlet-class>com.acquire.intelligentforms.presentation.json.servlets.JsonAjaxServletController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+		<servlet-name>servletcontroller</servlet-name>
+		<url-pattern>/servletcontroller</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ajaxservletcontroller</servlet-name>
+		<url-pattern>/ajaxservletcontroller</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>helpservletcontroller</servlet-name>
+		<url-pattern>/helpservletcontroller</url-pattern>
+	</servlet-mapping>
+	<!-- Commenting the spell check feature as it is has security leakage 
+	<servlet-mapping>
+		<servlet-name>spellcheck_entry</servlet-name>
+		<url-pattern>/spellcheck_entry</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>spellcheck_results</servlet-name>
+		<url-pattern>/spellcheck_results</url-pattern>
+	</servlet-mapping>
+	-->
+		<servlet-mapping>
+		<servlet-name>chartservletcontroller</servlet-name>
+		<url-pattern>/chartServletController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>portletservletcontroller</servlet-name>
+		<url-pattern>/portletServletController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+ 		<servlet-name>ServerFileRetrievalServlet</servlet-name>
+		<url-pattern>/ServerFileRetrievalServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	    <servlet-name>TCImageService</servlet-name>
+	    <url-pattern>/TCImageService/*</url-pattern>
+    </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>mobileUpdateServlet</servlet-name>
+    <url-pattern>/mobileUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DocumentDownloadServlet</servlet-name>
+    <url-pattern>/DocumentDownloadServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+	<!-- Used for the CallBack in TCIB ****** Start here ****** -->
+	<!--       
+	<servlet-mapping>
+		<servlet-name>ClientAppServlet</servlet-name>
+		<url-pattern>/ClientAppServlet</url-pattern>
+	</servlet-mapping>
+	-->
+	<!-- Used for the CallBack in TCIB ****** End here ****** -->
+  <!-- 
+    Below elements are used to control the cookie creation in the client machine. Please enable these items for JBOSS, WebLogic. But in WAS, cookies are controlled 
+    over App server level itself.    
+    If App server is enabled with HTTPS connection, enable the secure flag on the cookie -->
+	<!--<session-config>
+		<cookie-config>
+            <secure>true</secure>
+			<http-only>true</http-only>
+		</cookie-config>
+	</session-config> -->
+	
+	<error-page>
+		<error-code>400</error-code>
+		<location>/WEB-INF/config/modelbank/400.jsp</location>
+ 	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/WEB-INF/config/modelbank/403.jsp</location>
+ 	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/config/modelbank/404.jsp</location>
+ 	</error-page>
+	<error-page>
+		<error-code>405</error-code>
+		<location>/WEB-INF/config/modelbank/405.jsp</location>
+ 	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/config/modelbank/500.jsp</location>
+ 	</error-page>
+	<error-page>
+		<error-code>501</error-code>
+		<location>/WEB-INF/config/modelbank/501.jsp</location>
+ 	</error-page>
+	<error-page>
+		<error-code>502</error-code>
+		<location>/WEB-INF/config/modelbank/502.jsp</location>
+ 	</error-page>
+	<error-page>
+		<error-code>503</error-code>
+		<location>/WEB-INF/config/modelbank/503.jsp</location>
+ 	</error-page>
+	<error-page>
+		<error-code>504</error-code>
+		<location>/WEB-INF/config/modelbank/504.jsp</location>
+ 	</error-page>
+ 	<!-- Security Stuff -->
+	<security-constraint>
+		<!-- With no role-name in the auth-constraint, this blocks access to below files even when authenticated -->
+    	<web-resource-collection>
+        		<web-resource-name>Retail</web-resource-name>
+        		<url-pattern>*.tpl</url-pattern>
+				<url-pattern>*.wgt</url-pattern>
+				<url-pattern>*.log</url-pattern>
+				<url-pattern>*.xml</url-pattern>
+				<url-pattern>*.xsl</url-pattern>
+				<url-pattern>*.java</url-pattern>
+				<url-pattern>/html/calendar.html</url-pattern>
+				<url-pattern>/html/calendarPopup.html</url-pattern>
+				<url-pattern>/html/getOfflineFileName.html</url-pattern>
+				<url-pattern>/html/help.html</url-pattern>
+				<url-pattern>/html/help_float.html</url-pattern>
+				<url-pattern>/html/help_within_id.html</url-pattern>
+				<url-pattern>/html/offlineController.html</url-pattern>
+				<url-pattern>/html/popup.html</url-pattern>
+				<url-pattern>/html/save.html</url-pattern>
+		</web-resource-collection>
+    	<auth-constraint>
+		</auth-constraint> 	
+	</security-constraint>
+    <servlet-mapping>
+        <servlet-name>dataservletcontroller</servlet-name>
+        <url-pattern>/getData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>viewservletcontroller</servlet-name>
+        <url-pattern>/getView</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>jsonajaxservletcontroller</servlet-name>
+        <url-pattern>/doAction</url-pattern>
+    </servlet-mapping>
+</web-app>

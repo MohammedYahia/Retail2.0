@@ -1,0 +1,31 @@
+<widget type="Item:GoogleMapV3" name="Google Map V3">
+        <template type="header" value="./templates/widgets/com.edgeipk.widgets.google/mapsv3/header.wgt" />
+        <template type="source" value="./templates/widgets/com.edgeipk.widgets.google/mapsv3/instance.wgt" />
+
+		<custom>
+
+			<item name="WIDTH" prompt="Width (px)" type="javax.swing.JTextField" />
+			<item name="HEIGHT" prompt="Height (px)" type="javax.swing.JTextField" />
+			<item name="ENABLEMAPTYPES" prompt="Enable Map Types" type="javax.swing.JComboBox" typeValue="true^Yes|false^No" defaultValue="true"/>
+			<item name="INITMAPTYPE" prompt="Initial Map Type" type="javax.swing.JComboBox" typeValue="ROADMAP^Road Map|SATELLITE^Satellite|TERRAIN^Terrain|HYBRID^Hybrid" defaultValue="ROADMAP"/>
+			<item name="MAPTYPES" prompt="Available Map Types" type="javax.swing.JComboBox" typeValue="ROADMAP^Road Map|SATELLITE^Satellite|TERRAIN^Terrain|HYBRID^Hybrid" defaultValue="ROADMAP"/>
+			<item name="ENABLENAV" prompt="Enable Navigation Control" type="javax.swing.JComboBox" typeValue="true^Yes|false^No" defaultValue="true"/>
+			<item name="NAVTYPE" prompt="Navigation Control Style" type="javax.swing.JComboBox" typeValue="DEFAULT^Auto|ANDROID^Small Android|SMALL^Zoom Only|ZOOM_PAN^Large Control" defaultValue="DEFAULT"/>
+			<item name="ENABLESCALE" prompt="Enable Scale Control" type="javax.swing.JComboBox" typeValue="true^Yes|false^No" defaultValue="true"/>
+			<item name="SCALEPOS" prompt="Scale Control Position" type="javax.swing.JComboBox" typeValue="BOTTOM^Bottom|BOTTOM_LEFT^Bottom Left|BOTTOM_RIGHT^Bottom Right|LEFT^Left|RIGHT^Right|TOP^Top|TOP_LEFT^Top Left|TOP_RIGHT^Top Right" defaultValue="TOP_LEFT"/>
+			<item name="DRAGGABLE" prompt="Draggable" type="javax.swing.JComboBox" typeValue="true^Yes|false^No" defaultValue="true"/>
+			<item name="DISABLEDCLICKZOOM" prompt="Disable Double Click Zoom" type="javax.swing.JComboBox" typeValue="true^Yes|false^No" defaultValue="false"/>
+			<item name="DEFLONGITUDE" prompt="Default Longitude" type="javax.swing.JTextField" />
+			<item name="DEFLATITUDE" prompt="Default Latitide" type="javax.swing.JTextField" />
+			<item name="DEFZOOM" prompt="Default Zoom" type="javax.swing.JTextField" defaultValue="6"/>
+			<item name="ADDRESS" prompt="Address" type="javax.swing.JTextField" />
+			<item name="LONGITUDE" prompt="Longitude" type="javax.swing.JTextField" />
+			<item name="LATITUDE" prompt="Latitide" type="javax.swing.JTextField" />
+			<item name="ZOOM" prompt="Zoom" type="javax.swing.JTextField" defaultValue="14"/>
+			<item name="GEOLOCATION" prompt="Geolocation" type="javax.swing.JComboBox" typeValue="true^Yes|false^No" defaultValue="false"/>
+			<item name="SEARCH" prompt="Enable Search" type="javax.swing.JComboBox" typeValue="true^Yes|false^No" default="false"/>
+			<item name="PLACES" prompt="Places" type="javax.swing.JComboBox" typeValue="atm^ATM|hotel^HOTEL" />
+			<item name="RADIUS" prompt="Search Radius" type="javax.swing.JTextField" />
+
+		</custom>
+	</widget>

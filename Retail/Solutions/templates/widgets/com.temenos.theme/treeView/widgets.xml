@@ -1,0 +1,22 @@
+<widgets>
+	<widget name="tw-treeContainer" type="Table" rootType="Linear Table">
+		<template type="header" value="treeContainer-header.wgt" />
+		<template type="source" value="treeContainer.wgt" />
+		<custom>
+			<item name="ContainerHeight" prompt="Container Height (include units)" includeInDesign="false" />
+			<item name="arrow"  		 prompt="Show Arrows?" includeInDesign="false" type="javax.swing.JCheckBox" />
+			<item name="dir"    		 prompt="Direction?"   includeInDesign="false" type="javax.swing.JComboBox" typeValue="ttb^Top To Bottom|ltr^Left To Right" />
+			<item name="hybrid"  		 prompt="Hybrid View?" includeInDesign="false" type="javax.swing.JCheckBox" />
+			<item name="spacing" 		 prompt="Node Spacing" includeInDesign="false" defaultValue="1.4" />
+		</custom>
+	</widget>
+	<widget name="tw-treeNode" type="Section">
+		<template type="source" value="treeNode.wgt" />
+		<custom>
+			<item name="id"       prompt="Node id data item" 		includeInDesign="false" type="PropertyChooser" /> 
+			<item name="parentId" prompt="Parent node data item" 	includeInDesign="false" type="PropertyChooser" />
+			<item name="nodeWidth" prompt="Node width (include units)" 		includeInDesign="false" />
+			<!--item name="layout"   hint="A value of 1 will layout node to left of parent, rather than underneath" prompt="Layout" type="PropertyChooser" /-->
+		</custom>
+	</widget>
+</widgets>

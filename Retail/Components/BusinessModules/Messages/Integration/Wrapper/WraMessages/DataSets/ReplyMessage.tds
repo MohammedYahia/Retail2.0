@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><DataSetRoot DSAttrsNewLine="N" DSOmitXMLDecl="N" DSPrettyPrint="Y" DS_UID="-1">
+  <!---->
+  <ReplyMessage DS_REF_DATAGROUP_ATTRIBUTE_NAME="ReplyMessage[1]" DS_UID="-1" FromCustomer="Rolf Gerling" Id="SM1611320473" MessageId="SM1611320473" MessageforDataset="Thank you." ParentMessageId="SM1610306126" Subject="WELCOME" ToDao="Retail Banking">
+    <Message DS_REF_DATAGROUP_ATTRIBUTE_NAME="ReplyMessage[1].Message[1]" DS_UID="-1" Message="Thank you" subValuePosition="1" valuePosition="1"/>
+  </ReplyMessage>
+</DataSetRoot>

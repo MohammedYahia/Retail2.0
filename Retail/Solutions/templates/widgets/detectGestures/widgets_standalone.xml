@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><widgets>
+  <widget callback="false" icon="images/cordova_16.png" name="detectShake" type="Button">
+    <template type="source" value="buttonBody.wgt"/>
+    <template type="header" value="buttonHeader.wgt"/>
+    <custom>
+      <item help="Gestures to be detected" includeInDesign="true" layout="-1" mand="false" name="gesture" prompt="Gestures" type="com.acquire.util.ui.Legend" typeValue="2|N" usage="7"/>
+      <item defaultValue="true" help="Detect shake gesture" layout="-1" mand="true" name="ShakeOpt" prompt="Shake" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item defaultValue="false" help="Detect face down gesture" layout="-1" mand="true" name="UpSideDown" prompt="Face down" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item defaultValue="1000" help="How often to retrieve the Acceleration in milliseconds." includeInDesign="true" layout="-1" mand="true" name="Frequency" prompt="Frequency" type="javax.swing.JTextField" usage="7"/>
+      <item help="Generate body of the button" includeInDesign="true" layout="-1" mand="false" name="button_body" prompt="Generate body of the button " type="com.acquire.util.FocusCheckbox" usage="7"/>
+    </custom>
+  </widget>
+</widgets>

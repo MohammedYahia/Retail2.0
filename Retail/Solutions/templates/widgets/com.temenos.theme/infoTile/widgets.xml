@@ -1,0 +1,23 @@
+<widgets>
+
+	<widget name="tw-Info Tile" type="Section">
+		<template type="source" value="infoTile.wgt" />
+		<custom>
+			<item name="CountPosition" type="javax.swing.JComboBox" typeValue="left|center|right|hidden" defaultValue="left"  includeInDesign="false"/>
+			<item name="LabelPosition" type="javax.swing.JComboBox" typeValue="left|center|right|hidden" defaultValue="center" includeInDesign="false"/>
+			<item name="IconPosition"  type="javax.swing.JComboBox" typeValue="left|center|right|hidden" defaultValue="right" includeInDesign="false"/>
+
+            <item name="RunAnimation"   prompt="Run Animation"  type="com.acquire.util.FocusCheckbox"  tab="Animation Settings" />
+            <item applicableCondition="RunAnimation=='Y'" name="Duration"       prompt="Animation Duration  (s)"    tab="Animation Settings" />
+            <item applicableCondition="RunAnimation=='Y'" name="InitialOpacity" prompt="Initial Opacity (0-1)"  tab="Animation Settings" />
+            <item applicableCondition="RunAnimation=='Y'" name="InitialScale"   prompt="Initial Scale (0-1)"    tab="Animation Settings" />
+            <item applicableCondition="RunAnimation=='Y'" name="InitialXOffset" prompt="Initial X Offset (specify units)"  tab="Animation Settings" />
+            <item applicableCondition="RunAnimation=='Y'" name="InitialYOffset" prompt="Initial Y Offset (specify units)"  tab="Animation Settings" />
+
+            <item applicableCondition="RunAnimation=='Y'" name="Perspective"      prompt="Perspective (specify units)" hint="Value set on parent of card" tab="Animation Settings" />
+            <item applicableCondition="RunAnimation=='Y'" name="InitialXRotation" prompt="Initial X Rotation (deg)"  tab="Animation Settings" />
+            <item applicableCondition="RunAnimation=='Y'" name="InitialYRotation" prompt="Initial Y Rotation (deg)"  tab="Animation Settings" />            
+
+		</custom>
+	</widget>
+</widgets>

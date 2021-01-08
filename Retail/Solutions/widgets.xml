@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?><widgets>
+  <widget name="collapsible-panels" type="Section">
+    <template type="source" value="./templates/widgets/collapsible-panel.wgt"/>
+    <custom>
+      <item name="buttonclass" prompt="Class name of button to click" type="javax.swing.JTextField"/>
+    </custom>
+  </widget>
+  <widget name="Section Downarrow Toggle" type="Button">
+    <template type="source" value="./templates/widgets/sectionToggle.wgt"/>
+    <template type="header" value="./templates/widgets/sectionToggle-header.wgt"/>
+    <custom>
+      <item name="SECTION_TO_TOGGLE" prompt="Section to toggle"/>
+      <item defaultValue="images/TCIBIcons/down.png" name="IMAGE_PATH" prompt="Download Icon Path"/>
+    </custom>
+  </widget>
+  <widget icon="/images/widget_window.gif" name="DownloadPopup" type="Section">
+    <template type="source" value="./templates/widgets/Downloadbox/Downloadbox.wgt"/>
+    <template type="header" value="./templates/widgets/Downloadbox/Downloadbox-header.wgt"/>
+    <custom>
+      <item name="buttonid" prompt="Click button Class" tab="Window Details"/>
+      <item name="X_POS" prompt="Inital X Offset" tab="Window Details"/>
+      <item name="Y_POS" prompt="Inital Y Offset" tab="Window Details"/>
+      <item defaultValue="320" name="WIDTH" prompt="Inital Width" tab="Window Details"/>
+      <item defaultValue="240" name="HEIGHT" prompt="Inital Height" tab="Window Details"/>
+      <item defaultValue="" name="TITLE" prompt="Window title" tab="Window Details"/>
+      <item name="MODAL" prompt="Modal" tab="Window Details" type="javax.swing.JCheckBox"/>
+    </custom>
+  </widget>
+  <widget name="AttachmentDownload" type="Button">
+    <template type="source" value="./templates/widgets/AttachmentDownload.wgt"/>
+    <custom>
+      <item includeInDesign="Always" layout="-1" mand="false" name="TARGET_URL" type="javax.swing.JTextField" usage="7"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="ON_CLICK_ACTION" type="javax.swing.JTextField" usage="7"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="LINK_TEXT" type="javax.swing.JTextField" usage="15"/>
+    </custom>
+  </widget>
+  <widget name="CustomLinkButton" type="Button">
+    <template type="source" value="./templates/widgets/CustomLinkButton.wgt"/>
+    <custom>
+      <item includeInDesign="true" layout="-1" mand="false" name="LINK" type="com.acquire.intelligentforms.ide.dialogs.RichTextField|MULTI_RICH_VALUES" usage="7"/>
+      <item includeInDesign="true" layout="-1" mand="false" name="CLASS" type="javax.swing.JTextField" usage="7"/>
+      <item includeInDesign="true" layout="-1" mand="false" name="TEXT" type="javax.swing.JTextField" usage="15"/>
+    </custom>
+  </widget>
+  <widget name="CustomLinkAHref" type="Button">
+    <template type="source" value="./templates/widgets/CustomLinkaHref.wgt"/>
+    <custom>
+      <item includeInDesign="true" layout="-1" mand="false" name="LINK" type="com.acquire.intelligentforms.ide.dialogs.RichTextField|MULTI_RICH_VALUES" usage="7"/>
+      <item includeInDesign="true" layout="-1" mand="false" name="CLASS" type="javax.swing.JTextField" usage="7"/>
+      <item includeInDesign="true" layout="-1" mand="false" name="TEXT" type="javax.swing.JTextField" usage="15"/>
+    </custom>
+  </widget>
+  <widget name="Google Map V3 Input" type="Text">
+    <template type="source" value="./templates/widgets/com.edgeipk.widgets.google/mapsv3/SearchInput.wgt"/>
+    <custom>
+      <item includeInDesign="true" layout="-1" mand="false" name="CLASS" type="javax.swing.JTextField" usage="7"/>
+      <item includeInDesign="true" layout="-1" mand="false" name="PLACEHOLDER" type="javax.swing.JTextField" usage="15"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="STYLE" type="javax.swing.JTextField" usage="7"/>
+    </custom>
+  </widget>
+  <widget name="Custom detectGestures" type="Button">
+    <template type="source" value="./templates/widgets/detectGestures/buttonBody.wgt"/>
+    <template type="header" value="./templates/widgets/detectGestures/buttonHeader.wgt"/>
+    <custom>
+      <item help="Gestures to be detected" includeInDesign="true" layout="-1" mand="false" name="gesture" prompt="Gestures" type="com.acquire.util.ui.Legend" typeValue="2|N" usage="7"/>
+      <item defaultValue="true" help="Detect shake gesture" layout="-1" mand="true" name="ShakeOpt" prompt="Shake" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item defaultValue="false" help="Detect face down gesture" layout="-1" mand="true" name="UpSideDown" prompt="Face down" type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item defaultValue="1000" help="How often to retrieve the Acceleration in milliseconds." includeInDesign="true" layout="-1" mand="true" name="Frequency" prompt="Frequency" type="javax.swing.JTextField" usage="7"/>
+      <item help="Generate body of the button" includeInDesign="true" layout="-1" mand="false" name="button_body" prompt="Generate body of the button " type="com.acquire.util.FocusCheckbox" usage="7"/>
+    </custom>
+  </widget>
+  <widget callback="false" displayName="Hybrid Offline Navigation" name="HybridOfflineNavigation" type="Button">
+    <template type="source" value="./templates/widgets/com.temenos.widgets.hybrid.offlineNavigation/hybridOfflineNavigation.wgt"/>
+    <custom>
+      <item help="Select Phase to Navigate to if the Device is Off-line" includeInDesign="true" layout="-1" mand="true" name="GoToPhaseIfOffline" prompt="Select Phase to Navigate to if the Device is Off-line" type="com.acquire.intelligentforms.ide.producteditor.PhaseChooser" typeValue="Phase Chooser|-1|true|true|com.acquire.intelligentforms.entities.Phase" usage="7"/>
+      <item includeInDesign="true" layout="-1" mand="false" name="CLASS" type="javax.swing.JTextField" usage="7"/>
+      <item includeInDesign="true" layout="-1" mand="false" name="CUSTOMSTYLE" type="javax.swing.JTextField" usage="7"/>
+      <item includeInDesign="true" layout="-1" mand="false" name="TEXT" type="com.acquire.intelligentforms.ide.dialogs.RichTextField|RICH_VALUES" usage="15"/>
+    </custom>
+  </widget>
+  <widget callback="false" displayString="Cordova Back Button Redirect" icon="/images/cordova_16.png" name="Hard Back Button Redirect" type="Button">
+    <template type="source" value="./templates/widgets/BackHardButton/backButton.wgt"/>
+    <custom>
+      <item help="Generate body of the button" includeInDesign="true" layout="-1" mand="false" name="button_body" prompt="Generate body of the button " type="com.acquire.util.FocusCheckbox" usage="7"/>
+      <item help="Rather than use the back navigation from Cordova we want to trap the request and forward it on to a given button id, this will trigger the 'click' event on that button" includeInDesign="For Specific Usage" layout="-1" mand="false" name="Target_Button_Id" prompt="Enter the button id you want the device hard back to be deferred to" type="com.acquire.intelligentforms.ide.dialogs.RichTextField|MULTI_RICH_VALUES" usage="7"/>
+      <item help="&lt;html&gt;When we define this attribute we provide the name of the button we want to run the buttonClicked function with,&lt;br&gt; if we specify this then we must sepcify the the Target_Button_Id as well. This helps us to work &lt;br&gt;around an issue whereby seemingly in older &lt;br&gt;versions of android (4.1.2) simply forwarding a click to a button does not actually work&lt;/html&gt;" includeInDesign="For Specific Usage" layout="-1" mand="false" name="Target_Button_Name" prompt="Enter the button name you want the device hard back to be deferred to" type="com.acquire.intelligentforms.ide.dialogs.RichTextField|MULTI_RICH_VALUES" usage="7"/>
+    </custom>
+  </widget>
+  <widget name="Google Map V3" type="Item:GoogleMapV3">
+    <template type="header" value="./templates/widgets/com.edgeipk.widgets.google/mapsv3/header.wgt"/>
+    <template type="source" value="./templates/widgets/com.edgeipk.widgets.google/mapsv3/instance.wgt"/>
+    <custom>
+      <item name="WIDTH" prompt="Width (px)" type="javax.swing.JTextField"/>
+      <item name="HEIGHT" prompt="Height (px)" type="javax.swing.JTextField"/>
+      <item defaultValue="true" name="ENABLEMAPTYPES" prompt="Enable Map Types" type="javax.swing.JComboBox" typeValue="true^Yes|false^No"/>
+      <item defaultValue="ROADMAP" name="INITMAPTYPE" prompt="Initial Map Type" type="javax.swing.JComboBox" typeValue="ROADMAP^Road Map|SATELLITE^Satellite|TERRAIN^Terrain|HYBRID^Hybrid"/>
+      <item defaultValue="ROADMAP" name="MAPTYPES" prompt="Available Map Types" type="javax.swing.JComboBox" typeValue="ROADMAP^Road Map|SATELLITE^Satellite|TERRAIN^Terrain|HYBRID^Hybrid"/>
+      <item defaultValue="true" name="ENABLENAV" prompt="Enable Navigation Control" type="javax.swing.JComboBox" typeValue="true^Yes|false^No"/>
+      <item defaultValue="DEFAULT" name="NAVTYPE" prompt="Navigation Control Style" type="javax.swing.JComboBox" typeValue="DEFAULT^Auto|ANDROID^Small Android|SMALL^Zoom Only|ZOOM_PAN^Large Control"/>
+      <item defaultValue="true" name="ENABLESCALE" prompt="Enable Scale Control" type="javax.swing.JComboBox" typeValue="true^Yes|false^No"/>
+      <item defaultValue="TOP_LEFT" name="SCALEPOS" prompt="Scale Control Position" type="javax.swing.JComboBox" typeValue="BOTTOM^Bottom|BOTTOM_LEFT^Bottom Left|BOTTOM_RIGHT^Bottom Right|LEFT^Left|RIGHT^Right|TOP^Top|TOP_LEFT^Top Left|TOP_RIGHT^Top Right"/>
+      <item defaultValue="true" name="DRAGGABLE" prompt="Draggable" type="javax.swing.JComboBox" typeValue="true^Yes|false^No"/>
+      <item defaultValue="false" name="DISABLEDCLICKZOOM" prompt="Disable Double Click Zoom" type="javax.swing.JComboBox" typeValue="true^Yes|false^No"/>
+      <item name="DEFLONGITUDE" prompt="Default Longitude" type="com.acquire.intelligentforms.ide.dialogs.RichTextField|RICH_VALUE"/>
+      <item name="DEFLATITUDE" prompt="Default Latitide" type="com.acquire.intelligentforms.ide.dialogs.RichTextField|RICH_VALUE"/>
+      <item defaultValue="6" name="DEFZOOM" prompt="Default Zoom" type="javax.swing.JTextField"/>
+      <item name="ADDRESS" prompt="Address" type="javax.swing.JTextField"/>
+      <item name="LONGITUDE" prompt="Longitude" type="com.acquire.intelligentforms.ide.dialogs.RichTextField|RICH_VALUE"/>
+      <item name="LATITUDE" prompt="Latitide" type="com.acquire.intelligentforms.ide.dialogs.RichTextField|RICH_VALUE"/>
+      <item defaultValue="14" name="ZOOM" prompt="Zoom" type="javax.swing.JTextField"/>
+      <item defaultValue="false" name="GEOLOCATION" prompt="Geolocation" type="javax.swing.JComboBox" typeValue="true^Yes|false^No"/>
+      <item default="false" name="SEARCH" prompt="Enable Search" type="javax.swing.JComboBox" typeValue="true^Yes|false^No"/>
+      <item name="PLACES" prompt="Places" type="javax.swing.JComboBox" typeValue="atm^ATM|hotel^HOTEL"/>
+      <item name="RADIUS" prompt="Search Radius" type="javax.swing.JTextField"/>
+      <item includeInDesign="true" layout="-1" mand="false" name="DATASTORE" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property" usage="7"/>
+    </custom>
+  </widget>
+  <widget name="ModalButton" type="Button">
+    <template type="source" value="./templates/widgets/ModalWindows/modalbtn.wgt"/>
+    <custom>
+      <item includeInDesign="true" layout="-1" mand="false" name="DismissModal" prompt="Use it to Dismiss Modal Window" type="javax.swing.JCheckBox" usage="7"/>
+      <item includeInDesign="true" layout="-1" mand="false" name="Trigger" prompt="Use it as a Trigger" type="javax.swing.JCheckBox" usage="7"/>
+      <item includeInDesign="true" layout="1" mand="false" name="TriggerId" type="javax.swing.JTextField" usage="7"/>
+      <item help="Activate Icon on the Left" includeInDesign="true" layout="-1" mand="false" name="ActivateIcon" prompt="Activate Icon" type="javax.swing.JCheckBox" usage="7"/>
+      <item includeInDesign="true" layout="1" mand="false" name="IconClass" prompt="Icon Class" type="javax.swing.JTextField" usage="7"/>
+      <item includeInDesign="true" layout="-1" mand="false" name="Text" type="javax.swing.JTextField" usage="15"/>
+      <item includeInDesign="true" layout="-1" mand="false" name="Class" type="javax.swing.JTextField" usage="7"/>
+      <item includeInDesign="true" layout="-1" mand="false" name="QLR" prompt="Run Rules on  Button" type="javax.swing.JCheckBox" usage="7"/>
+    </custom>
+  </widget>
+  <widget name="progressBar" type="Item:">
+    <template type="source" value="./templates/widgets/progressBar/progressbar.wgt"/>
+    <template type="header" value="./templates/widgets/progressBar/progress_header.wgt"/>
+    <custom>
+      <item includeInDesign="Always" layout="-1" mand="false" name="PaidCount" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property" usage="7"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="DueCount" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property" usage="7"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="FutureCount" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property" usage="7"/>
+    </custom>
+  </widget>
+  <widget name="PieChart" type="Item:">
+    <template type="source" value="./templates/widgets/HighCharts/PieChart3D/Pie3D.wgt"/>
+    <template type="header" value="./templates/widgets/HighCharts/PieChart3D/Pie3D-header.wgt"/>
+    <custom>
+      <item includeInDesign="Always" layout="-1" mand="false" name="Title" type="javax.swing.JTextField" usage="7"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="SubTitle" type="javax.swing.JTextField" usage="7"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="XAxisTitle" type="javax.swing.JTextField" usage="7"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="YAxisTitle" type="javax.swing.JTextField" usage="7"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="XAxisDataGroup" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyGroupChooser" typeValue="Data Group Chooser|-1|true|true|com.acquire.intelligentforms.entities.PropertyGroup" usage="7"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="YAxisDataGroup" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyGroupChooser" typeValue="Data Group Chooser|-1|true|true|com.acquire.intelligentforms.entities.PropertyGroup" usage="7"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="XAxis" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property" usage="7"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="YAxis" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property" usage="7"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="Colour1" type="com.acquire.util.ui.StyleSheetColorChooser" typeValue="standard" usage="7"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="Colour2" type="com.acquire.util.ui.StyleSheetColorChooser" typeValue="standard" usage="7"/>
+    </custom>
+  </widget>
+  <widget icon="/images/widget_calendar.gif" name="Calendar - Interval Option" type="Date">
+    <template type="header" value="./templates/widgets/jquery/jquery-common-header.wgt"/>
+    <template type="header" value="./templates/widgets/jquery/jquery-ui/jquery-ui-common-header.wgt"/>
+    <template type="header" value="./templates/widgets/jquery/jquery-ui/jquery-ui-datePicker-header.wgt"/>
+    <template type="source" value="./templates/widgets/jquery/jquery-ui/jquery-ui-datePicker-block-date.wgt"/>
+    <custom>
+      <item defaultValue="./images/cal.gif" help="Specify image if you require a date picker icon after date field" mand="false" name="CAL_IMAGE" prompt="Calendar Image" tab="Calendar Details" type="javax.swing.JFileChooser"/>
+      <item defaultValue="1" mand="true" name="MONTHS_TO_SHOW" prompt="Number Of Months To Display" tab="Calendar Details" type="javax.swing.JTextField"/>
+      <item help="You can also use a language map alias" mand="false" name="LOCALE" prompt="Locale (e.g. en-GB or fr) - Leave Blank For Default Locale" tab="Calendar Details" type="com.acquire.intelligentforms.ide.dialogs.RichTextField|RICH_VALUE"/>
+      <item name="BAR_COLOR" prompt="Date Bar Colour" tab="Calendar Details" type="com.acquire.util.ui.StyleSheetColorChooser"/>
+      <item name="VALID_COLOR" prompt="Valid Date Colour" tab="Calendar Details" type="com.acquire.util.ui.StyleSheetColorChooser"/>
+      <item name="INVALID_COLOR" prompt="Invalid Date Colour" tab="Calendar Details" type="com.acquire.util.ui.StyleSheetColorChooser"/>
+      <item name="SELECTED_COLOR" prompt="Selected Date Colour" tab="Calendar Details" type="com.acquire.util.ui.StyleSheetColorChooser"/>
+      <item help="Start Date can be set as: -20 or -10, or 0. Number of days to be available before the current date." includeInDesign="Always" layout="-1" mand="false" name="STARTDATE" prompt="Start Date" tab="Calendar Details" type="com.acquire.intelligentforms.ide.dialogs.RichTextField|RICH_VALUES" usage="7"/>
+      <item help="End Date can be set as: +11M +3D. Number of days to be available after the current date." includeInDesign="Always" layout="-1" mand="false" name="ENDDATE" prompt="End Date" tab="Calendar Details" type="javax.swing.JTextField" usage="7"/>
+    </custom>
+  </widget>
+  <widget displayName="Icons" name="FontIcons" type="Item:">
+    <template type="source" value="./templates/widgets/com.temenos.widgets.fonticon/fonticon.wgt"/>
+    <custom>
+      <item includeInDesign="Always" layout="-1" mand="false" name="ICON" type="javax.swing.JComboBox" typeValue="1|2|accept|account-add|account-current|account-foreign|account-manage|account-savings|alert|arrow-back|arrow-down|arrow-downleft|arrow-downright|arrow-forward|arrow-left|arrow-right|arrow-up|arrow-upleft|arrow-upright|audio|authorise|balance|bank|bill|bills-circle|block|brain|bulb|calendar|camera|campaign|cancel|car|card-add|cedd|chart-bar1|chart-bar2|chart-bubble1|chart-bubble2|chart-graph|chart-pie|chart-research|chart-tiles|checkbox-cross|checkbox-tick|cheque|cheque-request|cheque-view|chevron-down|chevron-left|chevron-right|chevron-up|circle-accept|circle-add|circle-add-hollow|circle-dashed|circle-down|circle-filled|circle-left|circle-locked|circle-remove|circle-remove-hollow|circle-right|circle-timed|circle-unfilled|circle-up|clock|cog-double|collapse|complaint|contact|content-open|copy|creditcard|cut|deposit|details|direct-debit|directions|download|drag|dropdown|edit|editthecontent-circle|excel|execute|expand|expand2|expand-circle|fast-forward|file|filter|fire|flag|folder|food-expand|frequency|gift|goals|graph|health-circle|help|hide|hierarchy|hold|home|home-circle|important|information|kids-circle|language|late|legal|leisure-circle|letter-credit|link|list|loan|locate|lock|logout|mail|mail-forward|mail-new|mail-read|mail-reply|mail-replyall|mail-sent|mandates|mandatory1|mandatory2|map1|map2|matrix|meeting|menu1|menu2|menu-more|message|minus-circle|mortgage|new|news|notification|office|open|overlay|package|pause|payment|payment-bulk|payment-future|payment-repeat|payments|pdf|percentage|personalise|phase|phase-post|phase-pre|phone|picture|picture-add|pin-atm|pin-bank|pin-code|pinned|placeholder1|placeholder2|placeholder3|play|portfolio|position-buy|position-sell|preview|print|question|records|redo|refresh|reject|rel-constant|rel-decrease|rel-increase|restore|return|reverse|review|roles|row-collapse|row-expand|save|search|select|select-all|select-none|send|settings|severity-compliant|severity-noncompliant|severity-undefined|shopping-circle|show|social|social-facebook|social-google|social-instagram|social-linkedin|social-mail|social-rss|social-skype|social-twitter|social-youtube|sort|spellcheck|star-empty|star-filled|steady|stop|strategy|subscribe|summary|sweeps|switch|target|taxes-circle|term-deposit|timer|tools|tour|transactions|transfer|transfer-in|transfer-out|transport-circle|trash|triangle-down|triangle-up|undo|unlink|unlock|unpinned|upload|user|user-add|user-change|user-management|users|user-update|ux|validate|warning|wealth|withdraw" usage="7"/>
+      <item includeInDesign="Always" layout="-1" mand="false" name="Class" prompt="Custom Class" type="javax.swing.JTextField" usage="7"/>
+    </custom>
+  </widget>
+  <widget name="DynamicSectionColumn" type="Section,Column">
+    <template type="source" value="./templates/widgets/com.temenos.widgets.dynamicsection/dynamicsection.wgt"/>
+  </widget>
+  <widget name="ActiveIcon" type="Text">
+    <template type="source" value="./templates/widgets/com.temenos.widgets.activeicon/activeicon.wgt"/>
+    <custom>
+      <item includeInDesign="Always" layout="-1" mand="false" name="ICON" tab="Active Icon Settings" type="javax.swing.JComboBox" typeValue="1|2|accept|account-add|account-current|account-foreign|account-manage|account-savings|alert|arrow-back|arrow-down|arrow-downleft|arrow-downright|arrow-forward|arrow-left|arrow-right|arrow-up|arrow-upleft|arrow-upright|audio|authorise|balance|bank|bill|bills-circle|block|brain|bulb|calendar|camera|campaign|cancel|car|card-add|cedd|chart-bar1|chart-bar2|chart-bubble1|chart-bubble2|chart-graph|chart-pie|chart-research|chart-tiles|checkbox-cross|checkbox-tick|cheque|cheque-request|cheque-view|chevron-down|chevron-left|chevron-right|chevron-up|circle-accept|circle-add|circle-add-hollow|circle-dashed|circle-down|circle-filled|circle-left|circle-locked|circle-remove|circle-remove-hollow|circle-right|circle-timed|circle-unfilled|circle-up|clock|cog-double|collapse|complaint|contact|content-open|copy|creditcard|cut|deposit|details|direct-debit|directions|download|drag|dropdown|edit|editthecontent-circle|excel|execute|expand|expand2|expand-circle|fast-forward|file|filter|fire|flag|folder|food-expand|frequency|gift|goals|graph|health-circle|help|hide|hierarchy|hold|home|home-circle|important|information|kids-circle|language|late|legal|leisure-circle|letter-credit|link|list|loan|locate|lock|logout|mail|mail-forward|mail-new|mail-read|mail-reply|mail-replyall|mail-sent|mandates|mandatory1|mandatory2|map1|map2|matrix|meeting|menu1|menu2|menu-more|message|minus-circle|mortgage|new|news|notification|office|open|overlay|package|pause|payment|payment-bulk|payment-future|payment-repeat|payments|pdf|percentage|personalise|phase|phase-post|phase-pre|phone|picture|picture-add|pin-atm|pin-bank|pin-code|pinned|placeholder1|placeholder2|placeholder3|play|portfolio|position-buy|position-sell|preview|print|question|records|redo|refresh|reject|rel-constant|rel-decrease|rel-increase|restore|return|reverse|review|roles|row-collapse|row-expand|save|search|select|select-all|select-none|send|settings|severity-compliant|severity-noncompliant|severity-undefined|shopping-circle|show|social|social-facebook|social-google|social-instagram|social-linkedin|social-mail|social-rss|social-skype|social-twitter|social-youtube|sort|spellcheck|star-empty|star-filled|steady|stop|strategy|subscribe|summary|sweeps|switch|target|taxes-circle|term-deposit|timer|tools|tour|transactions|transfer|transfer-in|transfer-out|transport-circle|trash|triangle-down|triangle-up|undo|unlink|unlock|unpinned|upload|user|user-add|user-change|user-management|users|user-update|ux|validate|warning|wealth|withdraw" usage="7"/>
+    </custom>
+  </widget>
+  <widget displayName="Hidden Button Trigger" name="HiddenButtonInvoker" type="Item:">
+    <template type="source" value="./templates/widgets/HiddenButtonInvoker.wgt"/>
+    <custom>
+      <item includeInDesign="Always" layout="-1" mand="true" name="elementID" prompt="Button or Element class" type="javax.swing.JTextField" usage="7"/>
+    </custom>
+  </widget>
+  <widget name="TextArea - HTML5" rootType="TEXTAREA" type="Text">
+    <template type="source" value="./templates/widgets/html5/inputtype_textarea.wgt"/>
+    <custom>
+      <item includeInDesign="Always" layout="-1" mand="false" name="PLACEHOLDER" prompt="Placeholder Text" tab="Text" type="javax.swing.JTextField" usage="7"/>
+    </custom>
+  </widget>
+  <widget icon="/images/widget_window.gif" name="Session Timeout Warning Dialog (jquery-ui)" type="Section">
+    <template type="header" value="./templates/widgets/SessionTimeOut/SessionTimeOut-header.wgt"/>
+    <template type="header" value="./templates/widgets/SessionTimeOut/jquery-ui-floatingWindow-header.wgt"/>
+    <template type="source" value="./templates/widgets/SessionTimeOut/jquery-ui-sessionTimeoutWarningDialog.wgt"/>
+    <custom>
+      <item defaultValue="320" name="WIDTH" prompt="Inital Width" tab="Window Details"/>
+      <item defaultValue="240" name="HEIGHT" prompt="Inital Height" tab="Window Details"/>
+      <item defaultValue="window" name="TITLE" prompt="Window title" tab="Window Details"/>
+      <item name="COUNTDOWN_SECONDS_SPAN_ID" prompt="ID of the SPAN in which the countdown seconds will be shown" tab="Window Details"/>
+    </custom>
+  </widget>
+  <widget name="Login Cookie" type="Item:">
+    <template type="source" value="./templates/widgets/loginCookie/loginCookie.wgt"/>
+  </widget>
+  <widget name="Table with view options" type="Item:">
+    <template type="source" value="./templates/widgets/TableViewOptions/table-view-options.wgt"/>
+  </widget>
+  <widget name="caseConverion" type="Text">
+    <template type="source" value="./templates/widgets/caseConversion.wgt"/>
+  </widget>
+  <widget name="OpenDeveloperSettings" type="Button">
+    <template type="source" value="./templates/widgets/openDeveloperSettings.wgt"/>
+  </widget>
+  <widget displayName="Self Clicking Button With Custom Link" name="SelfClickingBtnWLink" type="Button">
+    <template type="source" value="./templates/widgets/SelfClickingButton.wgt"/>
+    <custom>
+      <item help="If a link will be provided in this field it will open it in a new tab" includeInDesign="Always" layout="-1" mand="false" name="Link" prompt="Custom Link" type="javax.swing.JTextField" usage="7"/>
+    </custom>
+  </widget>
+</widgets>

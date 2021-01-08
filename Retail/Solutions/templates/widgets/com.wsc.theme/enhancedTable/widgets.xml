@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><widgets>
+  <widget  icon="images/PresentationTable.gif" displayName="Enhanced Table" name="wsc-Table" type="Table">
+    <template type="source" value="enhancedTable.wgt"/>
+    <custom>
+      <item name="TableFooter" prompt="Table Footer with Sums" tab="Table Specifics" type="com.acquire.util.ui.Legend" typeValue="3|N" includeInDesign="false"/>
+      <item mand="false" name="footerSum" prompt="Add a table footer with Sums for numeric values" help="Add a table footer and do the sum for all numeric values" tab="Table Specifics" type="javax.swing.JCheckBox" usage="7" includeInDesign="false"/>
+      <item mand="false" name="sumCols" prompt="Columns to sum (1 based)" help="if left blank, all right aligned columns will be considered" tab="Table Specifics" type="javax.swing.JTextField" usage="7" includeInDesign="false"/>
+      <item mand="false" name="label" prompt="Totals Label" help="Label for 'Total' in first footer cell. If left empty, 'Total' will be used." tab="Table Specifics" type="javax.swing.JTextField" usage="15" includeInDesign="false"/>
+      <item mand="false" name="tableSum" prompt="Table has totals in data ?" help="table has a totalrow in data?" type="javax.swing.JCheckBox" tab="Table Specifics" usage="7" includeInDesign="false"/>
+      <item mand="false" name="TotalRowActionId" prompt="Button Id to add chevron at the end of total row" help="Display a chevron at the end of total row" tab="Table Specifics" type="javax.swing.JTextField" includeInDesign="false"/>
+	  
+      <item name="ChartLegend" prompt="Chart Legend" tab="Table Specifics" type="com.acquire.util.ui.Legend" typeValue="5|N" includeInDesign="false"/>
+      <item mand="false" name="tblLegend" prompt="Use table as Chart Legend" tab="Table Specifics" type="javax.swing.JCheckBox" usage="7" includeInDesign="false"/>
+      <item mand="false" name="ChartID" prompt="Chart ID reference" tab="Table Specifics" type="javax.swing.JTextField" usage="7" includeInDesign="false"/>
+      <item name="edbtn" prompt="Enable/Disable button" tab="Table Specifics" type="javax.swing.JTextField" includeInDesign="false"/>
+      <item name="highmessage" prompt="Message when higher than allowed" tab="Table Specifics" usage="15" includeInDesign="false"/>
+      <item name="lowmessage" prompt="Message when lower than allowed" tab="Table Specifics" usage="15" includeInDesign="false"/>
+
+      <item name="SelectAll" prompt="Select All checkbox" tab="Table Specifics" type="com.acquire.util.ui.Legend" typeValue="2|N" includeInDesign="false"/>
+      <item mand="false" name="SelectAllActionButtonId" prompt="Action Button ID" tab="Table Specifics" type="javax.swing.JTextField" includeInDesign="false"/>
+      <item mand="false" name="SelectAllQuestionId" prompt="Value Field Question ID" tab="Table Specifics" type="javax.swing.JTextField" includeInDesign="false"/>
+
+      <item mand="false" name="leveragsFS" prompt="Stack Grouped With Previous Fields" help="Use when you have many group with previous columns, items displayed top-down in same cell. Not to use for postfix items!" tab="Table Grouping" type="javax.swing.JCheckBox" usage="7" includeInDesign="false"/>
+
+      <item name="TableGrouping" prompt="Table Grouping" tab="Table Grouping" type="com.acquire.util.ui.Legend" help="Group Table in JS" typeValue="4|N" includeInDesign="false"/>
+      <item mand="false" name="Grouping" prompt="Table Grouping Condition" help="Choose the data item triggering the grouping" tab="Table Grouping" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" includeInDesign="false"/>
+      <item mand="false" name="COLS_TO_GROUP" prompt="Columns to group (Comma sep. Arrays, 1 based)" tab="Table Grouping" type="javax.swing.JTextField" usage="7" includeInDesign="false"/>
+      <item mand="false" name="COLS_TO_SUM" prompt="Columns to sum to group rows (1 based)" help="Better set attribute wsc-groupsum on table answer cells and leave empty here" tab="Table Grouping" type="javax.swing.JTextField" usage="7" includeInDesign="false"/>
+      <item mand="false" name="SUM_TOFIXED" prompt="Fixed decimals in summed columns" tab="Table Grouping" type="javax.swing.JTextField" usage="7" includeInDesign="false"/>
+
+      <item name="MultiOrder" prompt="Multiple Order" tab="Ordering" type="com.acquire.util.ui.Legend" typeValue="4|N" includeInDesign="false"/>
+      <item mand="false" name="MultiOrderActive" prompt="Activate Multiple Order" tab="Ordering" type="javax.swing.JCheckBox" usage="7" includeInDesign="false"/>
+      <item mand="false" name="MultiOrderButton" prompt="Action Button Identifier" tab="Ordering" type="javax.swing.JTextField" includeInDesign="false"/>
+      <item defaultValue="~nat .imo-qty .imo-instr on .imo-ptf" mand="false" name="phrase" prompt="Detail View box text" tab="Ordering" type="javax.swing.JTextField" usage="15" includeInDesign="false"/>
+      <item mand="false" name="CurrentPage" prompt="Current Page" tab="Ordering" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" includeInDesign="false"/>
+
+      <item name="CM_Group" prompt="Column Selector Settings" tab="Column Selector" type="com.acquire.util.ui.Legend" typeValue="13|N" includeInDesign="false"/>
+      <item defaultValue="N" mand="false" name="colSel" help="Activate Column Selector on table" prompt="Use Column Selector" tab="Column Selector" type="javax.swing.JCheckBox" usage="7" includeInDesign="false"/>
+      <item applicableCondition="colSel=='Y'" mand="false" name="colMov" help="Allow Column Move" prompt="Allow Column Move" tab="Column Selector" type="javax.swing.JCheckBox" usage="7" includeInDesign="false" layout="0"/>
+      <item applicableCondition="colSel=='Y'" name="cmPrefQId" prompt="Col Question id" tab="Column Selector" type="javax.swing.JTextField" includeInDesign="false"/>
+      <item applicableCondition="colSel=='Y'" name="cmPrefBId" prompt="Save Button id" tab="Column Selector" type="javax.swing.JTextField" includeInDesign="false" layout="0"/>
+      <item applicableCondition="colSel=='Y'" defaultValue="" name="cmPrefDId" prompt="Discard Button id" tab="Column Selector" type="javax.swing.JTextField" usage="15" includeInDesign="false" />
+      <item applicableCondition="colSel=='Y'" defaultValue="" name="cmPrefViewId" prompt="View/Edit Button id" help="Action buttons in table" tab="Column Selector" type="javax.swing.JTextField" usage="15" includeInDesign="false" layout="0" />
+      <item applicableCondition="colSel=='Y'" defaultValue="Column Selector" name="cmHead" prompt="Column Selector Header Text" tab="Column Selector" type="javax.swing.JTextField" usage="15" includeInDesign="false"/>
+      <item applicableCondition="colSel=='Y'" defaultValue="Default" name="cmB1" prompt="Column Selector Reset Button Text" tab="Column Selector" type="javax.swing.JTextField" usage="15" includeInDesign="false"/>
+      <item applicableCondition="colSel=='Y'" defaultValue="Reset to default" name="cmB1tt" prompt="Column Selector Reset Button Tooltip" tab="Column Selector" type="javax.swing.JTextField" usage="15" includeInDesign="false" layout="0"/>
+      <item applicableCondition="colSel=='Y'" defaultValue="Discard" name="cmB2" prompt="Column Selector Revert Button Text" tab="Column Selector" type="javax.swing.JTextField" usage="15" includeInDesign="false"/>
+      <item applicableCondition="colSel=='Y'" defaultValue="Revert to last saved" name="cmB2tt" prompt="Column Selector Revert Button Tooltip" tab="Column Selector" type="javax.swing.JTextField" usage="15" includeInDesign="false" layout="0"/>
+      <item applicableCondition="colSel=='Y'" defaultValue="Save" name="cmB3" prompt="Column Selector Save Button Text" tab="Column Selector" type="javax.swing.JTextField" usage="15" includeInDesign="false"/>
+      <item applicableCondition="colSel=='Y'" defaultValue="Save view" name="cmB3tt" prompt="Column Selector Save Button Tooltip" tab="Column Selector" type="javax.swing.JTextField" usage="15" includeInDesign="false" layout="0"/>
+
+      <item name="TreeTable" prompt="Display as Tree" tab="Tree Specific" type="com.acquire.util.ui.Legend" typeValue="7|N" includeInDesign="false"/>
+      <item mand="false" name="TreeTableActive" prompt="Activate Tree" tab="Tree Specific" type="javax.swing.JCheckBox" usage="7" includeInDesign="false"/>
+      <item name="id_dataitem" prompt="Data item for row id" tab="Tree Specific" type="PropertyChooser" includeInDesign="false"/>
+      <item name="parent_id_dataitem" prompt="Data item for parent id" tab="Tree Specific" type="PropertyChooser" includeInDesign="false"/>
+      <item name="displevdef" prompt="Display n levels by default" tab="Tree Specific" type="javax.swing.JTextField" includeInDesign="false"/>
+      <item mand="false" name="GridCalc" prompt="Enable Calculations" tab="Tree Specific" type="javax.swing.JCheckBox" usage="7" includeInDesign="false" layout="0"/>
+      <item defaultValue="Collapse" mand="false" name="strCollapse" prompt="Collapse tootip" tab="Tree Specific" type="javax.swing.JTextField" usage="15" includeInDesign="false"/>
+      <item defaultValue="Expand" mand="false" name="strExpand" prompt="Expand tooltip" tab="Tree Specific" type="javax.swing.JTextField" usage="15" includeInDesign="false" layout="0"/>
+
+      <item name="ShowMore_Group" prompt="Show Details Table" tab="Table Specifics" type="com.acquire.util.ui.Legend" typeValue="3|N" includeInDesign="false"/>
+      <item mand="false" name="ShowLarge" prompt="Apply Viewmore on large screens" tab="Table Specifics" type="javax.swing.JCheckBox" includeInDesign="false"/>
+      <item mand="false" name="ShowResp" prompt="Apply Responsive Table for small screens" tab="Table Specifics" type="javax.swing.JCheckBox" includeInDesign="false"/>
+      <item mand="false" name="ShowRespAll" prompt="Apply Table for small screens" tab="Table Specifics" type="javax.swing.JCheckBox" includeInDesign="false"/>
+    </custom>
+  </widget>
+</widgets>

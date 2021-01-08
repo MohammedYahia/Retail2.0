@@ -1,0 +1,64 @@
+<script>
+$(document).ready(function() {
+
+    var signInBtn = document.querySelector('a[id*="21AA8B8279AB849B2246"]');
+    var userName = document.querySelector('input[id*="USER_NAME"]');
+    var rememberMe = document.querySelector('input[id*="REMEMBER_ME_CHECKBOX_0"]');
+
+    verifyCookie();
+
+    function setCookie(cname,cvalue,exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires=" + d.toGMTString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    
+    function checkCookie() {
+         user = document.querySelector('input[id*="USER_NAME"]').value;
+         if (user != "" && user != null) {
+             setCookie("retail_username", user, 30);
+         }
+    }
+    
+    function verifyCookie() {
+        var user=getCookie("retail_username");
+        if (user != "") {
+            userName.value = user;
+            rememberMe.checked = true;
+        }
+    }  
+    
+    signInBtn.addEventListener("click", function(){
+        var user = document.querySelector('input[id*="USER_NAME"]').value;
+        var userCookie = getCookie("retail_username");
+        setCookie("retail_username", "", -1);
+        
+        if (document.querySelector('input[id*="REMEMBER_ME_CHECKBOX_0"]').checked){
+            checkCookie();
+        } else if (!(document.querySelector('input[id*="REMEMBER_ME_CHECKBOX_0"]').checked) && user != userCookie) {
+            setCookie("retail_username", userCookie, 30);  
+        } else {
+            rememberMe.checked = false;
+        }
+    })
+    
+});
+
+</script>

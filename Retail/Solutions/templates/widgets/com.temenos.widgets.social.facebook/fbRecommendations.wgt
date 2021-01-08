@@ -1,0 +1,14 @@
+<div class="fb-recommendations" 
+$%IF ITEM.colorscheme != ""$ data-colorscheme="$$ITEM.colorscheme$"
+$%ENDIF$$%IF ITEM.site != ""$ data-site="$$ITEM.site$"
+$%ENDIF$$%IF ITEM.ref != ""$ data-ref="$$ITEM.ref$"
+$%ENDIF$$%IF ITEM.max_age != ""$ data-max_age="$$ITEM.max_age$"
+$%ENDIF$$%IF ITEM.linktarget != ""$ data-linktarget="$$ITEM.linktarget$"
+$%ENDIF$$%IF ITEM.app_id != ""$ data-app-id="$$ITEM.app_id$"
+$%ENDIF$$%IF ITEM.action != ""$ data-action="$$ITEM.action$"
+$%ENDIF$$%IF ITEM.height != ""$ data-height="$$ITEM.height$"
+$%ENDIF$$%IF ITEM.width != ""$ data-width="$$ITEM.width$"
+$%ENDIF$$%IF ITEM.recommendations == "Y"$ data-recommendations="true"
+$%ENDIF$$%IF ITEM.header != "Y"$ data-header="false"$%ENDIF$></div>
+
+$%INCLUDE widgets/com.temenos.widgets.social.facebook/inc_fbRegisterWidget.wgt$$%ENDINCLUDE$

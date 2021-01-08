@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+	<widget name="tw-Scroll To Top" type="ITEM:">
+		<template type="source" value="ScrollTo.wgt" />
+		<custom>
+			<item name="ShowAfterOffset" prompt="Show after scroll of (px)" defaultValue="200" mand="true" /> 
+			<item name="ShowScrollTop" prompt="Show scroll to top" type="javax.swing.JCheckBox" defaultValue="Y" /> 
+			<item name="ShowScrollBottom" prompt="Show scroll to bottom" type="javax.swing.JCheckBox"/> 
+		</custom>
+	</widget>
+</widgets>

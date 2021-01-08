@@ -1,0 +1,48 @@
+<style type="text/css">
+    .session-timeout-container .ui-icon {
+		width: 24px !important;
+		height: 24px !important;
+	}
+	
+	/*
+	
+	.ui-dialog .ui-dialog-titlebar-close {
+		width: 24px;
+		height: 24px;
+               display: none;
+	}
+
+	.ui-dialog-titlebar {
+		border: 0 !important;
+	}
+
+	.ui-widget-content {
+		background-color:white !important;
+	}
+
+	.ui-dialog-titlebar-close:focus {
+		padding: 2px;
+	}
+
+   .ui-dialog-content  {
+   		margin: 20px !important;
+   }
+
+	ui-dialog {
+		box-shadow: 10px 10px 10px grey;
+	}
+
+	.ui-dialog .ui-dialog-titlebar-close span
+	{
+		display:block;
+		margin:0.5px!important;
+	}
+
+	.ui-widget-header .ui-icon {
+		
+	background: url("images/u113.png") no-repeat scroll center center transparent !important;
+
+	}
+	*/
+
+</style>

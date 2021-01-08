@@ -1,0 +1,15 @@
+$%IF ITEM.IS_HIDDEN() != "true"$
+	<li id="$$ITEM.ID()$" class="tetris_menuItem  tc-mm-leaf"> 
+		<a href="#" onclick="$$ITEM.NAVIGATION()$" 
+			
+			$%IF ITEM.ENTITYNAME() == PHASE.CURRENT_MENU_ITEM()$  activeMenuItem  $%ENDIF$" >
+			
+			<span class="tc-truncated-item ">
+				$%IF ITEM.DefaultIcon != ""$
+					<span class="tc-menu-icon icon-$$ITEM.DefaultIcon$"><span>$$ITEM.DefaultIcon$</span></span>
+				$%ENDIF$
+				$$ITEM.NavigationText$
+			</span>
+		</a>
+	</li>
+$%ENDIF$

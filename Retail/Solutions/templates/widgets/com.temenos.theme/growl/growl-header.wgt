@@ -1,0 +1,56 @@
+<script src="./templates/widgets/com.temenos.theme/growl/js/jquery.growl.js" type="text/javascript"></script>
+<link href="./templates/widgets/com.temenos.theme/growl/css/jquery.growl.css" rel="stylesheet" type="text/css" />
+<style>
+#growls.default {
+	top: 75px;
+}
+
+.growl {
+	border: 1px solid #fff;
+}
+.tc-compact .growl {
+	border-radius: 0px;
+}
+.growl .growl-close {
+	font-size: 28px;
+}
+
+.growl-icon-padding {
+	padding-left: 3rem !important;
+}
+.growl .growl-message {
+	width: 100%;
+	font-size: 1rem;
+	line-height: 1.2rem;
+}
+.growl .growl-title,
+.growl .growl-message,
+.growl-icon
+{
+    float: left;
+}
+
+.growl-icon {
+    position: relative;
+    font-family: 'T-Fonticons';
+    font-size: 1.5rem;
+    margin-left: -2.3rem;
+    display: inline-block;
+    margin-top: 0.2rem;
+}
+.growl .growl-title {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+@media (max-width: 567px) {
+	#growls.default {
+		right: auto;
+		width: 100%;
+	}
+
+	.growl.growl-large {
+		margin: 10px auto;
+	}
+
+}
+</style>

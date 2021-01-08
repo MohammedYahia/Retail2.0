@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><DataSetRoot DSAttrsNewLine="N" DSOmitXMLDecl="N" DSPrettyPrint="Y" DS_UID="24">
+  <!---->
+<enqTcChequeIssue ChequeStatus="ISSUED" ChqNoStart="100" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[A]" DS_UID="2" Id="CURR.78743.0000001">
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[C].Links" DS_UID="0" href="enqTcChequeIssues('%7BPrimaryKey%7D')" rel="self" title="enqTcChequeIssue"/>
+    <DateTime DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[C].DateTime" DS_UID="1" RequestDate="11/25/2018"/>
+  </enqTcChequeIssue>
+  <enqTcChequeIssue ChequeStatus="ISSUED" ChqNoStart="150" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[A]" DS_UID="5" Id="CURR.78743.0000002">
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[C].Links" DS_UID="3" href="enqTcChequeIssues('%7BPrimaryKey%7D')" rel="self" title="enqTcChequeIssue"/>
+    <DateTime DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[C].DateTime" DS_UID="4" RequestDate="11/25/2018"/>
+  </enqTcChequeIssue>
+  <enqTcChequeIssue ChequeStatus="ISSUED" ChqNoStart="200" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[A]" DS_UID="8" Id="CURR.78743.0000003">
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[C].Links" DS_UID="6" href="enqTcChequeIssues('%7BPrimaryKey%7D')" rel="self" title="enqTcChequeIssue"/>
+    <DateTime DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[C].DateTime" DS_UID="7" RequestDate="11/25/2018"/>
+  </enqTcChequeIssue>
+  <enqTcChequeIssue ChequeStatus="ISSUED" ChqNoStart="250" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[A]" DS_UID="11" Id="CURR.78743.0000004">
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[C].Links" DS_UID="9" href="enqTcChequeIssues('%7BPrimaryKey%7D')" rel="self" title="enqTcChequeIssue"/>
+    <DateTime DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[C].DateTime" DS_UID="10" RequestDate="11/25/2018"/>
+  </enqTcChequeIssue>
+  <enqTcChequeIssue ChequeStatus="ISSUED" ChqNoStart="300" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[A]" DS_UID="14" Id="CURR.78743.0000005">
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[C].Links" DS_UID="12" href="enqTcChequeIssues('%7BPrimaryKey%7D')" rel="self" title="enqTcChequeIssue"/>
+    <DateTime DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[C].DateTime" DS_UID="13" RequestDate="11/25/2018"/>
+  </enqTcChequeIssue>
+  <enqTcChequeIssue ChequeStatus="ISSUED" ChqNoStart="400" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[A]" DS_UID="17" Id="CURR.78743.0000006">
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[C].Links" DS_UID="15" href="enqTcChequeIssues('%7BPrimaryKey%7D')" rel="self" title="enqTcChequeIssue"/>
+    <DateTime DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[C].DateTime" DS_UID="16" RequestDate="11/25/2018"/>
+  </enqTcChequeIssue>
+  <enqTcChequeIssue ChequeStatus="ISSUED" ChqNoStart="350" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[A]" DS_UID="20" Id="CURR.78743.0000007">
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[C].Links" DS_UID="18" href="enqTcChequeIssues('%7BPrimaryKey%7D')" rel="self" title="enqTcChequeIssue"/>
+    <DateTime DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[C].DateTime" DS_UID="19" RequestDate="11/25/2018"/>
+  </enqTcChequeIssue>
+  <enqTcChequeIssue ChequeStatus="ISSUED" ChqNoStart="1000" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[A]" DS_UID="23" Id="CURR.78743.0000008">
+    <Links DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[C].Links" DS_UID="21" href="enqTcChequeIssues('%7BPrimaryKey%7D')" rel="self" title="enqTcChequeIssue"/>
+    <DateTime DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcChequeIssue[C].DateTime" DS_UID="22" RequestDate="11/25/2018"/>
+  </enqTcChequeIssue>
+</DataSetRoot>

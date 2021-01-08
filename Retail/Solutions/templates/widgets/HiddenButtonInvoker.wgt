@@ -1,0 +1,7 @@
+<script>
+$%IF ITEM.IS_HIDDEN() != "true"$
+$(document).ready(function(){
+	$(".$$ITEM.elementID$").trigger('click');
+});
+$%ENDIF$
+</script>

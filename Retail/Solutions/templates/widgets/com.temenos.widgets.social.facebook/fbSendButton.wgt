@@ -1,0 +1,7 @@
+<div class="fb-send" 
+$%IF ITEM.colorscheme != ""$ data-colorscheme="$$ITEM.colorscheme$"
+$%ENDIF$$%IF ITEM.href != ""$ data-href="$$ITEM.href$"
+$%ENDIF$$%IF ITEM.kid_directed_site == "Y"$ data-kid-directed-site="true"
+$%ENDIF$$%IF ITEM.ref != ""$ data-ref="$$ITEM.ref$"$%ENDIF$></div>
+
+$%INCLUDE widgets/com.temenos.widgets.social.facebook/inc_fbRegisterWidget.wgt$$%ENDINCLUDE$

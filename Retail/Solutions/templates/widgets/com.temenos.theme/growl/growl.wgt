@@ -1,0 +1,66 @@
+$%IF ITEM.DATAITEM().VALUE() != ""$
+<div style="display: none; "> $$ITEM.EC_GENERATE()$ </div>
+
+<script type="text/javascript" charset="utf-8">
+//<![CDATA[
+$(function() {
+	$%COMMENT$ 
+	//removed as all ajax responses were being rejected.
+    //if (getTriggeredReason() == REPLACE_CHILD_TRIGGER)
+	//return;
+	$%ENDCOMMENT$
+
+    $%IF ITEM.growlType == "accent"$ var fn = $.growl.accent; $%ENDIF$
+    $%IF ITEM.growlType == "alt-accent"$ var fn = $.growl.altAccent; $%ENDIF$
+    $%IF ITEM.growlType == "notice"$ var fn = $.growl.notice; $%ENDIF$
+    $%IF ITEM.growlType == "warning"$ var fn = $.growl.warning; $%ENDIF$
+    $%IF ITEM.growlType == "error"$ var fn = $.growl.error; $%ENDIF$
+    $%IF ITEM.growlType == "status"$ var fn = $.growl.status; $%ENDIF$
+
+    function getVal(param) {
+		 	var tmp = param.trim();
+		 	return tmp.substring(1, tmp.length -1);
+	}
+
+    fn({ title: "$$ITEM.growlTitle$", 
+		 message: "$$ITEM.DATAITEM().VALUE()$",
+		 icon:  "$$ITEM.DefaultIcon$",
+		 $%IF ITEM.growlDuration == ""$
+		 	fixed: true,
+		 $%ELSE$
+			 duration: $$ITEM.growlDuration$,
+		 $%ENDIF$
+
+		 cb: function() {
+			try {
+				var event = null;
+				var qlr = "$$ITEM.QLR()$";
+				var params = qlr.substring(qlr.indexOf("(") + 1, qlr.indexOf(")")).split(",");
+                var mode = prefixCompID("", getVal(params[1]), "AJXQuestionAction");
+				var values = { MODE: mode,
+							   key: getVal(params[0]), 
+					  		   id:  getVal(params[1]),
+					  		   namespace:  getVal(params[3]),
+					  		   controllername: getVal(params[4]),
+					  		   SUBSESSIONID: getSubSessionId( "" )
+				}
+				var pageCode = getVariable("", "pageCode").substring(1).split("=");
+				values[pageCode[0]] = pageCode[1];
+
+				$.ajax({
+				  method: "POST",
+				  url: "ajaxservletcontroller",
+				  data: values
+				}).done(function (data) {
+					$("#$$ITEM.ID()$").remove();
+				})
+			}
+	 		catch (e) {
+	 			;
+	 		}
+	 	}
+	});
+})
+ //]]>
+</script>
+$%ENDIF$

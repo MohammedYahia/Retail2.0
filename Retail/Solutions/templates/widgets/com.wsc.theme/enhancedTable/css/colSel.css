@@ -1,0 +1,91 @@
+div.cm-Container-wrapper {position: absolute;}
+.colmunger {
+  font-size: 18px;
+  position: relative;
+  left: 98%;
+  top: 2px;
+  width: 1px;
+  height: 8px;
+  z-index: 1;
+}
+.colmunger.active {
+  color: #316da2;
+}
+div.cm-Container {
+  background-color: #e8e8e8;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  list-style-type: none;
+  min-width: 200px;
+  padding-left: 0;
+  position: absolute; /*relative;*/
+  z-index: 2;
+}
+div.cm-Container .header {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ccc;
+  cursor: all-scroll;
+  font-weight: 700;
+  padding: 0.4rem;
+}
+div.cm-Container .header .tc-icon {
+  cursor: pointer;
+  float: right;
+}
+div.cm-Container ul.cols {
+  list-style-type: none;
+  padding-left: 0;
+  max-height: 426px;
+  margin: 0;
+  min-width: 180px;
+  overflow-y: auto;
+}
+div.cm-Container li {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 0.2rem 20px 0.4rem 0;
+}
+div.cm-Container li:hover {
+  background-color: #f2f2f2;
+}
+div.cm-Container li i.tc-icon {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+  padding: 0 1px;
+}
+div.cm-Container li.cm-locked i.tc-icon {
+  background-color: #ddd;
+}
+div.cm-Container li i.tc-icon.icon-checkbox-cross span:before{
+  opacity:0;
+}
+div.cm-Container label {white-space: nowrap;}
+div.cm-Container .footer {
+  border-top:1px solid #ccc;
+  line-height: 1.6rem;
+  text-align: center;
+  white-space: nowrap;
+}
+div.cm-Container button {
+  background-color: transparent;
+  border: 0 none;
+  color: #0c4374;
+  cursor: pointer;
+  font-weight: 700;
+  margin: 1px;
+}
+div.cm-Container button:hover {
+  background-color: #f8f8f8;
+}
+div.cm-Container button[disabled] {
+  color: #aaa;
+  cursor: default;
+  font-weight: 500;
+}
+div.cm-Container button[disabled]:hover {
+  background-color: transparent;
+}
+table.grouped td[style].tc-hidden {
+  display: table-cell !important;
+}

@@ -1,0 +1,26 @@
+table.treetable td span.indenter {float:left;margin-right:-7px;height: 1px;    margin-top: 5px;}
+table.treetable td span.indenter + div {display:inline-flex;}
+table.treetable tr.branch.level1 span.indenter {text-indent:1rem;padding-left:0 !important;}
+table.treetable tr.branch.level2 span.indenter {text-indent:2rem;padding-left:0 !important;}
+table.treetable tr.branch.level3 span.indenter {text-indent:3rem;padding-left:0 !important;}
+table.treetable tr.branch.level4 span.indenter {text-indent:4rem;padding-left:0 !important;}
+table.treetable tr.branch.level5 span.indenter {text-indent:5rem;padding-left:0 !important;}
+table.treetable tr.branch.level6 span.indenter {text-indent:6rem;padding-left:0 !important;}
+table.treetable tr.branch.level7 span.indenter {text-indent:7rem;padding-left:0 !important;}
+table.treetable tr.leaf.level1 td:first-child div {text-indent:1rem;}
+table.treetable tr.leaf.level2 td:first-child div {text-indent:2rem;}
+table.treetable tr.leaf.level3 td:first-child div {text-indent:3rem;}
+table.treetable tr.leaf.level4 td:first-child div {text-indent:4rem;}
+table.treetable tr.leaf.level5 td:first-child div {text-indent:5rem;}
+table.treetable tr.leaf.level6 td:first-child div {text-indent:6rem;}
+table.treetable tr.leaf.level7 td:first-child div {text-indent:7rem;}
+table.treetable tr.leaf.level8 td:first-child div {text-indent:8rem;}
+table.treetable tr.leaf.level1 td:first-child fieldset div:last-child {text-indent:0;}
+table.treetable tr.leaf.level2 td:first-child fieldset div:last-child {text-indent:0;}
+table.treetable tr.leaf.level3 td:first-child fieldset div:last-child {text-indent:0;}
+table.treetable tr.leaf.level4 td:first-child fieldset div:last-child {text-indent:0;}
+table.treetable tr.leaf.level5 td:first-child fieldset div:last-child {text-indent:0;}
+table.treetable tr.leaf.level6 td:first-child fieldset div:last-child {text-indent:0;}
+table.treetable tr.leaf.level7 td:first-child fieldset div:last-child {text-indent:0;}
+table.treetable tr.leaf.level8 td:first-child fieldset div:last-child {text-indent:0;}
+span.gcres {padding: 0 11px; font-weight: 700;}

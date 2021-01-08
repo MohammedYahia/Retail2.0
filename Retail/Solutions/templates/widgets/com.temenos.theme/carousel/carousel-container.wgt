@@ -1,0 +1,153 @@
+<!-- specific override styles -->
+
+<div id="$$ITEM.ID()$" class="swiper-container $$ITEM.STYLES().SectionStyle$" style="$$ITEM.INLINE_STYLES().SectionStyle$">
+		<div class="swiper-wrapper">
+			$%IF ITEM.TYPE() == "FormTable"$
+		        $%FOREACH TABLE_ROW IN TABLE$
+		            $%FOREACH TABLE_CHILD IN TABLE$
+	                    $$TABLE_CHILD.EC_GENERATE()$
+		            $%ENDFOREACH$
+		        $%ENDFOREACH$
+    		$%ELSE$
+				$$FORMCONTENT$
+			$%ENDIF$
+		</div>
+
+	$%IF ITEM.SHOW_PAGINATION == "Y"$
+		<a class="swiper-pagination" href="#"></a>
+	$%ENDIF$
+
+	$%IF ITEM.SHOW_NAV_BUTTONS == "Y"$
+		<!-- Add Arrows -->
+		<div class="swiper-button-next tc-icon icon-chevron-right tc-icon-font-size-lg tc-carousel-next"><span></span></div>
+		<div class="swiper-button-prev tc-icon icon-chevron-left  tc-icon-font-size-lg tc-carousel-prev"><span></span></div>
+
+	$%ENDIF$
+</div>
+<script type="text/javascript" charset="utf-8">
+  //<![CDATA[
+var swiper_$$ITEM.ID()$ = null;
+$(function() {
+	var numberOfSliders = $("#$$ITEM.ID()$>.swiper-wrapper>.swiper-slide").length
+	if (numberOfSliders > 1) {
+		swiper_$$ITEM.ID()$ = new Swiper('#$$ITEM.ID()$', {
+		 	effect: "slide",
+		 	$%IF ITEM.INITIAL_ITEM != ""$
+		 		initialSlide: $$ITEM.INITIAL_ITEM$,
+		 	$%ENDIF$
+			$%IF ITEM.SHOW_PAGINATION == "Y"$
+	        	pagination: '.swiper-pagination',
+	        	paginationClickable: true,
+	        $%ENDIF$
+	        $%IF ITEM.SHOW_NAV_BUTTONS == "Y"$
+	        	nextButton: '.swiper-button-next',
+	        	prevButton: '.swiper-button-prev',
+	        $%ENDIF$
+
+	        $%IF ITEM.AUTO_PLAY > 0$
+	        	autoplay: $$ITEM.AUTO_PLAY$,
+	        	autoplayDisableOnInteraction: false,
+	        $%ENDIF$
+	        spaceBetween: 30,
+	        $%IF ITEM.SLIDES_PER_VIEW != ""$
+		        slidesPerView: $$ITEM.SLIDES_PER_VIEW$,
+		    $%ENDIF$
+	        centeredSlides: true,
+			keyboardControl: true,
+
+			$%IF ITEM.VERTICAL == "Y"$
+				direction: "vertical",
+			$%ENDIF$
+			onTransitionStart: function(swiper){
+				//back up all name tags to avoid duplicates... 
+				$("#$$ITEM.ID()$  [name]").each(function(i,o) {
+					$(o).attr("xname", o.name)
+			    		.attr("name", null)
+				});
+				$("#$$ITEM.ID()$  [id]").each(function(i,o) {
+					$(o).attr("xid", o.id)
+			    		.attr("id", null)
+				})
+			},
+			onTransitionEnd: function() {			
+				//see if we should disable parent swiper...
+				var parentSwiper = $("#$$ITEM.ID()$").parent().closest(".swiper-container");
+				if (parentSwiper.length == 1) {
+					var parentId = parentSwiper.attr("id");
+					try {
+						if ( $("#$$ITEM.ID()$ .swiper-slide-active").is(".disable-parent") ) {
+							window["swiper_" + parentId].detachEvents();
+						} else {
+							window["swiper_" + parentId].attachEvents();
+						}
+					} catch (e) {
+
+					}
+				}
+
+				//need to remove name attributes from duplicate slides, and restore them if active
+				$("#$$ITEM.ID()$ .swiper-slide-active [xname]").each(function(i,o) {
+					$(o).attr("name", $(o).attr("xname"))
+				});
+				$("#$$ITEM.ID()$ .swiper-slide-active [xid]").each(function(i,o) {
+					$(o).attr("id", $(o).attr("xid"))
+				});
+			},
+
+	        $%IF ITEM.ANIMATION == "coverflow"$
+		        effect: 'coverflow',
+		        slidesPerView: 'auto',
+		        centeredSlides: true,
+		        coverflow: {
+		            rotate: 50,
+		            stretch: 0,
+		            depth: 100,
+		            modifier: 1,
+		            slideShadows : true
+		        },
+	        $%ENDIF$
+	        $%IF ITEM.ANIMATION == "cube"$
+		        effect: 'cube',
+		        slidesPerView: 'auto',
+		        centeredSlides: true,
+	        $%ENDIF$
+	        $%IF ITEM.ANIMATION == "flip"$
+		        effect: 'flip',
+		        slidesPerView: 'auto',
+		        centeredSlides: true,
+	        $%ENDIF$
+	        $%IF ITEM.ANIMATION == "fade"$
+		        effect: 'fade',
+		        slidesPerView: 'auto',
+		        centeredSlides: true,
+	        $%ENDIF$
+	        $%IF ITEM.LOOP == "Y"$
+	                loop: true,
+	        $%ELSE$
+	                loop: false,
+	        $%ENDIF$
+
+			breakpoints: {
+			    // when window width is <= 320px
+			    567: {
+			    	spaceBetweenSlides: 0,
+			      	slidesPerView: 1,
+			    },
+			    // when window width is <= 480px
+			    767: {
+			      	spaceBetweenSlides: 0,
+			      	$%IF ITEM.COVER_FLOW == "Y"$
+			      		slidesPerView: 'auto',
+			      	$%ELSE$
+			      		$%IF ITEM.SLIDES_PER_VIEW != ""$
+		        			slidesPerView: $$ITEM.SLIDES_PER_VIEW$,
+		    			$%ENDIF$
+		    		$%ENDIF$
+			    }
+			}		
+		});
+	}
+})
+
+  //]]>
+</script>

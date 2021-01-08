@@ -1,0 +1,15 @@
+<button id="$$ITEM.ID()$" class="$$ITEM.Class$" 
+$%IF ITEM.QLR == "Y"$
+onclick="$$ITEM.ONCLICK()$"
+$%ENDIF$
+$%IF ITEM.DismissModal == "Y"$
+data-dismiss="modal"
+$%ENDIF$
+$%IF ITEM.Trigger == "Y"$
+data-toggle="modal" data-target="#$$ITEM.TriggerId$"
+$%ENDIF$>
+$%IF ITEM.ActivateIcon == "Y"$
+<span class="$$ITEM.IconClass$"></span>
+$%ENDIF$
+$$ITEM.Text$
+</button>

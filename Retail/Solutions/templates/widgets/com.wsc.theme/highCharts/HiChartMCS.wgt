@@ -1,0 +1,178 @@
+<div id="$$ITEM.ID()$" class="$$ITEM.CSSClass$" style="$%IF ITEM.Width != ''$ width: $$ITEM.Width$px; $%ENDIF$$%IF ITEM.Height != ''$height: $$ITEM.Height$px; $%ENDIF$margin: 0 auto" ></div>
+<script type="text/javascript">
+$(function(){
+  $%SET hasdata = false$$%ENDSET$
+  $%FOR ##:ITEM.XAxis#$
+    $%SET hasdata = true$$%ENDSET$
+  $%ENDFOR$
+  $%IF !hasdata == false$
+    return;
+  $%ENDIF$
+  $( jq("$$ITEM.ID()$") ).parent().css("width","100%");
+    Highcharts.setOptions({
+      colors: ['#3498db','#e74c3c','#34495e','#95a5a6','#1abc9c','#f1c40f','#e67e22','#9b59b6','#2ecc71','#bdc3c7','#c0392b','#2980b9','#f39c12','#16a085']
+    });
+
+    $("#$$ITEM.ID()$").highcharts({
+        chart:{
+          //type: 'area',
+          plotBackgroundColor: '$$ITEM.bgColor1$',
+          zoomType: 'xy'
+        },
+        plotOptions:{
+          series:{
+            pointStart: 1
+          }
+        },
+        credits:{
+          enabled: false
+        },
+        title:{
+          text: '$$ITEM.Title$',
+          useHTML: true,
+          style: {
+            $%IF ITEM.TitleColor != ''$color: '$$ITEM.TitleColor$',$%ENDIF$
+            size:  '$$ITEM.TitleSize$px',
+            fontWeight: 'normal'
+          },
+        },
+        $%IF ITEM.SubTitle != ""$
+        subtitle:{
+          text: '$$ITEM.SubTitle$',
+          style:{color: '$$ITEM.SubTitleColor$',size:  '$$ITEM.SubTitleSize$px'},
+        },
+        $%ENDIF$
+				xAxis: {
+	  			title: {text: '$$ITEM.XAxisTitle$'},
+	  			categories: ["0"$%FOR ##:ITEM.XAxis#$,"$$ITEM.XAxis$" $%ENDFOR$]
+				},
+        yAxis: {
+          title: {text: "$$ITEM.YAxisLabel.escapeforjs()$"},
+          min: 0,
+          opposite: true,
+          plotLines: [{
+            value: $$ITEM.TargetValue$,
+            color: 'green',
+            width: 1,
+            zIndex: 5,
+            label: {
+              text: '$$ITEM.TargetLabel$'
+            }
+          }]
+        },
+    		tooltip:{
+					enabled: $%IF ITEM.ShowHint == "Y"$true$%ELSE$false$%ENDIF$,
+					useHTML: true,
+          shared: true,
+					formatter: function() {
+						var key = "<b>" + this.points[0].x + "</b><br/>";
+            key = key + this.points[1].point.series.name[1] + ": <b>" + getTTrounded(this.points[1].point.high) + " $$ITEM.TooltipPostfix$</b><br/>";
+            key = key + this.points[2].point.series.name + ": <b>" + getTTrounded(this.points[2].point.y) + " $$ITEM.TooltipPostfix$</b><br/>";
+            key = key + this.points[1].point.series.name[0] + ": <b>" + getTTrounded(this.points[1].point.low) + " $$ITEM.TooltipPostfix$</b><br/>";
+            key = key + this.points[0].point.series.name + ": <b>" + FormatNumber(this.points[0].point.y) + " $$ITEM.TooltipPostfix$</b>";
+						return '<span style="font-family: Roboto;">'+key+'</span>';
+					}
+        },
+        legend:{
+          symbolRadius: 2,
+          enabled: $%IF ITEM.DisplayKey == "Y"$true$%ELSE$false$%ENDIF$,
+          $%IF ITEM.KeyPosition == Bottom || ITEM.KeyPosition == Top$
+            align: 'center',
+            verticalAlign: '$$ITEM.KeyPosition$'.toLowerCase(),
+            layout: 'horizontal',
+          $%ELSE$
+            align: '$$ITEM.KeyPosition$'.toLowerCase(),
+            verticalAlign: 'middle',
+            layout: 'vertical',
+            $%IF ITEM.KeyWidth != ''$
+              width: $$ITEM.KeyWidth$,
+            $%ELSE$
+              width: 140,
+            $%ENDIF$
+            x: 0,
+            y: 0,
+            margin: 0,
+          $%ENDIF$
+          itemStyle:{
+            font: '12px Roboto, sans-serif',
+            color: '#000',
+            fontWeight: 'normal',
+            width: '135px',
+            textOverflow: 'ellipsis',
+            overflow: 'hidden'
+          },
+          itemHoverStyle: {
+            color: '#000'
+          }
+        },
+        series: [
+      $%IF ITEM.YSeriesName1 != ""${
+        name: '$$ITEM.YSeriesName1$',
+        allowPointSelect: $%IF ITEM.InteractiveChart == "Y"$true$%ELSE$false$%ENDIF$,
+        data: [$%FOR ##:ITEM.XAxis#$
+          {y: $$ITEM.YAxis1$},
+        $%ENDFOR$],
+        marker: {
+            enabled: false
+        },
+        $%IF ITEM.YAxis1DashStyle != ""$dashStyle: "$$ITEM.YAxis1DashStyle$"$%ENDIF$
+      }$%ENDIF$
+      $%IF ITEM.YSeriesName2 != "" && ITEM.YSeriesName4 != ""$,{
+				name: ['$$ITEM.YSeriesName4$','$$ITEM.YSeriesName2$'],
+        data: [$%FOR ##:ITEM.XAxis#$
+          {low: $$ITEM.YAxis4$, high: $$ITEM.YAxis2$},
+        $%ENDFOR$],
+        type: 'arearange',
+        lineWidth: 0,
+        linkedTo: ':previous',
+        color: Highcharts.getOptions().colors[0],
+        fillOpacity: 0.3,
+        zIndex: 0,
+        marker: {
+            enabled: false
+        }
+      }
+      $%ENDIF$
+      $%IF ITEM.YSeriesName3 != ""$,{
+        name: '$$ITEM.YSeriesName3$',
+        data: [$%FOR ##:ITEM.XAxis#$
+          $$ITEM.YAxis3$,
+        $%ENDFOR$],
+        zIndex: 1,
+        marker: {
+            enabled: false
+        }
+      }
+      $%ENDIF$
+      $%IF ITEM.YSeriesName5 != ""$,{
+        name: '$$ITEM.YSeriesName5$',
+        data: [$%FOR ##:ITEM.XAxis#$
+        $$ITEM.YAxis5$,
+        $%ENDFOR$],
+        marker: {
+            enabled: false
+        },
+        $%IF ITEM.YAxis5DashStyle != ""$dashStyle: "$$ITEM.YAxis5DashStyle$"$%ENDIF$
+        }
+      $%ENDIF$
+        ]
+    });
+
+    // Get language specific ToolTip values
+    function getTTval(v){
+      if(!v) return;
+      if (typeof v === 'number') {
+        return FormatNumber(v);
+      } else {
+        var ufval = v.split(' ');
+        var fval = FormatNumber(RawNumber(ufval[0], '.'))
+        return fval+' '+ufval[1];
+      }
+    }
+});
+function getTTrounded (n){
+  if(n<1000) var rounded = FormatNumber(Math.round(n).toFixed(0));
+  else var rounded = FormatNumber((Math.round(n/1000)*1000).toFixed(0))
+  return rounded;
+}
+</script>

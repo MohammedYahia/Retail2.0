@@ -1,0 +1,129 @@
+
+.tree_container.tv-animate {
+	transition: all 1s !important;
+}
+
+.tv-zoom-out .tv-grow-onzoomout {
+	font-size: 200%
+}
+.tv-zoom-out .tv-hide-onzoomout {
+	xvisibility: hidden;
+	display: none;
+}
+
+.node {
+	position: absolute;
+	top: 0;
+}
+
+.node .tc-card-header-popout-general .tc-icon {
+	color: #666 !important;	
+}
+
+
+.treetable .level0, .node.tv-level-0>div {
+	background-color: rgba(255,255,255,1);
+}
+.treetable .level1, .node.tv-level-1>div {
+	background-color: rgba(255,255,255,0.8);
+}
+.treetable .level2, .node.tv-level-2>div {
+	background-color: rgba(255,255,255,0.6);
+}
+.treetable .level3, .node.tv-level-3>div {
+	background-color: rgba(255,255,255,0.4);
+}
+.treetable .level4, .node.tv-level-4>div {
+	background-color: rgba(255,255,255,0.3);
+}
+.treetable .level5, .node.tv-level-5>div {
+	background-color: rgba(255,255,255,0.2);
+}
+.treetable tbody {
+	background-color: #acc5d9;
+}
+.node.tc-detail-section {
+	transition: box-shadow 0.3s, background-color 0.3s;
+	margin-bottom: 0px;
+	padding: 0px;
+	border: 1px solid #666;
+	background-color: #acc5d9;
+}
+
+.node:hover.tc-detail-section, .node.jsplumb-source-hover.tc-detail-section, .node.jsplumb-target-hover.tc-detail-section{
+	cursor: pointer;
+	box-shadow: 0px 0px 12px #404040;
+}
+
+.tc-card .node.tc-detail-section.alt-background {
+	background-color: #CFE4F6;
+}
+.tc-card .node:hover.tc-detail-section.alt-background {
+	background-color: #EEF6FC
+}
+
+
+.tc-card .node.tc-detail-section.clicked, 
+.tc-card .node.tc-detail-section.clicked:hover{
+	background: #ffefbe ;
+}
+
+.tc-card .node.tc-detail-section.clicked>div {
+	background: none;
+} 
+
+.node .tc-card-expander {
+	margin: 0;
+}
+
+
+.tc-card .node.tc-detail-section.alt-background .cut,
+.tc-card .node.tc-detail-section.alt-background2 .cut,
+.cut {
+    border: 5px dashed !important;
+    background: #eee !important;
+}
+
+
+.filterinput {
+	width: 100%;
+}
+.clearFilter, .searchIcon  {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+.tc-card .node.tc-detail-section {
+}
+
+.tc-card .node.tc-detail-section.alt-background {
+    background: #ffcaca;
+}
+
+.tc-card .node.tc-detail-section.alt-background2 {
+    background: #f54040 !important;
+    color: white;
+}
+
+.tc-card .node.tc-detail-section.alt-background2 .tc-icon, 
+.tc-card .node.tc-detail-section.alt-background2 .tc-page-title{
+    color: white;
+}
+.tc-card .node.tc-detail-section.alt-background2 .tc-table-wrapper{
+    background: #ccc;
+}
+.node .tc-row-part {
+	padding: 0.5rem 0 0;
+} 
+
+.toggle, .toggle-branch {
+	position: absolute;
+	z-index: 100;
+}
+.toggle-branch {
+	right: 0px;
+}
+.toggle:hover, .toggle-branch:hover {
+	cursor: pointer;
+}

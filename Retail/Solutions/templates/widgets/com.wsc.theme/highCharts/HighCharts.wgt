@@ -1,0 +1,1021 @@
+<style>
+#$$ITEM.ID()$ .highcharts-xaxis-grid .highcharts-grid-line {
+  stroke-width: $%IF ITEM.SHOW_X_AXIS_GRID_LINES == "Y"$1$%ELSE$0$%ENDIF$;
+}
+#$$ITEM.ID()$ .highcharts-yaxis-grid .highcharts-grid-line {
+  stroke-width: $%IF ITEM.SHOW_Y_AXIS_GRID_LINES == "Y"$1$%ELSE$0$%ENDIF$;
+}
+
+$%IF ITEM.Height == ""$
+#$$ITEM.ID()$ {
+  min-height: 400px;
+}
+$%ENDIF$
+$%IF ITEM.ChartType == "Bullet Graph"$
+#$$ITEM.ID()$ .highcharts-series-0 .highcharts-point {fill:#34495E;stroke:#34495E;color:#34495E}
+#$$ITEM.ID()$ .highcharts-bullet-target {color: #e74c3c !important;stroke: #e74c3c !important;fill: #e74c3c !important;}
+#$$ITEM.ID()$ .highcharts-legend-item.highcharts-bullet-series.highcharts-series-1.highcharts-legend-item-hidden .highcharts-point {
+  color: #e74c3c;stroke: #e74c3c !important;fill: #e74c3c !important;
+}
+#$$ITEM.ID()$ .highcharts-legend-item.highcharts-bullet-series.highcharts-series-2.highcharts-legend-item-hidden .highcharts-point {
+  color: #D7D7D7;stroke: #D7D7D7 !important;fill: #D7D7D7 !important;
+}
+$%ENDIF$
+</style>
+
+$%SET chartType := ITEM.ChartType$$%ENDSET$
+$%IF ITEM.ChartType == "Pie Chart"$
+	$%FOR ##:ITEM.XAxis#$
+		$%IF ITEM.YAxis1 < 0$
+  		$%SET chartType = column$$%ENDSET$
+			$%BREAK$
+			$%ENDBREAK$
+    $%ELSE$
+      $%SET chartType = pie$$%ENDSET$
+		$%ENDIF$
+	$%ENDFOR$
+$%ENDIF$
+$%IF !chartType == "Pie Chart"$ $%SET chartType = pie$$%ENDSET$ $%ENDIF$
+$%IF ITEM.ChartType == "Column Chart"$ $%SET chartType = column$$%ENDSET$ $%ENDIF$
+$%IF ITEM.ChartType == "Bar Chart"$ $%SET chartType = bar$$%ENDSET$ $%ENDIF$
+$%IF ITEM.ChartType == "Line Chart"$ $%SET chartType = line$$%ENDSET$ $%ENDIF$
+$%IF ITEM.ChartType == "Spline Chart"$ $%SET chartType = spline$$%ENDSET$ $%ENDIF$
+$%IF ITEM.ChartType == "Stacked Column Chart"$ $%SET chartType = column$$%ENDSET$ $%SET stacked = true$$%ENDSET$$%ENDIF$
+$%IF ITEM.ChartType == "Bullet Graph"$ $%SET chartType = bullet$$%ENDSET$ $%ENDIF$
+$%IF ITEM.ChartType == "Errorbar Chart"$ $%SET chartType = errorbar$$%ENDSET$ $%ENDIF$
+$%IF ITEM.ChartType == "Scatter Plot"$ $%SET chartType = scatter$$%ENDSET$ $%ENDIF$
+$%IF ITEM.ChartType == "TreeTable Drilldown"$ $%SET chartType = column$$%ENDSET$ $%ENDIF$
+$%IF ITEM.ChartType == "Bubble Chart"$ $%SET chartType = bubble$$%ENDSET$ $%ENDIF$
+
+$%IF !chartType == "pie"$ $%SET tt_shared = N$$%ENDSET$ $%ELSE$ $%SET tt_shared = $$$ITEM.TT_SHARED$ $%ENDSET$ $%ENDIF$
+
+$%IF ITEM.GroupWithPrevious != "Y"$
+  $%IF ITEM.TOGGLE_BTN == "Y"$
+    $%IF ITEM.ChartType == 'Pie Chart' && !chartType == 'pie'$
+  <div style="height: 0; width: auto; float: right;">
+    <a id="btn_$$ITEM.ID()$" href="" class="tc-icon tc-card-header-icon $%IF !chartType == "pie"$icon-chart-bar1$%ELSE$icon-chart-pie$%ENDIF$" style="z-index:1; color:#666"><span></span></a>
+  </div>
+  <div style="clear:right;"> </div>
+    $%ENDIF$
+  $%ENDIF$
+  $%IF ITEM.TOGGLE_BTN == 'Y' && ITEM.Width == null$
+  <div id="$$ITEM.ID()$" class="tc-chart" style="width: 600px; height: $$ITEM.Height.escapeforjs()$px; margin: 0 auto"></div>
+  $%ELSE$
+  <div id="$$ITEM.ID()$" class="tc-chart" style="width: $$ITEM.Width.escapeforjs()$px; height: $$ITEM.Height.escapeforjs()$px; margin: 0 auto"></div>
+  $%ENDIF$
+$%ELSE$
+  <span id="$$ITEM.ID()$" class="tc-chart tc-grouped-chart"></span>
+$%ENDIF$
+
+<script type="text/javascript">
+$%IF ITEM.InteractiveChart == "Y"$
+$(function() {
+  var elem = getForm("").elements["$$:ITEM.NavDataItem$"];
+  if (elem == null) {
+    $('<div style="display: none;"><input type="text" name="$$:ITEM.NavDataItem$"/></div>').appendTo(getForm(""));
+  }
+});
+$%ENDIF$
+var chart,
+    chartType = '$$!chartType$',
+    decimalPoint = "$$PRESENTATIONTYPE.DECIMALSYMBOL$",
+    thousandsSep = "$$PRESENTATIONTYPE.DIGITGROUPSYMBOL$";
+
+$%IF ITEM.TableID != ""$
+var perfbd = {
+  iname: $$ITEM.colName$, // name column #
+  pl: $$ITEM.colData1$,    // Contribution column #
+  perf: $$ITEM.colData2$,  // pl column #
+  col3: $$ITEM.colData3$,  // col3 column #
+  ilevl: $$ITEM.colLevel$, // level column #
+  iid: $$ITEM.colID$,   // item Id column #
+  ipid: $$ITEM.colPID$   // item ParentId column #
+}
+initPBtable('$$COMPONENT_ID_PREFIX$$$ITEM.TableID$');
+$%ENDIF$
+
+$(function(){
+  Highcharts.setOptions({
+    colors: ['#3498db','#e74c3c','#34495e','#95a5a6','#1abc9c','#f1c40f','#e67e22','#9b59b6','#2ecc71','#bdc3c7','#c0392b','#2980b9','#f39c12','#16a085'],
+    lang: {
+      decimalPoint: decimalPoint,
+      thousandsSep: thousandsSep,
+      $%IF ITEM.TableID != ""$drillUpText: '$$ITEM.drillUpText$',$%ENDIF$
+      $%IF ITEM.NUMERICSYMBOLS != ""$numericSymbols: [$$ITEM.NUMERICSYMBOLS$],$%ENDIF$
+      noData: "$$ITEM.NODATA_MESSAGE.escapeforjs()$"
+    }
+  })
+  $%IF ITEM.GroupWithPrevious == "Y"$groupChartWithPrevious$$ITEM.ID()$();$%ELSE$addSeparateChart$$ITEM.ID()$();$%ENDIF$
+});
+$%IF ITEM.GroupWithPrevious == "Y"$
+function groupChartWithPrevious$$ITEM.ID()$() {
+  var chart = $("#$$ITEM.PREVIOUS_ID.escapeforjs()$").highcharts();
+  if (chart){
+    $%IF ITEM.DualAxisInd == "Y"$    //if dual axis, add second axis...
+      chart.addAxis({
+        id: "axis_$$ITEM.PREVIOUS_ID.escapeforjs()$",
+        title: {text: "$$ITEM.YAxisLabel_Right.escapeforjs()$"},
+        labels: {},
+        opposite: true
+      });
+    $%ENDIF$
+    $%IF ITEM.YSeriesName1 != ""$
+    chart.addSeries({
+      name: "$$ITEM.YSeriesName1.escapeforjs()$",
+      $%IF ITEM.DualAxisInd == "Y"$
+      yAxis: "axis_$$ITEM.PREVIOUS_ID.escapeforjs()$",
+      $%ENDIF$
+      type: ('$$!chartType$'),
+      $%IF ITEM.INVERTED == "Y"$inverted: true,$%ENDIF$
+      $%IF !chartType == "errorbar"$
+      name: "$$ITEM.YSeriesName1.escapeforjs()$",
+      data: [$%FOR ##:ITEM.XAxis#$
+        [$$ITEM.ErrorMin$, $$ITEM.ErrorMax$],$%ENDFOR$
+      ]
+      $%ELSE$
+      data: [$%FOR ##:ITEM.XAxis#$
+        $%IF !chartType == "pie"${name: "$$ITEM.XAxis.escapeforjs()$", y: $$ITEM.YAxis1$, sliced: false},
+        $%ELSE${y: $%IF ITEM.YAxis1 != ""$ $$ITEM.YAxis1$ $%ELSE$ 0 $%ENDIF$ },$%ENDIF$
+      $%ENDFOR$],
+    $%ENDIF$
+    });
+    $%ENDIF$
+    $%IF ITEM.YSeriesName2 != ""$
+    chart.addSeries({
+      name: "$$ITEM.YSeriesName2.escapeforjs()$",
+      $%IF ITEM.DualAxisInd == "Y"$
+      yAxis: "axis_$$ITEM.PREVIOUS_ID.escapeforjs()$",
+      $%ENDIF$
+      type: ('$$!chartType$'),
+      $%IF ITEM.INVERTED == "Y"$inverted: true,$%ENDIF$
+      data: [$%FOR ##:ITEM.XAxis#$
+        $%IF !chartType == "pie"${name: "$$ITEM.XAxis.escapeforjs()$", y: $$ITEM.YAxis2$, sliced: false},
+        $%ELSE${y: $%IF ITEM.YAxis2 != ""$ $$ITEM.YAxis2$ $%ELSE$ 0 $%ENDIF$ },$%ENDIF$
+      $%ENDFOR$],
+    });
+    $%ENDIF$
+    $%IF ITEM.YSeriesName3 != ""$
+    chart.addSeries({
+      name: "$$ITEM.YSeriesName3.escapeforjs()$",
+      $%IF ITEM.DualAxisInd == "Y"$
+      yAxis: "axis_$$ITEM.PREVIOUS_ID.escapeforjs()$",
+      $%ENDIF$
+      type: ('$$!chartType$'),
+      $%IF ITEM.INVERTED == "Y"$inverted: true,$%ENDIF$
+      data: [$%FOR ##:ITEM.XAxis#$
+        $%IF !chartType == "pie"${name: "$$ITEM.XAxis.escapeforjs()$", y: $$ITEM.YAxis3$, sliced: false},
+        $%ELSE${y: $%IF ITEM.YAxis3 != ""$ $$ITEM.YAxis3$ $%ELSE$ 0 $%ENDIF$ },$%ENDIF$
+      $%ENDFOR$],
+    });
+    $%ENDIF$
+  }
+}
+$%ENDIF$
+function addSeparateChart$$ITEM.ID()$(){
+  var chartElem = $('#$$ITEM.ID()$');
+  if (chartElem.length == 0){
+    //insert the missing chart div
+    var chartContainer = $('#p1_$$ITEM.ID()$');
+    chartContainer.prepend('<div id="$$ITEM.ID()$" style="$%IF ITEM.Width != ""$width: $$ITEM.Width.escapeforjs()$px;$%ENDIF$  $%IF ITEM.Height != ""$height: $$ITEM.Height.escapeforjs()$px; $%ENDIF$ margin: 0 auto"></div>');
+  }
+  $('#$$ITEM.ID()$').highcharts({
+    navigation: {
+      buttonOptions: {
+        enabled: '$$ITEM.EXPORTING$' == "Y" ? true: false
+      }
+    },
+    chart: {
+      colorCount: 14,
+      type: '$$!chartType$',
+      $%IF ITEM.ThreeDim == "Y"$
+      options3d: {
+        enabled: true,
+        alpha: 15,
+        beta: 15,
+        depth: 50,
+        viewDistance: 25
+      },
+      $%ENDIF$
+      $%IF !chartType == "errorbar"$
+      stemWidth: 2,
+      stemColor: '#444',
+      whiskerWidth: 2,
+      whiskerColor: '#444',
+      zoomType: 'xy',
+      $%ENDIF$
+      $%IF ITEM.INVERTED == "Y"$inverted: true,$%ENDIF$
+      $%IF ITEM.TableID != ""$
+      events: {
+        drilldown: function (e){
+          pbFilterRows(e.point.id);
+        },
+        drillup: function(e){
+          pbFilterRowsPre(e.seriesOptions.data[0].parent);
+        }
+      }
+      $%ENDIF$
+    },
+    plotOptions: {
+      $%IF !chartType == "line" || !chartType == "spline"$
+      line: {
+        dataLabels: {
+          enabled: $%IF ITEM.ENABLE_DATALABELS == 'Y'$true$%ELSE$false$%ENDIF$,
+        },
+        $%IF ITEM.InteractiveChart == "Y"$
+        enableMouseTracking: true
+        $%ENDIF$
+      },
+      $%ENDIF$
+      $%IF !chartType == "pie"$
+      pie: {
+        depth: 45,
+        dataLabels: {
+          color: "$$ITEM.CHART_FONT_COLOR.escapeforjs()$",
+          connectorColor: "$$ITEM.CONNECTOR_COLOR.escapeforjs()$",
+          enabled: $%IF ITEM.ENABLE_DATALABELS == 'Y'$true$%ELSE$false$%ENDIF$,
+          formatter: function(){
+            return '<b>'+ this.point.name +'</b>: ' +
+            Highcharts.numberFormat(this.y, 2) +
+            ' (' + Highcharts.numberFormat((this.percentage).toFixed(2), 2) +' %)';
+          }
+        },
+        showInLegend: $%IF ITEM.DisplayKey == 'Y'$true$%ELSE$false$%ENDIF$,
+        slicedOffset: '$$ITEM.SLICED_OFFSET$' == "" ? '10' : '$$ITEM.SLICED_OFFSET$',
+      },
+      $%ENDIF$
+      column: {depth: 45},
+      $%IF !chartType == "bullet"$
+      series: {
+        pointPadding: 0.25,
+        borderWidth: 0,
+        color: '#000'
+      }
+      $%ELSE$
+      series: {
+        negativeColor: true,
+        allowPointSelect: $%IF ITEM.ALLOW_POINT_SELECT == 'Y'$true$%ELSE$false$%ENDIF$,
+        $%IF ITEM.TableID == ""$
+        events: {
+          legendItemClick: function(event){
+            Highcharts.setOptions(
+              {lang: {
+                decimalPoint: this.chart.options.lang.decimalPoint,
+                thousandsSep: this.chart.options.lang.thousandsSep,
+                numericSymbols: this.chart.options.lang.numericSymbols,
+                noData: this.chart.options.lang.noData
+              }}
+            );
+            return true;
+          }
+        },$%ENDIF$
+        states: {
+          select: {
+            color: "$$ITEM.SELECTION_COLOR.escapeforjs()$"
+          }
+        },
+        $%IF !chartType == "pie"$innerSize: $%IF ITEM.DONUTSIZE != ""$'$$ITEM.DONUTSIZE$%'$%ELSE$'59%'$%ENDIF$,$%ENDIF$
+        $%IF ITEM.InteractiveChart == "Y"$
+        point: {
+          events: {
+            click: function() {
+              $("#$$COMPONENT_ID_PREFIX$$$ITEM.ACTION_SERIES_ID$").val(this.series.name)
+              $("#$$COMPONENT_ID_PREFIX$$$ITEM.ACTION_NAME_ID$").val(this.name || this.category)
+              $("#$$COMPONENT_ID_PREFIX$$$ITEM.ACTION_INDEX_ID$").val(this.x)
+              $("#$$COMPONENT_ID_PREFIX$$$ITEM.ACTION_VALUE_ID$").val(this.y)
+              setTimeout(function() {
+                $("#$$COMPONENT_ID_PREFIX$$$ITEM.ACTION_BUTTON_ID$").click()
+              }, 200)
+            }
+          }
+        },
+        $%ENDIF$
+        $%IF !stacked == true$stacking: 'normal',$%ENDIF$
+        $%IF ITEM.S_CURSOR == 'Y'$cursor: 'pointer',$%ENDIF$
+				$%IF ITEM.TableID == ""$
+				$%IF ITEM.Action == "Y"$
+				point:{
+					events:{
+						$%IF ITEM.ptAction != ""$
+							click: function(){
+								$$ITEM.ptAction$
+							}
+						$%ENDIF$
+						$%IF ITEM.lgAction != ""$,
+							legendItemClick: function(e){
+								e.preventDefault();
+								$$ITEM.lgAction$
+							}
+						$%ENDIF$
+					}
+				},
+				$%ELSE$
+				point:{
+					events:{
+						legendItemClick: function(e){
+							e.preventDefault();
+						}
+					}
+				},
+				$%ENDIF$
+				$%ENDIF$
+        dataLabels: {
+          enabled: $%IF ITEM.ENABLE_DATALABELS == 'Y'$ true $%ELSE$ false $%ENDIF$,
+          allowOverlap: $%IF ITEM.DL_OVERLAY == 'Y'$ true $%ELSE$ false $%ENDIF$,
+          $%IF ITEM.DL_FORMAT != ""$format: "$$ITEM.DL_FORMAT.escapeforjs()$",$%ENDIF$
+          formatter: function(){
+            return  Highcharts.numberFormat(this.y, decimalPoint == "" ? 0 : 2, decimalPoint, thousandsSep);
+          }
+        },
+      }
+      $%ENDIF$
+    },
+    credits: {enabled: false},
+    title: {
+      text: "$$ITEM.Title.escapeforjs()$".replace(/&amp;/g, "&").replace(/&#x2F;/g, "/"),
+      $%IF ITEM.TITLE_FLOAT == "Y"$ floating: true, $%ENDIF$
+      $%IF ITEM.TITLE_ALIGNMENT != ""$ align: '$$ITEM.TITLE_ALIGNMENT$', $%ENDIF$
+      $%IF ITEM.TITLE_X != ""$ x: $$ITEM.TITLE_X$, $%ENDIF$
+      $%IF ITEM.TITLE_Y != ""$ y: $$ITEM.TITLE_Y$, $%ENDIF$
+    },
+    subtitle: {
+      text: "$$ITEM.SubTitle.escapeforjs()$",
+      $%IF ITEM.TITLE_FLOAT == "Y"$ floating: true, $%ENDIF$
+      $%IF ITEM.TITLE_ALIGNMENT != ""$ align: '$$ITEM.TITLE_ALIGNMENT$', $%ENDIF$
+      $%IF ITEM.SUB_TITLE_X != ""$ x: $$ITEM.SUB_TITLE_X$, $%ENDIF$
+      $%IF ITEM.SUB_TITLE_Y != ""$ y: $$ITEM.SUB_TITLE_Y$, $%ENDIF$
+    },
+    $%IF !chartType != "pie"$
+    xAxis: {
+      title: {text: "$$ITEM.XAxisLabel.escapeforjs()$"},
+      $%IF ITEM.X_AXIS_TICKINTERVAL != ""$
+      tickInterval: $$ITEM.X_AXIS_TICKINTERVAL.escapeforjs()$,
+      $%ENDIF$
+      $%IF ITEM.TableID != ""$
+      type: 'category',
+      $%ELSE$
+      $%IF !chartType != "bubble"$
+      categories: [$%FOR ##:ITEM.XAxis#$"$$ITEM.XAxis$",$%ENDFOR$],
+      $%ENDIF$
+      $%ENDIF$
+      labels: {
+        enabled: $%IF ITEM.SHOW_X_LABELS == "Y"$true$%ELSE$false$%ENDIF$,
+        formatter: function () {
+          return this.value + " $$ITEM.X_AXIS_SUFFIX.escapeforjs()$";
+        },
+        $%IF ITEM.XAxisMarkerRotation != ""$rotation: -$$ITEM.XAxisMarkerRotation$, $%ENDIF$
+      }
+    },
+    yAxis: {
+      title: {text: "$$ITEM.YAxisLabel.escapeforjs()$"},
+      labels: {
+        enabled: $%IF ITEM.SHOW_Y_LABELS == "Y"$true$%ELSE$false$%ENDIF$,
+//        allowDecimals: false,
+        $%IF ITEM.NUMERICSYMBOLS != ""$
+        formatter: function () {
+          if (this.value >= 1000) {
+            return this.value / 1000 + 'K' + " $$ITEM.Y_AXIS_SUFFIX.escapeforjs()$";
+          } else if (this.value <= -1000) {
+            return this.value / 1000 + 'K' + " $$ITEM.Y_AXIS_SUFFIX.escapeforjs()$";
+          } else if (this.value == 0) {
+            return this.value + " $$ITEM.Y_AXIS_SUFFIX.escapeforjs()$";
+          } else {
+            return Highcharts.numberFormat(this.value, decimalPoint == "" ? 0 : 2, decimalPoint, thousandsSep) + " $$ITEM.Y_AXIS_SUFFIX.escapeforjs()$";
+          }
+        },
+        $%ENDIF$
+        $%IF ITEM.Y_ROTATION != ""$rotation: -$$ITEM.Y_ROTATION$, $%ENDIF$
+      },
+      $%IF !chartType == "bullet"$
+      plotBands: [{
+        from: $$ITEM.YAxis3$,
+        to: $$ITEM.YAxis4$,
+        color: '#D7D7D7'
+      }],
+      $%ELSE$
+      plotLines: [{
+        value: 0,
+        width: 1,
+        color: '#808080'
+      }],
+      $%ENDIF$
+      $%IF ITEM.Y_AXIS_TICKINTERVAL != ""$
+      tickInterval: $$ITEM.Y_AXIS_TICKINTERVAL.escapeforjs()$,
+      $%ENDIF$
+    },
+    $%ENDIF$
+    $%IF ITEM.TableID != ""$
+    tooltip: {
+      headerFormat: '',
+      shared: true,
+      pointFormat: '<b>{point.name}</b><br>'+
+        '<span>{point.chead}</span>:<b>{point.ctitle}</b><br>'+
+        '<span>{point.yhead}</span>:<b>{point.y:.2f} %</b><br>'+
+        '<span>{point.zhead}</span>:<b>{point.ztitle}</b><br>'
+    },
+    $%ELSE$
+    tooltip: {
+      $%IF ITEM.ShowHint != "Y"$enabled: false,$%ENDIF$
+      $%IF !tt_shared == "Y "$shared: true,$%ENDIF$
+      $%IF ITEM.TT_CROSSHAIRS == 'Y'$crosshairs : [true, true],$%ENDIF$
+      $%IF ITEM.TOOLTIP_SUFFIX_VALUE != ""$valueSuffix: ' $$ITEM.TOOLTIP_SUFFIX_VALUE$',$%ENDIF$
+      useHTML: true,
+      $%IF !tt_shared != 'Y'$
+      formatter: function(){
+        var key = (!this.x) ? this.key : this.x;
+        var ttContent = "";
+        ttContent += $%IF ITEM.TT_HEADERFORMAT != ""$ "<b>" + "$$ITEM.TT_HEADERFORMAT.escapeforjs()$" +"</b><br/>" $%ELSE$ "" $%ENDIF$;
+        $%IF ITEM.ttHeader == 'Y'$ttContent += "<b>" + this.series.name + ": " + key + "</b>";
+        $%ELSE$
+        $%IF !chartType != "bubble"$ttContent += "<b>" + key + "</b>";$%ENDIF$
+        $%IF !chartType == "bullet"$ttContent += " : <b>" + this.y + " %</b>";$%ENDIF$
+        $%ENDIF$
+        if(this.percentage){
+          $%IF ITEM.TOOLTIP_PERC_TITLE != ""$
+          ttContent += ("<br/>$$ITEM.TOOLTIP_PERC_TITLE$: <b>" + Highcharts.numberFormat((this.percentage).toFixed(2), 2, decimalPoint, thousandsSep) +' %</b>');
+          $%ENDIF$
+        }
+        $%IF ITEM.TOOLTIP_VAL_TITLE != ""$
+        ttContent += ("<br/>$$ITEM.TOOLTIP_VAL_TITLE$: <b>$$ITEM.TOOLTIP_PREFIX_VALUE.escapeforjs()$" + Highcharts.numberFormat(this.y, 2, decimalPoint, thousandsSep) + "  $$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>");
+        $%ENDIF$
+        $%IF !chartType == "bubble"$
+        $%IF ITEM.TOOLTIP_CUSTOM1_TITLE != ""$ttContent += "<b>" + hc.FormatNumber(this.point.TOOLTIP_CUSTOM1_VALUE) + "$$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>";$%ENDIF$
+        $%IF ITEM.TOOLTIP_CUSTOM2_TITLE != ""$ttContent += "<br/>$$ITEM.TOOLTIP_CUSTOM2_TITLE$: <b>" + hc.FormatNumber(this.point.TOOLTIP_CUSTOM2_VALUE) + "$$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>";$%ENDIF$
+        $%IF ITEM.TOOLTIP_CUSTOM3_TITLE != ""$ttContent += " $$ITEM.TOOLTIP_CUSTOM3_TITLE$: <b>" + hc.FormatNumber(this.point.TOOLTIP_CUSTOM3_VALUE) + "$$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>";$%ENDIF$
+        $%IF ITEM.TOOLTIP_CUSTOM4_TITLE != ""$ttContent += "<br/>$$ITEM.TOOLTIP_CUSTOM4_TITLE$: <b>" + hc.FormatNumber(this.point.TOOLTIP_CUSTOM4_VALUE) + "$$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>";$%ENDIF$
+        $%IF ITEM.TOOLTIP_CUSTOM5_TITLE != ""$ttContent += " $$ITEM.TOOLTIP_CUSTOM5_TITLE$: <b>" + hc.FormatNumber(this.point.TOOLTIP_CUSTOM5_VALUE) + "$$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>";$%ENDIF$
+        $%IF ITEM.TOOLTIP_CUSTOM6_TITLE != ""$ttContent += "<br/>$$ITEM.TOOLTIP_CUSTOM6_TITLE$: <b>" + hc.FormatNumber(this.point.TOOLTIP_CUSTOM6_VALUE) + "$$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>";$%ENDIF$
+        $%ELSE$
+        $%IF ITEM.TOOLTIP_CUSTOM1_TITLE != ""$ttContent += "<br/>$$ITEM.TOOLTIP_CUSTOM1_TITLE$: <b>" + hc.FormatNumber(this.point.TOOLTIP_CUSTOM1_VALUE) + "$$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>";$%ENDIF$
+        $%IF ITEM.TOOLTIP_CUSTOM2_TITLE != ""$ttContent += "<br/>$$ITEM.TOOLTIP_CUSTOM2_TITLE$: <b>" + hc.FormatNumber(this.point.TOOLTIP_CUSTOM2_VALUE) + "$$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>";$%ENDIF$
+        $%IF ITEM.TOOLTIP_CUSTOM3_TITLE != ""$ttContent += "<br/>$$ITEM.TOOLTIP_CUSTOM3_TITLE$: <b>" + hc.FormatNumber(this.point.TOOLTIP_CUSTOM3_VALUE) + "$$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>";$%ENDIF$
+        $%IF ITEM.TOOLTIP_CUSTOM4_TITLE != ""$ttContent += "<br/>$$ITEM.TOOLTIP_CUSTOM4_TITLE$: <b>" + hc.FormatNumber(this.point.TOOLTIP_CUSTOM4_VALUE) + "$$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>";$%ENDIF$
+        $%IF ITEM.TOOLTIP_CUSTOM5_TITLE != ""$ttContent += "<br/>$$ITEM.TOOLTIP_CUSTOM5_TITLE$: <b>" + hc.FormatNumber(this.point.TOOLTIP_CUSTOM5_VALUE) + "$$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>";$%ENDIF$
+        $%IF ITEM.TOOLTIP_CUSTOM6_TITLE != ""$ttContent += "<br/>$$ITEM.TOOLTIP_CUSTOM6_TITLE$: <b>" + hc.FormatNumber(this.point.TOOLTIP_CUSTOM6_VALUE) + "$$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>";$%ENDIF$
+        $%ENDIF$
+        ttContent += "<br/><small>" + "$$ITEM.TT_FOOTERFORMAT.escapeforjs()$" + "</small>";
+        return ttContent;
+      }
+      $%ELSE$
+      $%IF ITEM.TOOLTIP_CUSTOM1_TITLE != ""$
+      formatter: function(){
+        var key = (!this.x) ? this.key : this.x;
+        var ttContent = "";
+        ttContent += "<b>" + key + "</b>";
+        $%IF ITEM.TOOLTIP_VAL_TITLE != ""$
+        ttContent += ("<br/>$$ITEM.TOOLTIP_VAL_TITLE$: <b>$$ITEM.TOOLTIP_PREFIX_VALUE.escapeforjs()$" + Highcharts.numberFormat(this.y, 2, decimalPoint, thousandsSep) + "  $$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>");
+        $%ENDIF$
+        $%IF ITEM.TOOLTIP_CUSTOM1_TITLE != ""$ttContent += "<br/>$$ITEM.TOOLTIP_CUSTOM1_TITLE$: <b>" + hc.FormatNumber(this.points[0].point.TOOLTIP_CUSTOM1_VALUE) + "$$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>";$%ENDIF$
+        $%IF ITEM.TOOLTIP_CUSTOM2_TITLE != ""$ttContent += "<br/>$$ITEM.TOOLTIP_CUSTOM2_TITLE$: <b>" + hc.FormatNumber(this.points[0].point.TOOLTIP_CUSTOM2_VALUE) + "$$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>";$%ENDIF$
+        $%IF ITEM.TOOLTIP_CUSTOM3_TITLE != ""$ttContent += "<br/>$$ITEM.TOOLTIP_CUSTOM3_TITLE$: <b>" + hc.FormatNumber(this.points[0].point.TOOLTIP_CUSTOM3_VALUE) + "$$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>";$%ENDIF$
+        $%IF ITEM.TOOLTIP_CUSTOM4_TITLE != ""$ttContent += "<br/>$$ITEM.TOOLTIP_CUSTOM4_TITLE$: <b>" + hc.FormatNumber(this.points[0].point.TOOLTIP_CUSTOM4_VALUE) + "$$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>";$%ENDIF$
+        $%IF ITEM.TOOLTIP_CUSTOM5_TITLE != ""$ttContent += "<br/>$$ITEM.TOOLTIP_CUSTOM5_TITLE$: <b>" + hc.FormatNumber(this.points[0].point.TOOLTIP_CUSTOM5_VALUE) + "$$ITEM.TOOLTIP_SUFFIX_VALUE.escapeforjs()$</b>";$%ENDIF$
+        return ttContent;
+      }
+      $%ENDIF$
+      $%ENDIF$
+    },$%ENDIF$
+    legend: {
+      enabled: $%IF ITEM.ChartType == 'Pie Chart' && !chartType != 'pie'$false$%ELSE$$%IF ITEM.DisplayKey != 'Y'$false$%ELSE$true$%ENDIF$$%ENDIF$,
+			$%IF ITEM.AddSeriesValueInLegend == "Y"$labelFormat: '{name}: {percentage:.1f}%',$%ENDIF$
+      $%IF ITEM.KeyPosition != ""$align: '$$ITEM.KeyPosition$'.toLowerCase(),$%ENDIF$
+      layout: "$$ITEM.LAYOUT_POSITION$" == "" ? 'horizontal' : '$$ITEM.LAYOUT_POSITION$'.toLowerCase(),
+      verticalAlign: "$$ITEM.KEYVERTICALALIGN$" == "" ? 'bottom' : '$$ITEM.KEYVERTICALALIGN$'.toLowerCase(),
+      $%IF ITEM.KEYVERTICALALIGN == "Top"$y: 25,$%ENDIF$
+      $%IF ITEM.KeyWidth != ""$width: $$ITEM.KeyWidth$,$%ENDIF$
+      $%IF ITEM.L_TITLE != ""$title: {text: "$$ITEM.L_TITLE.escapeforjs()$"},$%ENDIF$
+      $%IF ITEM.L_FORMAT != ""$labelFormat: "$$ITEM.L_FORMAT.escapeforjs()$",$%ENDIF$
+      symbolRadius: 2
+    },
+    $%IF !chartType != "pie"$
+    responsive: {
+      rules: [{
+        condition: {maxWidth: 350},
+        chartOptions: {
+          legend: {
+            align: 'center',
+            verticalAlign: 'bottom',
+            layout: 'horizontal'
+          },
+          xAxis: {
+            labels: {
+              formatter: function () {
+                return this.value.charAt(0);
+              }
+            }
+          },
+          yAxis: {
+            labels: {align: 'left',x: -2,y: 0},
+            title: {text: ''}
+          }
+        }
+      }]
+    },$%ENDIF$
+    $%IF !chartType == "bullet"$
+    series: [
+      $%IF ITEM.YSeriesName1 != ""${
+        name: "$$ITEM.YSeriesName1.escapeforjs()$",
+        data: [
+        {
+          y: $$ITEM.YAxis1$,
+          target: $$ITEM.YAxis5$,
+          $%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:"$$ITEM.TOOLTIP_CUSTOM1_VALUE$",$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:"$$ITEM.TOOLTIP_CUSTOM2_VALUE$",$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:"$$ITEM.TOOLTIP_CUSTOM3_VALUE$",$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM4_VALUE != "" $TOOLTIP_CUSTOM4_VALUE:"$$ITEM.TOOLTIP_CUSTOM4_VALUE$",$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM5_VALUE != "" $TOOLTIP_CUSTOM5_VALUE:"$$ITEM.TOOLTIP_CUSTOM5_VALUE$",$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM6_VALUE != "" $TOOLTIP_CUSTOM6_VALUE:"$$ITEM.TOOLTIP_CUSTOM6_VALUE$",$%ENDIF$
+        },
+        {
+          y: $$ITEM.YAxis2$,
+          $%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:"$$ITEM.TOOLTIP_CUSTOM1_VALUE$",$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:"$$ITEM.TOOLTIP_CUSTOM2_VALUE$",$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:"$$ITEM.TOOLTIP_CUSTOM3_VALUE$",$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM4_VALUE != "" $TOOLTIP_CUSTOM4_VALUE:"$$ITEM.TOOLTIP_CUSTOM4_VALUE$",$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM5_VALUE != "" $TOOLTIP_CUSTOM5_VALUE:"$$ITEM.TOOLTIP_CUSTOM5_VALUE$",$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM6_VALUE != "" $TOOLTIP_CUSTOM6_VALUE:"$$ITEM.TOOLTIP_CUSTOM6_VALUE$",$%ENDIF$
+        }
+        ],
+      }$%ENDIF$
+      $%IF ITEM.YSeriesName5 != ""$,{
+        name: "$$ITEM.YSeriesName5.escapeforjs()$",
+        visible: false
+      }$%ENDIF$
+      $%IF ITEM.YSeriesName3 != ""$,{
+        name: "$$ITEM.YSeriesName3.escapeforjs()$",
+        visible: false
+      }$%ENDIF$
+    ],
+    $%ELSE$
+    $%IF !chartType == "errorbar"$
+    series: [{
+      name: "$$ITEM.YSeriesName1.escapeforjs()$",
+      data: [$%FOR ##:ITEM.XAxis#$
+        [$$ITEM.ErrorMin$, $$ITEM.ErrorMax$],$%ENDFOR$
+      ],
+      point: [
+        $%FOR ##:ITEM.XAxis#${
+          $%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM4_VALUE != "" $TOOLTIP_CUSTOM4_VALUE:'$$ITEM.TOOLTIP_CUSTOM4_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM5_VALUE != "" $TOOLTIP_CUSTOM5_VALUE:'$$ITEM.TOOLTIP_CUSTOM5_VALUE$',$%ENDIF$
+        },$%ENDFOR$
+      ]
+    }]
+    $%ELSE$
+    $%IF ITEM.TableID != ""$
+    series: [{
+      name: '$$ITEM.XAxisLabel.escapeforjs()$',
+      colorByPoint: true,
+      data: getTableData([perfbd.iname, perfbd.pl, perfbd.perf, perfbd.col3])
+    }],
+    drilldown: {
+      series: getdrilldown()
+    }
+    $%ELSE$
+    $%IF !chartType == "bubble"$
+    series: [{
+      data: [
+        $%FOR ##:ITEM.XAxis#${
+          x: $$ITEM.XAxis$,
+          y: $$ITEM.YAxis1$,
+          z: $$ITEM.YAxis2$,
+          $%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:"$$ITEM.TOOLTIP_CUSTOM1_VALUE$",$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:"$$ITEM.TOOLTIP_CUSTOM2_VALUE$",$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:"$$ITEM.TOOLTIP_CUSTOM3_VALUE$",$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM4_VALUE != "" $TOOLTIP_CUSTOM4_VALUE:"$$ITEM.TOOLTIP_CUSTOM4_VALUE$",$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM5_VALUE != "" $TOOLTIP_CUSTOM5_VALUE:"$$ITEM.TOOLTIP_CUSTOM5_VALUE$",$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM6_VALUE != "" $TOOLTIP_CUSTOM6_VALUE:"$$ITEM.TOOLTIP_CUSTOM6_VALUE$",$%ENDIF$
+        },$%ENDFOR$
+      ]
+    }]
+    $%ELSE$
+    series: [
+      $%IF ITEM.YSeriesName1 != ""${
+        name: "$$ITEM.YSeriesName1.escapeforjs()$",$%IF !chartType == "pie"$
+        innerSize: $%IF ITEM.YSeriesName2 != ""$'75%'$%ELSE$'$$ITEM.DONUTSIZE$%'$%ENDIF$,$%ENDIF$
+        $%IF !chartType == "column" && ITEM.ChartType == "Pie Chart"$colorByPoint: true,$%ENDIF$
+        data: [
+        $%FOR ##:ITEM.XAxis#${
+          name: "$$ITEM.XAxis.escapeforjs()$",
+          y: $%IF ITEM.YAxis1 != ""$ $$ITEM.YAxis1$ $%ELSE$ 0 $%ENDIF$,
+          $%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM4_VALUE != "" $TOOLTIP_CUSTOM4_VALUE:'$$ITEM.TOOLTIP_CUSTOM4_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM5_VALUE != "" $TOOLTIP_CUSTOM5_VALUE:'$$ITEM.TOOLTIP_CUSTOM5_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM6_VALUE != "" $TOOLTIP_CUSTOM6_VALUE:'$$ITEM.TOOLTIP_CUSTOM6_VALUE$',$%ENDIF$
+        },$%ENDFOR$
+        ],
+      }$%ENDIF$
+      $%IF ITEM.YSeriesName2 != ""$,{
+        name: "$$ITEM.YSeriesName2.escapeforjs()$",$%IF !chartType == "pie"$
+        allowPointSelect: false,    // TODO
+        size: '65%',
+        innerSize: '64%',$%ENDIF$
+        $%IF !chartType == "column" && ITEM.ChartType == "Pie Chart"$colorByPoint: true,$%ENDIF$
+        data: [
+        $%FOR ##:ITEM.XAxis#${
+          name: "$$ITEM.XAxis.escapeforjs()$",
+          y: $%IF ITEM.YAxis2 != ""$ $$ITEM.YAxis2$ $%ELSE$ 0 $%ENDIF$,
+          $%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM4_VALUE != "" $TOOLTIP_CUSTOM4_VALUE:'$$ITEM.TOOLTIP_CUSTOM4_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM5_VALUE != "" $TOOLTIP_CUSTOM5_VALUE:'$$ITEM.TOOLTIP_CUSTOM5_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM6_VALUE != "" $TOOLTIP_CUSTOM6_VALUE:"$$ITEM.TOOLTIP_CUSTOM6_VALUE$",$%ENDIF$
+        },$%ENDFOR$
+        ],
+      }$%ENDIF$
+      $%IF ITEM.YSeriesName3 != ""$,{
+        name: "$$ITEM.YSeriesName3.escapeforjs()$",
+        $%IF !chartType == "column" && ITEM.ChartType == "Pie Chart"$colorByPoint: true,$%ENDIF$
+        data: [$%IF ITEM.YAxis3.firstFreeInstance() != null$
+        $%FOR ##:ITEM.XAxis#${
+          name: "$$ITEM.XAxis.escapeforjs()$",
+          y: $%IF ITEM.YAxis3 != ""$ $$ITEM.YAxis3$ $%ELSE$ 0 $%ENDIF$,
+          $%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM4_VALUE != "" $TOOLTIP_CUSTOM4_VALUE:'$$ITEM.TOOLTIP_CUSTOM4_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM5_VALUE != "" $TOOLTIP_CUSTOM5_VALUE:'$$ITEM.TOOLTIP_CUSTOM5_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM6_VALUE != "" $TOOLTIP_CUSTOM6_VALUE:"$$ITEM.TOOLTIP_CUSTOM6_VALUE$",$%ENDIF$
+        },$%ENDFOR$
+        $%ENDIF$],
+      }$%ENDIF$
+      $%IF ITEM.YSeriesName4 != ""$,{
+        name: "$$ITEM.YSeriesName4.escapeforjs()$",
+        $%IF !chartType == "column" && ITEM.ChartType == "Pie Chart"$colorByPoint: true,$%ENDIF$
+        data: [$%IF ITEM.YAxis4.firstFreeInstance() != null$
+        $%FOR ##:ITEM.XAxis#${
+          name: "$$ITEM.XAxis.escapeforjs()$",
+          y: $%IF ITEM.YAxis4 != ""$ $$ITEM.YAxis4$ $%ELSE$ 0 $%ENDIF$,
+          $%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM4_VALUE != "" $TOOLTIP_CUSTOM4_VALUE:'$$ITEM.TOOLTIP_CUSTOM4_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM5_VALUE != "" $TOOLTIP_CUSTOM5_VALUE:'$$ITEM.TOOLTIP_CUSTOM5_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM6_VALUE != "" $TOOLTIP_CUSTOM6_VALUE:"$$ITEM.TOOLTIP_CUSTOM6_VALUE$",$%ENDIF$
+        },$%ENDFOR$
+        $%ENDIF$],
+      }$%ENDIF$
+      $%IF ITEM.YSeriesName5 != ""$,{
+        name: "$$ITEM.YSeriesName5.escapeforjs()$",
+        $%IF !chartType == "column" && ITEM.ChartType == "Pie Chart"$colorByPoint: true,$%ENDIF$
+        data: [$%IF ITEM.YAxis5.firstFreeInstance() != null$
+        $%FOR ##:ITEM.XAxis#${
+          y: $%IF ITEM.YAxis5 != ""$ $$ITEM.YAxis5$ $%ELSE$ 0 $%ENDIF$,
+          $%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM4_VALUE != "" $TOOLTIP_CUSTOM4_VALUE:'$$ITEM.TOOLTIP_CUSTOM4_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM5_VALUE != "" $TOOLTIP_CUSTOM5_VALUE:'$$ITEM.TOOLTIP_CUSTOM5_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM6_VALUE != "" $TOOLTIP_CUSTOM6_VALUE:"$$ITEM.TOOLTIP_CUSTOM6_VALUE$",$%ENDIF$
+        },$%ENDFOR$
+        $%ENDIF$],
+      }$%ENDIF$
+      $%IF ITEM.YSeriesName6 != ""$,{
+        name: "$$ITEM.YSeriesName6.escapeforjs()$",
+        $%IF !chartType == "column" && ITEM.ChartType == "Pie Chart"$colorByPoint: true,$%ENDIF$
+        data: [$%IF ITEM.YAxis6.firstFreeInstance() != null$
+        $%FOR ##:ITEM.XAxis#${
+          y: $%IF ITEM.YAxis6 != ""$ $$ITEM.YAxis6$ $%ELSE$ 0 $%ENDIF$,
+          $%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM4_VALUE != "" $TOOLTIP_CUSTOM4_VALUE:'$$ITEM.TOOLTIP_CUSTOM4_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM5_VALUE != "" $TOOLTIP_CUSTOM5_VALUE:'$$ITEM.TOOLTIP_CUSTOM5_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM6_VALUE != "" $TOOLTIP_CUSTOM6_VALUE:"$$ITEM.TOOLTIP_CUSTOM6_VALUE$",$%ENDIF$
+        },$%ENDFOR$
+        $%ENDIF$],
+      }$%ENDIF$
+      $%IF ITEM.YSeriesName7 != ""$,{
+        name: "$$ITEM.YSeriesName7.escapeforjs()$",
+        $%IF !chartType == "column" && ITEM.ChartType == "Pie Chart"$colorByPoint: true,$%ENDIF$
+        data: [$%IF ITEM.YAxis7.firstFreeInstance() != null$
+        $%FOR ##:ITEM.XAxis#${
+          y: $%IF ITEM.YAxis7 != ""$ $$ITEM.YAxis7$ $%ELSE$ 0 $%ENDIF$,
+          $%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM4_VALUE != "" $TOOLTIP_CUSTOM4_VALUE:'$$ITEM.TOOLTIP_CUSTOM4_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM5_VALUE != "" $TOOLTIP_CUSTOM5_VALUE:'$$ITEM.TOOLTIP_CUSTOM5_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM6_VALUE != "" $TOOLTIP_CUSTOM6_VALUE:"$$ITEM.TOOLTIP_CUSTOM6_VALUE$",$%ENDIF$
+        },$%ENDFOR$
+        $%ENDIF$],
+      }$%ENDIF$
+      $%IF ITEM.YSeriesName8 != ""$,{
+        name: "$$ITEM.YSeriesName8.escapeforjs()$",
+        $%IF !chartType == "column" && ITEM.ChartType == "Pie Chart"$colorByPoint: true,$%ENDIF$
+        data: [$%IF ITEM.YAxis8.firstFreeInstance() != null$
+        $%FOR ##:ITEM.XAxis#${
+          y: $%IF ITEM.YAxis8 != ""$ $$ITEM.YAxis8$ $%ELSE$ 0 $%ENDIF$,
+          $%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM4_VALUE != "" $TOOLTIP_CUSTOM4_VALUE:'$$ITEM.TOOLTIP_CUSTOM4_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM5_VALUE != "" $TOOLTIP_CUSTOM5_VALUE:'$$ITEM.TOOLTIP_CUSTOM5_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM6_VALUE != "" $TOOLTIP_CUSTOM6_VALUE:"$$ITEM.TOOLTIP_CUSTOM6_VALUE$",$%ENDIF$
+        },$%ENDFOR$
+        $%ENDIF$],
+      }$%ENDIF$
+      $%IF ITEM.YSeriesName9 != ""$,{
+        name: "$$ITEM.YSeriesName9.escapeforjs()$",
+        $%IF !chartType == "column" && ITEM.ChartType == "Pie Chart"$colorByPoint: true,$%ENDIF$
+        data: [$%IF ITEM.YAxis9.firstFreeInstance() != null$
+        $%FOR ##:ITEM.XAxis#${
+          y: $%IF ITEM.YAxis9 != ""$ $$ITEM.YAxis9$ $%ELSE$ 0 $%ENDIF$,
+          $%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM4_VALUE != "" $TOOLTIP_CUSTOM4_VALUE:'$$ITEM.TOOLTIP_CUSTOM4_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM5_VALUE != "" $TOOLTIP_CUSTOM5_VALUE:'$$ITEM.TOOLTIP_CUSTOM5_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM6_VALUE != "" $TOOLTIP_CUSTOM6_VALUE:"$$ITEM.TOOLTIP_CUSTOM6_VALUE$",$%ENDIF$
+        },$%ENDFOR$
+        $%ENDIF$],
+      }$%ENDIF$
+      $%IF ITEM.YSeriesName10 != ""$,{
+        name: "$$ITEM.YSeriesName10.escapeforjs()$",
+        $%IF !chartType == "column" && ITEM.ChartType == "Pie Chart"$colorByPoint: true,$%ENDIF$
+        data: [$%IF ITEM.YAxis10.firstFreeInstance() != null$
+        $%FOR ##:ITEM.XAxis#${
+          y: $%IF ITEM.YAxis10 != ""$ $$ITEM.YAxis10$ $%ELSE$ 0 $%ENDIF$,
+          $%IF ITEM.TOOLTIP_CUSTOM1_VALUE != "" $TOOLTIP_CUSTOM1_VALUE:'$$ITEM.TOOLTIP_CUSTOM1_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM2_VALUE != "" $TOOLTIP_CUSTOM2_VALUE:'$$ITEM.TOOLTIP_CUSTOM2_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM3_VALUE != "" $TOOLTIP_CUSTOM3_VALUE:'$$ITEM.TOOLTIP_CUSTOM3_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM4_VALUE != "" $TOOLTIP_CUSTOM4_VALUE:'$$ITEM.TOOLTIP_CUSTOM4_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM5_VALUE != "" $TOOLTIP_CUSTOM5_VALUE:'$$ITEM.TOOLTIP_CUSTOM5_VALUE$',$%ENDIF$
+          $%IF ITEM.TOOLTIP_CUSTOM6_VALUE != "" $TOOLTIP_CUSTOM6_VALUE:"$$ITEM.TOOLTIP_CUSTOM6_VALUE$",$%ENDIF$
+        },$%ENDFOR$
+        $%ENDIF$],
+      }$%ENDIF$
+    ]
+    $%ENDIF$
+    $%ENDIF$
+    $%ENDIF$
+    $%ENDIF$
+  },
+  function(chart){
+    $%IF ITEM.TOGGLE_BTN == "Y"$
+    $%IF ITEM.ChartType == 'Pie Chart' && !chartType == 'pie'$
+    pieState = (chartType == 'pie') ? true : false,
+    toggleChartType = "column",
+    negativeValues = false;
+    if(!negativeValues){  // Enable user to toggle pie chart as column chart and back
+      $('#btn_$$ITEM.ID()$').click(function(e){
+        if(!pieState){
+          seriesLength = chart.series.length;
+          for(i=1; i < seriesLength; i++){
+            chart.series[i].hide();
+          }
+        }else{
+          seriesLength = chart.series.length;
+          for( i=1 ; i < seriesLength ; i++ ) {
+            chart.series[i].show();
+          }
+        }
+        $.each(chart.series,function(i,serie){
+          serie.update({type: pieState ? toggleChartType : 'pie', colorByPoint: true});
+        });
+        chart.legend.update({enabled: !pieState});
+        chart.tooltip.update({shared: !pieState});
+        if(pieState){
+          $.each(chart.xAxis,function(i,xAxis){
+            xAxis.update({
+              categories: [$%FOR ##:ITEM.XAxis#$"$$ITEM.XAxis$",$%ENDFOR$],
+              title: {text: ''},
+              labels: {style: {color: '$$ITEM.CHART_FONT_COLOR$'}}
+            });
+          });
+          $.each(chart.yAxis,function(i,yAxis){
+            yAxis.update({
+              labels: {
+                enabled: $%IF ITEM.SHOW_Y_LABELS == "Y"$true$%ELSE$false$%ENDIF$,
+                style: {color: '$$ITEM.CHART_FONT_COLOR$'},
+              },
+              title: {
+                text: "$$ITEM.YAxisLabel.escapeforjs()$",
+                style: {color: '$$ITEM.CHART_FONT_COLOR$'}
+              }
+            });
+          });
+        }else{
+          $.each(chart.yAxis,function(i,yAxis){
+            yAxis.update({
+              labels: {
+                enabled: $%IF ITEM.SHOW_Y_LABELS == "Y"$true$%ELSE$false$%ENDIF$,
+                style: {color: '$$ITEM.CHART_FONT_COLOR$'},
+              },
+              title: {text: ''}
+            });
+          });
+        }
+        $('#btn_$$ITEM.ID()$').toggleClass('icon-chart-bar1 icon-chart-pie');  // Switch the image of toggle button
+        chart.redraw();
+        pieState = !pieState;
+        e.preventDefault();
+      });
+    }else{
+      $('#btn_$$ITEM.ID()$').attr('style', "display:none");
+    }$%ENDIF$
+    $%ENDIF$
+    $%IF ITEM.ttLegend == 'Y'$
+    $('#$$ITEM.ID()$ .highcharts-legend-item').hover(function(e) {
+      chart.tooltip.refresh(chart.series[0].data[$(this).index()]);
+    },function() {
+      chart.tooltip.hide();
+    });$%ENDIF$
+  }
+  )
+};
+
+$%IF ITEM.Action == "Y"$
+function ChartLink(o,b,d){
+//  console.log('ChartLink ', o , b , d);
+  var d = d || '#QUE_ChartValueRedirector';
+  $('#'+d).val(o.name)
+  $('#'+b).trigger('click');
+}
+function LineChartLink(o,b,d,e){
+//  console.log('LineChartLink ', o , b , d , e);
+  var d = d || '#QUE_ChartValueRedirector';
+  var e = e || '#QUE_ChartValueRedirector1';
+  $('#'+d).val(o.category)
+  $('#'+e).val(o.series.name)
+  $('#'+b).trigger('click');
+}
+$%ENDIF$
+
+$%COMMENT$ Rescale Highcharts when resize browser $%ENDCOMMENT$
+$(window).resize(function() {
+  $$ITEM.ID()$_resize();
+});
+
+Hi.addHook("postProcessResponses", function(){
+  $$ITEM.ID()$_resize();
+  if ( $('#$$ITEM.ID()$').highcharts() != null )
+    $('#$$ITEM.ID()$').highcharts().reflow();
+})
+Hi.addHook("afterChangeTab", function(tabId, ns) {
+  $$ITEM.ID()$_resize();
+  var tabPaneName = buildCompID(ns, "Pane", tabId);
+  $("#" + tabPaneName + " .tc-chart").each(function(i,o) {
+    var chartId = $(o).attr("id");
+    if ( window["groupChartWithPrevious" + chartId]) {
+      window["groupChartWithPrevious" + chartId]();
+    } else {
+      window["addSeparateChart" + chartId]();
+    }
+  })
+})
+
+$%COMMENT$ We need parent dimensions - Highcharts could be in a Column or Section with a certain size (px or %), in this case the chart needs to be smaller then parent container and not bigger then maximum size set for it  $%ENDCOMMENT$
+function $$ITEM.ID()$_resize(){
+  var parentWidth = $("#$$ITEM.ID()$").closest(".tc-card-body, .tc-tab-container").width();
+  var parentHeight = $("#$$ITEM.ID()$.tc-chart").height();
+  var maxWidth  = '$$ITEM.Width.escapeforjs()$'  != "" ? '$$ITEM.Width.escapeforjs()$'  : parentWidth;
+  var maxHeight = '$$ITEM.Height.escapeforjs()$' != "" ? '$$ITEM.Height.escapeforjs()$' : parentHeight;
+  if(parentWidth != 0){
+    if (parentWidth < $("#$$ITEM.ID()$").width())
+      $("#$$ITEM.ID()$").css("width",parentWidth + "px");
+    else if(parentWidth > maxWidth)
+      $("#$$ITEM.ID()$").css("width",maxWidth + "px");
+    else
+      $("#$$ITEM.ID()$").css("width",parentWidth + "px");
+  }else{
+    if($(window).width() < $("#$$ITEM.ID()$").width() || $("#$$ITEM.ID()$").width() == 0)
+      $("#$$ITEM.ID()$").css("width",$(window).width() + "px");
+  }
+}
+
+/* ----- ----- Helper Functions ----- ----- */
+var hc = {
+  FormatNumber: function(x){                                // Unformatted valid JS Number (en) to locale formatting
+    if(!x) return 'unknown';
+    var parts = x.toString().split("."); 
+    parts[0] = parts[0].replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,"); //The second argument to the string replacement methods is the value to replace our pattern with.
+	//parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, thousandsSep);
+	var temp = parts.join(decimalPoint);
+    return parts.join(decimalPoint);
+  },
+  RawNumber: function(x, ds){                               // Remove country specific formatting of numbers and return valid JS unformatted number
+    var parts = x.toString().split(ds||decimalPoint);       // ds = decimal separator defined to override default, in case of always raw numbers or formatted in edge Connect with e.g.: xxx.format('#,##0.00'). If undefined, use decimalPoint from system.
+    parts[0] = parts[0].replace(/[^0-9\-]+/g, '');
+    return parts.join(".");
+  }
+}
+$%IF ITEM.TableID != ""$
+function initPBtable(tid){
+  var t = $('#'+tid);
+  if(!t.length) return false;
+  perfbd.table = t;
+  perfbd.rows = $(t).find('tbody tr');
+  perfbd.tdata = [],          // initialize table row data Array
+  perfbd.groups = [];         // initialize groups Array
+  perfbd.rownames = [];
+  $.each($(perfbd.rows), function(i,r){ // fix for WSC-7712
+    var rowname = $(r).find('td').eq(perfbd.iname).text().trim();
+    while ($.inArray(rowname, perfbd.rownames)>0){rowname = rowname+" "}
+    perfbd.rownames.push(rowname);
+  })
+  $.each($(perfbd.rows), function(i,r){
+    $(r).attr('data-level',   $(r).find('td').eq(perfbd.ilevl).text().trim())
+        .attr('data-rowid',   $(r).find('td').eq(perfbd.iid).text().trim())
+        .attr('data-rowpid',  $(r).find('td').eq(perfbd.ipid).text().trim())
+        .attr('data-rowname', perfbd.rownames[i])
+        .attr('data-rowdat1', $(r).find('td').eq(perfbd.pl).text().trim().replace(/\s\s+/g,' '))
+        .attr('data-rowdat2', $(r).find('td').eq(perfbd.perf).text().trim().replace(/\s\s+/g,' '))
+        .attr('data-rowdat3', $(r).find('td').eq(perfbd.col3).text().trim().replace(/\s\s+/g,' '));
+    if($(r).data('level')==0)
+      perfbd.rootid = $(r).find('td').eq(perfbd.iid).text().trim();
+  })
+  perfbd.rows = $(t).find('tbody tr');
+  pbFilterRows(perfbd.rootid);
+  $.each($(perfbd.rows), function(i,r){
+    var gpid = $(r).find('td').eq(perfbd.ipid).text().trim();
+    perfbd.groups.push(gpid);
+  })
+  perfbd.groups = perfbd.groups.getUnique();
+  $.each($(perfbd.rows), function(i,r){
+    perfbd.tdata.push({
+      'name':$(r).data('rowname'),
+      'perf':$(r).data('rowdat1'),
+      'pl':$(r).data('rowdat2'),
+      'col3':$(r).data('rowdat3'),
+      'pid':$(r).data('rowpid'),
+      'id':$(r).data('rowid')
+    });
+  })
+}
+function pbFilterRowsPre(legtxt){
+  $.each($(perfbd.rows), function(i,r){
+    if(legtxt == $(r).data('rowpid')){
+      pbFilterRows($(r).data('rowpid'));
+    }
+  })
+}
+function pbFilterRows(pid){
+  $.each($(perfbd.rows), function(i,r){
+    if($(r).data('rowpid') == pid)
+      $(r).removeClass('hidden hilite');
+    else
+      $(r).addClass('hidden');
+    if($(r).data('rowid') == pid)
+      $(r).removeClass('hidden').addClass('hilite');
+  })
+}
+function getTableData(cols){
+  perfbd.root = [];
+  $.each(perfbd.table.find(' tbody tr:visible'),function(i,r){
+    if($(this).hasClass('hilite')) return;
+    perfbd.root.push({
+      'name':       $(this).data('rowname'),
+      'yhead':      perfbd.table.find('thead th').eq(cols[1]).text().trim(),
+      'y':          parseFloat($(this).data('rowdat1').split(' ')[0].replace(/\,/g,'')),
+      'chead':      perfbd.table.find('thead th').eq(cols[2]).text().trim(),
+      'ctitle':     $(this).find('td').eq(cols[2]).text().trim(),
+      'zhead':      perfbd.table.find('thead th').eq(cols[3]).text().trim(),
+      'ztitle':     $(this).find('td').eq(cols[3]).text().trim(),
+      'drilldown':  $(this).data('rowname'),
+      'id':         $(this).data('rowid'),
+      'parent':     $(this).data('rowpid')
+    })
+  })
+  return perfbd.root;
+}
+
+function getdrilldown(){
+  perfbd.series = [];
+  $.each(perfbd.groups, function(i,g){
+    var sdata = {};
+    var gdata = [];
+    $.each(perfbd.tdata, function(j,d){
+      if(g == d.id){
+        sdata.name = d.name;
+        sdata.id = d.name;
+      }
+    })
+    $.each(perfbd.tdata, function(j,d){
+      if(g == d.pid){
+        gdata.push({
+          'name': d.name,
+          'yhead': perfbd.table.find('thead th').eq(perfbd.pl).text().trim(),
+          'y': parseFloat(d.perf.split(' ')[0].replace(/\,/g,'')),
+          'chead': perfbd.table.find('thead th').eq(perfbd.perf).text().trim(),
+          'ctitle': parseFloat(d.pl.split(' ')[0].replace(/\,/g,'')),
+          'zhead': perfbd.table.find('thead th').eq(perfbd.col3).text().trim(),
+          'ztitle': parseFloat(d.col3.split(' ')[0].replace(/\,/g,'')),
+          'drilldown': d.name,
+          'id': d.id,
+          'parent': d.pid
+        });
+      }
+    })
+    sdata.data = gdata;
+    perfbd.series.push(sdata);
+  })
+//console.info(JSON.stringify(perfbd));
+  return perfbd.series;
+}
+$%ENDIF$
+</script>

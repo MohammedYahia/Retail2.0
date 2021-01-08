@@ -1,0 +1,5 @@
+.wsc-ShowMore tr.exp {font-weight: 700; background-color: #eee;}
+.wsc-ShowMore tr.showMore ul {list-style-type: none; margin: 0; padding: 0; line-height: 2rem; background-color:#eee;}
+.wsc-ShowMore tr.showMore ul li {display: inline;margin-right: 3rem;font-style: italic}
+.wsc-ShowMore tr.showMore ul li span:first-child {font-weight:700; margin-right:1rem}
+.wsc-ShowMore tr.showMore ul li span {display: inline-block; padding: 0.1rem 0.6rem;}

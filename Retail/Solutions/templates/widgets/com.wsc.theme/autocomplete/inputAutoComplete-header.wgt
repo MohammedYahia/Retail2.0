@@ -1,0 +1,172 @@
+<style>
+.instrumentContainer {
+  background-color: #fff !important;
+  padding: 0 0px 0 4px !important;
+  border: 1px solid #ddd !important;
+}
+.autocompleteResults {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  position: absolute;
+  padding: 5px;
+  z-index: 1;
+  display: none;
+  width: auto;
+}
+
+.autocompleteResults .instrument {
+  border-bottom: 1px solid #ccc;
+  display: table-cell;
+  line-height: 20px;
+}
+
+.autocompleteResults div.recommended0, .autocompleteResults div.recommended1 {
+  display: table-cell;
+  border-bottom: 1px solid #ccc;
+  vertical-align: middle;
+}
+
+.autocompleteResults .instrumentWrapper {
+  display: table-row;
+}
+
+.autocompleteResults div.recommended1::after {
+  content: "\101";
+  font-family: T-Fonticons;
+  font-size: 1rem;
+  color: #444;
+}
+
+.autocompleteResults .instrumentWrapper:hover {background-color: #e2ebf3;}
+.autocompleteResults .instrumentWrapper.selected {background-color: #e2ebf3;}
+
+.autocompleteResults .denom {
+  font-weight: bold;
+}
+
+.autocompleteResults .category {
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.autocompleteResults .secuprof {
+  font-style: italic;
+}
+
+.autocompleteResults .managerCode {
+  font-weight: bold;
+}
+
+.autocompleteResults .managerDenom {
+  color: #bbb;
+}
+
+.autocompleteResults .managerName {
+  font-style: italic;
+}
+
+.selectedinstrument {
+  background-color: #ddd;
+  border-radius: 2px;
+  cursor: default;
+  padding: 0 3px;
+  margin: 0 3px;
+  word-wrap: normal;
+  white-space: pre-wrap;
+  line-height: 20px;
+}
+.selectedinstrument > span {
+  display: inline-block;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+  vertical-align: text-top;
+}
+.selectedinstrument i.tc-icon {
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 4px;
+  vertical-align: text-top;
+}
+
+.selectedinstruments {
+  width: auto !important;
+  line-height: 25px;
+}
+
+.$$ITEM.GlobalCSSClass$sInputfield {
+  border: none;
+  line-height: 19px;
+  outline: none;
+  background: transparent;
+}
+
+.$$ITEM.GlobalCSSClass$Container {
+  background-color: #fff;
+  margin-right: 10px;
+  min-width: 200px;
+  padding-right:24px !important;
+  border: 1px solid #ddd;
+  height: 2rem;
+}
+.qlrError .$$ITEM.GlobalCSSClass$Container {
+  border: 1px solid #FF0000;
+}
+.$$ITEM.GlobalCSSClass$Container.readonly {
+  background-color: #ffffff;
+  border: 0 none;
+  box-shadow: none;
+  width: auto;
+}
+.$$ITEM.GlobalCSSClass$Container.readonly .selectedinstrument {
+  background-color: #e8e8e8;
+}
+.$$ITEM.GlobalCSSClass$Container.readonly .$$ITEM.GlobalCSSClass$sInputfield{
+  background-color: #f2f2f2;
+}
+.$$ITEM.GlobalCSSClass$Container.readonly .$$ITEM.GlobalCSSClass$sInputfield,
+.$$ITEM.GlobalCSSClass$Container.readonly .selectedinstrument i.icon,
+a.BMBsearch.readonly {
+  display: none !important;
+}
+
+.filterItem {
+  float: right !important;
+  background-color: #e8e8e8;
+  border-radius: 6px;
+  float: right !important;
+  padding-left: 10px;
+  width: 87%;
+}
+.filterItem:hover {
+  background-color: #dddddd;
+}
+
+.filterItem label[for] {
+  cursor: pointer;
+  display: block;
+  line-height: 32px;
+}
+
+.$$ITEM.GlobalCSSClass$Container i.tc-icon.icon-search {
+  float: right;
+  margin-right: -20px;
+  line-height: 1.9rem;
+}
+.$$ITEM.GlobalCSSClass$Container i.tc-icon.icon-search span {
+  font-size: 1.1rem;
+  color: #666666;
+}
+
+.$$ITEM.GlobalCSSClass$Container {
+	height: auto ;
+}
+
+.Phase_TapHeldAssets .$$ITEM.GlobalCSSClass$Container {
+	min-width: 240px;
+	width: auto !important;
+}
+
+</style>

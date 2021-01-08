@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><Project AllowEditFromSolution="Y" CheckedInChangeSetsSinceGetLatest="" CmsFlag="N" Connect="version 6.1.2__1" HybridFlag="N" ImportsClassType="com.acquire.intelligentforms.entities.mapping.ImportRecordRoot" ImportsName="Import Records Root" Name="TransactionsCount_JSON" ParentId="8839701" ProjectExtension=".ifp" ProjectFolder="D:/Local/PFM/TCIB/Components/BusinessModules/PersonalFinanceManagement/Integration/IRIS/3rdParty/Strands/TransactionsCount" ProjectType="Y" StatefulComponent="N" eid="6E9C6CFEA63571FF94468"><![CDATA[
+  ]]>
+  <Types Name="Types Root" eid="6E9C6CFEA63571FF94470"><![CDATA[
+    ]]>
+    <Lists Name="Lists" eid="6E9C6CFEA63571FF94614"/>
+    <DataTypes Name="Data Types" eid="6E9C6CFEA63571FF94615"><![CDATA[
+      ]]>
+      <DataType Name="Text" eid="6E9C6CFEA63571FF94616"/>
+      <DataType Name="Number" Type="Number" eid="6E9C6CFEA63571FF94617"/>
+      <DataType Name="Decimal" Type="Decimal" eid="6E9C6CFEA63571FF94618"/>
+      <DataType Name="Date" Type="Date" eid="6E9C6CFEA63571FF94619"/>
+      <DataType Name="File" Type="File" eid="6E9C6CFEA63571FF94620"/>
+      <CustomType MaxFieldLength="60" MinFieldLength="0" Name="Email" RegularExpression="^([a-zA-Z0-9_\.\-]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" Type="Text" ValidationType="Regular Expression" eid="6E9C6CFEA63571FF94621"/>
+    </DataTypes>
+    <Structures Name="Data Structures" eid="6E9C6CFEA63571FF94622"/>
+  </Types>
+  <Dictionary Name="6E9C6CFEA63571FF DataDictionary 1" eid="6E9C6CFEA63571FF94471"><![CDATA[
+    ]]>
+    <PropertyGroup Name="Data Store Root" eid="6E9C6CFEA63571FF94473"><![CDATA[
+      ]]>
+      <PropertyGroup LinkToStructure="N" Name="TransactionsCount" eid="6E9C6CFEA63571FF95020"><![CDATA[
+        ]]>
+        <PropertyGroup JSONCollectionKind="Object" JSONName="result" Name="result" ShowJSONMapping="true" eid="6E9C6CFEA63571FF95180"><![CDATA[
+          ]]>
+          <Property JSONName="countTotal" Name="countTotal" ShowJSONMapping="true" Type="Number" eid="6E9C6CFEA63571FF95181"/>
+          <Property JSONName="countUncat" Name="countUncat" ShowJSONMapping="true" Type="Number" eid="6E9C6CFEA63571FF95182"/>
+        </PropertyGroup>
+        <PropertyGroup JSONCollectionKind="Object" JSONName="error" Name="error" ShowJSONMapping="true" eid="6E9C6CFEA63571FF95183"/>
+      </PropertyGroup>
+      <PropertyGroup LinkToStructure="N" Name="Filter" eid="6E9C6CFEA63571FF95235"><![CDATA[
+        ]]>
+        <Property Name="FilterString" eid="6E9C6CFEA63571FF95243"/>
+      </PropertyGroup>
+      <PropertyGroup LinkToStructure="N" Name="WorkingElements" eid="5E06AAEE48E94DBF903200"><![CDATA[
+        ]]>
+        <Property Name="PFM_URL" eid="5E06AAEE48E94DBF903202"/>
+      </PropertyGroup>
+    </PropertyGroup>
+  </Dictionary>
+  <DataMapping Name="Integration Root" eid="6E9C6CFEA63571FF94477"><![CDATA[
+    ]]>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.DebugLogDataSource" FileName="logs/Debug.log" FileRotation="New log file at file size limit" Name="Connect DebugLog" NewPerSize="512" eid="6E9C6CFEA63571FF94626"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SyserrLogDataSource" FileName="logs/Syserr.log" FileRotation="New log file each session" Name="Connect SyserrLog" NewPerSize="512" eid="6E9C6CFEA63571FF94627"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SysoutLogDataSource" FileName="logs/Sysout.log" FileRotation="New log file each session" Name="Connect SysoutLog" NewPerSize="512" eid="6E9C6CFEA63571FF94628"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SecurityLogDataSource" FileName="logs/Security.log" FileRotation="New log file at file size limit" Name="Connect SecurityLog" NewPerSize="512" eid="6E9C6CFEA63571FF94629"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.json.JSONDataSource" ConnectionAttempts="5" ConnectionTimeout="30000" EndPointURL="$$WorkingElements[1].PFM_URL$/details/countUncat.action$$Filter[1].FilterString$" Engine="JSON Engine" HTTPHeaderNames="HTTP_STRANDS_USER" HTTPHeaderValues="$$!MAINSESSION.PFM_IRIS_USER_NAME$" Name="TransactionsCount" Password="$$!PFM_API_PASSWORD$" SecurityType="GANObject:com.acquire.intelligentforms.entities.json.security.BasicAuth" SecurityTypePassword="$$!PFM_API_PASSWORD$" SecurityTypeUserName="$$!PFM_API_USER_ID$" SocketTimeout="30000" UseSecurityCertificate="N" UserName="$$!PFM_API_USER_NAME$" eid="6E9C6CFEA63571FF95018"/>
+  </DataMapping>
+  <Rules Name="Rules Root" eid="6E9C6CFEA63571FF94475"><![CDATA[
+    ]]>
+    <Rule Name="Container - Transaction count" RuleClassName="com.acquire.intelligentforms.rules.ContainerRule" RuleDisabled="N" eid="6E9C6CFEA63571FF95250"><![CDATA[
+      ]]>
+      <Rule FromGlobalVariable="PFM_URL" FromType="Global Variable" Name="Set Value - PFM URL" PropertyName="WorkingElements[1].PFM_URL" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" Type="Data Item" eid="5E06AAEE48E94DBF903221"/>
+      <Rule ErrorHandlingType="Pass Up" HTTPMethod="GET" Name="JSON Integration - Transaction count" Output="TransactionsCount[1]" RuleClassName="com.acquire.intelligentforms.rules.JSONIntegrationRule" RuleDisabled="N" RuleType="True" SourceName="TransactionsCount" eid="6E9C6CFEA63571FF95262"/>
+    </Rule>
+  </Rules>
+  <Products Name="Processes Root" eid="6E9C6CFEA63571FF94479"><![CDATA[
+    ]]>
+    <Product Componentcomment="This component is an Json integration component for getting the transactions count from Strands.&#10;&#10;Input parameters:&#10;Filter value {e.g., CatId}&#10;&#10;Output parameters:&#10;Count number" InitialPhase="TransactionsCount.Home" Name="TransactionsCount" PublishAsComponent="Y" RulesOnly="Y" TransactionsCount0_0_0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" TransactionsCount0_0_0_0_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.NumberType|Number" TransactionsCount0_0_0_0_ExportedProperty="TransactionsCount[1].result[1].countTotal" TransactionsCount0_0_0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |TransactionsCount[1].result[1].countTotal" TransactionsCount0_0_0_0_LinkedEntityJSONName="countTotal" TransactionsCount0_0_0_0_LinkedEntityName="countTotal" TransactionsCount0_0_0_0_LinkedEntityShowJSONMapping="true" TransactionsCount0_0_0_0_LinkedEntityType="Number" TransactionsCount0_0_0_0_OriginalEntityEID="6E9C6CFEA63571FF95181" TransactionsCount0_0_0_0_OriginalEntityName="countTotal" TransactionsCount0_0_0_0_PropertyKey="TransactionsCount[1].result[1].countTotal" TransactionsCount0_0_0_0_PubOut="Y" TransactionsCount0_0_0_1_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" TransactionsCount0_0_0_1_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.NumberType|Number" TransactionsCount0_0_0_1_ExportedProperty="TransactionsCount[1].result[1].countUncat" TransactionsCount0_0_0_1_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |TransactionsCount[1].result[1].countUncat" TransactionsCount0_0_0_1_LinkedEntityJSONName="countUncat" TransactionsCount0_0_0_1_LinkedEntityName="countUncat" TransactionsCount0_0_0_1_LinkedEntityShowJSONMapping="true" TransactionsCount0_0_0_1_LinkedEntityType="Number" TransactionsCount0_0_0_1_OriginalEntityEID="6E9C6CFEA63571FF95182" TransactionsCount0_0_0_1_OriginalEntityName="countUncat" TransactionsCount0_0_0_1_PropertyKey="TransactionsCount[1].result[1].countUncat" TransactionsCount0_0_0_1_PubOut="Y" TransactionsCount0_0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" TransactionsCount0_0_0_DGInst="1" TransactionsCount0_0_0_ExportedPropertyGroup="TransactionsCount[1].result[1]" TransactionsCount0_0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |TransactionsCount[1].result" TransactionsCount0_0_0_LinkedEntityJSONCollectionKind="Object" TransactionsCount0_0_0_LinkedEntityJSONName="result" TransactionsCount0_0_0_LinkedEntityName="result" TransactionsCount0_0_0_LinkedEntityShowJSONMapping="true" TransactionsCount0_0_0_NumChildren="2" TransactionsCount0_0_0_OriginalEntityEID="6E9C6CFEA63571FF95180" TransactionsCount0_0_0_OriginalEntityName="result" TransactionsCount0_0_0_PropertyKey="TransactionsCount[1].result" TransactionsCount0_0_0_PubOut="Y" TransactionsCount0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" TransactionsCount0_0_DGInst="1" TransactionsCount0_0_ExportedPropertyGroup="TransactionsCount[1]" TransactionsCount0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |TransactionsCount" TransactionsCount0_0_LinkedEntityLinkToStructure="N" TransactionsCount0_0_LinkedEntityName="TransactionsCount" TransactionsCount0_0_NumChildren="1" TransactionsCount0_0_OriginalEntityEID="6E9C6CFEA63571FF95020" TransactionsCount0_0_OriginalEntityName="TransactionsCount" TransactionsCount0_0_PropertyKey="TransactionsCount" TransactionsCount0_0_PubOut="Y" TransactionsCount0_1_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" TransactionsCount0_1_0_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" TransactionsCount0_1_0_ExportedProperty="Filter[1].FilterString" TransactionsCount0_1_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |Filter[1].FilterString" TransactionsCount0_1_0_LinkedEntityName="FilterString" TransactionsCount0_1_0_OriginalEntityEID="6E9C6CFEA63571FF95243" TransactionsCount0_1_0_OriginalEntityName="FilterString" TransactionsCount0_1_0_PropertyKey="Filter[1].FilterString" TransactionsCount0_1_0_PubIn="Y" TransactionsCount0_1_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" TransactionsCount0_1_DGInst="1" TransactionsCount0_1_ExportedPropertyGroup="Filter[1]" TransactionsCount0_1_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |Filter" TransactionsCount0_1_LinkedEntityLinkToStructure="N" TransactionsCount0_1_LinkedEntityName="Filter" TransactionsCount0_1_NumChildren="1" TransactionsCount0_1_OriginalEntityEID="6E9C6CFEA63571FF95235" TransactionsCount0_1_OriginalEntityName="Filter" TransactionsCount0_1_PropertyKey="Filter" TransactionsCount0_1_PubIn="Y" TransactionsCount0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" TransactionsCount0_DGInst="1" TransactionsCount0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.DictionaryRoot| |Data Store Root" TransactionsCount0_LinkedEntityName="Data Store Root" TransactionsCount0_NumChildren="2" TransactionsCount0_OriginalEntityEID="6E9C6CFEA63571FF94473" TransactionsCount0_OriginalEntityName="Data Store Root" TransactionsCount0_PubIn="Y" TransactionsCount0_PubOut="Y" TransactionsCountClassType="com.acquire.intelligentforms.entities.component.Component" TransactionsCountComponentComment="This component is an Json integration component for getting the transactions count from Strands.&#10;&#10;Input parameters:&#10;Filter value {e.g., CatId}&#10;&#10;Output parameters:&#10;Count number" TransactionsCountNumChildren="1" TransactionsCountProjectName="TransactionsCount" TransactionsCountRulesOnly="Y" eid="6E9C6CFEA63571FF95238"><![CDATA[
+      ]]>
+      <Phase Name="Home" ProcessRulesOnly="Y" eid="6E9C6CFEA63571FF95241"><![CDATA[
+        ]]>
+        <Rule ClassType="com.acquire.intelligentforms.rules.ContainerRule" LinkReference="6E9C6CFEA63571FF95250" Name="Link to Container - Transaction count" RuleType="PostPhase" eid="6E9C6CFEA63571FF95343"/>
+      </Phase>
+      <EVANote Name="6E9C6CFEA63571FF EVANote 1" NoteType="6E9C6CFEA63571FF94624" NoteTypeName="Specification" eid="6E9C6CFEA63571FF95422"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    This component is an Json integration component for getting the 
+    transactions count from Strands.    
+<br />    
+<br />Input parameters:    
+<br />Filter value {e.g., CatId}    
+<br />    
+<br />Output parameters:    
+<br />Count number
+  </body>
+
+</html>
+
+]]></EVANote>
+    </Product>
+  </Products>
+  <PresentationTypes Name="Presentation Types Root" eid="6E9C6CFEA63571FF94481"/>
+  <EVANotes Name="Note Root" eid="6E9C6CFEA63571FF94483"><![CDATA[
+    ]]>
+    <EVANoteDefinition Name="ToDo" NoteName="ToDo" StatusRequired="Y" eid="6E9C6CFEA63571FF94623"/>
+    <EVANoteDefinition Name="Specification" NoteName="Specification" StatusRequired="N" eid="6E9C6CFEA63571FF94624"/>
+    <EVANoteDefinition Name="Comment" NoteName="Comment" StatusRequired="N" eid="6E9C6CFEA63571FF94625"/>
+  </EVANotes>
+  <LanguageMapDefinitionsRoot Name="Languages Root" eid="6E9C6CFEA63571FF94485"/>
+  <CordovaPluginsRoot Name="CordovaPlugins Root" eid="6E9C6CFEA63571FF94489"/>
+</Project>

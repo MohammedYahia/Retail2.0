@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbarLayoutWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+>
+
+    <!--
+    This can be customized as required by the current project.
+    If you want to make sure the toolbar never ever appears, comment-out or delete the full tag below (the android.support.v7.widget.Toolbar tag)
+    Make sure you don't comment-out the full LinearLayout as this might cause problems on displaying the EdgeActivity
+    -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/temenosBlue"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:visibility="gone"
+        >
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal|center_vertical"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    >
+                    <Button
+                        android:id="@+id/temenosIconButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/android_icon"
+                        android:background="@color/temenosBlue"
+                        android:onClick="runJavascriptMethod"
+                        android:tag="alert('nothing here yet')"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/toolbarTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/temenosBlue"
+                        android:textColor="#FFFFFF"
+                        android:text="Hello Temenos"
+                        android:onClick="runJavascriptMethod"
+                        android:tag="alert('Hello Temenosian!')"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="end|center_vertical"
+                    >
+                    <Button
+                        android:id="@+id/toolbarButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/temenosBlue"
+                        android:drawableEnd="@drawable/ic_menu_more"
+                        android:onClick="openToolbarMenu"
+                        />
+                </RelativeLayout>
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+</LinearLayout>

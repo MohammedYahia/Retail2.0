@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?><DataSetRoot DSAttrsNewLine="N" DSOmitXMLDecl="N" DSPrettyPrint="Y" DS_UID="285">
+  <!--DepositList-->
+<DepositsList Amount="40000.00" Arrangement="AA160820SN89" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="2" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80071" AcctName="3 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="0"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="1" Product="DEPOSIT.3Y"/>
+  </DepositsList>
+  <DepositsList Amount="40000.00" Arrangement="AA160820YJ1B" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="5" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80217" AcctName="Short Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="3"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="4" Product="DEPOSIT.SHORT"/>
+  </DepositsList>
+  <DepositsList Amount="45000.00" Arrangement="AA1608215Y8H" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="8" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80365" AcctName="6 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="6"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="7" Product="DEPOSIT.06M"/>
+  </DepositsList>
+  <DepositsList Amount="40000.00" Arrangement="AA160822H2YJ" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="11" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80268" AcctName="12 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="9"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="10" Product="DEPOSIT.12M"/>
+  </DepositsList>
+  <DepositsList Amount="30000.00" Arrangement="AA160822J6W5" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="14" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80454" AcctName="Short Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="12"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="13" Product="DEPOSIT.SHORT"/>
+  </DepositsList>
+  <DepositsList Amount="65000.00" Arrangement="AA160823GL0C" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="17" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80373" AcctName="Short Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="15"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="16" Product="DEPOSIT.SHORT"/>
+  </DepositsList>
+  <DepositsList Amount="45000.00" Arrangement="AA160824CBZD" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="20" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80233" AcctName="3 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="18"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="19" Product="DEPOSIT.03M"/>
+  </DepositsList>
+  <DepositsList Amount="25000.00" Arrangement="AA160824GT7P" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="23" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80527" AcctName="Short Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="21"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="22" Product="DEPOSIT.SHORT"/>
+  </DepositsList>
+  <DepositsList Amount="45000.00" Arrangement="AA160824MQ13" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="26" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80195" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="24"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="25" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+  <DepositsList Amount="30000.00" Arrangement="AA16082566NY" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="29" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80063" AcctName="3 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="27"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="28" Product="DEPOSIT.3Y"/>
+  </DepositsList>
+  <DepositsList Amount="30000.00" Arrangement="AA16082610PK" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="32" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80117" AcctName="9 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="30"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="31" Product="DEPOSIT.09M"/>
+  </DepositsList>
+  <DepositsList Amount="35000.00" Arrangement="AA160826QHPX" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="35" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80039" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="33"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="34" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+  <DepositsList Amount="70000.00" Arrangement="AA160827479R" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="38" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80284" AcctName="2 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="36"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="37" Product="DEPOSIT.2Y"/>
+  </DepositsList>
+  <DepositsList Amount="30000.00" Arrangement="AA1608277MDW" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="41" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80411" AcctName="9 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="39"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="40" Product="DEPOSIT.09M"/>
+  </DepositsList>
+  <DepositsList Amount="50000.00" Arrangement="AA16082806D9" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="44" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80241" AcctName="18 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="42"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="43" Product="DEPOSIT.18M"/>
+  </DepositsList>
+  <DepositsList Amount="30000.00" Arrangement="AA160828NTR5" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="47" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80225" AcctName="3 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="45"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="46" Product="DEPOSIT.3Y"/>
+  </DepositsList>
+  <DepositsList Amount="40000.00" Arrangement="AA1608292TZB" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="50" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="78468" AcctName="Call Deposit" Category="6609" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="48"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="49" Product="DEPOSIT.CALL"/>
+  </DepositsList>
+  <DepositsList Amount="60000.00" Arrangement="AA1608293WNG" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="53" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80357" AcctName="Short Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="51"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="52" Product="DEPOSIT.SHORT"/>
+  </DepositsList>
+  <DepositsList Amount="30000.00" Arrangement="AA16082B5RKV" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="56" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80098" AcctName="3 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="54"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="55" Product="DEPOSIT.03M"/>
+  </DepositsList>
+  <DepositsList Amount="100000.00" Arrangement="AA16082BCQDH" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="59" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80276" AcctName="9 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="57"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="58" Product="DEPOSIT.09M"/>
+  </DepositsList>
+  <DepositsList Amount="50000.00" Arrangement="AA16082BK59H" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="62" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80179" AcctName="Call Deposit" Category="6609" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="60"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="61" Product="DEPOSIT.CALL"/>
+  </DepositsList>
+  <DepositsList Amount="30000.00" Arrangement="AA16082C28BR" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="65" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80128" AcctName="4 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="63"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="64" Product="DEPOSIT.4Y"/>
+  </DepositsList>
+  <DepositsList Amount="60000.00" Arrangement="AA16082F1R88" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="68" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80338" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="66"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="67" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+  <DepositsList Amount="30000.00" Arrangement="AA16082F4CDD" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="71" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80381" AcctName="12 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="69"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="70" Product="DEPOSIT.12M"/>
+  </DepositsList>
+  <DepositsList Amount="70000.00" Arrangement="AA16082H4W4N" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="74" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80306" AcctName="3 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="72"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="73" Product="DEPOSIT.3Y"/>
+  </DepositsList>
+  <DepositsList Amount="40000.00" Arrangement="AA16082J9CC2" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="77" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80136" AcctName="12 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="75"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="76" Product="DEPOSIT.12M"/>
+  </DepositsList>
+  <DepositsList Amount="30000.00" Arrangement="AA16082K630V" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="80" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80519" AcctName="Short Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="78"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="79" Product="DEPOSIT.SHORT"/>
+  </DepositsList>
+  <DepositsList Amount="55000.00" Arrangement="AA16082L7460" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="83" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80508" AcctName="Call Deposit" Category="6609" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="81"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="82" Product="DEPOSIT.CALL"/>
+  </DepositsList>
+  <DepositsList Amount="70000.00" Arrangement="AA16082L8WJV" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="86" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80187" AcctName="4 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="84"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="85" Product="DEPOSIT.4Y"/>
+  </DepositsList>
+  <DepositsList Amount="25000.00" Arrangement="AA16082LMD9R" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="89" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80397" AcctName="12 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="87"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="88" Product="DEPOSIT.12M"/>
+  </DepositsList>
+  <DepositsList Amount="25000.00" Arrangement="AA16082LXK50" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="92" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80028" AcctName="6 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="90"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="91" Product="DEPOSIT.06M"/>
+  </DepositsList>
+  <DepositsList Amount="45000.00" Arrangement="AA16082MYZCJ" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="95" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80101" AcctName="5 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="93"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="94" Product="DEPOSIT.5Y"/>
+  </DepositsList>
+  <DepositsList Amount="60000.00" Arrangement="AA16082NQT8V" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="98" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80403" AcctName="3 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="96"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="97" Product="DEPOSIT.03M"/>
+  </DepositsList>
+  <DepositsList Amount="10000.00" Arrangement="AA16082PGNTV" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="101" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80257" AcctName="Short Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="99"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="100" Product="DEPOSIT.SHORT"/>
+  </DepositsList>
+  <DepositsList Amount="33000.00" Arrangement="AA16082PGNZ1" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="104" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80462" AcctName="6 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="102"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="103" Product="DEPOSIT.06M"/>
+  </DepositsList>
+  <DepositsList Amount="10000.00" Arrangement="AA16082QDJ5B" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="107" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80489" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="105"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="106" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+  <DepositsList Amount="45000.00" Arrangement="AA16082QTWN3" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="110" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80314" AcctName="5 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="108"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="109" Product="DEPOSIT.5Y"/>
+  </DepositsList>
+  <DepositsList Amount="45000.00" Arrangement="AA16082S29CP" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="113" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80047" AcctName="2 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="111"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="112" Product="DEPOSIT.2Y"/>
+  </DepositsList>
+  <DepositsList Amount="50000.00" Arrangement="AA16082S7L3S" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="116" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80292" AcctName="18 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="114"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="115" Product="DEPOSIT.18M"/>
+  </DepositsList>
+  <DepositsList Amount="35000.00" Arrangement="AA16082SXNN3" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="119" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80168" AcctName="5 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="117"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="118" Product="DEPOSIT.5Y"/>
+  </DepositsList>
+  <DepositsList Amount="35000.00" Arrangement="AA16082W6QHV" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="122" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80087" AcctName="6 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="120"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="121" Product="DEPOSIT.06M"/>
+  </DepositsList>
+  <DepositsList Amount="55000.00" Arrangement="AA16082WDMPZ" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="125" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80322" AcctName="Call Deposit" Category="6609" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="123"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="124" Product="DEPOSIT.CALL"/>
+  </DepositsList>
+  <DepositsList Amount="30000.00" Arrangement="AA16082X6JLC" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="128" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80152" AcctName="2 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="126"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="127" Product="DEPOSIT.2Y"/>
+  </DepositsList>
+  <DepositsList Amount="30000.00" Arrangement="AA16082YSRKN" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="131" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80446" AcctName="3 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="129"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="130" Product="DEPOSIT.03M"/>
+  </DepositsList>
+  <DepositsList Amount="20000.00" Arrangement="AA160882PFZ9" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="134" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="81116" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="132"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="133" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+  <DepositsList Amount="40000.00" Arrangement="AA16088R291K" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="137" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="80896" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="135"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="136" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+  <DepositsList Amount="55000.00" Arrangement="AA16088W95YR" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="140" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="81248" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="138"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="139" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+  <DepositsList Amount="40000.00" Arrangement="AA160902L7WP" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="143" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="81857" AcctName="Call Deposit" Category="6609" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="141"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="142" Product="DEPOSIT.CALL"/>
+  </DepositsList>
+  <DepositsList Amount="50000.00" Arrangement="AA160907MXSL" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="146" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="81841" AcctName="Short Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="144"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="145" Product="DEPOSIT.SHORT"/>
+  </DepositsList>
+  <DepositsList Amount="500.00" Arrangement="AA16090RGBHW" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="149" ProductGroup="DEPOSITS.SAVINGS.PLAN" ProductLine="DEPOSITS">
+    <LinkedAppl Account="81833" AcctName="Commitment Savings Plan" Category="6709" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="147"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="148" Product="COMMITMENT.SAVINGS"/>
+  </DepositsList>
+  <DepositsList Amount="7000.00" Arrangement="AA160980G2PH" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="152" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82171" AcctName="18 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="150"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="151" Product="DEPOSIT.18M"/>
+  </DepositsList>
+  <DepositsList Amount="3000.00" Arrangement="AA160983H2NX" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="155" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82198" AcctName="Short Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="153"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="154" Product="DEPOSIT.SHORT"/>
+  </DepositsList>
+  <DepositsList Amount="6000.00" Arrangement="AA16098B0F4V" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="158" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82217" AcctName="6 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="156"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="157" Product="DEPOSIT.06M"/>
+  </DepositsList>
+  <DepositsList Amount="10000.00" Arrangement="AA16098JF09H" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="161" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82187" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="159"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="160" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+  <DepositsList Amount="15000.00" Arrangement="AA16098S6YV9" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="164" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82201" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="162"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="163" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+  <DepositsList Amount="100000.00" Arrangement="AA16113170LS" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="167" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83704" AcctName="4 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="165"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="166" Product="DEPOSIT.4Y"/>
+  </DepositsList>
+  <DepositsList Amount="300000.00" Arrangement="AA161131VVPK" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="170" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83817" AcctName="3 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="168"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="169" Product="DEPOSIT.3Y"/>
+  </DepositsList>
+  <DepositsList Amount="5000.00" Arrangement="AA161132B0Y5" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="173" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82945" AcctName="12 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="171"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="172" Product="DEPOSIT.12M"/>
+  </DepositsList>
+  <DepositsList Amount="400000.00" Arrangement="AA161132KN7G" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="176" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83674" AcctName="2 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="174"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="175" Product="DEPOSIT.2Y"/>
+  </DepositsList>
+  <DepositsList Amount="20000.00" Arrangement="AA16113322HP" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="179" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82864" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="177"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="178" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+  <DepositsList Amount="1000.00" Arrangement="AA161133B2ZS" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="182" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82384" AcctName="4 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="180"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="181" Product="DEPOSIT.4Y"/>
+  </DepositsList>
+  <DepositsList Amount="10000.00" Arrangement="AA1611349W86" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="185" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82406" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="183"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="184" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+  <DepositsList Amount="10000.00" Arrangement="AA161135BPB1" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="188" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83453" AcctName="3 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="186"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="187" Product="DEPOSIT.03M"/>
+  </DepositsList>
+  <DepositsList Amount="1000.00" Arrangement="AA161135P65F" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="191" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83461" AcctName="Short Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="189"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="190" Product="DEPOSIT.SHORT"/>
+  </DepositsList>
+  <DepositsList Amount="14000.00" Arrangement="AA161136GKMG" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="194" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82953" AcctName="2 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="192"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="193" Product="DEPOSIT.2Y"/>
+  </DepositsList>
+  <DepositsList Amount="300000.00" Arrangement="AA161136NVR8" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="197" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83647" AcctName="3 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="195"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="196" Product="DEPOSIT.3Y"/>
+  </DepositsList>
+  <DepositsList Amount="100000.00" Arrangement="AA161136PKBK" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="200" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83577" AcctName="4 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="198"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="199" Product="DEPOSIT.4Y"/>
+  </DepositsList>
+  <DepositsList Amount="15000.00" Arrangement="AA161136TGP2" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="203" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82821" AcctName="Call Deposit" Category="6609" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="201"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="202" Product="DEPOSIT.CALL"/>
+  </DepositsList>
+  <DepositsList Amount="20000.00" Arrangement="AA1611370HX0" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="206" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82457" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="204"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="205" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+  <DepositsList Amount="20000.00" Arrangement="AA1611378YYX" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="209" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82497" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="207"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="208" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+  <DepositsList Amount="200000.00" Arrangement="AA161137NR1K" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="212" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83666" AcctName="2 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="210"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="211" Product="DEPOSIT.2Y"/>
+  </DepositsList>
+  <DepositsList Amount="15000.00" Arrangement="AA1611386X68" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="215" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82813" AcctName="Call Deposit" Category="6609" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="213"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="214" Product="DEPOSIT.CALL"/>
+  </DepositsList>
+  <DepositsList Amount="25000.00" Arrangement="AA1611396SF3" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="218" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82667" AcctName="18 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="216"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="217" Product="DEPOSIT.18M"/>
+  </DepositsList>
+  <DepositsList Amount="12000.00" Arrangement="AA161139PWQZ" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="221" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82538" AcctName="18 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="219"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="220" Product="DEPOSIT.18M"/>
+  </DepositsList>
+  <DepositsList Amount="100000.00" Arrangement="AA161139ZL6X" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="224" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83682" AcctName="3 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="222"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="223" Product="DEPOSIT.3Y"/>
+  </DepositsList>
+  <DepositsList Amount="20000.00" Arrangement="AA16113B144Q" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="227" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82481" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="225"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="226" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+  <DepositsList Amount="25000.00" Arrangement="AA16113B4T8N" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="230" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82805" AcctName="Call Deposit" Category="6609" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="228"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="229" Product="DEPOSIT.CALL"/>
+  </DepositsList>
+  <DepositsList Amount="6000.00" Arrangement="AA16113B5253" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="233" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82961" AcctName="Short Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="231"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="232" Product="DEPOSIT.SHORT"/>
+  </DepositsList>
+  <DepositsList Amount="100000.00" Arrangement="AA16113FJ2F4" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="236" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83569" AcctName="2 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="234"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="235" Product="DEPOSIT.2Y"/>
+  </DepositsList>
+  <DepositsList Amount="100000.00" Arrangement="AA16113FMJ93" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="239" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83801" AcctName="3 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="237"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="238" Product="DEPOSIT.3Y"/>
+  </DepositsList>
+  <DepositsList Amount="200000.00" Arrangement="AA16113HLLVS" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="242" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83844" AcctName="3 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="240"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="241" Product="DEPOSIT.3Y"/>
+  </DepositsList>
+  <DepositsList Amount="1000.00" Arrangement="AA16113HY7KZ" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="245" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83477" AcctName="Short Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="243"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="244" Product="DEPOSIT.SHORT"/>
+  </DepositsList>
+  <DepositsList Amount="200000.00" Arrangement="AA16113K4DR0" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="248" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83798" AcctName="3 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="246"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="247" Product="DEPOSIT.3Y"/>
+  </DepositsList>
+  <DepositsList Arrangement="AA16113MBKTV" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="251" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83852" AcctName="3 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="249"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="250" Product="DEPOSIT.3Y"/>
+  </DepositsList>
+  <DepositsList Amount="6000.00" Arrangement="AA16113MGKSC" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="254" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82686" AcctName="6 Month Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="252"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="253" Product="DEPOSIT.06M"/>
+  </DepositsList>
+  <DepositsList Amount="200000.00" Arrangement="AA16113NGZ26" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="257" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83631" AcctName="3 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="255"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="256" Product="DEPOSIT.3Y"/>
+  </DepositsList>
+  <DepositsList Amount="10000.00" Arrangement="AA16113QF4ZG" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="260" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83518" AcctName="3 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="258"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="259" Product="DEPOSIT.3Y"/>
+  </DepositsList>
+  <DepositsList Amount="15000.00" Arrangement="AA16113SB5SB" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="263" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82748" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="261"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="262" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+  <DepositsList Amount="4000.00" Arrangement="AA16113V71QY" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="266" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82837" AcctName="Short Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="264"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="265" Product="DEPOSIT.SHORT"/>
+  </DepositsList>
+  <DepositsList Amount="500000.00" Arrangement="AA16113WWF8X" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="269" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="83698" AcctName="3 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="267"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="268" Product="DEPOSIT.3Y"/>
+  </DepositsList>
+  <DepositsList Amount="25000.00" Arrangement="AA16113X6JGY" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="272" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82848" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="270"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="271" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+  <DepositsList Amount="3000.00" Arrangement="AA16113XF83J" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="275" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82589" AcctName="5 Year Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="273"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="274" Product="DEPOSIT.5Y"/>
+  </DepositsList>
+  <DepositsList Amount="3000.00" Arrangement="AA16113XHC1Z" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="278" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82937" AcctName="Short Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="276"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="277" Product="DEPOSIT.SHORT"/>
+  </DepositsList>
+  <DepositsList Amount="10000.00" Arrangement="AA16113YDFRD" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="281" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82856" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="279"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="280" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+  <DepositsList Amount="8000.00" Arrangement="AA16113ZQPQT" Currency="USD" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[A]" DS_UID="284" ProductGroup="DEPOSITS" ProductLine="DEPOSITS">
+    <LinkedAppl Account="82872" AcctName="Long Term Deposit" Category="6608" DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].LinkedAppl" DS_UID="282"/>
+    <Product DS_REF_DATAGROUP_ATTRIBUTE_NAME="DepositsList[C].Product" DS_UID="283" Product="DEPOSIT.LONG"/>
+  </DepositsList>
+</DataSetRoot>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><DataSetRoot DSAttrsNewLine="N" DSOmitXMLDecl="N" DSPrettyPrint="Y" DS_UID="16">
+  <!---->
+  <ReadMessage DS_REF_DATAGROUP_ATTRIBUTE_NAME="ReadMessage[1]" DS_UID="7" Id="SM1610306126">
+    <Message DS_REF_DATAGROUP_ATTRIBUTE_NAME="ReadMessage[1].Message[1]" DS_UID="8" Message="Welcome to Temenos Connect Internet Banking"/>
+  </ReadMessage>
+  <ReadMessage DS_REF_DATAGROUP_ATTRIBUTE_NAME="ReadMessage[1]" DS_UID="9" Id="SM1611381858">
+    <Message DS_REF_DATAGROUP_ATTRIBUTE_NAME="ReadMessage[1].Message[1]" DS_UID="10" Message="Welcome to Internet Banking"/>
+  </ReadMessage>
+  <ReadMessage DS_REF_DATAGROUP_ATTRIBUTE_NAME="ReadMessage[1]" DS_UID="11" Id="SM1610313389">
+    <Message DS_REF_DATAGROUP_ATTRIBUTE_NAME="ReadMessage[1].Message[1]" DS_UID="12" Message="Dear Sir Pls find attached the Account statement for the period mmyyyy"/>
+  </ReadMessage>
+  <ReadMessage DS_REF_DATAGROUP_ATTRIBUTE_NAME="ReadMessage[1]" DS_UID="13" Id="SM1611347950">
+    <Message DS_REF_DATAGROUP_ATTRIBUTE_NAME="ReadMessage[1].Message[1]" DS_UID="14" Message="Test Message"/>
+  </ReadMessage>
+  <ReadMessage DS_REF_DATAGROUP_ATTRIBUTE_NAME="ReadMessage[1]" DS_UID="15" Id="SM1611399102">
+    <Message DS_REF_DATAGROUP_ATTRIBUTE_NAME="ReadMessage[1].Message[1]" DS_UID="16" Message="Please send the required forms for the issuance of additional ATM Card."/>
+  </ReadMessage>
+</DataSetRoot>

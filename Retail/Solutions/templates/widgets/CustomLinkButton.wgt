@@ -1,0 +1,29 @@
+<button data-target="$$ITEM.LINK$" class="$$ITEM.CLASS$ ext-custom-Link-Button" id="$$ITEM.ID()$">$$ITEM.TEXT$</button>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+		var formatLink = "$$ITEM.LINK$";
+		var formatLink = formatLink.toLowerCase();
+		var checktel = formatLink.substring(0, 4);
+		if (checktel != "tel:") {
+			var formatLinkFull = formatLink.replace(/&#x2f;/g, "/");
+			if (formatLinkFull && !formatLinkFull.match(/^http([s]?):\/\/.*/)) {
+				formatLinkFull = "http://" + "$$ITEM.LINK$";
+			}
+			$%IF DEVICE_INFO.isHybrid == ""$
+				document.getElementById("$$ITEM.ID()$")
+						.addEventListener('click', function(e) {          
+							window.open(formatLinkFull, '_blank');
+						});
+					
+			$%ENDIF$
+			$%IF DEVICE_INFO.isHybrid == "Y"$          
+				document.getElementById("$$ITEM.ID()$")
+					.addEventListener('click', function(e) {          
+						cordova.InAppBrowser.open(formatLinkFull, '_blank', 'location=yes');
+					}, false);
+			$%ENDIF$
+		}
+		
+	});
+</script>

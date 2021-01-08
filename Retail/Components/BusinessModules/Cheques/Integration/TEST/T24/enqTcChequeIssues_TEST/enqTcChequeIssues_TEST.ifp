@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><Project AllowEditFromSolution="Y" CheckedInChangeSetsSinceGetLatest="" CmsFlag="N" Connect="version 6.2.1__6" HybridFlag="N" ImportsClassType="com.acquire.intelligentforms.entities.mapping.ImportRecordRoot" ImportsName="Import Records Root 1" Major="1" Minor="0" Name="enqTcChequeIssues_TEST" ParentId="8735650" ProjectExtension=".ifp" ProjectFolder="D:/RTCWksp/DEV-TCIBProjects/TCIB2.0/Source/Edge/Components/BusinessModules/Cheques/Integration/TEST/T24/enqTcChequeIssues_TEST/New folder" ProjectType="Y" Revision="0" ShowJSONMappings="N" StartupRules="Startup" StatefulComponent="N" eid="5A0754172F11D7DA73785"><![CDATA[
+  ]]>
+  <Types Name="Types Root" eid="5A0754172F11D7DA73787"><![CDATA[
+    ]]>
+    <Lists Name="Lists" eid="5A0754172F11D7DA73846"/>
+    <DataTypes Name="Data Types" eid="5A0754172F11D7DA73847"><![CDATA[
+      ]]>
+      <DataType Name="Text" eid="5A0754172F11D7DA73848"/>
+      <DataType Name="Number" Type="Number" eid="5A0754172F11D7DA73849"/>
+      <DataType Name="Decimal" Type="Decimal" eid="5A0754172F11D7DA73850"/>
+      <DataType Name="Date" Type="Date" eid="5A0754172F11D7DA73851"/>
+      <DataType Name="File" Type="File" eid="5A0754172F11D7DA73852"/>
+      <CustomType MaxFieldLength="60" MinFieldLength="0" Name="Email" RegularExpression="^([a-zA-Z0-9_\.\-]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" Type="Text" ValidationType="Regular Expression" eid="5A0754172F11D7DA73853"/>
+    </DataTypes>
+    <Structures Name="Data Structures" eid="5A0754172F11D7DA73854"/>
+  </Types>
+  <Dictionary Name="5A0754172F11D7DA DataDictionary 1" eid="5A0754172F11D7DA73788"><![CDATA[
+    ]]>
+    <PropertyGroup Name="Data Store Root" eid="5A0754172F11D7DA73790"><![CDATA[
+      ]]>
+      <PropertyGroup Name="Filter" eid="5A0754172F11D7DA74372"><![CDATA[
+        ]]>
+        <Property Name="FilterString" eid="5A0754172F11D7DA74373"/>
+      </PropertyGroup>
+      <PropertyGroup Name="Result" ODataKey="Errors_ErrorsMvGroup" eid="5A0754172F11D7DA74384"><![CDATA[
+        ]]>
+        <Property Name="Id" ODataName="Id" ODataNullable="Y" ODataType="Edm.String" ODataUsed="Y" eid="5A0754172F11D7DA74385"/>
+        <Property Name="OverallResult" eid="5A0754172F11D7DA74386"/>
+        <PropertyGroup FixedSize="N" MaxInstances="0" Name="Errors" ODataCollectionKind="Bag" ODataName="Errors_ErrorsMvGroup" ODataNullable="N" ODataType="TCCheques-modelsModel.Errors_ErrorsMvGroup" ODataUsed="Y" eid="5A0754172F11D7DA74387"><![CDATA[
+          ]]>
+          <Property Name="Code" ODataName="Code" ODataNullable="Y" ODataType="Edm.String" ODataUsed="Y" eid="5A0754172F11D7DA74388"/>
+          <Property Name="valuePosition" ODataName="valuePosition" ODataNullable="Y" ODataType="Edm.String" ODataUsed="Y" eid="5A0754172F11D7DA74389"/>
+          <Property Name="Type" ODataName="Type" ODataNullable="Y" ODataType="Edm.String" ODataUsed="Y" eid="5A0754172F11D7DA74390"/>
+          <Property Name="Info" ODataName="Info" ODataNullable="Y" ODataType="Edm.String" ODataUsed="Y" eid="5A0754172F11D7DA74391"/>
+          <Property Name="Text" ODataName="Text" ODataNullable="Y" ODataType="Edm.String" ODataUsed="Y" eid="5A0754172F11D7DA74392"/>
+          <Property Name="subValuePosition" ODataName="subValuePosition" ODataNullable="Y" ODataType="Edm.String" ODataUsed="Y" eid="5A0754172F11D7DA74393"/>
+        </PropertyGroup>
+      </PropertyGroup>
+      <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" Name="ServiceEndPoint" eid="C48F1FB7C30AD97A480953"><![CDATA[
+        ]]>
+        <EVANote Name="846376A111E72764 EVANote 1" NoteType="5A0754172F11D7DA73857" NoteTypeName="Comment" eid="C48F1FB7C30AD97A480954"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    Used solely on startup. &#160;Constructs the variable $$!SERVICE_END_POINT$.
+  </body>
+
+</html>
+
+]]></EVANote>
+        <Property Name="EndPoint" eid="C48F1FB7C30AD97A480955"/>
+      </PropertyGroup>
+      <PropertyGroup FixedSize="N" MaxInstances="0" Name="enqTcChequeIssue" ODataKey="Id" ODataName="enqTcChequeIssue" ODataNullable="N" ODataType="$$!CHEQUES_MODULE$-modelsModel.enqTcChequeIssue" ODataUsed="Y" eid="7AABDFCD0B0D5F96656782"><![CDATA[
+        ]]>
+        <Property Name="ChequeStatus" ODataName="ChequeStatus" ODataNullable="Y" ODataType="Edm.String" ODataUsed="Y" eid="7AABDFCD0B0D5F96656783"/>
+        <Property Name="ChqNoStart" ODataName="ChqNoStart" ODataNullable="Y" ODataType="Edm.String" ODataUsed="Y" eid="7AABDFCD0B0D5F96656784"/>
+        <Property Name="Id" ODataKey="true" ODataName="Id" ODataNullable="N" ODataType="Edm.String" ODataUsed="Y" eid="7AABDFCD0B0D5F96656785"/>
+        <PropertyGroup FixedSize="N" MaxInstances="0" Name="Links" eid="7AABDFCD0B0D5F96656786"><![CDATA[
+          ]]>
+          <Property Name="rel" eid="7AABDFCD0B0D5F96656787"/>
+          <Property Name="title" eid="7AABDFCD0B0D5F96656788"/>
+          <Property Name="href" eid="7AABDFCD0B0D5F96656789"/>
+        </PropertyGroup>
+        <PropertyGroup FixedSize="N" MaxInstances="0" Name="DateTime" ODataCollectionKind="Bag" ODataName="enqTcChequeIssue_DateTimeMvGroup" ODataNullable="Y" ODataType="$$!CHEQUES_MODULE$-modelsModel.enqTcChequeIssue_DateTimeMvGroup" ODataUsed="Y" eid="7AABDFCD0B0D5F96656790"><![CDATA[
+          ]]>
+          <Property Name="RequestDate" ODataName="RequestDate" ODataNullable="Y" ODataType="Edm.String" ODataUsed="Y" eid="7AABDFCD0B0D5F96656791"/>
+        </PropertyGroup>
+      </PropertyGroup>
+      <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" Name="InputParameters" eid="E60277523972EFCC344451"><![CDATA[
+        ]]>
+        <Property Name="RequestHeaderName" eid="E60277523972EFCC344452"/>
+        <Property Name="RequestHeaderValues" eid="E60277523972EFCC344453"/>
+      </PropertyGroup>
+    </PropertyGroup>
+  </Dictionary>
+  <DataMapping Name="Integration Root" eid="5A0754172F11D7DA73794"><![CDATA[
+    ]]>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.DebugLogDataSource" FileName="logs/Debug.log" FileRotation="New log file at file size limit" Name="Connect DebugLog" NewPerSize="512" eid="5A0754172F11D7DA73858"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SyserrLogDataSource" FileName="logs/Syserr.log" FileRotation="New log file each session" Name="Connect SyserrLog" NewPerSize="512" eid="5A0754172F11D7DA73859"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SysoutLogDataSource" FileName="logs/Sysout.log" FileRotation="New log file each session" Name="Connect SysoutLog" NewPerSize="512" eid="5A0754172F11D7DA73860"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SecurityLogDataSource" FileName="logs/Security.log" FileRotation="New log file at file size limit" Name="Connect SecurityLog" NewPerSize="512" eid="5A0754172F11D7DA73861"/>
+    <DataSource AuthPassword="$$!MAINSESSION.IRIS_PASSWORD$" AuthUserName="$$!MAINSESSION.IRIS_USER_NAME$" ClassType="com.temenos.connect.integration.iris.rules.ODataSource" EDMXFileName="http://localhost:9089/TCCheques-iris/TCCheques.svc/$metadata" HttpHeaderNames="$$!MAINSESSION.CHANNEL_HEADER$,$$!MAINSESSION.REQ_CTX_HEADER$,$$!MAINSESSION.AUTH_HEADER_NAME$" HttpHeaderValues="$$!MAINSESSION.CHANNEL_HEADER_VALUE$,$$!MAINSESSION.REQ_CTX_HEADER_VALUE$,$$!MAINSESSION.AUTH_HEADER_VALUE$" Name="TCCheques-models" ServiceRootUri="$$!SERVICE_END_POINT$" eid="5A0754172F11D7DA74291"/>
+  </DataMapping>
+  <Rules Name="Rules Root" eid="5A0754172F11D7DA73792"><![CDATA[
+    ]]>
+    <Rule BaseType="com.acquire.intelligentforms.rules.ContainerRule" Name="Startup" RuleClassName="com.acquire.intelligentforms.rules.ContainerRule" RuleDisabled="N" eid="C48F1FB7C30AD97A480931"><![CDATA[
+      ]]>
+      <Rule ComponentList="ServiceEndPoint" ErrorHandlingType="Pass Up" ExtractPermissionLevelEID="31D9EAD2BF58E20539816" Name="Call IRISUtils Component -- ServiceEndPoint" RuleClassName="com.acquire.intelligentforms.rules.CallComponentRule" RuleDisabled="N" RuleType="True" SelectComponent="Common/Process/IRISUtils/IRISUtils.ifp" ServiceEndPoint0_0_0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" ServiceEndPoint0_0_0_0_ComponentClassName="Property" ServiceEndPoint0_0_0_0_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|null" ServiceEndPoint0_0_0_0_ComponentMapping="ComponentName" ServiceEndPoint0_0_0_0_In="Y" ServiceEndPoint0_0_0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |Data Store Root[1].BuildEndPoint[1].ComponentName" ServiceEndPoint0_0_0_0_LinkedEntityName="ComponentName" ServiceEndPoint0_0_0_0_Mandatory="Y" ServiceEndPoint0_0_0_0_Mapping="Use Value" ServiceEndPoint0_0_0_0_OriginalEntityEID="31D9EAD2BF58E20541649" ServiceEndPoint0_0_0_0_OriginalEntityName="ComponentName" ServiceEndPoint0_0_0_0_PropertyKey="BuildEndPoint[1].ComponentName" ServiceEndPoint0_0_0_0_PubIn="Y" ServiceEndPoint0_0_0_0_Solution="$$!CHEQUES_MODULE$" ServiceEndPoint0_0_0_0_SolutionDataItemMapping="$$!CHEQUES_MODULE$" ServiceEndPoint0_0_0_0_writeMapping="Y" ServiceEndPoint0_0_0_1_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" ServiceEndPoint0_0_0_1_ComponentClassName="Property" ServiceEndPoint0_0_0_1_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|null" ServiceEndPoint0_0_0_1_ComponentMapping="EndPoint" ServiceEndPoint0_0_0_1_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |Data Store Root[1].BuildEndPoint[1].EndPoint" ServiceEndPoint0_0_0_1_LinkedEntityName="EndPoint" ServiceEndPoint0_0_0_1_Mapping="Use Local" ServiceEndPoint0_0_0_1_OriginalEntityEID="31D9EAD2BF58E20541654" ServiceEndPoint0_0_0_1_OriginalEntityName="EndPoint" ServiceEndPoint0_0_0_1_Out="Y" ServiceEndPoint0_0_0_1_PropertyKey="BuildEndPoint[1].EndPoint" ServiceEndPoint0_0_0_1_PubOut="Y" ServiceEndPoint0_0_0_1_Solution="ServiceEndPoint[1].EndPoint" ServiceEndPoint0_0_0_1_SolutionDataItemMapping="ServiceEndPoint[1].EndPoint" ServiceEndPoint0_0_0_1_readMapping="Y" ServiceEndPoint0_0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" ServiceEndPoint0_0_0_ComponentClassName="PropertyGroup" ServiceEndPoint0_0_0_ComponentMapping="BuildEndPoint" ServiceEndPoint0_0_0_DGInst="1" ServiceEndPoint0_0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |Data Store Root[1].BuildEndPoint" ServiceEndPoint0_0_0_LinkedEntityName="BuildEndPoint" ServiceEndPoint0_0_0_NumChildren="2" ServiceEndPoint0_0_0_OriginalEntityEID="31D9EAD2BF58E20541647" ServiceEndPoint0_0_0_OriginalEntityName="BuildEndPoint" ServiceEndPoint0_0_0_PropertyKey="BuildEndPoint" ServiceEndPoint0_0_0_PubIn="Y" ServiceEndPoint0_0_0_PubOut="Y" ServiceEndPoint0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" ServiceEndPoint0_0_ComponentClassName="PropertyGroup" ServiceEndPoint0_0_ComponentMapping="Data Store Root" ServiceEndPoint0_0_DGInst="1" ServiceEndPoint0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |Data Store Root" ServiceEndPoint0_0_LinkedEntityName="Data Store Root" ServiceEndPoint0_0_LinkedEntityroot="Y" ServiceEndPoint0_0_NumChildren="1" ServiceEndPoint0_0_OriginalEntityEID="B66F0AA161EE589B6016" ServiceEndPoint0_0_OriginalEntityName="Data Store Root" ServiceEndPoint0_0_PubIn="Y" ServiceEndPoint0_0_PubOut="Y" ServiceEndPoint0_ClassType="com.acquire.intelligentforms.entities.component.ComponentInterface" ServiceEndPoint0_NumChildren="1" ServiceEndPoint0_Process="ServiceEndPoint" ServiceEndPoint0_RulesOnly="Y" ServiceEndPointClassType="com.acquire.intelligentforms.entities.component.ComponentSource" ServiceEndPointComponentName="ServiceEndPoint" ServiceEndPointEID="C48F1FB7C30AD97A480933" ServiceEndPointNumChildren="1" ServiceEndPointProjectLocation="Common/Process/IRISUtils" ServiceEndPointProjectName="IRISUtils" Source="ServiceEndPoint" StatefulComponent="N" eid="C48F1FB7C30AD97A480932"/>
+      <Rule FromPropertyName="ServiceEndPoint[1].EndPoint" FromType="Data Item" GlobalVariable="SERVICE_END_POINT" Name="Set End Point" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleClassType="Action" RuleDisabled="N" RuleType="True" Trim="N" Type="Global Variable" VariableName="$$!SERVICE_END_POINT$" eid="C48F1FB7C30AD97A480949"/>
+    </Rule>
+  </Rules>
+  <Products Name="Processes Root" eid="5A0754172F11D7DA73796"><![CDATA[
+    ]]>
+    <Product InitialPhase="enqTcChequeIssue.Initialize" Name="enqTcChequeIssue" PublishAsComponent="Y" RulesOnly="Y" eid="5A0754172F11D7DA74188" enqTcChequeIssue0_0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" enqTcChequeIssue0_0_0_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" enqTcChequeIssue0_0_0_ExportedProperty="Filter[1].FilterString" enqTcChequeIssue0_0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |Filter[1].FilterString" enqTcChequeIssue0_0_0_LinkedEntityName="FilterString" enqTcChequeIssue0_0_0_Mandatory="Y" enqTcChequeIssue0_0_0_OriginalEntityEID="5A0754172F11D7DA74373" enqTcChequeIssue0_0_0_OriginalEntityName="FilterString" enqTcChequeIssue0_0_0_PropertyKey="Filter[C].FilterString" enqTcChequeIssue0_0_0_PubIn="Y" enqTcChequeIssue0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" enqTcChequeIssue0_0_ExportedPropertyGroup="Filter[1]" enqTcChequeIssue0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |Filter" enqTcChequeIssue0_0_LinkedEntityName="Filter" enqTcChequeIssue0_0_NumChildren="1" enqTcChequeIssue0_0_OriginalEntityEID="5A0754172F11D7DA74372" enqTcChequeIssue0_0_OriginalEntityName="Filter" enqTcChequeIssue0_0_PropertyKey="Filter" enqTcChequeIssue0_0_PubIn="Y" enqTcChequeIssue0_1_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" enqTcChequeIssue0_1_0_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" enqTcChequeIssue0_1_0_ExportedProperty="enqTcChequeIssue[1].ChequeStatus" enqTcChequeIssue0_1_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |enqTcChequeIssue[1].ChequeStatus" enqTcChequeIssue0_1_0_LinkedEntityName="ChequeStatus" enqTcChequeIssue0_1_0_LinkedEntityODataName="ChequeStatus" enqTcChequeIssue0_1_0_LinkedEntityODataNullable="Y" enqTcChequeIssue0_1_0_LinkedEntityODataType="Edm.String" enqTcChequeIssue0_1_0_LinkedEntityODataUsed="Y" enqTcChequeIssue0_1_0_OriginalEntityEID="5A0754172F11D7DA74361" enqTcChequeIssue0_1_0_OriginalEntityName="ChequeStatus" enqTcChequeIssue0_1_0_PropertyKey="enqTcChequeIssue[A].ChequeStatus" enqTcChequeIssue0_1_0_PubOut="Y" enqTcChequeIssue0_1_1_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" enqTcChequeIssue0_1_1_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" enqTcChequeIssue0_1_1_ExportedProperty="enqTcChequeIssue[1].ChqNoStart" enqTcChequeIssue0_1_1_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |enqTcChequeIssue[1].ChqNoStart" enqTcChequeIssue0_1_1_LinkedEntityName="ChqNoStart" enqTcChequeIssue0_1_1_LinkedEntityODataName="ChqNoStart" enqTcChequeIssue0_1_1_LinkedEntityODataNullable="Y" enqTcChequeIssue0_1_1_LinkedEntityODataType="Edm.String" enqTcChequeIssue0_1_1_LinkedEntityODataUsed="Y" enqTcChequeIssue0_1_1_OriginalEntityEID="5A0754172F11D7DA74362" enqTcChequeIssue0_1_1_OriginalEntityName="ChqNoStart" enqTcChequeIssue0_1_1_PropertyKey="enqTcChequeIssue[A].ChqNoStart" enqTcChequeIssue0_1_1_PubOut="Y" enqTcChequeIssue0_1_2_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" enqTcChequeIssue0_1_2_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" enqTcChequeIssue0_1_2_ExportedProperty="enqTcChequeIssue[1].Id" enqTcChequeIssue0_1_2_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |enqTcChequeIssue[1].Id" enqTcChequeIssue0_1_2_LinkedEntityName="Id" enqTcChequeIssue0_1_2_LinkedEntityODataKey="true" enqTcChequeIssue0_1_2_LinkedEntityODataName="Id" enqTcChequeIssue0_1_2_LinkedEntityODataNullable="N" enqTcChequeIssue0_1_2_LinkedEntityODataType="Edm.String" enqTcChequeIssue0_1_2_LinkedEntityODataUsed="Y" enqTcChequeIssue0_1_2_OriginalEntityEID="5A0754172F11D7DA74365" enqTcChequeIssue0_1_2_OriginalEntityName="Id" enqTcChequeIssue0_1_2_PropertyKey="enqTcChequeIssue[A].Id" enqTcChequeIssue0_1_2_PubOut="Y" enqTcChequeIssue0_1_3_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" enqTcChequeIssue0_1_3_0_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" enqTcChequeIssue0_1_3_0_ExportedProperty="enqTcChequeIssue[1].DateTime[1].RequestDate" enqTcChequeIssue0_1_3_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |enqTcChequeIssue[1].DateTime[1].RequestDate" enqTcChequeIssue0_1_3_0_LinkedEntityName="RequestDate" enqTcChequeIssue0_1_3_0_LinkedEntityODataName="RequestDate" enqTcChequeIssue0_1_3_0_LinkedEntityODataNullable="Y" enqTcChequeIssue0_1_3_0_LinkedEntityODataType="Edm.String" enqTcChequeIssue0_1_3_0_LinkedEntityODataUsed="Y" enqTcChequeIssue0_1_3_0_OriginalEntityEID="FFD7E5E45B8357E32923308" enqTcChequeIssue0_1_3_0_OriginalEntityName="RequestDate" enqTcChequeIssue0_1_3_0_PropertyKey="enqTcChequeIssue[A].DateTime[A].RequestDate" enqTcChequeIssue0_1_3_0_PubOut="Y" enqTcChequeIssue0_1_3_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" enqTcChequeIssue0_1_3_DGInst="A" enqTcChequeIssue0_1_3_ExportedPropertyGroup="enqTcChequeIssue[1].DateTime[1]" enqTcChequeIssue0_1_3_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |enqTcChequeIssue[1].DateTime" enqTcChequeIssue0_1_3_LinkedEntityFixedSize="N" enqTcChequeIssue0_1_3_LinkedEntityMaxInstances="0" enqTcChequeIssue0_1_3_LinkedEntityName="DateTime" enqTcChequeIssue0_1_3_LinkedEntityODataCollectionKind="Bag" enqTcChequeIssue0_1_3_LinkedEntityODataName="enqTcChequeIssue_DateTimeMvGroup" enqTcChequeIssue0_1_3_LinkedEntityODataNullable="Y" enqTcChequeIssue0_1_3_LinkedEntityODataType="$$!CHEQUES_MODULE$-modelsModel.enqTcChequeIssue_DateTimeMvGroup" enqTcChequeIssue0_1_3_LinkedEntityODataUsed="Y" enqTcChequeIssue0_1_3_NumChildren="1" enqTcChequeIssue0_1_3_OriginalEntityEID="FFD7E5E45B8357E32923307" enqTcChequeIssue0_1_3_OriginalEntityName="DateTime" enqTcChequeIssue0_1_3_PropertyKey="enqTcChequeIssue[A].DateTime" enqTcChequeIssue0_1_3_PubOut="Y" enqTcChequeIssue0_1_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" enqTcChequeIssue0_1_DGInst="A" enqTcChequeIssue0_1_ExportedPropertyGroup="enqTcChequeIssue[1]" enqTcChequeIssue0_1_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |enqTcChequeIssue" enqTcChequeIssue0_1_LinkedEntityFixedSize="N" enqTcChequeIssue0_1_LinkedEntityMaxInstances="0" enqTcChequeIssue0_1_LinkedEntityName="enqTcChequeIssue" enqTcChequeIssue0_1_LinkedEntityODataKey="Id" enqTcChequeIssue0_1_LinkedEntityODataName="enqTcChequeIssue" enqTcChequeIssue0_1_LinkedEntityODataNullable="N" enqTcChequeIssue0_1_LinkedEntityODataType="$$!CHEQUES_MODULE$-modelsModel.enqTcChequeIssue" enqTcChequeIssue0_1_LinkedEntityODataUsed="Y" enqTcChequeIssue0_1_NumChildren="4" enqTcChequeIssue0_1_OriginalEntityEID="5A0754172F11D7DA74360" enqTcChequeIssue0_1_OriginalEntityName="enqTcChequeIssue" enqTcChequeIssue0_1_PropertyKey="enqTcChequeIssue" enqTcChequeIssue0_1_PubOut="Y" enqTcChequeIssue0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" enqTcChequeIssue0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.DictionaryRoot| |Data Store Root" enqTcChequeIssue0_LinkedEntityName="Data Store Root" enqTcChequeIssue0_NumChildren="2" enqTcChequeIssue0_OriginalEntityEID="5A0754172F11D7DA73790" enqTcChequeIssue0_OriginalEntityName="Data Store Root" enqTcChequeIssue0_PubIn="Y" enqTcChequeIssue0_PubOut="Y" enqTcChequeIssueClassType="com.acquire.intelligentforms.entities.component.Component" enqTcChequeIssueComponentComment="" enqTcChequeIssueNumChildren="1" enqTcChequeIssueProjectName="enqTcChequeIssues_IRIS" enqTcChequeIssueRulesOnly="Y"><![CDATA[
+      ]]>
+      <Phase Name="Initialize" ProcessRulesOnly="Y" eid="5A0754172F11D7DA74264"><![CDATA[
+        ]]>
+        <Rule Name="Reset result data group" ResetPropertyGroup="Result[1]" RuleClassName="com.acquire.intelligentforms.rules.ResetDataRule" RuleDisabled="N" RuleType="PostPhase" eid="5A0754172F11D7DA74346"/>
+        <Rule DSDataGroup="enqTcChequeIssue[A]" DSOperationType="Read" DataSetToUse="TcChequeIssue" Name="Data Set" RuleClassName="com.acquire.intelligentforms.rules.DataSetRule" RuleDisabled="N" RuleType="PostPhase" eid="58E3F08CC815B6AF74467"/>
+      </Phase>
+    </Product>
+  </Products>
+  <PresentationTypes Name="Presentation Types Root" eid="5A0754172F11D7DA73798"/>
+  <EVANotes Name="Notes Root" eid="5A0754172F11D7DA73800"><![CDATA[
+    ]]>
+    <EVANoteDefinition Name="ToDo" NoteName="ToDo" StatusRequired="Y" eid="5A0754172F11D7DA73855"/>
+    <EVANoteDefinition Name="Specification" NoteName="Specification" StatusRequired="N" eid="5A0754172F11D7DA73856"/>
+    <EVANoteDefinition Name="Comment" NoteName="Comment" StatusRequired="N" eid="5A0754172F11D7DA73857"/>
+  </EVANotes>
+  <LanguageMapDefinitionsRoot Name="Languages Root" eid="5A0754172F11D7DA73802"/>
+  <CordovaPluginsRoot Name="CordovaPlugins Root" eid="5A0754172F11D7DA73806"/>
+</Project>

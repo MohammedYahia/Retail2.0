@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><LanguageMap presentations="CustomerProfile" project="CustomerProfile" sourcelanguage="en-GB" targetlanguage="en-GB" updated="02/08/17 15:48" version="1">
+  <Comment>Language map for customer profile</Comment>
+  <ProcessEntities>
+    <Container class="com.acquire.intelligentforms.entities.Product" displayString="CustomerProfile" eid="9B5B8E3AA963CBFA251987" type="Process">
+      <Container class="com.acquire.intelligentforms.entities.Phase" displayString="CustomerProfile" eid="2F71C70C2458B7A5217432" type="Phase">
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Your profile" eid="2F71C70C2458B7A5219847" path="CustomerProfile.CustomerProfile.Your profile" type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="2F71C70C2458B7A5219848:CustomerProfile" mappingType="PLACEHOLDER" original="" specifiedBy="2F71C70C2458B7A5219847:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="2F71C70C2458B7A5219848:CustomerProfile" mappingType="OVERRIDE" original="Your profile" specifiedBy="2F71C70C2458B7A5219847:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="2F71C70C2458B7A5219848:CustomerProfile" mappingType="PLACEHOLDER" original="" specifiedBy="2F71C70C2458B7A5219847:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="2F71C70C2458B7A5219848:CustomerProfile" mappingType="PLACEHOLDER" original="" specifiedBy="2F71C70C2458B7A5219847:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Customer Details" eid="2F71C70C2458B7A5219850" path="CustomerProfile.CustomerProfile.Customer Details" type="Button">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="2F71C70C2458B7A5219853:CustomerProfile" mappingType="PLACEHOLDER" original="" specifiedBy="2F71C70C2458B7A5219850:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="2F71C70C2458B7A5219853:CustomerProfile" mappingType="PLACEHOLDER" original="" specifiedBy="2F71C70C2458B7A5219850:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="2F71C70C2458B7A5219853:CustomerProfile" mappingType="PLACEHOLDER" original="" specifiedBy="2F71C70C2458B7A5219850:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="2F71C70C2458B7A5219853:CustomerProfile" mappingType="OVERRIDE" original="Customer Details" specifiedBy="2F71C70C2458B7A5219850:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="2F71C70C2458B7A5219853:CustomerProfile" mappingType="OVERRIDE" original="Customer Details" specifiedBy="2F71C70C2458B7A5219850:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Customer preferences" eid="2F71C70C2458B7A5219855" path="CustomerProfile.CustomerProfile.Customer preferences" type="Button">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="2F71C70C2458B7A5219858:CustomerProfile" mappingType="PLACEHOLDER" original="" specifiedBy="2F71C70C2458B7A5219855:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="2F71C70C2458B7A5219858:CustomerProfile" mappingType="PLACEHOLDER" original="" specifiedBy="2F71C70C2458B7A5219855:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="2F71C70C2458B7A5219858:CustomerProfile" mappingType="PLACEHOLDER" original="" specifiedBy="2F71C70C2458B7A5219855:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="2F71C70C2458B7A5219858:CustomerProfile" mappingType="OVERRIDE" original="Customer preferences" specifiedBy="2F71C70C2458B7A5219855:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="2F71C70C2458B7A5219858:CustomerProfile" mappingType="OVERRIDE" original="Customer preferences" specifiedBy="2F71C70C2458B7A5219855:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="ChangeCredentials" eid="354B822276DBF8D4334042" path="CustomerProfile.CustomerProfile.ChangeCredentials" type="Button">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="354B822276DBF8D4334043:CustomerProfile" mappingType="PLACEHOLDER" original="" specifiedBy="354B822276DBF8D4334042:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="354B822276DBF8D4334043:CustomerProfile" mappingType="PLACEHOLDER" original="" specifiedBy="354B822276DBF8D4334042:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="354B822276DBF8D4334043:CustomerProfile" mappingType="PLACEHOLDER" original="" specifiedBy="354B822276DBF8D4334042:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="354B822276DBF8D4334043:CustomerProfile" mappingType="OVERRIDE" original="ChangeCredentials" specifiedBy="354B822276DBF8D4334042:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="LinkText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="354B822276DBF8D4334043:CustomerProfile" mappingType="OVERRIDE" original="ChangeCredentials" specifiedBy="354B822276DBF8D4334042:Button" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+      </Container>
+    </Container>
+  </ProcessEntities>
+  <Designs/>
+  <PresentationOnlyObjects>
+    <PresentationType class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationType" displayString="CustomerProfile" eid="9B5B8E3AA963CBFA251998" path="CustomerProfile" type="Rich Presentation Type">
+      <Attribute mappingType="OVERRIDE" name="BackButtonText" original="Back" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DateFormat" original="DD/MM/YYYY" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DecimalSymbol" original="." state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DigitGroupSymbol" original="," state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="EditTheme" original="N" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ForwardButtonText" original="Continue" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="HelpIconHint" original="Help" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaMessage" original="Please re-enter using letters" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaNumericMessage" original="Please re-enter using letters and numbers" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDateMessage" original="Please enter a valid date in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDaysInMonthMessage" original="There are not that many days in the specified month" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDecimalMessage" original="Please enter a valid decimal number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidLeapYearMessage" original="The specified year is not a leap year" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxDateMessage" original="The latest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxFileSizeMessage" original="The maximum file size allowed is $$QUESTION_CONSTRAINT$k" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxLengthMessage" original="The maximum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxValueMessage" original="The maximum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinDateMessage" original="The earliest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinLengthMessage" original="The minimum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinValueMessage" original="The minimum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidNumMessage" original="Please enter a valid number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidTimeMessage" original="Please enter a valid time in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidUploadTypeMessage" original="The valid file types you are allowed to upload are: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="LayoutDirection" original="ltr" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandMessage" original="Please answer all the required questions marked with a $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="QuestionListDefault" original="- Please Select" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ValidationMessage" original="Please enter a valid value" state="NEW" status="NEW" value=""/>
+      <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationProduct" displayString="CustomerProfile" eid="9B5B8E3AA963CBFA252005" type="Rich Presentation Process">
+        <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" displayString="CustomerProfile" eid="2F71C70C2458B7A5217435" type="Rich Presentation Phase">
+          <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="responsive-row [Section] (using td-responsive-row)" eid="2F71C70C2458B7A5217441" type="Rich Presentation Section">
+            <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" displayString="single-full-width-col [Column] (using td-col-full-centered)" eid="2F71C70C2458B7A5217442" type="Rich Presentation Column">
+              <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="card [Section] (using td-card)" eid="2F71C70C2458B7A5217443" type="Rich Presentation Section">
+                <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="card content [Section] (using td-card-body)" eid="2F71C70C2458B7A5217454" type="Rich Presentation Section">
+                  <Container class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" displayString="Section (using td-tab-container)" eid="48D258774FD2468F222820" type="Rich Presentation Section">
+                    <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTabPane" displayString="Tab Pane Contact Details" eid="48D258774FD2468F211970" path="CustomerProfile.CustomerProfile.CustomerProfile.Section.Column.Section.Section.Section.Tab Pane Contact Details" type="Rich Presentation Tab Pane">
+                      <Attribute mappingType="PLACEHOLDER" name="HintText" original="" state="NEW" status="NEW" value=""/>
+                      <Attribute mappingType="OVERRIDE" name="TabName" original="Contact Details" state="NEW" status="NEW" value=""/>
+                    </PresentationObject>
+                    <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTabPane" displayString="Tab Pane Preferences" eid="48D258774FD2468F212014" path="CustomerProfile.CustomerProfile.CustomerProfile.Section.Column.Section.Section.Section.Tab Pane Preferences" type="Rich Presentation Tab Pane">
+                      <Attribute mappingType="PLACEHOLDER" name="HintText" original="" state="NEW" status="NEW" value=""/>
+                      <Attribute mappingType="OVERRIDE" name="TabName" original="Preferences" state="NEW" status="NEW" value=""/>
+                    </PresentationObject>
+                    <PresentationObject class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationTabPane" displayString="Tab Pane Change Credentials" eid="354B822276DBF8D4343616" path="CustomerProfile.CustomerProfile.CustomerProfile.Section.Column.Section.Section.Section.Tab Pane Change Credentials" type="Rich Presentation Tab Pane">
+                      <Attribute mappingType="PLACEHOLDER" name="HintText" original="" state="NEW" status="NEW" value=""/>
+                      <Attribute mappingType="OVERRIDE" name="TabName" original="Change Credentials" state="NEW" status="NEW" value=""/>
+                    </PresentationObject>
+                  </Container>
+                </Container>
+              </Container>
+            </Container>
+          </Container>
+        </Container>
+      </Container>
+    </PresentationType>
+  </PresentationOnlyObjects>
+  <Rules>
+    <MasterRules/>
+  </Rules>
+  <Lists>
+    <List eid="2F71C70C2458B7A587466" listName="Languages" reset="True">
+      <ListItem eid="2F71C70C2458B7A587467" group="" groupState="NEW" key="1" original="English" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="2F71C70C2458B7A587468" group="" groupState="NEW" key="2" original="French" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="2F71C70C2458B7A587469" group="" groupState="NEW" key="3" original="German" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="2F71C70C2458B7A587470" group="" groupState="NEW" key="4" original="Spanish" originalGroup="" remove="" state="NEW" value=""/>
+    </List>
+    <List eid="2F71C70C2458B7A5141796" listName="CustomerProfile" reset="True">
+      <ListItem eid="2F71C70C2458B7A5141797" group="" groupState="NEW" key="CustomerDetails" original="CustomerDetails" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="2F71C70C2458B7A5141798" group="" groupState="NEW" key="CustomerPreferences" original="CustomerPreferences" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="354B822276DBF8D4517828" group="" groupState="NEW" key="ChangeCredentials" original="ChangeCredentials" originalGroup="" remove="" state="NEW" value=""/>
+    </List>
+    <List eid="354B822276DBF8D41055782" listName="LoginMethods" reset="True">
+      <ListItem eid="354B822276DBF8D41055786" group="" groupState="NEW" key="0" original="PW" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="354B822276DBF8D41055787" group="" groupState="NEW" key="1" original="PWMW" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="354B822276DBF8D41055788" group="" groupState="NEW" key="2" original="OTP" originalGroup="" remove="" state="NEW" value=""/>
+      <ListItem eid="354B822276DBF8D41055789" group="" groupState="NEW" key="3" original="OTPPIN" originalGroup="" remove="" state="NEW" value=""/>
+    </List>
+  </Lists>
+</LanguageMap>

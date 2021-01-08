@@ -1,0 +1,51 @@
+$%COMMENT$<!-- $Revision: 1.5 $ -->$%ENDCOMMENT$
+function genHTML5Input(p_newType, p_additionalAttrs, p_addConstraints) {
+  var attrsToAdd = "";
+  if ( p_additionalAttrs ) attrsToAdd = p_additionalAttrs;
+  var ecCode = "$$ITEM.EC_GENERATE().ESCAPEFORJS()$";
+  if ( p_newType != "" ) {
+    $%COMMENT$
+    // Build up any new HTML5 attributes min, max and pattern that we need to add to the standard edgeConnect attrs, including the new type
+	// Must use the display min/max value for things like dates to ensure they are in the correct format, now we've changed to use blur 
+	// instead of onchange the validation seems to work better
+    $%ENDCOMMENT$
+    attrsToAdd = p_newType + attrsToAdd;
+	if ( p_addConstraints ) {
+      $%IF ITEM.MINVALUE() != ""$attrsToAdd += " min=\"$$ITEM.DISPLAY_MINVALUE()$\"";$%ENDIF$
+      $%IF ITEM.MAXVALUE() != ""$attrsToAdd += " max=\"$$ITEM.DISPLAY_MAXVALUE()$\"";$%ENDIF$
+      $%IF ITEM.REGEXP() != ""$attrsToAdd += " pattern=\"$$ITEM.REGEXP().ESCAPEFORJS()$\"";$%ENDIF$
+	}  
+  }	
+  $%IF BROWSER_FEATURES == "" || BROWSER_FEATURES.input.placeholder == "Y"$
+    $%COMMENT$
+    // Add in a placeholder if its been specified
+    $%ENDCOMMENT$
+    $%IF ITEM.PlaceHolder != ""$attrsToAdd += " placeholder=\"$$ITEM.PlaceHolder$\"";$%ENDIF$
+  $%ENDIF$	
+  if ( attrsToAdd.length > 0 ) {
+    $%COMMENT$
+    // We now want to build up the final string so we will search for the type=text and do a simple substring adding the new type and any
+	// new attributes in the middle. 
+    $%ENDCOMMENT$
+    var standardInputType = "type=\"text\""; 
+    var insertIndex = ecCode.indexOf( standardInputType );
+	if ( insertIndex > -1 ) {
+      if ( p_newType == "" ) attrsToAdd = standardInputType + attrsToAdd;
+      ecCode = ecCode.substring(0, insertIndex) + attrsToAdd + ecCode.substring(insertIndex + standardInputType.length);
+	}  
+  }
+  return ecCode;
+}
+
+function removeAttrs(p_str, p_attrs) {
+  if ( p_str && p_str != "" && p_attrs ) {
+    for ( var i = 0; i < p_attrs.length; i++ ) {
+      var attrInd = p_str.indexOf( p_attrs[i] + "=\"" );
+      if ( attrInd > -1 ) { 
+        var quoteInd = p_str.indexOf( "\"", attrInd + p_attrs[i].length + 2 );
+        p_str = p_str.substring(0, attrInd) + p_str.substring(quoteInd + 1);    
+      }  
+    }
+  }	
+  return p_str;  
+}

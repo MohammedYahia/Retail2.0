@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><DataSetRoot DSAttrsNewLine="N" DSOmitXMLDecl="N" DSPrettyPrint="Y" DS_UID="22">
+  <!---->
+<enqTcAaProduct CatAvailableDate="20120614" Currency="USD|GBP|EUR|SGD|CAD" CurrencyDescription="US Dollar|Pound Sterling|Euro|Singapore Dollars|Canadian Dollar" CustomerNo="" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C]" DS_UID="1" EligibilityFilter="" Id="" InterestDetails="" MaxPeriod="" MbEligible="" MinPeriod="" Product="CURRENT.ACCOUNT" ProductGroup="CURRENT.ACCOUNTS" ProductGroupDescription="Current Accounts" ProductLine="ACCOUNTS" ProductLineDescription="Accounts">
+    <Description DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C].Description" DS_UID="0" ProductDescription="Current Account"/>
+  </enqTcAaProduct>
+  <enqTcAaProduct CatAvailableDate="20120614" Currency="USD" CurrencyDescription="US Dollar" CustomerNo="" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C]" DS_UID="3" EligibilityFilter="" Id="" InterestDetails="" MaxPeriod="" MbEligible="" MinPeriod="" Product="CURRENT.ACCOUNT.GEN" ProductGroup="CURRENT.ACCOUNTS" ProductGroupDescription="Current Accounts" ProductLine="ACCOUNTS" ProductLineDescription="Accounts">
+    <Description DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C].Description" DS_UID="2" ProductDescription="Current Account (General Charge)"/>
+  </enqTcAaProduct>
+  <enqTcAaProduct CatAvailableDate="20120614" Currency="USD|GBP|EUR" CurrencyDescription="US Dollar|Pound Sterling|Euro" CustomerNo="" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C]" DS_UID="5" EligibilityFilter="" Id="" InterestDetails="" MaxPeriod="" MbEligible="" MinPeriod="" Product="CURRENT.ACCOUNT.LINK" ProductGroup="CURRENT.ACCOUNTS" ProductGroupDescription="Current Accounts" ProductLine="ACCOUNTS" ProductLineDescription="Accounts">
+    <Description DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C].Description" DS_UID="4" ProductDescription="Current Account (Linked Rate)"/>
+  </enqTcAaProduct>
+  <enqTcAaProduct CatAvailableDate="20120614" Currency="USD" CurrencyDescription="US Dollar" CustomerNo="" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C]" DS_UID="7" EligibilityFilter="" Id="" InterestDetails="" MaxPeriod="" MbEligible="" MinPeriod="" Product="PREFER.ACCOUNT" ProductGroup="CURRENT.ACCOUNTS" ProductGroupDescription="Current Accounts" ProductLine="ACCOUNTS" ProductLineDescription="Accounts">
+    <Description DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C].Description" DS_UID="6" ProductDescription="Current Account (Preferred)"/>
+  </enqTcAaProduct>
+  <enqTcAaProduct CatAvailableDate="20120614" Currency="USD" CurrencyDescription="US Dollar" CustomerNo="" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C]" DS_UID="9" EligibilityFilter="" Id="" InterestDetails="" MaxPeriod="" MbEligible="" MinPeriod="" Product="PREMIUM.ACCOUNT" ProductGroup="CURRENT.ACCOUNTS" ProductGroupDescription="Current Accounts" ProductLine="ACCOUNTS" ProductLineDescription="Accounts">
+    <Description DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C].Description" DS_UID="8" ProductDescription="Current Account (Premium)"/>
+  </enqTcAaProduct>
+  <enqTcAaProduct CatAvailableDate="20120614" Currency="USD" CurrencyDescription="US Dollar" CustomerNo="" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C]" DS_UID="11" EligibilityFilter="" Id="" InterestDetails="" MaxPeriod="" MbEligible="" MinPeriod="" Product="GROUP.CHECKING" ProductGroup="CURRENT.ACCOUNTS" ProductGroupDescription="Current Accounts" ProductLine="ACCOUNTS" ProductLineDescription="Accounts">
+    <Description DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C].Description" DS_UID="10" ProductDescription="Group Checking Account"/>
+  </enqTcAaProduct>
+  <enqTcAaProduct CatAvailableDate="20120614" Currency="USD" CurrencyDescription="US Dollar" CustomerNo="" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C]" DS_UID="13" EligibilityFilter="" Id="" InterestDetails="" MaxPeriod="" MbEligible="" MinPeriod="" Product="GROUP.SUBSIDIARY" ProductGroup="CURRENT.ACCOUNTS" ProductGroupDescription="Current Accounts" ProductLine="ACCOUNTS" ProductLineDescription="Accounts">
+    <Description DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C].Description" DS_UID="12" ProductDescription="Group Subsidiary Account"/>
+  </enqTcAaProduct>
+  <enqTcAaProduct CatAvailableDate="20120614" Currency="USD" CurrencyDescription="US Dollar" CustomerNo="" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C]" DS_UID="15" EligibilityFilter="" Id="" InterestDetails="" MaxPeriod="" MbEligible="" MinPeriod="" Product="COND.SAVINGS.ACCOUNT" ProductGroup="SAVINGS.ACCOUNTS" ProductGroupDescription="Savings Accounts" ProductLine="ACCOUNTS" ProductLineDescription="Accounts">
+    <Description DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C].Description" DS_UID="14" ProductDescription="Conditional Savings Account"/>
+  </enqTcAaProduct>
+  <enqTcAaProduct CatAvailableDate="20120614" Currency="USD" CurrencyDescription="US Dollar" CustomerNo="" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C]" DS_UID="17" EligibilityFilter="" Id="" InterestDetails="" MaxPeriod="" MbEligible="" MinPeriod="" Product="SAVINGS.ACCOUNT" ProductGroup="SAVINGS.ACCOUNTS" ProductGroupDescription="Savings Accounts" ProductLine="ACCOUNTS" ProductLineDescription="Accounts">
+    <Description DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C].Description" DS_UID="16" ProductDescription="Savings Account"/>
+  </enqTcAaProduct>
+  <enqTcAaProduct CatAvailableDate="20120614" Currency="USD" CurrencyDescription="US Dollar" CustomerNo="" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C]" DS_UID="19" EligibilityFilter="" Id="" InterestDetails="" MaxPeriod="" MbEligible="" MinPeriod="" Product="NOTICE.ACCOUNT" ProductGroup="SAVINGS.ACCOUNTS" ProductGroupDescription="Savings Accounts" ProductLine="ACCOUNTS" ProductLineDescription="Accounts">
+    <Description DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C].Description" DS_UID="18" ProductDescription="Savings Account (Notice)"/>
+  </enqTcAaProduct>
+  <enqTcAaProduct CatAvailableDate="20120614" Currency="USD|EUR|GBP|SGD|CHF" CurrencyDescription="US Dollar|Euro|Pound Sterling|Singapore Dollars|Swiss Franc" CustomerNo="" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C]" DS_UID="21" EligibilityFilter="" Id="" InterestDetails="" MaxPeriod="90D|90D|90D|90D|90D" MbEligible="" MinPeriod="0D|15D|15D|15D|15D" Product="DEPOSIT.SHORT" ProductGroup="DEPOSITS" ProductGroupDescription="Term Deposits" ProductLine="DEPOSITS" ProductLineDescription="Deposits">
+    <Description DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcAaProduct[C].Description" DS_UID="20" ProductDescription="Short Term Deposit"/>
+  </enqTcAaProduct>
+</DataSetRoot>

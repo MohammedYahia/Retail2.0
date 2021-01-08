@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+  <widget name="tw-FlipSwitch" type="List" icon="toggle.png">
+		<template type="header" value="flipSwitch_header.wgt"/>
+		<template type="source" value="flipSwitch.wgt"/>
+		<custom>
+			<item name="onClass"  prompt="Class to add if 'ON'"  includeInDesign="false" />
+			<item name="offClass" prompt="Class to add if 'OFF'" includeInDesign="false" />
+			<item name="onJS"     prompt="JS to call if 'ON'"    includeInDesign="false" />
+			<item name="offJS"    prompt="JS to call if 'OFF'"   includeInDesign="false"  />
+		</custom>
+	</widget>
+</widgets>

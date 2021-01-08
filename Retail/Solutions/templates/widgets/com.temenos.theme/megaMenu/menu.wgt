@@ -1,0 +1,16 @@
+<div class="mega-root $$ITEM.STYLES().MenuStyle$">
+	<nav class="mega-nav-menu">
+		<ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
+			$$FORMCONTENT$
+		</ul>
+	</nav>
+</div>
+<script type="text/javascript">
+$(function($){
+	MegaMenu.create({
+		id: "$$ITEM.ID()$",
+		bp: "$$ITEM.BP$",
+		trigger: "$$ITEM.TRIGGER$"
+	})
+})
+</script>

@@ -1,0 +1,74 @@
+$$ITEM.EC_GENERATE()$
+<script type="text/javascript">
+//<![CDATA[
+$(function() {
+    var $rows = $("#$$ITEM.ID()$ tr");
+    var idInfo = [
+    $%FOREACH TABLE_ROW IN TABLE$
+        {id: "$$ITEM.id_dataitem$", parentId: "$$ITEM.parent_id_dataitem$"},
+    $%ENDFOREACH$
+    ]
+	
+    var selectorBefore = false;
+    $("#$$ITEM.ID()$ > tbody > tr").each(function(i, o) {
+        var $row = $(o);
+        var rowId = idInfo[i].id;
+        $row.attr("data-tt-id", rowId);
+        var parentId = idInfo[i].parentId;
+        if (parentId != "") {
+            $row.attr("data-tt-parent-id", parentId);
+        }
+    });
+
+    //re-order rows...
+    $("#$$ITEM.ID()$ > tbody > tr").each(function(i, o) {
+        var id = $(o).attr("data-tt-id");
+        var childRows = $(this).parent().find("[data-tt-parent-id='"+ id +"']")
+        childRows.insertAfter( $(o) ); 
+    });
+
+	$("#$$ITEM.ID()$").wrap('<div class="tableContainer">') // wrap table with div.tableContainer to set css overflow = auto (so that page does not get a horizontal slider when many columns, table is slideable now)
+    
+    $("#$$ITEM.ID()$").treetable({ 
+        expandable: true, 
+        initialState: "collapsed", 
+        stringCollapse:"$$ITEM.strCollapse$", 
+        stringExpand: "$$ITEM.strExpand$",
+        expanderTemplate: "<a href='#' style='color: transparent' class='tc-no-prop'>trg</a>",
+        onNodeExpand: function(e) {
+            return false;
+        },
+        onNodeCollapse: function(e) {
+            return false;
+        }
+    });
+    $%IF ITEM.displevdef != ''$
+        var arr = [].slice.call(document.getElementsByClassName("branch"));
+        for(var i = 0; i < arr.length; i++) {
+        var rowClasses = arr[i].className;
+        var n = rowClasses.indexOf('level');
+        var level = rowClasses[n+5];
+        if (level < $$ITEM.displevdef$) {
+          $("#$$ITEM.ID()$").treetable("expandNode", $(arr[i]).attr('data-tt-id'));
+        }
+    }
+    $%ENDIF$    
+
+    if (selectorBefore == true) {
+		$("#$$ITEM.ID()$ tbody tr").each(function(i, o) {
+			var $row = $(o);
+			$row.find("td div").css('display', 'inline');
+			$row.find("td span").css('display', 'inline');
+		});
+	}
+    if ( "$$ITEM.DATAITEM().VALUE()$" != "") {
+        try {
+            $("#$$ITEM.ID()$").treetable( "reveal","$$ITEM.DATAITEM().VALUE()$");
+        }
+        catch (e) {
+            
+        }
+    }
+});
+ //]]>
+</script>

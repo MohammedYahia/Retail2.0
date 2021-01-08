@@ -1,0 +1,3 @@
+<span $%IF ITEM.IconSize != ""$ style="font-size:$$ITEM.IconSize$;" $%ENDIF$ class="tc-icon icon-no-hover icon-$$ITEM.DefaultIcon$ $$ITEM.IconStatus$ $$ITEM.IconStyle$">
+	<span></span>
+</span>

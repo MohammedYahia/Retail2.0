@@ -1,0 +1,36 @@
+<div id="$$ITEM.ID()$" class="$$ITEM.STYLES().SectionStyle$" style="position:relative;
+$$ITEM.INLINE_STYLES().SectionStyle$;
+$%IF ITEM.SectionLayout == "Specify in pixels (px)"$
+  $%IF ITEM.SectionHeight != ""$height: $$ITEM.SectionHeight$px;$%ENDIF$
+$%ENDIF$
+">
+	$$FORMCONTENT$
+</div>
+<script type="text/javascript" charset="utf-8">
+//<![CDATA[
+	$(function() {
+		var ua = window.navigator.userAgent;
+		if ( (ua.indexOf("Android 4") >= 0 && ua.indexOf("Chrome") <0) 
+			|| $("html").is(".ios7") || $("html").is("ios8")) {
+			$("#$$ITEM.ID()$").css("overflow", "auto")
+			                  .css("height", $(window).height())
+		} else {
+			try{
+				$("#$$ITEM.ID()$").perfectScrollbar({
+					suppressScrollX: true
+				});
+
+				$(window).on("resize", function() {
+					$("#$$ITEM.ID()$").perfectScrollbar('update');
+				})
+	        }
+	        catch (e){
+	        	console.log(e.message)
+	        }			
+		}
+	})
+	
+//]]>	
+</script>
+
+

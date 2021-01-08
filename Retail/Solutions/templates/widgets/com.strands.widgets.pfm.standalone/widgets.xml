@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><widgets>
+ <widget name="PFMTrigger" type="Item:">
+    <template type="source" value="pfm-trigger.wgt"/>
+    <custom>
+		<item includeInDesign="true" layout="-1" mand="false" name="ListenerRule" type="com.acquire.intelligentforms.ide.dialogs.RichTextField" usage="7"/>
+		<item includeInDesign="true" layout="-1" mand="false" name="ListenerSplit" type="com.acquire.intelligentforms.ide.dialogs.RichTextField" usage="7"/>
+		<item includeInDesign="true" layout="-1" mand="false" name="ListenerCategorize" type="com.acquire.intelligentforms.ide.dialogs.RichTextField" usage="7"/>
+		<item includeInDesign="Always" layout="-1" mand="false" name="TransactionId" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property" usage="7"/>
+		<item includeInDesign="Always" layout="-1" mand="false" name="AccType" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property" usage="7"/>
+		<item includeInDesign="Always" layout="-1" mand="false" name="AccId" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property" usage="7"/>
+		<item includeInDesign="Always" layout="-1" mand="true" name="PFM_URL" help="PFM Interaction URL" type="com.acquire.intelligentforms.ide.dictionaryeditor.PropertyChooser" typeValue="Data Item Chooser|-1|true|true|com.acquire.intelligentforms.entities.Property" usage="7"/>
+		<item includeInDesign="Always" layout="-1" mand="true" name="PFM_USERID" help="PFM User ID" type="com.acquire.intelligentforms.ide.dialogs.RichTextField" usage="7"/>
+    </custom>
+  </widget>
+</widgets>

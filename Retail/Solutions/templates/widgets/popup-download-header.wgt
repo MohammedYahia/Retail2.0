@@ -1,0 +1,6 @@
+<link rel="stylesheet" href="templates/widgets/jquery-ui/css/smoothness/jquery-ui-1.8.11.custom.css">
+<script media="screen"  type="text/javascript">
+	function jq(myid) { 
+		return '#' + myid.replace(/(:|\.)/g,'\\$1');
+	}
+</script>

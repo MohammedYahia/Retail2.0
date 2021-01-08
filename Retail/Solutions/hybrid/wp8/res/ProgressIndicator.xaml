@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="com.temenos.edgehybrid.ProgressIndicator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="100" d:DesignWidth="480">
+
+    <Grid x:Name="gdProgressBar" VerticalAlignment="Top" Visibility="Collapsed" 
+          HorizontalAlignment="Stretch" Background="Gray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="tbProgress" Grid.Row="1" 
+                         Foreground="White"
+                         Margin="20,1,0,3" FontSize="17"/>
+        <ProgressBar x:Name="progressbar" IsIndeterminate="True"
+                         VerticalAlignment="Center" 
+                         Visibility="{Binding ElementName=gdProgressBar, Path=Visibility}"/>
+    </Grid>
+</UserControl>

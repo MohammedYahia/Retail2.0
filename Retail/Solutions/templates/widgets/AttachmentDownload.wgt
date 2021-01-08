@@ -1,0 +1,5 @@
+<style>
+a.link:hover{text-decoration:underline!important;}
+</style>
+
+<a href="$$ITEM.TARGET_URL$" class="tip $$ITEM.STYLES().ButtonStyle$" title="$$ITEM.LINK_TEXT$" onclick="$$ITEM.ON_CLICK_ACTION$" target="_blank"><i class="tc-icon tc-table-icon icon-download tc-icon-font-size-md"><span></span></i></a>

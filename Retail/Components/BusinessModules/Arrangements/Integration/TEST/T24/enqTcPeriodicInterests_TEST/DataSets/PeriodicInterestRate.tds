@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><DataSetRoot DSAttrsNewLine="N" DSOmitXMLDecl="N" DSPrettyPrint="Y" DS_UID="40">
+  <!---->
+<enqTcPeriodicInterest DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C]" DS_UID="39">
+    <RestPeriod DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod" DS_UID="1" Term="1D">
+      <Amt DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amt" DS_UID="0" InterestRate="0.002"/>
+    </RestPeriod>
+    <RestPeriod DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod" DS_UID="3" Term="15D">
+      <Amt DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amt" DS_UID="2" InterestRate="0.1145"/>
+    </RestPeriod>
+    <RestPeriod DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod" DS_UID="8" Term="30D">
+      <Amt DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amt" DS_UID="4" InterestRate="0.1515"/>
+      <Amt DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amt" DS_UID="5" InterestRate="0.158"/>
+      <Amount Amount="Upto 1000000" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amount" DS_UID="6"/>
+      <Amount Amount="&gt;1000000" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amount" DS_UID="7"/>
+    </RestPeriod>
+    <RestPeriod DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod" DS_UID="13" Term="3M">
+      <Amt DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amt" DS_UID="9" InterestRate="0.2331"/>
+      <Amt DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amt" DS_UID="10" InterestRate="0.238"/>
+      <Amount Amount="Upto 1000000" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amount" DS_UID="11"/>
+      <Amount Amount="&gt;1000000" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amount" DS_UID="12"/>
+    </RestPeriod>
+    <RestPeriod DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod" DS_UID="18" Term="6M">
+      <Amt DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amt" DS_UID="14" InterestRate="0.328"/>
+      <Amt DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amt" DS_UID="15" InterestRate="0.333"/>
+      <Amount Amount="Upto 1000000" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amount" DS_UID="16"/>
+      <Amount Amount="&gt;1000000" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amount" DS_UID="17"/>
+    </RestPeriod>
+    <RestPeriod DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod" DS_UID="23" Term="12M">
+      <Amt DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amt" DS_UID="19" InterestRate="0.5503"/>
+      <Amt DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amt" DS_UID="20" InterestRate="0.5555"/>
+      <Amount Amount="Upto 1000000" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amount" DS_UID="21"/>
+      <Amount Amount="&gt;1000000" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amount" DS_UID="22"/>
+    </RestPeriod>
+    <RestPeriod DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod" DS_UID="28" Term="24M">
+      <Amt DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amt" DS_UID="24" InterestRate="0.6214"/>
+      <Amt DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amt" DS_UID="25" InterestRate="0.648"/>
+      <Amount Amount="Upto 1000000" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amount" DS_UID="26"/>
+      <Amount Amount="&gt;1000000" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amount" DS_UID="27"/>
+    </RestPeriod>
+    <RestPeriod DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod" DS_UID="33" Term="60M">
+      <Amt DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amt" DS_UID="29" InterestRate="0.92256"/>
+      <Amt DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amt" DS_UID="30" InterestRate="0.948"/>
+      <Amount Amount="Upto 1000000" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amount" DS_UID="31"/>
+      <Amount Amount="&gt;1000000" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amount" DS_UID="32"/>
+    </RestPeriod>
+    <RestPeriod DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod" DS_UID="38" Term="R">
+      <Amt DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amt" DS_UID="34" InterestRate="0.963"/>
+      <Amt DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amt" DS_UID="35" InterestRate="0.9655"/>
+      <Amount Amount="Upto 1000000" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amount" DS_UID="36"/>
+      <Amount Amount="&gt;1000000" DS_REF_DATAGROUP_ATTRIBUTE_NAME="enqTcPeriodicInterest[C].RestPeriod[C].Amount" DS_UID="37"/>
+    </RestPeriod>
+  </enqTcPeriodicInterest>
+</DataSetRoot>

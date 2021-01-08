@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><widgets>
+    <widget icon="loader_small.gif" name="tw-PleaseWait" type="Item:tw-PleaseWait">
+            <template type="header" value="pleaseWait-header.wgt"/>
+            <template type="source" value="pleaseWait.wgt"/>
+            <custom>
+				<item name="WAITING_MESSAGE" prompt="Waiting text" tab="Waiting Widget Details" includeInDesign="false" usage="15"/>
+				<item name="SHOW_WAITING_DELAY" prompt="Show Waiting After (ms)" tab="Waiting Widget Details" type="javax.swing.JTextField" typeValue="NUMERIC|4" includeInDesign="false" />
+				<item name="CREATE_MASK" prompt="Grey out background" tab="Waiting Widget Details" type="javax.swing.JCheckBox" />
+            </custom>
+    </widget>
+</widgets>

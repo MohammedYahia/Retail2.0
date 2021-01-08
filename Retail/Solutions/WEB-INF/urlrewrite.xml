@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN" "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<urlrewrite use-context="false" use-query-string="false">
+<!--
+    <rule>
+        <note>
+            The rule means that requests to /test/status/ will be redirected to /rewrite-status
+            the url will be rewritten.
+        </note>
+        <from>/test/status/</from>
+        <to type="redirect">%{context-path}/rewrite-status</to>
+    </rule>
+-->
+
+<!--
+    <outbound-rule>
+        <note>
+            The outbound-rule specifies that when response.encodeURL is called (if you are using JSTL c:url)
+            the url /rewrite-status will be rewritten to /test/status/.
+
+            The above rule and this outbound-rule means that end users should never see the
+            url /rewrite-status only /test/status/ both in thier location bar and in hyperlinks
+            in your pages.
+        </note>
+        <from>/rewrite-status</from>
+        <to>/test/status/</to>
+    </outbound-rule>
+
+-->
+
+    <outbound-rule enabled="true" encodefirst="false">
+        <note>
+            This outbound-rule specifies that the response.encodeURL is not called
+        </note>
+		<from casesensitive="false">(.*)</from>
+		<to encode="false" last="false" qsappend="false" type="forward">$1</to>
+    </outbound-rule>
+	
+	<rule enabled="true">
+		<from casesensitive="false">/page/(.*\..*)</from>
+		<to last="false" qsappend="false" type="forward">/$1</to>
+	</rule>
+
+    <rule enabled="true">
+        <from casesensitive="false">/page/(.*)binaries(.*)</from>
+        <to last="false" qsappend="false" type="forward">/binaries$2</to>
+    </rule>
+
+    <rule enabled="true">
+        <from casesensitive="false">/page/(.*)api(.*)</from>
+        <to last="false" qsappend="false" type="forward">/api$2</to>
+    </rule>
+
+    <rule enabled="true">
+        <from casesensitive="false">/page/ajaxservletcontroller</from>
+        <to last="false" qsappend="false" type="forward">/ajaxservletcontroller</to>
+    </rule>
+
+
+    <rule enabled="true">
+        <from casesensitive="false">/article/(.*)binaries(.*)</from>
+        <to last="false" qsappend="false" type="forward">/binaries$2</to>
+    </rule>
+    <!--
+
+     EXAMPLES
+
+     Redirect one url
+        <rule>
+            <from>/some/old/page.html</from>
+            <to type="redirect">/very/new/page.html</to>
+        </rule>
+
+    Redirect a directory
+        <rule>
+            <from>/some/olddir/(.*)</from>
+            <to type="redirect">/very/newdir/$1</to>
+        </rule>
+
+    Clean a url
+        <rule>
+            <from>/products/([0-9]+)</from>
+            <to>/products/index.jsp?product_id=$1</to>
+        </rule>
+    eg, /products/1234 will be passed on to /products/index.jsp?product_id=1234 without the user noticing.
+
+    Browser detection
+        <rule>
+            <condition name="user-agent">Mozilla/[1-4]</condition>
+            <from>/some/page.html</from>
+            <to>/some/page-for-old-browsers.html</to>
+        </rule>
+    eg, will pass the request for /some/page.html on to /some/page-for-old-browsers.html only for older
+    browsers whose user agent srtings match Mozilla/1, Mozilla/2, Mozilla/3 or Mozilla/4.
+
+    Centralised browser detection
+        <rule>
+            <condition name="user-agent">Mozilla/[1-4]</condition>
+            <set type="request" name="browser">moz</set>
+        </rule>
+    eg, all requests will be checked against the condition and if matched
+    request.setAttribute("browser", "moz") will be called.
+
+    -->
+
+<rule enabled="true">
+        <from casesensitive="false">/page/getCmsData</from>
+        <to last="false" qsappend="false" type="forward">/getCmsData</to>
+    </rule>
+    <rule enabled="true">
+        <from casesensitive="false">/page/doAction</from>
+        <to last="false" qsappend="false" type="forward">/doAction</to>
+    </rule>
+    <rule enabled="true">
+        <from casesensitive="false">/page/getView</from>
+        <to last="false" qsappend="false" type="forward">/getView</to>
+    </rule>
+    <rule enabled="true">
+        <from casesensitive="false">/page/getData</from>
+        <to last="false" qsappend="false" type="forward">/getData</to>
+    </rule>
+</urlrewrite>

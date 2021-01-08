@@ -1,0 +1,64 @@
+<!-- $Revision: 1.13 $ -->
+<div id="$$ITEM.ID()$" $%IF ITEM.IS_HIDDEN() == "true"$style="display: none"$%ENDIF$>
+
+    <style type="text/css">
+        #$$ITEM.ID()$ .ui-dialog {
+            padding: 1px;
+            $%IF ITEM.TITLE_BAR_COLOUR != ""$
+                border: 1px solid $$ITEM.TITLE_BAR_COLOUR$;
+            $%ENDIF$
+        }
+
+        #$$ITEM.ID()$ .ui-widget {
+            font-family: inherit;
+        }
+
+        #$$ITEM.ID()$ .ui-dialog .ui-dialog-content {
+            $%IF ITEM.TITLE_BAR_COLOUR != ""$
+                border: 2px solid $$ITEM.TITLE_BAR_COLOUR$;
+            $%ENDIF$
+        }
+
+        #$$ITEM.ID()$ .ui-dialog-titlebar {
+            $%IF ITEM.TITLE_BAR_COLOUR != ""$
+                background-color: $$ITEM.TITLE_BAR_COLOUR$;
+                border: none;
+                background-image: none;
+            $%ENDIF$
+        }
+
+        #$$ITEM.ID()$ .no-close .ui-dialog-titlebar-close {
+            display: none;
+        }
+    </style>
+
+    <div id="$$ITEM.ID()$_WINDOW" class="tetris_section" >
+        $$FORMCONTENT$
+    </div>
+
+    <script type="text/javascript" charset="utf-8">
+    //<![CDATA[
+    $(function() {
+        var hasFloatingParent = $("#$$ITEM.ID()$").closest("div[id$='_WINDOW']").length > 0;
+        if(!hasFloatingParent)
+        {
+            $( "#$$ITEM.ID()$_WINDOW" ).dialog({
+                $%IF ITEM.TITLE != ""$title: "$$ITEM.TITLE$",$%ENDIF$
+                $%IF ITEM.DISABLE_CLOSE == "Y"$dialogClass: "no-close",$%ENDIF$
+                width: $$ITEM.WIDTH$,
+                height: $$ITEM.HEIGHT$,
+                position: {
+                    my:"left top+100", //this is the reference object
+                    at:"left+$$ITEM.X_POS$ top+$$ITEM.Y_POS$" //this is offset according to the position set in my
+                }
+            });
+            $( "#$$ITEM.ID()$_WINDOW" ).parent().appendTo($("#$$ITEM.ID()$"));
+        }
+        else
+        {
+            log("WARNING: Section with id \"$$ITEM.ID()$\" has not been converted into a Floating Window as it is residing inside another Floating Window.");
+        }
+    });
+    //]]>
+    </script>
+</div>

@@ -1,0 +1,11 @@
+	<div id="toolbar" onmouseover="this.style.cursor = 'pointer'" style="height: 20px; width:197px;  ">
+		<div style="height: 20px; background: rgb(126, 192, 233) url($$CONTEXTPATH$/images/toolBarBlueGradient.gif) repeat-x scroll 0% 0%; float: left; width: 175px; " onmousedown="try {dragStart(event, 'FloatCalendarDiv');} catch (e){}">&nbsp;<\/div>
+		<div style="background-color: #ffffff;border-top: 2px solid rgb(170, 220, 250); border-right: 2px solid rgb(126, 192, 233); float: left; color: rgb(126, 192, 233); font-family: Arial; text-align: center; width: 20px; height: 18px;" onclick="parentNode.parentNode.style.display = 'none';" >X<\/div>
+		<div style="clear: both"><\/div>
+	<\/div>
+	<div style="color: #4444BB; font-family: Arial; height:92%; width:100%;">
+		<iframe id="calendarIframe"  src="javascript:false;" style="height:100%; width:100%; color: #FFFFFF;" scrolling="no" frameBorder="0"
+			$%if PRESENTATIONTYPE == "Offline"$application="yes"$%endif$>
+		    <p>Your browser does not support iframes.<\/p>
+		<\/iframe>
+	<\/div>

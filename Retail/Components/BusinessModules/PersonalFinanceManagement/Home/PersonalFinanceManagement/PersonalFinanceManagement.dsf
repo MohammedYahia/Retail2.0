@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?><DeploymentDescriptor AllowDataSets="N" Connect="version 6.1.1__1" Name="PersonalFinanceManagement" ProjectFileName="PersonalFinanceManagement.ifp" eid="9D9EB6F8E9954BE75985">
+  <WebServices Name="Web Services Root" eid="9D9EB6F8E9954BE725292"/>
+  <Portlets Name="Portlets Root" eid="9D9EB6F8E9954BE725295"/>
+  <Parameters Name="Variables Root" eid="9D9EB6F8E9954BE725294">
+    <RunTimeParameters Name="Runtime Variables" eid="9D9EB6F8E9954BE725308">
+      <RunTimeParameter Mode="Live" Name="Mode" eid="9D9EB6F8E9954BE725309"/>
+      <RunTimeParameter Name="Session Timeout" eid="9D9EB6F8E9954BE725310"/>
+      <RunTimeParameter DebugLevel="Use default level" Name="Debug Level" eid="9D9EB6F8E9954BE725311"/>
+      <RunTimeParameter Name="Cryptokey File" eid="9D9EB6F8E9954BE725312"/>
+      <RunTimeParameter Name="Security" Security="Y" eid="9D9EB6F8E9954BE725313"/>
+      <RunTimeParameter Name="SubSession" SubSession="N" eid="9D9EB6F8E9954BE725314"/>
+      <RunTimeParameter Name="Compress HTML Responses" eid="9D9EB6F8E9954BE725315"/>
+    </RunTimeParameters>
+    <GlobalParameters Name="Global Variables" eid="9D9EB6F8E9954BE725316">
+      <GlobalParameter GlobalParameterValue="Strands" Name="PFM_PROVIDER" eid="9D9EB6F8E9954BE731156"/>
+      <GlobalParameter Name="ANALYSIS_INITIAL_CHART" eid="ECDA30DC792B4A6023603">
+        <EVANote Name="73DCB2E0DB81982E EVANote 34" NoteType="C77A06BB1139FC693282607" NoteTypeName="Specification" eid="73DCB2E0DB81982E23632"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+     &quot;donutchart&quot;, &quot;planetchart&quot;, &quot;barchart&quot; and &quot;columnchart&quot;
+  </body>
+
+</html>
+
+]]></EVANote>
+      </GlobalParameter>
+      <GlobalParameter GlobalParameterValue="36" Name="ANALYSIS_MONTHS_RANGE" eid="ECDA30DC792B4A6023604">
+        <EVANote Name="73DCB2E0DB81982E EVANote 35" NoteType="C77A06BB1139FC693282607" NoteTypeName="Specification" eid="73DCB2E0DB81982E23633"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    Numeric value. e.g. 5
+  </body>
+
+</html>
+
+]]></EVANote>
+      </GlobalParameter>
+      <GlobalParameter Name="ANALYSIS_MODE" eid="ECDA30DC792B4A6023605">
+        <EVANote Name="73DCB2E0DB81982E EVANote 36" NoteType="C77A06BB1139FC693282607" NoteTypeName="Specification" eid="73DCB2E0DB81982E23634"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+     &quot;income&quot; and “expense&quot;
+  </body>
+
+</html>
+
+]]></EVANote>
+      </GlobalParameter>
+      <GlobalParameter Name="NO_OF_SAVINGS_GOAL" eid="ECDA30DC792B4A6023607">
+        <EVANote Name="73DCB2E0DB81982E EVANote 41" NoteType="C77A06BB1139FC693282607" NoteTypeName="Specification" eid="73DCB2E0DB81982E23639"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    Numeric value. {e.g. 5}
+  </body>
+
+</html>
+
+]]></EVANote>
+      </GlobalParameter>
+      <GlobalParameter Name="MAX_CATEGORIES" eid="ECDA30DC792B4A6023608">
+        <EVANote Name="73DCB2E0DB81982E EVANote 42" NoteType="C77A06BB1139FC693282607" NoteTypeName="Specification" eid="73DCB2E0DB81982E23640"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    Numeric value. {e.g. 5}
+  </body>
+
+</html>
+
+]]></EVANote>
+      </GlobalParameter>
+      <GlobalParameter GlobalParameterValue="cashflowchart" Name="CASH_FLOW_INITIAL_CHART" eid="73DCB2E0DB81982E23627">
+        <EVANote Name="73DCB2E0DB81982E EVANote 37" NoteType="C77A06BB1139FC693282607" NoteTypeName="Specification" eid="73DCB2E0DB81982E23635"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    possible values: “cashflowchart” and “totalchart”
+  </body>
+
+</html>
+
+]]></EVANote>
+      </GlobalParameter>
+      <GlobalParameter GlobalParameterValue="36" Name="CASH_FLOW_MONTHS_RANGE" eid="73DCB2E0DB81982E23628">
+        <EVANote Name="73DCB2E0DB81982E EVANote 38" NoteType="C77A06BB1139FC693282607" NoteTypeName="Specification" eid="73DCB2E0DB81982E23636"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    Numeric value. e.g. 5
+  </body>
+
+</html>
+
+]]></EVANote>
+      </GlobalParameter>
+      <GlobalParameter GlobalParameterValue="36" Name="COMMUNITY_MONTHS_RANGE" eid="73DCB2E0DB81982E23630">
+        <EVANote Name="73DCB2E0DB81982E EVANote 39" NoteType="C77A06BB1139FC693282607" NoteTypeName="Specification" eid="73DCB2E0DB81982E23637"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    <p style="margin-bottom:0px;margin-top:0px;">
+      Numeric value. {e.g. 5}
+    </p>
+
+  </body>
+
+</html>
+
+]]></EVANote>
+      </GlobalParameter>
+      <GlobalParameter Name="COMMUNITY_MODE" eid="73DCB2E0DB81982E23631">
+        <EVANote Name="73DCB2E0DB81982E EVANote 40" NoteType="C77A06BB1139FC693282607" NoteTypeName="Specification" eid="73DCB2E0DB81982E23638"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+     possible values are &quot;income&quot; and “expense&quot;
+  </body>
+
+</html>
+
+]]></EVANote>
+      </GlobalParameter>
+    </GlobalParameters>
+  </Parameters>
+  <DirectoryStructure Name="Directory Structure Root" eid="9D9EB6F8E9954BE725291">
+    <Directory DefaultDir="Y" Directory="./templates" Name="Templates dir" eid="9D9EB6F8E9954BE725300"/>
+    <Directory DefaultDir="Y" Directory="./html" Name="HTML dir" eid="9D9EB6F8E9954BE725301"/>
+    <Directory DefaultDir="Y" Directory="./html/js" Name="JavaScript dir" eid="9D9EB6F8E9954BE725302"/>
+    <Directory DefaultDir="Y" Directory="./html/css" Name="Stylesheet dir" eid="9D9EB6F8E9954BE725303"/>
+    <Directory DefaultDir="Y" Directory="./html/templates" Name="HTML Templates dir" eid="9D9EB6F8E9954BE725304"/>
+    <Directory DefaultDir="Y" Directory="./images" Name="Images dir" eid="9D9EB6F8E9954BE725305"/>
+    <Directory DefaultDir="Y" Directory="./dictionary" Name="Dictionary dir" eid="9D9EB6F8E9954BE725306"/>
+    <Directory DefaultDir="Y" Directory="./DataSets" Name="Data Sets dir" eid="9D9EB6F8E9954BE725307"/>
+  </DirectoryStructure>
+  <ComponentRoot Name="ComponentRoot" eid="9D9EB6F8E9954BE725296">
+    <Component ComponentName="Analysis" Name="9D9EB6F8E9954BE7 ComponentSource 8" NotFound="Y" ProjectLocation="$$LIBRARY_HOME$/BusinessModules/PFM/UI/Understand" ProjectName="Understand" eid="9D9EB6F8E9954BE726647"/>
+    <Component ComponentName="SavingsGoal" Name="9D9EB6F8E9954BE7 ComponentSource 2" NotFound="Y" ProjectLocation="$$LIBRARY_HOME$/BusinessModules/PFM/UI/Plan" ProjectName="Plan" eid="9D9EB6F8E9954BE729223"/>
+  </ComponentRoot>
+  <Profiles Name="Profiles Root" eid="9D9EB6F8E9954BE725297">
+    <IOSProfiles Name="iOS Profiles" eid="9D9EB6F8E9954BE725317"/>
+    <AndroidProfiles Name="Android Profiles" eid="9D9EB6F8E9954BE725318"/>
+    <WindowsProfiles Name="Windows Phone 8 Profiles" eid="9D9EB6F8E9954BE725319"/>
+    <WindowsUniversalProfiles Name="Windows Profiles" eid="9D9EB6F8E9954BE725320"/>
+  </Profiles>
+  <Messages Name="Messages Root" eid="9D9EB6F8E9954BE725298">
+    <Message MESSAGE_NAME="ok" Name="ok" VALUE="OK" eid="9D9EB6F8E9954BE725321"/>
+    <Message MESSAGE_NAME="not_now" Name="not_now" VALUE="Not Now" eid="9D9EB6F8E9954BE725322"/>
+    <Message MESSAGE_NAME="user_settings" Name="user_settings" VALUE="Settings" eid="9D9EB6F8E9954BE725323"/>
+    <Message MESSAGE_NAME="check_updates" Name="check_updates" VALUE="Check for updates" eid="9D9EB6F8E9954BE725324"/>
+    <Message MESSAGE_NAME="developer_settings" Name="developer_settings" VALUE="Developer settings" eid="9D9EB6F8E9954BE725325"/>
+    <Message MESSAGE_NAME="title_activity_app_pereferences" Name="title_activity_app_pereferences" VALUE="Settings" eid="9D9EB6F8E9954BE725326"/>
+    <Message MESSAGE_NAME="internet_connection_needed_title" Name="internet_connection_needed_title" VALUE="No Connectivity" eid="9D9EB6F8E9954BE725327"/>
+    <Message MESSAGE_NAME="internet_connection_needed" Name="internet_connection_needed" VALUE="Please verify you have cellular network or WiFi connection" eid="9D9EB6F8E9954BE725328"/>
+    <Message MESSAGE_NAME="error_accessing_server_title" Name="error_accessing_server_title" VALUE="Error communicating with the server" eid="9D9EB6F8E9954BE725329"/>
+    <Message MESSAGE_NAME="error_accessing_server_description" Name="error_accessing_server_description" VALUE="The server cannot be reached" eid="9D9EB6F8E9954BE725330"/>
+    <Message MESSAGE_NAME="invalid_ssl_cert" Name="invalid_ssl_cert" VALUE="The SSL certificate is invalid. The server cannot be trusted." eid="9D9EB6F8E9954BE725331"/>
+    <Message MESSAGE_NAME="invalid_ssl_cert_development" Name="invalid_ssl_cert_development" VALUE="The SSL certificate is invalid. This is allowed only in development mode." eid="9D9EB6F8E9954BE725332"/>
+    <Message MESSAGE_NAME="lang_preference_dialog_title" Name="lang_preference_dialog_title" VALUE="Preferred language" eid="9D9EB6F8E9954BE725333"/>
+    <Message MESSAGE_NAME="lang_preference_title" Name="lang_preference_title" VALUE="Language settings" eid="9D9EB6F8E9954BE725334"/>
+    <Message MESSAGE_NAME="lang_preference_summary" Name="lang_preference_summary" VALUE="Select your preferred language" eid="9D9EB6F8E9954BE725335"/>
+    <Message MESSAGE_NAME="change_confirm_reload" Name="change_confirm_reload" VALUE="For applying your settings, the application has to be reloaded. Reload the application now?" eid="9D9EB6F8E9954BE725336"/>
+    <Message MESSAGE_NAME="settings_update_title" Name="settings_update_title" VALUE="Settings update" eid="9D9EB6F8E9954BE725337"/>
+    <Message MESSAGE_NAME="update_download_updates_now" Name="update_download_updates_now" VALUE="Updates are available. Download updates now?" eid="9D9EB6F8E9954BE725338"/>
+    <Message MESSAGE_NAME="update_result_uptodate" Name="update_result_uptodate" VALUE="The application is uptodate." eid="9D9EB6F8E9954BE725339"/>
+    <Message MESSAGE_NAME="update_result_error" Name="update_result_error" VALUE="The update site rejected the query." eid="9D9EB6F8E9954BE725340"/>
+    <Message MESSAGE_NAME="update_result_processing_error" Name="update_result_processing_error" VALUE="Error encountered during update." eid="9D9EB6F8E9954BE725341"/>
+    <Message MESSAGE_NAME="update_result_unknown_error" Name="update_result_unknown_error" VALUE="Error reading the update status from the update site." eid="9D9EB6F8E9954BE725342"/>
+    <Message MESSAGE_NAME="downloading_file_title" Name="downloading_file_title" VALUE="Downloading updates..." eid="9D9EB6F8E9954BE725343"/>
+    <Message MESSAGE_NAME="downloading_file_starting" Name="downloading_file_starting" VALUE="Starting..." eid="9D9EB6F8E9954BE725344"/>
+    <Message MESSAGE_NAME="downloading_file_progress" Name="downloading_file_progress" VALUE="Downloading file  %1$d of %2$d." eid="9D9EB6F8E9954BE725345"/>
+    <Message MESSAGE_NAME="downloading_updates_error" Name="downloading_updates_error" VALUE="Failed to download the updates." eid="9D9EB6F8E9954BE725346"/>
+    <Message MESSAGE_NAME="downloading_updates_success" Name="downloading_updates_success" VALUE="The updates were downloaded successfully." eid="9D9EB6F8E9954BE725347"/>
+    <Message MESSAGE_NAME="update_through_googleplay_confirmation" Name="update_through_googleplay_confirmation" VALUE="You need to update the application through google play. Download the updated application now?" eid="9D9EB6F8E9954BE725348"/>
+    <Message MESSAGE_NAME="update_through_windows_store_confirmation" Name="update_through_windows_store_confirmation" VALUE="You need to update the application through Windows Phone Store. Download the updated application now?" eid="9D9EB6F8E9954BE725349"/>
+    <Message MESSAGE_NAME="store_updatetitle" Name="store_updatetitle" VALUE="AppStore update" eid="9D9EB6F8E9954BE725350"/>
+    <Message MESSAGE_NAME="update_result_major_update" Name="update_result_major_update" VALUE="Updates are available for this application. Connect to iTunes now?" eid="9D9EB6F8E9954BE725351"/>
+    <Message MESSAGE_NAME="alert_title" Name="alert_title" VALUE="Alert" eid="9D9EB6F8E9954BE725352"/>
+    <Message MESSAGE_NAME="loading_wait" Name="loading_wait" VALUE="Loading, please wait..." eid="9D9EB6F8E9954BE725353"/>
+    <Message MESSAGE_NAME="save" Name="save" VALUE="Save" eid="9D9EB6F8E9954BE725354"/>
+    <Message MESSAGE_NAME="use_device_language" Name="use_device_language" VALUE="Use device language" eid="9D9EB6F8E9954BE725355"/>
+    <Message MESSAGE_NAME="all_pages" Name="all_pages" VALUE="All pages" eid="9D9EB6F8E9954BE725356"/>
+    <Message MESSAGE_NAME="filesave_success" Name="filesave_success" VALUE="File saved successfully" eid="9D9EB6F8E9954BE725357"/>
+    <Message MESSAGE_NAME="one_page" Name="one_page" VALUE="One page" eid="9D9EB6F8E9954BE725358"/>
+    <Message MESSAGE_NAME="pdf_documents" Name="pdf_documents" VALUE="PDF Documents" eid="9D9EB6F8E9954BE725359"/>
+    <Message MESSAGE_NAME="print" Name="print" VALUE="Print" eid="9D9EB6F8E9954BE725360"/>
+    <Message MESSAGE_NAME="reports" Name="reports" VALUE="Reports" eid="9D9EB6F8E9954BE725361"/>
+    <Message MESSAGE_NAME="app_name" Name="app_name" VALUE="App name - not used required by Cordova" eid="9D9EB6F8E9954BE725362"/>
+  </Messages>
+  <HybridLanguages Name="HybridLanguages Root" eid="9D9EB6F8E9954BE725299"/>
+  <DataMapping/>
+</DeploymentDescriptor>

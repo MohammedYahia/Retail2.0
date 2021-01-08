@@ -1,0 +1,36 @@
+$$ITEM.EC_GENERATE()$
+
+<script type="text/javascript" charset="utf-8">
+$(function () {
+  //<![CDATA[
+  if ("$$ITEM.COLS_TO_GROUP$" != "") {
+    var colsArr = "$$ITEM.COLS_TO_GROUP$".split(",");
+    colsArr.sort(function(a,b){return a-b});
+    for (var x = colsArr.length - 1; x >= 0; x--) {
+      var $th   = $("#$$ITEM.ID()$ thead th:nth-child(" + colsArr[x] + ")");
+      var $th_1 = $("#$$ITEM.ID()$ thead th:nth-child(" + (colsArr[x]-1) + ")")
+      $th.find(">div").each(function() {
+        $(this).appendTo( $th_1 )
+              .attr("class", $th.attr("class") )
+              .attr("style", $(this).attr("style") + "; " + $th.attr("style") );
+      });
+      $th.hide();
+          
+      $("#$$ITEM.ID()$ tbody tr").each(function(i,o) {
+        var $td   = $(this).find("td:nth-child(" + colsArr[x] + ")");
+        var $td_1 = $(this).find("td:nth-child(" + (colsArr[x]-1) + ")");
+        $td.find(">div").each(function(i, o) {
+          var $o = $(o);
+          var parent_id = $o.parent().attr("id");
+          $o.appendTo( $td_1 )
+            .attr("class", $td.attr("class") )
+            .attr("style", $(this).attr("style") + "; " + $td.attr("style") )
+            .attr("id", parent_id);
+        });
+        $td.attr("id", null).hide();
+      });
+    }
+  }
+});
+ //]]>
+</script>

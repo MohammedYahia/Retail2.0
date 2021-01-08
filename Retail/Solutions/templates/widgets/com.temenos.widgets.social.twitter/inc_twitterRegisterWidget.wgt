@@ -1,0 +1,6 @@
+<script type="text/javascript">
+    addWidget("com.temenos.widgets.social.twitter", "$$!NAMESPACE$", "");
+    if ( getTriggeredReason() == "REPLACE_CHILD" ) {
+        com.temenos.widgets.social.twitter.setRefresh(true);
+    }
+</script>

@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!--
+ * $RCSfile$
+ * $Author$
+ * $Revision$
+ * $Date$
+-->
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate"/>
+    <meta http-equiv="cache-control" content="post-check=0, pre-check=0, false"/>
+    <meta http-equiv="Content-Security-Policy" content="default-src * gap:; script-src 'self' 'unsafe-inline' 'unsafe-eval' data: https://ssl.gstatic.com 'unsafe-eval'; object-src *; style-src 'self' data: 'unsafe-inline'; img-src * data:; media-src 'self' data:; font-src 'self' data:; connect-src *"/>
+    <meta name="author" content="Edge IPK" />
+    <title>Temenos</title>
+    <link href="html/css/Default.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="html/js/modernizr.js"></script>
+    <script type="text/javascript" src="html/js/connect.js"></script>
+    <script type="text/javascript" src="html/js/cordova/cordova_loader.js"></script>
+    <script type="text/javascript" src="html/js/connect_hybrid.js"></script>    
+    <script type="text/javascript">
+        var isWindowsUniversal = !isWindowsPhone() && isWindowExternalNotifyDefined();
+        if(isWindowsUniversal) {
+        	//for windows universal console.log is defined but doesn't output anything
+            window.console = {log:function(str){window.external.notify("CONSOLE_LOG_NOTIFY" + str);}};
+        } 
+		window.onerror=function(e, url, lineNumber)
+		{
+		  console.log("ERROR! : " +url + "(" + lineNumber + ") : " + JSON.stringify(e));
+		};
+	    function deviceInitialized () {
+			//once Cordova finished the initialization phase, we can dismiss the splashscreen and submit the form. 
+			//But, if your application takes some time to load, you will see a white screen for a while.
+			//It's advisable to comment out the call hideSplashScreen() below, and instead call hideSplashScreen() from within your application's first page 
+			hideSplashScreen();
+            fetchDeviceInfo('form1');
+            fetchBrowserDeviceInfo('form1');
+            doFormSubmit();         
+        }
+
+        function deviceInitializedNonCordova() {
+            try {
+	    		fetchDeviceInfo('form1');
+	    		fetchBrowserDeviceInfo('form1');
+                doFormSubmit();
+            } catch (err) {
+                console.log("Error initializing device for non-cordova devices. Error is: " + err.message)
+            }
+        }
+	    	
+        function doFormSubmit () {
+	    	var form = document.forms['form1'];
+			if (form != null) {
+				if ( typeof(showProgress) == "function") {
+					showProgress();
+				} 
+	    		try{
+                	form.submit();
+                }
+                catch (err) {
+                    console.log("Error submitting form. Error is: " + err.message);
+                } 
+	    	}
+	    }
+		function loadHybridApp(destURL, userLang, usePushNotifications) {
+			fetchBrowserFeatures('form1');
+			var form = document.forms['form1'];
+			if (form != null) {
+				enableSubmit(null, true);
+				form.action=destURL;
+				setVariable('', 'act', destURL);
+				if (userLang) {
+					form.LANGUAGE_MAP_REQUEST_ALIAS.value = userLang;
+				}				
+
+                var cordovaDefined = false;
+                try {
+                    cordovaDefined = !(typeof cordova === 'undefined') ;
+                } catch (err) {
+                    console.log("Error loading hybrid app. Error is: " + err.message)
+                }
+                if (cordovaDefined) {
+                    localStorage.setItem("USE_PUSH_NOTIFICATIONS", usePushNotifications);
+                    document.addEventListener("deviceready", deviceInitialized, false);
+                } else {
+                   deviceInitializedNonCordova();
+                }			
+			}
+		}
+		
+		function setWindowsUniversalAppsDeviceInfo(deviceInfoJsonString) {
+            try {
+                //this is for device info on plaftorms that do not support Cordova, such as Windows Universal Apps
+                var deviceInfoObj = JSON.parse(deviceInfoJsonString);
+                if ((typeof deviceInfoObj.model === 'undefined')) 
+                {
+                    if (!(typeof window.clientInformation.platform  === 'undefined')){
+                        deviceInfoObj.model = window.clientInformation.platform;    
+                    }
+                }
+                if ((typeof deviceInfoObj.platform === 'undefined')) {
+                    if (!(typeof window.clientInformation.userAgent  === 'undefined')){
+                        var userAgent = window.clientInformation.userAgent;
+                        var devicePlatform = userAgent.indexOf("MSAppHost/1.0") == -1 ? "windows" : "windows8";
+                        deviceInfoObj.platform = devicePlatform;
+                    }
+                }
+                window.device = deviceInfoObj;
+            } catch (err) {
+                console.log("Error setting device for windows universal apps. Error is: " + err.message)
+            }
+            
+        }
+        
+		//Uncomment this function in order to show the hybrid progress dialog on submit
+		// Call with a "message" parameter only if you want to display a custom message in the progress dialog. You can choose to display the default message or to show no message at all. 
+        /*
+		function showProgress(message) {
+			if (navigator.spinnerDialog) {
+				if (message) {
+					navigator.spinnerDialog.show(true, message);
+				} else {
+					//Call navigator.spinnerDialog.show(true)  if you want to show also a message in the progress dialog. The message is configured in the hybrid message editor, under the key loading_wait 
+					//Call navigator.spinnerDialog.show(false) if you don't want to show any message in the progress dialog
+					navigator.spinnerDialog.show(false);
+				}
+			} else 
+			{
+                if (!(typeof(device.isWindowsUniversalApp) ==='undefined')) {
+                    window.external.notify("UNIVERSAL_APPS_SHOW_PROGRESS_NOTIFY");
+                } else {
+				console.log("no navigator.spinnerDialog");
+			}
+            }
+		};
+		*/
+	</script>
+	</head>
+  <body style="margin:0;padding:0">
+  <!--
+    <div>
+        <div style="width: 100%; background: url(./images/edgeBanner.jpg) no-repeat; height: 200px"></div>
+    </div>
+    <p style="text-align:center"><span class='textXLargeBold'>Please wait while the application loads...</span></p>
+    -->
+    <form id="form1" method="post" action="servletcontroller">
+      <div>
+        <input type="hidden" name="PRODUCT" value=""/>
+        <input type="hidden" name="PRESENTATION_TYPE" value=""/>
+        <input type="hidden" name="MODE" value="XX"/>
+        <input type="hidden" name="BROWSER_FEATURES" value=""/>
+        <input type="hidden" name="LANGUAGE_MAP_REQUEST_ALIAS" value=""/>
+        <input type="hidden" name="DEVICE_INFO" value=""/>
+        <input type="hidden" name="DEVICE_SIZE_INFO" value=""/>
+      </div>
+    </form>
+  </body>
+</html>

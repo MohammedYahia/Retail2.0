@@ -1,0 +1,6 @@
+<!-- $Revision: 1.2 $ -->
+$%SCRIPT$
+$%INCLUDE widgets/html5/inputtype.wgt$
+$%ENDINCLUDE$
+genHTML5Input("", "", false);
+$%ENDSCRIPT$

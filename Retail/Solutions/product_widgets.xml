@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- widget file maintained by edgeConnect - DO NOT EDIT -->
+<widgets>
+    <widget helpFile="23_Presentation5/Presentation_Editor/Presentation_Layout/Display_Items/Image.htm" icon="/images/PresentationText_Image.gif" name="Image" type="Item:Image">
+        <template type="source" value="./templates/widgets/simpleImage.wgt"/>
+        <custom>
+            <item help="This needs to be accessible by the web browser at runtime, so &#xa;consider using $$LIBRARY_CONTEXTPATH$ for component-only images" mand="true" name="IMG_SRC" prompt="Path To Image" tab="Details"
+                type="javax.swing.JFileChooser|MULTI_RICH_VALUES" typeValue="Image Choose|FILES_ONLY|*|Image File|Open|Project dir"/>
+            <item mand="true" mappable="true" name="IMG_ALT_TEXT" prompt="Alt Text" tab="Details" type="javax.swing.JTextField"/>
+            <item name="IMG_STYLE" prompt="Style" tab="Image" type="javax.swing.JTextField"/>
+            <item name="IMG_CLASS" prompt="Class" tab="Image" type="javax.swing.JTextField"/>
+            <item name="IMG_HEIGHT" prompt="Height (Specify Unit - px or %)" tab="Image" type="javax.swing.JTextField" typeValue="REGEXP#-1#[1-9][0-9]* *(px|%)?#specify number or number px or number %"/>
+            <item name="IMG_WIDTH" prompt="Width (Specify Unit - px or %)" tab="Image" type="javax.swing.JTextField" typeValue="REGEXP#-1#[1-9][0-9]* *(px|%)?#specify number or number px or number %"/>
+            <item name="IMG_LONGDESC" prompt="Long Desc" tab="Image" type="javax.swing.JTextField"/>
+            <item mappable="true" name="IMG_TITLE" prompt="Title" tab="Image" type="javax.swing.JTextField"/>
+            <item name="IMG_USEMAP" prompt="Use Map" tab="Advanced" type="javax.swing.JTextField"/>
+            <item name="IMG_DIR" prompt="Direction (rtl or ltr)" tab="Advanced" type="javax.swing.JComboBox" typeValue="ltr|rtl"/>
+            <item name="IMG_LANGUAGE" prompt="Language Code" tab="Advanced" type="javax.swing.JTextField"/>
+            <item name="IMG_XMLLANGAUGE" prompt="XML Language Code" tab="Advanced" type="javax.swing.JTextField"/>
+        </custom>
+    </widget>
+    <widget callback="false" displayName="Back Button (Cordova Hybrid)" icon="/images/cordova_16.png" isHybridWidget="true" name="com.temenos.widgets.hybrid.events.backbutton" type="Button">
+        <template type="source" value="./templates/widgets/com.temenos.widgets.hybrid.events.backbutton/backButton.wgt"/>
+        <custom>
+            <item help="Generate body of the button" includeInDesign="true" layout="-1" mand="false" name="button_body" prompt="Generate body of the button " type="com.acquire.util.FocusCheckbox" usage="7"/>
+        </custom>
+    </widget>
+    <widget icon="/images/html5_icon.png" name="Input (HTML5)" type="Text">
+        <template type="source" value="./templates/widgets/html5/inputtype_text.wgt"/>
+        <custom>
+            <item help="What text do you want to display for HTML 5 placeholder" mand="false" name="PlaceHolder" prompt="Placeholder Text" tab="Text" type="com.acquire.intelligentforms.ide.dialogs.RichTextField" typeValue="ALL_CHARS"/>
+        </custom>
+    </widget>
+    <widget dialogHandler="com.acquire.intelligentforms.ide.presentationeditor.dialoghandlers.html.widgets.html5.HTML5InputTimeDialogHandler" icon="/images/html5_icon.png" name="Time (HTML5)" type="Date" validationOnBlur="true">
+        <template type="source" value="./templates/widgets/html5/inputtype_time.wgt"/>
+    </widget>
+    <widget icon="/images/widget_calendar.gif" name="Calendar (jquery)" type="Date">
+        <template type="header" value="./templates/widgets/jquery/jquery-common-header.wgt"/>
+        <template type="header" value="./templates/widgets/jquery/jquery-ui/jquery-ui-common-header.wgt"/>
+        <template type="header" value="./templates/widgets/jquery/jquery-ui/jquery-ui-datePicker-header.wgt"/>
+        <template type="source" value="./templates/widgets/jquery/jquery-ui/jquery-ui-datePicker.wgt"/>
+        <custom>
+            <item defaultValue="./images/cal.gif" help="Specify image if you require a date picker icon after date field" mand="false" name="CAL_IMAGE" prompt="Calendar Image" tab="Calendar Details" type="javax.swing.JFileChooser"/>
+            <item defaultValue="1" mand="true" name="MONTHS_TO_SHOW" prompt="Number Of Months To Display" tab="Calendar Details" type="javax.swing.JTextField"/>
+            <item help="You can also use a language map alias" mand="false" name="LOCALE" prompt="Locale (e.g. en-GB or fr) - Leave Blank For Default Locale" tab="Calendar Details" type="com.acquire.intelligentforms.ide.dialogs.RichTextField|RICH_VALUE"/>
+            <item name="BAR_COLOR" prompt="Date Bar Colour" tab="Calendar Details" type="com.acquire.util.ui.StyleSheetColorChooser"/>
+            <item name="VALID_COLOR" prompt="Valid Date Colour" tab="Calendar Details" type="com.acquire.util.ui.StyleSheetColorChooser"/>
+            <item name="INVALID_COLOR" prompt="Invalid Date Colour" tab="Calendar Details" type="com.acquire.util.ui.StyleSheetColorChooser"/>
+            <item name="SELECTED_COLOR" prompt="Selected Date Colour" tab="Calendar Details" type="com.acquire.util.ui.StyleSheetColorChooser"/>
+        </custom>
+    </widget>
+    <widget dialogHandler="com.acquire.intelligentforms.ide.presentationeditor.dialoghandlers.html.widgets.jquery.JqueryFloatingWindowDialogHandler" icon="/images/widget_window.gif" name="Floating Window (jquery)" type="Section">
+        <template type="header" value="./templates/widgets/jquery/jquery-common-header.wgt"/>
+        <template type="header" value="./templates/widgets/jquery/jquery-ui/jquery-ui-common-header.wgt"/>
+        <template type="source" value="./templates/widgets/jquery/jquery-ui/jquery-ui-floatingWindow.wgt"/>
+        <custom>
+            <item defaultValue="30" mand="true" name="X_POS" prompt="Inital X Offset" tab="Window Details"/>
+            <item defaultValue="40" mand="true" name="Y_POS" prompt="Inital Y Offset" tab="Window Details"/>
+            <item defaultValue="320" mand="true" name="WIDTH" prompt="Inital Width" tab="Window Details"/>
+            <item defaultValue="240" mand="true" name="HEIGHT" prompt="Inital Height" tab="Window Details"/>
+            <item defaultValue="window" mand="true" mappable="true" name="TITLE" prompt="Window Title" tab="Window Details"/>
+            <item mand="false" name="TITLE_BAR_COLOUR" prompt="Window Title Bar Colour" tab="Window Details" type="com.acquire.util.ui.StyleSheetColorChooser"/>
+            <item name="DISABLE_CLOSE" prompt="Disable Close" tab="Window Details" type="javax.swing.JCheckBox"/>
+        </custom>
+    </widget>
+    <widget dialogHandler="com.acquire.intelligentforms.ide.presentationeditor.dialoghandlers.html.widgets.html5.HTML5RangeDialogHandler" icon="/images/html5_icon.png" name="Range (HTML5)" type="Number,Decimal">
+        <template type="source" value="./templates/widgets/html5/inputtype_range.wgt"/>
+        <custom>
+            <item help="This is Step scale factor of the slider" layout="-1" mand="false" name="Step" prompt="Step" tab="Answer.Control" type="javax.swing.JTextField" typeValue="DECIMAL|4" usage="7"/>
+        </custom>
+    </widget>
+    <widget dialogHandler="com.acquire.intelligentforms.ide.presentationeditor.dialoghandlers.html.widgets.html5.HTML5InputNumberDialogHandler" icon="/images/html5_icon.png" name="Number (HTML5)" type="Number,Decimal" validationOnBlur="true">
+        <template type="source" value="./templates/widgets/html5/inputtype_number.wgt"/>
+        <custom>
+            <item help="What text do you want to display for HTML 5 place holder" mand="false" name="PlaceHolder" prompt="Placeholder Text" tab="Text" type="com.acquire.intelligentforms.ide.dialogs.RichTextField" typeValue="ALL_CHARS"/>
+        </custom>
+    </widget>
+</widgets>

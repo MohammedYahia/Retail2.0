@@ -1,0 +1,17 @@
+<widgets>
+    <widget icon="images/widget_calendar.gif" name="tw-Calendar (jquery-ui - TemenosTheme)" type="Date">
+        <template type="header" value="jquery-ui-common-header.wgt"/>
+        <template type="header" value="jquery-ui-datePicker-header.wgt"/>
+        <template type="source" value="jquery-ui-datePicker.wgt"/>
+        <custom>
+            <item defaultValue="./images/cal.gif" help="Specify image if you require a date picker icon after date field" mand="false" name="CAL_IMAGE" prompt="Calendar Image" tab="Calendar Details" type="javax.swing.JFileChooser"/>
+            <item defaultValue="1" includeInDesign="false" mand="true" name="MONTHS_TO_SHOW" prompt="Number Of Months To Display" tab="Calendar Details" type="javax.swing.JTextField"/>
+            <item help="You can also use a language map alias" includeInDesign="false" mand="false" name="LOCALE" prompt="Locale (e.g. en-GB or fr) - Leave Blank For Default Locale" tab="Calendar Details" type="com.acquire.intelligentforms.ide.dialogs.RichTextField|RICH_VALUE"/>
+            <item help="Specify year range in dropdown" includeInDesign="false" mand="false" name="YEAR_RANGE" prompt="Year range (e.g. 1950:2000 or c-100:+c+10)" tab="Calendar Details" type="com.acquire.intelligentforms.ide.dialogs.RichTextField"/>
+            <item name="BAR_COLOR" prompt="Date Bar Colour" tab="Calendar Details" type="com.acquire.util.ui.StyleSheetColorChooser"/>
+            <item name="VALID_COLOR" prompt="Valid Date Colour" tab="Calendar Details" type="com.acquire.util.ui.StyleSheetColorChooser"/>
+            <item name="INVALID_COLOR" prompt="Invalid Date Colour" tab="Calendar Details" type="com.acquire.util.ui.StyleSheetColorChooser"/>
+            <item name="SELECTED_COLOR" prompt="Selected Date Colour" tab="Calendar Details" type="com.acquire.util.ui.StyleSheetColorChooser"/>
+        </custom>
+    </widget>
+</widgets>

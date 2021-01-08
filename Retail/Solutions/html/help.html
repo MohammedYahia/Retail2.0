@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!--
+ * $RCSfile$
+ * $Author$
+ * $Revision$
+ * $Date$
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<meta name="author" content="Edge IPK"/>
+	<title>Help</title>
+</head>
+<body style="background-color:#FFFFFF">
+<table style="width:80%;">
+<tr>
+	<td style="width:20%;">&nbsp;</td>
+	<td style="width:60%;">
+	<span style="font-face:Arial; font-size:12;">
+$%if PRESENTATIONTYPE == Offline$
+		<script type="text/javascript">
+			u = "" + window.location;
+			text = "" + u.substring(u.indexOf('?') + 1);
+			//HTML entities need to be escaped in order to avoid XSS attacks by injecting javascript in the URL
+			var escapeHTMLEntities = function(s) 
+			{ 
+                return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            };
+            text = escapeHTMLEntities(unescape(text));
+			document.writeln(text);
+		</script>
+$%else$
+       $$HELPTEXT$
+$%endif$		
+	</span>
+	</td>
+	<td style="width:20%;">&nbsp;</td>
+</tr>
+</table>
+<p>
+$%if PRESENTATIONTYPE != "Pure HTML" && PRESENTATIONTYPE != "Accessibility Compliant"$
+<a href="javascript:window.close();">close</a>
+$%endif$
+</p>
+</body>
+</html>

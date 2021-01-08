@@ -1,0 +1,7 @@
+<script src="templates/widgets/jquery/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="templates/widgets/jquery/jquery-ui-1.11.4/css/smoothness/jquery-ui-1.8.11.custom.css">
+<script media="screen"  type="text/javascript">
+	function jq(myid) { 
+		return '#' + myid.replace(/(:|\.)/g,'\\$1');
+	}
+</script>

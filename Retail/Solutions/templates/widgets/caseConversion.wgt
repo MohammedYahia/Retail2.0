@@ -1,0 +1,8 @@
+$$ITEM.EC_GENERATE()$ 
+<script type="text/javascript">
+$("#$$ITEM.ID()$").keyup(function(){
+    var name = $("#$$ITEM.ID()$").val();
+	firstUp = name.charAt(0).toUpperCase() + name.slice(1);
+$("#$$ITEM.ID()$").val(firstUp);
+});
+</script>

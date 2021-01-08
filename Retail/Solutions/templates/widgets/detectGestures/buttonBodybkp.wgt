@@ -1,0 +1,31 @@
+<!-- $Revision: 1.0 $ -->
+
+$%IF ITEM.button_body == "Y" $$$ITEM.EC_GENERATE()$$%ENDIF$ 
+$%IF ITEM.NotApplicableAppearance != "Disable" && ITEM.NotApplicableAppearance != "Hide" || ITEM.HideField != "Y" $
+ <script type = "text/javascript" charset="utf-8">
+
+      document.addEventListener("deviceready", initButton_$$ITEM.ID()$, false);
+        function initButton_$$ITEM.ID()$() {    
+            //addWidget("window.com.temenos.widgets.hybrid.accelerometer.detectGestures", "$$!NAMESPACE$", "");            
+            if (!window.com.temenos.widgets.hybrid.accelerometer.detectGestures.started)
+            window.com.temenos.widgets.hybrid.accelerometer.detectGestures.startWatch();
+        }
+
+        $%IF ITEM.ShakeOpt == "Y" $
+		var shake = window.localStorage.getItem("shake");
+		  if (shake === "Yes" ) {
+     window.com.temenos.widgets.hybrid.accelerometer.detectGestures.addEvent('shakeDetected', function (e) {
+     $$ITEM.NAVIGATION()$
+     })
+	 };
+        $%ENDIF$ 
+     $%IF ITEM.UpSideDown == "Y" $
+	 var facedown = window.localStorage.getItem("facedown");
+	 if (facedown === "Yes" ) {
+    window.com.temenos.widgets.hybrid.accelerometer.detectGestures.addEvent('faceDownDetected', function (e) {
+    $$ITEM.NAVIGATION()$
+           })
+		   };
+     $%ENDIF$ 
+</script>
+$%ENDIF$

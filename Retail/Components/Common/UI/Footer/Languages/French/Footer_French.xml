@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?><LanguageMap presentations="Footer,Footer_Design2" project="Footer" sourcelanguage="en-GB" targetlanguage="fr" updated="26/03/18 16:02" version="1">
+  <Comment/>
+  <ProcessEntities>
+    <ProcessEntity class="com.acquire.intelligentforms.entities.Product" displayString="Footer" eid="FE6297F7D89B657697627" path="Footer" type="Process">
+      <Note author="EVA-Note"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    <span style=" font-size:20px; color:#cc0033;">THEME DESIGNS TO BE ADDED IN 
+    THEME AND THIS COMPONENT TO BE REVISITED AND ADD THE DESIGNS TO THE 
+    BUTTONS AND HEADINGS.</span>
+  </body>
+
+</html>
+
+]]></Note>
+      <Note author="EVA-Note"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    <span style=" font-size:20px; color:#cc0033;">THEME DESIGNS TO BE ADDED IN 
+    THEME AND THIS COMPONENT TO BE REVISITED AND ADD THE DESIGNS TO THE 
+    BUTTONS AND HEADINGS.</span>
+  </body>
+
+</html>
+
+]]></Note>
+      <ProcessEntityAttr default="" name="HelpIconHint" original="" state="NEW">
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="A7533165121D18CB655722:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="A7533165121D18CB656874:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="38A5413050F34021248480:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="38A5413050F34021248482:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationProduct" forPresObjects="FE6297F7D89B657697636:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="1CC354F76CEBD0CD640929:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="1CC354F76CEBD0CD642467:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="38A5413050F34021248484:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="1CC354F76CEBD0CD640965:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="38A5413050F34021248485:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="1CC354F76CEBD0CD640963:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="1CC354F76CEBD0CD642601:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="1CC354F76CEBD0CD642541:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="A7533165121D18CB656818:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="38A5413050F34021248526:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="1CC354F76CEBD0CD642484:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="38A5413050F34021248528:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="A7533165121D18CB656843:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="A7533165121D18CB655752:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" forPresObjects="FE6297F7D89B657697643:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="1CC354F76CEBD0CD640955:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationProduct" forPresObjects="38A5413050F34021248472:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="38A5413050F34021248477:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="38A5413050F34021248532:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="38A5413050F34021248478:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="38A5413050F34021248513:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" forPresObjects="38A5413050F34021248474:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="3D45E4013B4CD6BC67220:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="38A5413050F34021248497:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="38A5413050F34021248476:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationFormatBreak" forPresObjects="38A5413050F34021248515:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationColumnBreak" forPresObjects="38A5413050F34021248516:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="FE6297F7D89B657697627:Process" state="NEW" status="NEW" value=""/>
+      </ProcessEntityAttr>
+      <Container class="com.acquire.intelligentforms.entities.Phase" displayString="Footer" eid="FE6297F7D89B657697640" type="Phase">
+        <Container class="com.acquire.intelligentforms.entities.ItemGroup" displayString="Footer" eid="1CC354F76CEBD0CD642462" type="Item Group">
+          <Container class="com.acquire.intelligentforms.entities.ItemGroup" displayString="Links" eid="1CC354F76CEBD0CD814740" type="Item Group">
+            <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Links" eid="1CC354F76CEBD0CD607099" path="Footer.Footer.Footer.Links.Links" type="Heading">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248486:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD607099:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD607100:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD607099:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="DisplayText" original="Links" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248486:Footer_Design2" mappingType="OVERRIDE" original="Links" specifiedBy="1CC354F76CEBD0CD607099:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD607100:Footer" mappingType="OVERRIDE" original="Links" specifiedBy="1CC354F76CEBD0CD607099:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248486:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD607099:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD607100:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD607099:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248486:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD607099:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD607100:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD607099:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="2016 Temenos" eid="1CC354F76CEBD0CD572576" path="Footer.Footer.Footer.Links.2016 Temenos" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248487:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD572576:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD572577:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD572576:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248487:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD572576:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD572577:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD572576:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248487:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD572576:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD572577:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD572576:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="2016 Temenos" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248487:Footer_Design2" mappingType="OVERRIDE" original="2016 Temenos" specifiedBy="1CC354F76CEBD0CD572576:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD572577:Footer" mappingType="OVERRIDE" original="2016 Temenos" specifiedBy="1CC354F76CEBD0CD572576:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Accessibility" eid="1CC354F76CEBD0CD471317" path="Footer.Footer.Footer.Links.Accessibility" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248489:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD471317:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD471318:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD471317:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248489:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD471317:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD471318:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD471317:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248489:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD471317:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD471318:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD471317:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="Accessibility" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248489:Footer_Design2" mappingType="OVERRIDE" original="Accessibility" specifiedBy="1CC354F76CEBD0CD471317:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD471318:Footer" mappingType="OVERRIDE" original="Accessibility" specifiedBy="1CC354F76CEBD0CD471317:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Legal" eid="1CC354F76CEBD0CD589467" path="Footer.Footer.Footer.Links.Legal" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD589468:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589467:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248491:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589467:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD589468:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589467:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248491:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589467:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD589468:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589467:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248491:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589467:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="Legal" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD589468:Footer" mappingType="OVERRIDE" original="Legal" specifiedBy="1CC354F76CEBD0CD589467:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248491:Footer_Design2" mappingType="OVERRIDE" original="Legal" specifiedBy="1CC354F76CEBD0CD589467:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Privacy" eid="1CC354F76CEBD0CD589474" path="Footer.Footer.Footer.Links.Privacy" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD589475:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589474:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248493:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589474:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD589475:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589474:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248493:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589474:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD589475:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589474:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248493:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589474:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="Privacy" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD589475:Footer" mappingType="OVERRIDE" original="Privacy" specifiedBy="1CC354F76CEBD0CD589474:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248493:Footer_Design2" mappingType="OVERRIDE" original="Privacy" specifiedBy="1CC354F76CEBD0CD589474:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Cookie policy" eid="1CC354F76CEBD0CD589481" path="Footer.Footer.Footer.Links.Cookie policy" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD589482:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589481:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248495:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589481:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD589482:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589481:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248495:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589481:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD589482:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589481:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248495:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD589481:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="Cookie policy" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD589482:Footer" mappingType="OVERRIDE" original="Cookie policy" specifiedBy="1CC354F76CEBD0CD589481:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248495:Footer_Design2" mappingType="OVERRIDE" original="Cookie policy" specifiedBy="1CC354F76CEBD0CD589481:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+          </Container>
+          <Container class="com.acquire.intelligentforms.entities.ItemGroup" displayString="Contact" eid="1CC354F76CEBD0CD814688" type="Item Group">
+            <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Contact" eid="1CC354F76CEBD0CD632481" path="Footer.Footer.Footer.Contact.Contact" type="Heading">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248499:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD632481:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD632482:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD632481:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="DisplayText" original="Contact" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248499:Footer_Design2" mappingType="OVERRIDE" original="Contact" specifiedBy="1CC354F76CEBD0CD632481:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD632482:Footer" mappingType="OVERRIDE" original="Contact" specifiedBy="1CC354F76CEBD0CD632481:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248499:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD632481:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD632482:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD632481:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248499:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD632481:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD632482:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD632481:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Sales enquiries &amp; RFI/RFP" eid="1CC354F76CEBD0CD660937" path="Footer.Footer.Footer.Contact.Sales enquiries &amp; RFI/RFP" type="Heading">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD660938:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD660937:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248501:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD660937:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="DisplayText" original="Sales enquiries &amp; RFI/RFP" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD660938:Footer" mappingType="OVERRIDE" original="Sales enquiries &amp; RFI/RFP" specifiedBy="1CC354F76CEBD0CD660937:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248501:Footer_Design2" mappingType="OVERRIDE" original="Sales enquiries &amp; RFI/RFP" specifiedBy="1CC354F76CEBD0CD660937:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD660938:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD660937:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248501:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD660937:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD660938:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD660937:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248501:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD660937:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="sales@temenos.com" eid="1CC354F76CEBD0CD669379" path="Footer.Footer.Footer.Contact.sales@temenos.com" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD669380:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD669379:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248502:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD669379:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD669380:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD669379:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248502:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD669379:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD669380:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD669379:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248502:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD669379:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="sales@temenos.com" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD669380:Footer" mappingType="OVERRIDE" original="sales@temenos.com" specifiedBy="1CC354F76CEBD0CD669379:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248502:Footer_Design2" mappingType="OVERRIDE" original="sales@temenos.com" specifiedBy="1CC354F76CEBD0CD669379:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Press enquiries" eid="1CC354F76CEBD0CD670122" path="Footer.Footer.Footer.Contact.Press enquiries" type="Heading">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD670123:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670122:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248504:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670122:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="DisplayText" original="Press enquiries" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD670123:Footer" mappingType="OVERRIDE" original="Press enquiries" specifiedBy="1CC354F76CEBD0CD670122:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248504:Footer_Design2" mappingType="OVERRIDE" original="Press enquiries" specifiedBy="1CC354F76CEBD0CD670122:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD670123:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670122:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248504:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670122:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD670123:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670122:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248504:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670122:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="press@temenos.com" eid="1CC354F76CEBD0CD670128" path="Footer.Footer.Footer.Contact.press@temenos.com" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD670129:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670128:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248505:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670128:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD670129:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670128:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248505:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670128:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD670129:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670128:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248505:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670128:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="press@temenos.com" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD670129:Footer" mappingType="OVERRIDE" original="press@temenos.com" specifiedBy="1CC354F76CEBD0CD670128:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248505:Footer_Design2" mappingType="OVERRIDE" original="press@temenos.com" specifiedBy="1CC354F76CEBD0CD670128:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Investor relations enquiries" eid="1CC354F76CEBD0CD670873" path="Footer.Footer.Footer.Contact.Investor relations enquiries" type="Heading">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248507:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670873:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD670874:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670873:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="DisplayText" original="Investor relations enquiries" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248507:Footer_Design2" mappingType="OVERRIDE" original="Investor relations enquiries" specifiedBy="1CC354F76CEBD0CD670873:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD670874:Footer" mappingType="OVERRIDE" original="Investor relations enquiries" specifiedBy="1CC354F76CEBD0CD670873:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248507:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670873:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD670874:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670873:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248507:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670873:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD670874:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670873:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="TemenosIR@temenos.com" eid="1CC354F76CEBD0CD670879" path="Footer.Footer.Footer.Contact.TemenosIR@temenos.com" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248508:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670879:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD670880:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670879:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248508:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670879:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD670880:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670879:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248508:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670879:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD670880:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670879:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="TemenosIR@temenos.com" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248508:Footer_Design2" mappingType="OVERRIDE" original="TemenosIR@temenos.com" specifiedBy="1CC354F76CEBD0CD670879:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD670880:Footer" mappingType="OVERRIDE" original="TemenosIR@temenos.com" specifiedBy="1CC354F76CEBD0CD670879:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Marketing enquiries" eid="1CC354F76CEBD0CD670885" path="Footer.Footer.Footer.Contact.Marketing enquiries" type="Heading">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248510:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670885:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD670886:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670885:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="DisplayText" original="Marketing enquiries" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248510:Footer_Design2" mappingType="OVERRIDE" original="Marketing enquiries" specifiedBy="1CC354F76CEBD0CD670885:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD670886:Footer" mappingType="OVERRIDE" original="Marketing enquiries" specifiedBy="1CC354F76CEBD0CD670885:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248510:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670885:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD670886:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670885:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248510:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670885:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD670886:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670885:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="marketing@temenos.com" eid="1CC354F76CEBD0CD670891" path="Footer.Footer.Footer.Contact.marketing@temenos.com" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248511:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670891:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD670892:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670891:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248511:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670891:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD670892:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670891:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248511:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670891:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD670892:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670891:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="marketing@temenos.com" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248511:Footer_Design2" mappingType="OVERRIDE" original="marketing@temenos.com" specifiedBy="1CC354F76CEBD0CD670891:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD670892:Footer" mappingType="OVERRIDE" original="marketing@temenos.com" specifiedBy="1CC354F76CEBD0CD670891:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+          </Container>
+          <Container class="com.acquire.intelligentforms.entities.ItemGroup" displayString="Connect" eid="1CC354F76CEBD0CD812295" type="Item Group">
+            <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Connect" eid="1CC354F76CEBD0CD651070" path="Footer.Footer.Footer.Connect.Connect" type="Heading">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD651071:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD651070:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248517:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD651070:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="DisplayText" original="Connect" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD651071:Footer" mappingType="OVERRIDE" original="Connect" specifiedBy="1CC354F76CEBD0CD651070:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248517:Footer_Design2" mappingType="OVERRIDE" original="Connect" specifiedBy="1CC354F76CEBD0CD651070:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD651071:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD651070:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248517:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD651070:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD651071:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD651070:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248517:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD651070:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Facebook" eid="1CC354F76CEBD0CD743950" path="Footer.Footer.Footer.Connect.Facebook" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD743951:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD743950:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248518:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD743950:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD743951:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD743950:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248518:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD743950:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD743951:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD743950:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248518:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD743950:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="Facebook" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD743951:Footer" mappingType="OVERRIDE" original="Facebook" specifiedBy="1CC354F76CEBD0CD743950:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248518:Footer_Design2" mappingType="OVERRIDE" original="Facebook" specifiedBy="1CC354F76CEBD0CD743950:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Twitter" eid="1CC354F76CEBD0CD752450" path="Footer.Footer.Footer.Connect.Twitter" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248520:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752450:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD752451:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752450:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248520:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752450:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD752451:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752450:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248520:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752450:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD752451:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752450:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="Twitter" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248520:Footer_Design2" mappingType="OVERRIDE" original="Twitter" specifiedBy="1CC354F76CEBD0CD752450:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD752451:Footer" mappingType="OVERRIDE" original="Twitter" specifiedBy="1CC354F76CEBD0CD752450:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="LinkedIn" eid="1CC354F76CEBD0CD752463" path="Footer.Footer.Footer.Connect.LinkedIn" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248522:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752463:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD752464:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752463:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248522:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752463:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD752464:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752463:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248522:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752463:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD752464:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752463:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="LinkedIn" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248522:Footer_Design2" mappingType="OVERRIDE" original="LinkedIn" specifiedBy="1CC354F76CEBD0CD752463:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD752464:Footer" mappingType="OVERRIDE" original="LinkedIn" specifiedBy="1CC354F76CEBD0CD752463:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Google+" eid="1CC354F76CEBD0CD752481" path="Footer.Footer.Footer.Connect.Google+" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248524:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752481:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD752482:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752481:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248524:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752481:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD752482:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752481:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248524:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752481:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD752482:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD752481:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="Google+" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248524:Footer_Design2" mappingType="OVERRIDE" original="Google+" specifiedBy="1CC354F76CEBD0CD752481:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD752482:Footer" mappingType="OVERRIDE" original="Google+" specifiedBy="1CC354F76CEBD0CD752481:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+          </Container>
+          <Container class="com.acquire.intelligentforms.entities.ItemGroup" displayString="LiveFeed" eid="1CC354F76CEBD0CD814822" type="Item Group">
+            <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Temenos on Twitter" eid="1CC354F76CEBD0CD651075" path="Footer.Footer.Footer.LiveFeed.Temenos on Twitter" type="Heading">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248529:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD651075:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD651076:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD651075:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="DisplayText" original="Temenos on Twitter" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248529:Footer_Design2" mappingType="OVERRIDE" original="Temenos on Twitter" specifiedBy="1CC354F76CEBD0CD651075:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD651076:Footer" mappingType="OVERRIDE" original="Temenos on Twitter" specifiedBy="1CC354F76CEBD0CD651075:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248529:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD651075:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD651076:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD651075:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248529:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD651075:Heading" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD651076:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD651075:Heading" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+            <ProcessEntity class="com.acquire.intelligentforms.entities.FormButton" displayString="Tweets by @Temenos" eid="1CC354F76CEBD0CD670903" path="Footer.Footer.Footer.LiveFeed.Tweets by @Temenos" type="Button">
+              <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD670904:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670903:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248530:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670903:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="ConfirmationMessage" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD670904:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670903:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248530:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670903:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD670904:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670903:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248530:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD670903:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+              <ProcessEntityAttr default="" name="HintText" original="Tweets by @Temenos" state="NEW">
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="1CC354F76CEBD0CD670904:Footer" mappingType="OVERRIDE" original="Tweets by @Temenos" specifiedBy="1CC354F76CEBD0CD670903:Button" state="NEW" status="NEW" value=""/>
+                <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationButton" forPresObjects="38A5413050F34021248530:Footer_Design2" mappingType="OVERRIDE" original="Tweets by @Temenos" specifiedBy="1CC354F76CEBD0CD670903:Button" state="NEW" status="NEW" value=""/>
+              </ProcessEntityAttr>
+            </ProcessEntity>
+          </Container>
+          <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Build Version: $$!BUILD_VERSION$" eid="ACE8AC01EC8DE199253945" path="Footer.Footer.Footer.Build Version: $$!BUILD_VERSION$" type="Heading">
+            <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248533:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="ACE8AC01EC8DE199253945:Heading" state="NEW" status="NEW" value=""/>
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACE8AC01EC8DE199253946:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="ACE8AC01EC8DE199253945:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="DisplayText" original="Build Version: $$!BUILD_VERSION$" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248533:Footer_Design2" mappingType="OVERRIDE" original="Build Version: $$!BUILD_VERSION$" specifiedBy="ACE8AC01EC8DE199253945:Heading" state="NEW" status="NEW" value=""/>
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACE8AC01EC8DE199253946:Footer" mappingType="OVERRIDE" original="Build Version: $$!BUILD_VERSION$" specifiedBy="ACE8AC01EC8DE199253945:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248533:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="ACE8AC01EC8DE199253945:Heading" state="NEW" status="NEW" value=""/>
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACE8AC01EC8DE199253946:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="ACE8AC01EC8DE199253945:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248533:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="ACE8AC01EC8DE199253945:Heading" state="NEW" status="NEW" value=""/>
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="ACE8AC01EC8DE199253946:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="ACE8AC01EC8DE199253945:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+          <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="COPYRIGHT © $$!COPYRIGHT_YEAR$ TEMENOS HEADQUARTERS SA" eid="1CC354F76CEBD0CD652497" path="Footer.Footer.Footer.COPYRIGHT © $$!COPYRIGHT_YEAR$ TEMENOS HEADQUARTERS SA" type="Heading">
+            <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD652498:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD652497:Heading" state="NEW" status="NEW" value=""/>
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248534:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD652497:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="DisplayText" original="COPYRIGHT © $$!COPYRIGHT_YEAR$ TEMENOS HEADQUARTERS SA" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD652498:Footer" mappingType="OVERRIDE" original="COPYRIGHT © $$!COPYRIGHT_YEAR$ TEMENOS HEADQUARTERS SA" specifiedBy="1CC354F76CEBD0CD652497:Heading" state="NEW" status="NEW" value=""/>
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248534:Footer_Design2" mappingType="OVERRIDE" original="COPYRIGHT © $$!COPYRIGHT_YEAR$ TEMENOS HEADQUARTERS SA" specifiedBy="1CC354F76CEBD0CD652497:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD652498:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD652497:Heading" state="NEW" status="NEW" value=""/>
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248534:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD652497:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+            <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="1CC354F76CEBD0CD652498:Footer" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD652497:Heading" state="NEW" status="NEW" value=""/>
+              <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="38A5413050F34021248534:Footer_Design2" mappingType="PLACEHOLDER" original="" specifiedBy="1CC354F76CEBD0CD652497:Heading" state="NEW" status="NEW" value=""/>
+            </ProcessEntityAttr>
+          </ProcessEntity>
+        </Container>
+      </Container>
+    </ProcessEntity>
+  </ProcessEntities>
+  <Designs/>
+  <PresentationOnlyObjects>
+    <PresentationType class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationType" displayString="Footer" eid="FE6297F7D89B657697631" path="Footer" type="Rich Presentation Type">
+      <Attribute mappingType="OVERRIDE" name="BackButtonText" original="Back" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DateFormat" original="DD/MM/YYYY" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DecimalSymbol" original="." state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DigitGroupSymbol" original="," state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="EditTheme" original="N" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ForwardButtonText" original="Continue" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="HelpIconHint" original="Help" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaMessage" original="Please re-enter using letters" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaNumericMessage" original="Please re-enter using letters and numbers" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDateMessage" original="Please enter a valid date in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDaysInMonthMessage" original="There are not that many days in the specified month" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDecimalMessage" original="Please enter a valid decimal number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidLeapYearMessage" original="The specified year is not a leap year" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxDateMessage" original="The latest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxFileSizeMessage" original="The maximum file size allowed is $$QUESTION_CONSTRAINT$k" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxLengthMessage" original="The maximum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxValueMessage" original="The maximum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinDateMessage" original="The earliest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinLengthMessage" original="The minimum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinValueMessage" original="The minimum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidNumMessage" original="Please enter a valid number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidTimeMessage" original="Please enter a valid time in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidUploadTypeMessage" original="The valid file types you are allowed to upload are: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="LayoutDirection" original="ltr" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandMessage" original="Please answer all the required questions marked with a $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandOptImgAltVal" original="This field is mandatory" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandOptImgVal" original="mandatory_image.gif" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandOptTxtVal" original="*" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="QuestionListDefault" original="- Please Select" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ValidationMessage" original="Please enter a valid value" state="NEW" status="NEW" value=""/>
+    </PresentationType>
+    <PresentationType class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationType" displayString="Footer_Design2" eid="38A5413050F34021248471" path="Footer_Design2" type="Rich Presentation Type">
+      <Attribute mappingType="OVERRIDE" name="BackButtonText" original="Back" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DateFormat" original="DD/MM/YYYY" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DecimalSymbol" original="." state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DigitGroupSymbol" original="," state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="EditTheme" original="N" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ForwardButtonText" original="Continue" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="HelpIconHint" original="Help" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaMessage" original="Please re-enter using letters" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaNumericMessage" original="Please re-enter using letters and numbers" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDateMessage" original="Please enter a valid date in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDaysInMonthMessage" original="There are not that many days in the specified month" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDecimalMessage" original="Please enter a valid decimal number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidLeapYearMessage" original="The specified year is not a leap year" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxDateMessage" original="The latest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxFileSizeMessage" original="The maximum file size allowed is $$QUESTION_CONSTRAINT$k" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxLengthMessage" original="The maximum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxValueMessage" original="The maximum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinDateMessage" original="The earliest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinLengthMessage" original="The minimum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinValueMessage" original="The minimum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidNumMessage" original="Please enter a valid number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidTimeMessage" original="Please enter a valid time in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidUploadTypeMessage" original="The valid file types you are allowed to upload are: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="LayoutDirection" original="ltr" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandMessage" original="Please answer all the required questions marked with a $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandOptImgAltVal" original="This field is mandatory" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandOptImgVal" original="mandatory_image.gif" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandOptTxtVal" original="*" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="QuestionListDefault" original="- Please Select" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ValidationMessage" original="Please enter a valid value" state="NEW" status="NEW" value=""/>
+    </PresentationType>
+  </PresentationOnlyObjects>
+  <Rules>
+    <MasterRules/>
+  </Rules>
+  <Component/>
+  <Lists/>
+</LanguageMap>

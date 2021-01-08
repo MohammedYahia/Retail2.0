@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+	<widget name="tw-Carousel Container" type="Section,Table" icon="carousel.png" rootType="Linear Table">
+		<template type="header" value="carousel-container-header.wgt"/>
+		<template type="source" value="carousel-container.wgt"/>
+		<custom>
+			<item name="SHOW_NAV_BUTTONS" prompt="Show nav buttons" type="javax.swing.JCheckBox" includeInDesign="false" />
+			<item name="SHOW_PAGINATION" type="javax.swing.JCheckBox" prompt="Show pagination" includeInDesign="false" />
+			<item name="AUTO_PLAY" typeValue="DECIMAL|4" defaultValue="0" prompt="Auto-Play" includeInDesign="false"/>
+			<item name="ANIMATION" type="javax.swing.JComboBox" prompt="Animation" typeValue="slide|fade|flip|cube|coverflow" defaultValue="slide" includeInDesign="false" />
+			<item name="SLIDES_PER_VIEW" typeValue="DECIMAL|2" defaultValue="1" prompt="Slides per view" includeInDesign="false" />
+			<item name="VERTICAL" type="javax.swing.JCheckBox" prompt="Vertical?" includeInDesign="false" />
+            <item name="LOOP" type="javax.swing.JCheckBox" prompt="Loop?" includeInDesign="false" />
+			<item name="INITIAL_ITEM" prompt="Initial Item" type="com.acquire.intelligentforms.ide.dialogs.RichTextField" typeValue="ALL_CHARS"  includeInDesign="false" />
+		</custom>
+	</widget>
+	<widget name="tw-Carousel Item" type="Column"  icon="carousel-item.png">
+		<template type="source" value="carousel-item.wgt"/>
+	</widget>
+</widgets>

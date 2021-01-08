@@ -1,0 +1,39 @@
+
+<style>
+$%IF ITEM.HIDE_HEADER == "yes"$
+#sf-$$ITEM.WIDGET$-placeholder-$$ITEM.ID()$ .sf-widget-header-placeholder{
+	display:none;
+}
+
+#sf-$$ITEM.WIDGET$-placeholder-$$ITEM.ID()$ .sf-widget {
+    border:none !important;
+}
+$%ENDIF$
+
+$%IF ITEM.HIDE_INTRO == "yes"$
+
+#sf-$$ITEM.WIDGET$-placeholder-$$ITEM.ID()$ .sf-intro-message {
+	display:none;
+}
+$%ENDIF$
+</style>
+
+
+
+
+
+<script type="text/javascript">
+    strands.require(["pfm/pfm","utils/util"], function (pfm, util){
+        pfm.setHttpHeader("HTTP_STRANDS_USER", "$$ITEM.IRIS_USER_NAME$"); // External user name for PFM database
+        pfm.setHttpHeader("Authorization", btoa("$$ITEM.API_USER_NAME$:API_PASSWORD")); // Generic Api user name and password to access their DB
+        pfm.config.environment.contextPath = "$$ITEM.PFM_URL$"; // PFM interaction url
+        pfm.show("$$ITEM.WIDGET$", "sf-$$ITEM.WIDGET$-placeholder-$$ITEM.ID()$", $%IF ITEM.WIDGET_CONFIG == ""$ null $%ELSE$ $$ITEM.WIDGET_CONFIG$ $%ENDIF$ ); //Widget type, place-holder and filter / configurations
+        pfm.subscribe("$$ITEM.WIDGET$","show:widget", function(e) {
+            if (e.widget == "$$ITEM.NAVIGATION$") {						//Listener for main widget
+                $(".$$ITEM.NAVIGATION$").click();						//Button invoker using class where class name is the listener name
+            }
+        });
+    });
+</script>
+
+<div id="sf-$$ITEM.WIDGET$-placeholder-$$ITEM.ID()$"></div>

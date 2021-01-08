@@ -1,0 +1,138 @@
+
+$$ITEM.EC_GENERATE()$
+
+<script type="text/javascript" charset="utf-8">
+//<![CDATA[
+$%IF ITEM.DefaultIcon != ""$
+    $("#$$ITEM.ID()$").addClass("icon-$$ITEM.DefaultIcon$");
+    
+    $%IF ITEM.IconPosition == "after"$
+        $("#$$ITEM.ID()$").addClass("tc-icon-position-after");
+    $%ENDIF$
+    $%IF ITEM.IconPosition == "before"$
+        $("#$$ITEM.ID()$").addClass("tc-icon-position-before");
+    $%ENDIF$
+    $%IF ITEM.IconPosition == "above"$
+        $("#$$ITEM.ID()$").addClass("tc-icon-position-above");
+    $%ENDIF$
+    $%IF ITEM.IconPosition == "below"$
+        $("#$$ITEM.ID()$").addClass("tc-icon-position-below");
+    $%ENDIF$
+$%ENDIF$
+
+$%IF ITEM.AnimationType != ""$
+    setClassOnElement("#$$ITEM.ID()$", "ecAnim$$ITEM.AnimationType$")
+$%ENDIF$
+
+
+$(function() {
+	$%COMMENT$ Change id of buttons which are about to be deleted after animation, so they are not picked up $%ENDCOMMENT$
+	if ( $("#$$ITEM.ID()$").closest("#DELETE_ME").length == 1) {
+		$("#$$ITEM.ID()$").attr("id", "old$$ITEM.ID()$")
+	}
+
+    $%IF ITEM.Badge != ""$
+        $("#$$ITEM.ID()$").css("position", "relative")
+                          .append("<div class='tc-normal-weight tc-badge $$ITEM.BadgeType$' data-value='$$ITEM.Badge$'>$$ITEM.Badge$</div>")
+    $%ENDIF$
+
+    $("#$$ITEM.ID()$").addClass("$$ITEM.EXTRA_STYLES$");
+
+
+    function doWork(event) {
+	$%IF ITEM.IS_READONLY() == "false"$ 
+		$%IF ITEM.JavascriptFunction != ""$
+			try {
+			    $$ITEM.JavascriptFunction$({
+			    	id: "$$ITEM.ID()$",
+					COMPONENT_ID_PREFIX: "$$COMPONENT_ID_PREFIX$",
+					IdToUpdate: "$$ITEM.SelectorToUpdate$",
+					ClassToRemove: "$$ITEM.ClassToRemove$",
+					ClassToToggle: "$$ITEM.ClassToToggle$",
+					ClassToAdd:    "$$ITEM.ClassToAdd$",
+					ParentContextSelector: "$$ITEM.ParentContextSelector$",
+					AnimationType: "$$ITEM.AnimationType$",
+					event: event
+				})
+			} catch (e) {
+			    log("Problem running javascript function: $$ITEM.JavascriptFunction$");
+			}
+		$%ENDIF$   
+		$(".tc-mfb-pressed[id!=$$ITEM.ID()$]").removeClass("tc-mfb-pressed")
+		$("#$$ITEM.ID()$").toggleClass("tc-mfb-pressed")
+		if (!$("#$$ITEM.ID()$").is(".tc-mfb-pressed")) 
+			$("#$$ITEM.ID()$").blur();
+		
+		$%IF ITEM.ClassToToggleOnButton != ""$
+		    $("#$$ITEM.ID()$").toggleClass("$$ITEM.ClassToToggleOnButton$");
+		$%ENDIF$
+
+		$%IF ITEM.DefaultIcon != "" && ITEM.PressedIcon != ""$
+		    $("#$$ITEM.ID()$").toggleClass("icon-$$ITEM.DefaultIcon$").toggleClass("icon-$$ITEM.PressedIcon$")
+		$%ENDIF$
+		
+		$%IF ITEM.PressedText != ""$
+		    if ( $("#$$ITEM.ID()$").is(".tc-mfb-pressed")) {
+		    	$("#$$ITEM.ID()$").data("old-text", $("#$$ITEM.ID()$>span").text() )
+	            $("#$$ITEM.ID()$>span").text("$$ITEM.PressedText$")
+		    } else {
+                $("#$$ITEM.ID()$>span").text( $("#$$ITEM.ID()$").data("old-text") )
+		    }
+		$%ENDIF$
+
+		var $parent = $%IF ITEM.ParentContextSelector != ""$ $("#$$ITEM.ID()$").closest("$$ITEM.ParentContextSelector$")  $%ELSE$ $("html") $%ENDIF$;
+		$%IF ITEM.SelectorClassToRemove != ""$
+		    $("$$ITEM.SelectorClassToRemove$".split(",")).each(function(i, o) {
+			var selector = $.trim(o).replace("#", "#$$COMPONENT_ID_PREFIX$");
+			$parent.find(selector).addBack(selector).removeClass("$$ITEM.ClassToRemove$");
+		    });
+		$%ENDIF$
+
+		$%IF ITEM.ClassToToggle != ""$
+		    $("$$ITEM.SelectorToUpdate$".split(",")).each(function(i, o) {
+			var selector = $.trim(o).replace("#", "#$$COMPONENT_ID_PREFIX$");
+			$parent.find(selector).addBack(selector).toggleClass("$$ITEM.ClassToToggle$");
+		    });
+		$%ENDIF$
+
+		$%IF ITEM.ClassToAdd != ""$
+		    $("$$ITEM.SelectorClassToAdd$".split(",")).each(function(i, o) {
+			var selector = $.trim(o).replace("#", "#$$COMPONENT_ID_PREFIX$");
+			$parent.find(selector).addBack(selector).addClass("$$ITEM.ClassToAdd$");
+		    });
+		$%ENDIF$
+
+
+		$%IF ITEM.SoundIdToPlay != ""$
+		    $("#$$COMPONENT_ID_PREFIX$$$ITEM.SoundIdToPlay$")[0].play();
+		$%ENDIF$
+
+		
+		    
+		$%IF ITEM.RunButtonRules == "Y"$
+		    $$ITEM.ONCLICK()$
+		$%ENDIF$
+	$%ENDIF$
+    }
+
+    var $el = $("#$$ITEM.ID()$:not([handlerChanged='Y'])");
+    $el.attr("handlerChanged", "Y")
+        .attr("onoldclick", $el.attr("onclick"))
+        .removeAttr("onclick")
+        .on("click", function(e) {
+            doWork(e);
+            e.stopPropagation();
+        }
+    );
+
+    $%IF ITEM.ListeningContainerSelector != ""$
+        $("#$$ITEM.ID()$").closest("$$ITEM.ListeningContainerSelector$")
+            .on("click", function(e) {
+                doWork(e);
+                e.stopPropagation();
+            }
+        );
+    $%ENDIF$
+});
+//]]>
+</script>

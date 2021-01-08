@@ -1,0 +1,14 @@
+
+
+
+https://developers.facebook.com/docs/plugins/restrictions/
+
+
+FACEBOOK JAVASCRIPT SDK LICENSE
+
+/**
+ * Copyright Facebook Inc.
+ *
+ * Licensed under the Apache License, Version 2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ */

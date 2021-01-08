@@ -1,0 +1,330 @@
+$%IF ITEM.IS_HIDDEN() != "true"$
+<div class="$$ITEM.GlobalCSSClass$Container $$ITEM.STYLES().AnswerControlStyle$$%IF ITEM.IS_READONLY() == true$ readonly$%ENDIF$" style="$$ITEM.INLINE_STYLES().SpecificAnswerControlStyle$">
+<span id="$$ITEM.ID()$_selectedItems" class="selected$$ITEM.GlobalCSSClass$s"></span>
+<input type="text" name="$$ITEM.DATAITEM()$" id="$$ITEM.ID()$" class="$$ITEM.GlobalCSSClass$sInputfield"$%IF ITEM.IS_READONLY() == true$ readonly="readonly"$%ENDIF$ />
+$%IF ITEM.SearchIcon == 'Y'$
+<i class="tc-icon icon-search"><span></span></i>
+$%ENDIF$
+</div>
+<div id="$$ITEM.ID()$_autocompleteResults" class="autocompleteResults"></div>
+
+<script type="text/javascript">
+
+var ss = {                                        // ----- sessionStorage (k=key, v=value) -----
+  get: function(k){return sessionStorage.getItem(k);},
+  set: function(k,v){sessionStorage.setItem(k,v);},
+  clear: function(k){sessionStorage.removeItem(k);},
+  clearall: function(){sessionStorage.clear();},
+  list: function(){return window.sessionStorage;}
+}
+
+var autocompleteRequest_$$ITEM.ID()$ = {
+  remind: function(aMessage) {
+    $('#$$ITEM.ID()$').prop('disabled', true);
+    var event = false;
+    $$ITEM.QLR()$
+    console.info(aMessage);
+    this.timeoutID = undefined;
+  },
+
+  setup: function() {
+    if (typeof this.timeoutID === "number") {
+      this.cancel();
+    }
+
+    this.timeoutID = window.setTimeout(function(msg) {
+      if ($('#$$ITEM.ID()$').val().length <= 2) {
+        this.cancel();
+      } else {
+        this.remind(msg);
+      }
+    }.bind(this), $%IF ITEM.Delay != ""$$$ITEM.Delay$$%ELSE$700$%ENDIF$, "Autocomplete request launched");
+  },
+
+  cancel: function() {
+    window.clearTimeout(this.timeoutID);
+    this.timeoutID = undefined;
+  }
+};
+
+$%IF ITEM.ValueDataitem == ''$
+ss.clear('$$ITEM.ID()$_selectedItemsArray');
+$%ELSE$
+ss.set('$$ITEM.ID()$_selectedItemsArray', JSON.stringify("$$ITEM.ValueDataitem$".split('|')));
+$%ENDIF$
+
+$$ITEM.ID()$_populateSelectedItems();
+function $$ITEM.ID()$_populateSelectedItems() {
+  $('#$$ITEM.ID()$').show();
+
+  var selectedItemsArray = JSON.parse(ss.get('$$ITEM.ID()$_selectedItemsArray'));
+
+  $%IF ITEM.MultipleSelection == 'Y'$
+  var multipleSelection = true;
+  $%ELSE$
+  var multipleSelection = false;
+  $%ENDIF$
+  if("$$ITEM.ID()$".match(/_R/)) {
+    var rowNumber = "$$ITEM.ID()$".split('_').slice(-1).pop();
+    $('#$$COMPONENT_ID_PREFIX$$$ITEM.ValueQuestionID$_'+rowNumber).parent().hide();
+	$%IF ##ITEM.KeyQuestionID# != ''$
+		$('#$$COMPONENT_ID_PREFIX$$$ITEM.KeyQuestionID$_'+rowNumber).parent().hide();
+	$%ENDIF$
+  } else {
+    $('#$$COMPONENT_ID_PREFIX$$$ITEM.ValueQuestionID$').hide();
+	$%IF ##ITEM.KeyQuestionID# != ''$
+		$('#$$COMPONENT_ID_PREFIX$$$ITEM.KeyQuestionID$').hide();
+	$%ENDIF$
+  }
+  if(selectedItemsArray != null) {
+    var selectedItemsHTML = '';
+    var selectedItemsValue = '';
+	  var selectedItemsKey = '';
+    for (var i = 0, len = selectedItemsArray.length; i < len; i++) {
+	  selectedItemsValue += selectedItemsArray[i];
+    $%IF ##ITEM.KeyItem# == ''$
+		selectedItemsHTML += "<span class=\"selected$$ITEM.GlobalCSSClass$\" data-item=\""+selectedItemsArray[i]+"\"><span title=\""+selectedItemsArray[i]+"\">"+selectedItemsArray[i]+"</span><i class=\"tc-icon icon-cancel\"><span></span></i></span>";
+	  $%ELSE$
+		items = selectedItemsArray[i].split(':');
+		selectedItemsKey += items[0];
+		selectedItemsHTML += "<span class=\"selected$$ITEM.GlobalCSSClass$\" data-item=\""+selectedItemsArray[i]+"\"><span title=\""+items[1]+"\">"+items[1]+"</span><i class=\"tc-icon icon-cancel\"><span></span></i></span>";
+	  $%ENDIF$
+
+      if (i == 0 && !multipleSelection) {
+        $%IF ITEM.IS_MANDATORY() == 'true'$
+        $('#$$ITEM.ID()$').val('$$ITEM.DATAITEM().VALUE()$')
+        $%ENDIF$
+        $('#$$ITEM.ID()$').hide();
+        break;
+      }
+      if (i < len-1) {
+        selectedItemsValue += '|';
+		    $%IF ##ITEM.KeyItem# == ''$
+		    $%ELSE$
+			  selectedItemsKey += '|';
+		    $%ENDIF$
+      }
+    }
+    if("$$ITEM.ID()$".match(/_R/)) {
+      $('#$$COMPONENT_ID_PREFIX$$$ITEM.ValueQuestionID$_'+rowNumber).val(selectedItemsValue);
+	  $%IF ##ITEM.KeyQuestionID# != '' AND ##ITEM.KeyItem# != '' $
+		$('#$$COMPONENT_ID_PREFIX$$$ITEM.KeyQuestionID$_'+rowNumber).val(selectedItemsKey);
+	  $%ENDIF$
+    } else {
+      $('#$$COMPONENT_ID_PREFIX$$$ITEM.ValueQuestionID$').val(selectedItemsValue);
+	  $%IF ##ITEM.KeyQuestionID# != ''  AND ##ITEM.KeyItem# != '' $
+		$('#$$COMPONENT_ID_PREFIX$$$ITEM.KeyQuestionID$').val(selectedItemsKey);
+	  $%ENDIF$
+    }
+    $('#$$ITEM.ID()$_selectedItems').html(selectedItemsHTML);
+  }
+}
+
+function processAutocomplete_$$ITEM.ID()$(elementID) {
+  var searchString = ss.get(elementID+'_searchString');
+  if (searchString != null) {
+    var autocompleteResultsHTML = '';
+    $%IF ITEM.AutocompleteSuggestionsNumber > 0$
+      $%FOR 1 to ITEM.AutocompleteSuggestionsNumber :ITEM.AutocompleteSuggestions$
+      autocompleteResultsHTML += "<div class=\"instrumentWrapper\">";
+      autocompleteResultsHTML += "<div $%IF ITEM.GlobalCSSClass != ''$class=\"$$ITEM.GlobalCSSClass$\"$%ENDIF$>";
+      autocompleteResultsHTML += "<div$%IF ITEM.HiddenItem1 == 'Y'$ class=\"hidden\"$%ENDIF$>$%IF ITEM.LabelItem1 != ''$$$ITEM.LabelItem1$$%ENDIF$<span $%IF ##ITEM.MappedQuestionID1# != ''$data-mappedQuestion=\"$$COMPONENT_ID_PREFIX$$$ITEM.MappedQuestionID1$\" $%ENDIF$ class=\"$%IF ##ITEM.MainItem# == 'item1'$postedItem $%ENDIF$ $%IF ##ITEM.KeyItem# == 'item1'$keyItem $%ENDIF$ $$ITEM.CSSItem1$\">$$ITEM.Item1$</span></div>";
+      $%IF ITEM.Item2 != ''$
+      autocompleteResultsHTML += "<div$%IF ITEM.HiddenItem2 == 'Y'$ class=\"hidden\"$%ENDIF$>$%IF ITEM.LabelItem2 != ''$$$ITEM.LabelItem2$$%ENDIF$<span $%IF ##ITEM.MappedQuestionID2# != ''$data-mappedQuestion=\"$$COMPONENT_ID_PREFIX$$$ITEM.MappedQuestionID2$\" $%ENDIF$ class=\"$%IF ##ITEM.MainItem# == 'item2'$postedItem $%ENDIF$ $%IF ##ITEM.KeyItem# == 'item2'$keyItem $%ENDIF$ $$ITEM.CSSItem2$\">$$ITEM.Item2$</span></div>";
+      $%ENDIF$
+      $%IF ITEM.Item3 != ''$
+      autocompleteResultsHTML += "<div$%IF ITEM.HiddenItem3 == 'Y'$ class=\"hidden\"$%ENDIF$>$%IF ITEM.LabelItem3 != ''$$$ITEM.LabelItem3$$%ENDIF$<span $%IF ##ITEM.MappedQuestionID3# != ''$data-mappedQuestion=\"$$COMPONENT_ID_PREFIX$$$ITEM.MappedQuestionID3$\" $%ENDIF$ class=\"$%IF ##ITEM.MainItem# == 'item3'$postedItem $%ENDIF$ $%IF ##ITEM.KeyItem# == 'item3'$keyItem $%ENDIF$ $$ITEM.CSSItem3$\">$$ITEM.Item3$</span></div>";
+      $%ENDIF$
+      $%IF ITEM.Item4 != ''$
+      autocompleteResultsHTML += "<div$%IF ITEM.HiddenItem4 == 'Y'$ class=\"hidden\"$%ENDIF$>$%IF ITEM.LabelItem4 != ''$$$ITEM.LabelItem4$$%ENDIF$<span $%IF ##ITEM.MappedQuestionID4# != ''$data-mappedQuestion=\"$$COMPONENT_ID_PREFIX$$$ITEM.MappedQuestionID4$\" $%ENDIF$ class=\"$%IF ##ITEM.MainItem# == 'item4'$postedItem $%ENDIF$ $%IF ##ITEM.KeyItem# == 'item4'$keyItem $%ENDIF$ $$ITEM.CSSItem4$\">$$ITEM.Item4$</span></div>";
+      $%ENDIF$
+      $%IF ITEM.Item5 != ''$
+      autocompleteResultsHTML += "<div$%IF ITEM.HiddenItem5 == 'Y'$ class=\"hidden\"$%ENDIF$>$%IF ITEM.LabelItem5 != ''$$$ITEM.LabelItem5$$%ENDIF$<span $%IF ##ITEM.MappedQuestionID5# != ''$data-mappedQuestion=\"$$COMPONENT_ID_PREFIX$$$ITEM.MappedQuestionID5$\" $%ENDIF$ class=\"$%IF ##ITEM.MainItem# == 'item5'$postedItem $%ENDIF$ $%IF ##ITEM.KeyItem# == 'item5'$keyItem $%ENDIF$ $$ITEM.CSSItem5$\">$$ITEM.Item5$</span></div>";
+      $%ENDIF$
+      autocompleteResultsHTML += "</div>";
+      $%IF ITEM.Recommended != ''$
+      autocompleteResultsHTML += "<div class=\"recommended$$ITEM.Recommended$\">&nbsp;</div></div>";
+      $%ELSE$
+      autocompleteResultsHTML += "<div class=\"recommended0\">&nbsp;</div></div>";
+      $%ENDIF$
+      $%ENDFOR$
+    $%ELSE$
+      autocompleteResultsHTML += '$$ITEM.noResLabel$';
+    $%ENDIF$
+    $('#'+elementID+'_autocompleteResults').html(autocompleteResultsHTML);
+    $('#'+elementID+'_autocompleteResults').show();
+    $('#'+elementID).val(searchString);
+    // Clear value from sessionStorage
+    ss.clear(elementID+'_searchString');
+  }
+}
+
+$(function(){
+  processAutocomplete_$$ITEM.ID()$("$$ITEM.ID()$");
+
+  // if values already set in hidden field, update sessionStorage item
+  $%IF ITEM.ValueDataitem != ''$
+  ss.set('$$ITEM.ID()$_selectedItemsArray', JSON.stringify("$$ITEM.ValueDataitem$".split('|')));
+  $%ENDIF$
+
+  $('#$$ITEM.ID()$_autocompleteResults').on('click', '.$$ITEM.GlobalCSSClass$', function(e){
+    var selectedItemText = $(this).find('.postedItem').text();
+	  var selectedItemKey = $(this).find('.keyItem').text();
+    $(this).find('span[data-mappedquestion]').each(function(){
+      if("$$ITEM.ID()$".match(/_R/)) {
+        var rowNumber = "$$ITEM.ID()$".split('_').slice(-1).pop();
+        $("#"+$(this).data("mappedquestion")+"_"+rowNumber).val($(this).text());
+      } else {
+        $("#"+$(this).data("mappedquestion")).val($(this).text());
+      }
+    });
+    var selectedItemsArray = JSON.parse(ss.get('$$ITEM.ID()$_selectedItemsArray'));
+    if(selectedItemsArray == null) {
+      selectedItemsArray = new Array();
+    }
+    $%IF ##ITEM.KeyItem# == ''${
+		selectedItemCheck = selectedItemText;
+	}
+	$%ELSE${
+		selectedItemCheck = selectedItemKey+":"+selectedItemText;
+	}
+	$%ENDIF$
+
+	if(selectedItemsArray.indexOf(selectedItemCheck) == '-1') {
+		selectedItemsArray.push(selectedItemCheck);
+		ss.set('$$ITEM.ID()$_selectedItemsArray', JSON.stringify(selectedItemsArray));
+	}
+
+    $('#$$ITEM.ID()$_autocompleteResults').hide();
+    $$ITEM.ID()$_populateSelectedItems();
+    $%IF ITEM.IS_MANDATORY() != 'true'$
+    $('#$$ITEM.ID()$').val('');
+    $%ENDIF$
+    $('#$$ITEM.ID()$').focus();
+
+    $%IF ITEM.ApplyID != ''$
+    $('#$$COMPONENT_ID_PREFIX$$$ITEM.ApplyID$').trigger('click');
+    $%ELSE$
+    $%IF ITEM.IS_MANDATORY() != 'true'$
+    var event = false;
+    $$ITEM.QLR()$
+    $%ENDIF$
+    $%ENDIF$
+
+    e.preventDefault();
+  });
+
+  $%IF ITEM.IS_READONLY() != true$
+  $('#$$ITEM.ID()$_selectedItems.selected$$ITEM.GlobalCSSClass$s').on('click', 'i.tc-icon.icon-cancel', function(e){
+    // Erase all mapped questions
+    if("$$ITEM.ID()$".match(/_R/)) {
+      var rowNumber = "$$ITEM.ID()$".split('_').slice(-1).pop();
+      $%IF ITEM.MappedQuestionID1 != ''$
+      $("#$$COMPONENT_ID_PREFIX$$$ITEM.MappedQuestionID1$_"+rowNumber).val("");
+      $%ENDIF$
+      $%IF ITEM.MappedQuestionID2 != ''$
+      $("#$$COMPONENT_ID_PREFIX$$$ITEM.MappedQuestionID2$_"+rowNumber).val("");
+      $%ENDIF$
+      $%IF ITEM.MappedQuestionID3 != ''$
+      $("#$$COMPONENT_ID_PREFIX$$$ITEM.MappedQuestionID3$_"+rowNumber).val("");
+      $%ENDIF$
+      $%IF ITEM.MappedQuestionID4 != ''$
+      $("#$$COMPONENT_ID_PREFIX$$$ITEM.MappedQuestionID4$_"+rowNumber).val("");
+      $%ENDIF$
+    } else {
+      $%IF ITEM.MappedQuestionID1 != ''$
+      $("#$$COMPONENT_ID_PREFIX$$$ITEM.MappedQuestionID1$").val("");
+      $%ENDIF$
+      $%IF ITEM.MappedQuestionID2 != ''$
+      $("#$$COMPONENT_ID_PREFIX$$$ITEM.MappedQuestionID2$").val("");
+      $%ENDIF$
+      $%IF ITEM.MappedQuestionID3 != ''$
+      $("#$$COMPONENT_ID_PREFIX$$$ITEM.MappedQuestionID3$").val("");
+      $%ENDIF$
+      $%IF ITEM.MappedQuestionID4 != ''$
+      $("#$$COMPONENT_ID_PREFIX$$$ITEM.MappedQuestionID4$").val("");
+      $%ENDIF$
+    }
+    var itemToRemove = $(this).parent().data('item');
+    var selectedItemsArray = JSON.parse(ss.get('$$ITEM.ID()$_selectedItemsArray'));
+    var index = selectedItemsArray.indexOf(itemToRemove.toString());
+    if (index > -1) {
+      selectedItemsArray.splice(index, 1);
+    }
+    ss.set('$$ITEM.ID()$_selectedItemsArray', JSON.stringify(selectedItemsArray));
+    $$ITEM.ID()$_populateSelectedItems();
+    $('#$$ITEM.ID()$').val('');
+    $('#$$ITEM.ID()$').focus();
+
+    $%IF ITEM.ApplyID != ''$
+    $('#$$COMPONENT_ID_PREFIX$$$ITEM.ApplyID$').trigger('click');
+    $%ELSE$
+    var event = false;
+    $$ITEM.QLR()$
+    $%ENDIF$
+  });
+  $%ENDIF$
+
+  $('#$$ITEM.ID()$').on('keyup', function(e){
+    var key = e.which;
+
+    switch(key){
+      case 17: case 18: case 91:                    // ctrl, alt, windows keys
+      case 33: case 34:                             // page up and page down keys
+      case 35: case 36:                             // home and end keys
+      case 37: case 39:                             // left and right keys
+      case 45: case 46:                             // insert and delete keys
+      case 9: case 10: case 27:            // tab, return, escape keys
+      break;                                      // no AJAX call
+      case 13:
+        var selectedItem = $('#$$ITEM.ID()$_autocompleteResults .instrumentWrapper.selected');
+        var clickItem = $(selectedItem).children().first();
+        if (clickItem) {
+          $(clickItem).trigger('click');
+        }
+      break;
+      case 40: case 38:                             // up and down keys : trigger selection, no AJAX call
+        if ($('#$$ITEM.ID()$_autocompleteResults').is(':visible')) {
+          var selectedItem = $('#$$ITEM.ID()$_autocompleteResults .instrumentWrapper.selected');
+          if (!selectedItem.length) {
+            if (key == 40) $('#$$ITEM.ID()$_autocompleteResults').find('.instrumentWrapper').first().addClass('selected');
+            if (key == 38) $('#$$ITEM.ID()$_autocompleteResults').find('.instrumentWrapper').last().addClass('selected');
+          } else {
+            $(selectedItem).removeClass('selected');
+            if (key == 40) $(selectedItem).next().addClass('selected');
+            if (key == 38) $(selectedItem).prev().addClass('selected');
+          }
+        }
+      break;
+      default:                                      // all other keys
+        if ($(this).val().length > 2) {
+          $('#$$ITEM.ID()$').val($(this).val());
+          ss.set('$$ITEM.ID()$_searchString', $(this).val());
+          autocompleteRequest_$$ITEM.ID()$.setup();
+        } else {
+          $('#$$ITEM.ID()$_autocompleteResults').hide();
+        }
+    }
+    e.preventDefault();
+  });
+
+  $('#$$ITEM.ID()$').on('focus', function(e){
+    setTimeout((function(el) {
+      var strLength = el.value.length;
+      return function() {
+          if(el.setSelectionRange !== undefined) {
+              el.setSelectionRange(strLength, strLength);
+          } else {
+              $(el).val(el.value);
+          }
+    }}(this)), 0);
+  });
+  
+  $%IF ITEM.HintText != ''$
+      $('#$$ITEM.ID()$_selectedItems').find('span.selectedinstrument').find('span').attr('title','$$ITEM.HintText$');
+  $%ENDIF$
+  
+  addWidget("", "$$!NAMESPACE$", "$$ITEM.ID()$");
+});
+</script>
+$%ENDIF$

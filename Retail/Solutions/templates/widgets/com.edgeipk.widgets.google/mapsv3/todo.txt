@@ -1,0 +1,51 @@
+HIGH PRIORITY NEEDS
+Support different coloured markers
+ - including on same map. E.g. my accident location, other local incidents, or address of witnesses
+Positioning of Browse / move (or even not display)
+Map in question edit mode (set a location)
+ - drag and drop after initial position setting
+
+DONE Live update between address fields and maps (QLR)
+DONE zoom level
+DONE default position and zoom level if no data provided - or default location (E.g. Netherlands)
+
+support multiple addresses / long/lat
+
+
+
+MEDIUM PRIORITY NEEDS
+Support various marker icon styles
+
+map type options
+ + initialType
+ + initialZoom
+ + enableMapTypes
+ - mapTypeControlOptions
+   + style
+   - position
+   - mapTypes
+ + navControl
+ - navControlOptions
+   + style
+   - postition
+ + disableDoubleClickZoom
+ + draggable
+ - scaleControl
+ - scaleControlOptions
+   - style
+   - position
+ - streetViewControl
+
+DONE Mouse over marker shows full address (title)
+Overlay box text
+
+
+
+
+
+
+
+NICE TO HAVES
+ - Default locations and zoom level for countries within widget
+ - Overlay complex text / pictures (html?)
+ - add / delete point in multiple points map

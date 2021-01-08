@@ -1,0 +1,23 @@
+<script>
+$(document).ready(function(){
+    $(".ext-cards-rows-options .tc-icon-position-before").click(function () {
+        $('.ext-table-with-view-options tr').css('height', '');
+        $(".ext-table-with-view-options").removeClass("ext-cards-rows");
+        $(".ext-cards-rows-options .tc-icon-position-before").removeClass("ext-cards-rows-option-active");
+        $(this).addClass("ext-cards-rows-option-active");     
+        if($(this).hasClass("ext-grid-view")) {
+            $(".ext-table-with-view-options").addClass("ext-cards-rows");
+            setCardsHeight()  
+        }
+    });  
+    function setCardsHeight() {
+        $('.ext-cards-rows tr').css('height', 'auto');
+        var maxHeight = 0;
+        $('.ext-cards-rows tr').each(function(){
+           maxHeight = $(this).height() > maxHeight ? $(this).height() : maxHeight;
+        });
+        $('.ext-cards-rows tr').css('height', maxHeight);
+    }
+    window.addEventListener("resize", setCardsHeight);   
+})
+</script>

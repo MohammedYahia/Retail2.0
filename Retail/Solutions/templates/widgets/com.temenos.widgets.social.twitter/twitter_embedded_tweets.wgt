@@ -1,0 +1,6 @@
+<blockquote class="twitter-tweet" $%IF ITEM.width != ""$width="$$ITEM.width$"$%ENDIF$ $%IF ITEM.height != ""$height="$$ITEM.height$"$%ENDIF$ $%IF ITEM.lang != ""$lang="$$ITEM.lang$"$%ENDIF$ $%IF ITEM.align != ""$align="$$ITEM.align$"$%ENDIF$  $%IF ITEM.theme != ""$data-theme="$$ITEM.theme$"$%ENDIF$ $%IF ITEM.link-color != ""$data-link-color="$$ITEM.link-color$"$%ENDIF$ $%IF ITEM.dnt == "Y"$data-dnt="true"$%ENDIF$ $%IF ITEM.conversation != "Y"$data-conversation="none"$%ENDIF$ $%IF ITEM.cards != "Y"$data-cards="hidden"$%ENDIF$>
+	<p>Loading tweet...
+	<a href="$$ITEM.URL$">Tweet link</a></p> 
+</blockquote>
+
+$%INCLUDE widgets/com.temenos.widgets.social.twitter/inc_twitterRegisterWidget.wgt$$%ENDINCLUDE$

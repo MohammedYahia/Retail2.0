@@ -1,0 +1,16 @@
+<!-- $Revision: 1.2 $ -->
+<link type="text/css" href="./templates/widgets/com.temenos.theme/jquery-ui/css/Temenos/jquery-ui-1.10.4.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/widgets/com.temenos.theme/jquery-ui/js/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="./templates/widgets/com.temenos.theme/jquery-ui/js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="./templates/widgets/com.temenos.theme/jquery-ui/js/jquery.dialogextend.min.js"></script>
+
+<style type="text/css">
+	.ui-widget-content {
+		xxbackground-image: none !important;
+	}
+	
+	.ui-state-default {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+</style>

@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Actions>
+		<Action>
+			<Key>Login</Key>
+			<Name>Login</Name>
+			<Phase>Login.Login</Phase>
+		</Action>
+		<Action>
+			<Key>HomePage</Key>
+			<Name>Home Page</Name>
+			<Phase>Home.Home</Phase>
+		</Action>	
+		
+		<Action>
+			<Key>Accounts</Key>
+			<Name>Accounts Home</Name>
+			<Phase>Home.Accounts</Phase>
+		</Action>
+
+		<Action>
+			<Key>Portfolios</Key>
+			<Name>Portfolios Home</Name>
+			<Phase>Home.Portfolios</Phase>
+		</Action>
+		
+		<Action>
+			<Key>TransactionOverview</Key>
+			<Name>Transaction Overview</Name>
+			<Phase>Home.TransactionOverview</Phase>
+		</Action>
+		
+		<Action>
+			<Key>Messages</Key>
+			<Name>Messages</Name>
+			<Phase>Home.Messages</Phase>
+		</Action>
+
+		<Action>
+			<Key>Loans</Key>
+			<Name>Loans Home</Name>
+			<Phase>Home.Loans</Phase>
+		</Action>
+
+		<Action>
+			<Key>FindATM</Key>
+			<Name>Find ATM</Name>
+			<Phase>Home.FindATM</Phase>
+		</Action>
+
+		<Action>
+			<Key>Deposits</Key>
+			<Name>Deposits Home</Name>
+			<Phase>Home.Deposits</Phase>
+		</Action>
+		
+		<Action>
+			<Key>ManagePayees</Key>
+			<Name>Beneficiary Home</Name>
+			<Phase>Home.ManagePayees</Phase>
+		</Action>
+		
+		<Action>
+			<Key>LogOff</Key>
+			<Name>Log Off</Name>
+			<Phase>Home.LogOff</Phase>
+		</Action>
+		
+		<Action>
+			<Key>Discover</Key>
+			<Name>Discover</Name>
+			<Phase>Home.Discover</Phase>
+		</Action>
+		
+		<Action>
+			<Key>ApplicationSettings</Key>
+			<Name>ApplicationSettings</Name>
+			<Phase>Home.ApplicationSettings</Phase>
+		</Action>
+		
+		<Action>
+			<Key>CustomerProfile</Key>
+			<Name>CustomerProfile</Name>
+			<Phase>Home.CustomerProfile</Phase>
+		</Action>
+		
+		<Action>
+			<Key>ExchangeRates</Key>
+			<Name>Exchange Rates</Name>
+			<Phase>Home.ExchangeRates</Phase>
+		</Action>
+		<Action>
+			<Key>OpportunityDetails</Key>
+			<Name>Opportunity Details</Name>
+			<Phase>Home.OpportunityDetails</Phase>
+		</Action>	
+
+		<Action>
+			<Key>InterstitialPage</Key>
+			<Name>Interstitial Page</Name>
+			<Phase>InterstitialPage.InterstitialPage</Phase>
+		</Action>	
+		
+		<Action>
+			<Key>Understand</Key>
+			<Name>Understand</Name>
+			<Phase>Home.PFMUnderstand</Phase>
+		</Action>
+		
+		<Action>
+			<Key>Plan</Key>
+			<Name>Plan</Name>
+			<Phase>Home.PFMPlan</Phase>
+		</Action>
+		
+		<Action>
+			<Key>UncategorisedTransactions</Key>
+			<Name>UncategorisedTransactions</Name>
+			<Phase>Home.PFMUncategorisedTransactions</Phase>
+		</Action>
+		
+		<Action>
+			<Key>AccountAggregation</Key>
+			<Name>AccountAggregation</Name>
+			<Phase>Home.AccountAggregation</Phase>
+		</Action>
+		<Action>
+			<Key>ManageConsents</Key>
+			<Name>ManageConsents</Name>
+			<Phase>Home.ManageConsents</Phase>
+		</Action>
+	</Actions>
+	
+	<UtilityPaymentProduct>
+		<PaymentProduct>DOMESTIC</PaymentProduct>
+		<TransactionType>BC BCIB</TransactionType>
+	</UtilityPaymentProduct>
+
+	<Currencies>
+		<Currency>
+			<Key>USD</Key>
+			<Symbol>&#x24;</Symbol>
+		</Currency>
+		<Currency>
+			<Key>GBP</Key>
+			<Symbol>&#xA3;</Symbol>
+		</Currency>
+		<Currency>
+			<Key>EUR</Key>
+			<Symbol>&#x20AC;</Symbol>
+		</Currency>
+		<Currency>
+			<Key>JPY</Key>
+			<Symbol>&#xA5;</Symbol>
+		</Currency>
+		<Currency>
+			<Key>AED</Key>
+			<Symbol>AED</Symbol>
+		</Currency>
+		<Currency>
+			<Key>AMD</Key>
+			<Symbol>AMD</Symbol>
+		</Currency>
+		<Currency>
+			<Key>ARS</Key>
+			<Symbol>ARS</Symbol>
+		</Currency>
+		<Currency>
+			<Key>AUD</Key>
+			<Symbol>AUD</Symbol>
+		</Currency>
+		<Currency>
+			<Key>AZN</Key>
+			<Symbol>AZN</Symbol>
+		</Currency>
+		<Currency>
+			<Key>CAD</Key>
+			<Symbol>CAD</Symbol>
+		</Currency>
+		<Currency>
+			<Key>CHF</Key>
+			<Symbol>CHF</Symbol>
+		</Currency>
+		<Currency>
+			<Key>CNY</Key>
+			<Symbol>CNY</Symbol>
+		</Currency>
+		<Currency>
+			<Key>DKK</Key>
+			<Symbol>DKK</Symbol>
+		</Currency>
+		<Currency>
+			<Key>GEL</Key>
+			<Symbol>GEL</Symbol>
+		</Currency>
+		<Currency>
+			<Key>HKD</Key>
+			<Symbol>HKD</Symbol>
+		</Currency>
+		<Currency>
+			<Key>INR</Key>
+			<Symbol>INR</Symbol>
+		</Currency>
+		<Currency>
+			<Key>KWD</Key>
+			<Symbol>KWD</Symbol>
+		</Currency>
+		<Currency>
+			<Key>KGS</Key>
+			<Symbol>KGS</Symbol>
+		</Currency>
+		<Currency>
+			<Key>KZT</Key>
+			<Symbol>KZT</Symbol>
+		</Currency>
+		<Currency>
+			<Key>LBP</Key>
+			<Symbol>LBP</Symbol>
+		</Currency>
+		<Currency>
+			<Key>LKR</Key>
+			<Symbol>LKR</Symbol>
+		</Currency>
+		<Currency>
+			<Key>NOK</Key>
+			<Symbol>NOK</Symbol>
+		</Currency>
+		<Currency>
+			<Key>NPR</Key>
+			<Symbol>NPR</Symbol>
+		</Currency>
+		<Currency>
+			<Key>NZD</Key>
+			<Symbol>NZD</Symbol>
+		</Currency>
+		<Currency>
+			<Key>PHP</Key>
+			<Symbol>PHP</Symbol>
+		</Currency>
+		<Currency>
+			<Key>PLN</Key>
+			<Symbol>PLN</Symbol>
+		</Currency>
+		<Currency>
+			<Key>QAR</Key>
+			<Symbol>QAR</Symbol>
+		</Currency>
+		<Currency>
+			<Key>RUB</Key>
+			<Symbol>RUB</Symbol>
+		</Currency>
+		<Currency>
+			<Key>SAR</Key>
+			<Symbol>SAR</Symbol>
+		</Currency>
+		<Currency>
+			<Key>SEK</Key>
+			<Symbol>SEK</Symbol>
+		</Currency>
+		<Currency>
+			<Key>SGD</Key>
+			<Symbol>SGD</Symbol>
+		</Currency>
+		<Currency>
+			<Key>THB</Key>
+			<Symbol>THB</Symbol>
+		</Currency>
+		<Currency>
+			<Key>TWD</Key>
+			<Symbol>TWD</Symbol>
+		</Currency>
+		<Currency>
+			<Key>UZS</Key>
+			<Symbol>UZS</Symbol>
+		</Currency>
+		<Currency>
+			<Key>XAI</Key>
+			<Symbol>XAI</Symbol>
+		</Currency>
+		<Currency>
+			<Key>XAG</Key>
+			<Symbol>XAG</Symbol>
+		</Currency>
+		<Currency>
+			<Key>XAU</Key>
+			<Symbol>XAU</Symbol>
+		</Currency>
+		<Currency>
+			<Key>XAV</Key>
+			<Symbol>XAV</Symbol>
+		</Currency>
+		<Currency>
+			<Key>XIN</Key>
+			<Symbol>XIN</Symbol>
+		</Currency>
+		<Currency>
+			<Key>ZAR</Key>
+			<Symbol>ZAR</Symbol>
+		</Currency>
+	</Currencies>
+
+	<Languages>
+		<Language>
+			<Key>1</Key>
+			<Code>en</Code>
+			<Alias>English</Alias>
+			<Name>English</Name>
+			<Default>Y</Default>
+		</Language>
+		<Language>
+			<Key>2</Key>
+			<Code>fr</Code>
+			<Alias>French</Alias>
+			<Name>French</Name>
+			<Default>N</Default>
+		</Language>
+	</Languages>
+
+	<TransactionCodes>
+		<TransactionCode>
+			<Description>Internal Credit</Description>
+			<Code>121</Code>
+		</TransactionCode>
+		<TransactionCode>
+			<Description>Internal Debit</Description>
+			<Code>282</Code>
+		</TransactionCode>
+		<TransactionCode>
+			<Description>Standing Order Credit</Description>
+			<Code>139</Code>
+		</TransactionCode>
+		<TransactionCode>
+			<Description>Standing Order</Description>
+			<Code>214</Code>
+		</TransactionCode>
+		<TransactionCode>
+			<Description>Account Transfer Charges</Description>
+			<Code>234</Code>
+		</TransactionCode>
+		<TransactionCode>
+			<Description>Outward Cheque - Dr</Description>
+			<Code>201</Code>
+		</TransactionCode>
+		<TransactionCode>
+			<Description>Outward Loc Clearing Payment</Description>
+			<Code>212</Code>
+		</TransactionCode>
+		<TransactionCode>
+			<Description>Outward Clearing Charges</Description>
+			<Code>232</Code>
+		</TransactionCode>
+		<TransactionCode>
+			<Description>Outward Telex Payment</Description>
+			<Code>210</Code>
+		</TransactionCode>
+		<TransactionCode>
+			<Description>Outward Telex-Swift Charges</Description>
+			<Code>230</Code>
+		</TransactionCode>
+		<TransactionCode>
+			<Description>POA credit</Description>
+			<Code>55</Code>
+		</TransactionCode>
+		<TransactionCode>
+			<Description>POA Debit</Description>
+			<Code>1</Code>
+		</TransactionCode>
+	</TransactionCodes>
+	<CardStatusCodes>
+		<CardStatus>
+			<Key>BLOCKED</Key>
+			<Description>Block card usage (until you un-block it)</Description>
+			<Status>ACTIVE</Status>
+		</CardStatus>
+		<CardStatus>
+			<Key>LOST</Key>
+			<Description>Report card lost</Description>
+			<Status>ACTIVE</Status>
+		</CardStatus>
+		<CardStatus>
+			<Key>STOLEN</Key>
+			<Description>Report card stolen</Description>
+			<Status>ACTIVE</Status>
+		</CardStatus>
+		<CardStatus>
+			<Key>DAMAGED</Key>
+			<Description>Report card damaged</Description>
+			<Status>ACTIVE</Status>
+		</CardStatus>
+		<CardStatus>
+			<Key>ACTIVE</Key>
+			<Description>Activate card (card received safely)</Description>
+			<Status>CARD.ISSUED</Status>
+		</CardStatus>
+		<CardStatus>
+			<Key>LOST</Key>
+			<Description>Report card Lost</Description>
+			<Status>CARD.ISSUED</Status>
+		</CardStatus>
+		<CardStatus>
+			<Key>STOLEN</Key>
+			<Description>Report card Stolen</Description>
+			<Status>CARD.ISSUED</Status>
+		</CardStatus>		
+		<CardStatus>
+			<Key>DAMAGED</Key>
+			<Description>Report card damaged</Description>
+			<Status>CARD.ISSUED</Status>
+		</CardStatus>		
+		<CardStatus>
+			<Key>UNBLOCK</Key>
+			<Description>Un-block card (allow card to be used again)</Description>
+			<Status>BLOCKED</Status>
+		</CardStatus>
+		<CardStatus>
+			<Key>LOST</Key>
+			<Description>Report card lost</Description>
+			<Status>BLOCKED</Status>
+		</CardStatus>
+		<CardStatus>
+			<Key>STOLEN</Key>
+			<Description>Report card stolen</Description>
+			<Status>BLOCKED</Status>
+		</CardStatus>
+		<CardStatus>
+			<Key>ACTIVE</Key>
+			<Description>Activate card (card received safely)</Description>
+			<Status>NOT.ACTIVATED</Status>
+		</CardStatus>		
+		<CardStatus>
+			<Key>DAMAGED</Key>
+			<Description>Report card damaged</Description>
+			<Status>NOT.ACTIVATED</Status>
+		</CardStatus>			
+	</CardStatusCodes>
+		<PSD2Consents>
+		<PSD2Consent>
+            <Key>allPsd2</Key>
+            <Title>Account Information|Balance Details|Transactions History</Title>
+			<Description>Account information for your selected account(s) including; Account Identifiers, Account Name(s), Account Currency, Account Type, Account Status, Additional Account Details.|Balance details of the selected account(s) including a range of available, opening and closed balances. This will include and exclude additional overdrafts or limits linked to you and your accounts.|A list of transactions for your selected account(s). The data will include payer and payee details, amount (including currency), transaction types, references and additional transaction transparency details where applicable.</Description>                                   
+		</PSD2Consent>  
+		<PSD2Consent>
+            <Key>accounts</Key>
+            <Title>Account Information</Title>
+			<Description>Account information for your selected account(s) including; Account Identifiers, Account Name(s), Account Currency, Account Type, Account Status, Additional Account Details.</Description>
+		</PSD2Consent>          
+		<PSD2Consent>
+            <Key>balances</Key>
+            <Title>Balance Details</Title>                  
+			<Description>Balance details of the selected account(s) including a range of available, opening and closed balances. This will include and exclude additional overdrafts or limits linked to you and your accounts.</Description>
+		</PSD2Consent>          
+		<PSD2Consent>
+            <Key>transactions</Key>
+            <Title>Transactions History</Title>
+			<Description>A list of transactions for your selected account(s). The data will include payer and payee details, amount (including currency), transaction types, references and additional transaction transparency details where applicable.</Description>                                   
+		</PSD2Consent>          
+	</PSD2Consents>
+</Configuration>

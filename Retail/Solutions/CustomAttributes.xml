@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><CustomAttributes>
+  <Entity
+    ClassName="com.acquire.intelligentforms.entities.Project"
+    RequiredTabNames="Version"
+    >
+    <RequiredAttribute
+      ComponentType="javax.swing.JLabel"
+      DisplayOnNewLine="-1"
+      Label="&lt;html&gt;&lt;body&gt;These values represents the overall &lt;b&gt;Version&lt;/b&gt; for this project.&lt;br&gt;&lt;br&gt;You should follow the agreed strategy for updating these values and ensure consistency across all your&lt;br&gt;Business Components.&lt;br&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;"
+      Listener="false"
+      Mandatory="false"
+      Name="InfoLabel"
+      SpellCheck="false"
+      Tab="Version"
+      Usage="17"
+      />
+    <RequiredAttribute
+      ComponentType="javax.swing.JTextField"
+      ComponentValue="NUMERIC"
+      DisplayOnNewLine="-1"
+      HelpText="The major version for this project file"
+      Label="Major"
+      Listener="false"
+      Mandatory="true"
+      Name="Major"
+      SpellCheck="false"
+      Tab="Version"
+      Usage="1"
+      />
+    <RequiredAttribute
+      ComponentType="javax.swing.JTextField"
+      ComponentValue="NUMERIC"
+      DisplayOnNewLine="-1"
+      HelpText="The minor version for this project file"
+      Label="Minor"
+      Listener="false"
+      Mandatory="true"
+      Name="Minor"
+      SpellCheck="false"
+      Tab="Version"
+      Usage="1"
+      />
+    <RequiredAttribute
+      ComponentType="javax.swing.JTextField"
+      ComponentValue="NUMERIC"
+      DisplayOnNewLine="-1"
+      HelpText="The revision version for this project file"
+      Label="Revision"
+      Listener="false"
+      Mandatory="true"
+      Name="Revision"
+      SpellCheck="false"
+      Tab="Version"
+      Usage="1"
+      />
+  </Entity>
+</CustomAttributes>

@@ -1,0 +1,30 @@
+<div id="$$ITEM.ID()$" class="$%IF ITEM.RunAnimation == "Y"$tc-card-animated $%ENDIF$ $$ITEM.STYLES().SectionStyle$ $$ITEM.EXTRA_STYLES$" 
+    style="$$ITEM.INLINE_STYLES().SectionStyle$; $$ITEM.EXTRA_INLINE_STYLES$;
+	$%IF ITEM.IS_HIDDEN() == "true"$;display: none;$%ENDIF$
+	$%IF ITEM.BG_IMG != ""$
+		background-image: url($$ITEM.BG_IMG$);
+		background-size: cover;
+
+	$%ENDIF$
+	$%IF ITEM.RunAnimation == "Y"$
+		$%IF ITEM.Duration != ""$;transition: all $$ITEM.Duration$s;$%ENDIF$
+		$%IF ITEM.InitialOpacity != ""$opacity: $$ITEM.InitialOpacity$;$%ENDIF$
+		transform: $%IF ITEM.InitialScale != ""$scale($$ITEM.InitialScale$) $%ENDIF$
+	           $%IF ITEM.InitialXOffset != ""$translateX($$ITEM.InitialXOffset$) $%ENDIF$
+	           $%IF ITEM.InitialYOffset != ""$translateY($$ITEM.InitialYOffset$) $%ENDIF$
+	           $%IF ITEM.InitialXRotation != ""$rotateX($$ITEM.InitialXRotation$deg)$%ENDIF$
+	           $%IF ITEM.InitialYRotation != ""$rotateY($$ITEM.InitialYRotation$deg)$%ENDIF$
+	          ;
+	$%ENDIF$
+    "
+>
+	$$FORMCONTENT$
+</div>
+
+$%IF ITEM.Perspective != ""$
+<script type="text/javascript">
+  $(function() {
+	  $("#$$ITEM.ID()$").parent()[0].style.perspective = "$$ITEM.Perspective$"
+  })
+</script>
+$%ENDIF$

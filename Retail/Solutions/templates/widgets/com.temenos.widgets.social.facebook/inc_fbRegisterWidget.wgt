@@ -1,0 +1,3 @@
+<script type="text/javascript">
+    addWidget("com.temenos.widgets.social.facebook", "$$!NAMESPACE$", "");
+</script>

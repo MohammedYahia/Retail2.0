@@ -1,0 +1,46 @@
+
+
+<div class="tc-progressbar-wrapper" id="$$ITEM.ID()$_wrapper">
+    <div id="$$ITEM.ID()$" class="$$ITEM.STYLES().ProgressBarStyle$">
+    	$$ITEM.EC_GENERATE()$
+    </div>
+    <div class="tc-progressbar-line"></div>
+    <div class="tc-progressbar-marker-wrapper" >
+        <div class="tc-progressbar-highlight"></div>
+        <div class="tc-progressbar-marker">&nbsp;</div>
+    </div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+    $(function() {
+    	addWidget("PBar", "", "$$ITEM.ID()$");
+
+	// seems to help ios find steps after ajax reload...
+	setTimeout( function() {
+		progressBar.init( {
+			id: "$$ITEM.ID()$"
+		});
+	}, 0);
+
+        var pbResizeTimer;
+        $(window).on("resize", function(e) {
+        	clearTimeout(pbResizeTimer);
+        	pbResizeTimer = setTimeout( function() {
+        		progressBar.redraw(true);
+        	}, 300);
+        	
+        });
+    });
+
+//Global widget hooks
+	function afterElemShownPBar$$ITEM.ID()$(ns, p_el, p_naType) {
+		if ($(p_el).is(".tc-progressstep")) {
+			$(p_el).css("display", "inline-block")
+		}
+		progressBar.redraw(true);
+	}
+	function afterElemHiddenPBar$$ITEM.ID()$() {
+		progressBar.redraw(true);
+	}
+
+</script>

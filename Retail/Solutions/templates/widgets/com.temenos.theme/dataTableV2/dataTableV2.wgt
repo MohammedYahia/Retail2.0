@@ -1,0 +1,322 @@
+<!-- $Revision: 1.7 $ -->
+<script type="text/javascript" src="./templates/widgets/com.temenos.theme/dataTableV2/js/jquery.dataTables.min.js"
+ language="javascript"></script>
+<script type="text/javascript" src="./templates/widgets/com.temenos.theme/dataTableV2/js/dataTables.responsive.min.js"></script>
+
+$$ITEM.EC_GENERATE()$
+<div id="form_$$ITEM.ID()$" style="display: none"></div>
+<style type="text/css">
+	#$$ITEM.ID()$_wrapper table.dataTable tr.odd td{
+		background-color: $$ITEM.OddRowsStyle.background-color$;
+	}
+	
+	#$$ITEM.ID()$_wrapper table.dataTable tr.odd td.sorting_1{
+		background-color: $$ITEM.OddRowsStyle.background-color$;
+		xopacity: 0.5;
+		font-weight: bold
+	}
+
+	#$$ITEM.ID()$_wrapper table.dataTable tr.even td{
+		background-color: $$ITEM.EvenRowsStyle.background-color$;
+	}
+	#$$ITEM.ID()$_wrapper table.dataTable tr.even td.sorting_1{
+		background-color: $$ITEM.EvenRowsStyle.background-color$;
+		font-weight: bold;
+		xopacity: 0.5;
+	}
+	
+	#$$ITEM.ID()$_wrapper.dataTables_wrapper .ui-toolbar{
+		padding: 10px;
+	}
+	
+	#$$ITEM.ID()$_wrapper .dataTables_filter {
+		float: none;
+	}
+	
+	#$$ITEM.ID()$_wrapper .dataTables_paginate{
+		float: none;
+	}
+	
+	#$$ITEM.ID()$_wrapper .ui-widget-header{
+		background-image: none;
+	}
+	
+	#$$ITEM.ID()$_wrapper .ui-button{
+		padding: 0px;
+	}
+
+}
+</style>
+<script type="text/javascript" charset="utf-8">
+	//<![CDATA[	
+	//restore live function
+	jQuery.fn.extend({
+		live: function (event, callback) {
+			if (this.selector) {
+				jQuery(document).on(event, this.selector, callback);
+			}
+		}
+	});
+
+	jQuery.extend(jQuery.fn.dataTableExt.oSort, {
+		"num-html-pre": function (a) {
+			var val = null;
+			if ($(a).find("input").length == 1) {
+				val = $("#" + $(a).find("input").attr('id')).val();
+				if (val == null) {
+					val = $(a).find("input").val();
+				}
+			} else {
+				val = $(a).find("span").text();
+			}
+			var x = val.replace(/<.*?>/g, "");
+			return parseFloat(x);
+		},
+
+		"num-html-asc": function (a, b) {
+			return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+		},
+
+		"num-html-desc": function (a, b) {
+			return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+		}
+	});
+
+	jQuery.extend(jQuery.fn.dataTableExt.oSort, {
+		"txt-html-pre": function (a) {
+			if ($(a).find("input").length == 1) {
+				val = $("#" + $(a).find("input").attr('id')).val();
+				if (val == null) {
+					val = $(a).find("input").val();
+				}
+			} else if ($(a).find("select").length == 1) {
+				val = $("#" + $(a).find("select").attr('id')).find("option:selected").text();
+				if (val == null) {
+					val = $(a).find("select option:selected").val();
+				}
+			} else if ($(a).find("textarea").length == 1) {
+				val = $(a).find("textarea").val();
+			} else {
+				val = $(a).find("span").text();
+			}
+			return val;
+		},
+
+		"txt-html-asc": function (a, b) {
+			return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+		},
+
+		"txt-html-desc": function (a, b) {
+			return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+		}
+	});
+
+
+
+	jQuery.extend(jQuery.fn.dataTableExt.oSort, {
+		"date-euro-pre": function (a) {
+			if ($(a).find("input").length == 1) {
+				a = $(a).find("input").val();
+			} else {
+				a = $(a).find("span").text();
+			}
+			if ($.trim(a) != '') {
+				var frDatea2 = a.toLowerCase().split('/');
+				var x = new Date(frDatea2[2], frDatea2[1], frDatea2[0]);
+			} else {
+				var x = new Date();  //old code 10000000000000; = l'an 1000 ...
+			}
+
+			return x;
+		},
+
+		"date-euro-asc": function (a, b) {
+			return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+		},
+
+		"date-euro-desc": function (a, b) {
+			return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+		}
+	});
+	
+	
+	
+
+//]]>
+</script>
+<script type="text/javascript" charset="utf-8">
+  //<![CDATA[
+$(document).ready(function() {
+	if ($$ITEM.NUMBER_OF_ROWS()$ == 0) {
+		$('#$$ITEM.ID()$ tr').last().remove();
+	}
+	try {
+		$("#$$ITEM.ID()$ .tc-table-action").closest("th").addClass("tc-table-action")
+		$("th[id$='_Selector']").addClass("tc-table-action")
+		var initialPage = $.cookie("page_$$ITEM.ID()$");
+		var oTableData = {
+				$%IF ITEM.RESPONSIVE_IND == "Y"$
+					responsive: true,
+				 	columnDefs: [{ responsivePriority: 1, targets: [0, 'tc-table-action', $$ITEM.RESP_PRIORITY_1$] },
+	            				 { responsivePriority: 2, targets: [$$ITEM.RESP_PRIORITY_2$] },
+	            				 { responsivePriority: 3, targets: [$$ITEM.RESP_PRIORITY_3$] },
+	        		],
+        		$%ENDIF$
+				"destroy": true,
+				"bJQueryUI": true,
+				//"pagingType": "full_numbers",
+				"pagingType": "simple_numbers",
+				"paging":	$%IF ITEM.PAGE_SIZE == "0" || ITEM.NUMBER_OF_ROWS() < ITEM.PAGE_SIZE $false$%ELSE$true$%ENDIF$,
+				"LengthChange": $%IF ITEM.PAGE_MENU != ""$true$%ELSE$false$%ENDIF$,
+				$%IF ITEM.PAGE_SIZE != "0" && ITEM.PAGE_MENU != ""$"lengthMenu": [$$ITEM.PAGE_MENU$],$%ENDIF$
+				//CAUTION: THE CODE BELOW IS FROM THEME 2.2. NEED TO REVISIT
+				
+				"pageLength": $$ITEM.PAGE_SIZE$,
+				//"displayStart": "$$ITEM.DATAITEM().VALUE()$".length == 0 ? 0 : Math.floor( parseInt("$$ITEM.DATAITEM().VALUE()$")/parseInt("$$ITEM.PAGE_SIZE$"))*parseInt("$$ITEM.PAGE_SIZE$"),
+				"displayStart": "$$ITEM.DATAITEM().VALUE()$".length == 0 ? 0 : Math.ceil(parseInt("$$ITEM.DATAITEM().VALUE()$")/parseInt("$$ITEM.PAGE_SIZE$")-1)*$$ITEM.PAGE_SIZE$,
+				//END OF CAUTION
+				"bFilter":	$%IF ITEM.SHOW_FILTER == "Y"$true$%ELSE$false$%ENDIF$,
+				"bSort":	$%IF ITEM.SHOW_SORT == "Y"$true$%ELSE$false$%ENDIF$,
+                "aoColumns": [$%FOREACH TABLE_CHILD IN TABLE$
+                                $%IF TABLE_CHILD.TYPE() == "Question"$
+                                    $%IF TABLE_CHILD.DATAITEM().TYPE() == "Date"$
+                                        {"sType":"date-euro"}
+                                    $%ELSE$
+                                        $%IF TABLE_CHILD.DATAITEM().TYPE() == "Number" ||  TABLE_CHILD.DATAITEM().TYPE() == "Decimal"$
+                                            {"sType":"num-html"}
+                                        $%ELSE$
+                                            {"sType":"txt-html"}
+                                        $%ENDIF$
+                                    $%ENDIF$
+                                $%ELSE$
+                                    {"sType":"txt-html"}
+                                $%ENDIF$
+                                $%IF TABLE_CHILD.IS_LAST() != "Y"$,$%ENDIF$
+                              $%ENDFOREACH$
+                              $%IF TABLE.HAS_SELECTOR() == "Y"$,null$%ENDIF$
+                              ],
+				"bInfo":	$%IF ITEM.SHOW_INFO == "Y"$true$%ELSE$false$%ENDIF$,
+				"bAutoWidth":	$%IF ITEM.ColumnSizing == "No layout"$true$%ELSE$false$%ENDIF$, 
+				"bStateSave":	$%IF ITEM.SAVE_STATE == "Y"$true$%ELSE$false$%ENDIF$,
+				"oLanguage": {
+					"sSearch":		$%IF ITEM.SEARCH_TEXT != ""$		"$$ITEM.SEARCH_TEXT$"$%ELSE$"Search"$%ENDIF$,
+					"sLengthMenu":		$%IF ITEM.PAGE_SIZE_TEXT != ""$		"$$ITEM.PAGE_SIZE_TEXT$"$%ELSE$"Display _MENU_ records per page"$%ENDIF$,
+					"sZeroRecords":		$%IF ITEM.ZERO_RECORDS_TEXT != ""$	"$$ITEM.ZERO_RECORDS_TEXT$"$%ELSE$"Nothing found - sorry"$%ENDIF$,
+					"sInfo":		$%IF ITEM.INFO_TEXT != ""$		"$$ITEM.INFO_TEXT$"$%ELSE$"Showing _START_ to _END_ of _TOTAL_ records"$%ENDIF$,
+					"sInfoEmpty":		$%IF ITEM.INFO_EMPTY_TEXT != ""$	"$$ITEM.INFO_EMPTY_TEXT$"$%ELSE$"Showing 0 to 0 of 0 records"$%ENDIF$,
+					"sInfoFiltered":	$%IF ITEM.INFO_FILTERED_TEXT != ""$	"$$ITEM.INFO_FILTERED_TEXT$"$%ELSE$"(filtered from _MAX_ total records)"$%ENDIF$,
+					"sEmptyTable":	$%IF ITEM.NoRecordsMessage != ""$	"$$ITEM.NoRecordsMessage$"$%ELSE$"No data available in table"$%ENDIF$,
+					"sLoadingRecords":	$%IF ITEM.LOADING_RECORDS_TEXT != ""$	"$$ITEM.LOADING_RECORDS_TEXT$"$%ELSE$"Loading..."$%ENDIF$,
+					"sProcessing":	$%IF ITEM.PROCESSING_TEXT != ""$	"$$ITEM.PROCESSING_TEXT$"$%ELSE$"Processing..."$%ENDIF$,
+$%COMMENT // not supported					sInfoPostFix : "",$
+$%COMMENT // not supported					sInfoThousands : ",",$
+$%COMMENT // not supported					sUrl : "",$
+					"oAria" : {
+						"sSortAscending":	$%IF ITEM.ARIA_SORT_ASCENDING_TEXT != ""$	"$$ITEM.ARIA_SORT_ASCENDING_TEXT$"$%ELSE$": activate to sort column ascending"$%ENDIF$,
+						"sSortDescending":	$%IF ITEM.ARIA_SORT_DESCENDING_TEXT != ""$	"$$ITEM.ARIA_SORT_DESCENDING_TEXT$"$%ELSE$": activate to sort column descending"$%ENDIF$
+					},
+					"oPaginate" : {
+						"sFirst":	$%IF ITEM.PAGINATE_FIRST_TEXT != ""$	"$$ITEM.PAGINATE_FIRST_TEXT$"$%ELSE$"<<"$%ENDIF$,
+						"sLast":	$%IF ITEM.PAGINATE_LAST_TEXT != ""$	"$$ITEM.PAGINATE_LAST_TEXT$"$%ELSE$">>"$%ENDIF$,
+						"sNext":	$%IF ITEM.PAGINATE_NEXT_TEXT != ""$	"$$ITEM.PAGINATE_NEXT_TEXT$"$%ELSE$">"$%ENDIF$,
+						"sPrevious":	$%IF ITEM.PAGINATE_PREVIOUS_TEXT != ""$	"$$ITEM.PAGINATE_PREVIOUS_TEXT$"$%ELSE$"<"$%ENDIF$
+					},
+				},
+				"asStripClasses": ["$$ITEM.STYLES().OddRowsStyle$", "$$ITEM.STYLES().EvenRowsStyle$"],
+				"fnCookieCallback": function (sName, oData, sExpires, sPath) {
+				    return sName + "="+JSON.stringify(oData)+"; path=" + sPath;
+				},
+				$%IF ITEM.GROUP_COL != ""$
+				"order": [[ $$ITEM.GROUP_COL$, '$$ITEM.COL_SORT_DIR$' ]],
+				"bSort":	true,
+				"bCaseInsensitive": true,
+				$%ENDIF$
+				"fnDrawCallback": function(){
+					//CORPORATE FIX - NOT IN THE THEME
+					UtilModule.fixSingleCheckBoxes();
+					$('th[id*="ShowHeading"]').css("display","");
+					//CORPORATE FIX END
+					//store the page number...
+					// $.cookie("page_$$ITEM.ID()$", $('#$$ITEM.ID()$').DataTable().page.info().page)
+
+					//create inputs in hidden form tag for values on all pages, so they get submitted to server...
+					var form = $("#form_$$ITEM.ID()$")[0];
+					// Encode a set of form elements from all pages as an array of names and values
+					var params = this.$('input,select').serializeArray();
+					$(form).empty()
+					// Iterate over all form elements
+					$.each(params, function () {
+						// If element doesn't exist in DOM
+						if (!$.contains(document, form[this.name])) {
+							// Create a hidden element
+							$(form).append(this.name).append(
+								$('<input>')
+									.attr('type', 'text')
+									.attr('name', this.name)
+									.val(this.value)
+							);
+						}
+					});
+					$('#$$ITEM.ID()$ td').bind('mouseenter', function () { $(this).parent().children().each(function(){$(this).addClass('$$ITEM.STYLES().RollOverStyle$'); }); });
+					$('#$$ITEM.ID()$ td').bind('mouseleave', function () { $(this).parent().children().each(function(){$(this).removeClass('$$ITEM.STYLES().RollOverStyle$'); }); });
+
+					$%IF ITEM.GROUP_COL != ""$
+						var api = this.api();
+					    var rows = api.rows( {page:'current'} ).nodes();
+					    var last=null;
+				 
+					    api.column($$ITEM.GROUP_COL$, {page:'current'} ).data().each( function ( group, i ) {
+					    	var gpText = $.trim($(group).text()).toUpperCase();
+					    	if ("$$ITEM.GROUP_FIRST_CHAR_ONLY$" == "Y") {
+					    		gpText = gpText.substring(0,1);
+					    	}
+							if ( last !== gpText ) {
+							    //$(rows).eq( i ).before('<tr class="group"><td colspan="6">'+gpText+'</td></tr>');
+							    $(rows).eq( i ).before('<tr class="group"><td colspan="' + api.columns()[0].length + '">'+gpText+'</td></tr>');
+							    last = gpText;
+							}
+					    } );
+					    $%IF ITEM.KEEP_GROUPED_COL != "Y"$
+					    	api.column($$ITEM.GROUP_COL$, {page:'current'} ).visible(false)
+					    $%ENDIF$
+				    $%ENDIF$
+				},
+			}
+
+			$%IF ITEM.RESPONSIVE_IND == "Y"$ 
+				var x = $('#$$ITEM.ID()$').DataTable(oTableData).columns.adjust().responsive.recalc();
+				setTimeout(function () { $(window).resize();}, 2000);
+			$%ELSE$
+				var oTable = $('#$$ITEM.ID()$').DataTable(oTableData);
+			$%ENDIF$
+
+
+		$(".dataTables_length select").addClass("tc-form-control tc-half-answer-width tc-half-answer-width tc-select-padding tc-rounded-1")
+								      .css("min-width", "0")
+
+        $%COMMENT$ Move sort icons into sibling div, to prevent wrapping. $%ENDCOMMENT$
+        $(".DataTables_sort_icon").each(function() {
+            $(this).css("float", "right").appendTo( $(this).prev() );
+        });
+        
+        $%COMMENT$ remove inline onclick sort handler $%ENDCOMMENT$
+        $(".DataTables_sort_wrapper a").prop("onclick", null).removeAttr("onclick href")
+
+		$%IF ITEM.SelectedRowStyle != ""$
+			$("#$$ITEM.ID()$  tbody tr").on("click", function(event){
+				//$("td.$$ITEM.SelectedRowStyle$", oTableData.fnGetNodes()).removeClass('$$ITEM.SelectedRowStyle$');
+				$(event.target).parent().find("td").addClass('$$ITEM.SelectedRowStyle$');
+			});
+			if ("$$ITEM.DATAITEM().VALUE()$" != "") {
+				$("#$$ITEM.ID()$_row_$$ITEM.DATAITEM().VALUE()$").find("td").addClass('$$ITEM.SelectedRowStyle$');
+			}
+		$%ENDIF$
+	}
+	
+	catch(e){
+		console.log(e);
+	}
+	
+});
+//]]>
+</script>

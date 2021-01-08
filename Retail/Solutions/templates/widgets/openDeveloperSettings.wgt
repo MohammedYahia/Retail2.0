@@ -1,0 +1,28 @@
+$$ITEM.EC_GENERATE()$
+
+<script>
+if(getOSName() == 'Android'){
+	
+	document.getElementById("$$ITEM.ID()$").onclick = null;
+	
+	document.getElementById("$$ITEM.ID()$").onclick = function(){
+		EdgeJavascriptInterface.openDeveloperSettings();
+	}
+
+}else{
+	document.getElementById('$$ITEM.ID()$').style.visibility = 'hidden';
+}
+
+
+function getOSName(){
+	var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+	if (/android/i.test(userAgent))
+	  return 'Android'
+	else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)
+	  return 'iOS'
+	else
+	  return 'Browser'
+ }
+ 
+</script>

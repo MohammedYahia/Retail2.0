@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security" xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:security="http://www.springframework.org/schema/security"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/security
+    http://www.springframework.org/schema/security/spring-security-3.2.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:component-scan base-package="com.temenos.security.oidc" />
+    <context:spring-configured />
+
+    <security:http entry-point-ref="authenticationEntryPoint">
+        <security:custom-filter after="BASIC_AUTH_FILTER" ref="oidcTokenValidationFilter" />
+        <security:session-management>
+            <security:concurrency-control max-sessions="1" />
+        </security:session-management>
+    </security:http>
+    <security:authentication-manager alias="am">
+        <security:authentication-provider ref="oidcAuthenticationProvider" />
+    </security:authentication-manager>
+
+    <beans:bean id="oidcTokenValidationFilter" class="com.temenos.security.oidc.filter.OidcTokenValidationFilter">
+        <beans:property name="authenticationManager" ref="am" />
+        <beans:property name="authenticationSuccessHandler">
+            <beans:bean class="com.temenos.security.oidc.filter.OidcAuthenticationSuccessHandler" />
+        </beans:property>
+    </beans:bean>
+    <beans:bean id="oidcAuthenticationFilter" class="com.temenos.security.oidc.filter.OidcAuthenticationFilter">
+        <beans:property name="authenticationManager" ref="am" />
+        <beans:property name="authenticationSuccessHandler">
+            <beans:bean class="com.temenos.security.oidc.filter.OidcAuthenticationSuccessHandler" />
+        </beans:property>
+    </beans:bean>
+
+    <!-- OIDC Authenticator -->
+
+    <beans:bean id="oidcAuthenticatorConfig" class="com.temenos.security.oidc.common.OidcAuthenticatorConfig">
+        <beans:property name="authHeaders">
+            <beans:set>
+                <beans:value>Authorization</beans:value>
+            </beans:set>
+        </beans:property>
+        <beans:property name="ignoredUriPatterns">
+            <beans:set>
+                <beans:value></beans:value>
+            </beans:set>
+        </beans:property>
+        <beans:property name="useRefreshToken" value="true" />
+        <beans:property name="savedIdTokenParam" value="savedIdToken" />
+        <beans:property name="savedRefreshTokenParam" value="savedRefreshToken" />
+        <beans:property name="tokenEndpointTimeout" value="10000" />
+        <beans:property name="expiryDelayAllowance" value="0" />
+        <beans:property name="tokenIdleTimeout" value="0" />
+    </beans:bean>
+
+    <beans:bean id="TokenValidatorConfig" class="com.temenos.security.oidc.common.TokenValidationConfig">
+        <beans:property name="idTokenEncrypted" value="false" />
+        <beans:property name="idTokenSigned" value="true" />
+    </beans:bean>
+
+
+    <!-- Validations -->
+    
+    <beans:bean id="claim" class="com.temenos.security.oidc.token.validator.ClaimValidator">
+        <beans:property name="claims">
+            <beans:list>
+                <beans:ref bean="exp" />
+                <beans:ref bean="iss" />
+                <beans:ref bean="aud" />
+                <beans:ref bean="sub" />
+                <beans:ref bean="iat" />
+            </beans:list>
+        </beans:property>
+    </beans:bean>
+
+
+    <beans:bean id="validatorComposite" class="com.temenos.security.oidc.token.validator.ValidatorComposite">
+        <beans:property name="validations">
+            <beans:list>
+                <beans:ref bean="algorithm" />
+                <beans:ref bean="claim" />
+                <beans:ref bean="signature" />
+            </beans:list>
+        </beans:property>
+    </beans:bean>
+    <!-- END Validation -->
+
+    <!-- OIDC Provider Config -->
+    <beans:bean id="oidcProviderConfig" class="com.temenos.security.oidc.common.OidcProviderConfig">
+        <beans:property name="oidcProviderConfigMap">
+            <beans:map>
+                <beans:entry key="DevIris" value-ref="oidcProviderServerDevIris" />
+            </beans:map>
+        </beans:property>
+        <beans:property name="selectedProvider" value="DevIris" />
+    </beans:bean>
+
+    <!-- OIDC Provider Selector End -->
+
+    <!-- OIDC provider Server -->
+
+    <beans:bean id="oidcProviderServerDevIris" class="com.temenos.security.oidc.common.OidcProviderServer">
+        <beans:property name="issuer" value="https://localhost:9443/oauth2/token" />
+        <beans:property name="authzEndpoint" value="https://localhost:9443/oauth2/authorize?prompt=consent" />
+        <beans:property name="tokenEndpoint" value="https://localhost:9443/oauth2/token" />
+        <beans:property name="pkEncoded" value="" />
+        <beans:property name="pkCertEncoded" value="" />
+        <beans:property name="pkCertFilePath" value="D:\\TC_Workspace\\Config\\BRP\\wso2carbon.jks" />
+        <beans:property name="pkJwksUri" value="https://localhost:9443/oauth2/jwks" />
+        <beans:property name="decryptingJwkEncoded" value="" />
+        <beans:property name="principalClaim" value="sub" />
+    </beans:bean>
+    <!-- End OIDC provider Server -->
+
+    <!-- Relying Party -->
+
+
+
+    <beans:bean id="relyingPartyConfig" class="com.temenos.security.oidc.common.RelyingPartyConfig">
+        <beans:property name="RelyingPartyClientMap">
+            <beans:map>
+                <beans:entry key="DevIris" value-ref="relyingPartyClientDevIris" />
+            </beans:map>
+        </beans:property>
+        <beans:property name="currentRP" value="DevIris" />
+    </beans:bean>
+
+    <beans:bean id="relyingPartyClientDevIris" class="com.temenos.security.oidc.common.RelyingPartyClient">
+        <beans:property name="tokenEndpointAuthMethod" value="" />
+        <beans:property name="grantType" value="AUTHORIZATION_CODE" />
+        <beans:property name="scope" value="openid profile" />
+        <beans:property name="clientId" value="Jsx1NkwOdc8Eo3SBOW_UoEPlyrca" />
+        <beans:property name="redirectUri" value="http://{host}:{port}/Retail/Login" />
+        <beans:property name="idTokenSignedAlg" value="RS256" />
+        <beans:property name="idTokenEncryptedAlg" value="RS256" />
+    </beans:bean>
+
+    <beans:bean id="defaultClientSecretProvider" class="com.temenos.security.oidc.filter.DefaultClientSecretProvider">
+        <beans:constructor-arg value="HkT4QCSZAiusf8hISmhyEzPn01ka" />
+    </beans:bean>
+    
+
+    <!-- END Relying Party -->
+
+</beans:beans>

@@ -1,0 +1,14 @@
+	<h3 id="Tab_Item_$$ITEM.ID()$" $%IF ITEM.HintText != ""$title="$$ITEM.HintText$"$%ENDIF$ 
+		class="tetris_tabHeader tc-accordion-header tc-ripple-effect"
+		style="position: relative; $%IF ITEM.IS_ITEM_HIDDEN() == "true"$display: none$%ENDIF$">
+		$%IF ITEM.DefaultIcon != ""$
+			<span style="display: inline-block; position: relative; top:3px; padding-right: 0.5rem" class="tc-accordion-icon icon-$$ITEM.DefaultIcon$"><span></span></span>
+		$%ENDIF$
+		<a href="#" id="$$ITEM.ID()$">$$ITEM.TabName$</a>
+		<span class="tc-accordion-icon tc-accordion-icon-state"><span></span></span>
+		<span class="tc-accordion-supp-text">$$ITEM.SuplimentaryText$</span>
+		<span class="tc-accordion-header-line"></span>
+	</h3>
+	<div id="Pane$$ITEM.ID()$" class="tc-accordion-pane $$ITEM.STYLES().SectionStyle$" style="$$ITEM.INLINE_STYLES().SectionStyle$">
+		$$FORMCONTENT$
+	</div>	

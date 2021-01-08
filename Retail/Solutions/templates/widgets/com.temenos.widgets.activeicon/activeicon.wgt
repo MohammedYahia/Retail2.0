@@ -1,0 +1,1 @@
+<div style="text-align:center;display:inline-block;"><i class="tc-icon tc-table-icon icon-$$ITEM.ICON$ $%IF ITEM.DATAITEM().VALUE() != '' AND ITEM.DATAITEM().VALUE() != 'NOIMAGE'$ tc-corporate-color $%ENDIF$"><span></span></i></div>

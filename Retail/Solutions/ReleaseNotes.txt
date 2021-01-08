@@ -1,0 +1,149 @@
+3.0<br />
+Default font now Arial as per Temenos brand guidelines
+Changed colors as per Temenos brand guidelines (and achieve minimum AA WCAG compliance)
+Changed logo as per Temenos brand guidelines
+Branding images in a subfolder (brand) to aid simpler rebranding.
+Center logo on Login page
+Add visited steps in progress bar
+Reduced button height
+
+2.5<br />
+End support for versions below UXP 6.1.2<br />
+Five new icons - edit-attributes, access-taxes, locate-hollow, add_above, add_below<br />
+Fix for datepickers and question level rules (resulting in js error in waiting state)<br />
+Carousel - padding at bottom conditional on having paging, or nav icons showing<br />
+Carousel - don't generate if only one panel<br />
+DataTable - incororate changes made by TCIB<br />
+Fix for tabbing when element in popup (make them display:none when popup is hidden)<br />
+Fix for table row click defect (null baseId)<br />
+<br />
+2.4<br />
+Three new icons - education, flow, umbrella<br />
+<br />
+2.3<br />
+New icons<br />
+Better handling of row click (with default button)<br />
+Empty message style changed to use class<br />
+Fix for activeMenuItem class in menu-item.wgt<br />
+Fixed spelling of makeTableRowsClickable function<br />
+<br />
+2.2<br />
+Addition of HighContrast sub-theme<br />
+Fix small z-index bug with menus,flyouts and sticky headers<br />
+Fix small animated card bug<br />
+Removed left/right padding for card-button-sections used in card-body<br />
+Added design to make buttons behave like tabs (td-tab-header-button)<br />
+	- logic needs to be applied to set the  tc-tab-header-selected class on the current 'tab'<br />
+	- can be done in the "Extra styles" field of the dialog<br />
+Created layout template for header with Mega-Menu<br />
+Add shadow to header<br />
+Addition of 1 rem spacing design (for all device sizes)<br />
+Added xl font size<br />
+General bug fixes<br />
+css and js have version number in name to prevent caching problems.<br />
+jQuery upgraded to 1.12.4.<br />
+<br />
+2.1<br />
+Added 'Number of rows to expand' for Tree Table.<br />
+Added ability to make table rows clickable - need to set design "td-table-button - default-action" on a button to enable<br />
+Fix to resizable dialogs.  Can also prevent resizing by specify class "tc-no-resize" on Class To Add field of trigger button<br />
+Created a new "td-chip" design.<br />
+Added classes tc-hidden, tc-hidden-xs, tc-hidden-sm, tc-hidden-md, tc-hidden-lg and tc-hidden-xl<br />
+Added "Year Range" to calendar widget - which appears in year dropdown in datepicker.<br />
+Fix to answer-after-checkbox design at xs, which caused scrolling (when a hybrid app)<br />
+<br />
+2.0<br />
+NOTE: If upgrading from an older version, the ThemeUpgrader will need to be run<br />
+Add animation to cards (info-tiles) on page load<br />
+Moved widgets into new folder, to make it easier to identify theme widgets.<br />
+Keep tooltips for images<br />
+New option for badge types (error, warning, confirmation, status, accent and palette)<br />
+Light MegaMenu design (and general responsive fixees to mega menus)<br />
+All non-tertiary buttons now have appropriately coloured borders, so the heights match with tertiary buttons<br />
+Fix table header text colour for datagrid V2 based tables.<br />
+Added "Empty Table Message" to table designs.<br />
+Namespaced the widget with tw- prefix (to avoid any clashes with existing versions in different folders)<br />
+Icon files renamed to T-Fonticons (and font family)<br />
+Created new widget to just display Icon (user can control size and other styles)<br />
+Introduction of Chart designs<br />
+Added palette screen to reference project (and re-order some of the other menu items)<br />
+<br />
+1.8<br />
+Allow developer to bypass waiting mechanism by using class "tc-no-waiting" to hierarchy (could be answer/button or in a section)<br />
+Added "status" type growl.<br />
+Removed td-growl-notification (duplicate of td-growl-confirmation - which should be used)<br />
+Added Status colors to Theme Configurator<br />
+Added ability to change text when button is clicked (e.g - show->hide )<br />
+Make sure treeTable rows are ordered correctly, rather than just rely on data-group instance order.<br />
+Add treeView zoom classes, so elements can be hidden/resized when zoomed in/out<br />
+<br />
+1.7.5<br />
+Remove duplicate names/ids from elements when looping a carousel<br />
+More forgiving version of normalise card heights design (columns can be in ItemGroups)<br />
+Allow mini-cards to be normalised.<br />
+More robust hiding of tooltips after phase animation<br />
+Use scrollHeight for vertical scrolling phase animations<br />
+Fix for responsive tables in tabs<br />
+First cut of MegaMenu in theme and reference project<br />
+First cut of TreeView in theme and reference project<br />
+<br />
+1.7.4<br />
+Fix for growl messages from inside components<br />
+Correct shadow colour for radios in error when they get focus/hover.<br />
+Only show tool tip if element is still visible on page.<br />
+<br />
+1.7.3<br />
+Incorporate some online help for ThemeConfigurator.<br />
+Added some extra styling for ThemeConfigurator.<br />
+<br />
+1.7.2<br />
+Increased button padding if icon is above/below text.<br />
+Don't wrap "label-buttons" in card toolbar.<br />
+Set min-height on all tc-buttons.<br />
+<br />
+<br />
+1.7.1<br />
+Allow popup dialogs to be customised by adding classes to trigger button.  Examples are removing X (close icon), <br />
+	changing colour of titlebar and preventing dialog from being dragged.<br />
+Introduced Theme Configurator.<br />
+Introduced design which keeps all card heights the same (td-responsive-row - normalise card heights).<br />
+Support for popups triggered from within a row-based table (i.e. not a linear table).<br />
+Correctly styling for some disabled elements.<br />
+<br />
+1.6.4<br />
+Make menu pop-ups aware of scaling.  Any scaling is reversed, so they are still legible.<br />
+Remove unused images, and rename existing images to make re-branding easier.<br />
+<br />
+1.6.3<br />
+Make sure "Please Wait" timer is only cancelled if there is nothing on the queue.<br />
+Info tile buttons were submitting twice - this has been rectified.<br />
+Move dummy menu styles into T-Base, in case no accordion menu is on page.<br />
+<br />
+1.6.2 <br />
+Ensured use of jquery ui 1.10.4.<br />
+Removed RTParent from Footer layout template.<br />
+Changed default title (in browser) to Temenos Channels.<br />
+<br />
+1.6.1<br />
+Add hideDialog function to multiFunctionButtonUtil script.<br />
+Maintain page state after ajax change.<br />
+Add looping and extra animation effects as options to carousel.<br />
+<br />
+1.5.1<br />
+Remove FooTable library, and replaced with responsive plugin to jquery data-tables.<br />
+Added shift/unshift phase animation.<br />
+Fixes for close icon on dialogs (and improved opening/closing animation).<br />
+Upgraded to 5.4.1__11.<br />
+<br />
+1.4.2<br />
+Fix for multi-style flipsitches.<br />
+Fix for waiting state closing before page finished loading.<br />
+Allow elements to be hidden during phase animations.<br />
+Use max-height before phase animation rather than using just height.<br />
+<br />
+<br />
+1.4.1<br />
+Fix for footer locking speed.<br />
+Added td-carousel-linear-table design (defaults column design to td-carousel-item).<br />
+DataTables toolbar background set to white.<br />
+<br />

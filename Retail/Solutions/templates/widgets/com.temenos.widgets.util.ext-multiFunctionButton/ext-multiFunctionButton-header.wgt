@@ -1,0 +1,12 @@
+<link type="text/css" rel="stylesheet" href="./templates/widgets/com.temenos.widgets.util.ext-multiFunctionButton/css/ext-multiFunctionButton.css" />
+<link rel="stylesheet"  href="./templates/widgets/com.temenos.widgets.util.ext-multiFunctionButton/css/ext-pageAnimation.css" type="text/css" />
+
+<script src="./templates/widgets/com.temenos.widgets.util.ext-multiFunctionButton/js/ext-multiFunctionButtonUtils.js"  type="text/javascript" ></script>
+<script src="./templates/widgets/com.temenos.widgets.util.ext-multiFunctionButton/js/ext-custom-functions.js"  type="text/javascript" ></script>
+<script src="./templates/widgets/com.temenos.widgets.util.ext-multiFunctionButton/js/ext-jquery.transit.min.js" type="text/javascript"></script>
+<script src="./templates/widgets/com.temenos.widgets.util.ext-multiFunctionButton/js/ext-pageAnimation.js" type="text/javascript"></script>
+
+
+
+
+

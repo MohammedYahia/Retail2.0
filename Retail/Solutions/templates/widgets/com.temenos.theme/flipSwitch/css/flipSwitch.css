@@ -1,0 +1,96 @@
+.onoffswitch {
+    position: relative; width: 80px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    margin-top: 0.2rem;
+    text-transform: uppercase;
+}
+
+
+.reverse-align .onoffswitch {
+    float: right;
+    text-align: left;
+}
+
+.onoffswitch-checkbox {
+		/* accessible way of hiding element */
+		border: 0; 
+		clip: rect(0,0,0,0); 
+		height: 1px; margin: -1px; 
+		overflow: hidden; 
+		padding: 0; 
+		position: absolute; 
+		width: 1px;
+}
+
+
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 1px solid #ddd; border-radius: 4px;
+}
+
+
+.onoffswitch-inner {
+    width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+    height: 2rem;
+    display: block;
+}
+
+
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+	display: block;
+    float: left;
+    width: 50%;
+    height: 2rem;
+    padding: 0;
+    line-height: 2.2rem;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.tc-small .onoffswitch-inner:before, .tc-small .onoffswitch-inner:after {
+    line-height: 25px;
+}
+
+.onoffswitch-inner:before {
+    padding-left: 10px;
+    background-color: #003e75; 
+    color: #fff;
+}
+
+.onoffswitch-inner:after {
+    padding-right: 8px;
+    background-color: #fff; 
+    color: #666;
+    text-align: right;
+}
+
+.onoffswitch-switch {
+    display: block; width: 35px; 
+    box-shadow: 0px 3px 5px -2px #aaa;
+    background: #eee;
+    position: absolute; top: 0; bottom: 0;
+    right: 45px;
+    border: 1px solid #aaa; border-radius: 4px;
+    transition: all 0.3s ease-in 0s; 
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+    background-color: #eee; 
+}
+
+.tc-key-nav .onoffswitch-checkbox:focus + .onoffswitch-label .onoffswitch-switch {
+	background-color: #fdff77;
+}
+
+.tc-compact .onoffswitch-label, .tc-compact .onoffswitch-switch {
+	border-radius: 0px;
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+ <xs:element name="locations">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="location" maxOccurs="5000" minOccurs="1">
+     <xs:complexType>
+      <xs:sequence>
+       <xs:element type="xs:string" name="name" />
+       <xs:element type="xs:string" name="type" />
+       <xs:element type="xs:float" name="latitude" />
+       <xs:element type="xs:float" name="Longitude" />
+       <xs:element type="xs:string" name="Address" />
+       <xs:element type="xs:string" name="Area" />
+       <xs:element type="xs:string" name="City" />
+       <xs:element type="xs:string" name="District" />
+       <xs:element type="xs:string" name="State" />
+       <xs:element type="xs:string" name="Country" />
+       <xs:element type="xs:string" name="PostalCode" />
+       <xs:element type="xs:string" name="Language" />
+       <xs:element type="xs:string" name="Message" />
+       <xs:element type="xs:float" name="Phone" />
+       <xs:element type="xs:string" name="Email" />
+       <xs:element name="facility" maxOccurs="100" minOccurs="0">
+        <xs:complexType>
+         <xs:sequence>
+          <xs:element type="xs:string" name="name" />
+          <xs:element type="xs:string" name="description" />
+         </xs:sequence>
+        </xs:complexType>
+       </xs:element>
+       <xs:element name="schedule" maxOccurs="7" minOccurs="7">
+        <xs:complexType>
+         <xs:sequence>
+          <xs:element type="xs:string" name="dayofweek" />
+          <xs:element type="xs:string" name="closed" />
+          <xs:element type="xs:time" name="starttime1" minOccurs="0" />
+          <xs:element type="xs:time" name="endtime1" minOccurs="0" />
+          <xs:element type="xs:time" name="starttime2" minOccurs="0" />
+          <xs:element type="xs:time" name="endtime2" minOccurs="0" />
+         </xs:sequence>
+        </xs:complexType>
+       </xs:element>
+      </xs:sequence>
+     </xs:complexType>
+    </xs:element>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+</xs:schema>

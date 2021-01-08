@@ -1,0 +1,17 @@
+<a href="$$ITEM.LINK$" class="$$ITEM.CLASS$" target="_blank" id="$$ITEM.ID()$"><span></span>$$ITEM.TEXT$</a>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	var formatLink = "$$ITEM.LINK$";
+	var formatLink = formatLink.toLowerCase();
+	var checktel = formatLink.substring(0, 4);
+	if (checktel != "tel:") {
+	var formatLinkFull = formatLink.replace(/&#x2f;/g, "/");
+	if (formatLinkFull && !formatLinkFull.match(/^http([s]?):\/\/.*/)) {
+		formatLinkFull = "http://" + "$$ITEM.LINK$";
+		$("#$$ITEM.ID()$").attr("href", formatLinkFull);
+	}
+	}
+	
+});
+</script>

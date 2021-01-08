@@ -1,0 +1,139 @@
+
+<div id="$$ITEM.ID()$" 
+    class="$$ITEM.STYLES().SectionStyle$ $%IF ITEM.RunAnimation == "Y"$tc-tile-animated $%ENDIF$" 
+    style="$$ITEM.INLINE_STYLES().SectionStyle$ 
+    	$%IF ITEM.IS_HIDDEN() == "true"$
+    		$%IF ITEM.NotApplicableAppearance == "Disable"$
+    			; opacity: 0.5; pointer-events: none;
+    		$%ELSE$
+    			; display:none;
+    		$%ENDIF$
+    	$%ENDIF$
+	    $%IF ITEM.RunAnimation == "Y"$
+	        $%IF ITEM.Duration != ""$;transition: all $$ITEM.Duration$s;$%ENDIF$
+	        $%IF ITEM.InitialOpacity != ""$opacity: $$ITEM.InitialOpacity$;$%ENDIF$
+	        transform: $%IF ITEM.InitialScale != ""$scale($$ITEM.InitialScale$) $%ENDIF$
+	               $%IF ITEM.InitialXOffset != ""$translateX($$ITEM.InitialXOffset$) $%ENDIF$
+	               $%IF ITEM.InitialYOffset != ""$translateY($$ITEM.InitialYOffset$) $%ENDIF$
+	               $%IF ITEM.InitialXRotation != ""$rotateX($$ITEM.InitialXRotation$deg)$%ENDIF$
+	               $%IF ITEM.InitialYRotation != ""$rotateY($$ITEM.InitialYRotation$deg)$%ENDIF$
+	              ;
+	    $%ENDIF$
+    
+    
+    " >
+<div style="position: relative; overflow: hidden">
+	$%IF ITEM.CountPosition == "left"$
+		$%FOREACH CHILD IN SECTION$
+			$%IF ITEM.TYPE() == "Question"$
+				<div class="tc-info-count $$ITEM.STYLES().AnswerStyle$" style="$$ITEM.INLINE_STYLES().AnswerStyle$; float: left;">$$ITEM.AnswerPrefix$ $$ITEM.DATAITEM().VALUE()$$$ITEM.AnswerPostfix$</div>
+			$%ENDIF$
+		$%ENDFOREACH$
+	$%ENDIF$
+	$%IF ITEM.LabelPosition == "left"$
+		$%FOREACH CHILD IN SECTION$
+			$%IF ITEM.TYPE() == "Question"$
+				<div class="tc-info-label $$ITEM.STYLES().QuestionStyle$" style="$$ITEM.INLINE_STYLES().QuestionStyle$; float: left; ">$$ITEM.DISPLAY_TEXT()$</div>
+			$%ENDIF$
+		$%ENDFOREACH$
+	$%ENDIF$
+	$%IF ITEM.IconPosition == "left"$
+		$%FOREACH CHILD IN SECTION$
+			$%IF ITEM.TYPE() == "FormButton"$
+				<div class="tc-info-action $$ITEM.STYLES().AnswerStyle$ tc-info-action-left" style="float: left;"><a href="#" class="tc-info-tile-icon icon-$$ITEM.DefaultIcon$" $%IF ITEM.IS_READONLY() != "true"$ onclick="$$ITEM.ONCLICK()$"  $%ENDIF$><span style="font-size: 0">Icon</span></a></div>
+			$%ENDIF$
+		$%ENDFOREACH$
+	$%ENDIF$	
+
+	$%IF ITEM.CountPosition == "center"$
+		$%FOREACH CHILD IN SECTION$
+			$%IF ITEM.TYPE() == "Question"$
+				<div class="tc-info-count $$ITEM.STYLES().AnswerStyle$" style="$$ITEM.INLINE_STYLES().AnswerStyle$">$$ITEM.AnswerPrefix$ $$ITEM.DATAITEM().VALUE()$$$ITEM.AnswerPostfix$</div>
+			$%ENDIF$
+		$%ENDFOREACH$
+	$%ENDIF$
+	$%IF ITEM.LabelPosition == "center"$
+		$%FOREACH CHILD IN SECTION$
+			$%IF ITEM.TYPE() == "Question"$
+				<div class="tc-info-label $$ITEM.STYLES().QuestionStyle$" style="$$ITEM.INLINE_STYLES().QuestionStyle$">$$ITEM.DISPLAY_TEXT()$</div>
+			$%ENDIF$
+		$%ENDFOREACH$
+	$%ENDIF$
+	$%IF ITEM.IconPosition == "center"$
+		$%FOREACH CHILD IN SECTION$
+			$%IF ITEM.TYPE() == "FormButton"$
+				<div class="tc-info-action $$ITEM.STYLES().AnswerStyle$ tc-info-action-center" ><a href="#" class="tc-info-tile-icon icon-$$ITEM.DefaultIcon$" $%IF ITEM.IS_READONLY() != "true"$ onclick="$$ITEM.ONCLICK()$"  $%ENDIF$><span style="font-size: 0">Icon</span></a></div>
+			$%ENDIF$
+		$%ENDFOREACH$
+	$%ENDIF$
+
+	$%IF ITEM.CountPosition == "right"$
+		$%FOREACH CHILD IN SECTION$
+			$%IF ITEM.TYPE() == "Question"$
+				<div class="tc-info-count $$ITEM.STYLES().AnswerStyle$" style="$$ITEM.INLINE_STYLES().AnswerStyle$; float: right;">$$ITEM.AnswerPrefix$ $$ITEM.DATAITEM().VALUE()$$$ITEM.AnswerPostfix$</div>
+			$%ENDIF$
+		$%ENDFOREACH$
+	$%ENDIF$
+	$%IF ITEM.LabelPosition == "right"$
+		$%FOREACH CHILD IN SECTION$
+			$%IF ITEM.TYPE() == "Question"$
+				<div class="tc-info-label $$ITEM.STYLES().QuestionStyle$" style="$$ITEM.INLINE_STYLES().QuestionStyle$ float: right;">$$ITEM.DISPLAY_TEXT()$</div>
+			$%ENDIF$
+		$%ENDFOREACH$
+	$%ENDIF$
+	$%IF ITEM.IconPosition == "right"$
+		$%FOREACH CHILD IN SECTION$
+			$%IF ITEM.TYPE() == "FormButton"$
+				<div class="tc-info-action $$ITEM.STYLES().AnswerStyle$ tc-info-action-right" style="float: right"><a href="#" class="tc-info-tile-icon icon-$$ITEM.DefaultIcon$" $%IF ITEM.IS_READONLY() != "true"$ onclick="$$ITEM.ONCLICK()$"  $%ENDIF$><span style="font-size: 0">Icon</span></a></div>
+			$%ENDIF$
+		$%ENDFOREACH$
+	$%ENDIF$
+
+	$%IF ITEM.CountPosition == "hidden"$
+		$%FOREACH CHILD IN SECTION$
+			$%IF ITEM.TYPE() == "Question"$
+				<div class="tc-info-count $$ITEM.STYLES().AnswerStyle$" style="display: none; $$ITEM.INLINE_STYLES().AnswerStyle$">$$ITEM.DATAITEM().VALUE()$</div>
+			$%ENDIF$
+		$%ENDFOREACH$
+	$%ENDIF$
+	$%IF ITEM.LabelPosition == "hidden"$
+		$%FOREACH CHILD IN SECTION$
+			$%IF ITEM.TYPE() == "Question"$
+				<div class="tc-info-label $$ITEM.STYLES().QuestionStyle$" style="display: none; $$ITEM.INLINE_STYLES().QuestionStyle$">$$ITEM.DISPLAY_TEXT()$</div>
+			$%ENDIF$
+		$%ENDFOREACH$
+	$%ENDIF$
+	$%IF ITEM.IconPosition == "hidden"$
+		$%FOREACH CHILD IN SECTION$
+			$%IF ITEM.TYPE() == "FormButton"$
+				<div class="tc-info-action $$ITEM.STYLES().AnswerStyle$" style="display: none"><a href="#" class="tc-info-tile-icon icon-$$ITEM.DefaultIcon$" $%IF ITEM.IS_READONLY() != "true"$ onclick="$$ITEM.ONCLICK()$"  $%ENDIF$><span style="font-size: 0">Icon</span></a></div>
+			$%ENDIF$
+		$%ENDFOREACH$
+	$%ENDIF$
+	
+
+</div>	
+
+</div>
+
+<script type="text/javascript" charset="utf-8">
+//<![CDATA[
+$(function() {
+	
+	$%IF ITEM.Perspective != ""$
+      $("#$$ITEM.ID()$").parent()[0].style.perspective = "$$ITEM.Perspective$"
+	$%ENDIF$	
+	var iconPos = $("#$$ITEM.ID()$ .tc-info-action").css("position");
+	if (iconPos == "absolute") {
+		var isRight = $("#$$ITEM.ID()$ .tc-info-action").css("right") == "0px";
+		$("#$$ITEM.ID()$  .tc-info-label").css("padding-" + (isRight ? "right" : "left"), "40px");
+	}
+	$("#$$ITEM.ID()$").on("click", function(e) {
+		e.stopPropagation();
+		e.preventDefault();
+		$(this).find('a[onclick]').triggerHandler("click");
+		return false;
+	});
+});
+  //]]>
+</script>

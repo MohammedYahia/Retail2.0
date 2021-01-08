@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?><Project AllowEditFromSolution="Y" Connect="version 6.1.2__1" ContainerID="2553124" HybridFlag="N" ImportsClassType="com.acquire.intelligentforms.entities.mapping.ImportRecordRoot" ImportsName="Import Records Root 1" Major="1" Minor="0" Name="Utilities" ParentId="8927083" ProjectExtension=".ifp" ProjectFolder="D:/Temenos/Development/DEV/T24/eclipse/ProductDevWorkspace2/TCIB.2.0/Source/Edge/Components/Common/Process/Utilities" ProjectType="Y" Revision="0" StartupRules="Startup" StatefulComponent="N" eid="AF2DAEB548FEE2666648"><![CDATA[
+  ]]>
+  <Types Name="Types Root" eid="AF2DAEB548FEE2666650"><![CDATA[
+    ]]>
+    <Lists Name="Lists" eid="AF2DAEB548FEE2666773"><![CDATA[
+      ]]>
+      <List BaseType="com.acquire.intelligentforms.entities.FormList" DynamicList="N" Name="Action" eid="AF2DAEB548FEE2669381"/>
+    </Lists>
+    <DataTypes Name="Data Types" eid="AF2DAEB548FEE2666774"><![CDATA[
+      ]]>
+      <DataType Name="Text" eid="AF2DAEB548FEE2666775"/>
+      <DataType Name="Number" Type="Number" eid="AF2DAEB548FEE2666776"/>
+      <DataType Name="Decimal" Type="Decimal" eid="AF2DAEB548FEE2666777"/>
+      <DataType Name="Date" Type="Date" eid="AF2DAEB548FEE2666778"/>
+      <DataType Name="File" Type="File" eid="AF2DAEB548FEE2666779"/>
+      <CustomType MaxFieldLength="60" MinFieldLength="0" Name="Email" RegularExpression="^([a-zA-Z0-9_\.\-]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" Type="Text" ValidationType="Regular Expression" eid="AF2DAEB548FEE2666780"/>
+    </DataTypes>
+    <Structures Name="Data Structures" eid="AF2DAEB548FEE2666781"/>
+  </Types>
+  <Dictionary Name="AF2DAEB548FEE266 DataDictionary 1" eid="AF2DAEB548FEE2666651"><![CDATA[
+    ]]>
+    <PropertyGroup Name="Data Store Root" eid="AF2DAEB548FEE2666653"><![CDATA[
+      ]]>
+      <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" Name="SolutionContext" eid="AF2DAEB548FEE2669089"><![CDATA[
+        ]]>
+        <Property MultiSelect="N" Name="ActiveOperation" Type="Action List" eid="AF2DAEB548FEE2669090"/>
+        <Property Name="BroadcastMessage" eid="AF2DAEB548FEE2669091"/>
+        <PropertyGroup FixedSize="N" MaxInstances="0" Name="BroadcastMessageParts" eid="AF2DAEB548FEE2669092"><![CDATA[
+          ]]>
+          <Property Name="BroadcastMessagePart" eid="AF2DAEB548FEE2669093"/>
+        </PropertyGroup>
+      </PropertyGroup>
+      <PropertyGroup LinkToStructure="N" Name="Out" eid="AF2DAEB548FEE2669369"><![CDATA[
+        ]]>
+        <Property Name="Action" eid="AF2DAEB548FEE2669371"/>
+        <Property MultiSelect="N" Name="NextPhase" eid="AF2DAEB548FEE2669387"/>
+      </PropertyGroup>
+      <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" Name="Error" eid="AF2DAEB548FEE2669425"><![CDATA[
+        ]]>
+        <Property Name="Message" eid="AF2DAEB548FEE2669426"/>
+        <Property Name="Code" eid="AF2DAEB548FEE2669427"/>
+      </PropertyGroup>
+      <PropertyGroup LinkToStructure="N" Name="DateTime" eid="F1057EA7924A458427782"><![CDATA[
+        ]]>
+        <PropertyGroup LinkToStructure="N" Name="In" eid="F1057EA7924A458427784"><![CDATA[
+          ]]>
+          <Property Name="Date" eid="F1057EA7924A458427750"/>
+          <Property Name="Time" eid="F1057EA7924A458427751"/>
+        </PropertyGroup>
+        <PropertyGroup LinkToStructure="N" Name="Out" eid="F1057EA7924A458427786"><![CDATA[
+          ]]>
+          <Property Name="DateTime" Type="Date" eid="F1057EA7924A458427788"/>
+        </PropertyGroup>
+        <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" Name="WorkingElements" eid="F1057EA7924A458427749"><![CDATA[
+          ]]>
+          <Property Name="DateTime" eid="F1057EA7924A458427752"/>
+        </PropertyGroup>
+      </PropertyGroup>
+      <PropertyGroup BaseType="com.acquire.intelligentforms.entities.PropertyGroup" Name="Configuration" eid="AF2DAEB548FEE26610579"><![CDATA[
+        ]]>
+        <EVANote Name="8AC44AA094F9300B EVANote 20" NoteType="AF2DAEB548FEE2666784" NoteTypeName="Comment" eid="AF2DAEB548FEE26610580"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    This data group is used solely on startup,    
+<br />&#160;    
+<br />It contains the data read from the configuration file via the 
+    XML&#160;Integration. This data is then processed in the Startup rule into the 
+    various Static Lists and Global&#160;Variables.
+  </body>
+
+</html>
+
+]]></EVANote>
+        <PropertyGroup Name="Actions" eid="AF2DAEB548FEE26610583"><![CDATA[
+          ]]>
+          <PropertyGroup FixedSize="N" MaxInstances="0" Name="Action" eid="AF2DAEB548FEE26610584"><![CDATA[
+            ]]>
+            <Property Name="Key" eid="AF2DAEB548FEE26610585"/>
+            <Property Name="Name" eid="AF2DAEB548FEE26610586"/>
+            <Property Name="Phase" eid="AF2DAEB548FEE26610587"/>
+          </PropertyGroup>
+        </PropertyGroup>
+      </PropertyGroup>
+    </PropertyGroup>
+  </Dictionary>
+  <DataMapping Name="Integration Root" eid="AF2DAEB548FEE2666657"><![CDATA[
+    ]]>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.DebugLogDataSource" FileName="logs/Debug.log" FileRotation="New log file at file size limit" Name="Connect DebugLog" NewPerSize="512" eid="AF2DAEB548FEE2666785"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SyserrLogDataSource" FileName="logs/Syserr.log" FileRotation="New log file each session" Name="Connect SyserrLog" NewPerSize="512" eid="AF2DAEB548FEE2666786"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SysoutLogDataSource" FileName="logs/Sysout.log" FileRotation="New log file each session" Name="Connect SysoutLog" NewPerSize="512" eid="AF2DAEB548FEE2666787"/>
+    <DataSource ClassType="com.acquire.intelligentforms.entities.log.SecurityLogDataSource" FileName="logs/Security.log" FileRotation="New log file at file size limit" Name="Connect SecurityLog" NewPerSize="512" eid="AF2DAEB548FEE2666788"/>
+    <DataSource BaseType="com.acquire.intelligentforms.entities.xml.XMLDataSource" ClassType="com.acquire.intelligentforms.entities.xml.XMLDataSource" ConnectionType="File" FileName="$$PROJECTHOME$/$$!CONFIG_FILENAME$" Name="Configuration" eid="AF2DAEB548FEE2669677"/>
+    <MappingSet BaseType="com.acquire.intelligentforms.entities.xml.XMLMappingSet" ClassType="com.acquire.intelligentforms.entities.xml.XMLMappingSet" Name="Configuration" eid="AF2DAEB548FEE2669712"><![CDATA[
+      ]]>
+      <Relationship ClassType="com.acquire.intelligentforms.entities.xml.XMLNodeRelationship" IncludeEmptyValue="N" Name="Configuration" NodeName="Configuration" SpecifyRepeatedInstances="N" SpecifySearchCriteria="N" eid="AF2DAEB548FEE2669713"><![CDATA[
+        ]]>
+        <Relationship ClassType="com.acquire.intelligentforms.entities.xml.XMLNodeRelationship" IncludeEmptyValue="N" Name="Actions" NodeName="Actions" SpecifyRepeatedInstances="N" SpecifySearchCriteria="N" eid="AF2DAEB548FEE26610552"><![CDATA[
+          ]]>
+          <Relationship ClassType="com.acquire.intelligentforms.entities.xml.XMLNodeRelationship" IncludeEmptyValue="N" Name="Action" NodeName="Action" PropertyGroupsToIncrement="Configuration[1].Actions[1].Action[C]" SpecifyRepeatedInstances="N" SpecifySearchCriteria="N" eid="AF2DAEB548FEE26610553"><![CDATA[
+            ]]>
+            <Mapping AttributeName="Key" ClassType="com.acquire.intelligentforms.entities.xml.XMLNodeMapping" DataItemName="Configuration[1].Actions[1].Action[C].Key" IncludeEmptyValue="N" Name="Key" Read="Y" RepeatTextNode="N" Write="Y" eid="AF2DAEB548FEE26610554"/>
+            <Mapping AttributeName="Name" ClassType="com.acquire.intelligentforms.entities.xml.XMLNodeMapping" DataItemName="Configuration[1].Actions[1].Action[C].Name" IncludeEmptyValue="N" Name="Name" Read="Y" RepeatTextNode="N" Write="Y" eid="AF2DAEB548FEE26610555"/>
+            <Mapping AttributeName="Phase" ClassType="com.acquire.intelligentforms.entities.xml.XMLNodeMapping" DataItemName="Configuration[1].Actions[1].Action[C].Phase" IncludeEmptyValue="N" Name="Phase" Read="Y" RepeatTextNode="N" Write="Y" eid="AF2DAEB548FEE26610556"/>
+          </Relationship>
+        </Relationship>
+      </Relationship>
+    </MappingSet>
+  </DataMapping>
+  <Rules Name="Rules Root" eid="AF2DAEB548FEE2666655"><![CDATA[
+    ]]>
+    <Rule BaseType="com.acquire.intelligentforms.rules.ContainerRule" Name="Broadcast Handler" RuleClassName="com.acquire.intelligentforms.rules.ContainerRule" RuleDisabled="N" eid="AF2DAEB548FEE2669045"><![CDATA[
+      ]]>
+      <Rule FromSystemWord="BROADCAST_MESSAGE" FromType="System Word" Name="Set the Broadcast Message to a data item to split into parts" PropertyName="SolutionContext[1].BroadcastMessage" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" Type="Data Item" eid="AF2DAEB548FEE2669047"/>
+      <Rule BreakPointEnabled="Y" CurrentListValue="SolutionContext[1].BroadcastMessage" EvaluateWhen="Before others" Name="Split the Broadcast Message" NewListValues="SolutionContext[1].BroadcastMessageParts[C].BroadcastMessagePart" RuleClassName="com.acquire.intelligentforms.rules.CompareMultiListValuesRule" RuleDisabled="N" RuleType="True" eid="AF2DAEB548FEE2669048"/>
+      <Rule FromPropertyName="SolutionContext[1].BroadcastMessageParts[1].BroadcastMessagePart" FromType="Data Item" FromValue="BACK" Name="Set Action to first part of message" PropertyName="Out[1].Action" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleClassType="Action" RuleDisabled="N" RuleType="True" Trim="N" Type="Data Item" eid="AF2DAEB548FEE2669379"/>
+      <Rule Expression="$$Out[1].Action$ == 'NAV'" Name="If action is NAV" RuleClassName="com.acquire.intelligentforms.rules.EvaluateRule" RuleDisabled="N" RuleType="True" eid="AF2DAEB548FEE2669051"><![CDATA[
+        ]]>
+        <Rule FromPropertyName="SolutionContext[1].BroadcastMessageParts[2].BroadcastMessagePart" FromType="Data Item" Name="Set the Active operation" PropertyName="SolutionContext[1].ActiveOperation" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" Type="Data Item" eid="AF2DAEB548FEE2669052"/>
+        <Rule Expression="$$SolutionContext[1].ActiveOperation.groupValue()$ != ''" Name="If we have an active operation target set" RuleClassName="com.acquire.intelligentforms.rules.EvaluateRule" RuleDisabled="N" RuleType="True" eid="AF2DAEB548FEE2669053"><![CDATA[
+          ]]>
+          <Rule FromPropertyName="SolutionContext[1].BroadcastMessageParts[1].BroadcastMessagePart" FromType="Value" FromValue="$$SolutionContext[1].ActiveOperation.groupValue()$" Name="Set NextPhase to Group value of Action" PropertyName="Out[1].NextPhase" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleClassType="Action" RuleDisabled="N" RuleType="True" Trim="N" Type="Data Item" eid="AF2DAEB548FEE26610706"/>
+          <Rule Name="Populate Error Details" RuleClassName="com.acquire.intelligentforms.rules.ContainerRule" RuleDisabled="N" RuleType="False" eid="AF2DAEB548FEE2669055"><![CDATA[
+            ]]>
+            <Rule FromType="Value" FromValue="-1" Name="Set Error Code" PropertyName="Error[1].Code" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="N" Type="Data Item" eid="AF2DAEB548FEE2669056"/>
+            <Rule FromMessage="A component &quot;$$SolutionContext[1].BroadcastMessageParts[3].BroadcastMessagePart$&quot; has failed to provide an valid active operation target (target: $$SolutionContext[1].ActiveOperation$)" FromType="Message" FromValue="-1" Name="Set Error message" PropertyName="Error[1].Message" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleDisabled="N" RuleType="True" Trim="Y" Type="Data Item" eid="AF2DAEB548FEE2669057"/>
+          </Rule>
+          <Rule FromPropertyName="SolutionContext[1].BroadcastMessageParts[1].BroadcastMessagePart" FromType="Data Item" FromValue="BACK" Name="Set Action to ERROR" PropertyName="Out[1].Action" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleClassType="Action" RuleDisabled="N" RuleType="False" Trim="N" Type="Data Item" eid="AF2DAEB548FEE26610712"/>
+        </Rule>
+      </Rule>
+    </Rule>
+    <Rule Name="Startup" RuleClassName="com.acquire.intelligentforms.rules.ContainerRule" RuleClassType="Evaluation" RuleDisabled="N" eid="AF2DAEB548FEE2669405"><![CDATA[
+      ]]>
+      <Rule DataSourceName="Configuration" ErrorHandlingType="Pass Up" ErrorMsgDataItem="Error[1].Message" ErrorPhase="Common.Error" IncludeAllAttributes="Y" MappingSetName="Configuration" Name="XML Integration" Operation="Read" RuleClassName="com.acquire.intelligentforms.rules.XMLMapperRule" RuleDisabled="N" RuleType="True" eid="AF2DAEB548FEE2669673"><![CDATA[
+        ]]>
+        <Rule ErrorCodeDataItem="Error[1].Technical[1].ErrorCode" ErrorHandlingType="Pass Up" ErrorMsgDataItem="Error[1].Technical[1].ErrorMessage" ErrorPhase="Common.Error" GroupValuePropertyName="Configuration[1].Actions[1].Action[A].Phase" GroupValueType="Data Item" Import="N" KeyPropertyName="Configuration[1].Actions[1].Action[A].Key" KeyType="Data Item" ListType="STATIC" Name="Add To Action List" PresentationLanguagemap="N" PresentationSpecific="N" ResetList="Y" RuleClassName="com.acquire.intelligentforms.rules.AddToListRule" RuleDisabled="N" RuleType="True" StaticListToAddTo="Action List" ValuePropertyName="Configuration[1].Actions[1].Action[A].Name" ValueType="Data Item" eid="AF2DAEB548FEE26610602"/>
+      </Rule>
+    </Rule>
+  </Rules>
+  <Products Name="Processes Root" eid="AF2DAEB548FEE2666659"><![CDATA[
+    ]]>
+    <Product BroadcastHandler0_0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" BroadcastHandler0_0_0_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" BroadcastHandler0_0_0_ExportedProperty="Out[1].Action" BroadcastHandler0_0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |Out[1].Action" BroadcastHandler0_0_0_LinkedEntityName="Action" BroadcastHandler0_0_0_OriginalEntityEID="AF2DAEB548FEE2669371" BroadcastHandler0_0_0_OriginalEntityName="Action" BroadcastHandler0_0_0_PropertyKey="Out[1].Action" BroadcastHandler0_0_0_PubOut="Y" BroadcastHandler0_0_1_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" BroadcastHandler0_0_1_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" BroadcastHandler0_0_1_ExportedProperty="Out[1].NextPhase" BroadcastHandler0_0_1_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |Out[1].NextPhase" BroadcastHandler0_0_1_LinkedEntityMultiSelect="N" BroadcastHandler0_0_1_LinkedEntityName="NextPhase" BroadcastHandler0_0_1_OriginalEntityEID="AF2DAEB548FEE2669387" BroadcastHandler0_0_1_OriginalEntityName="NextPhase" BroadcastHandler0_0_1_PropertyKey="Out[1].NextPhase" BroadcastHandler0_0_1_PubOut="Y" BroadcastHandler0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" BroadcastHandler0_0_DGInst="1" BroadcastHandler0_0_ExportedPropertyGroup="Out[1]" BroadcastHandler0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |Out" BroadcastHandler0_0_LinkedEntityLinkToStructure="N" BroadcastHandler0_0_LinkedEntityName="Out" BroadcastHandler0_0_NumChildren="2" BroadcastHandler0_0_OriginalEntityEID="AF2DAEB548FEE2669369" BroadcastHandler0_0_OriginalEntityName="Out" BroadcastHandler0_0_PropertyKey="Out" BroadcastHandler0_0_PubOut="Y" BroadcastHandler0_1_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" BroadcastHandler0_1_0_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" BroadcastHandler0_1_0_ExportedProperty="Error[1].Message" BroadcastHandler0_1_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |Error[1].Message" BroadcastHandler0_1_0_LinkedEntityName="Message" BroadcastHandler0_1_0_OriginalEntityEID="AF2DAEB548FEE2669426" BroadcastHandler0_1_0_OriginalEntityName="Message" BroadcastHandler0_1_0_PropertyKey="Error[1].Message" BroadcastHandler0_1_0_PubOut="Y" BroadcastHandler0_1_1_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" BroadcastHandler0_1_1_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" BroadcastHandler0_1_1_ExportedProperty="Error[1].Code" BroadcastHandler0_1_1_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |Error[1].Code" BroadcastHandler0_1_1_LinkedEntityName="Code" BroadcastHandler0_1_1_OriginalEntityEID="AF2DAEB548FEE2669427" BroadcastHandler0_1_1_OriginalEntityName="Code" BroadcastHandler0_1_1_PropertyKey="Error[1].Code" BroadcastHandler0_1_1_PubOut="Y" BroadcastHandler0_1_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" BroadcastHandler0_1_DGInst="1" BroadcastHandler0_1_ExportedPropertyGroup="Error[1]" BroadcastHandler0_1_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |Error" BroadcastHandler0_1_LinkedEntityBaseType="com.acquire.intelligentforms.entities.PropertyGroup" BroadcastHandler0_1_LinkedEntityName="Error" BroadcastHandler0_1_NumChildren="2" BroadcastHandler0_1_OriginalEntityEID="AF2DAEB548FEE2669425" BroadcastHandler0_1_OriginalEntityName="Error" BroadcastHandler0_1_PropertyKey="Error" BroadcastHandler0_1_PubOut="Y" BroadcastHandler0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" BroadcastHandler0_DGInst="1" BroadcastHandler0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.DictionaryRoot| |Data Store Root" BroadcastHandler0_LinkedEntityName="Data Store Root" BroadcastHandler0_NumChildren="2" BroadcastHandler0_OriginalEntityEID="AF2DAEB548FEE2666653" BroadcastHandler0_OriginalEntityName="Data Store Root" BroadcastHandler0_PubOut="Y" BroadcastHandlerClassType="com.acquire.intelligentforms.entities.component.Component" BroadcastHandlerComponentComment="Broadcast Messages handled by the solution are:&#10;&#10;NAV: directs the solution to navigate to a named operation.&#10;&#10;    The Solution determines which component to invoke for a given Active Operation.&#10;    A NAV message can consist of multiple parts, separated by a &quot;|&quot;&#10;&#10;    For example:&#10;         NAV|register|Thankyou&#10;&#10;    where:&#10;        &quot;NAV&quot; is the broadcast message type&#10;        &quot;register&quot; is the name of the active operation the component wishes to invoke&#10;        &quot;Thankyou&quot; is the name of the component broadcasting the message&#10;&#10;BACK: Simple navigation request to return control to previous component. &#10;&#10;LOGOUT: Simple request to manage logging the user out." BroadcastHandlerNumChildren="1" BroadcastHandlerProjectName="Utilities" BroadcastHandlerRulesOnly="Y" Componentcomment="Broadcast Messages handled by the solution are:&#10;&#10;NAV: directs the solution to navigate to a named operation.&#10;&#10;    The Solution determines which component to invoke for a given Active Operation.&#10;    A NAV message can consist of multiple parts, separated by a &quot;|&quot;&#10;&#10;    For example:&#10;         NAV|register|Thankyou&#10;&#10;    where:&#10;        &quot;NAV&quot; is the broadcast message type&#10;        &quot;register&quot; is the name of the active operation the component wishes to invoke&#10;        &quot;Thankyou&quot; is the name of the component broadcasting the message&#10;&#10;BACK: Simple navigation request to return control to previous component. &#10;&#10;LOGOUT: Simple request to manage logging the user out." Name="Broadcast Handler" PublishAsComponent="Y" RulesOnly="Y" eid="AF2DAEB548FEE2667098"><![CDATA[
+      ]]>
+      <Phase Name="Broadcast" ProcessRulesOnly="Y" eid="AF2DAEB548FEE2667104"><![CDATA[
+        ]]>
+        <Rule ClassType="com.acquire.intelligentforms.rules.ContainerRule" LinkReference="AF2DAEB548FEE2669045" Name="Link to Broadcast Handler" RuleType="PostPhase" eid="AF2DAEB548FEE2669082"/>
+      </Phase>
+    </Product>
+    <Product Componentcomment="Converts a Date and Time in the formats YYYYMMDD and hhmmss into an edgeConnect DateTime item.&#10;&#10;DateTime[1].In:&#10;    Date: format YYYYMMDD&#10;    Time: format hhmmss&#10;&#10;DateTime[1].Out:&#10;    DateTime as an edgeConnect Date object." DateTime0_0_0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" DateTime0_0_0_0_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" DateTime0_0_0_0_ExportedProperty="DateTime[1].In[1].Date" DateTime0_0_0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |DateTime[1].In[1].Date" DateTime0_0_0_0_LinkedEntityName="Date" DateTime0_0_0_0_OriginalEntityEID="F1057EA7924A458427750" DateTime0_0_0_0_OriginalEntityName="Date" DateTime0_0_0_0_PropertyKey="DateTime[1].In[1].Date" DateTime0_0_0_0_PubIn="Y" DateTime0_0_0_1_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" DateTime0_0_0_1_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.TextType|Text" DateTime0_0_0_1_ExportedProperty="DateTime[1].In[1].Time" DateTime0_0_0_1_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |DateTime[1].In[1].Time" DateTime0_0_0_1_LinkedEntityName="Time" DateTime0_0_0_1_OriginalEntityEID="F1057EA7924A458427751" DateTime0_0_0_1_OriginalEntityName="Time" DateTime0_0_0_1_PropertyKey="DateTime[1].In[1].Time" DateTime0_0_0_1_PubIn="Y" DateTime0_0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" DateTime0_0_0_DGInst="1" DateTime0_0_0_ExportedPropertyGroup="DateTime[1].In[1]" DateTime0_0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |DateTime[1].In" DateTime0_0_0_LinkedEntityLinkToStructure="N" DateTime0_0_0_LinkedEntityName="In" DateTime0_0_0_NumChildren="2" DateTime0_0_0_OriginalEntityEID="F1057EA7924A458427784" DateTime0_0_0_OriginalEntityName="In" DateTime0_0_0_PropertyKey="DateTime[1].In" DateTime0_0_0_PubIn="Y" DateTime0_0_1_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" DateTime0_0_1_0_ComponentLinkedDataItemType="LinkedGANObject:com.acquire.intelligentforms.entities.DataType|com.acquire.intelligentforms.entities.types.DateType|Date" DateTime0_0_1_0_ExportedProperty="DateTime[1].Out[1].DateTime" DateTime0_0_1_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.Property| |DateTime[1].Out[1].DateTime" DateTime0_0_1_0_LinkedEntityName="DateTime" DateTime0_0_1_0_LinkedEntityType="Date" DateTime0_0_1_0_OriginalEntityEID="F1057EA7924A458427788" DateTime0_0_1_0_OriginalEntityName="DateTime" DateTime0_0_1_0_PropertyKey="DateTime[1].Out[1].DateTime" DateTime0_0_1_0_PubOut="Y" DateTime0_0_1_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" DateTime0_0_1_DGInst="1" DateTime0_0_1_ExportedPropertyGroup="DateTime[1].Out[1]" DateTime0_0_1_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |DateTime[1].Out" DateTime0_0_1_LinkedEntityLinkToStructure="N" DateTime0_0_1_LinkedEntityName="Out" DateTime0_0_1_NumChildren="1" DateTime0_0_1_OriginalEntityEID="F1057EA7924A458427786" DateTime0_0_1_OriginalEntityName="Out" DateTime0_0_1_PropertyKey="DateTime[1].Out" DateTime0_0_1_PubOut="Y" DateTime0_0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" DateTime0_0_DGInst="1" DateTime0_0_ExportedPropertyGroup="DateTime[1]" DateTime0_0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.PropertyGroup| |DateTime" DateTime0_0_LinkedEntityLinkToStructure="N" DateTime0_0_LinkedEntityName="DateTime" DateTime0_0_NumChildren="2" DateTime0_0_OriginalEntityEID="F1057EA7924A458427782" DateTime0_0_OriginalEntityName="DateTime" DateTime0_0_PropertyKey="DateTime" DateTime0_0_PubIn="Y" DateTime0_0_PubOut="Y" DateTime0_ClassType="com.acquire.intelligentforms.entities.component.ComponentMapping" DateTime0_DGInst="1" DateTime0_LinkedEntity="LinkedGANObject:com.acquire.intelligentforms.entities.DictionaryRoot| |Data Store Root" DateTime0_LinkedEntityName="Data Store Root" DateTime0_NumChildren="1" DateTime0_OriginalEntityEID="AF2DAEB548FEE2666653" DateTime0_OriginalEntityName="Data Store Root" DateTime0_PubIn="Y" DateTime0_PubOut="Y" DateTimeClassType="com.acquire.intelligentforms.entities.component.Component" DateTimeComponentComment="Converts a Date and Time in the formats YYYYMMDD and hhmmss into an edgeConnect DateTime item.&#10;&#10;DateTime[1].In:&#10;    Date: format YYYYMMDD&#10;    Time: format hhmmss&#10;&#10;DateTime[1].Out:&#10;    DateTime as an edgeConnect Date object." DateTimeNumChildren="1" DateTimeProjectName="Utilities" DateTimeRulesOnly="Y" Name="DateTime" PublishAsComponent="Y" RulesOnly="Y" eid="F1057EA7924A458427572"><![CDATA[
+      ]]>
+      <Phase Name="Build" ProcessRulesOnly="Y" eid="F1057EA7924A458427575"><![CDATA[
+        ]]>
+        <Rule BaseType="com.acquire.intelligentforms.rules.ContainerRule" Name="Set date and time formatted into Date type" RuleClassName="com.acquire.intelligentforms.rules.ContainerRule" RuleDisabled="N" RuleType="PostPhase" eid="F1057EA7924A458427729"><![CDATA[
+          ]]>
+          <Rule Expression="$$DateTime[1].In[1].Date$ != ''" Name="See whether there is a date to process in the first place" RuleClassName="com.acquire.intelligentforms.rules.EvaluateRule" RuleDisabled="N" RuleType="True" eid="F1057EA7924A458427730"><![CDATA[
+            ]]>
+            <Rule Expression="(&quot;$$DateTime[1].In[1].Date$&quot;).substring(0,4) + &quot;-&quot; + (&quot;$$DateTime[1].In[1].Date$&quot;).substring(4,6) + &quot;-&quot; +(&quot;$$DateTime[1].In[1].Date$&quot;).substring(6,8)" Name="Set the Date from raw parameters" OutputProperty="DateTime[1].WorkingElements[1].DateTime" RuleClassName="com.acquire.intelligentforms.rules.ExpressionRule" RuleDisabled="N" RuleType="True" eid="F1057EA7924A458427731"/>
+            <Rule Expression="$$DateTime[1].In[1].Time$ != ''" Name="See whether there is a time to process" RuleClassName="com.acquire.intelligentforms.rules.EvaluateRule" RuleDisabled="N" RuleType="True" eid="F1057EA7924A458427732"><![CDATA[
+              ]]>
+              <Rule Expression="&quot;$$DateTime[1].WorkingElements[1].DateTime$&quot; + &quot; &quot; + (&quot;$$DateTime[1].In[1].Time$&quot;).substring (0,2) + &quot;:&quot; + (&quot;$$DateTime[1].In[1].Time$&quot;).substring (2,4) + &quot;:&quot; +  (&quot;$$DateTime[1].In[1].Time$&quot;).substring (4,6)" Name="Append the Time from raw parameters" OutputProperty="DateTime[1].WorkingElements[1].DateTime" RuleClassName="com.acquire.intelligentforms.rules.ExpressionRule" RuleDisabled="N" RuleType="True" eid="F1057EA7924A458427733"/>
+            </Rule>
+            <Rule FromPropertyName="WorkingElements[1].DateTime" FromType="Value" FromValue="$$DateTime[1].WorkingElements[1].DateTime$" Name="Copy date from working variable to output" PropertyName="DateTime[1].Out[1].DateTime" RuleClassName="com.acquire.intelligentforms.rules.SetValueRule" RuleClassType="Action" RuleDisabled="N" RuleType="True" Trim="N" Type="Data Item" eid="F1057EA7924A458427734"/>
+          </Rule>
+        </Rule>
+      </Phase>
+    </Product>
+  </Products>
+  <PresentationTypes Name="Presentation Types Root" eid="AF2DAEB548FEE2666661"/>
+  <EVANotes Name="Note Root" eid="AF2DAEB548FEE2666663"><![CDATA[
+    ]]>
+    <EVANoteDefinition Name="ToDo" NoteName="ToDo" StatusRequired="Y" eid="AF2DAEB548FEE2666782"/>
+    <EVANoteDefinition Name="Specification" NoteName="Specification" StatusRequired="N" eid="AF2DAEB548FEE2666783"/>
+    <EVANoteDefinition Name="Comment" NoteName="Comment" StatusRequired="N" eid="AF2DAEB548FEE2666784"/>
+  </EVANotes>
+  <LanguageMapDefinitionsRoot Name="Languages Root" eid="AF2DAEB548FEE2666665"/>
+</Project>

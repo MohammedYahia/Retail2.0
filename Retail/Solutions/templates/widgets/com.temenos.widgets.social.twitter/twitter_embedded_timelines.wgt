@@ -1,0 +1,25 @@
+<a class="twitter-timeline" 
+$%IF ITEM.noheader == "Y" || ITEM.nofooter == "Y" || ITEM.noborders == "Y" || ITEM.noscrollbar == "Y" || ITEM.transparent == "Y" $data-chrome="$%IF ITEM.noheader == "Y"$noheader $%ENDIF$$%IF ITEM.nofooter == "Y"$nofooter $%ENDIF$$%IF ITEM.noborders == "Y"$noborders $%ENDIF$$%IF ITEM.noscrollbar == "Y"$noscrollbar $%ENDIF$$%IF ITEM.transparent == "Y"$transparent $%ENDIF$"
+$%ENDIF$$%IF ITEM.border != ""$data-border-color="$$ITEM.border$"
+$%ENDIF$$%IF ITEM.tweet-limit != ""$data-tweet-limit="$$ITEM.tweet-limit$"
+$%ENDIF$$%IF ITEM.theme != ""$data-theme="$$ITEM.theme$"
+$%ENDIF$$%IF ITEM.link-color != ""$data-link-color="$$ITEM.link-color$"
+$%ENDIF$$%IF ITEM.data-related != ""$data-related="$$ITEM.data-related$"
+$%ENDIF$$%IF ITEM.aria-polite != ""$data-aria-polite="$$ITEM.aria-polite$"
+$%ENDIF$$%IF ITEM.width != ""$width="$$ITEM.width$"
+$%ENDIF$$%IF ITEM.height != ""$height="$$ITEM.height$"
+$%ENDIF$$%IF ITEM.lang != ""$lang="$$ITEM.lang$"
+$%ENDIF$$%IF ITEM.source_timeline == "Users"$$%IF ITEM.screen-name != ""$data-screen-name="$$ITEM.screen-name$"
+$%ENDIF$$%IF ITEM.user-id != ""$data-user-id="$$ITEM.user-id$"
+$%ENDIF$$%IF ITEM.show-replies != "Y"$data-show-replies="false"$%ELSE$data-show-replies="true"$%ENDIF$
+$%ENDIF$$%IF ITEM.list-owner-screen-name != ""$data-list-owner-screen-name="$$ITEM.list-owner-screen-name$"
+$%ENDIF$$%IF ITEM.list-owner-id != ""$data-list-owner-id="$$ITEM.list-owner-id$"
+$%ENDIF$$%IF ITEM.list-slug != ""$data-list-slug="$$ITEM.list-slug$"
+$%ENDIF$$%IF ITEM.list-id != ""$data-list-id="$$ITEM.list-id$"
+$%ENDIF$$%IF ITEM.custom-timeline-id != ""$data-custom-timeline-id="$$ITEM.custom-timeline-id$"
+$%ENDIF$$%IF ITEM.favorites-screen-name != ""$data-favorites-screen-name="$$ITEM.favorites-screen-name$"
+$%ENDIF$$%IF ITEM.favorites-user-id != ""$data-favorites-user-id="$$ITEM.favorites-user-id$"
+$%ENDIF$$%IF ITEM.href != ""$href="$$ITEM.href$"
+$%ENDIF$data-widget-id="$$ITEM.widgetID$">$%IF ITEM.anchor-text != ""$$$ITEM.anchor-text$$%ENDIF$</a>
+
+$%INCLUDE widgets/com.temenos.widgets.social.twitter/inc_twitterRegisterWidget.wgt$$%ENDINCLUDE$

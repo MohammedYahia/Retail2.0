@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+  <widget name="EXT-MultiFunctionButton" type="Button" rootType="Use Link">
+        <template type="header" value="ext-jquery-ui-common-header.wgt" />
+		<template type="header" value="ext-multiFunctionButton-header.wgt" />
+		<template type="source" value="ext-multiFunctionButton.wgt"/>
+		<custom>
+			<item name="DefaultIcon"  type="com.acquire.util.ui.swing.AutoCompleteComboBox" typeValue="1|2|accept|account-add|account-current|account-foreign|account-manage|account-savings|alert|arrow-back|arrow-down|arrow-downleft|arrow-downright|arrow-forward|arrow-left|arrow-right|arrow-up|arrow-upleft|arrow-upright|audio|authorise|balance|bank|bill|bills-circle|block|brain|bulb|calendar|camera|campaign|cancel|car|card-add|cedd|chart-bar1|chart-bar2|chart-bubble1|chart-bubble2|chart-graph|chart-pie|chart-research|chart-tiles|checkbox-cross|checkbox-tick|cheque|cheque-request|cheque-view|chevron-down|chevron-left|chevron-right|chevron-up|circle-accept|circle-add|circle-add-hollow|circle-dashed|circle-down|circle-filled|circle-left|circle-locked|circle-remove|circle-remove-hollow|circle-right|circle-timed|circle-unfilled|circle-up|clock|cog-double|collapse|complaint|contact|content-open|copy|creditcard|cut|deposit|details|direct-debit|directions|download|drag|dropdown|edit|editthecontent-circle|excel|execute|expand|expand2|expand-circle|fast-forward|file|filter|fire|flag|folder|food-expand|frequency|gift|goals|graph|health-circle|help|hide|hierarchy|hold|home|home-circle|important|information|kids-circle|language|late|legal|leisure-circle|letter-credit|link|list|loan|locate|lock|logout|mail|mail-forward|mail-new|mail-read|mail-reply|mail-replyall|mail-sent|mandates|mandatory1|mandatory2|map1|map2|matrix|meeting|menu1|menu2|menu-more|message|minus-circle|mortgage|new|news|notification|office|open|overlay|package|pause|payment|payment-bulk|payment-future|payment-repeat|payments|pdf|percentage|personalise|phase|phase-post|phase-pre|phone|picture|picture-add|pin-atm|pin-bank|pin-code|pinned|placeholder1|placeholder2|placeholder3|play|portfolio|position-buy|position-sell|preview|print|question|records|redo|refresh|reject|rel-constant|rel-decrease|rel-increase|restore|return|reverse|review|roles|row-collapse|row-expand|save|search|select|select-all|select-none|send|settings|severity-compliant|severity-noncompliant|severity-undefined|shopping-circle|show|social|social-facebook|social-google|social-instagram|social-linkedin|social-mail|social-rss|social-skype|social-twitter|social-youtube|sort|spellcheck|star-empty|star-filled|steady|stop|strategy|subscribe|summary|sweeps|switch|target|taxes-circle|term-deposit|timer|tools|tour|transactions|transfer|transfer-in|transfer-out|transport-circle|trash|triangle-down|triangle-up|undo|unlink|unlock|unpinned|upload|user|user-add|user-change|user-management|users|user-update|ux|validate|warning|wealth|withdraw" includeInDesign="false" tab="Appearance"/>
+			
+			<item name="PressedIcon"  type="com.acquire.util.ui.swing.AutoCompleteComboBox" typeValue="1|2|accept|account-add|account-current|account-foreign|account-manage|account-savings|alert|arrow-back|arrow-down|arrow-downleft|arrow-downright|arrow-forward|arrow-left|arrow-right|arrow-up|arrow-upleft|arrow-upright|audio|authorise|balance|bank|bill|bills-circle|block|brain|bulb|calendar|camera|campaign|cancel|car|card-add|cedd|chart-bar1|chart-bar2|chart-bubble1|chart-bubble2|chart-graph|chart-pie|chart-research|chart-tiles|checkbox-cross|checkbox-tick|cheque|cheque-request|cheque-view|chevron-down|chevron-left|chevron-right|chevron-up|circle-accept|circle-add|circle-add-hollow|circle-dashed|circle-down|circle-filled|circle-left|circle-locked|circle-remove|circle-remove-hollow|circle-right|circle-timed|circle-unfilled|circle-up|clock|cog-double|collapse|complaint|contact|content-open|copy|creditcard|cut|deposit|details|direct-debit|directions|download|drag|dropdown|edit|editthecontent-circle|excel|execute|expand|expand2|expand-circle|fast-forward|file|filter|fire|flag|folder|food-expand|frequency|gift|goals|graph|health-circle|help|hide|hierarchy|hold|home|home-circle|important|information|kids-circle|language|late|legal|leisure-circle|letter-credit|link|list|loan|locate|lock|logout|mail|mail-forward|mail-new|mail-read|mail-reply|mail-replyall|mail-sent|mandates|mandatory1|mandatory2|map1|map2|matrix|meeting|menu1|menu2|menu-more|message|minus-circle|mortgage|new|news|notification|office|open|overlay|package|pause|payment|payment-bulk|payment-future|payment-repeat|payments|pdf|percentage|personalise|phase|phase-post|phase-pre|phone|picture|picture-add|pin-atm|pin-bank|pin-code|pinned|placeholder1|placeholder2|placeholder3|play|portfolio|position-buy|position-sell|preview|print|question|records|redo|refresh|reject|rel-constant|rel-decrease|rel-increase|restore|return|reverse|review|roles|row-collapse|row-expand|save|search|select|select-all|select-none|send|settings|severity-compliant|severity-noncompliant|severity-undefined|shopping-circle|show|social|social-facebook|social-google|social-instagram|social-linkedin|social-mail|social-rss|social-skype|social-twitter|social-youtube|sort|spellcheck|star-empty|star-filled|steady|stop|strategy|subscribe|summary|sweeps|switch|target|taxes-circle|term-deposit|timer|tools|tour|transactions|transfer|transfer-in|transfer-out|transport-circle|trash|triangle-down|triangle-up|undo|unlink|unlock|unpinned|upload|user|user-add|user-change|user-management|users|user-update|ux|validate|warning|wealth|withdraw" includeInDesign="false" tab="Appearance"/>
+			
+			<item name="ExternalIcon" prompt="External Icon Image Link" includeInDesign="false"  tab="Appearance" />
+
+			<item name="IconPosition" type="javax.swing.JComboBox" typeValue="before|after|above|below|default" defaultValue="before" includeInDesign="false" tab="Appearance" />
+			
+			<item name="AnimationType"  type="javax.swing.JComboBox" typeValue="ScrollDown|ScrollUp|Left|Right|OffLeftFadeIn|FadeOutInLeft|FadeOutFadeIn|OverlayFromTop|OverlayFromBottom|OverlayFromLeft|OverlayFromRight|FlipForward|FlipBackward|FlipTop|FlipBottom|RemoveToTop|RemoveBottom|RemoveToLeft|RemoveToRight|CubeRotateTop|CubeRotateBottom|CubeRotateLeft|CubeRotateRight" includeInDesign="false" tab="Appearance"/>
+
+			<item name="ButtonOptions" prompt="Button Options" type="com.acquire.util.ui.Legend" typeValue="5|N" />
+			<item name="l1" type="javax.swing.JLabel" prompt="These are the settings for the button itself." />
+			<item name="ClassToToggleOnButton" />
+			<item name="RunButtonRules" type="com.acquire.util.FocusCheckbox"/>
+			<item name="ListeningContainerSelector"/>
+			<item name="DirectSelector"/>
+			<item name="ParentContextSelector"/>
+			<item name="DefaultTextOnButton"/>
+			<item name="ClickedTextOnButton"/>
+			<item name="Badge" type="PropertyChooser" includeInDesign="false" />
+
+			<item name="RemoveOptions" prompt="Remove Options"  type="com.acquire.util.ui.Legend" typeValue="3|N" />
+			<item name="l2" type="javax.swing.JLabel" prompt="These settings are used to remove a class(es) from a group of items specified by the selector.  Note - component prefix is automatically added by widget." />
+			<item name="SelectorClassToRemove"/>
+			<item name="ClassToRemove"/>
+
+			<item name="ToggleOptions" prompt="Toggle Options"  type="com.acquire.util.ui.Legend" typeValue="3|N" />
+			<item name="l3" type="javax.swing.JLabel" prompt="These settings are used to toggle a class(es) from a group of items specified by the selector. Note - component prefix is automatically added by widget." />
+			<item name="SelectorToUpdate"/>
+			<item name="ClassToToggle"/>
+
+			<item name="AddOptions" prompt="Add Options" type="com.acquire.util.ui.Legend" typeValue="3|N" />
+			<item name="l4" type="javax.swing.JLabel" prompt="These settings are used to add a class(es) from a group of items specified by the selector. Note - component prefix is automatically added by widget." />
+			<item name="SelectorClassToAdd"/>
+			<item name="ClassToAdd"/>
+
+			<item name="OtherOptions" prompt="Other Options" type="com.acquire.util.ui.Legend" typeValue="3|N" />
+			<item name="l5" type="javax.swing.JLabel" prompt="Other options to execute when the button is clicked.  Note - the parameter passed to the javascript function are the settings above wrapped up in an object." />
+			<item name="SoundIdToPlay"/>
+			<item name="JavascriptFunction"/>
+		</custom>
+	</widget>
+</widgets>

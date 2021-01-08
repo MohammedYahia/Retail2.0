@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temenos UXP Note Tree</title>
+	<meta name="Description" content="Temenos UXP Tree showing context items" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="pragma" content="no-cache"/>
+	<meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate"/>
+	<meta http-equiv="cache-control" content="post-check=0, pre-check=0, false"/>
+	<link rel="stylesheet" type="text/css" href="/edgeConnectBase/notes/css/style.min.css" />
+	<script type="text/javascript" src="/edgeConnectBase/tetris/js/jquery/jquery-1.12.2.js"></script>
+	<script type="text/javascript" src="/edgeConnectBase/notes/js/jstree/jstree.min.js"></script>
+	<script type="text/javascript">
+
+		var procTree, presTree, currentAnno;
+		var clickWasInBrowser = false;
+
+		function makeTreePOSTRequest(url, parameters) {
+
+			var req = top.frames["NoteFrame"].getRequestObject();
+			req.open('POST', url);
+			req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			req.onreadystatechange = function() {
+				callbackNotes(req);
+			};
+			req.send(parameters);
+		}
+
+		function callbackNotes(req) {
+			var proceed = false;
+			if (req.readyState == 4 && req.status == 200) {
+				proceed = true;
+			}
+
+			if (proceed) {
+				clickWasInBrowser = false;
+
+				var noteForm = top.frames["NoteFrame"];
+				var ck = noteForm.CKEDITOR.instances.NoteEditor;
+				var editorContainer = noteForm.document.getElementById("editorContainer");
+
+				var retArray = JSON.parse(req.responseText);
+				if ( retArray && retArray.length > 0 ) {
+					var noteObject = retArray[0];
+					var noteTxt = noteObject.comment;
+					if (noteTxt == "\u00C2")
+					{
+						ck.resetUndo();
+						ck.setData("");
+						currentAnno = null;
+						//hide editor
+						editorContainer.style.display = "none";
+						noteForm.enableNewNoteButton(true);
+					} else {
+						var type = noteObject.type;
+						var noteStatus = noteObject.status;
+						var isLinked = noteObject.linked;
+						var labelElem = noteForm.document;
+
+						var tree = getVisibleTree();
+						var jstree = tree.jstree();
+						var titleElem = $("#title");
+
+						titleElem.html("EVA Note for: <b>"+jstree.get_parent(jstree.get_selected("id")[0].id)+"<\/b>");
+						labelElem = $(labelElem).find("#typeLabel");
+
+						var labelText = "Type: <b>"+type+"<\/b>";
+						if (noteStatus != "") {
+							labelText += ", Status: <b>"+noteStatus+"<\/b>";
+						}
+
+						labelElem.html(labelText);
+
+						ck.resetUndo();
+						ck.setData(noteTxt);
+						//show editor
+						editorContainer.style.display = "block";
+						noteForm.enableNewNoteButton(false);
+						noteForm.disableSaveNoteButton(isLinked == "true");
+					}
+				}
+			}
+			return true;
+		}
+
+		function showNote(id, namespace) {
+			var a = top.frames["ORIGFrame"].act;
+			var b = a.substring(a.lastIndexOf('/')+1);
+			var url = "ajaxservletcontroller?MODE=AJXNoteFocus&id=" + id + "&namespace="+"&controllername="+b;
+			if (clickWasInBrowser) {
+				url += "&frombrowser=t"; //get child notes
+			} else {
+				url += "&frombrowser=f";
+			}
+			url = top.frames["NoteFrame"].addSubSessionIdToParameters( url );
+			makeTreePOSTRequest(url);
+			clickWasInBrowser = false;
+			currentAnno = id;
+			return true;
+		}
+
+		function swapTrees() {
+			$("#presTreeContainer").toggle();
+			$("#procTreeContainer").toggle();
+		}
+
+		function getVisibleTree() {
+			var treeType = document.getElementById('tree');
+			treeType = treeType.value;
+			return (treeType == "Presentation") ? presTree : procTree;
+		}
+
+		function getSelectedTreeItemId() {
+			var tree = getVisibleTree();
+			return tree.jstree().get_selected("id")[0].id;
+		}
+
+		function xmlToJson(xmlNode) {
+
+			return {
+				text: $(xmlNode).attr("text"),
+				id: $(xmlNode).attr("id"),
+				icon: $(xmlNode).attr("im0") && $(xmlNode).attr("im0").length > 0 ? "/edgeConnectBase/images" + $(xmlNode).attr("im0").substr(2): "",
+				children: Array.prototype.slice.call(xmlNode.children).map(function(childNode) { return xmlToJson(childNode) })
+			}
+		}
+
+	</script>
+</head>
+<body>
+<div style="padding:4px;font-size:10pt;background-color:#f0f0f0;">
+	<label for="tree">EVA Notes View: </label>
+	<select id="tree" onchange="swapTrees()">
+		<option value="Process">Process</option>
+		<option value="Presentation">Presentation</option>
+	</select>
+</div>
+<div id="procTreeContainer" style="width:100%;"></div>
+<div id="presTreeContainer" style="width:100%; display:none;"></div>
+<script type="text/javascript">
+
+	var xml;
+
+	function createXMLRequest(url, container, treeContainer) {
+
+		var xmlHttpRequest = new XMLHttpRequest();
+
+		xmlHttpRequest.open("GET", url, true);
+
+		xmlHttpRequest.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+
+				var xmlResponse = this.responseXML;
+				xmlResponse = $(xmlResponse).find(container)[0].outerHTML;
+				var domParser = new DOMParser();
+				xmlResponse = domParser.parseFromString(xmlResponse,'application/xhtml+xml');
+
+				var getTree = $(treeContainer).jstree({
+					'core' : {
+						'data' : xmlToJson(xmlResponse.documentElement),
+						'opened' : true,
+						'check_callback' : true
+					}
+				}).bind("select_node.jstree", function(evt, data){
+					showNote(data.node.id, data.node.parent);
+				}).bind('loaded.jstree', function(evt, data) {
+					var icon = $(treeContainer + " > ul > li > i.jstree-icon"),
+							anchor = $(treeContainer + " > ul > li > a.jstree-anchor");
+					getTree.jstree("open_node", icon);
+					icon.remove();
+					anchor.remove();
+				});
+
+				if (container == "#presentationRoot") {
+					presTree = getTree;
+				} else {
+					procTree = getTree;
+				}
+
+			}
+		};
+		xmlHttpRequest.send();
+	}
+
+	createXMLRequest("data/presentationTreeXML.xml", "#presentationRoot", "#presTreeContainer");
+	createXMLRequest("data/processTreeXML.xml", "#processRoot", "#procTreeContainer");
+
+</script>
+</body>
+</html>

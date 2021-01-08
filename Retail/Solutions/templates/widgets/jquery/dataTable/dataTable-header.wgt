@@ -1,0 +1,94 @@
+<!-- $Revision: 1.3 $ -->
+
+<link rel='stylesheet' href='./templates/widgets/jquery/dataTable/css/jquery.dataTables.css'>
+
+<style type="text/css" title="currentStyle">
+    table.display {border-spacing: 0px;}			
+    table.display thead th {border: none}
+</style>
+
+<script type="text/javascript" language="javascript" src="./templates/widgets/jquery/dataTable/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+    jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+        "num-html-pre": function ( a ) {
+            var val = null;
+            if ($(a).find("input").length == 1) {
+                val = $("#" + $(a).find("input").attr('id')).val();
+                if (val == null) {
+                    val = $(a).find("input").val();
+                }
+            }else {
+                val = $(a).find("span").text();
+            }
+            var x = val.replace( /<.*?>/g, "" );
+            return parseFloat( x );
+        },
+     
+        "num-html-asc": function ( a, b ) {
+            return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+        },
+     
+        "num-html-desc": function ( a, b ) {
+            return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+        }
+    });
+
+    jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+        "txt-html-pre": function ( a ) {
+            if ($(a).find("input").length == 1) {
+                val = $("#" + $(a).find("input").attr('id')).val();
+                if (val == null) {
+                    val = $(a).find("input").val();
+                }
+            }else if ($(a).find("select").length == 1) {
+                val = $("#" + $(a).find("select").attr('id') ).find("option:selected").text();
+                if (val == null) {
+                     val = $(a).find("select option:selected").val();
+                }   
+            }else if ($(a).find("textarea").length == 1) {
+                val = $(a).find("textarea").val();
+            }else {
+                val = $(a).find("span").text();
+            }            
+            return val;
+        },
+     
+        "txt-html-asc": function ( a, b ) {
+            return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+        },
+     
+        "txt-html-desc": function ( a, b ) {
+            return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+        }
+    });
+
+
+
+    jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+        "date-euro-pre": function ( a ) {
+            if ($(a).find("input").length == 1) {
+                a = $(a).find("input").val();
+            } else {
+                a = $(a).find("span").text();
+            }
+            if ($.trim(a) != '') {
+                var frDatea2 = a.toLowerCase().split('/');
+                var x = new Date( frDatea2[2], frDatea2[1], frDatea2[0] );
+            } else {
+                var x = new Date();  //old code 10000000000000; = l'an 1000 ...
+            }
+
+            return x;
+        },
+     
+        "date-euro-asc": function ( a, b ) {
+            return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+        },
+     
+        "date-euro-desc": function ( a, b ) {
+            return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+        }
+    });
+
+
+</script>

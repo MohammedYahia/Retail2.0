@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+  <widget name="tw-MultiFunctionButton" type="Button" rootType="Use Link">
+        <template type="header" value="jquery-ui-common-header.wgt" />
+		<template type="header" value="multiFunctionButton-header.wgt" />
+		<template type="source" value="multiFunctionButton.wgt"/>
+		<custom>
+			<item name="DefaultIcon"  type="com.acquire.util.ui.swing.AutoCompleteComboBox" typeValue="1|2|accept|access-taxes|account-add|account-current|account-foreign|account-manage|account-savings|add_above|add_below|alert|arrow-back|arrow-down|arrow-downleft|arrow-downright|arrow-forward|arrow-left|arrow-right|arrow-up|arrow-upleft|arrow-upright|audio|authorise|balance|bank|basket|bill|bills-circle|block|brain|bulb|calendar|camera|campaign|campaign-add|cancel|car|card-add|cart|cedd|channels|chart-bar1|chart-bar2|chart-bubble1|chart-bubble2|chart-graph|chart-pie|chart-research|chart-tiles|checkbox-cross|checkbox-tick|cheque|cheque-request|cheque-view|chevron-down|chevron-left|chevron-right|chevron-up|circle-accept|circle-add|circle-add-hollow|circle-dashed|circle-down|circle-filled|circle-left|circle-locked|circle-remove|circle-remove-hollow|circle-right|circle-timed|circle-unfilled|circle-up|clock|cog-double|collapse|columns|complaint|contact|content-open|copy|creditcard|cut|datacontext|deposit|details|direct-debit|directions|download|drag|dropdown|edit|edit-attributes|editthecontent-circle|education|excel|execute|expand|expand2|expand-circle|fast-forward|file|filter|fire|flag|flow|folder|folder-search|food-expand|frequency|gift|goals|graph|handshake|health-circle|help|hide|hierarchy|hold|home|home-circle|important|information|kids-circle|language|late|legal|leisure-circle|letter-credit|link|list|loan|locate|locate-hollow|lock|logout|mail|mail-forward|mail-new|mail-read|mail-reply|mail-replyall|mail-sent|mandates|mandatory1|mandatory2|map1|map2|matrix|meeting|menu1|menu2|menu-more|message|minus-circle|mortgage|new|news|notification|office|open|overlay|package|pause|payment|payment-bulk|payment-future|payment-repeat|payments|pdf|percentage|personalise|phase|phase-post|phase-pre|phone|picture|picture-add|pin-atm|pin-bank|pin-code|pinned|placeholder|placeholder1|placeholder2|play|portfolio|position-buy|position-sell|preview|print|profile|profile-add|program|program-add|question|records|redo|refresh|reject|rel-constant|rel-decrease|rel-increase|restore|return|reusable|reusable-add|reverse|review|roles|row-collapse|row-expand|save|search|select|select-all|select-none|send|settings|severity-compliant|severity-noncompliant|severity-undefined|shopping-circle|show|social|social-facebook|social-google|social-instagram|social-linkedin|social-mail|social-rss|social-skype|social-twitter|social-youtube|sort|spellcheck|star-empty|star-filled|steady|stop|strategy|subscribe|summary|sweeps|switch|target|taxes-circle|template|term-deposit|timer|tools|tour|transactions|transfer|transfer-in|transfer-out|transport-circle|trash|triangle-down|triangle-up|umbrella|undo|unlink|unlock|unpinned|upload|user|user-add|user-change|user-management|users|user-update|ux|validate|warning|warning-circle|wealth|withdraw" includeInDesign="false" tab="Appearance"/>
+			
+			<item name="PressedIcon"  type="com.acquire.util.ui.swing.AutoCompleteComboBox" typeValue="1|2|accept|access-taxes|account-add|account-current|account-foreign|account-manage|account-savings|add_above|add_below|alert|arrow-back|arrow-down|arrow-downleft|arrow-downright|arrow-forward|arrow-left|arrow-right|arrow-up|arrow-upleft|arrow-upright|audio|authorise|balance|bank|basket|bill|bills-circle|block|brain|bulb|calendar|camera|campaign|campaign-add|cancel|car|card-add|cart|cedd|channels|chart-bar1|chart-bar2|chart-bubble1|chart-bubble2|chart-graph|chart-pie|chart-research|chart-tiles|checkbox-cross|checkbox-tick|cheque|cheque-request|cheque-view|chevron-down|chevron-left|chevron-right|chevron-up|circle-accept|circle-add|circle-add-hollow|circle-dashed|circle-down|circle-filled|circle-left|circle-locked|circle-remove|circle-remove-hollow|circle-right|circle-timed|circle-unfilled|circle-up|clock|cog-double|collapse|columns|complaint|contact|content-open|copy|creditcard|cut|datacontext|deposit|details|direct-debit|directions|download|drag|dropdown|edit|edit-attributes|editthecontent-circle|education|excel|execute|expand|expand2|expand-circle|fast-forward|file|filter|fire|flag|flow|folder|folder-search|food-expand|frequency|gift|goals|graph|handshake|health-circle|help|hide|hierarchy|hold|home|home-circle|important|information|kids-circle|language|late|legal|leisure-circle|letter-credit|link|list|loan|locate|locate-hollow|lock|logout|mail|mail-forward|mail-new|mail-read|mail-reply|mail-replyall|mail-sent|mandates|mandatory1|mandatory2|map1|map2|matrix|meeting|menu1|menu2|menu-more|message|minus-circle|mortgage|new|news|notification|office|open|overlay|package|pause|payment|payment-bulk|payment-future|payment-repeat|payments|pdf|percentage|personalise|phase|phase-post|phase-pre|phone|picture|picture-add|pin-atm|pin-bank|pin-code|pinned|placeholder|placeholder1|placeholder2|play|portfolio|position-buy|position-sell|preview|print|profile|profile-add|program|program-add|question|records|redo|refresh|reject|rel-constant|rel-decrease|rel-increase|restore|return|reusable|reusable-add|reverse|review|roles|row-collapse|row-expand|save|search|select|select-all|select-none|send|settings|severity-compliant|severity-noncompliant|severity-undefined|shopping-circle|show|social|social-facebook|social-google|social-instagram|social-linkedin|social-mail|social-rss|social-skype|social-twitter|social-youtube|sort|spellcheck|star-empty|star-filled|steady|stop|strategy|subscribe|summary|sweeps|switch|target|taxes-circle|template|term-deposit|timer|tools|tour|transactions|transfer|transfer-in|transfer-out|transport-circle|trash|triangle-down|triangle-up|umbrella|undo|unlink|unlock|unpinned|upload|user|user-add|user-change|user-management|users|user-update|ux|validate|warning|warning-circle|wealth|withdraw" includeInDesign="false" tab="Appearance"/>
+            <item name="PressedText" prompt="Pressed Button Label" mappable="true" includeInDesign="false" tab="Appearance"/>
+
+			<item name="IconPosition" type="javax.swing.JComboBox" typeValue="before|after|above|below|default" defaultValue="default" includeInDesign="false" tab="Appearance" />
+			
+			<item name="AnimationType"  type="javax.swing.JComboBox" typeValue="ScrollDown|ScrollUp|Left|Right|OffLeftFadeIn|FadeOutInLeft|FadeOutFadeIn|OverlayFromTop|OverlayFromBottom|OverlayFromLeft|OverlayFromRight|OverlayFromTopShift|OverlayFromRightShift|OverlayFromBottomShift|OverlayFromLeftShift|FlipForward^FlipForward (excl. IE)|FlipBackward^FlipBackward (excl. IE)|FlipTop^FlipTop (excl. IE)|FlipBottom^FlipBottom (excl. IE)|RemoveToTop|RemoveToBottom|RemoveToLeft|RemoveToRight|RemoveToTopUnShift|RemoveToRightUnShift|RemoveToBottomUnShift|RemoveToLeftUnShift|CubeRotateTop|CubeRotateBottom|CubeRotateLeft|CubeRotateRight" includeInDesign="false" tab="Appearance"/>
+
+
+			<item name="EXTRA_STYLES" prompt="Extra Styles" type="com.acquire.intelligentforms.ide.dialogs.RichTextField" tab="Appearance" includeInDesign="false"/>
+
+			<item name="ButtonOptions" prompt="Button Options" type="com.acquire.util.ui.Legend" typeValue="5|N"  usage="17" />
+			<item name="l1" type="javax.swing.JLabel" prompt="These are the settings for the button itself." usage="17" />
+			<item name="ClassToToggleOnButton" />
+			<item name="RunButtonRules" type="com.acquire.util.FocusCheckbox"/>
+			<item name="ListeningContainerSelector"/>
+			<item name="ParentContextSelector"/>
+			<item name="Badge" type="PropertyChooser" includeInDesign="false" />
+			<item name="BadgeType" type="javax.swing.JComboBox" typeValue="^Standard|tc-global-bg-color^Corporate|tc-accent-bg^Accent|tc-accent-alt-bg^Alt Accent|tc-confimation-bg^Confirmation|tc-warning-bg-color^Warning|tc-error-bg-color^Error|tc-badge-palette^Palette"   includeInDesign="false" />
+
+
+
+
+
+
+			<item name="RemoveOptions" prompt="Remove Options"  type="com.acquire.util.ui.Legend" typeValue="3|N" usage="17" />
+			<item name="l2" type="javax.swing.JLabel" prompt="These settings are used to remove a class(es) from a group of items specified by the selector.  Note - component prefix is automatically added by widget." usage="17" />
+			<item name="SelectorClassToRemove"/>
+			<item name="ClassToRemove"/>
+
+			<item name="ToggleOptions" prompt="Toggle Options"  type="com.acquire.util.ui.Legend" typeValue="3|N" usage="17" />
+			<item name="l3" type="javax.swing.JLabel" prompt="These settings are used to toggle a class(es) from a group of items specified by the selector. Note - component prefix is automatically added by widget." usage="17" />
+			<item name="SelectorToUpdate"/>
+			<item name="ClassToToggle"/>
+
+			<item name="AddOptions" prompt="Add Options" type="com.acquire.util.ui.Legend" typeValue="3|N" usage="17" />
+			<item name="l4" type="javax.swing.JLabel" prompt="These settings are used to add a class(es) from a group of items specified by the selector. Note - component prefix is automatically added by widget." usage="17" />
+			<item name="SelectorClassToAdd"/>
+			<item name="ClassToAdd"/>
+
+			<item name="OtherOptions" prompt="Other Options" type="com.acquire.util.ui.Legend" typeValue="3|N" usage="17" />
+			<item name="l5" type="javax.swing.JLabel" prompt="Other options to execute when the button is clicked.  Note - the parameter passed to the javascript function are the settings above wrapped up in an object." usage="17" />
+			<item name="SoundIdToPlay"/>
+			<item name="JavascriptFunction"/>
+		</custom>
+	</widget>
+</widgets>

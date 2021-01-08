@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?><LanguageMap presentations="StatusMessages" project="StatusMessages" sourcelanguage="en-GB" targetlanguage="fr" updated="26/03/18 15:54" version="1">
+  <Comment/>
+  <ProcessEntities>
+    <ProcessEntity class="com.acquire.intelligentforms.entities.Product" displayString="CompletedMessage" eid="456BD73E4C87041D112490" path="CompletedMessage" type="Process">
+      <ProcessEntityAttr default="" name="HelpIconHint" original="" state="NEW">
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationProduct" forPresObjects="456BD73E4C87041D112506:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D112490:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" forPresObjects="456BD73E4C87041D112508:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D112490:Process" state="NEW" status="NEW" value=""/>
+      </ProcessEntityAttr>
+      <Container class="com.acquire.intelligentforms.entities.Phase" displayString="CompletedMessage" eid="456BD73E4C87041D112493" type="Phase">
+        <Note author="EVA-Note"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    This component used to display the status of completed records
+  </body>
+
+</html>
+
+]]></Note>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Your transaction completed successfully" eid="456BD73E4C87041D112517" path="CompletedMessage.CompletedMessage.Your transaction completed successfully" type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D112518:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D112517:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D112518:StatusMessages" mappingType="OVERRIDE" original="Your transaction completed successfully" specifiedBy="456BD73E4C87041D112517:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D112518:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D112517:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D112518:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D112517:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Transaction reference : $$InputElements[1].TransactionReference$" eid="456BD73E4C87041D112531" path="CompletedMessage.CompletedMessage.Transaction reference : $$InputElements[1].TransactionReference$" type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D112534:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D112531:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D112534:StatusMessages" mappingType="OVERRIDE" original="Transaction reference : $$InputElements[1].TransactionReference$" specifiedBy="456BD73E4C87041D112531:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D112534:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D112531:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D112534:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D112531:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+      </Container>
+    </ProcessEntity>
+    <ProcessEntity class="com.acquire.intelligentforms.entities.Product" displayString="SubmittedMessage" eid="456BD73E4C87041D112875" path="SubmittedMessage" type="Process">
+      <ProcessEntityAttr default="" name="HelpIconHint" original="" state="NEW">
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" forPresObjects="456BD73E4C87041D113201:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D112875:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationProduct" forPresObjects="456BD73E4C87041D112876:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D112875:Process" state="NEW" status="NEW" value=""/>
+      </ProcessEntityAttr>
+      <Container class="com.acquire.intelligentforms.entities.Phase" displayString="SubmittedMessage" eid="456BD73E4C87041D113198" type="Phase">
+        <Note author="EVA-Note"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    This component used to display the status of submitted records
+  </body>
+
+</html>
+
+]]></Note>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Your transaction submitted successfully" eid="456BD73E4C87041D113533" path="SubmittedMessage.SubmittedMessage.Your transaction submitted successfully" type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D113534:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D113533:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D113534:StatusMessages" mappingType="OVERRIDE" original="Your transaction submitted successfully" specifiedBy="456BD73E4C87041D113533:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D113534:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D113533:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D113534:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D113533:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <Leaf class="com.acquire.intelligentforms.entities.Heading" displayString="Transaction reference : $$InputElements[1].TransactionReference$" eid="456BD73E4C87041D112531" leafType="link" path="CompletedMessage.CompletedMessage.Transaction reference : $$InputElements[1].TransactionReference$" type="Heading"/>
+      </Container>
+    </ProcessEntity>
+    <ProcessEntity class="com.acquire.intelligentforms.entities.Product" displayString="AuthoriseMessage" eid="456BD73E4C87041D114859" path="AuthoriseMessage" type="Process">
+      <ProcessEntityAttr default="" name="HelpIconHint" original="" state="NEW">
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationProduct" forPresObjects="456BD73E4C87041D114860:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D114859:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" forPresObjects="456BD73E4C87041D115503:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D114859:Process" state="NEW" status="NEW" value=""/>
+      </ProcessEntityAttr>
+      <Container class="com.acquire.intelligentforms.entities.Phase" displayString="AuthoriseMessage" eid="456BD73E4C87041D115500" type="Phase">
+        <Note author="EVA-Note"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    This component used to display the status of authorised records
+  </body>
+
+</html>
+
+]]></Note>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Your transaction authorised successfully" eid="456BD73E4C87041D116786" path="AuthoriseMessage.AuthoriseMessage.Your transaction authorised successfully" type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D116787:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D116786:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D116787:StatusMessages" mappingType="OVERRIDE" original="Your transaction authorised successfully" specifiedBy="456BD73E4C87041D116786:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D116787:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D116786:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D116787:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D116786:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <Leaf class="com.acquire.intelligentforms.entities.Heading" displayString="Transaction reference : $$InputElements[1].TransactionReference$" eid="456BD73E4C87041D112531" leafType="link" path="CompletedMessage.CompletedMessage.Transaction reference : $$InputElements[1].TransactionReference$" type="Heading"/>
+      </Container>
+    </ProcessEntity>
+    <ProcessEntity class="com.acquire.intelligentforms.entities.Product" displayString="DeleteMessage" eid="456BD73E4C87041D123527" path="DeleteMessage" type="Process">
+      <ProcessEntityAttr default="" name="HelpIconHint" original="" state="NEW">
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationProduct" forPresObjects="456BD73E4C87041D123528:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D123527:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" forPresObjects="456BD73E4C87041D124489:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D123527:Process" state="NEW" status="NEW" value=""/>
+      </ProcessEntityAttr>
+      <Container class="com.acquire.intelligentforms.entities.Phase" displayString="DeleteMessage" eid="456BD73E4C87041D124486" type="Phase">
+        <Note author="EVA-Note"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    This component used to display the status of deleted records
+  </body>
+
+</html>
+
+]]></Note>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Your transaction deleted successfully" eid="456BD73E4C87041D126408" path="DeleteMessage.DeleteMessage.Your transaction deleted successfully" type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D126409:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D126408:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D126409:StatusMessages" mappingType="OVERRIDE" original="Your transaction deleted successfully" specifiedBy="456BD73E4C87041D126408:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D126409:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D126408:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="456BD73E4C87041D126409:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="456BD73E4C87041D126408:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <Leaf class="com.acquire.intelligentforms.entities.Heading" displayString="Transaction reference : $$InputElements[1].TransactionReference$" eid="456BD73E4C87041D112531" leafType="link" path="CompletedMessage.CompletedMessage.Transaction reference : $$InputElements[1].TransactionReference$" type="Heading"/>
+      </Container>
+    </ProcessEntity>
+    <ProcessEntity class="com.acquire.intelligentforms.entities.Product" displayString="CreatedMessage" eid="F59A98CD98F1A3421771300" path="CreatedMessage" type="Process">
+      <ProcessEntityAttr default="" name="HelpIconHint" original="" state="NEW">
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" forPresObjects="F59A98CD98F1A3421771342:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="F59A98CD98F1A3421771300:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationProduct" forPresObjects="F59A98CD98F1A3421771341:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="F59A98CD98F1A3421771300:Process" state="NEW" status="NEW" value=""/>
+      </ProcessEntityAttr>
+      <Container class="com.acquire.intelligentforms.entities.Phase" displayString="CreatedMessage" eid="F59A98CD98F1A3421771319" type="Phase">
+        <Note author="EVA-Note"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    This component used to display the status of completed records
+  </body>
+
+</html>
+
+]]></Note>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Your transaction created successfully" eid="F59A98CD98F1A3421771321" path="CreatedMessage.CreatedMessage.Your transaction created successfully" type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="F59A98CD98F1A3421771343:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="F59A98CD98F1A3421771321:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="F59A98CD98F1A3421771343:StatusMessages" mappingType="OVERRIDE" original="Your transaction created successfully" specifiedBy="F59A98CD98F1A3421771321:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="F59A98CD98F1A3421771343:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="F59A98CD98F1A3421771321:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="F59A98CD98F1A3421771343:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="F59A98CD98F1A3421771321:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <Leaf class="com.acquire.intelligentforms.entities.Heading" displayString="Transaction reference : $$InputElements[1].TransactionReference$" eid="456BD73E4C87041D112531" leafType="link" path="CompletedMessage.CompletedMessage.Transaction reference : $$InputElements[1].TransactionReference$" type="Heading"/>
+      </Container>
+    </ProcessEntity>
+    <ProcessEntity class="com.acquire.intelligentforms.entities.Product" displayString="UpdatedMessage" eid="F59A98CD98F1A3421783523" path="UpdatedMessage" type="Process">
+      <ProcessEntityAttr default="" name="HelpIconHint" original="" state="NEW">
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationProduct" forPresObjects="F59A98CD98F1A3421785034:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="F59A98CD98F1A3421783523:Process" state="NEW" status="NEW" value=""/>
+        <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationPhase" forPresObjects="F59A98CD98F1A3421785035:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="F59A98CD98F1A3421783523:Process" state="NEW" status="NEW" value=""/>
+      </ProcessEntityAttr>
+      <Container class="com.acquire.intelligentforms.entities.Phase" displayString="UpdatedMessage" eid="F59A98CD98F1A3421784277" type="Phase">
+        <Note author="EVA-Note"><![CDATA[<html>
+  <head>
+    
+  </head>
+
+  <body>
+    This component used to display the status of completed records
+  </body>
+
+</html>
+
+]]></Note>
+        <ProcessEntity class="com.acquire.intelligentforms.entities.Heading" displayString="Your transaction updated successfully" eid="F59A98CD98F1A3421784279" path="UpdatedMessage.UpdatedMessage.Your transaction updated successfully" type="Heading">
+          <ProcessEntityAttr default="" name="ColumnHeading" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="F59A98CD98F1A3421785036:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="F59A98CD98F1A3421784279:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="DisplayText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="F59A98CD98F1A3421785036:StatusMessages" mappingType="OVERRIDE" original="Your transaction updated successfully" specifiedBy="F59A98CD98F1A3421784279:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HelpText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="F59A98CD98F1A3421785036:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="F59A98CD98F1A3421784279:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+          <ProcessEntityAttr default="" name="HintText" original="" state="NEW">
+            <Attr forPresClasses="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationQuestion" forPresObjects="F59A98CD98F1A3421785036:StatusMessages" mappingType="PLACEHOLDER" original="" specifiedBy="F59A98CD98F1A3421784279:Heading" state="NEW" status="NEW" value=""/>
+          </ProcessEntityAttr>
+        </ProcessEntity>
+        <Leaf class="com.acquire.intelligentforms.entities.Heading" displayString="Transaction reference : $$InputElements[1].TransactionReference$" eid="456BD73E4C87041D112531" leafType="link" path="CompletedMessage.CompletedMessage.Transaction reference : $$InputElements[1].TransactionReference$" type="Heading"/>
+      </Container>
+    </ProcessEntity>
+  </ProcessEntities>
+  <Designs/>
+  <PresentationOnlyObjects>
+    <PresentationType class="com.acquire.intelligentforms.entities.presentation.html.waihtml.richhtml.RichHTMLPresentationType" displayString="StatusMessages" eid="456BD73E4C87041D112499" path="StatusMessages" type="Rich Presentation Type">
+      <Attribute mappingType="OVERRIDE" name="BackButtonText" original="Back" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="BackHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DateFormat" original="DD/MM/YYYY" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DecimalSymbol" original="." state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="DigitGroupSymbol" original="," state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="EditTheme" original="N" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ForwardButtonText" original="Continue" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardConfirmationMessage" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHelpText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="PLACEHOLDER" name="ForwardHintText" original="" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="HelpIconHint" original="Help" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaMessage" original="Please re-enter using letters" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidAlphaNumericMessage" original="Please re-enter using letters and numbers" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDateMessage" original="Please enter a valid date in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDaysInMonthMessage" original="There are not that many days in the specified month" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidDecimalMessage" original="Please enter a valid decimal number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidLeapYearMessage" original="The specified year is not a leap year" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxDateMessage" original="The latest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxFileSizeMessage" original="The maximum file size allowed is $$QUESTION_CONSTRAINT$k" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxLengthMessage" original="The maximum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMaxValueMessage" original="The maximum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinDateMessage" original="The earliest date is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinLengthMessage" original="The minimum length is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidMinValueMessage" original="The minimum value is $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidNumMessage" original="Please enter a valid number" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidTimeMessage" original="Please enter a valid time in the form: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="InvalidUploadTypeMessage" original="The valid file types you are allowed to upload are: $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="LayoutDirection" original="ltr" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandMessage" original="Please answer all the required questions marked with a $$QUESTION_CONSTRAINT$" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandOptImgAltVal" original="This field is mandatory" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandOptImgVal" original="mandatory_image.gif" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="MandOptTxtVal" original="*" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="QuestionListDefault" original="- Please Select" state="NEW" status="NEW" value=""/>
+      <Attribute mappingType="OVERRIDE" name="ValidationMessage" original="Please enter a valid value" state="NEW" status="NEW" value=""/>
+    </PresentationType>
+  </PresentationOnlyObjects>
+  <Rules>
+    <MasterRules/>
+  </Rules>
+  <Component/>
+  <Lists/>
+</LanguageMap>
